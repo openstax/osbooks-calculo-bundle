@@ -1,0 +1,1383 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Integration Formulas and the Net Change Theorem</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m10034</md:content-id>
+  <md:title>Integration Formulas and the Net Change Theorem</md:title>
+  <md:abstract><list>
+<item>Aplicar las fórmulas básicas de integración.</item>
+<item>Explicar el significado del teorema del cambio neto.</item>
+<item>Utilizar el teorema del cambio neto para resolver problemas aplicados.</item>
+<item>Aplicar las integrales de funciones pares e impares.</item>
+</list></md:abstract>
+  <md:uuid>8d6ef9fd-f6ec-43fa-883f-7132faed248c</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1170572505346">En esta sección utilizaremos algunas fórmulas básicas de integración estudiadas anteriormente para resolver algunos problemas clave aplicados. Es importante señalar que estas fórmulas se presentan en términos de integrales <emphasis effect="italics">indefinidas</emphasis>. Aunque las integrales definidas e indefinidas están estrechamente relacionadas, hay algunas diferencias fundamentales que hay que tener en cuenta. La integral definida es un número (cuando los límites de integración son constantes) o una función única (cuando uno o ambos límites de integración son variables). La integral indefinida representa una familia de funciones, todas las cuales difieren en una constante. A medida que se vaya familiarizando con la integración, sabrá cuándo utilizar las integrales definidas o las indefinidas. Sin pensar demasiado en ello, seleccionará naturalmente el enfoque correcto para un determinado problema. Sin embargo, mientras internaliza estos conceptos, medite bien si necesita una integral definida o una indefinida y utilice la notación adecuada según su elección.</para>
+<section id="fs-id1170572280538">
+<title>Fórmulas básicas de integración</title>
+<para id="fs-id1170572398094">Recordemos las fórmulas de integración dadas en la <link target-id="fs-id1165043092431" document="m53621">tabla de antiderivadas</link> y la regla sobre las propiedades de las integrales definidas. Veamos algunos ejemplos de cómo se aplican estas reglas.</para><example id="fs-id1170571609338">
+<exercise id="fs-id1170572506475">
+<problem id="fs-id1170572430400">
+<title>Integración de una función mediante la regla de la potencia</title>
+<para id="fs-id1170572616336">Utilice la regla de la potencia para integrar la función <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:msqrt><m:mi>t</m:mi></m:msqrt><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>t</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572210202">
+<para id="fs-id1170572431500">El primer paso es reescribir la función y simplificarla para aplicar la regla de la potencia:</para>
+<equation id="fs-id1170572506256" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:msqrt><m:mi>t</m:mi></m:msqrt><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:msup><m:mi>t</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr/><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>t</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>t</m:mi><m:mrow><m:mn>3</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170572150489">Ahora aplique la regla de la potencia:</para>
+<equation id="fs-id1170572539674" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>t</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>t</m:mi><m:mrow><m:mn>3</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:msubsup><m:mrow><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>2</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>t</m:mi><m:mrow><m:mn>3</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:mfrac><m:mn>2</m:mn><m:mn>5</m:mn></m:mfrac><m:msup><m:mi>t</m:mi><m:mrow><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mn>2</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mn>3</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:mfrac><m:mn>2</m:mn><m:mn>5</m:mn></m:mfrac><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>−</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mn>2</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mn>3</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:mfrac><m:mn>2</m:mn><m:mn>5</m:mn></m:mfrac><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup></m:mrow><m:mo>]</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>256</m:mn></m:mrow><m:mrow><m:mn>15</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170572558558" class="checkpoint">
+<exercise id="fs-id1170572512346">
+<problem id="fs-id1170572229889">
+<para id="fs-id1170572150887">Calcule la integral definida de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>3</m:mn><m:mi>x</m:mi></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572250932">
+<para id="fs-id1170572100050"><m:math><m:mrow><m:mo>−</m:mo><m:mfrac><m:mrow><m:mn>10</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1170573428280" type="hint">
+<title>Sugerencia</title>
+<para id="fs-id1170571814551">Siga el proceso de la <link target-id="fs-id1170571609338"/> para resolver el problema.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1170572627233">
+<title>El teorema del cambio neto</title>
+<para id="fs-id1170571583276">El <term>teorema del cambio neto</term> considera la integral de un <term class="no-emphasis"><emphasis effect="italics">tasa de cambio</emphasis></term>. Establece que, cuando una cantidad cambia, el nuevo valor es igual al valor inicial más la integral de la tasa de cambio de esa cantidad. La fórmula se expresa de dos maneras. La segunda nos es familiar; se trata simplemente de la integral definida.</para>
+<note id="fs-id1170572295126" class="theorem">
+<title>Teorema del cambio neto</title>
+<para id="fs-id1170572480924">El nuevo valor de una cantidad cambiante es igual al valor inicial más la integral de la tasa de cambio:</para>
+<equation id="fs-id1170572449540"><m:math><m:mrow><m:mtable><m:mtr/><m:mtr/><m:mtr><m:mtd columnalign="left"><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>F</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd columnalign="center"><m:mtext>o</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>F</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:mrow></m:math></equation>
+</note>
+<para id="fs-id1170572110596">Al restar <m:math><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de ambos lados de la primera ecuación da como resultado la segunda ecuación. Puesto que son fórmulas equivalentes, la que utilicemos dependerá de la aplicación.</para>
+<para id="fs-id1170572481528">La importancia del teorema del cambio neto radica en los resultados. El cambio neto puede aplicarse al área, la distancia y el volumen, por nombrar solo algunas aplicaciones. El cambio neto contabiliza automáticamente las cantidades negativas sin tener que escribir más de una integral. Para ilustrarlo, aplicaremos el teorema del cambio neto a una función de <term class="no-emphasis">velocidad</term> en la que el resultado es el <term class="no-emphasis">desplazamiento</term>.</para>
+<para id="fs-id1170572224815">Vimos un ejemplo sencillo de esto en <link class="target-chapter" document="m53631">La integral definida</link>. Supongamos que un auto va hacia el norte (la dirección positiva) a 40 mph entre las 2 p. m. y las 4 p. m., luego se dirige al sur a 30 mph entre las 4 p. m. y las 5 p. m. Podemos graficar este movimiento como se muestra en la <link target-id="CNX_Calc_Figure_05_04_001"/>.</para>
+<figure id="CNX_Calc_Figure_05_04_001">
+<media id="fs-id1170572234070" alt="Gráfico con el eje de la x marcado como t y el eje de la y marcado normalmente. Las líneas y=40 e y=-30 se dibujan sobre [2,4] y [4,5], respectivamente. Las áreas entre las líneas y el eje de la x están sombreadas.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_04_002.jpg"/>
+</media>
+<caption>El gráfico muestra la velocidad en función del tiempo para el movimiento dado de un automóvil.</caption>
+</figure>
+<para id="fs-id1170572296931">Al igual que antes, podemos utilizar integrales definidas para calcular el desplazamiento neto y la distancia total recorrida. El desplazamiento neto viene dado por</para>
+<equation id="fs-id1170572371074" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>2</m:mn><m:mn>5</m:mn></m:msubsup><m:mi>v</m:mi></m:mrow></m:mstyle><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>t</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>2</m:mn><m:mn>4</m:mn></m:msubsup><m:mn>4</m:mn></m:mrow></m:mstyle><m:mn>0</m:mn><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>+</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>4</m:mn><m:mn>5</m:mn></m:msubsup></m:mrow></m:mstyle><m:mn>−30</m:mn><m:mi>d</m:mi><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>80</m:mn><m:mo>−</m:mo><m:mn>30</m:mn></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>50</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170572480929">Así, a las 5 p. m., el auto está a 50 millas al norte de su posición de partida. La distancia total recorrida viene dada por</para>
+<equation id="fs-id1170572415953" class="unnumbered"><label/><m:math><m:mtable><m:mtr/><m:mtr/><m:mtr><m:mtd columnalign="left"><m:msubsup><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∫</m:mo></m:mstyle><m:mn>2</m:mn><m:mn>5</m:mn></m:msubsup><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>2</m:mn><m:mn>4</m:mn></m:msubsup><m:mn>4</m:mn></m:mrow></m:mstyle><m:mn>0</m:mn><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>+</m:mo><m:msubsup><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∫</m:mo></m:mstyle><m:mn>4</m:mn><m:mn>5</m:mn></m:msubsup><m:mn>30</m:mn><m:mi>d</m:mi><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>80</m:mn><m:mo>+</m:mo><m:mn>30</m:mn></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>110</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170571657334">Por lo tanto, entre las 2 p. m. y las 5 p. m., el auto recorrió un total de 110 millas.</para>
+<para id="fs-id1170572216807">En resumen, el desplazamiento neto puede incluir tanto valores positivos como negativos. En otras palabras, la función de velocidad toma en cuenta tanto la distancia hacia delante como hacia atrás. Para dar con el desplazamiento neto, integre la función de velocidad en el intervalo. En cambio, la distancia total recorrida es siempre positiva. Para calcular la distancia total recorrida por un objeto, independientemente de la dirección, tenemos que integrar el valor absoluto de la función de velocidad.</para>
+<example id="fs-id1170572229863">
+<exercise id="fs-id1170571655282">
+<problem id="fs-id1170572168487">
+<title>Hallar el desplazamiento neto</title>
+<para id="fs-id1170572230255">Dada una función de velocidad <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>5</m:mn></m:mrow></m:math> (en metros por segundo) para una partícula en movimiento desde el tiempo <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> al tiempo <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> halle el desplazamiento neto de la partícula.</para>
+</problem>
+<solution id="fs-id1170572480729">
+<para id="fs-id1170572455638">Si aplicamos el teorema del cambio neto, tenemos</para>
+<equation id="fs-id1170572451466" class="unnumbered"><label/><m:math><m:mtable columnalign="left"><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mn>3</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>−</m:mo><m:mn>5</m:mn><m:mi>t</m:mi><m:mrow><m:msubsup><m:mo>|</m:mo><m:mrow><m:mn>0</m:mn></m:mrow><m:mn>3</m:mn></m:msubsup></m:mrow></m:mtd></m:mtr><m:mtr/><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>−</m:mo><m:mn>5</m:mn><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>−</m:mo><m:mn>0</m:mn></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>27</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>−</m:mo><m:mn>15</m:mn></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>27</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>−</m:mo><m:mfrac><m:mrow><m:mn>30</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mo>−</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170571655148">El desplazamiento neto es <m:math><m:mrow><m:mo>−</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> m (<link target-id="CNX_Calc_Figure_05_04_002"/>).</para>
+<figure id="CNX_Calc_Figure_05_04_002">
+<media id="fs-id1170572479285" alt="Gráfico de la línea v(t) = 3t - 5, que pasa por los puntos (0, -5) y (5/3, 0). El área sobre la línea y por debajo del eje de la x en el intervalo [0, 5/3] está sombreada. El área bajo la línea y sobre el eje de la x en el intervalo [5/3, 3] está sombreada.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_04_003.jpg"/>
+</media>
+<caption>El gráfico muestra la velocidad en función del tiempo de una partícula que se mueve con una función de velocidad lineal.</caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1170572247866">
+<exercise id="fs-id1170572510360">
+<problem id="fs-id1170571616759">
+<title>Hallar la distancia total recorrida</title>
+<para id="fs-id1170572558241">Utilice el <link target-id="fs-id1170572229863"/> para calcular la distancia total recorrida por una partícula según la función de velocidad <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>5</m:mn></m:mrow></m:math> m/s en un intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572212520">
+<para id="fs-id1170572206288">La distancia total recorrida incluye tanto los valores positivos como los negativos. Por consiguiente, debemos integrar el valor absoluto de la función de velocidad para dar con la distancia total recorrida.</para>
+<para id="fs-id1170572206422">Para continuar con el ejemplo, utilice dos integrales para calcular la distancia total. En primer lugar, halle la intersección <emphasis effect="italics">t</emphasis>de la función, ya que allí se produce la división del intervalo. Establezca la ecuación igual a cero y resuelva para <emphasis effect="italics">t</emphasis>. Así,</para>
+<equation id="fs-id1170571809306" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>5</m:mn></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>0</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mn>3</m:mn><m:mi>t</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>5</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>t</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mn>5</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170572522381">Los dos subintervalos son <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>5</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mn>5</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Para hallar la distancia total recorrida, integre el valor absoluto de la función. Ya que la función es negativa en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>5</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> tenemos <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en ese intervalo. En <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mn>5</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> la función es positiva, por lo que <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>=</m:mo><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Así, tenemos</para>
+<equation id="fs-id1170572208610" class="unnumbered"><label/><m:math><m:mtable><m:mtr/><m:mtr/><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mn>3</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msubsup><m:mrow><m:mtext>−</m:mtext><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>+</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow><m:mn>3</m:mn></m:msubsup><m:mi>v</m:mi></m:mrow></m:mstyle><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr/><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msubsup><m:mn>5</m:mn></m:mrow></m:mstyle><m:mo>−</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>+</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow><m:mn>3</m:mn></m:msubsup><m:mn>3</m:mn></m:mrow></m:mstyle><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>5</m:mn><m:mi>d</m:mi><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:msubsup><m:mrow><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>5</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow><m:mn>0</m:mn><m:mrow><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msubsup><m:mo>+</m:mo><m:msubsup><m:mrow><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>−</m:mo><m:mn>5</m:mn><m:mi>t</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow><m:mn>3</m:mn></m:msubsup></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>5</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>5</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>−</m:mo><m:mn>0</m:mn><m:mo>+</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>27</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>−</m:mo><m:mn>15</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>−</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>−</m:mo><m:mfrac><m:mrow><m:mn>25</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>25</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>−</m:mo><m:mfrac><m:mrow><m:mn>25</m:mn></m:mrow><m:mn>6</m:mn></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>27</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>−</m:mo><m:mn>15</m:mn><m:mo>−</m:mo><m:mfrac><m:mrow><m:mn>25</m:mn></m:mrow><m:mn>6</m:mn></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>25</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>41</m:mn></m:mrow><m:mn>6</m:mn></m:mfrac><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170572624276">Por lo tanto, la distancia total recorrida es <m:math><m:mrow><m:mfrac><m:mrow><m:mn>14</m:mn></m:mrow><m:mn>6</m:mn></m:mfrac></m:mrow></m:math> m.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170572622550" class="checkpoint">
+<exercise id="fs-id1170571734079">
+<problem id="fs-id1170571609318">
+<para id="fs-id1170571609321">Halle el desplazamiento neto y la distancia total recorrida en metros dada la función de velocidad <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mo>−</m:mo><m:mn>2</m:mn></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571711363">
+<para id="fs-id1170571637281">Desplazamiento neto: <m:math><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>9</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>≈</m:mo><m:mo>−</m:mo><m:mn>0,8055</m:mn><m:mspace width="0.2em"/><m:mtext>m;</m:mtext></m:mrow></m:math> distancia total recorrida: <m:math><m:mrow><m:mn>4</m:mn><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>4</m:mn><m:mo>−</m:mo><m:mn>7,5</m:mn><m:mo>+</m:mo><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>≈</m:mo><m:mn>1,740</m:mn></m:mrow></m:math> m</para>
+</solution>
+<commentary id="fs-id1170571302159" type="hint">
+<title>Sugerencia</title>
+<para id="fs-id1170572244843">Siga los procedimientos del <link target-id="fs-id1170572229863"/> y del <link target-id="fs-id1170572247866"/>. Tenga en cuenta que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mn>0</m:mn></m:mrow></m:math> para <m:math><m:mrow><m:mi>t</m:mi><m:mo>≤</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>4</m:mn><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> para <m:math><m:mrow><m:mi>t</m:mi><m:mo>≥</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1170572547644">
+<title>Aplicación del teorema del cambio neto</title>
+<para id="fs-id1170572294455">El teorema del cambio neto puede aplicarse al flujo y al consumo de fluidos, como se muestra en el <link target-id="fs-id1170571542385"/>.</para>
+<example id="fs-id1170571542385">
+<exercise id="fs-id1170571542387">
+<problem id="fs-id1170571637968">
+<title>¿Cuántos galones de gasolina se consumen?</title>
+  <para id="fs-id1170571637974">Si el motor de una lancha se pone en marcha en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y consume gasolina a un ritmo que se puede modelar para las dos primeras horas como <m:math><m:mn>5</m:mn><m:mo>−</m:mo><m:mfrac><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mn>100</m:mn></m:mfrac></m:math> gal/hr durante la primera hora, ¿qué cantidad de gasolina se consume en la primera hora?</para>
+</problem>
+<solution id="fs-id1170572242300">
+<para id="fs-id1170572242305">Exprese el problema como una integral definida, integre y evalúe con el teorema fundamental del cálculo. Los límites de la integración son los puntos extremos del intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Tenemos</para>
+<equation id="fs-id1170572331198" class="unnumbered"><label/><m:math><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mn>5</m:mn></m:msubsup><m:mo>(</m:mo><m:mo>–</m:mo><m:mfrac><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mn>100</m:mn></m:mfrac><m:mo>)</m:mo><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mo>(</m:mo><m:mn>5</m:mn><m:mi>t</m:mi><m:mo>–</m:mo><m:mfrac><m:msup><m:mi>t</m:mi><m:mn>4</m:mn></m:msup><m:mn>100</m:mn></m:mfrac><m:mo>)</m:mo><m:msub><m:msup><m:mo>|</m:mo><m:mn>2</m:mn></m:msup><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mo>[</m:mo><m:mn>5</m:mn><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo><m:mo>–</m:mo><m:mfrac><m:msup><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mn>4</m:mn></m:msup><m:mn>400</m:mn></m:mfrac><m:mo>]</m:mo><m:mo>–</m:mo><m:mn>0</m:mn><m:mspace linebreak="newline"/><m:mo>=</m:mo><m:mn>10</m:mn><m:mo>–</m:mo><m:mfrac><m:mn>16</m:mn><m:mn>400</m:mn></m:mfrac><m:mspace linebreak="newline"/><m:mo>=</m:mo><m:mn>9</m:mn><m:mo>.</m:mo><m:mn>96</m:mn></m:math></equation>
+<para id="fs-id1170572425086">Así, la lancha consume 4,75 galones de gasolina en 1 hora.</para>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1170572420100">
+<exercise id="fs-id1170572420102">
+<problem id="fs-id1170572420104">
+<title>Apertura del capítulo: Botes deslizadores sobre hielo</title>
+<figure id="CNX_Calc_Figure_05_04_005">
+<media id="fs-id1170572108871" alt="Una imagen de un bote deslizador sobre hielo en acción.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_01_018.jpg"/>
+</media>
+<caption>(Créditos: modificación de la obra de Carter Brown, Flickr)</caption>
+</figure>
+<para id="fs-id1170571637539">Como vimos al principio del capítulo, los mejores corredores de <term class="no-emphasis">botes de hielo</term> (<link document="m53623" target-id="CNX_BMath_Figure_05_00_001"/>) alcanzan velocidades de hasta cinco veces la velocidad del viento. Sin embargo, Andrew es un navegador de nivel intermedio, por lo que alcanza velocidades equivalentes a solo el doble de la velocidad del viento. Supongamos que Andrew saca su bote una mañana en la que ha soplado una ligera brisa de 5 mph durante toda la mañana. Sin embargo, mientras prepara su bote de hielo, el viento empieza a arreciar. Durante su primera media hora de navegación sobre hielo, la velocidad del viento aumenta según la función <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>20</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math> En la segunda media hora de la salida de Andrew, el viento se mantiene estable en 15 mph. En otras palabras, la velocidad del viento viene dada por</para>
+<equation id="fs-id1170571600706" class="unnumbered"><label/><m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mtable columnalign="left"><m:mtr><m:mtd columnalign="left"><m:mn>20</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>5</m:mn></m:mtd><m:mtd columnalign="left"><m:mtext>para</m:mtext></m:mtd><m:mtd columnalign="left"><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mn>15</m:mn></m:mtd><m:mtd columnalign="left"><m:mtext>para</m:mtext></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:mrow></m:mrow></m:math></equation>
+<para id="fs-id1170572589908">Si recordamos que el bote de Andrew viaja al doble de la velocidad del viento, y suponemos que se mueve en línea recta desde su punto de partida, ¿a qué distancia de su punto de partida se encuentra después de 1 hora?</para>
+</problem>
+<solution id="fs-id1170571571212">
+<para id="fs-id1170571571217">Para saber qué distancia ha recorrido Andrew, tenemos que integrar su velocidad, que es el doble de la velocidad del viento. Entonces</para>
+<para id="fs-id1170571571222">Distancia <m:math><m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:mn>2</m:mn><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170572223987">Sustituyendo las expresiones proporcionadas para <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> obtenemos</para>
+<equation id="fs-id1170572224005" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:mn>2</m:mn><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msubsup><m:mrow><m:mn>2</m:mn><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>+</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup><m:mrow><m:mn>2</m:mn><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msubsup><m:mrow><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>20</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>+</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup><m:mrow><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>15</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>40</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>10</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>+</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup><m:mrow><m:mn>30</m:mn><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>20</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>10</m:mn><m:mi>t</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mrow><m:msubsup><m:mo>|</m:mo><m:mrow><m:mn>0</m:mn></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msubsup><m:mo>+</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>30</m:mn><m:mi>t</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:msubsup><m:mo>|</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>20</m:mn></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mn>0</m:mn><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>30</m:mn><m:mo>−</m:mo><m:mn>15</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>25.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170572379534">Pasada 1 hora, Andrew está a 25 millas de su punto de partida.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170572379540" class="checkpoint">
+<exercise id="fs-id1170571609271">
+<problem id="fs-id1170571609274">
+<para id="fs-id1170571609276">Supongamos que, en lugar de permanecer estable durante la segunda media hora de la salida de Andrés, el viento empieza a amainar según la función <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−10</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>15</m:mn><m:mo>.</m:mo></m:mrow></m:math> En otras palabras, la velocidad del viento viene dada por</para>
+<equation id="fs-id1170571609306" class="unnumbered"><label/><m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mtable columnalign="left"><m:mtr><m:mtd columnalign="left"><m:mn>20</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>5</m:mn></m:mtd><m:mtd columnalign="left"><m:mtext>para</m:mtext></m:mtd><m:mtd columnalign="left"><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mo>−</m:mo><m:mn>10</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>15</m:mn></m:mtd><m:mtd columnalign="left"><m:mtext>para</m:mtext></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:mrow></m:mrow></m:math></equation>
+<para id="fs-id1170572181951">En estas condiciones, ¿a qué distancia de su punto de partida se encuentra Andrés después de 1 hora?</para>
+</problem>
+<solution id="fs-id1170572181958">
+<para id="fs-id1170571711312">17,5 mi</para>
+</solution>
+<commentary id="fs-id1170573405903" type="hint">
+<title>Sugerencia</title>
+<para id="fs-id1170572181954">No olvide que el bote deslizador en hielo de Andrew se mueve el doble de rápido que el viento.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1170571711320">
+<title>Integración de funciones pares e impares</title>
+<para id="fs-id1170571711325">En <link class="target-chapter" document="m53472">Funciones y gráficas</link> vimos que la <term class="no-emphasis">función par</term> es aquella en la que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>−</m:mtext><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para toda <emphasis effect="italics">x</emphasis> en el dominio, es decir, el gráfico de la curva no cambia cuando se sustituye <emphasis effect="italics">x</emphasis> por −<emphasis effect="italics">x</emphasis>. Los gráficos de las funciones pares son simétricas con respecto al eje de la <emphasis effect="italics">y</emphasis>. Una <term class="no-emphasis">función impar</term> es aquella en la que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>−</m:mtext><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para toda <emphasis effect="italics">x</emphasis> en el dominio, y el gráfico de la función es simétrico respecto al origen.</para>
+<para id="fs-id1170572503213">Las integrales de las funciones pares, cuando los límites de la integración son de −<emphasis effect="italics">a</emphasis> a <emphasis effect="italics">a</emphasis>, implican dos áreas iguales, porque son simétricas respecto al eje de la <emphasis effect="italics">y</emphasis>. Las integrales de funciones impares, cuando los límites de integración son similares <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mtext>−</m:mtext><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>a</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> se evalúa a cero porque las áreas por encima y por debajo del eje de la <emphasis effect="italics">x</emphasis>son iguales.</para>
+<note id="fs-id1170572217489">
+<title>Regla: Integrales de funciones pares e impares</title>
+<para id="fs-id1170572217494">Para funciones continuas pares, tales que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>−</m:mtext><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math></para>
+<equation id="fs-id1170572587715" class="unnumbered"><label/><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mrow><m:mtext>−</m:mtext><m:mi>a</m:mi></m:mrow><m:mi>a</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mi>a</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170572380029">Para funciones continuas impares, tales que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>−</m:mtext><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math></para>
+<equation id="fs-id1170572380064" class="unnumbered"><label/><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mrow><m:mtext>−</m:mtext><m:mi>a</m:mi></m:mrow><m:mi>a</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></equation>
+</note>
+<example id="fs-id1170572624845">
+<exercise id="fs-id1170572624847">
+<problem id="fs-id1170572624850">
+<title>Integrar una función par</title>
+<para id="fs-id1170572624855">Integre la función par <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mrow><m:mn>-2</m:mn></m:mrow><m:mn>2</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>8</m:mn></m:msup><m:mo>−</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> y verifique que la fórmula de integración para funciones pares se cumpla.</para>
+</problem>
+<solution id="fs-id1170572551788">
+<para id="fs-id1170572551794">La simetría aparece en los gráficos en la <link target-id="CNX_Calc_Figure_05_04_003"/>. El gráfico (a) muestra la región por debajo de la curva y por encima del eje de la <emphasis effect="italics">x</emphasis>. Hay que ampliar mucho este gráfico para ver la región. El gráfico (b) muestra la región por encima de la curva y por debajo del eje de la <emphasis effect="italics">x</emphasis>. El área con signo de esta región es negativa. Ambas vistas ilustran la simetría en torno al eje de la <emphasis effect="italics">y</emphasis>de una función par. Tenemos</para>
+<equation id="fs-id1170572551814" class="unnumbered"><label/><m:math><m:mtable columnalign="left"><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mrow><m:mn>-2</m:mn></m:mrow><m:mn>2</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>8</m:mn></m:msup><m:mo>−</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>9</m:mn></m:msup></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>−</m:mo><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:msubsup><m:mo>|</m:mo><m:mrow><m:mn>-2</m:mn></m:mrow><m:mn>2</m:mn></m:msubsup></m:mrow></m:mtd></m:mtr><m:mtr/><m:mtr/><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>9</m:mn></m:msup></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>−</m:mo><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>−</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>9</m:mn></m:msup></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>−</m:mo><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>512</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>−</m:mo><m:mfrac><m:mrow><m:mn>512</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>1000</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170571775811">Para verificar la fórmula de integración de las funciones pares, podemos calcular la integral de 0 a 2 y duplicarla, y luego verificar que obtenemos la misma respuesta.</para>
+<equation id="fs-id1170572444219" class="unnumbered"><label/><m:math><m:mtable columnalign="left"><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>8</m:mn></m:msup><m:mo>−</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>9</m:mn></m:msup></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>−</m:mo><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:msubsup><m:mo>|</m:mo><m:mrow><m:mn>0</m:mn></m:mrow><m:mn>2</m:mn></m:msubsup></m:mrow></m:mtd></m:mtr><m:mtr/><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>512</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>−</m:mo><m:mn>4</m:mn></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>500</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170572163872">Dado que <m:math><m:mrow><m:mn>2</m:mn><m:mo>·</m:mo><m:mfrac><m:mrow><m:mn>500</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>1000</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> hemos verificado la fórmula de las funciones pares en este ejemplo concreto.</para>
+<figure id="CNX_Calc_Figure_05_04_003">
+<media id="fs-id1170571599706" alt="Dos gráficos contiguos de la misma función f(x) = 3x^8 - 2. Es simétrica respecto al eje de la y, tiene intersecciones en x en (-1,0) y (1,0), y tiene una intersección en y en (0,-2). La función disminuye rápidamente a medida que aumenta x hasta aproximadamente -0,5, donde se nivela en -2. Luego, en torno a 0,5, aumenta rápidamente como una imagen de espejo. El primer gráfico está ampliado y muestra el área positiva entre la curva y el eje de la x sobre [-2,-1] y [1,2]. El segundo está ampliado y muestra el área negativa entre la curva y el eje de la x sobre [-1,1].">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_04_005.jpg"/>
+</media>
+<caption>El gráfico (a) muestra el área positiva entre la curva y el eje de la <emphasis effect="italics">x</emphasis>, mientras que el gráfico (b) muestra el área negativa entre la curva y el eje de la <emphasis effect="italics">x</emphasis>. Ambas vistas muestran la simetría en torno al eje de la <emphasis effect="italics">y</emphasis>.</caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1170571599733">
+<exercise id="fs-id1170571599735">
+<problem id="fs-id1170571599738">
+<title>Integrar una función impar</title>
+<para id="fs-id1170571599743">Evalúe la integral definida de la función impar <m:math><m:mrow><m:mn>-5</m:mn><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mtext>−</m:mtext><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572229798">
+<para id="fs-id1170572229803">El gráfico se muestra en la <link target-id="CNX_Calc_Figure_05_04_004"/>. Podemos ver la simetría respecto al origen por el área positiva sobre el eje de la <emphasis effect="italics">x</emphasis> en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mtext>−</m:mtext><m:mi>π</m:mi><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y el área negativa por debajo del eje de la <emphasis effect="italics">x</emphasis> en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>π</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Tenemos</para>
+<equation id="fs-id1170572621622" class="unnumbered"><label/><m:math><m:mtable columnalign="left"><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mrow><m:mtext>−</m:mtext><m:mi>π</m:mi></m:mrow><m:mi>π</m:mi></m:msubsup><m:mrow><m:mn>-5</m:mn><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>-5</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>−</m:mtext><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:msubsup><m:mo>|</m:mo><m:mrow><m:mtext>−</m:mtext><m:mi>π</m:mi></m:mrow><m:mi>π</m:mi></m:msubsup></m:mrow></m:mtd></m:mtr><m:mtr/><m:mtr/><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>5</m:mn><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mrow><m:msubsup><m:mo>|</m:mo><m:mrow><m:mtext>−</m:mtext><m:mi>π</m:mi></m:mrow><m:mi>π</m:mi></m:msubsup></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>5</m:mn><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>π</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>−</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>5</m:mn><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>−</m:mtext><m:mi>π</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>-5</m:mn><m:mo>−</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<figure id="CNX_Calc_Figure_05_04_004">
+<media id="fs-id1170571807218" alt="Gráfico de la función dada f(x) = -5 sen(x). El área por debajo de la función, pero por encima del eje de la x, está sombreada en [-pi, 0], y el área por encima de la función y por debajo del eje de la x está sombreada en [0, pi].">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_04_006.jpg"/>
+</media>
+<caption>El gráfico muestra las áreas entre una curva y el eje de la <emphasis effect="italics">x</emphasis>para una función impar.</caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170572337805" class="checkpoint">
+<exercise id="fs-id1170572337809">
+<problem id="fs-id1170572337811">
+<para id="fs-id1170572337813">Integre la función <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mrow><m:mn>-2</m:mn></m:mrow><m:mn>2</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572337848">
+<para id="fs-id1170572337850"><m:math><m:mrow><m:mfrac><m:mrow><m:mn>64</m:mn></m:mrow><m:mn>5</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1170573582226" type="hint">
+<title>Sugerencia</title>
+<para id="fs-id1170572337844">Integre una función par.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1170572337865" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1170572337872" list-type="bulleted" bullet-style="bullet">
+<item>El teorema del cambio neto establece que, cuando una cantidad cambia, el valor final es igual al valor inicial más la integral de la tasa de cambio. El cambio neto puede ser un número positivo, un número negativo o cero.</item>
+<item>El área bajo una función par en un intervalo simétrico se calcula al duplicar el área sobre el eje de la <emphasis effect="italics">x</emphasis>positivo. En una función impar, la integral sobre un intervalo simétrico es igual a cero, porque la mitad del área es negativa.</item>
+</list>
+</section>
+<section id="fs-id1170572274778" class="key-equations">
+<title>Ecuaciones clave</title>
+<table id="eip-500" summary="." class="unnumbered unstyled">
+<tgroup cols="2"><tbody>
+  <row>
+    <entry><emphasis effect="bold">Teorema del cambio neto</emphasis></entry>
+    <entry><m:math><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>F</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> o <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>F</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></entry>
+  </row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section id="fs-id1170571733925" class="section-exercises">
+<para id="fs-id1170571733929">Utilice las fórmulas básicas de integración para calcular las siguientes antiderivadas o integrales definidas.</para><exercise id="fs-id1170571733932">
+<problem id="fs-id1170572558244">
+<para id="fs-id1170572558246"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>−</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572558283">
+<para id="fs-id1170572558285"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>−</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mn>-1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mfrac><m:mn>2</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mrow><m:mn>3</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub><m:mo>−</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>2</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mrow><m:mn>3</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup><m:mo>−</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572233918">
+<problem id="fs-id1170572233920">
+<para id="fs-id1170572233922"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>−</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mi>x</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572622517">
+<problem id="fs-id1170572622519">
+<para id="fs-id1170572622521"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572334237">
+<para id="fs-id1170572334239"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>ln</m:mtext><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572334286">
+<problem id="fs-id1170572334288">
+<para id="fs-id1170572334290"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572344266">
+<problem id="fs-id1170572344269">
+<para id="fs-id1170572344271"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mi>π</m:mi></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>−</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572626592">
+<para id="fs-id1170572626594"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mi>π</m:mi></m:msubsup><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mi>π</m:mi></m:msubsup><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mrow><m:msubsup><m:mo>|</m:mo><m:mrow><m:mn>0</m:mn></m:mrow><m:mi>π</m:mi></m:msubsup><m:mo>−</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:msubsup><m:mo>|</m:mo><m:mrow><m:mn>0</m:mn></m:mrow><m:mi>π</m:mi></m:msubsup></m:mrow></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>−</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>−</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572444357">
+<problem id="fs-id1170572444359">
+<para id="fs-id1170572444361"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572293468">
+<problem id="fs-id1170572293470">
+<para id="fs-id1170572293472">Escriba una integral que exprese el aumento del perímetro <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de un cuadrado cuando su longitud de lado <emphasis effect="italics">s</emphasis> aumenta de 2 unidades a 4 unidades y evalúe la integral.</para>
+</problem>
+<solution id="fs-id1170572293493">
+<para id="fs-id1170572293495"><m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:mi>s</m:mi><m:mo>,</m:mo></m:mrow></m:math> así que <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>P</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>s</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>2</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mn>4</m:mn><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>=</m:mo><m:mn>8</m:mn></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571613575">
+<problem id="fs-id1170571613577">
+<para id="fs-id1170571613579">Escriba una integral que cuantifique el cambio en el área <m:math><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>s</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> de un cuadrado cuando la longitud de sus lados se duplica de <emphasis effect="italics">S</emphasis> unidades a 2<emphasis effect="italics">S</emphasis> unidades y evalúe la integral.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572554393">
+<problem id="fs-id1170572554395">
+<para id="fs-id1170572554397">Un <emphasis effect="italics">N-gono</emphasis> regular (un polígono de <emphasis effect="italics">N</emphasis> lados que tienen igual longitud <emphasis effect="italics">s</emphasis>, como un pentágono o un hexágono) tiene un perímetro <emphasis effect="italics">Ns</emphasis>. Escriba una integral que exprese el aumento del perímetro de un <emphasis effect="italics">N</emphasis>-gono regular cuando la longitud de cada lado aumenta de 1 unidad a 2 unidades y evalúe la integral.</para>
+</problem>
+<solution id="fs-id1170572554422">
+<para id="fs-id1170572554425"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:mi>N</m:mi><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>=</m:mo><m:mi>N</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572628420">
+<problem id="fs-id1170572628422">
+<para id="fs-id1170572628424">El área de un pentágono regular con longitud lateral <m:math><m:mrow><m:mi>a</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> es <emphasis effect="italics">pa</emphasis><sup>2</sup> con <m:math><m:mrow><m:mi>p</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:msqrt><m:mrow><m:mn>5</m:mn><m:mo>+</m:mo><m:msqrt><m:mrow><m:mn>5</m:mn><m:mo>+</m:mo><m:mn>2</m:mn><m:msqrt><m:mn>5</m:mn></m:msqrt></m:mrow></m:msqrt></m:mrow></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> El Pentágono en Washington, DC, tiene lados interiores de 360 pies y lados exteriores de 920 pies de longitud. Escriba una integral para expresar el área del techo del Pentágono según estas dimensiones y evalúe esa área.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572543692">
+<problem id="fs-id1170572543694">
+<para id="fs-id1170572543696">El dodecaedro es un sólido platónico cuya superficie está formada por 12 pentágonos de igual superficie. ¿En cuánto aumenta el área superficial de un dodecaedro cuando la longitud de los lados de cada pentágono se duplica de 1 a 2 unidades?</para>
+</problem>
+<solution id="fs-id1170572543702">
+<para id="fs-id1170572543704">Con <emphasis effect="italics">p</emphasis> como en el ejercicio anterior, cada uno de los 12 pentágonos aumenta su área de 2<emphasis effect="italics">p</emphasis> unidades a 4<emphasis effect="italics">p</emphasis> unidades, por lo que el aumento neto del área del dodecaedro es de 36<emphasis effect="italics">p</emphasis> unidades.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572543727">
+<problem id="fs-id1170572543729">
+<para id="fs-id1170572543731">El icosaedro es un sólido platónico cuya superficie está formada por 20 triángulos equiláteros. ¿En cuánto aumenta el área superficial de un icosaedro cuando la longitud de los lados de cada triángulo se duplica de la unidad <emphasis effect="italics">a</emphasis> a 2<emphasis effect="italics">a</emphasis> unidades?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572184318">
+<problem id="fs-id1170572184320">
+<para id="fs-id1170572184322">Escriba una integral que cuantifique el cambio en el área de la superficie de un cubo cuando su longitud lateral se duplica de la unidad <emphasis effect="italics">s</emphasis> a 2<emphasis effect="italics">s</emphasis> unidades y evalúe la integral.</para>
+</problem>
+<solution id="fs-id1170572184336">
+<para id="fs-id1170572184338"><m:math><m:mrow><m:mn>18</m:mn><m:msup><m:mi>s</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>6</m:mn><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>s</m:mi><m:mrow><m:mn>2</m:mn><m:mi>s</m:mi></m:mrow></m:msubsup><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571653387">
+<problem id="fs-id1170571653389">
+<para id="fs-id1170571653391">Escriba una integral que cuantifique el aumento del volumen de un cubo cuando su longitud lateral se duplica desde la unidad <emphasis effect="italics">s</emphasis> hasta 2<emphasis effect="italics">s</emphasis> unidades y evalúe la integral.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571653450">
+<problem id="fs-id1170571653452">
+<para id="fs-id1170571653454">Escriba una integral que cuantifique el aumento del área superficial de una esfera cuando su radio se duplica de la unidad <emphasis effect="italics">R</emphasis> a 2<emphasis effect="italics">R</emphasis> unidades y evalúe la integral.</para>
+</problem>
+<solution id="fs-id1170571653468">
+<para id="fs-id1170571597403"><m:math><m:mrow><m:mn>12</m:mn><m:mi>π</m:mi><m:msup><m:mi>R</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>8</m:mn><m:mi>π</m:mi><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>R</m:mi><m:mrow><m:mn>2</m:mn><m:mi>R</m:mi></m:mrow></m:msubsup><m:mrow><m:mi>r</m:mi><m:mi>d</m:mi><m:mi>r</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571597447">
+<problem id="fs-id1170571597449">
+<para id="fs-id1170571597451">Escriba una integral que cuantifique el aumento del volumen de una esfera cuando su radio se duplica de la unidad <emphasis effect="italics">R</emphasis> unidad a 2<emphasis effect="italics">R</emphasis> unidades y evalúe la integral.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572480525">
+<problem id="fs-id1170572480528">
+<para id="fs-id1170572480530">Supongamos que una partícula se mueve a lo largo de una línea recta a velocidad <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>−</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn></m:mrow></m:math> (en metros por segundo). Calcule el desplazamiento en el tiempo <emphasis effect="italics">t</emphasis> y la distancia total recorrida hasta <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571788084">
+<para id="fs-id1170571788086"><m:math><m:mrow><m:mi>d</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mi>t</m:mi></m:msubsup><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>s</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> La distancia total es <m:math><m:mrow><m:mi>d</m:mi><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>m</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572369345">
+<problem id="fs-id1170572369347">
+<para id="fs-id1170572369350">Supongamos que una partícula se mueve a lo largo de una línea recta con una velocidad definida por <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>18</m:mn><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>6</m:mn></m:mrow></m:math> (en metros por segundo). Calcule el desplazamiento en el tiempo <emphasis effect="italics">t</emphasis> y la distancia total recorrida hasta <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572373389">
+<problem id="fs-id1170572373391">
+<para id="fs-id1170572373393">Supongamos que una partícula se mueve a lo largo de una línea recta con una velocidad definida por <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo><m:mrow><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>6</m:mn></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>6</m:mn></m:mrow></m:math> (en metros por segundo). Calcule el desplazamiento en el tiempo <emphasis effect="italics">t</emphasis> y la distancia total recorrida hasta <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572373458">
+<para id="fs-id1170572373461"><m:math><m:mrow><m:mi>d</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mi>t</m:mi></m:msubsup><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>s</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> ¿Para <m:math><m:mrow><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mi>d</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mi>t</m:mi></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>6</m:mn><m:mo>−</m:mo><m:mn>2</m:mn><m:mi>t</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> ¿Para <m:math><m:mrow><m:mi>t</m:mi><m:mo>&gt;</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mi>d</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mi>d</m:mi><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>3</m:mn><m:mi>t</m:mi></m:msubsup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>6</m:mn><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mn>9</m:mn><m:mo>+</m:mo><m:mo stretchy="false">(</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>6</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mrow><m:msubsup><m:mo>|</m:mo><m:mrow><m:mn>3</m:mn></m:mrow><m:mi>6</m:mi></m:msubsup></m:mrow><m:mo>.</m:mo></m:mrow></m:math> La distancia total es <m:math><m:mrow><m:mi>d</m:mi><m:mo stretchy="false">(</m:mo><m:mn>6</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>18</m:mn><m:mspace width="0.2em"/><m:mtext>m</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></para></solution>
+</exercise>
+<exercise id="fs-id1170571649968">
+<problem id="fs-id1170571649971">
+<para id="fs-id1170571649973">Supongamos que una partícula se mueve a lo largo de una línea recta a una aceleración definida por <m:math><m:mrow><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>6</m:mn></m:mrow></m:math> (en metros por segundo). Halle la velocidad y el desplazamiento en el tiempo <emphasis effect="italics">t</emphasis> y la distancia total recorrida hasta <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math> si <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>d</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572235269">
+<problem id="fs-id1170572235271">
+<para id="fs-id1170572235273">Se lanza un balón hacia arriba desde una altura de 1,5 m a una rapidez inicial de 40 m/s. La aceleración resultante de la gravedad es de -9,8 m/seg<sup>2</sup>. Sin tener en cuenta la resistencia del aire, resuelva la velocidad <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y la altura <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> del balón <emphasis effect="italics">t</emphasis> segundos después de ser lanzado y antes de que vuelva al suelo.</para>
+</problem>
+<solution id="fs-id1170572235313">
+<para id="fs-id1170572235316"><m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>40</m:mn><m:mo>−</m:mo><m:mn>9,8</m:mn><m:mi>t</m:mi><m:mtext>m/seg</m:mtext><m:mo>;</m:mo><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1,5</m:mn><m:mo>+</m:mo><m:mn>40</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>4,9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> m/s</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571712591">
+<problem id="fs-id1170571712593">
+<para id="fs-id1170571712595">Se lanza un balón hacia arriba desde una altura de 3 m a una rapidez inicial de 60 m/s. La aceleración resultante de la gravedad es de -9,8 m/seg<sup>2</sup>. Sin tener en cuenta la resistencia del aire, resuelva la velocidad <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y la altura <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> del balón <emphasis effect="italics">t</emphasis> segundos después de ser lanzado y antes de que vuelva al suelo.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572443658">
+<problem id="fs-id1170572443660">
+<para id="fs-id1170572443662">La zona <m:math><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de forma circular crece a un ritmo constante. Si el área aumenta de 4<emphasis effect="italics">π</emphasis> unidades a 9<emphasis effect="italics">π</emphasis> unidades entre tiempos <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> halle el cambio neto en el radio durante ese tiempo.</para>
+</problem>
+<solution id="fs-id1170572419263">
+<para id="fs-id1170572419265">El aumento neto es de 1 unidad.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572419271">
+<problem id="fs-id1170572419273">
+<para id="fs-id1170572419275">Un globo esférico se infla a un ritmo constante. Si el volumen del globo cambia de 36<emphasis effect="italics">π</emphasis> in<sup>3</sup> a 288<emphasis effect="italics">π</emphasis> in<sup>3</sup> entre el tiempo <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>30</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>60</m:mn></m:mrow></m:math> segundos, halle el cambio neto en el radio del globo durante ese tiempo.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571699444">
+<problem id="fs-id1170571699446">
+<para id="fs-id1170571699448">El agua fluye en un tanque cónico con un área transversal <emphasis effect="italics">πx</emphasis><sup>2</sup> a una altura <emphasis effect="italics">x</emphasis> y un volumen <m:math><m:mrow><m:mfrac><m:mrow><m:mi>π</m:mi><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> hasta la altura <emphasis effect="italics">x</emphasis>. Si el agua entra en el depósito a una velocidad de 1m<sup>3</sup>/min, halle la altura del agua en el depósito después de 5 min. Halle el cambio de altura entre 5 min y 10 min.</para>
+</problem>
+<solution id="fs-id1170571699490">
+<para id="fs-id1170571699492">En <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>,</m:mo></m:mrow></m:math> la altura del agua es <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>15</m:mn></m:mrow><m:mi>π</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup><m:mspace width="0.2em"/><m:mtext>m</m:mtext><m:mtext>.</m:mtext><m:mo>.</m:mo></m:mrow></m:math> El cambio neto en la altura desde <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math> a <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math> es <m:math><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>30</m:mn></m:mrow><m:mi>π</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup><m:mo>−</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>15</m:mn></m:mrow><m:mi>π</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup></m:mrow></m:math> m.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571679806">
+<problem id="fs-id1170571679808">
+<para id="fs-id1170571679811">Un tanque cilíndrico horizontal tiene una sección transversal <m:math><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>6</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>m</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> a una altura de <emphasis effect="italics">x</emphasis> metros sobre el fondo cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1170571679869" list-type="enumerated" number-style="lower-alpha">
+<item>El volumen <emphasis effect="italics">V</emphasis> entre la altura <emphasis effect="italics">a</emphasis> y <emphasis effect="italics">b</emphasis> es <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> Halle el volumen en la altura comprendida entre 2 m y 3 m.</item>
+<item>Supongamos que se bombea aceite al tanque a una velocidad de 50 L/min. Utilizando la regla de la cadena, <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>V</m:mi></m:mrow></m:mfrac><m:mspace width="0.2em"/><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>V</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> ¿a cuántos metros por minuto cambia la altura del aceite en el depósito, expresada en términos de <emphasis effect="italics">x</emphasis>, cuando la altura está a <emphasis effect="italics">x</emphasis> metros?</item>
+<item>¿Cuánto tiempo se tarda en llenar el depósito hasta 3 m partiendo de un nivel de llenado de 2 m?</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1170571638194">
+<problem id="fs-id1170571638196">
+<para id="fs-id1170571638198">La siguiente tabla muestra la potencia eléctrica en gigavatios (la tasa de consumo de energía) que se utiliza en una ciudad en diferentes horas del día, en un periodo típico de 24 horas, donde la hora 1 va desde la medianoche hasta la 1 a. m.</para>
+<table id="fs-id1170571638210" class="unnumbered" summary="A table with four columns and thirteen rows. The first column has the label “Hour” and the values 1 through 12. The second column has the label “Power” and the values 28, 25, 24, 23, 24, 27, 29, 32, 34, 39, 42, and 46. The third column has the label “Hour” and the values 13 through 24. The fourth column has the label “Power” and the values 48, 49, 49, 50, 50, 50, 46, 43, 42, 40, 37, and 34.">
+<label/>
+<tgroup cols="4">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<thead>
+<row valign="top">
+<entry align="left">Hora</entry>
+<entry align="left">Potencia</entry>
+<entry align="left">Hora</entry>
+<entry align="left">Potencia</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">1</entry>
+<entry align="left">28</entry>
+<entry align="left">13</entry>
+<entry align="left">48</entry>
+</row>
+<row valign="top">
+<entry align="left">2</entry>
+<entry align="left">25</entry>
+<entry align="left">14</entry>
+<entry align="left">49</entry>
+</row>
+<row valign="top">
+<entry align="left">3</entry>
+<entry align="left">24</entry>
+<entry align="left">15</entry>
+<entry align="left">49</entry>
+</row>
+<row valign="top">
+<entry align="left">4</entry>
+<entry align="left">23</entry>
+<entry align="left">16</entry>
+<entry align="left">50</entry>
+</row>
+<row valign="top">
+<entry align="left">5</entry>
+<entry align="left">24</entry>
+<entry align="left">17</entry>
+<entry align="left">50</entry>
+</row>
+<row valign="top">
+<entry align="left">6</entry>
+<entry align="left">27</entry>
+<entry align="left">18</entry>
+<entry align="left">50</entry>
+</row>
+<row valign="top">
+<entry align="left">7</entry>
+<entry align="left">29</entry>
+<entry align="left">19</entry>
+<entry align="left">46</entry>
+</row>
+<row valign="top">
+<entry align="left">8</entry>
+<entry align="left">32</entry>
+<entry align="left">20</entry>
+<entry align="left">43</entry>
+</row>
+<row valign="top">
+<entry align="left">9</entry>
+<entry align="left">34</entry>
+<entry align="left">21</entry>
+<entry align="left">42</entry>
+</row>
+<row valign="top">
+<entry align="left">10</entry>
+<entry align="left">39</entry>
+<entry align="left">22</entry>
+<entry align="left">40</entry>
+</row>
+<row valign="top">
+<entry align="left">11</entry>
+<entry align="left">42</entry>
+<entry align="left">23</entry>
+<entry align="left">37</entry>
+</row>
+<row valign="top">
+<entry align="left">12</entry>
+<entry align="left">46</entry>
+<entry align="left">24</entry>
+<entry align="left">34</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<para id="fs-id1170571543230">Halle la cantidad total de energía en gigavatios-hora (gW-h) que la ciudad consume en un periodo típico de 24 horas.</para></problem>
+<solution id="fs-id1170571543236">
+<para id="fs-id1170571543238">El consumo total de energía diario se estima como la suma de las tasas de energía horaria, o sea 911 gW-h.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571543244">
+<problem id="fs-id1170571543246">
+<para id="fs-id1170571543248">El uso promedio de energía eléctrica residencial (en cientos de vatios) por hora se indica en la siguiente tabla.</para>
+<table id="fs-id1170571543256" class="unnumbered" summary="A table with four columns and thirteen rows. The first column has the label “Hour” and the values 1 through 12. The second column has the label “Power” and the values 8, 6, 5, 4, 5, 6, 7, 8, 9, 10, 10, and 11. The third column has the label “Hour” and the values 13 through 24. The fourth column has the label “Power” and the values 12, 13, 14, 15, 17, 19, 18, 17, 16, 16, 13, and 11.">
+<label/>
+<tgroup cols="4">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<thead>
+<row valign="top">
+<entry align="left">Hora</entry>
+<entry align="left">Potencia</entry>
+<entry align="left">Hora</entry>
+<entry align="left">Potencia</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">1</entry>
+<entry align="left">8</entry>
+<entry align="left">13</entry>
+<entry align="left">12</entry>
+</row>
+<row valign="top">
+<entry align="left">2</entry>
+<entry align="left">6</entry>
+<entry align="left">14</entry>
+<entry align="left">13</entry>
+</row>
+<row valign="top">
+<entry align="left">3</entry>
+<entry align="left">5</entry>
+<entry align="left">15</entry>
+<entry align="left">14</entry>
+</row>
+<row valign="top">
+<entry align="left">4</entry>
+<entry align="left">4</entry>
+<entry align="left">16</entry>
+<entry align="left">15</entry>
+</row>
+<row valign="top">
+<entry align="left">5</entry>
+<entry align="left">5</entry>
+<entry align="left">17</entry>
+<entry align="left">17</entry>
+</row>
+<row valign="top">
+<entry align="left">6</entry>
+<entry align="left">6</entry>
+<entry align="left">18</entry>
+<entry align="left">19</entry>
+</row>
+<row valign="top">
+<entry align="left">7</entry>
+<entry align="left">7</entry>
+<entry align="left">19</entry>
+<entry align="left">18</entry>
+</row>
+<row valign="top">
+<entry align="left">8</entry>
+<entry align="left">8</entry>
+<entry align="left">20</entry>
+<entry align="left">17</entry>
+</row>
+<row valign="top">
+<entry align="left">9</entry>
+<entry align="left">9</entry>
+<entry align="left">21</entry>
+<entry align="left">16</entry>
+</row>
+<row valign="top">
+<entry align="left">10</entry>
+<entry align="left">10</entry>
+<entry align="left">22</entry>
+<entry align="left">16</entry>
+</row>
+<row valign="top">
+<entry align="left">11</entry>
+<entry align="left">10</entry>
+<entry align="left">23</entry>
+<entry align="left">13</entry>
+</row>
+<row valign="top">
+<entry align="left">12</entry>
+<entry align="left">11</entry>
+<entry align="left">24</entry>
+<entry align="left">11</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<list id="fs-id1170572218654" list-type="enumerated" number-style="lower-alpha">
+<item>Calcule la energía total promedio utilizada en un día en kilovatios-hora (kWh).</item>
+<item>Si una tonelada de carbón genera 1842 kWh, ¿cuánto tiempo tarda una residencia común en quemar una tonelada de carbón?</item>
+<item>Explique por qué los datos encajan en un gráfico de la forma <m:math><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>11,5</m:mn><m:mo>−</m:mo><m:mn>7,5</m:mn><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>π</m:mi><m:mi>t</m:mi></m:mrow><m:mrow><m:mn>12</m:mn></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1170572643190">
+<problem id="fs-id1170572643193">
+<para id="fs-id1170572643195">Los datos de la siguiente tabla se utilizan para estimar la potencia media producida por Peter Sagan en cada uno de los últimos 18 segundos de la etapa 1 del <term class="no-emphasis">Tour de Francia</term> de 2012.</para>
+<table id="fs-id1170572643212" summary="A table with ten rows and four columns. The first column contains the label “Second” and the values 1 through 9. The second column contains the label “Watts” and the values 600, 500, 575, 1050, 925, 950, 1050, 950, and 1100. The third column contains the label “Second” and the values 10 through 18. The fourth column contains the label “Watts” and the values 1200, 1170, 1125, 1100, 1075, 1000, 950, 900, and 780.">
+<title>Potencia promedio de salida</title>
+<tgroup cols="4">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<thead>
+<row valign="top">
+<entry align="left">Segundo</entry>
+<entry align="left">Vatios</entry>
+<entry align="left">Segundo</entry>
+<entry align="left">Vatios</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">1</entry>
+<entry align="left">600</entry>
+<entry align="left">10</entry>
+<entry align="left">1200</entry>
+</row>
+<row valign="top">
+<entry align="left">2</entry>
+<entry align="left">500</entry>
+<entry align="left">11</entry>
+<entry align="left">1.170</entry>
+</row>
+<row valign="top">
+<entry align="left">3</entry>
+<entry align="left">575</entry>
+<entry align="left">12</entry>
+<entry align="left">1125</entry>
+</row>
+<row valign="top">
+<entry align="left">4</entry>
+<entry align="left">1050</entry>
+<entry align="left">13</entry>
+<entry align="left">1100</entry>
+</row>
+<row valign="top">
+<entry align="left">5</entry>
+<entry align="left">925</entry>
+<entry align="left">14</entry>
+<entry align="left">1.075</entry>
+</row>
+<row valign="top">
+<entry align="left">6</entry>
+<entry align="left">950</entry>
+<entry align="left">15</entry>
+<entry align="left">1000</entry>
+</row>
+<row valign="top">
+<entry align="left">7</entry>
+<entry align="left">1050</entry>
+<entry align="left">16</entry>
+<entry align="left">950</entry>
+</row>
+<row valign="top">
+<entry align="left">8</entry>
+<entry align="left">950</entry>
+<entry align="left">17</entry>
+<entry align="left">900</entry>
+</row>
+<row valign="top">
+<entry align="left">9</entry>
+<entry align="left">1100</entry>
+<entry align="left">18</entry>
+<entry align="left">780</entry>
+</row>
+</tbody>
+</tgroup>
+<caption><emphasis effect="italics">Fuente</emphasis>: sportsexercisengineering.com</caption>
+</table>
+<para id="fs-id1170572399020">Calcule la energía neta utilizada en kilojulios (kJ), teniendo en cuenta que 1W = 1 J/s, y la potencia promedio, producida por Sagan durante este intervalo.</para>
+</problem>
+<solution id="fs-id1170572399026">
+<para id="fs-id1170572399028">17 kJ</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572399033">
+<problem id="fs-id1170572399035">
+<para id="fs-id1170572399037">Los datos en la siguiente tabla se utilizan para estimar la potencia promedio, producida por Peter Sagan en cada intervalo de 15 minutos de la etapa 1 del Tour de Francia de 2012.</para>
+<table id="fs-id1170572399049" summary="A table with eleven rows and four columns. The first column has the label “Minutes” and the values 15, 30, 45, 60, 75, 90, 105, 120, 135, and 150. The second column has the label “Watts” and the values 200, 180, 190, 230, 240, 210, 210, 220, 210, and 150. The third column has the label “Minutes” and the values 165, 180, 195, 210, 225, 240, 255, 270, 285, and 300. The fourth column has the label “Watts” and the values 170, 220, 140, 225, 170, 210, 200, 220, 250, and 400.">
+<title>Potencia promedio de salida</title>
+<tgroup cols="4">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<thead>
+<row valign="top">
+<entry align="left">Minutos</entry>
+<entry align="left">Vatios</entry>
+<entry align="left">Minutos</entry>
+<entry align="left">Vatios</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">15</entry>
+<entry align="left">200</entry>
+<entry align="left">165</entry>
+<entry align="left">170</entry>
+</row>
+<row valign="top">
+<entry align="left">30</entry>
+<entry align="left">180</entry>
+<entry align="left">180</entry>
+<entry align="left">220</entry>
+</row>
+<row valign="top">
+<entry align="left">45</entry>
+<entry align="left">190</entry>
+<entry align="left">195</entry>
+<entry align="left">140</entry>
+</row>
+<row valign="top">
+<entry align="left">60</entry>
+<entry align="left">230</entry>
+<entry align="left">210</entry>
+<entry align="left">225</entry>
+</row>
+<row valign="top">
+<entry align="left">75</entry>
+<entry align="left">240</entry>
+<entry align="left">225</entry>
+<entry align="left">170</entry>
+</row>
+<row valign="top">
+<entry align="left">90</entry>
+<entry align="left">210</entry>
+<entry align="left">240</entry>
+<entry align="left">210</entry>
+</row>
+<row valign="top">
+<entry align="left">105</entry>
+<entry align="left">210</entry>
+<entry align="left">255</entry>
+<entry align="left">200</entry>
+</row>
+<row valign="top">
+<entry align="left">120</entry>
+<entry align="left">220</entry>
+<entry align="left">270</entry>
+<entry align="left">220</entry>
+</row>
+<row valign="top">
+<entry align="left">135</entry>
+<entry align="left">210</entry>
+<entry align="left">285</entry>
+<entry align="left">250</entry>
+</row>
+<row valign="top">
+<entry align="left">150</entry>
+<entry align="left">150</entry>
+<entry align="left">300</entry>
+<entry align="left">400</entry>
+</row>
+</tbody>
+</tgroup>
+<caption><emphasis effect="italics">Fuente</emphasis>: sportsexercisengineering.com</caption>
+</table>
+<para id="fs-id1170571689719">Calcule la energía neta utilizada en kilojulios, teniendo en cuenta que 1W = 1 J/s.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571689730" class="material-set-2">
+<problem id="fs-id1170571689733">
+<para id="fs-id1170571689735">En la siguiente tabla se muestran los ingresos en Estados Unidos a partir de 2012 en incrementos de 5.000 dólares. La fila <emphasis effect="italics">k</emphasis> indica el porcentaje de hogares que perciben ingresos entre <m:math><m:mrow><m:mn>$5.000</m:mn><m:mi>x</m:mi><m:mi>k</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:mn>5000</m:mn><m:mi>x</m:mi><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>4.999</m:mn><m:mo>.</m:mo></m:mrow></m:math> La fila <m:math><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>40</m:mn></m:mrow></m:math> contiene todos los hogares que perciben ingresos entre 200.000 y 250.000 dólares.</para>
+<table id="fs-id1170571689791" summary="A table with 21 rows and four columns. The first column has the values 0 through 20. The second column has the values 3.5, 4.1, 5.9, 5.7, 5.9, 5.4, 5.5, 5.1, 4.8, 4.1, 4.3, 3.5, 3.7, 3.2, 3.0, 2.8, 2.5, 2.2, 2.2, 1.8, and 2.1. The third column has the values 21 through 41. The fourth column has the values 1.5, 1.4, 1.3, 1.3, 1.1, 1.0, 0.75, 0.8, 1.0, 0.6, 0.6, 0.5, 0.5, 0.4, 0.3, 0.3, 0.3, 0.2, 1.8, and 2.3.">
+<title>Distribución de los ingresos</title>
+<tgroup cols="4">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<tbody>
+<row valign="top">
+<entry align="left">0</entry>
+<entry align="left">3,5</entry>
+<entry align="left">21</entry>
+<entry align="left">1,5</entry>
+</row>
+<row valign="top">
+<entry align="left">1</entry>
+<entry align="left">4,1</entry>
+<entry align="left">22</entry>
+<entry align="left">1,4</entry>
+</row>
+<row valign="top">
+<entry align="left">2</entry>
+<entry align="left">5,9</entry>
+<entry align="left">23</entry>
+<entry align="left">1,3</entry>
+</row>
+<row valign="top">
+<entry align="left">3</entry>
+<entry align="left">5,7</entry>
+<entry align="left">24</entry>
+<entry align="left">1,3</entry>
+</row>
+<row valign="top">
+<entry align="left">4</entry>
+<entry align="left">5,9</entry>
+<entry align="left">25</entry>
+<entry align="left">1,1</entry>
+</row>
+<row valign="top">
+<entry align="left">5</entry>
+<entry align="left">5,4</entry>
+<entry align="left">26</entry>
+<entry align="left">1,0</entry>
+</row>
+<row valign="top">
+<entry align="left">6</entry>
+<entry align="left">5,5</entry>
+<entry align="left">27</entry>
+<entry align="left">0,75</entry>
+</row>
+<row valign="top">
+<entry align="left">7</entry>
+<entry align="left">5,1</entry>
+<entry align="left">28</entry>
+<entry align="left">0,8</entry>
+</row>
+<row valign="top">
+<entry align="left">8</entry>
+<entry align="left">4,8</entry>
+<entry align="left">29</entry>
+<entry align="left">1,0</entry>
+</row>
+<row valign="top">
+<entry align="left">9</entry>
+<entry align="left">4,1</entry>
+<entry align="left">30</entry>
+<entry align="left">0,6</entry>
+</row>
+<row valign="top">
+<entry align="left">10</entry>
+<entry align="left">4,3</entry>
+<entry align="left">31</entry>
+<entry align="left">0,6</entry>
+</row>
+<row valign="top">
+<entry align="left">11</entry>
+<entry align="left">3,5</entry>
+<entry align="left">32</entry>
+<entry align="left">0,5</entry>
+</row>
+<row valign="top">
+<entry align="left">12</entry>
+<entry align="left">3,7</entry>
+<entry align="left">33</entry>
+<entry align="left">0,5</entry>
+</row>
+<row valign="top">
+<entry align="left">13</entry>
+<entry align="left">3,2</entry>
+<entry align="left">34</entry>
+<entry align="left">0,4</entry>
+</row>
+<row valign="top">
+<entry align="left">14</entry>
+<entry align="left">3,0</entry>
+<entry align="left">35</entry>
+<entry align="left">0,3</entry>
+</row>
+<row valign="top">
+<entry align="left">15</entry>
+<entry align="left">2,8</entry>
+<entry align="left">36</entry>
+<entry align="left">0,3</entry>
+</row>
+<row valign="top">
+<entry align="left">16</entry>
+<entry align="left">2,5</entry>
+<entry align="left">37</entry>
+<entry align="left">0,3</entry>
+</row>
+<row valign="top">
+<entry align="left">17</entry>
+<entry align="left">2,2</entry>
+<entry align="left">38</entry>
+<entry align="left">0,2</entry>
+</row>
+<row valign="top">
+<entry align="left">18</entry>
+<entry align="left">2,2</entry>
+<entry align="left">39</entry>
+<entry align="left">1,8</entry>
+</row>
+<row valign="top">
+<entry align="left">19</entry>
+<entry align="left">1,8</entry>
+<entry align="left">40</entry>
+<entry align="left">2,3</entry>
+</row>
+<row valign="top">
+<entry align="left">20</entry>
+<entry align="left">2,1</entry>
+<entry align="left"/>
+<entry align="left"/>
+</row>
+</tbody>
+</tgroup>
+<caption><emphasis effect="italics">Fuente</emphasis>: http://www.census.gov/prod/2013pubs/p60-245.pdf</caption>
+</table>
+<list id="fs-id1170571613778" list-type="enumerated" number-style="lower-alpha">
+<item>Estime el porcentaje de hogares estadounidenses en 2012 que perciben ingresos inferiores a 55.000 dólares.</item>
+<item>¿Qué porcentaje de hogares tiene ingresos superiores a 85.000 dólares?</item>
+<item>Grafique los datos e intente ajustar su forma a la de un gráfico de la forma <m:math><m:mrow><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>c</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>−</m:mtext><m:mi>b</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>e</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:msup></m:mrow></m:math> para que corresponda a <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1170572589225">
+<para id="fs-id1170572589227">a. 54,3 %; b. 27,00 %; c. La curva en el siguiente gráfico es <m:math><m:mrow><m:mn>2,35</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-0,15</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math><newline/>
+<media id="fs-id1170572589270" alt="Un gráfico de los datos y una función que aproxima los datos. La función es una aproximación muy cercana.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_04_202.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571661738">
+<problem id="fs-id1170571661740">
+<para id="fs-id1170571661742">La ley de la gravedad de Newton establece que la fuerza gravitatoria ejercida por un objeto de masa <emphasis effect="italics">M</emphasis> y otro de masa <emphasis effect="italics">m</emphasis> con centros separados por una distancia <emphasis effect="italics">r</emphasis> es <m:math><m:mrow><m:mi>F</m:mi><m:mo>=</m:mo><m:mi>G</m:mi><m:mfrac><m:mrow><m:mi>m</m:mi><m:mi>M</m:mi></m:mrow><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> con <emphasis effect="italics">G</emphasis> como constante empírica <m:math><m:mrow><m:mi>G</m:mi><m:mo>=</m:mo><m:mn>6,67</m:mn><m:mi>x</m:mi><m:msup><m:mrow><m:mn>10</m:mn></m:mrow><m:mrow><m:mn>−11</m:mn></m:mrow></m:msup><m:mspace width="0.2em"/><m:msup><m:mi>m</m:mi><m:mn>3</m:mn></m:msup><m:mtext>/</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>k</m:mi><m:mi>g</m:mi><m:mo>·</m:mo><m:msup><m:mi>s</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> El trabajo que realiza una fuerza variable en un intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> se define como <m:math><m:mrow><m:mi>W</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> Si la Tierra tiene masa de <m:math><m:mrow><m:mn>5,97219</m:mn><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:msup><m:mrow><m:mn>10</m:mn></m:mrow><m:mrow><m:mn>24</m:mn></m:mrow></m:msup></m:mrow></m:math> y radio de 6371 km, calcule la cantidad de trabajo para elevar un satélite meteorológico polar de masa 1.400 kg hasta su altitud de órbita de 850 km sobre la Tierra.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572379119">
+<problem id="fs-id1170572379121">
+<para id="fs-id1170572379123">En un vehículo de cierto tipo de motor, la <term class="no-emphasis">desaceleración</term> máxima alcanzable por el frenado es de aproximadamente 7 m/s<sup>2</sup> en hormigón seco. En el asfalto húmedo, es de aproximadamente 2,5 m/s<sup>2</sup>. Dado que 1 mph corresponde a 0,447 m/s, halle la distancia total que recorre un auto en metros sobre hormigón seco después de aplicar los frenos hasta que se detiene por completo si la velocidad inicial es de 67 mph (30 m/s) o si la velocidad inicial de frenado es de 56 mph (25 m/s). Halle las distancias correspondientes si la superficie es asfalto húmedo y resbaladizo.</para>
+</problem>
+<solution id="fs-id1170572379142">
+<para id="fs-id1170572379144">En condiciones secas, a una velocidad inicial <m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>30</m:mn></m:mrow></m:math> m/s, <m:math><m:mrow><m:mi>D</m:mi><m:mo>=</m:mo><m:mn>64,3</m:mn></m:mrow></m:math> y, si <m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>25</m:mn><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>=</m:mo><m:mn>44,64</m:mn><m:mo>.</m:mo></m:mrow></m:math> En condiciones de humedad, si <m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>30</m:mn><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>D</m:mi><m:mo>=</m:mo><m:mn>180</m:mn></m:mrow></m:math> y si <m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>25</m:mn><m:mo>,</m:mo><m:mi>D</m:mi><m:mo>=</m:mo><m:mn>125</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571546776">
+<problem id="fs-id1170571546778">
+<para id="fs-id1170571546780">John tiene 25 años y pesa 160 lb. Quema <m:math><m:mrow><m:mn>500</m:mn><m:mo>−</m:mo><m:mn>50</m:mn><m:mi>t</m:mi></m:mrow></m:math> calorías/hr cuando monta en bicicleta durante <emphasis effect="italics">t</emphasis> horas. Si una galleta de avena tiene 55 cal y Juan se come 4<emphasis effect="italics">t</emphasis> galletas durante la <emphasis effect="italics">t</emphasis>-ésima hora, ¿cuántas calorías netas pierde después de 3 horas montando en bicicleta?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571613601">
+<problem id="fs-id1170571613603">
+<para id="fs-id1170571613605">Sandra tiene 25 años y pesa 120 libras. Quema <m:math><m:mrow><m:mn>300</m:mn><m:mo>−</m:mo><m:mn>50</m:mn><m:mi>t</m:mi></m:mrow></m:math> cal/hr mientras se ejercita en su máquina caminadora. Su consumo de calorías al beber Gatorade es de 100<emphasis effect="italics">t</emphasis> calorías durante la <emphasis effect="italics">t</emphasis>-ésima hora. ¿Cuál es su disminución neta de calorías después de caminar por 3 horas?</para>
+</problem>
+<solution id="fs-id1170571613632">
+<para id="fs-id1170571613635">225 cal</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571613640">
+<problem id="fs-id1170571613642">
+<para id="fs-id1170571613644">Un automóvil tiene una eficiencia máxima de 33 mpg a una velocidad de crucero de 40 mph. La eficiencia cae a un ritmo de 0,1 mpg/mph entre 40 mph y 50 mph, y a una tasa de 0,4 mpg/mph entre 50 mph y 80 mph. ¿Cuál es la eficiencia en millas por galón si el auto va a una velocidad de crucero de 50 mph? ¿Cuál es la eficiencia en millas por galón si el auto va a 80 mph? Si la gasolina cuesta 3,50 $/gal, ¿cuál es el costo del combustible para recorrer 50 millas a 40 mph, a 50 mph y a 80 mph?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572434960">
+<problem id="fs-id1170572434962">
+<para id="fs-id1170572434964">Aunque algunos motores son más eficientes con una potencia determinada en caballos de fuerza que otros, en promedio, la eficiencia del combustible disminuye con la potencia a una tasa de <m:math><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>25</m:mn></m:mrow></m:math> mpg/caballo de fuerza Si un motor típico de 50 caballos de fuerza tiene un rendimiento medio de combustible de 32 mpg, ¿cuál es el rendimiento medio de combustible de un motor con los siguientes caballos de fuerza? ¿150, 300, 450?</para>
+</problem>
+<solution id="fs-id1170572434981">
+<para id="fs-id1170572434983"><m:math><m:mrow><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>150</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>28</m:mn><m:mo>,</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>300</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>22</m:mn><m:mo>,</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>450</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>16</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572412290">
+<problem id="fs-id1170572412292">
+<para id="fs-id1170572412294"><emphasis effect="bold">[T]</emphasis> La siguiente tabla muestra el calendario de 2013 del <term class="no-emphasis">impuesto federal sobre la renta</term> en función de la renta imponible.</para>
+<table id="fs-id1170572412313" summary="A table with three columns and eight rows. The first column has the label “Taxable Income Range” and the values $0–$8925, $8925–$36,250, $36,250–$87,850, $87,850–$183,250, $183,250–$398,350, $398,350–$400,000, and &gt; $400,000. The second column has the label “The Tax Is…” and the values 10%, $892.50 + 15%, $4,991.25 + 25%, $1,891.25 + 28%, $44,603.25 + 33%, $115,586.25 + 35%, and $116,163.75 + 39.6%. The third column has the label “…Of the Amount Over” and the values $0, $8925, $36,250, $87,850, $183,250, $398,350, and $400,000.">
+<title>Impuesto federal sobre la renta en función de la renta imponible</title>
+<tgroup cols="3">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<thead>
+<row valign="top">
+<entry align="left">Rango de la renta imponible</entry>
+<entry align="left">El impuesto es...</entry>
+<entry align="left">... Por el monto superior a</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">$0–$8.925</entry>
+<entry align="left">10 %</entry>
+<entry align="left">$0</entry>
+</row>
+<row valign="top">
+<entry align="left">$8.925–$36.250</entry>
+<entry align="left">$892,50 + 15 %</entry>
+<entry align="left">$8.925</entry>
+</row>
+<row valign="top">
+<entry align="left">$36.250–$87.850</entry>
+<entry align="left">$4.991,25 + 25 %</entry>
+<entry align="left">$36.250</entry>
+</row>
+<row valign="top">
+<entry align="left">$87.850–$183.250</entry>
+<entry align="left">$17.891,25 + 28 %</entry>
+<entry align="left">$87.850</entry>
+</row>
+<row valign="top">
+<entry align="left">$183.250–$398.350</entry>
+<entry align="left">$44.603,25 + 33 %</entry>
+<entry align="left">$183.250</entry>
+</row>
+<row valign="top">
+<entry align="left">$398.350–$400.000</entry>
+<entry align="left">$115.586,25 + 35 %</entry>
+<entry align="left">$398.350</entry>
+</row>
+<row valign="top">
+<entry align="left">&gt; $400.000</entry>
+<entry align="left">$116.163,75 + 39,6 %</entry>
+<entry align="left">$400.000</entry>
+</row>
+</tbody>
+</tgroup>
+<caption><emphasis effect="italics">Fuente</emphasis>: http://www.irs.gov/pub/irs-prior/i1040tt--2013.pdf.</caption>
+</table>
+<para id="fs-id1170572627134">Supongamos que Steve acaba de recibir un aumento de 10.000 dólares. ¿Cuánto queda de este aumento después de los impuestos federales si el salario de Steve antes de recibir el aumento era de 40.000 dólares? ¿Si era de 90.000 dólares? ¿Si era de 385.000 dólares?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572627149">
+<problem id="fs-id1170572627151">
+<para id="fs-id1170572627153"><emphasis effect="bold">[T]</emphasis> La siguiente tabla proporciona datos hipotéticos sobre el nivel de servicio de cierta autopista.</para>
+<table id="fs-id1170572627169" summary="A table with three columns and seven rows. The first column has the label “Highway Speed Range (mph)” and the values &gt;60, 60-57, 57-54, 54-46, 46-30, and &lt;30. The second column has the label “Vehicles per Hour per Lane” and the values &lt;600, 600-1000, 1000-1500, 1500-1900, 1900-2100, and unstable. The third column has the label “Density Range (vehicles / mi)” and values &lt;10, 10-20, 20-30, 30-45, 45-70, and 70-200.">
+<label/>
+<tgroup cols="3">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<thead>
+<row valign="top">
+<entry align="left">Rango de velocidad en autopista (mph)</entry>
+<entry align="left">Vehículos por hora por carril</entry>
+<entry align="left">Rango de densidad (vehículos/mi)</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">&gt; 60</entry>
+<entry align="left">&lt; 600</entry>
+<entry align="left">&lt; 10</entry>
+</row>
+<row valign="top">
+<entry align="left">60–57</entry>
+<entry align="left">600–1.000</entry>
+<entry align="left">10–20</entry>
+</row>
+<row valign="top">
+<entry align="left">57–54</entry>
+<entry align="left">1.000–1.500</entry>
+<entry align="left">20–30</entry>
+</row>
+<row valign="top">
+<entry align="left">54–46</entry>
+<entry align="left">1.500–1.900</entry>
+<entry align="left">30–45</entry>
+</row>
+<row valign="top">
+<entry align="left">46–30</entry>
+<entry align="left">1.900<emphasis effect="bold">–</emphasis>2.100</entry>
+<entry align="left">45–70</entry>
+</row>
+<row valign="top">
+<entry align="left">&lt; 30</entry>
+<entry align="left">Es inestable</entry>
+<entry align="left">70–200</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<list id="fs-id1170571712842" list-type="enumerated" number-style="lower-alpha">
+<item>Represente los vehículos por hora por carril en el eje de la <emphasis effect="italics">x</emphasis> y la velocidad de la autopista en el eje de la <emphasis effect="italics">y</emphasis>.</item>
+<item>Calcule la disminución promedio en la velocidad (en millas por hora) por unidad de aumento en la congestión (vehículos por hora por carril) a medida que esta última aumenta de 600 a 1.000, de 1.000 a 1.500 y de 1.500 a 2.100. ¿La disminución de las millas por hora depende linealmente del aumento de los vehículos por hora por carril?</item>
+<item>Grafique los minutos por milla (60 veces el recíproco de las millas por hora) en función de los vehículos por hora por carril. ¿Esta función es lineal?</item>
+</list>
+</problem>
+<solution id="fs-id1170571712874">
+<para id="fs-id1170571712876">a<newline/>
+<media id="fs-id1170572129741" alt="Gráfico de los datos dados, que disminuye de forma más o menos cóncava hacia abajo de 600 a 2.200.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_04_203.jpg"/>
+</media><newline/> b. Entre 600 y 1.000 la disminución promedio de vehículos por hora por carril es de −0,0075. Entre 1.000 y 1.500 es de −0,006 por vehículos por hora y carril, y entre 1.500 y 2.100 es de −0,04 vehículos por hora y carril. c.<newline/>
+<media id="fs-id1170572129760" alt="Gráfico de los datos dados, que muestra que los minutos por milla aumentan drásticamente a medida que los vehículos por hora llegan a 2.000.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_04_204.jpg"/>
+</media><newline/> El gráfico no es lineal, ya que los minutos por milla aumentan drásticamente a medida que los vehículos por hora por carril alcanzan los 2.000.</para>
+</solution>
+</exercise>
+<para id="fs-id1170572129779">En los dos ejercicios siguientes utilice los datos de la siguiente tabla, que muestra las poblaciones de <term class="no-emphasis">águila calva</term> desde 1963 hasta 2000 en el territorio continental de Estados Unidos.</para>
+<table id="fs-id1170572129791" summary="A table with two columns and eight rows. The first column has the label “Year” and the values 1963, 1974, 1981, 1986, 1992, 1996, and 2000. The second column has the label “Population of Breeding Pairs of Bald Eagles” and the values 487, 791, 1188, 1875, 3749, 5094, and 6471.">
+<title>Población de parejas reproductoras de águilas calvas</title>
+<tgroup cols="2">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<thead>
+<row valign="top">
+<entry align="left">Año</entry>
+<entry align="left">Población de parejas reproductoras de águilas calvas</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">1963</entry>
+<entry align="left">487</entry>
+</row>
+<row valign="top">
+<entry align="left">1974</entry>
+<entry align="left">791</entry>
+</row>
+<row valign="top">
+<entry align="left">1981</entry>
+<entry align="left">1.188</entry>
+</row>
+<row valign="top">
+<entry align="left">1986</entry>
+<entry align="left">1875</entry>
+</row>
+<row valign="top">
+<entry align="left">1992</entry>
+<entry align="left">3.749</entry>
+</row>
+<row valign="top">
+<entry align="left">1996</entry>
+<entry align="left">5.094</entry>
+</row>
+<row valign="top">
+<entry align="left">2000</entry>
+<entry align="left">6.471</entry>
+</row>
+</tbody>
+</tgroup>
+<caption><emphasis effect="italics">Fuente</emphasis>: http://www.fws.gov/Midwest/eagle/population/chtofprs.html.</caption>
+</table>
+<exercise id="fs-id1170572330192">
+<problem id="fs-id1170572330194">
+<para id="fs-id1170572330196"><emphasis effect="bold">[T]</emphasis> El siguiente gráfico traza la curva cuadrática <m:math><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6,48</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>80,3</m:mn></m:mrow><m:mspace width="0.2em"/><m:mrow><m:mn>1</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>585,69</m:mn></m:mrow></m:math> frente a los datos de la tabla anterior, normalizados de manera que <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> corresponde a 1963. Estime el número medio de águilas calvas por año presentes durante los 37 años calculando el valor promedio de <emphasis effect="italics">p</emphasis> sobre <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>37</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<media id="fs-id1170572330276" alt="Gráfico de los datos y una función cuadrática que se les aproxima.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_04_205.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1170572129132">
+<problem id="fs-id1170572129134">
+<para id="fs-id1170572129136"><emphasis effect="bold">[T]</emphasis> El siguiente gráfico representa la curva cúbica <m:math><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0,07</m:mn><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>2,42</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>25,63</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>521,23</m:mn></m:mrow></m:math> con los datos de la tabla anterior, normalizados de forma tal que <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> corresponde a 1963. Estime el número medio de águilas calvas por año presentes durante los 37 años calculando el valor promedio de <emphasis effect="italics">p</emphasis> sobre <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>37</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<media id="fs-id1170572223539" alt="Gráfico de los datos y una función cúbica que se les aproxima.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_04_206.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1170572223551">
+<para id="fs-id1170572223553"><m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>37</m:mn></m:mrow></m:mfrac><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>37</m:mn></m:mrow></m:msubsup><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo></m:mrow></m:mrow></m:mstyle><m:mfrac><m:mrow><m:mn>0,07</m:mn><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>37</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>2,42</m:mn><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>37</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>−</m:mo><m:mfrac><m:mrow><m:mn>25,63</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>37</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>521,23</m:mn><m:mo>≈</m:mo><m:mn>2037</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571568997">
+<problem id="fs-id1170571568999">
+<para id="fs-id1170571569001"><emphasis effect="bold">[T]</emphasis> Suponga que hace un viaje por carretera y registra su velocidad cada media hora, como se recoge en la siguiente tabla. El mejor ajuste cuadrático a los datos es <m:math><m:mrow><m:mi>q</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>11</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>49</m:mn><m:mtext>,</m:mtext></m:mrow></m:math> que se muestra en el gráfico adjunto. Integre <emphasis effect="italics">q</emphasis> para estimar la distancia total recorrida en 3 horas.</para>
+<table id="fs-id1170572309735" class="unnumbered" summary="A table with two columns and five rows. The first column has the label “Time (hr)” and the values 0 (start), 1, 2, and 3. The second column has the label “Speed (mph)” and the values 50, 40, 50, and 60.">
+<label/>
+<tgroup cols="2">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<thead>
+<row valign="top">
+<entry align="left">Tiempo (h)</entry>
+<entry align="left">Velocidad (mph)</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">0 (inicio)</entry>
+<entry align="left">50</entry>
+</row>
+<row valign="top">
+<entry align="left">1</entry>
+<entry align="left">40</entry>
+</row>
+<row valign="top">
+<entry align="left">2</entry>
+<entry align="left">50</entry>
+</row>
+<row valign="top">
+<entry align="left">3</entry>
+<entry align="left">60</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<media id="fs-id1170571547400" alt="Gráfico de los datos y una curva destinada a aproximarse a estos.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_04_207.jpg"/>
+</media>
+</problem>
+</exercise>
+<para id="fs-id1170571628928">Cuando un auto acelera, no lo hace a un ritmo constante, sino que la aceleración es variable. En los siguientes ejercicios, utilice la siguiente tabla, que muestra la aceleración medida en cada segundo mientras un conductor se incorpora a una autopista.</para>
+<table id="fs-id1170571628938" class="unnumbered" summary="A table with two columns and six rows. The first column has the label “Time (sec)” and values 1, 2, 3, 4, and 5. The second column has the label “Acceleration (mph/sec)” and the values 11.2, 10.6, 8.1, 5.4, and 0.">
+<label/>
+<tgroup cols="2">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<thead>
+<row valign="top">
+<entry align="left">Tiempo (s)</entry>
+<entry align="left">Aceleración (mph/s)</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">1</entry>
+<entry align="char" char=".">11,2</entry>
+</row>
+<row valign="top">
+<entry align="left">2</entry>
+<entry align="char" char=".">10,6</entry>
+</row>
+<row valign="top">
+<entry align="left">3</entry>
+<entry align="char" char=".">8,1</entry>
+</row>
+<row valign="top">
+<entry align="left">4</entry>
+<entry align="char" char=".">5,4</entry>
+</row>
+<row valign="top">
+<entry align="left">5</entry>
+<entry align="left">0</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<exercise id="fs-id1170572582602">
+<problem id="fs-id1170572582604">
+<para id="fs-id1170572582606"><emphasis effect="bold">[T]</emphasis> El gráfico adjunto muestra el mejor ajuste cuadrático, <m:math><m:mrow><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-0,70</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1,44</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>10,44</m:mn><m:mo>,</m:mo></m:mrow></m:math> a los datos de la tabla anterior. Calcule el valor promedio de <m:math><m:mrow><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para estimar la aceleración promedio entre <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<media id="fs-id1170572351508" alt="Gráfico de los datos y una curva que se les aproxima.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_04_208.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1170572351520">
+<para id="fs-id1170572351522">La aceleración promedio es <m:math><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>5</m:mn></m:mfrac><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mn>5</m:mn></m:msubsup><m:mrow><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo></m:mrow></m:mrow></m:mstyle><m:mo>−</m:mo><m:mfrac><m:mrow><m:mn>0,7</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mn>5</m:mn><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>1,44</m:mn><m:mrow><m:mo>(</m:mo><m:mn>5</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>10,44</m:mn><m:mo>≈</m:mo><m:mn>8,2</m:mn></m:mrow></m:math> mph/s</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571638063">
+<problem id="fs-id1170571638065">
+<para id="fs-id1170571638067"><emphasis effect="bold">[T]</emphasis> Con su ecuación de aceleración del ejercicio anterior, halle la ecuación de velocidad correspondiente. Suponiendo que la velocidad final es de 0 mph, halle la velocidad en el tiempo <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571610292">
+<problem id="fs-id1170571610294">
+<para id="fs-id1170571610296"><emphasis effect="bold">[T]</emphasis> Con su ecuación de velocidad del ejercicio anterior, halle la ecuación de distancia correspondiente, asumiendo que su distancia inicial sea 0 mi. ¿Qué distancia recorrió cuando aceleraba su auto? (<emphasis effect="italics">Pista:</emphasis> Tendrá que convertir las unidades de tiempo).</para>
+</problem>
+<solution id="fs-id1170571610311">
+<para id="fs-id1170571610313"><m:math><m:mrow><m:mi>d</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo></m:mrow></m:mrow></m:mstyle><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mi>t</m:mi></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>7</m:mn><m:mrow><m:mn>30</m:mn></m:mrow></m:mfrac><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>−</m:mo><m:mn>0,72</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>10,44</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>41,033</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>7</m:mn><m:mrow><m:mn>120</m:mn></m:mrow></m:mfrac><m:msup><m:mi>t</m:mi><m:mn>4</m:mn></m:msup><m:mo>−</m:mo><m:mn>0,24</m:mn><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>−</m:mo><m:mn>5,22</m:mn><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>41,033</m:mn><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> Entonces, <m:math><m:mrow><m:mi>d</m:mi><m:mrow><m:mo>(</m:mo><m:mn>5</m:mn><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mn>81,12</m:mn></m:mrow></m:math> mph <m:math><m:mrow><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:mtext>seg</m:mtext><m:mo>≈</m:mo><m:mn>119</m:mn></m:mrow></m:math> pies.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572448412">
+<problem id="fs-id1170572448414">
+<para id="fs-id1170572448416"><emphasis effect="bold">[T]</emphasis> El número de hamburguesas que se venden en un restaurante a lo largo del día se muestra en la siguiente tabla, con un gráfico adjunto que representa el mejor ajuste cúbico a los datos, <m:math><m:mrow><m:mi>b</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0,12</m:mn><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>−</m:mo><m:mn>2,13</m:mn><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>12,13</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>3,91</m:mn><m:mo>,</m:mo></m:mrow></m:math> con <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> correspondiente a las 9 a. m. y <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>12</m:mn></m:mrow></m:math> correspondiente a las 9 p. m. Calcule el valor medio de <m:math><m:mrow><m:mi>b</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para estimar el promedio de hamburguesas vendidas por hora.</para>
+<table id="fs-id1170572448506" class="unnumbered" summary="A table with two columns and six rows. The first column has the label “Hours Past Midnight” and values 9, 12, 15, 18, and 21. The second column has the label “No. of Burgers Sold” and values 3, 28, 20, 30, and 45.">
+<label/>
+<tgroup cols="2">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<thead>
+<row valign="top">
+<entry align="left">Horas después de la medianoche</entry>
+<entry align="left">Número de hamburguesas vendidas</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">9</entry>
+<entry align="left">3</entry>
+</row>
+<row valign="top">
+<entry align="left">12</entry>
+<entry align="left">28</entry>
+</row>
+<row valign="top">
+<entry align="left">15</entry>
+<entry align="left">20</entry>
+</row>
+<row valign="top">
+<entry align="left">18</entry>
+<entry align="left">30</entry>
+</row>
+<row valign="top">
+<entry align="left">21</entry>
+<entry align="left">45</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<media id="fs-id1170572503243" alt="Mapa de los datos y una curva destinada a aproximarse a estos.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_04_209.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1170572558028">
+<problem id="fs-id1170572558030">
+<para id="fs-id1170572558032"><emphasis effect="bold">[T]</emphasis> Una atleta corre junto a un detector de movimiento que registra su velocidad, como se muestra en la siguiente tabla. El mejor ajuste lineal a estos datos, <m:math><m:mrow><m:mi>ℓ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−0,068</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>5,14</m:mn><m:mtext>,</m:mtext></m:mrow></m:math> se muestra en el gráfico adjunto. Utilice el valor promedio de <m:math><m:mrow><m:mi>ℓ</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> entre <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>40</m:mn></m:mrow></m:math> para estimar la velocidad promedio de la corredora</para>
+<table id="fs-id1170572558105" class="unnumbered" summary="A table with two columns and six rows. The first column has the label “Minutes” and the values 0, 10, 20, 30, and 40. The second column has the label “Speed (m/sec)” and the values 5, 4.8, 3.6, 3.0, and 2.5.">
+<label/>
+<tgroup cols="2">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<thead>
+<row valign="top">
+<entry align="left">Minutos</entry>
+<entry align="left">Velocidad (m/s)</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">0</entry>
+<entry align="left">5</entry>
+</row>
+<row valign="top">
+<entry align="left">10</entry>
+<entry align="left">4,8</entry>
+</row>
+<row valign="top">
+<entry align="left">20</entry>
+<entry align="left">3,6</entry>
+</row>
+<row valign="top">
+<entry align="left">30</entry>
+<entry align="left">3,0</entry>
+</row>
+<row valign="top">
+<entry align="left">40</entry>
+<entry align="left">2,5</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<media id="fs-id1170571814022" alt="Gráfico de los datos y una línea para aproximarlos.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_04_210.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1170572480380">
+<para id="fs-id1170572480382"><m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>40</m:mn></m:mrow></m:mfrac><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>40</m:mn></m:mrow></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−0,068</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>5,14</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mo>−</m:mo><m:mfrac><m:mrow><m:mn>0,068</m:mn><m:mo stretchy="false">(</m:mo><m:mn>40</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>5,14</m:mn><m:mo>=</m:mo><m:mn>3,78</m:mn><m:mtext>m/seg</m:mtext></m:mrow></m:math></para>
+</solution>
+</exercise>
+</section>
+   </content>
+<glossary>
+<definition id="fs-id1170572480464">
+<term>teorema del cambio neto</term>
+<meaning id="fs-id1170572480469">si conocemos la tasa de cambio de una cantidad, el teorema del cambio neto establece que la cantidad futura es igual a la cantidad inicial más la integral de la tasa de cambio de la cantidad</meaning>
+</definition>
+</glossary>
+</document>

@@ -1,0 +1,1168 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+<title>Defining the Derivative</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m10013</md:content-id>
+  <md:title>Defining the Derivative</md:title>
+  <md:abstract><list>
+<item>Reconocer el significado de la tangente a una curva en un punto.</item>
+<item>Calcular la pendiente de una línea tangente.</item>
+<item>Identificar la derivada como el límite de un cociente de diferencias.</item>
+<item>Calcular la derivada de una función dada en un punto.</item>
+<item>Describir la velocidad como una tasa de cambio.</item>
+<item>Explicar la diferencia entre velocidad media y velocidad instantánea.</item>
+<item>Estimar la derivada a partir de una tabla de valores.</item>
+</list></md:abstract>
+  <md:uuid>db169cfb-2289-43af-96e1-fab1ca610aff</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1169739300479">Ahora que tenemos tanto una comprensión conceptual de los límites como la capacidad práctica de calcularlos, establecimos la base para nuestro estudio del cálculo, la rama de las matemáticas en la que calculamos derivadas e integrales. La mayoría de los matemáticos e historiadores coinciden en que el inglés Isaac <term class="no-emphasis">Newton</term> <m:math><m:mrow><m:mtext>(1643–1727)</m:mtext></m:mrow></m:math> y el alemán Gottfried <term class="no-emphasis">Leibniz</term> <m:math><m:mrow><m:mtext>(1646–1716),</m:mtext></m:mrow></m:math> cuyas imágenes aparecen en la <link target-id="CNX_Calc_Figure_03_01_001"/>, desarrollaron el cálculo cada uno por su cuenta. Cuando atribuimos a Newton y Leibniz el desarrollo del cálculo, a lo que hacemos referencia es al hecho de que ellos fueron los primeros en comprender la relación entre la derivada y la integral. Ambos matemáticos se beneficiaron del trabajo de sus predecesores, como Barrow, Fermat y Cavalieri. La relación inicial entre los dos matemáticos parece haber sido amistosa; sin embargo, en años posteriores estalló una amarga controversia sobre la prioridad de los trabajos de ambos. Aunque parece probable que Newton fuera el primero en llegar a las ideas que sustentan el cálculo, estamos en deuda con Leibniz por la notación que utilizamos habitualmente en la actualidad.</para>
+<figure id="CNX_Calc_Figure_03_01_001">
+<media id="fs-id1169739188915" alt="Fotos de Newton y Leibniz.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_001.jpg"/>
+</media>
+<caption>Se atribuye a Newton y a Leibniz el desarrollo del cálculo de forma independiente.</caption>
+</figure>
+<section id="fs-id1169739218205">
+<title>Líneas tangentes</title>
+<para id="fs-id1169739302308">Comenzamos nuestro estudio del cálculo por revisar la noción de líneas secantes y tangentes. Recordemos que utilizamos la pendiente de una línea secante a una función en un punto <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:math> para estimar la tasa de cambio, o la tasa a la que cambia una variable en relación con otra. Podemos obtener la pendiente de la secante al elegir un valor de <m:math><m:mi>x</m:mi></m:math> cerca de <m:math><m:mi>a</m:mi></m:math> y dibujar una línea a lo largo de los puntos <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> como se muestra en la <link target-id="CNX_Calc_Figure_03_01_002"/>. La pendiente de esta línea viene dada por una ecuación en forma de cociente de diferencias:</para>
+<equation id="fs-id1169738930229" class="unnumbered"><label/><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>seg</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169738929481">También podemos calcular la pendiente de una línea secante a una función en un valor <emphasis effect="italics">a</emphasis> al utilizar esta ecuación y sustituir <m:math><m:mrow><m:mi>x</m:mi></m:mrow></m:math> con <m:math><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>h</m:mi></m:math> es un valor cercano a 0. Luego podemos calcular la pendiente de la línea que pasa por los puntos <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> En este caso, hallamos que la línea secante tiene una pendiente dada por el siguiente cociente de diferencias con incremento <m:math><m:mi>h</m:mi><m:mtext>:</m:mtext></m:math></para><equation id="fs-id1169738985511" class="unnumbered"><label/><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>seg</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>h</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<note id="fs-id1169739095772">
+<title>Definición</title>
+<para id="fs-id1169738924962">Supongamos que <m:math><m:mi>f</m:mi></m:math> es una función definida en un intervalo <m:math><m:mi>I</m:mi></m:math> que contiene <m:math><m:mi>a</m:mi><m:mo>.</m:mo></m:math> Si <m:math><m:mrow><m:mi>x</m:mi><m:mo>≠</m:mo><m:mi>a</m:mi></m:mrow></m:math> está en <m:math><m:mi>I</m:mi><m:mo>,</m:mo></m:math> entonces</para>
+<equation id="fs-id1169738850293"><m:math><m:mrow><m:mi>Q</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></equation>
+<para id="fs-id1169738879993">es un <term>cociente de diferencias</term>.</para>
+<para id="fs-id1169739195558">Además, si <m:math><m:mrow><m:mi>h</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> se elige de manera que <m:math><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow></m:math> está en <m:math><m:mrow><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces</para>
+<equation id="fs-id1169739097936"><m:math><m:mrow><m:mi>Q</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mi>h</m:mi></m:mfrac></m:mrow></m:math></equation>
+<para id="fs-id1169738913121">es un cociente de diferencias con incremento <m:math><m:mi>h</m:mi><m:mo>.</m:mo></m:math></para>
+</note>
+<note id="fs-id1169739019841" class="media-2">
+<para id="fs-id1169739040482">Vea el desarrollo de la <link url="http://www.openstax.org/l/20_calcapplets">derivada</link> con esta miniaplicación.</para></note>
+<para id="fs-id1169738819917">Estas dos expresiones para calcular la pendiente de una línea secante se ilustran en la <link target-id="CNX_Calc_Figure_03_01_002"/>. Veremos que cada uno de estos dos métodos para hallar la pendiente de una línea secante es de gran utilidad. Dependiendo del entorno, podemos elegir uno u otro. La principal consideración en nuestra elección depende de la facilidad de cálculo.</para>
+<figure id="CNX_Calc_Figure_03_01_002">
+<media id="fs-id1169739080664" alt="Esta figura consta de dos gráficos denominados a y b. La figura a muestra el plano de coordenadas cartesianas con 0, a y x marcados en el eje de la x. Hay una curva marcada y = f(x) con puntos marcados (a, f(a)) y (x, f(x)). También existe una recta que cruza estos dos puntos (a, f(a)) y (x, f(x)). En la parte inferior del gráfico se da la ecuación msec = (f(x) - f(a))/(x - a). La figura b muestra un gráfico similar, pero esta vez a + h está marcado en el eje de la x en lugar de x. En consecuencia, la curva denominada y = f(x) pasa por (a, f(a)) y (a + h, f(a + h)) al igual que la recta. En la parte inferior del gráfico se da la ecuación msec = (f(a + h) - f(a))/h.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_002.jpg"/>
+</media>
+<caption>Podemos calcular la pendiente de una línea secante de dos maneras.</caption>
+</figure>
+<para id="fs-id1169738909226">En la <link target-id="CNX_Calc_Figure_03_01_003"/>(a) vemos que, a medida que los valores de <m:math><m:mi>x</m:mi></m:math> enfoque <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> las pendientes de las líneas secantes proporcionan mejores estimaciones de la tasa de cambio de la función en <m:math><m:mrow><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Además, las mismas líneas secantes se aproximan a la línea tangente a la función en <m:math><m:mi>a</m:mi><m:mo>,</m:mo></m:math> que representa el límite de las líneas secantes. Del mismo modo, la <link target-id="CNX_Calc_Figure_03_01_003"/>(b) muestra que, a medida que los valores de <m:math><m:mi>h</m:mi></m:math> acercarse a <m:math><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> las líneas secantes también se acercan a la línea tangente. La pendiente de la línea tangente en <m:math><m:mi>a</m:mi></m:math> es la tasa de cambio de la función en <m:math><m:mi>a</m:mi><m:mo>,</m:mo></m:math> como se muestra en la <link target-id="CNX_Calc_Figure_03_01_003"/>(c).</para>
+<figure id="CNX_Calc_Figure_03_01_003">
+<media id="fs-id1169739033975" alt="Esta figura consta de tres gráficos marcados como a, b y c. La figura a muestra el plano de coordenadas cartesianas con 0, a, x2 y x1 marcados en orden en el eje de la x. Existe una curva denominada y = f(x) con puntos marcados (a, f(a)), (x2, f(x2)) y (x1, f(x1)). Hay tres rectas: la primera interseca (a, f(a)) y (x1, f(x1)), la segunda interseca (a, f(a)) y (x2, f(x2)) y la tercera solo interseca (a, f(a)), lo que la convierte en tangente. En la parte inferior del gráfico se da la ecuación mtan = limx → a (f(x) - f(a))/(x - a). La figura b muestra un gráfico similar, pero esta vez a + h2 y a + h1 están marcados en el eje de la x en lugar de x2 y x1. En consecuencia, la curva marcada y = f(x) pasa por (a, f(a)), (a + h2, f(a + h2)), y (a + h1, f(a + h1)) y las rectas intersecan el gráfico de forma similar como en la figura a. En la parte inferior del gráfico se da la ecuación mtan = limh → 0 (f(a + h) - f(a))/h. La figura c muestra únicamente la curva denominada y = f(x) y su tangente en el punto (a, f(a)).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_003.jpg"/>
+</media>
+<caption>Las líneas secantes se acercan a la línea tangente (mostrada en verde) cuando el segundo punto se acerca al primero.</caption>
+</figure>
+<note id="fs-id1169739096692" class="media-2">
+<para id="fs-id1169738875428">Puede usar este <link url="http://www.openstax.org/l/20_diffmicros">sitio web</link> para explorar los gráficos y ver si tienen una línea tangente en un punto.</para>
+</note>
+<para id="fs-id1169738949813">En la <link target-id="CNX_Calc_Figure_03_01_008"/> mostramos el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:math> y su línea tangente en <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en una serie de intervalos más estrechos sobre <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> A medida que los intervalos se estrechan, el gráfico de la función y su línea tangente parecen coincidir, por lo que los valores de la línea tangente son una buena aproximación a los valores de la función para las elecciones de <m:math><m:mi>x</m:mi></m:math> cerca de <m:math><m:mrow><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> De hecho, el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> parece ser localmente lineal en las inmediaciones de <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_03_01_008">
+<media id="fs-id1169739097488" alt="Esta figura consta de cuatro gráficos denominados a, b, c y d. La figura a muestra los gráficos de la raíz cuadrada de x y de la ecuación y = (x + 1)/2 con el eje de la x, que va de 0 a 4, y el eje de la y, que va de 0 a 2,5. Los gráficos de estas dos funciones se ven muy próximos a 1; hay un recuadro alrededor donde estos gráficos se ven cercanos. La figura b muestra un acercamiento de estas mismas dos funciones en el área de la caja de la figura a, concretamente x va de 0 a 2 e y va de 0 a 1,4. La figura c es el mismo gráfico que la figura b, pero este tiene una caja de 0 a 1,1 en la coordenada x y 0,8 y 1 en la coordenada y. Hay una flecha que indica que esto se ha ampliado en la figura d. La figura d muestra una imagen muy cercana de la caja de la figura c, y las dos funciones parecen tocarse en casi toda la longitud del gráfico.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_008.jpg"/>
+</media>
+<caption>Para valores de <m:math><m:mi>x</m:mi></m:math> cerca de <m:math><m:mn>1</m:mn><m:mo>,</m:mo></m:math> el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:math> y su línea tangente parecen coincidir.</caption>
+</figure>
+<para id="fs-id1169738971600">Formalmente podemos definir la línea tangente al gráfico de una función como sigue.</para>
+<note id="fs-id1169739274783">
+<title>Definición</title>
+<para id="fs-id1169738962299">Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> sea una función definida en un intervalo abierto que contenga <m:math><m:mi>a</m:mi><m:mo>.</m:mo></m:math> La <emphasis effect="italics">línea tangente</emphasis> a <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en <m:math><m:mi>a</m:mi></m:math> es la línea que pasa por el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> con pendiente</para>
+<equation id="fs-id1169739226063"><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></equation>
+<para id="fs-id1169738970954">siempre que exista este límite.</para>
+<para id="fs-id1169738947329">Por analogía, podemos definir la línea tangente a <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <m:math><m:mi>a</m:mi></m:math> para que sea la línea que pasa por el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> con pendiente</para>
+<equation id="fs-id1169738970614"><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mi>h</m:mi></m:mfrac></m:mrow></m:math></equation>
+<para id="fs-id1169738888769">siempre que exista este límite.</para>
+</note>
+<para id="fs-id1169739243045">Al igual que utilizamos dos expresiones diferentes para definir la pendiente de una línea secante, utilizamos dos formas distintas para definir la pendiente de la línea tangente. En este texto utilizamos ambas formas de la definición. Como antes, la elección de la definición dependerá del entorno. Ahora, que ya definimos formalmente una línea tangente a una función en un punto, podemos utilizar esta definición para hallar ecuaciones de líneas tangentes.</para>
+<example id="fs-id1169739298611">
+<exercise id="fs-id1169739033980">
+<problem id="fs-id1169738975370">
+<title>Hallar una línea tangente</title>
+<para id="fs-id1169739030550">Halle la ecuación de la línea tangente al gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739186668">
+<para id="fs-id1169738899144">Primero, halle la pendiente de la línea tangente. En este ejemplo, utilice la <link target-id="fs-id1169739226063"/>.</para>
+<equation id="fs-id1169738970130" class="unnumbered"><label/><m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="right"><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>3</m:mn></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Aplique la definición.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>9</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>3</m:mn></m:mrow></m:mfrac></m:mrow></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Sustituya</m:mtext><m:mspace width="0.2em"/><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>9</m:mn><m:mo>.</m:mo></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>3</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Factorice el numerador para evaluar el límite.</m:mtext></m:mtd></m:mtr></m:mtable></m:mrow></m:math></equation>
+<para id="fs-id1169739020694">A continuación, halle un punto en la línea tangente. Ya que la línea es tangente al gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> pasa por el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Tenemos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>9</m:mn><m:mo>,</m:mo></m:mrow></m:math> para que la línea tangente pase por el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>9</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169738993948">Con la ecuación punto-pendiente de la línea con la pendiente <m:math><m:mrow><m:mi>m</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math> y el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>9</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> obtenemos la línea <m:math><m:mrow><m:mi>y</m:mi><m:mo>−</m:mo><m:mn>9</m:mn><m:mo>=</m:mo><m:mn>6</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Simplificando, tenemos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>9</m:mn><m:mo>.</m:mo></m:mrow></m:math> El gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> y su línea tangente en <m:math><m:mn>3</m:mn></m:math> se muestran en la <link target-id="CNX_Calc_Figure_03_01_005"/>.</para>
+<figure id="CNX_Calc_Figure_03_01_005">
+<media id="fs-id1169738912556" alt="Esta figura está formada por los gráficos de f(x) = x al cuadrado, además de y = 6x - 9. Los gráficos de estas funciones parecen tocarse en x = 3.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_005.jpg"/>
+</media>
+<caption>La línea tangente a <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1169739223534">
+<exercise id="fs-id1169739274759">
+<problem id="fs-id1169739030059">
+<title>La pendiente de una línea tangente revisada</title>
+<para id="fs-id1169739031271">Use la <link target-id="fs-id1169738970614"/> para hallar la pendiente de la línea tangente al gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739023994">
+<para id="fs-id1169738885423">Los pasos son muy similares a los del <link target-id="fs-id1169739298611"/>. Consulte la definición en la <link target-id="fs-id1169738970614"/>.</para>
+<equation id="fs-id1169739043970" class="unnumbered"><label/><m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="right"><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>h</m:mi></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Aplique la definición.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>9</m:mn></m:mrow><m:mi>h</m:mi></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Sustituya</m:mtext><m:mspace width="0.2em"/><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo>+</m:mo><m:mi>h</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>9</m:mn><m:mo>.</m:mo></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>9</m:mn><m:mo>+</m:mo><m:mn>6</m:mn><m:mi>h</m:mi><m:mo>+</m:mo><m:msup><m:mi>h</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>9</m:mn></m:mrow><m:mi>h</m:mi></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Expanda y simplifique para evaluar el límite.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>6</m:mn><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>h</m:mi></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>6</m:mn><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn></m:mtd></m:mtr></m:mtable></m:mrow></m:math></equation>
+<para id="fs-id1169738960593">Obtuvimos el mismo valor para la pendiente de la línea tangente con la otra definición, lo que demuestra que las fórmulas se pueden intercambiar.</para>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1169738966727">
+<exercise id="fs-id1169738893708">
+<problem id="fs-id1169738969706">
+<title>Halle la ecuación de una línea tangente</title>
+<para id="fs-id1169738935464">Halle la ecuación de la línea tangente al gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169738999233">
+<para id="fs-id1169739001198">Podemos utilizar la <link target-id="fs-id1169739226063"/>, pero como vimos, los resultados son los mismos si utilizamos la <link target-id="fs-id1169738970614"/>.</para>
+<equation id="fs-id1169738961345" class="unnumbered"><label/><m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="right"><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Aplique la definición.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>−</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Sustituya</m:mtext><m:mspace width="0.2em"/><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.1em"/><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>−</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac><m:mo>·</m:mo><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtable><m:mtr><m:mtd columnalign="left"><m:mtext>Multiplique el numerador y el denominador por</m:mtext><m:mspace width="0.2em"/><m:mn>2</m:mn><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>a</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mtext>simplifique las fracciones.</m:mtext></m:mtd></m:mtr></m:mtable></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>−</m:mo><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Simplifique.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>-1</m:mn></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Simplifique con</m:mtext><m:mspace width="0.2em"/><m:mfrac><m:mrow><m:mn>2</m:mn><m:mo>−</m:mo><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>,</m:mo><m:mtext>para</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mo>−</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Evalúe el límite.</m:mtext></m:mtd></m:mtr></m:mtable></m:mrow></m:math></equation>
+<para id="fs-id1169739270491">Ahora sabemos que la pendiente de la línea tangente es <m:math><m:mrow><m:mo>−</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Para hallar la ecuación de la línea tangente, necesitamos también un punto en la línea. Sabemos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Ya que la línea tangente pasa por el punto <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo stretchy="false">)</m:mo></m:mrow></m:math> podemos utilizar la ecuación punto-pendiente de una línea para hallar la ecuación de la línea tangente. Así, la línea tangente tiene la ecuación <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mo>−</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Los gráficos de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow></m:math> y <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mo>−</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> se muestran en la <link target-id="CNX_Calc_Figure_03_01_006"/>.</para>
+<figure id="CNX_Calc_Figure_03_01_006">
+<media id="fs-id1169736611454" alt="Esta figura consiste en los gráficos de f(x) = 1/x, así como y = -x/4 + 1. La parte del gráfico f(x) = 1/x en el primer cuadrante parece tocar el gráfico de la otra función en x = 2.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_006.jpg"/>
+</media>
+<caption>La línea es tangente a <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1169739038138" class="checkpoint">
+<exercise id="fs-id1169739038141">
+<problem id="fs-id1169739231712">
+<para id="fs-id1169739231715">Calcule la pendiente de la línea tangente al gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739195992">
+<para id="fs-id1169739236594"><m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1169739218223" type="hint">
+<title>Sugerencia</title>
+<para id="fs-id1169738973750">Utilice <link target-id="fs-id1169739226063"/> o <link target-id="fs-id1169738970614"/>. Multiplique el numerador y el denominador por un conjugado.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1169739028315">
+<title>La derivada de una función en un punto</title>
+<para id="fs-id1169739269344">El tipo de límite que calculamos para hallar la pendiente de la línea tangente a una función en un punto se da en muchas aplicaciones de varias disciplinas. Estas aplicaciones incluyen la velocidad y la aceleración en física, las funciones de ganancia marginal en los negocios y las tasas de crecimiento en biología. Este límite se da con tanta frecuencia que damos a este valor un nombre especial: la <term>derivada</term>. El proceso para hallar una derivada se denomina <term>diferenciación</term>.</para>
+<note id="fs-id1169739269799">
+<title>Definición</title>
+<para id="fs-id1169738859079">Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> sea una función definida en un intervalo abierto que contenga <m:math><m:mrow><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> La derivada de la función <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> denotado por <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> se define por</para>
+<equation id="fs-id1169739179144"><m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></equation>
+<para id="fs-id1169739032184">siempre que exista este límite.</para>
+<para id="fs-id1169739032188">Como alternativa, también podemos definir la derivada de <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en <m:math><m:mi>a</m:mi></m:math> como</para>
+<equation id="fs-id1169739188551"><m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>h</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+</note>
+<example id="fs-id1169739198956">
+<exercise id="fs-id1169739198958">
+<problem id="fs-id1169739204504">
+<title>Estimación de una derivada</title>
+<para id="fs-id1169739204510">Para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> utilice una tabla para estimar <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> utilizando la <link target-id="fs-id1169739179144"/>.</para>
+</problem>
+<solution id="fs-id1169739014532">
+<para id="fs-id1169739033831">Cree una tabla con los valores de <m:math><m:mi>x</m:mi></m:math> justo debajo de <m:math><m:mn>3</m:mn></m:math> y justo encima de <m:math><m:mrow><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<table id="fs-id1169739301095" class="unnumbered" summary="This table has seven rows and two columns. The first row is a header row and it labels each column. The first column header is x and the second column is (x2 − 9)/(x − 3). Under the first column are the values 2.9, 2.99, 2.999, 3.001, 3.01, and 3.1. Under the second column are the values 5.9, 5.99, 5.999, 6.001, 6.01, and 6.1.">
+<label/>
+<tgroup cols="2">
+<colspec colnum="1" colname="col1"/>
+<colspec colnum="2" colname="col2"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left"><m:math><m:mi>x</m:mi></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>9</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>3</m:mn></m:mrow></m:mfrac></m:mrow></m:math></entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>2,9</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>5,9</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>2,99</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>5,99</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>2,999</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>5,999</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>3,001</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>6,001</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>3,01</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>6,01</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>3,1</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>6,1</m:mn></m:mrow></m:math></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<para id="fs-id1169739032830">Tras examinar la tabla, vemos que una buena estimación es <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6.</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1169739304299" class="checkpoint">
+<exercise id="fs-id1169739298316">
+<problem id="fs-id1169739298318">
+<para id="fs-id1169739298320">Para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> utilice una tabla para estimar <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> utilizando la <link target-id="fs-id1169739188551"/>.</para>
+</problem>
+<solution id="fs-id1169739190377">
+<para id="fs-id1169739190379"><m:math><m:mn>6</m:mn></m:math></para>
+</solution>
+<commentary id="fs-id1169739274742" type="hint">
+<title>Sugerencia</title>
+<para id="fs-id1169739027513">Evalúe <m:math><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mi>h</m:mi></m:mfrac></m:mrow></m:math> en <m:math><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>-0,1</m:mn><m:mo>,</m:mo><m:mn>-0,01</m:mn><m:mo>,</m:mo><m:mn>-0,001</m:mn><m:mo>,</m:mo><m:mn>0,001</m:mn><m:mo>,</m:mo><m:mn>0,01</m:mn><m:mo>,</m:mo><m:mn>0,1</m:mn></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<example id="fs-id1169739044032">
+<exercise id="fs-id1169739129042">
+<problem id="fs-id1169739129044">
+<title>Hallar una derivada</title>
+<para id="fs-id1169739001692">Para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> halle <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> utilizando la <link target-id="fs-id1169739179144"/>.</para>
+</problem>
+<solution id="fs-id1169739104710">
+<para id="fs-id1169739104712">Sustituya la función y el valor dados directamente en la ecuación.</para>
+<equation id="fs-id1169739305050" class="unnumbered"><label/><m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Aplique la definición.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mn>5</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Sustituya</m:mtext><m:mspace width="0.2em"/><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Simplifique y factorice el numerador.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Cancele el factor común.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>8</m:mn></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Evalúe el límite.</m:mtext></m:mtd></m:mtr></m:mtable></m:mrow></m:math></equation>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1169739093789">
+<exercise id="fs-id1169739204627">
+<problem id="fs-id1169739204629">
+<title>Repaso de la derivada</title>
+<para id="fs-id1169739025974">Para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> halle <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> utilizando el <link target-id="fs-id1169739188551"/>.</para>
+</problem>
+<solution id="fs-id1169739270482">
+<para id="fs-id1169739270484">Con esta ecuación, podemos sustituir dos valores de la función y deberíamos obtener el mismo valor que en el <link target-id="fs-id1169739044032"/>.</para>
+<equation id="fs-id1169736614162" class="unnumbered"><label/><m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mi>h</m:mi></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Aplique la definición.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mi>h</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo><m:mo>−</m:mo><m:mn>5</m:mn></m:mrow><m:mi>h</m:mi></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtable><m:mtr><m:mtd columnalign="left"><m:mtext>Sustituya</m:mtext><m:mspace width="0.2em"/><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mspace width="0.2em"/><m:mtext>y</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mi>h</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mi>h</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>8</m:mn><m:mi>h</m:mi></m:mrow><m:mi>h</m:mi></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Simplifique el numerador.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mi>h</m:mi><m:mo>+</m:mo><m:mn>8</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mi>h</m:mi></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Factorice el numerador.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mi>h</m:mi><m:mo>+</m:mo><m:mn>8</m:mn><m:mo stretchy="false">)</m:mo></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Cancele el factor común.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>8</m:mn></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Evalúe el límite.</m:mtext></m:mtd></m:mtr></m:mtable></m:mrow></m:math></equation>
+<para id="fs-id1169738850760">Los resultados son los mismos, sea que utilicemos la <link target-id="fs-id1169739179144"/> o la <link target-id="fs-id1169739188551"/>.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1169739236870" class="checkpoint">
+<exercise id="fs-id1169739236874">
+<problem id="fs-id1169739236876">
+<para id="fs-id1169739269938">Para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> halle <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739293548">
+<para id="fs-id1169739293550"><m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1169739179405" type="hint">
+<title>Sugerencia</title>
+<para id="fs-id1169736618844">Utilice la <link target-id="fs-id1169739179144"/>, la <link target-id="fs-id1169739188551"/> o ambas. Utilice el <link target-id="fs-id1169738966727"/> o el <link target-id="fs-id1169739198956"/> como guía.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1169736616175">
+<title>Velocidades y tasas de cambio</title>
+<para id="fs-id1169739353680">Ahora, que podemos evaluar una derivada, estamos en capacidad de utilizarla en las aplicaciones de velocidad. Recordemos que si <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es la posición de un objeto que se mueve a lo largo de un eje de coordenadas, la <term class="no-emphasis">velocidad promedio</term> del objeto en un intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>t</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> si <m:math><m:mrow><m:mi>t</m:mi><m:mo>&gt;</m:mo><m:mi>a</m:mi></m:mrow></m:math> o <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>a</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> si <m:math><m:mrow><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi></m:mrow></m:math> viene dada por el cociente de diferencias</para>
+<equation id="fs-id1169739303202"><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>s</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169739189992">Como los valores de <m:math><m:mi>t</m:mi></m:math> enfoque <m:math><m:mi>a</m:mi><m:mo>,</m:mo></m:math> los valores de <m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub></m:mrow></m:math> se acercan al valor que llamamos <term class="no-emphasis">velocidad instantánea</term> en <m:math><m:mrow><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Es decir, la velocidad instantánea en <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> denotado <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> viene dada por</para>
+<equation id="fs-id1169739274700"><m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>s</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>t</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>s</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169739064816">Para entender mejor la relación entre la velocidad promedio y la velocidad instantánea, consulte la <link target-id="CNX_Calc_Figure_03_01_007"/>. En esa figura, la pendiente de la línea tangente (mostrada en rojo) es la velocidad instantánea del objeto en el momento <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> cuya posición en el momento <m:math><m:mi>t</m:mi></m:math> viene dada por la función <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> La pendiente de la línea secante (mostrada en verde) es la velocidad promedio del objeto en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>t</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_03_01_007">
+<media id="fs-id1169739342006" alt="Esta figura consiste en un plano de coordenadas cartesianas con 0, a y t1 marcados en el eje t. La función y = s(t) se representa gráficamente en el primer cuadrante junto con dos líneas marcadas como tangente y secante. La línea tangente toca a y = s(t) en un solo punto, (a, s(a)). La línea secante toca a y = s(t) en dos puntos: (a, s(a)) y (t1, s(t1)).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_007.jpg"/>
+</media>
+<caption>La pendiente de la línea secante es la velocidad promedio en el intervalo <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>t</m:mi><m:mo stretchy="false">]</m:mo><m:mo>.</m:mo></m:mrow></m:math> La pendiente de la línea tangente es la velocidad instantánea.</caption>
+</figure>
+<para id="fs-id1169736619727">Podemos utilizar la <link target-id="fs-id1169739179144"/> para calcular la velocidad instantánea, o podemos estimar la velocidad de un objeto en movimiento con una tabla de valores. A continuación, podemos confirmar la estimación con la <link target-id="fs-id1169739303202"/>.</para>
+<example id="fs-id1169739179204">
+<exercise id="fs-id1169739179206">
+<problem id="fs-id1169739179208">
+<title>Estimación de la velocidad</title>
+<para id="fs-id1169739188880">Un peso de plomo en un resorte oscila hacia arriba y hacia abajo. Su posición en el tiempo <m:math><m:mi>t</m:mi></m:math> con respecto a una línea horizontal fija viene dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow></m:math> (<link target-id="CNX_Calc_Figure_03_01_010"/>). Utilice una tabla de valores para estimar <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Compruebe la estimación con la <link target-id="fs-id1169739179144"/>.</para>
+<figure id="CNX_Calc_Figure_03_01_010">
+<media id="fs-id1169739191205" alt="Imagen de un resorte colgando con un peso en el extremo. Hay una línea horizontal discontinua marcada como 0 un poco por encima del peso.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_010.jpg"/>
+</media>
+<caption>Un peso de plomo suspendido de un resorte en movimiento oscilatorio vertical.</caption>
+</figure>
+</problem>
+<solution id="fs-id1169738960038">
+<para id="fs-id1169738960040">Podemos estimar la velocidad instantánea en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> calculando una tabla de velocidades promedio con los valores de <m:math><m:mi>t</m:mi></m:math> se acerca <m:math><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> como se muestra en la <link target-id="fs-id1169739242675"/>.</para>
+<table id="fs-id1169739242675" summary="This table has seven rows and two columns. The first row is a header row and it labels each column. The first column header is x and the second column is (sin t - sin 0)/(t − 0) = (sin t)/t. Under the first column are the values -0.1, -0.01, -0.001, 0.001, 0.01, and 0.1. Under the second column are the values 0.998334166, 0.9999833333, 0.999999833, 0.999999833, 0.9999833333, and 0.998334166.">
+<title>Velocidades promedio con valores de <emphasis effect="italics">t</emphasis> cercanos a 0</title>
+<tgroup cols="2">
+<colspec colnum="1" colname="col1"/>
+<colspec colnum="2" colname="col2"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left"><m:math><m:mi>t</m:mi></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>t</m:mi><m:mo>−</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mn>0</m:mn></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>0</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>t</m:mi></m:mrow><m:mi>t</m:mi></m:mfrac></m:mrow></m:math></entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>-0,1</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>0,998334166</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>-0,01</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>0,9999833333</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>-0,001</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>0,999999833</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>0,001</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>0,999999833</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>0,01</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>0,9999833333</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>0,1</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>0,998334166</m:mn></m:mrow></m:math></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<para id="fs-id1169739188902">En la tabla vemos que la velocidad promedio en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-0,1</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> es <m:math><m:mrow><m:mn>0,998334166</m:mn><m:mo>,</m:mo></m:mrow></m:math> la velocidad promedio en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-0,01</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> es <m:math><m:mrow><m:mn>0,9999833333</m:mn><m:mo>,</m:mo></m:mrow></m:math>, etc. Con esta tabla de valores, una buena estimación sería <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169739298311">Utilizando la <link target-id="fs-id1169739179144"/>, observamos que</para>
+<equation id="fs-id1169739302610" class="unnumbered"><label/><m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>s</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>t</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>t</m:mi><m:mo>−</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mn>0</m:mn></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>0</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>t</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>t</m:mi></m:mrow><m:mi>t</m:mi></m:mfrac><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169739111046">Así, de hecho, <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1169739220840" class="checkpoint">
+<exercise id="fs-id1169739220843">
+<problem id="fs-id1169739220846">
+<para id="fs-id1169739220848">Se deja caer una roca desde una altura de <m:math><m:mrow><m:mn>64</m:mn></m:mrow></m:math> pies. Su altura sobre el suelo en el momento <m:math><m:mi>t</m:mi></m:math> segundos después viene dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−16</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>64</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Calcule su velocidad instantánea <m:math><m:mn>1</m:mn></m:math> segundo después de su caída, con la <link target-id="fs-id1169739179144"/>.</para>
+</problem>
+<solution id="fs-id1169739298452">
+<para id="fs-id1169739298454"><m:math><m:mrow><m:mn>−32</m:mn></m:mrow></m:math> pies/s</para>
+</solution>
+<commentary id="fs-id1169739189230" type="hint">
+<title>Sugerencia</title>
+<para id="fs-id1169739189236"><m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>s</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Siga los ejemplos anteriores de la derivada mediante el <link target-id="fs-id1169739179144"/>.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1169739305376">Como hemos visto a lo largo de esta sección, la pendiente de una línea tangente a una función y la velocidad instantánea son conceptos relacionados. Cada una se estima al calcular una derivada y cada una mide la tasa instantánea de cambio de una función, o la tasa de cambio en cualquier punto a lo largo de la función.</para>
+<note id="fs-id1169739269974">
+<title>Definición</title>
+<para id="fs-id1169739269977">La <term>tasa instantánea de cambio</term> de una función <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en un valor <m:math><m:mi>a</m:mi></m:math> es su derivada <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</note>
+<example id="fs-id1169739204154">
+<exercise id="fs-id1169739204156">
+<problem id="fs-id1169739204158">
+<title>Apertura del capítulo: Estimación de la tasa de cambio de la velocidad</title>
+<figure id="CNX_Calc_Figure_03_01_009">
+<media id="fs-id1169739204163" alt="El mismo automóvil deportivo que circula a toda velocidad por una carretera sinuosa desde el principio del capítulo.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_009.jpg"/>
+</media>
+<caption>(Créditos: modificación del trabajo de Codex41, Flickr)</caption>
+</figure>
+<para id="fs-id1169739204172">Capaz de alcanzar una velocidad máxima de <m:math><m:mrow><m:mn>270,49</m:mn></m:mrow></m:math> mph, el Hennessey Venom GT es uno de los autos más rápidos del mundo. En las pruebas pasó de <m:math><m:mn>0</m:mn></m:math> a <m:math><m:mrow><m:mn>60</m:mn></m:mrow></m:math> mph en <m:math><m:mrow><m:mn>3,05</m:mn></m:mrow></m:math> segundos, desde <m:math><m:mrow><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>a</m:mtext><m:mspace width="0.2em"/><m:mn>100</m:mn></m:mrow></m:math> mph en <m:math><m:mrow><m:mn>5,88</m:mn></m:mrow></m:math> segundos, desde <m:math><m:mrow><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>a</m:mtext><m:mspace width="0.2em"/><m:mn>200</m:mn></m:mrow></m:math> mph en <m:math><m:mrow><m:mn>14,51</m:mn></m:mrow></m:math> segundos, y de <m:math><m:mrow><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>a</m:mtext><m:mspace width="0.2em"/><m:mn>229,9</m:mn></m:mrow></m:math> mph en <m:math><m:mrow><m:mn>19,96</m:mn></m:mrow></m:math> segundos. Utilice estos datos para sacar una conclusión sobre la tasa de cambio de la velocidad (es decir, su <term class="no-emphasis">aceleración</term>) a medida que se acerca <m:math><m:mrow><m:mn>229,9</m:mn></m:mrow></m:math> mph. ¿La velocidad de aceleración del auto parece aumentar, disminuir o ser constante?</para>
+</problem>
+<solution id="fs-id1169739298971">
+<para id="fs-id1169739298973">Primero, observe que <m:math><m:mrow><m:mn>60</m:mn></m:mrow></m:math> mph = <m:math><m:mrow><m:mn>88</m:mn></m:mrow></m:math> pies/s, <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> mph <m:math><m:mrow><m:mo>≈</m:mo><m:mn>146,67</m:mn></m:mrow></m:math> pies/s, <m:math><m:mrow><m:mn>200</m:mn></m:mrow></m:math> mph <m:math><m:mrow><m:mo>≈</m:mo><m:mn>293,33</m:mn></m:mrow></m:math> ft/s y <m:math><m:mrow><m:mn>229,9</m:mn></m:mrow></m:math> mph <m:math><m:mrow><m:mo>≈</m:mo><m:mn>337,19</m:mn></m:mrow></m:math> pies/s. Podemos resumir la información en una tabla.</para>
+<table id="fs-id1169739188462" summary="This table has six rows and two columns. The first row is a header row and it labels each column. The first column header is x and the second column is v(t). Under the first column are the values 0, 3.05, 5.88, 14.51, and 19.96. Under the second column are the values 0, 88, 147.67, 293.33, and 337.19.">
+<title><m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> a diferentes valores de <emphasis effect="italics">t</emphasis></title>
+<tgroup cols="2">
+<colspec colnum="1" colname="col1"/>
+<colspec colnum="2" colname="col2"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left"><m:math><m:mi>t</m:mi></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math></entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry valign="top" align="left"><m:math><m:mn>0</m:mn></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mn>0</m:mn></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>3,05</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>88</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>5,88</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>147,67</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>14,51</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>293,33</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>19,96</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>337,19</m:mn></m:mrow></m:math></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<para id="fs-id1169739019682">Ahora calcule la aceleración promedio del auto en ft/s y por segundo en intervalos de la forma <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo><m:mn>19,96</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> como <m:math><m:mi>t</m:mi></m:math> enfoques <m:math><m:mrow><m:mn>19,96</m:mn><m:mo>,</m:mo></m:mrow></m:math> como se muestra en la siguiente tabla.</para>
+<table id="fs-id1169739188868" summary="This table has five rows and two columns. The first row is a header row and it labels each column. The first column header is x and the second column is (v(t) - v(19.96))/(t - 19.96) = (v(t) - 337.19)/(t - 19.96). Under the first column are the values 0, 3.05, 5.88, and 14.51. Under the second column are the values 16.89, 14.74, 13.46, and 8.05.">
+<title>Aceleración media</title>
+<tgroup cols="2">
+<colspec colnum="1" colname="col1"/>
+<colspec colnum="2" colname="col2"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left"><m:math><m:mi>t</m:mi></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mn>19,96</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>19,96</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mn>337,19</m:mn></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>19,96</m:mn></m:mrow></m:mfrac></m:mrow></m:math></entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>0,0</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>16,89</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>3,05</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>14,74</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>5,88</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>13,46</m:mn></m:mrow></m:math></entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>14,51</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>8,05</m:mn></m:mrow></m:math></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<para id="fs-id1169739303947">La tasa de aceleración del automóvil disminuye a medida que su velocidad se aproxima a <m:math><m:mrow><m:mn>229,9</m:mn></m:mrow></m:math> mph <m:math><m:mrow><m:mtext>(</m:mtext><m:mn>337,19</m:mn></m:mrow></m:math> ft/s).</para>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1169739187343">
+<exercise id="fs-id1169739187345">
+<problem id="fs-id1169739187347">
+<title>Tasa de cambio de temperatura</title>
+<para id="fs-id1169739187352">Un propietario ajusta el termostato para que la temperatura dentro de su casa baje de <m:math><m:mrow><m:mn>70</m:mn><m:mtext>°</m:mtext><m:mtext>F</m:mtext></m:mrow></m:math> a las <m:math><m:mn>9</m:mn></m:math> p. m., alcance un mínimo de <m:math><m:mrow><m:mn>60</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> durante la noche y suba de nuevo a <m:math><m:mrow><m:mn>70</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> a las <m:math><m:mn>7</m:mn></m:math> de la mañana siguiente. Supongamos que la temperatura en la casa viene dada por <m:math><m:mrow><m:mi>T</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0,4</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>70</m:mn></m:mrow></m:math> para <m:math><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>10</m:mn><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>t</m:mi></m:math> es el número de horas pasadas las <m:math><m:mn>9</m:mn></m:math> p. m. Halle la tasa instantánea de cambio de la temperatura a medianoche.</para>
+</problem>
+<solution id="fs-id1169739297922">
+<para id="fs-id1169739297924">Ya que la medianoche es <m:math><m:mn>3</m:mn></m:math> horas pasadas las <m:math><m:mn>9</m:mn></m:math> p. m., queremos calcular <m:math><m:mrow><m:msup><m:mi>T</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Consulte la <link target-id="fs-id1169739179144"/>.</para>
+<equation id="fs-id1169739270561" class="unnumbered"><label/><m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>T</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>t</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>T</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>T</m:mi><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>3</m:mn></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Aplique la definición.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>t</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>0,4</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>70</m:mn><m:mo>−</m:mo><m:mn>61,6</m:mn></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>3</m:mn></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtable><m:mtr><m:mtd columnalign="left"><m:mtext>Sustituya</m:mtext><m:mspace width="0.2em"/><m:mi>T</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0,4</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>70</m:mn><m:mspace width="0.2em"/><m:mtext>y</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>T</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>61,6</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>t</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>0,4</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>8,4</m:mn></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>3</m:mn></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Simplifique.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>t</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>0,4</m:mn><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>7</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>3</m:mn></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>t</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>0,4</m:mn><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>7</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>3</m:mn></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>t</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mn>0,4</m:mn><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>7</m:mn><m:mo stretchy="false">)</m:mo></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Cancele.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>−1,6</m:mn></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Evalúe el límite.</m:mtext></m:mtd></m:mtr></m:mtable></m:mrow></m:math></equation>
+<para id="fs-id1169739274032">La tasa instantánea de cambio de la temperatura a medianoche es <m:math><m:mrow><m:mn>−1,6</m:mn><m:mtext>°</m:mtext><m:mtext>F</m:mtext></m:mrow></m:math> por hora.</para>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1169739253544">
+<exercise id="fs-id1169739253546">
+<problem id="fs-id1169739253548">
+<title>Tasa de cambio del beneficio</title>
+<para id="fs-id1169739253553">Una compañía de juguetes puede vender <m:math><m:mi>x</m:mi></m:math> sistemas de juego electrónico a un precio de <m:math><m:mrow><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>-0,01</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>400</m:mn></m:mrow></m:math> dólares por sistema de juego. El costo de fabricación <m:math><m:mi>x</m:mi></m:math> viene dado por <m:math><m:mrow><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>100</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>10000</m:mn></m:mrow></m:math> dólares. Halle la tasa de cambio del beneficio cuando se producen <m:math><m:mrow><m:mn>10000</m:mn></m:mrow></m:math> juegos. ¿Debería la compañía juguetera aumentar o disminuir la producción?</para>
+</problem>
+<solution id="fs-id1169739274606">
+<para id="fs-id1169739274608">El beneficio <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> obtenido por la producción de <m:math><m:mi>x</m:mi></m:math> sistemas de juego es <m:math><m:mrow><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> son los ingresos obtenidos por la venta de <m:math><m:mi>x</m:mi></m:math> juegos. Dado que la compañía puede vender <m:math><m:mi>x</m:mi></m:math> juegos en <m:math><m:mrow><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>-0,01</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>400</m:mn></m:mrow></m:math> por juego,</para>
+<equation id="fs-id1169739286461" class="unnumbered"><label/><m:math><m:mrow><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mi>p</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-0,01</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>400</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-0,01</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>400</m:mn><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169739302924">En consecuencia,</para>
+<equation id="fs-id1169739302928" class="unnumbered"><label/><m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-0,01</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>300</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>10000</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169739190488">Por lo tanto, la evaluación de la tasa de cambio del beneficio da</para>
+<equation id="fs-id1169739190491" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>10000</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>10000</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mn>10000</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>10000</m:mn></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>10000</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>-0,01</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>300</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>10000</m:mn><m:mo>−</m:mo><m:mn>1990000</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>10000</m:mn></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>10000</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>-0,01</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>300</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2000000</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>10000</m:mn></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>100</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1169736587942">Dado que la tasa de cambio del beneficio <m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>10000</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>10000</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> la compañía debe aumentar la producción.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1169739273077" class="checkpoint">
+<exercise id="fs-id1169739273081">
+<problem id="fs-id1169739273083">
+<para id="fs-id1169739273085">Una cafetería determina que el beneficio diario obtenido de los panecillos al cobrar <m:math><m:mi>s</m:mi></m:math> dólares por panecillo es <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>s</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−20</m:mn><m:msup><m:mi>s</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>150</m:mn><m:mi>s</m:mi><m:mo>−</m:mo><m:mn>10</m:mn><m:mo>.</m:mo></m:mrow></m:math> La cafetería cobra actualmente <m:math><m:mrow><m:mtext>$</m:mtext><m:mn>3,25</m:mn></m:mrow></m:math> por panecillo. Encuentre <m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>3,25</m:mn><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> la tasa de cambio del beneficio cuando el precio es <m:math><m:mrow><m:mtext>$</m:mtext><m:mn>3,25</m:mn></m:mrow></m:math> y decida si la cafetería debería considerar la posibilidad de subir o bajar el precio de los panecillos.</para>
+</problem>
+<solution id="fs-id1169739242328">
+<para id="fs-id1169739242330"><m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3,25</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>20</m:mn><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>;</m:mo></m:mrow></m:math> subir el precio.</para>
+</solution>
+<commentary id="fs-id1169736611539" type="hint">
+<title>Sugerencia</title>
+<para id="fs-id1169736611546">Utilice la <link target-id="fs-id1169739253544"/> como guía.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1169736611554" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1169736611561" list-type="bulleted" bullet-style="bullet">
+<item>La pendiente de la línea tangente a una curva mide la tasa instantánea de cambio de una curva. Podemos calcularla al hallar el límite del cociente de diferencias o el cociente de diferencias con incremento <m:math><m:mrow><m:mi>h</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>La derivada de una función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en un valor <m:math><m:mi>a</m:mi></m:math> se halla con cualquiera de las definiciones de la pendiente de la línea tangente.</item>
+<item>La velocidad es la tasa de cambio de la posición. Así, la velocidad <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en el tiempo <m:math><m:mi>t</m:mi></m:math> es la derivada de la posición <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en el tiempo <m:math><m:mi>t</m:mi><m:mo>.</m:mo></m:math> La velocidad promedio viene dada por<newline/>
+<equation id="fs-id1169739286403" class="unnumbered"><label/><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>s</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation><newline/> La velocidad instantánea viene dada por<newline/>
+<equation id="fs-id1169739191149" class="unnumbered"><label/><m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>s</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>t</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>s</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+<item>Podemos estimar una derivada con una tabla de valores.</item>
+</list>
+</section>
+<section id="fs-id1169739274316" class="key-equations">
+<title>Ecuaciones clave</title>
+<table id="eip-490" summary="." class="unnumbered unstyled">
+<tgroup cols="2"><tbody>
+  <row>
+    <entry><emphasis effect="bold">Cociente de diferencias</emphasis></entry>
+    <entry><m:math><m:mrow><m:mi>Q</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></entry>
+  </row>
+  <row>
+    <entry><emphasis effect="bold">Cociente de diferencias con incremento</emphasis> <m:math><m:mi>h</m:mi></m:math></entry>
+    <entry><m:math><m:mrow><m:mi>Q</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mi>h</m:mi></m:mfrac></m:mrow></m:math></entry>
+  </row>
+  <row>
+    <entry><emphasis effect="bold">Pendiente de la línea tangente</emphasis></entry>
+    <entry><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math><newline/> <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mi>h</m:mi></m:mfrac></m:mrow></m:math></entry>
+  </row>
+  <row>
+    <entry><emphasis effect="bold">Derivada de</emphasis> <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> <emphasis effect="bold">en</emphasis> <m:math><m:mi>a</m:mi></m:math></entry>
+    <entry><m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math><newline/> <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mi>h</m:mi></m:mfrac></m:mrow></m:math></entry>
+  </row>
+  <row>
+    <entry><emphasis effect="bold">Velocidad promedio</emphasis></entry>
+    <entry><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mi>a</m:mi><m:mtext>ve</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>s</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></entry>
+  </row>
+  <row>
+    <entry><emphasis effect="bold">Velocidad instantánea</emphasis></entry>
+    <entry><m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>s</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>t</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>s</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></entry>
+  </row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section id="fs-id1169736611271" class="section-exercises">
+<para id="fs-id1169736611276">En los siguientes ejercicios, utilice la <link target-id="fs-id1169738850293"/> para hallar la pendiente de la línea secante entre los valores <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> para cada función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1169736611315">
+<problem id="fs-id1169736611317">
+<para id="fs-id1169736611319"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>7</m:mn><m:mo>;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739301849">
+<para id="fs-id1169739301851"><m:math><m:mn>4</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739301859">
+<problem id="fs-id1169739301861">
+<para id="fs-id1169739301863"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>8</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>3</m:mn><m:mo>;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169736589136">
+<problem id="fs-id1169736589138">
+<para id="fs-id1169736589140"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>3,5</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739302799">
+<para id="fs-id1169739302801"><m:math><m:mrow><m:mn>8,5</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739302810">
+<problem id="fs-id1169739302812">
+<para id="fs-id1169739302814"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>0,5</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>1,5</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169739302881">
+<problem id="fs-id1169739302883">
+<para id="fs-id1169739304574"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>4</m:mn><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739304628">
+<para id="fs-id1169739304630"><m:math><m:mrow><m:mo>−</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739304644">
+<problem id="fs-id1169739304646">
+<para id="fs-id1169739304648"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>7</m:mn></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169739305157">
+<problem id="fs-id1169739305160">
+<para id="fs-id1169739305162"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>16</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169736613356">
+<para id="fs-id1169736613358"><m:math><m:mrow><m:mn>0,2</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169736613366">
+<problem id="fs-id1169736613368">
+<para id="fs-id1169736613371"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>9</m:mn></m:mrow></m:msqrt><m:mo>;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>10</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>13</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169736594852">
+<problem id="fs-id1169736594855">
+<para id="fs-id1169736594857"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>8</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169736594912">
+<para id="fs-id1169736594914"><m:math><m:mrow><m:mn>0,25</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169736594923">
+<problem id="fs-id1169736594925">
+<para id="fs-id1169736594927"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup><m:mo>;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>27</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1169739188626">Para las siguientes funciones,</para>
+<list id="fs-id1169739188630" list-type="enumerated" number-style="lower-alpha">
+<item>utilice la <link target-id="fs-id1169738970614"/> para hallar la pendiente de la línea tangente <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y</item>
+<item>halle la ecuación de la línea tangente a <m:math><m:mi>f</m:mi></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+<exercise id="fs-id1169736610046">
+<problem id="fs-id1169736610048">
+<para id="fs-id1169736610051"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>−</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169736610085">
+<para id="fs-id1169736610087">a. <m:math><m:mrow><m:mn>−4</m:mn></m:mrow></m:math> b. <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>−</m:mo><m:mn>4</m:mn><m:mi>x</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169736611611">
+<problem id="fs-id1169736611613">
+<para id="fs-id1169736611615"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mi>x</m:mi><m:mn>5</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>6</m:mn><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169739303246">
+<problem id="fs-id1169739303248">
+<para id="fs-id1169739303250"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739303286">
+<para id="fs-id1169739303288">a. <m:math><m:mn>3</m:mn></m:math> b. <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739303312">
+<problem id="fs-id1169739303314">
+<para id="fs-id1169739303317"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>x</m:mi><m:mo>−</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169739302413">
+<problem id="fs-id1169739302415">
+<para id="fs-id1169739302418"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>7</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739302448">
+<para id="fs-id1169739302451">a. <m:math><m:mrow><m:mfrac><m:mrow><m:mn>−7</m:mn></m:mrow><m:mn>9</m:mn></m:mfrac></m:mrow></m:math> b. <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>−7</m:mn></m:mrow><m:mn>9</m:mn></m:mfrac><m:mi>x</m:mi><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>14</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739333055">
+<problem id="fs-id1169739333058">
+<para id="fs-id1169739333060"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>8</m:mn></m:mrow></m:msqrt><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169739242365">
+<problem id="fs-id1169739242367">
+<para id="fs-id1169739242369"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>−</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>-2</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739242406">
+<para id="fs-id1169739242409">a. <m:math><m:mrow><m:mn>12</m:mn></m:mrow></m:math> b. <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>12</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>14</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739242434">
+<problem id="fs-id1169739242436">
+<para id="fs-id1169739242438"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>-3</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169739273188">
+<problem id="fs-id1169739273190">
+<para id="fs-id1169739273192"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>2</m:mn><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:mfrac><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>−4</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739273228">
+<para id="fs-id1169739327268">a. <m:math><m:mrow><m:mn>-2</m:mn></m:mrow></m:math> b. <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>-2</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>10</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739327293">
+<problem id="fs-id1169739327296">
+<para id="fs-id1169739327298"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>3</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1169739270609">Para las siguientes funciones <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> halle <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> utilizando la <link target-id="fs-id1169738850293"/>.</para>
+<exercise id="fs-id1169739270650">
+<problem id="fs-id1169739270652">
+<para id="fs-id1169739270654"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739270688">
+<para id="fs-id1169739270690"><m:math><m:mn>5</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739270698">
+<problem id="fs-id1169739270700">
+<para id="fs-id1169739270702"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−7</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169739067661">
+<problem id="fs-id1169739067664">
+<para id="fs-id1169739067666"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>9</m:mn><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739067703">
+<para id="fs-id1169739067705"><m:math><m:mrow><m:mn>13</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739067714">
+<problem id="fs-id1169739067716">
+<para id="fs-id1169739067718"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169739194750">
+<problem id="fs-id1169739194752">
+<para id="fs-id1169739194755"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739194783">
+<para id="fs-id1169739194786"><m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739194797">
+<problem id="fs-id1169739194799">
+<para id="fs-id1169739194802"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn></m:mrow></m:msqrt><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169739304170">
+<problem id="fs-id1169739304172">
+<para id="fs-id1169739304175"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739304206">
+<para id="fs-id1169739304208"><m:math><m:mrow><m:mo>−</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739304222">
+<problem id="fs-id1169739304224">
+<para id="fs-id1169739304226"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>3</m:mn></m:mrow></m:mfrac><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169736611380">
+<problem id="fs-id1169736611382">
+<para id="fs-id1169736611384"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169736611419">
+<para id="fs-id1169736611421"><m:math><m:mrow><m:mn>-3</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169736611430">
+<problem id="fs-id1169736611432">
+<para id="fs-id1169736611434"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:mfrac><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1169739182382">En los siguientes ejercicios, dada la función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math></para>
+<list id="fs-id1169739182403" list-type="enumerated" number-style="lower-alpha">
+<item>halle la pendiente de la línea secante <m:math><m:mrow><m:mi>P</m:mi><m:mi>Q</m:mi></m:mrow></m:math> para cada punto <m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> con <m:math><m:mi>x</m:mi></m:math> valor que se indica en la tabla.</item>
+<item>Utilice las respuestas de a. para estimar el valor de la pendiente de la línea tangente en <m:math><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Use la respuesta de b. para hallar la ecuación de la línea tangente a <m:math><m:mi>f</m:mi></m:math> en el punto <m:math><m:mrow><m:mi>P</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+<exercise id="fs-id1169739187794">
+<problem id="fs-id1169739187796">
+<para id="fs-id1169739187798"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>8</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> (Redondee a <m:math><m:mn>6</m:mn></m:math> decimales)</para>
+<table id="fs-id1169739187857" class="unnumbered" summary="This table has seven rows and four columns. The first row is a header row and it labels each column. The first column header is x, the second is Slope mPQ, the third is x, and the fourth is Slope mPQ. Under the first column are the values 1.1, 1.01, 1.001, 1.0001, 1.00001, 1.000001. Under the second column are the labels (i), (ii), (iii), (iv), (v), and (vi). Under the third column are the values 0.9, 0.99, 0.999, 0.9999, 0.99999, and 0.999999. Under the fourth column are the labels (vii), (viii), (ix), (x), (xi), and (xii).">
+<label/>
+<tgroup cols="4">
+<colspec colnum="1" colname="col1"/>
+<colspec colnum="2" colname="col2"/>
+<colspec colnum="3" colname="col3"/>
+<colspec colnum="4" colname="col4"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry valign="top" align="left">Pendiente <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mi>P</m:mi><m:mi>Q</m:mi></m:mrow></m:msub></m:mrow></m:math></entry>
+<entry valign="top" align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry valign="top" align="left">Pendiente <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mi>P</m:mi><m:mi>Q</m:mi></m:mrow></m:msub></m:mrow></m:math></entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry valign="top" align="left">1,1</entry>
+<entry valign="top" align="left">(i)</entry>
+<entry valign="top" align="left">0,9</entry>
+<entry valign="top" align="left">(vii)</entry>
+</row>
+<row>
+<entry valign="top" align="left">1,01</entry>
+<entry valign="top" align="left">(ii)</entry>
+<entry valign="top" align="left">0,99</entry>
+<entry valign="top" align="left">(viii)</entry>
+</row>
+<row>
+<entry valign="top" align="left">1,001</entry>
+<entry valign="top" align="left">(iii)</entry>
+<entry valign="top" align="left">0,999</entry>
+<entry valign="top" align="left">(ix)</entry>
+</row>
+<row>
+<entry valign="top" align="left">1,0001</entry>
+<entry valign="top" align="left">(iv)</entry>
+<entry valign="top" align="left">0,9999</entry>
+<entry valign="top" align="left">(x)</entry>
+</row>
+<row>
+<entry valign="top" align="left">1,00001</entry>
+<entry valign="top" align="left">(v)</entry>
+<entry valign="top" align="left">0,99999</entry>
+<entry valign="top" align="left">(xi)</entry>
+</row>
+<row>
+<entry valign="top" align="left">1,000001</entry>
+<entry valign="top" align="left">(vi)</entry>
+<entry valign="top" align="left">0,999999</entry>
+<entry valign="top" align="left">(xii)</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</problem>
+<solution id="fs-id1169739269413">
+<para id="fs-id1169739269416">a. <m:math><m:mrow><m:mtext>(i)</m:mtext><m:mspace width="0.2em"/><m:mn>5,100000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(ii)</m:mtext><m:mspace width="0.2em"/><m:mn>5,010000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(iii)</m:mtext><m:mspace width="0.2em"/><m:mn>5,001000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(iv)</m:mtext><m:mspace width="0.2em"/><m:mn>5,000100</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(v)</m:mtext><m:mspace width="0.2em"/><m:mn>5,000010</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(vi)</m:mtext><m:mspace width="0.2em"/><m:mn>5,000001</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(vii)</m:mtext><m:mspace width="0.2em"/><m:mn>4,900000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(viii)</m:mtext><m:mspace width="0.2em"/><m:mn>4,990000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(ix)</m:mtext><m:mspace width="0.2em"/><m:mn>4,999000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(x)</m:mtext><m:mspace width="0.2em"/><m:mn>4,999900</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(xi)</m:mtext><m:mspace width="0.2em"/><m:mn>4,999990</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(x)</m:mtext><m:mspace width="0.2em"/><m:mn>4,999999</m:mn></m:mrow></m:math> b. <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math> c. <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739273794">
+<problem id="fs-id1169739273796">
+<para id="fs-id1169739273799"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>,</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>-1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+<table id="fs-id1169739273863" class="unnumbered" summary="This table has seven rows and four columns. The first row is a header row and it labels each column. The first column header is x, the second is Slope mPQ, the third is x, and the fourth is Slope mPQ. Under the first column are the values 0.1, 0.01, 0.001, 0.0001, 0.00001, and 0.000001. Under the second column are the labels (i), (ii), (iii), (iv), (v), and (vi). Under the third column are the values −0.1, −0.01, −0.001, −0.0001, −0.00001, and −0.000001. Under the fourth column are the labels (vii), (viii), (ix), (x), (xi), and (xii).">
+<tgroup cols="4">
+<colspec colnum="1" colname="col1"/>
+<colspec colnum="2" colname="col2"/>
+<colspec colnum="3" colname="col3"/>
+<colspec colnum="4" colname="col4"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry valign="top" align="left">Pendiente <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mi>P</m:mi><m:mi>Q</m:mi></m:mrow></m:msub></m:mrow></m:math></entry>
+<entry valign="top" align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry valign="top" align="left">Pendiente <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mi>P</m:mi><m:mi>Q</m:mi></m:mrow></m:msub></m:mrow></m:math></entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry valign="top" align="left">0,1</entry>
+<entry valign="top" align="left">(i)</entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>-0,1</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">(vii)</entry>
+</row>
+<row>
+<entry valign="top" align="left">0,01</entry>
+<entry valign="top" align="left">(ii)</entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>-0,01</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">(viii)</entry>
+</row>
+<row>
+<entry valign="top" align="left">0,001</entry>
+<entry valign="top" align="left">(iii)</entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>-0,001</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">(ix)</entry>
+</row>
+<row>
+<entry valign="top" align="left">0,0001</entry>
+<entry valign="top" align="left">(iv)</entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>-0,0001</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">(x)</entry>
+</row>
+<row>
+<entry valign="top" align="left">0,00001</entry>
+<entry valign="top" align="left">(v)</entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>-0,00001</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">(xi)</entry>
+</row>
+<row>
+<entry valign="top" align="left">0,000001</entry>
+<entry valign="top" align="left">(vi)</entry>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>-0,000001</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">(xii)</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</problem>
+</exercise>
+<exercise id="fs-id1169739269671">
+<problem id="fs-id1169739269673">
+<para id="fs-id1169739269675"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>10</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>0,5</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>,</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>10</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> (Redondee a <m:math><m:mn>4</m:mn></m:math> decimales)</para>
+<table id="fs-id1169739270127" class="unnumbered" summary="This table has seven rows and two columns. The first row is a header row and it labels each column. The first column header is x, and the second column header is Slope mPQ. Under the first column are the values −0.1, −0.01, −0.001, −0.0001, −0.00001, and −0.000001. Under the second column are the labels (i), (ii), (iii), (iv), (v), and (vi).">
+<tgroup cols="2">
+<colspec colnum="1" colname="col1"/>
+<colspec colnum="2" colname="col2"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry valign="top" align="left">Pendiente <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mi>P</m:mi><m:mi>Q</m:mi></m:mrow></m:msub></m:mrow></m:math></entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>-0,1</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">(i)</entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>-0,01</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">(ii)</entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>-0,001</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">(iii)</entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>-0,0001</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">(iv)</entry>
+</row>
+<row>
+<entry valign="top" align="left"><m:math><m:mrow><m:mn>-0,00001</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">(v)</entry>
+</row>
+<row>
+<entry valign="top" align="left">-0,000001</entry>
+<entry valign="top" align="left">(vi)</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</problem>
+<solution id="fs-id1169739305300">
+<para id="fs-id1169739305302">a. <m:math><m:mrow><m:mtext>(i)</m:mtext><m:mspace width="0.2em"/><m:mn>4,8771</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(ii)</m:mtext><m:mspace width="0.2em"/><m:mn>4,9875</m:mn><m:mspace width="0.2em"/><m:mtext>(iii)</m:mtext><m:mspace width="0.2em"/><m:mn>4,9988</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(iv)</m:mtext><m:mspace width="0.2em"/><m:mn>4,9999</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(v)</m:mtext><m:mspace width="0.2em"/><m:mn>4,9999</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(vi)</m:mtext><m:mspace width="0.2em"/><m:mn>4,9999</m:mn></m:mrow></m:math> b. <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math> c. <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>10</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169736618156">
+<problem id="fs-id1169736618158">
+<para id="fs-id1169736618160"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+<table id="fs-id1169739242468" class="unnumbered" summary="This table has seven rows and two columns. The first row is a header row and it labels each column. The first column header is x, and the second column header is Slope mPQ. Under the first column are the values 3.1, 3.14, 3.141, 3.1415, 3.14159, and 3.141592. Under the second column are the labels (i), (ii), (iii), (iv), (v), and (vi).">
+<tgroup cols="2">
+<colspec colnum="1" colname="col1"/>
+<colspec colnum="2" colname="col2"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry valign="top" align="left">Pendiente <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mi>P</m:mi><m:mi>Q</m:mi></m:mrow></m:msub></m:mrow></m:math></entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry valign="top" align="left">3,1</entry>
+<entry valign="top" align="left">(i)</entry>
+</row>
+<row>
+<entry valign="top" align="left">3,14</entry>
+<entry valign="top" align="left">(ii)</entry>
+</row>
+<row>
+<entry valign="top" align="left">3,141</entry>
+<entry valign="top" align="left">(iii)</entry>
+</row>
+<row>
+<entry valign="top" align="left">3,1415</entry>
+<entry valign="top" align="left">(iv)</entry>
+</row>
+<row>
+<entry valign="top" align="left">3,14159</entry>
+<entry valign="top" align="left">(v)</entry>
+</row>
+<row>
+<entry valign="top" align="left">3,141592</entry>
+<entry valign="top" align="left">(vi)</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</problem>
+</exercise>
+<para id="fs-id1169736614236"><emphasis effect="bold">[T]</emphasis> En las siguientes funciones de posición <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> un objeto se mueve a lo largo de una línea recta, donde <m:math><m:mi>t</m:mi></m:math> está en segundos y <m:math><m:mi>s</m:mi></m:math> está en metros. Halle</para>
+<list id="fs-id1169736614271" list-type="enumerated" number-style="lower-alpha">
+<item>la expresión simplificada para la velocidad promedio de <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> a <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mi>h</m:mi><m:mo>;</m:mo></m:mrow></m:math></item>
+<item>la velocidad promedio entre <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mi>h</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:mtext>(i)</m:mtext><m:mspace width="0.2em"/><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>0,1</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(ii)</m:mtext><m:mspace width="0.2em"/><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>0,01</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(iii)</m:mtext><m:mspace width="0.2em"/><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>0,001</m:mn><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mtext>(iv)</m:mtext><m:mspace width="0.2em"/><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>0,0001</m:mn><m:mo>;</m:mo></m:mrow></m:math> y</item>
+<item>utilice la respuesta de a. para estimar la velocidad instantánea en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> segundos.</item>
+</list>
+<exercise id="fs-id1169736616568">
+<problem id="fs-id1169736616570">
+<para id="fs-id1169736616572"><m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169736613848">
+<para id="fs-id1169736613850">a. <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:mtext>(i)</m:mtext><m:mspace width="0.2em"/><m:mn>0.</m:mn><m:mover><m:mn>3</m:mn><m:mo>–</m:mo></m:mover></m:mrow></m:math> m/s, <m:math><m:mrow><m:mtext>(ii)</m:mtext><m:mspace width="0.2em"/><m:mn>0.</m:mn><m:mover><m:mn>3</m:mn><m:mo>–</m:mo></m:mover></m:mrow></m:math> m/s, <m:math><m:mrow><m:mtext>(iii)</m:mtext><m:mspace width="0.2em"/><m:mn>0.</m:mn><m:mover><m:mn>3</m:mn><m:mo>–</m:mo></m:mover></m:mrow></m:math> m/s, <m:math><m:mrow><m:mtext>(iv)</m:mtext><m:mspace width="0.2em"/><m:mn>0.</m:mn><m:mover><m:mn>3</m:mn><m:mo>–</m:mo></m:mover></m:mrow></m:math> m/s; c <m:math><m:mrow><m:mn>0.</m:mn><m:mover><m:mn>3</m:mn><m:mo>–</m:mo></m:mover><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> m/s</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169736613948">
+<problem id="fs-id1169736613950">
+<para id="fs-id1169736613952"><m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>2</m:mn><m:mi>t</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169736617661">
+<problem id="fs-id1169736617663">
+<para id="fs-id1169736617665"><m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169736617694">
+<para id="fs-id1169736617696">a. <m:math><m:mrow><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>h</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>6</m:mn><m:mi>h</m:mi><m:mo>+</m:mo><m:mn>12</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:mtext>(i)</m:mtext><m:mspace width="0.2em"/><m:mn>25,22</m:mn></m:mrow></m:math> m/s, <m:math><m:mrow><m:mtext>(ii)</m:mtext><m:mspace width="0.2em"/><m:mn>24,12</m:mn></m:mrow></m:math> m/s, <m:math><m:mrow><m:mtext>(iii)</m:mtext><m:mspace width="0.2em"/><m:mn>24,01</m:mn></m:mrow></m:math> m/s, <m:math><m:mrow><m:mtext>(iv)</m:mtext><m:mspace width="0.2em"/><m:mn>24</m:mn></m:mrow></m:math> m/s; c <m:math><m:mrow><m:mn>24</m:mn></m:mrow></m:math> m/s</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739252858">
+<problem id="fs-id1169739252861">
+<para id="fs-id1169739252863"><m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>16</m:mn></m:mrow><m:mrow><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>−</m:mo><m:mfrac><m:mn>4</m:mn><m:mi>t</m:mi></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169739190079">
+<problem id="fs-id1169739190081">
+<para id="fs-id1169739190083">Utilice el siguiente gráfico para evaluar a <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y b. <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>6</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<media id="fs-id1169739190131" alt="Este gráfico muestra dos segmentos de línea conectados: uno que va de (1, 0) a (4, 6) y otro que va de (4, 6) a (8, 8).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_201.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1169739300014">
+<para id="fs-id1169739300016">a. <m:math><m:mrow><m:mn>1,25</m:mn><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:mn>0,5</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739300033">
+<problem id="fs-id1169739300035">
+<para id="fs-id1169739300037">Utilice el siguiente gráfico para evaluar a <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y b. <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1,5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<media id="fs-id1169739300078" alt="Este gráfico muestra dos segmentos de línea conectados: uno que va de (-4, 3) a (1, 3) y otro que va de (1, 3) a (1,5, 4).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_202.jpg"/>
+</media>
+</problem>
+</exercise>
+<para id="fs-id1169739300107">En los siguientes ejercicios, utilice la definición de límite de la derivada para demostrar que la derivada no existe en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> para cada una de las funciones dadas.</para>
+<exercise id="fs-id1169739300121">
+<problem id="fs-id1169739300123">
+<para id="fs-id1169739300125"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739251992">
+<para id="fs-id1169739251994"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup><m:mo>−</m:mo><m:mn>0</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>0</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mi>∞</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739252080">
+<problem id="fs-id1169739252082">
+<para id="fs-id1169739252084"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169739347174">
+<problem id="fs-id1169739347176">
+<para id="fs-id1169739347178"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mrow><m:mtable><m:mtr><m:mtd><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:mrow><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739274906">
+<para id="fs-id1169739274908"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>≠</m:mo><m:mn>1</m:mn><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739274991">
+<problem id="fs-id1169739348377">
+<para id="fs-id1169739348380"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169739348491">
+<problem id="fs-id1169739348493">
+<para id="fs-id1169739348496"><emphasis effect="bold">[T]</emphasis> La posición en pies de un auto de carreras a lo largo de una pista recta después de <m:math><m:mi>t</m:mi></m:math> segundos se modela mediante la función <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>8</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>16</m:mn></m:mrow></m:mfrac><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1169739340430" list-type="enumerated" number-style="lower-alpha">
+<item>Calcule la velocidad promedio del vehículo en los siguientes intervalos a cuatro decimales <list id="fs-id1169739340439" list-type="enumerated" number-style="lower-roman">
+<item>[4, 4,1]</item>
+<item>[4, 4,01]</item>
+<item>[4, 4,001]</item>
+<item>[4, 4,0001]</item>
+</list></item>
+<item>Utilice a. para sacar una conclusión sobre la velocidad instantánea del vehículo en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math> segundos.</item>
+</list>
+</problem>
+<solution id="fs-id1169739340474">
+<para id="fs-id1169739340476">a. <m:math><m:mrow><m:mtext>(i)</m:mtext><m:mspace width="0.2em"/><m:mn>61,7244</m:mn></m:mrow></m:math> pies/s, <m:math><m:mrow><m:mtext>(ii)</m:mtext><m:mspace width="0.2em"/><m:mn>61,0725</m:mn></m:mrow></m:math> pies/s <m:math><m:mrow><m:mtext>(iii)</m:mtext><m:mspace width="0.2em"/><m:mn>61,0072</m:mn></m:mrow></m:math> pies/s <m:math><m:mrow><m:mtext>(iv)</m:mtext><m:mspace width="0.2em"/><m:mn>61,0007</m:mn></m:mrow></m:math> ft/s b. En <m:math><m:mn>4</m:mn></m:math> segundos el auto de carreras se desplaza a una tasa/velocidad de <m:math><m:mrow><m:mn>61</m:mn></m:mrow></m:math> pies/s.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739325674">
+<problem id="fs-id1169739325676">
+<para id="fs-id1169739325678"><emphasis effect="bold">[T]</emphasis> La distancia en pies que una pelota rueda por una pendiente se modela mediante la función <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>14</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> donde <emphasis effect="italics">t</emphasis> son los segundos después de que la pelota empieza a rodar.</para>
+<list id="fs-id1169739325715" list-type="enumerated" number-style="lower-alpha">
+<item>Calcule la velocidad promedio de la pelota en los siguientes intervalos <list id="fs-id1169739325724" list-type="enumerated" number-style="lower-roman">
+<item>[5, 5,1]</item>
+<item>[5, 5,01]</item>
+<item>[5, 5,001]</item>
+<item>[5, 5,0001]</item>
+</list></item>
+<item>Utilice las respuestas de a. para sacar una conclusión sobre la velocidad instantánea de la pelota en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math> segundos.</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1169739270336">
+<problem id="fs-id1169739270339">
+<para id="fs-id1169739270341">Dos vehículos viajan uno al lado del otro por una carretera recta. Sus funciones de posición, que se muestran en el siguiente gráfico, vienen dadas por <m:math><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>s</m:mi></m:math> se mide en pies y <m:math><m:mi>t</m:mi></m:math> se mide en segundos.</para>
+<media id="fs-id1169739270393" alt="Se grafican dos funciones s = g(t) y s = f(t). La primera función s = g(t) comienza en (0, 0) y se arquea hacia arriba, pasando aproximadamente por (2, 1) hasta (4, 4). La segunda función s = f(t) es una recta que pasa por (0, 0) y (4, 4).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_203.jpg"/>
+</media>
+<list id="fs-id1169739270406" list-type="enumerated" number-style="lower-alpha">
+<item>¿Qué vehículo viajó más lejos en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> segundos?</item>
+<item>¿Cuál es la velocidad aproximada de cada vehículo en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math> segundos?</item>
+<item>¿Cuál vehículo va más rápido a los <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math> segundos?</item>
+<item>¿Qué hay de cierto en las posiciones de los vehículos en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math> segundos?</item>
+</list>
+</problem>
+<solution id="fs-id1169739333857">
+<para id="fs-id1169739333859">a. El vehículo representado por <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> porque recorrió <m:math><m:mn>2</m:mn></m:math> pies, mientras que <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> recorrió <m:math><m:mn>1</m:mn></m:math> pie. b. La velocidad de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es constante en <m:math><m:mn>1</m:mn></m:math> ft/s, mientras que la velocidad de <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es, aproximadamente, <m:math><m:mn>2</m:mn></m:math> ft/s. c. El vehículo representado por <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> a una velocidad de aproximadamente <m:math><m:mn>4</m:mn></m:math> ft/s. d. Ambos han recorrido <m:math><m:mn>4</m:mn></m:math> pies en <m:math><m:mn>4</m:mn></m:math> segundos.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739333962">
+<problem id="fs-id1169739333964">
+<para id="fs-id1169739333967"><emphasis effect="bold">[T]</emphasis> El costo total <m:math><m:mrow><m:mi>C</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> en cientos de dólares, para producir <m:math><m:mi>x</m:mi></m:math> tarros de mayonesa viene dado por <m:math><m:mrow><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0,000003</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>300</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1169738894944" list-type="enumerated" number-style="lower-alpha">
+<item>Calcule el costo promedio por tarro en los siguientes intervalos: <list id="fs-id1169738894953" list-type="enumerated" number-style="lower-roman">
+<item>[100, 100,1]</item>
+<item>[100, 100,01]</item>
+<item>[100, 100,001]</item>
+<item>[100, 100,0001]</item>
+</list></item>
+<item>Utilice las respuestas de a. para estimar el costo promedio de producción de <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> tarros de mayonesa.</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1169736615092">
+<problem id="fs-id1169736615094">
+<para id="fs-id1169736615096"><emphasis effect="bold">[T]</emphasis> Para la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>−</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>11</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>12</m:mn><m:mo>,</m:mo></m:mrow></m:math> haga lo siguiente.</para>
+<list id="fs-id1169736615146" list-type="enumerated" number-style="lower-alpha">
+<item>Utilice una calculadora gráfica para graficar <emphasis effect="italics">f</emphasis> en una ventana de visualización adecuada.</item>
+<item>Use la función ZOOM de la calculadora para aproximar los dos valores de <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> para lo cual <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1169739351703">
+<para id="fs-id1169739351705">a<newline/>
+<media id="fs-id1169739351713" alt="La función comienza en el tercer cuadrante, pasa por el eje de la x en x = -3, aumenta hasta un máximo alrededor de y = 20, disminuye y pasa por el eje de la x en x = 1, sigue disminuyendo hasta un mínimo alrededor de y = -13, y luego aumenta por el eje de la x en x = 4, tras lo cual sigue aumentando.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_204.jpg"/>
+</media><newline/> b. <m:math><m:mrow><m:mi>a</m:mi><m:mo>≈</m:mo><m:mo>−</m:mo><m:mn>1,361</m:mn><m:mo>,</m:mo><m:mn>2,694</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739351743">
+<problem id="fs-id1169739351745">
+<para id="fs-id1169739351747"><emphasis effect="bold">[T]</emphasis> Para la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> haga lo siguiente.</para>
+<list id="fs-id1169739351786" list-type="enumerated" number-style="lower-alpha">
+<item>Utilice una calculadora gráfica para graficar <m:math><m:mi>f</m:mi></m:math> en una ventana de visualización adecuada.</item>
+<item>Utilice la función ZOOM de la calculadora para aproximar los valores de <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> para lo cual <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1169739111313">
+<problem id="fs-id1169739111315">
+<para id="fs-id1169739111317">Supongamos que <m:math><m:mrow><m:mi>N</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> calcula el número de galones de gasolina utilizados por un vehículo que recorre <m:math><m:mi>x</m:mi></m:math> millas. Supongamos que el vehículo alcanza <m:math><m:mrow><m:mn>30</m:mn></m:mrow></m:math> mpg (millas por galón)</para>
+<list id="fs-id1169739111343" list-type="enumerated" number-style="lower-alpha">
+<item>Halle una expresión matemática para <m:math><m:mrow><m:mi>N</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>¿Qué es <m:math><m:mrow><m:mi>N</m:mi><m:mo stretchy="false">(</m:mo><m:mn>100</m:mn><m:mtext>)?</m:mtext></m:mrow></m:math> Explique el significado físico.</item>
+<item>¿Qué es <m:math><m:mrow><m:msup><m:mi>N</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>100</m:mn><m:mo stretchy="false">)</m:mo><m:mo>?</m:mo></m:mrow></m:math> Explique el significado físico.</item>
+</list>
+</problem>
+<solution id="fs-id1169739111411">
+<para id="fs-id1169739188126">a. <m:math><m:mrow><m:mi>N</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mi>x</m:mi><m:mrow><m:mn>30</m:mn></m:mrow></m:mfrac></m:mrow></m:math> b. <m:math><m:mrow><m:mo>∼</m:mo><m:mn>3,3</m:mn></m:mrow></m:math> galones. Cuando el vehículo recorre <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> millas, ha consumido <m:math><m:mrow><m:mn>3,3</m:mn></m:mrow></m:math> galones de gasolina. c. <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>30</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> La tasa de consumo de gasolina en galones por milla que tiene el vehículo después de haber recorrido <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> millas.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739188189">
+<problem id="fs-id1169739188191">
+<para id="fs-id1169739188193"><emphasis effect="bold">[T]</emphasis> Para la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>−</m:mo><m:mn>5</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>,</m:mo></m:mrow></m:math> haga lo siguiente.</para>
+<list id="fs-id1169739188237" list-type="enumerated" number-style="lower-alpha">
+<item>Utilice una calculadora gráfica para graficar <m:math><m:mi>f</m:mi></m:math> en una ventana de visualización adecuada.</item>
+<item>Utilice <m:math><m:mrow><m:mtext>nDeriv</m:mtext></m:mrow></m:math> función, que halla numéricamente la derivada, en una calculadora gráfica para estimar <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>−0,5</m:mn><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>1,7</m:mn><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>2,718</m:mn><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1169736589312">
+<problem id="fs-id1169736589315">
+<para id="fs-id1169736589317"><emphasis effect="bold">[T]</emphasis> Para la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> haga lo siguiente.</para>
+<list id="fs-id1169736610235" list-type="enumerated" number-style="lower-alpha">
+<item>Utilice una calculadora gráfica para graficar <m:math><m:mi>f</m:mi></m:math> en una ventana de visualización adecuada.</item>
+<item>Utilice <m:math><m:mrow><m:mtext>nDeriv</m:mtext></m:mrow></m:math> función en una calculadora gráfica para hallar <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>-2</m:mn><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1169736610335">
+<para id="fs-id1169736610337">a<newline/>
+<media id="fs-id1169736610341" alt="La función comienza en el segundo cuadrante y disminuye suavemente, toca el origen y luego aumenta suavemente.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_207.jpg"/>
+</media><newline/> b. <m:math><m:mrow><m:mn>-0,028</m:mn><m:mo>,</m:mo><m:mn>-0,16</m:mn><m:mo>,</m:mo><m:mn>0,16</m:mn><m:mo>,</m:mo><m:mn>0,028</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+</section>
+  </content>
+<glossary>
+<definition id="fs-id1169739111084">
+<term>derivada</term>
+<meaning id="fs-id1169739111089">la pendiente de la línea tangente a una función en un punto, calculada al tomar el límite del cociente de diferencias</meaning>
+</definition>
+<definition id="fs-id1169739111095">
+<term>cociente de diferencias</term>
+<meaning id="fs-id1169739111100">de una función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <m:math><m:mi>a</m:mi></m:math> viene dada por<newline/>
+<equation id="fs-id1169739111122" class="unnumbered"><label/><m:math><m:mrow><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mi>h</m:mi></m:mfrac><m:mspace width="0.2em"/><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></equation></meaning>
+</definition>
+<definition id="fs-id1169739111206">
+<term>diferenciación</term>
+<meaning id="fs-id1169739111211">el proceso de tomar una derivada</meaning>
+</definition>
+<definition id="fs-id1169739111216">
+<term>tasa de cambio instantánea</term>
+<meaning id="fs-id1169736619746">la tasa de cambio de una función en cualquier punto a lo largo de dicha función <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> también llamada <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> o la derivada de la función en <m:math><m:mi>a</m:mi></m:math></meaning>
+</definition>
+</glossary>
+</document>

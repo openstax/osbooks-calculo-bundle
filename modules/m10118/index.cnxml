@@ -1,0 +1,22 @@
+<document xmlns="http://cnx.rice.edu/cnxml" class="introduction">
+
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m10118</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:abstract/>
+  <md:uuid>3508bda4-2380-4f62-9f55-cbcd7f433774</md:uuid>
+</metadata>
+
+<content>
+<figure id="CNX_Calc_Figure_16_00_001" class="splash">
+<media id="fs-id1167793563677" alt="Fotografía de un huracán donde se muestra la rotación alrededor de su ojo.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_16_00_001.jpg"/>
+</media>
+<caption>Los huracanes se forman a partir de vientos giratorios impulsados por temperaturas cálidas sobre el océano. Los meteorólogos pronostican el movimiento de los huracanes a través del estudio de los campos vectoriales de rotación de su velocidad de viento. Se muestra el ciclón Catarina en el Océano Atlántico Sur en 2004, visto desde la Estación Espacial Internacional. (Créditos: modificación del trabajo de la NASA).</caption>
+</figure>
+<para id="fs-id1167793392282">Los huracanes son enormes tormentas que pueden ocasionar enormes pérdidas humanas y daños y perjuicios, especialmente cuando llegan a tierra. Predecir dónde y cuándo atacarán y la fuerza de los vientos es de gran importancia para preparar la protección o la evacuación. Los científicos se basan en estudios de los campos vectoriales rotacionales para sus previsiones (vea <link document="m53989" target-id="fs-id1167793958705"/>).</para>
+<para id="fs-id1167793957082">En este capítulo, aprenderemos a modelar nuevos tipos de integrales sobre los campos magnéticos, gravitacionales o de velocidad. También aprendemos a calcular el trabajo realizado sobre una partícula cargada que viaja a través de un campo magnético, el trabajo realizado sobre una partícula con masa que viaja a través de un campo gravitacional y el volumen por unidad de tiempo del agua que fluye a través de una red arrojada en un río.</para>
+<para id="fs-id1167793368938">Todas estas aplicaciones se basan en el concepto de campo vectorial, que exploramos en este capítulo. Los campos vectoriales tienen muchas aplicaciones, ya que pueden utilizarse para modelar campos reales, como los campos electromagnéticos o gravitatorios. La comprensión profunda de la física o la ingeniería es imposible si no se comprenden los campos vectoriales. Además, los campos vectoriales tienen propiedades matemáticas que merecen estudiarse por sí mismas. En particular, los campos vectoriales pueden utilizarse para desarrollar varias versiones de dimensiones superiores del teorema fundamental del cálculo.</para>
+ </content>
+</document>

@@ -1,0 +1,726 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Derivatives as Rates of Change</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m10016</md:content-id>
+  <md:title>Derivatives as Rates of Change</md:title>
+  <md:abstract><list>
+<item>Determinar el nuevo valor de una cantidad a partir del valor anterior y la cantidad de cambio.</item>
+<item>Calcular la tasa de cambio promedio y explicar en qué se diferencia de la tasa de cambio instantánea.</item>
+<item>Aplicar las tasas de cambio al desplazamiento, la velocidad y la aceleración de un objeto que se mueve a lo largo de una recta.</item>
+<item>Predecir la población futura a partir del valor actual y la tasa de crecimiento demográfico.</item>
+<item>Utilizar las derivadas para calcular el costo marginal y los ingresos en una situación comercial.</item>
+</list></md:abstract>
+  <md:uuid>385926fa-4297-48d7-99c1-92c2ac0cc286</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1169739111246">En esta sección veremos algunas aplicaciones de la derivada y nos centraremos en su interpretación como la tasa de cambio de una función. Estas aplicaciones comprenden la <term>aceleración</term> y la velocidad en física, las <term>tasas de crecimiento demográfico</term> en biología y las funciones marginales en economía.</para>
+<section id="fs-id1169739031094">
+<title>Fórmula de la cantidad de cambio</title>
+<para id="fs-id1169739001719">Una de las aplicaciones de las derivadas es estimar la incógnita de una función en un punto mediante el empleo de un valor conocido de la función en algún punto dado junto con su tasa de cambio en el punto dado. Si <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> es una función definida en un intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> entonces la <term>cantidad de cambio</term> de <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> sobre el intervalo es el cambio en los valores <m:math><m:mi>y</m:mi></m:math> de la función en ese intervalo y viene dada por</para>
+<equation id="fs-id1169738947436" class="unnumbered"><label/><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169739019267">La <term>tasa de cambio</term> de la función <m:math><m:mi>f</m:mi></m:math> en ese mismo intervalo es la relación entre la cantidad de cambio en ese intervalo y el cambio correspondiente en los valores <m:math><m:mi>x</m:mi></m:math> valores. Viene dado por</para>
+<equation id="fs-id1169739005180" class="unnumbered"><label/><m:math><m:mrow><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mi>h</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169738865347">Como ya sabemos, la tasa de cambio instantánea de <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en <m:math><m:mi>a</m:mi></m:math> es su derivada</para>
+<equation id="fs-id1169738975674" class="unnumbered"><label/><m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mi>h</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169739038407">Para valores suficientemente pequeños de <m:math><m:mrow><m:mi>h</m:mi><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>h</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Podemos entonces resolver para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> a fin de obtener la fórmula de la cantidad de cambio:</para>
+<equation id="fs-id1169739034265"><m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi><m:mo stretchy="false">)</m:mo><m:mo>≈</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo><m:mi>h</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169738850663">Podemos utilizar esta fórmula si conocemos solamente <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y deseamos estimar el valor de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Por ejemplo, podemos utilizar la población actual de una ciudad y su tasa de crecimiento para estimar su número en un futuro próximo. Como podemos ver en la <link target-id="CNX_Calc_Figure_03_04_001"/>, estamos aproximando <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> por las coordenadas <m:math><m:mi>y</m:mi></m:math> en <m:math><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow></m:math> en la línea tangente a <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Observe que la exactitud de esta estimación depende del valor de <m:math><m:mi>h</m:mi></m:math>, así como del valor de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_03_04_001"><media id="fs-id1169739351621" alt="En el plano de coordenadas cartesianas con a y a + h marcados en el eje de la x, se grafica la función f. Pasa por (a, f(a)) y (a + h, f(a + h)). Se traza una recta que pasa por (a, f(a)) y cuya pendiente es la derivada en ese punto. Esta recta pasa por (a + h, f(a) + f'(a)h). Hay un segmento lineal que une (a + h, f(a + h)) y (a + h, f(a) + f'(a)h), y se marca que este es el error al usar f(a) + f'(a)h para estimar f(a + h).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_04_001.jpg"/>
+</media>
+
+<caption>El nuevo valor de una cantidad modificada es igual al valor original más la tasa de cambio multiplicada por el intervalo de cambio: <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mi>h.</m:mi></m:mrow></m:math></caption></figure><note id="fs-id1169739182517" class="media-2">
+<para id="fs-id1169739172502">He aquí una interesante <link url="http://www.openstax.org/l/20_chainrule">demostración</link> de la tasa de cambio.</para>
+</note>
+<example id="fs-id1169738907373">
+<exercise id="fs-id1169739169344">
+<problem id="fs-id1169739304009">
+<title>Estimación del valor de una función</title>
+<para id="fs-id1169738865923">Si <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>,</m:mo></m:mrow></m:math> estime <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mn>3,2</m:mn><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739182869">
+<para id="fs-id1169738857080">Comience por calcular <m:math><m:mrow><m:mi>h</m:mi><m:mo>.</m:mo></m:mrow></m:math> Tenemos <m:math><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>3,2</m:mn><m:mo>−</m:mo><m:mn>3</m:mn><m:mo>=</m:mo><m:mn>0,2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Así,</para>
+<equation id="fs-id1169739033980" class="unnumbered"><label/><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3,2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>+</m:mo><m:mn>0,2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0,2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mn>0,2</m:mn><m:mrow><m:mo>(</m:mo><m:mn>5</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1169739230273" class="checkpoint">
+<exercise id="fs-id1169738972483">
+<problem id="fs-id1169739001128">
+<para id="fs-id1169738905166">Dado <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>10</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-5</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>10</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>,</m:mo></m:mrow></m:math> estime <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>10,1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739187355">
+<para id="fs-id1169739097606"><m:math><m:mrow><m:mn>-4,4</m:mn></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1169739093197" type="hint">
+<title>Sugerencia</title>
+<para id="fs-id1169738908581">Utilice el mismo proceso que en el ejemplo anterior.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1169738889827">
+<title>Movimiento a lo largo de una línea</title>
+<para id="fs-id1169738881072">Otro uso de la derivada es el de analizar el movimiento a lo largo de una línea. Describimos la velocidad como la tasa de cambio de posición. Si tomamos la derivada de la velocidad, podemos calcular la aceleración o la tasa de cambio de la velocidad. También es importante presentar la idea de <term>rapidez</term>, que es la magnitud de la velocidad. Así, podemos enunciar las siguientes definiciones matemáticas.</para>
+<note id="fs-id1169738999142">
+<title>Definición</title>
+<para id="fs-id1169738947283">Supongamos que <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es una función que da la posición de un objeto en el tiempo <m:math><m:mrow><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169739195686">La velocidad del objeto en el tiempo <m:math><m:mi>t</m:mi></m:math> viene dada por <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>s</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169739105154">La rapidez del objeto en el momento <m:math><m:mi>t</m:mi></m:math> viene dada por <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169739016931">La aceleración del objeto en <m:math><m:mi>t</m:mi></m:math> viene dada por <m:math><m:mrow><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>v</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>s</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</note>
+<example id="fs-id1169738906211">
+<exercise id="fs-id1169739223216">
+<problem id="fs-id1169739297937">
+<title>Comparación de la velocidad instantánea y de la velocidad promedio</title>
+<para id="fs-id1169738942237">Se deja caer una pelota desde una altura de 64 pies. Su altura sobre el suelo (en pies) <m:math><m:mi>t</m:mi></m:math> segundos después viene dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−16</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>64</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<media id="fs-id1169738942090" alt="En el plano de coordenadas cartesianas se representa gráficamente la función s(t) = -16t2 + 64. Comienza en (0, 64) y disminuye hasta (0, 2).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_04_002.jpg"/>
+</media>
+<list id="fs-id1169738940918" list-type="enumerated" number-style="lower-alpha">
+<item>¿Cuál es la velocidad instantánea de la pelota cuando toca el suelo?</item>
+<item>¿Cuál es la velocidad promedio durante su caída?</item>
+</list>
+</problem>
+<solution id="fs-id1169739023791">
+<para id="fs-id1169739233455">Lo primero que hay que hacer es determinar el tiempo que tarda la pelota en llegar al suelo. Para ello, defina <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Resolución de problemas <m:math><m:mrow><m:mn>−16</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>64</m:mn><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> obtenemos <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> por lo que la pelota tarda 2 segundos en llegar al suelo.</para>
+<list id="fs-id1169739220828" list-type="enumerated" number-style="lower-alpha">
+<item>La velocidad instantánea de la pelota al golpear el suelo es <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>s</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−32</m:mn><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:math> obtenemos <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-64</m:mn><m:mspace width="0.2em"/><m:mtext>pies/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>La velocidad promedio de la pelota durante su caída es<newline/>
+<equation id="fs-id1169739018761" class="unnumbered"><label/><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mi>a</m:mi><m:mi>v</m:mi><m:mi>e</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>2</m:mn><m:mo>−</m:mo><m:mn>0</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>0</m:mn><m:mo>−</m:mo><m:mn>64</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>−32</m:mn><m:mspace width="0.2em"/><m:mtext>pies/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+</list>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1169738904404">
+<exercise id="fs-id1169739038358">
+<problem id="fs-id1169739009978">
+<title>Interpretación de la relación entre <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></title>
+<para id="fs-id1169738941480">Una partícula se mueve a lo largo de un eje de coordenadas en la dirección positiva hacia la derecha. Su posición en el tiempo <m:math><m:mi>t</m:mi></m:math> viene dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Encuentre <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y utilice estos valores para responder las siguientes preguntas.</para>
+<list id="fs-id1169739274655" list-type="enumerated" number-style="lower-alpha">
+<item>La partícula se mueve de izquierda a derecha o de derecha a izquierda en el tiempo <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>?</m:mo></m:mrow></m:math></item>
+<item>¿La partícula acelera o desacelera en el tiempo <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>?</m:mo></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1169738938122">
+<para id="fs-id1169738823468">Comience por calcular <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169738969278">
+<m:math>
+
+<m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>s</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn>
+
+</m:math> y <m:math><m:mrow><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>v</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>s</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169739096229">Al evaluar estas funciones en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> obtenemos <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-1</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1169738879103" list-type="enumerated" number-style="lower-alpha">
+<item>Porque <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> la partícula se desplaza de derecha a izquierda.</item>
+<item>Porque <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> la velocidad y la aceleración actúan en direcciones opuestas. En otras palabras, la partícula acelera en la dirección opuesta a la que viaja, por lo que <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> disminuye. La partícula se ralentiza.</item>
+</list>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1169738889577">
+<exercise id="fs-id1169738994257">
+<problem id="fs-id1169738893707">
+<title>Posición y velocidad</title>
+<para id="fs-id1169739231121">La posición de una partícula que se mueve a lo largo de un eje de coordenadas viene dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>−</m:mo><m:mn>9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>24</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1169738912848" list-type="enumerated" number-style="lower-alpha">
+<item>Halle <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>¿En qué tiempo(s) la partícula está en reposo?</item>
+<item>¿En cuáles intervalos se mueve la partícula de izquierda a derecha? ¿De derecha a izquierda?</item>
+<item>Use la información obtenida para trazar la trayectoria de la partícula a lo largo de un eje de coordenadas.</item>
+</list>
+</problem>
+<solution id="fs-id1169739099324">
+<list id="fs-id1169739340338" list-type="enumerated" number-style="lower-alpha">
+<item>La velocidad es la derivada de la función de posición:<newline/>
+<equation id="fs-id1169739198570" class="unnumbered"><label/><m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>s</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>18</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>24</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+<item>La partícula está en reposo cuando <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> así que establezca <m:math><m:mrow><m:mn>3</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>18</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>24</m:mn><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Al factorizar el lado izquierdo de la ecuación se obtiene <m:math><m:mrow><m:mn>3</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Al resolver, concluimos que la partícula está en reposo en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>La partícula se mueve de izquierda a derecha cuando <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> y de derecha a izquierda cuando <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> La <link target-id="CNX_Calc_Figure_03_04_003"/> ofrece el análisis del signo de <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para <m:math><m:mrow><m:mi>t</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> pero no representa el eje a lo largo del cual se mueve la partícula.<newline/>
+<figure id="CNX_Calc_Figure_03_04_003">
+<media id="fs-id1169739270029" alt="Una línea numérica marcada con 0, 2 y 4. Entre el 0 y el 2, hay un signo más. Por encima de 2, hay un 0. Entre 2 y 4 hay un signo negativo. Por encima de 4 hay un 0. Después de 4 hay un signo más y v(t).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_04_003.jpg"/>
+</media>
+<caption>El signo de v(t) determina la dirección de la partícula.</caption>
+</figure><newline/> Dado que <m:math><m:mrow><m:mn>3</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>18</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>24</m:mn><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> en <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∪</m:mo></m:mstyle><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> la partícula se mueve de izquierda a derecha en estos intervalos.<newline/> Dado que <m:math><m:mrow><m:mn>3</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>18</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>24</m:mn><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> la partícula se mueve de derecha a izquierda en este intervalo.</item>
+<item>Antes de dibujar el gráfico de la partícula, tenemos que conocer su posición en el momento en que comienza a moverse <m:math><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y en los momentos en que cambia de dirección <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Tenemos <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>24</m:mn><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mn>4</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>20</m:mn><m:mo>.</m:mo></m:mrow></m:math> Esto significa que la partícula comienza en el eje de coordenadas en 4 y cambia de dirección en 0 y 20 en el eje de coordenadas. La trayectoria de la partícula se muestra en un eje de coordenadas en la <link target-id="CNX_Calc_Figure_03_04_004"/>.
+<figure id="CNX_Calc_Figure_03_04_004">
+<media id="fs-id1169739298860" alt="Se da una línea numérica y por encima de ella hay una línea serpenteante, comenzando en t = 0 por encima del 4 en la línea numérica. Entonces la línea en t = 2 está por encima de 24 en la línea numérica. A continuación, la línea disminuye en t = 4 hasta situarse por encima de 20 en la línea numérica, momento en el que la línea invierte de nuevo la dirección y aumenta indefinidamente.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_04_005.jpg"/>
+</media>
+<caption>La trayectoria de la partícula se determina al analizar v(t).</caption>
+</figure></item>
+</list>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1169736660682" class="checkpoint">
+<exercise id="fs-id1169738843352">
+<problem id="fs-id1169736657171">
+<para id="fs-id1169739343676">Una partícula se mueve a lo largo de un eje de coordenadas. Su posición en el tiempo <m:math><m:mi>t</m:mi></m:math> viene dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>5</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> ¿La partícula se mueve de derecha a izquierda o de izquierda a derecha en el momento <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>?</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739102324">
+<para id="fs-id1169739299934">de izquierda a derecha</para>
+</solution>
+<commentary id="fs-id1169738851673" type="hint">
+<title>Sugerencia</title>
+<para id="fs-id1169739236686">Encuentre <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y vea el signo.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1169739351610">
+<title>Cambio demográfico</title>
+<para id="fs-id1169736660717">Además de analizar la velocidad, la rapidez, la aceleración y la posición, utilizamos las derivadas para analizar varios tipos de poblaciones, incluso aquellas tan diversas como colonias de bacterias y ciudades. Podemos utilizar una población actual, junto con la tasa de crecimiento, para estimar su tamaño en el futuro. La tasa de crecimiento demográfico es la tasa de cambio demográfico; en consecuencia, se representa mediante la derivada del tamaño de la población.</para>
+<note id="fs-id1169738909068">
+<title>Definición</title>
+<para id="fs-id1169739274980">Si <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es el número de entidades presentes en una población, entonces la tasa de crecimiento demográfico de <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se define como <m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</note>
+<example id="fs-id1169739270775">
+<exercise id="fs-id1169739270777">
+<problem id="fs-id1169739299436">
+<title>Cálculo de la población</title>
+<para id="fs-id1169739300220">La población de una ciudad se triplica cada 5 años. Si su población actual es de 10.000 habitantes, ¿cuál será su población aproximada dentro de 2 años?</para>
+</problem>
+<solution id="fs-id1169739300222">
+<para id="fs-id1169739299610">Supongamos que <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es la población (en miles) <m:math><m:mi>t</m:mi></m:math> años a partir de este momento. Así, sabemos que <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math> y con base en la información, prevemos <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mn>5</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>30</m:mn><m:mo>.</m:mo></m:mrow></m:math> Ahora, calcule <m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> la tasa de crecimiento actual con</para>
+<equation id="fs-id1169736589175" class="unnumbered"><label/><m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mfrac><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mn>5</m:mn><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>5</m:mn><m:mo>−</m:mo><m:mn>0</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>30</m:mn><m:mo>−</m:mo><m:mn>10</m:mn></m:mrow><m:mn>5</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169739201103">Al aplicar la <link target-id="fs-id1169739034265"/> a <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> podemos estimar la población dentro de 2 años al escribir</para>
+<equation id="fs-id1169736662465" class="unnumbered"><label/><m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mn>10</m:mn><m:mo>+</m:mo><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mn>4</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>18</m:mn><m:mo>;</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169736662775">así, en 2 años la población será de 18.000 habitantes.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1169739202491" class="checkpoint">
+<exercise id="fs-id1169739202494">
+<problem id="fs-id1169736656694">
+<para id="fs-id1169736656696">Se sabe que la población actual de una colonia de mosquitos es de 3.000 individuos; es decir, <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3.000</m:mn><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>100</m:mn><m:mo>,</m:mo></m:mrow></m:math> calcular el tamaño de la población en 3 días, donde <m:math><m:mi>t</m:mi></m:math> se mide en días.</para>
+</problem>
+<solution id="fs-id1169739273299">
+<para id="fs-id1169739019878">3.300</para>
+</solution>
+<commentary id="fs-id1169739303121" type="hint">
+<title>Sugerencia</title>
+<para id="fs-id1169739188550">Utilice <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>3</m:mn><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1169739304237">
+<title>Cambios en los costos e ingresos</title>
+<para id="fs-id1169736616122">Aparte de analizar el movimiento a lo largo de una línea y el crecimiento demográfico, las derivadas sirven para analizar los cambios en los costos, los ingresos y las ganancias. El concepto de función marginal es habitual en los ámbitos de la empresa y de la economía, e implica el empleo de las derivadas. El costo marginal es la derivada de la función de costos. El ingreso marginal es la derivada de la función de ingresos. La ganancia marginal es la derivada de la función de ganancias, que se basa en la función de costos y la función de ingresos.</para>
+<note id="fs-id1169736618493">
+<title>Definición</title>
+<para id="fs-id1169736618496">Si <m:math><m:mrow><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es el costo de producción de <emphasis effect="italics">x</emphasis> artículos, entonces el <term>costo marginal</term> <m:math><m:mrow><m:mi>M</m:mi><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es <m:math><m:mrow><m:mi>M</m:mi><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>C</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169739343667">Si <m:math><m:mrow><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> son los ingresos obtenidos por la venta de <m:math><m:mi>x</m:mi></m:math> artículos, entonces el ingreso marginal <m:math><m:mrow><m:mi>M</m:mi><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es <m:math><m:mrow><m:mi>M</m:mi><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>R</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169739194208">Si <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es la ganancia obtenida por la venta de <emphasis effect="italics">x</emphasis> artículos, entonces la <term>ganancia marginal</term> <m:math><m:mrow><m:mi>M</m:mi><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> se define como <m:math><m:mrow><m:mi>M</m:mi><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>M</m:mi><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>M</m:mi><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>R</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:msup><m:mi>C</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</note>
+<para id="fs-id1169739299256">Podemos hacer una aproximación</para>
+<equation id="fs-id1165040641522" class="unnumbered"><label/><m:math><m:mrow><m:mi>M</m:mi><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>C</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>h</m:mi></m:mfrac></m:mrow></m:math></equation>
+<para id="fs-id1169739007166">al elegir un valor adecuado para <m:math><m:mi>h</m:mi><m:mo>.</m:mo></m:math> Ya que <emphasis effect="italics">x</emphasis> representa objetos, un valor razonable y pequeño para <m:math><m:mi>h</m:mi></m:math> es 1. Así, al sustituir <m:math><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> obtenemos la aproximación <m:math><m:mrow><m:mi>M</m:mi><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>C</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> En consecuencia, <m:math><m:mrow><m:msup><m:mi>C</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para un valor determinado de <m:math><m:mi>x</m:mi></m:math> puede considerarse como el cambio en el costo asociado a la producción de un artículo adicional. De manera similar, <m:math><m:mrow><m:mi>M</m:mi><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>R</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se aproxima a los ingresos obtenidos por la venta de un artículo adicional, y <m:math><m:mrow><m:mi>M</m:mi><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se aproxima la ganancia obtenida por la producción y venta de un artículo adicional.</para>
+<example id="fs-id1169739302508">
+<exercise id="fs-id1169739274268">
+<problem id="fs-id1169739274271">
+<title>Aplicación de los ingresos marginales</title>
+<para id="fs-id1169739274279">Supongamos que el número de raciones de barbacoa que se pueden vender, <m:math><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> estaría relacionado con el precio aplicado, <m:math><m:mrow><m:mi>p</m:mi><m:mo>,</m:mo></m:mrow></m:math> por la ecuación <m:math><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>9</m:mn><m:mo>−</m:mo><m:mn>0,03</m:mn><m:mi>x</m:mi><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>300</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169739305211">En este caso, el ingreso en dólares obtenidos por la venta de <m:math><m:mi>x</m:mi></m:math> raciones de barbacoa viene dado por</para>
+<equation id="fs-id1169739212801" class="unnumbered"><label/><m:math><m:mrow><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>9</m:mn><m:mo>−</m:mo><m:mn>0,03</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-0,03</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>9</m:mn><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>para</m:mtext><m:mspace width="0.2em"/><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>300</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169739194211">Utilice la función de ingresos marginales para estimar los ingresos obtenidos por la venta de la ración número 101 de barbacoa. Compárela con el ingreso real, obtenido por la venta de esta ración.</para>
+</problem>
+<solution id="fs-id1169739351547">
+<para id="fs-id1169739351550">En primer lugar, halle la función de ingresos marginales: <m:math><m:mrow><m:mi>M</m:mi><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>R</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−0,06</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>9</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169739305060">A continuación, utilice <m:math><m:mrow><m:msup><m:mi>R</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>100</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para aproximarse <m:math><m:mrow><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>101</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>100</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> los ingresos obtenidos por la venta de la ración número 101. Dado que <m:math><m:mrow><m:msup><m:mi>R</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>100</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> los ingresos obtenidos por la venta de la ración número 101 son de aproximadamente 3 dólares.</para>
+<para id="fs-id1169736611332">Los ingresos reales obtenidos por la venta de la ración número 101 son</para>
+<equation id="fs-id1169737285423" class="unnumbered"><label/><m:math><m:mrow><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>101</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>100</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>602,97</m:mn><m:mo>−</m:mo><m:mn>600</m:mn><m:mo>=</m:mo><m:mn>2,97</m:mn><m:mo>,</m:mo><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mn>$2,97</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169739298517">El ingreso marginal es una estimación razonablemente adecuada en este caso y tiene la ventaja de ser fácil de calcular.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1169739054962" class="checkpoint">
+<exercise id="fs-id1169739054965">
+<problem id="fs-id1169736589104">
+<para id="fs-id1169736589106">Supongamos que el beneficio obtenido por la venta de <m:math><m:mi>x</m:mi></m:math> raciones de pescado frito viene dada por <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-0,03</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>8</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>50</m:mn><m:mo>.</m:mo></m:mrow></m:math> Utilice la función de ganancia marginal para estimar la ganancia de la venta de la ración número 101 de pescado frito.</para>
+</problem>
+<solution id="fs-id1169739208503">
+<para id="fs-id1169739208505">$2</para>
+</solution>
+<commentary id="fs-id1169736613673" type="hint">
+<title>Sugerencia</title>
+<para id="fs-id1169739273788">Utilice <m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>100</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para aproximarse <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>101</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>100</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1169739269517" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1169739269667" list-type="bulleted" bullet-style="bullet">
+<item>Al usar <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mi>h</m:mi><m:mo>,</m:mo></m:mrow></m:math> es posible estimar <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> dado que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>La tasa de cambio de posición es la velocidad, y la tasa de cambio de la velocidad es la aceleración. La rapidez es el valor absoluto, o la magnitud, de la velocidad.</item>
+<item>La tasa de crecimiento demográfico y la población actual pueden utilizarse para predecir el tamaño de la población futura.</item>
+<item>Las funciones de costo marginal, ingreso marginal y ganancia marginal pueden utilizarse para predecir, respectivamente, el costo de producción de un artículo adicional, los ingresos obtenidos por su venta y la ganancia obtenida por su producción y venta.</item>
+</list>
+</section>
+<section id="fs-id1169739300381" class="section-exercises">
+<para id="fs-id1169739300384">En los siguientes ejercicios, las funciones dadas representan la posición de una partícula que viaja por una línea horizontal.</para>
+<list id="fs-id1169739303939" list-type="enumerated" number-style="lower-alpha">
+<item>Halle las funciones de velocidad y aceleración.</item>
+<item>Determine los intervalos en los que el objeto desacelera o acelera.</item>
+</list>
+<exercise id="fs-id1169739303989">
+<problem id="fs-id1169739303991">
+<para id="fs-id1169736656891"><m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>−</m:mo><m:mn>3</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>12</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>8</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169739301136">
+<problem id="fs-id1169739301138">
+<para id="fs-id1169736659584"><m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>−</m:mo><m:mn>15</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>36</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>10</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169739303945">
+<para id="fs-id1169739303947">a. <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>30</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>36</m:mn><m:mo>,</m:mo><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>12</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>30</m:mn><m:mo>;</m:mo></m:mrow></m:math> b. acelera <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>2,5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∪</m:mo></m:mstyle><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> desacelera <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∪</m:mo></m:mstyle><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2,5</m:mn><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739286492">
+<problem id="fs-id1169739286494">
+<para id="fs-id1169739286496"><m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mi>t</m:mi><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169736609267">
+<problem id="fs-id1169736609269">
+<para id="fs-id1169736609271">Un cohete se dispara verticalmente hacia arriba desde el suelo. La distancia <m:math><m:mrow><m:mi>s</m:mi></m:mrow></m:math> en pies que el cohete viaja desde el suelo después de <m:math><m:mi>t</m:mi></m:math> segundos viene dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−16</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>560</m:mn><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1169739351577" list-type="enumerated" number-style="lower-alpha">
+<item>Halle la velocidad del cohete 3 segundos después de su lanzamiento.</item>
+<item>Halle la aceleración del cohete 3 segundos después de su lanzamiento.</item>
+</list>
+</problem>
+<solution id="fs-id1169736657205">
+<para id="fs-id1169736657207">a. <m:math><m:mrow><m:mn>464</m:mn><m:msup><m:mrow><m:mspace width="0.2em"/><m:mtext>pies/s</m:mtext></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> b. <m:math><m:mrow><m:mn>−32</m:mn><m:msup><m:mrow><m:mspace width="0.2em"/><m:mtext>pies/s</m:mtext></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739253579">
+<problem id="fs-id1169739253581">
+<para id="fs-id1169739253583">Se lanza una pelota hacia abajo a una velocidad de 8 ft/s desde lo alto de un edificio de 64 pies de altura. Después de <emphasis effect="italics">t</emphasis> segundos, su altura sobre el suelo viene dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−16</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>8</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>64</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1169736613639" list-type="enumerated" number-style="lower-alpha">
+<item>Determine el tiempo que tarda la pelota en llegar al suelo.</item>
+<item>Determine la velocidad de la pelota cuando toca el suelo.</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1169739274630">
+<problem id="fs-id1169739274632">
+<para id="fs-id1169739274634">La función de posición <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow></m:math> representa la posición de la parte trasera de un automóvil que sale en retroceso de un camino de entrada y luego conduce en línea recta, donde <m:math><m:mi>s</m:mi></m:math> está en pies y <m:math><m:mi>t</m:mi></m:math> está en segundos. En este caso, <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> representa el momento en que la parte trasera del auto está en la puerta del garaje, por lo que <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−4</m:mn></m:mrow></m:math> es la posición inicial del auto, 4 pies dentro del garaje.</para>
+<list id="fs-id1169739191241" list-type="enumerated" number-style="lower-alpha">
+<item>Determine la velocidad del auto cuando <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Determine la velocidad del auto cuando <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>14</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1169736611430">
+<para id="fs-id1169736611432">a. 5 ft/s b. 9 ft/s</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739188624">
+<problem id="fs-id1169739188626">
+<para id="fs-id1169739188628">La posición de un colibrí volando en línea recta en <m:math><m:mi>t</m:mi></m:math> segundos viene dado por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>−</m:mo><m:mn>7</m:mn><m:mi>t</m:mi></m:mrow></m:math> metros.</para>
+<list id="fs-id1169736655926" list-type="enumerated" number-style="lower-alpha">
+<item>Determine la velocidad del pájaro en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> seg.</item>
+<item>Determine la aceleración del pájaro en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> seg.</item>
+<item>Determine la aceleración cuando la velocidad es igual a 0.</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1169739300061">
+<problem id="fs-id1169739300063">
+<para id="fs-id1169739300065">Se lanza una papa verticalmente hacia arriba con una velocidad inicial de 100 ft/s desde una pistola de papas en la parte alta de un edificio de 85 pies de altura. La distancia en pies que la papa recorre desde el suelo tras <m:math><m:mi>t</m:mi></m:math> segundos viene dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−16</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>100</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>85</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1169736654241" list-type="enumerated" number-style="lower-alpha">
+<item>Halle la velocidad de la papa después de <m:math><m:mrow><m:mn>0,5</m:mn><m:mspace width="0.2em"/><m:mtext>s</m:mtext></m:mrow></m:math> y <m:math><m:mrow><m:mn>5,75</m:mn><m:mspace width="0.2em"/><m:mtext>s</m:mtext><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Halle la velocidad de la papa a los 0,5 s y a los 5,75 s.</item>
+<item>Determine cuándo la papa alcanza su máxima altura.</item>
+<item>Halle la aceleración de la papa a los 0,5 s y a los 1,5 s.</item>
+<item>Determine el tiempo que la papa está en el aire.</item>
+<item>Determine la velocidad de la papa al caer al suelo.</item>
+</list>
+</problem>
+<solution id="fs-id1169739356248">
+<para id="fs-id1169739356250">a. 84 ft/s, -84 ft/s b. 84 ft/s c <m:math><m:mrow><m:mfrac><m:mrow><m:mn>25</m:mn></m:mrow><m:mn>8</m:mn></m:mfrac><m:mspace width="0.2em"/><m:mtext>s</m:mtext></m:mrow></m:math> d. <m:math><m:mrow><m:mn>−32</m:mn><m:msup><m:mrow><m:mspace width="0.2em"/><m:mtext>pies/s</m:mtext></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> en ambos casos e. <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>8</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>25</m:mn><m:mo>+</m:mo><m:msqrt><m:mrow><m:mn>965</m:mn></m:mrow></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>s</m:mtext></m:mrow></m:math> f. <m:math><m:mrow><m:mn>−4</m:mn><m:msqrt><m:mrow><m:mn>965</m:mn></m:mrow></m:msqrt><m:mspace width="0.2em"/><m:mtext>pies/s</m:mtext></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169736656942">
+<problem id="fs-id1169736656945">
+<para id="fs-id1169736656947">La función de posición <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>−</m:mo><m:mn>8</m:mn><m:mi>t</m:mi></m:mrow></m:math> da la posición en millas de un tren de mercancías donde el este es la dirección positiva y <m:math><m:mi>t</m:mi></m:math> se mide en horas.</para>
+<list id="fs-id1169736581695" list-type="enumerated" number-style="lower-alpha">
+<item>Determine la dirección en la que viaja el tren cuando <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Determine la dirección en la que viaja el tren cuando <m:math><m:mrow><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Determine los intervalos en los que la velocidad del tren aumenta o disminuye.</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1169739191157">
+<problem id="fs-id1169739191159">
+<para id="fs-id1169739191161">El siguiente gráfico muestra la posición <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de un objeto que se mueve en línea recta.</para>
+<media id="fs-id1169739273995" alt="En el plano de coordenadas cartesianas se grafica una función que forma parte de una parábola desde el origen hasta (2, 2) con máximo en (1,5, 2,25). Entonces la función es constante hasta el punto (5, 2), en el que se convierte de nuevo en una parábola que disminuye hasta un mínimo en (6, 1) y luego aumenta hasta (7, 2).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_04_201.jpg"/>
+</media>
+<list id="fs-id1169739274006" list-type="enumerated" number-style="lower-alpha">
+<item>Utilice el gráfico de la función de posición para determinar los intervalos de tiempo en los que la velocidad es positiva, negativa o cero.</item>
+<item>Dibuje el gráfico de la función de velocidad.</item>
+<item>Utilice el gráfico de la función velocidad para determinar los intervalos en los que la aceleración es positiva, negativa o cero.</item>
+<item>Determine los intervalos en los que el objeto acelera o desacelera.</item>
+</list>
+</problem>
+<solution id="fs-id1169736663031">
+<para id="fs-id1169736663033">a. La velocidad es positiva en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1,5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∪</m:mo></m:mstyle><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>6</m:mn><m:mo>,</m:mo><m:mn>7</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> negativo en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1,5</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∪</m:mo></m:mstyle><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>5</m:mn><m:mo>,</m:mo><m:mn>6</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y cero en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> b.<newline/>
+<media id="fs-id1169739188467" alt="El gráfico es una recta desde (0, 2) hasta (2, -1), luego es discontinua con una recta desde (2, 0) hasta (5, 0), y luego es discontinua con una recta desde (5, -4) hasta (7, 4).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_04_202.jpg"/>
+</media><newline/> c. La aceleración es positiva en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>5</m:mn><m:mo>,</m:mo><m:mn>7</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> negativo en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y cero en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> d. El objeto acelera en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>6</m:mn><m:mo>,</m:mo><m:mn>7</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∪</m:mo></m:mstyle><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1,5</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y desacelera en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1,5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∪</m:mo></m:mstyle><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>5</m:mn><m:mo>,</m:mo><m:mn>6</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739270636">
+<problem id="fs-id1169739270638">
+<para id="fs-id1169739270640">La función de costos en dólares de una empresa que fabrica procesadores de alimentos viene dada por <m:math><m:mrow><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>200</m:mn><m:mo>+</m:mo><m:mfrac><m:mn>7</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>7</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>x</m:mi></m:math> es el número de procesadores de alimentos fabricados.</para>
+<list id="fs-id1169739187813" list-type="enumerated" number-style="lower-alpha">
+<item>Calcule la función de costo marginal.</item>
+<item>Utilice la función de costo marginal para estimar el costo de fabricación del decimotercer procesador de alimentos.</item>
+<item>Halle el costo real de fabricación del decimotercer procesador de alimentos.</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1169736659653">
+<problem id="fs-id1169736659655">
+<para id="fs-id1169736659657">El precio <m:math><m:mi>p</m:mi></m:math> (en dólares) y la demanda <m:math><m:mi>x</m:mi></m:math> para un determinado radio-reloj digital viene dado por la función precio-demanda <m:math><m:mrow><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>10</m:mn><m:mo>−</m:mo><m:mn>0,001</m:mn><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1169739273858" list-type="enumerated" number-style="lower-alpha">
+<item>Halle la función de ingresos <m:math><m:mrow><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Halle la función de ingreso marginal.</item>
+<item>Halle el ingreso marginal en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2000</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mn>5000</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1169736654358">
+<para id="fs-id1169739242389">a. <m:math><m:mrow><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>10</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>0,001</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> b. <m:math><m:mrow><m:msup><m:mi>R</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>10</m:mn><m:mo>−</m:mo><m:mn>0,002</m:mn><m:mi>x</m:mi></m:mrow></m:math> c. 6 dólares por artículo, 0 dólares por artículo</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169736656504">
+<problem id="fs-id1169736656506">
+<para id="fs-id1169736656508"><emphasis effect="bold">[T]</emphasis> Se obtiene una ganancia cuando los ingresos superan los costos. Supongamos que la función de ganancias de un fabricante de patinetas viene dada por <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>30</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>0,3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>250</m:mn><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>x</m:mi></m:math> es el número de patinetas vendidas.</para>
+<list id="fs-id1169736661590" list-type="enumerated" number-style="lower-alpha">
+<item>Halle la ganancia exacta de la venta de la trigésima patineta.</item>
+<item>Halle la función de ganancia marginal y utilícela para estimar la ganancia de la venta de la trigésima patineta.</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1169739301640">
+<problem id="fs-id1169739301643">
+<para id="fs-id1169739301645"><emphasis effect="bold">[T]</emphasis> En general, la función de ganancias es la diferencia entre las funciones de ingresos y costos: <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169736608474">Supongamos que las funciones de precio-demanda y de costo para la producción de taladros inalámbricos vienen dadas, respectivamente, por <m:math><m:mrow><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>143</m:mn><m:mo>−</m:mo><m:mn>0,03</m:mn><m:mi>x</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>75000</m:mn><m:mo>+</m:mo><m:mn>65</m:mn><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>x</m:mi></m:math> es el número de taladros inalámbricos que se venden a un precio de <m:math><m:mi>p</m:mi></m:math> dólares por taladro y <m:math><m:mrow><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es el coste de producción <m:math><m:mi>x</m:mi></m:math> taladros inalámbricos.</para>
+<list id="fs-id1169736661476" list-type="enumerated" number-style="lower-alpha">
+<item>Calcule la función de costo marginal.</item>
+<item>Halle las funciones de ingresos y de ingresos marginales.</item>
+<item>Halle <m:math><m:mrow><m:msup><m:mi>R</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>1000</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>R</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>4000</m:mn><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Interprete los resultados.</item>
+<item>Halle las funciones de ganancias y de ganancia marginal.</item>
+<item>Encuentre <m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>1000</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>4000</m:mn><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Interprete los resultados.</item>
+</list>
+</problem>
+<solution id="fs-id1169739273060">
+<para id="fs-id1169739273062">a. <m:math><m:mrow><m:msup><m:mi>C</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>65</m:mn></m:mrow></m:math> b. <m:math><m:mrow><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>143</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>0,03</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo><m:msup><m:mi>R</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>143</m:mn><m:mo>−</m:mo><m:mn>0,06</m:mn><m:mi>x</m:mi></m:mrow></m:math> c. <m:math><m:mrow><m:mn>83</m:mn><m:mo>,</m:mo><m:mn>-97</m:mn><m:mo>.</m:mo></m:mrow></m:math> A un nivel de producción de 1.000 taladros inalámbricos, los ingresos aumentan a una tasa de 83 dólares por taladro; a un nivel de producción de 4.000 taladros inalámbricos, los ingresos disminuyen a una tasa de 97 dólares por taladro. d <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-0,03</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>78</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>75000</m:mn><m:mo>,</m:mo><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−0,06</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>78</m:mn></m:mrow></m:math> e. <m:math><m:mrow><m:mn>18</m:mn><m:mo>,</m:mo><m:mn>-162</m:mn><m:mo>.</m:mo></m:mrow></m:math> A un nivel de producción de 1000 taladros inalámbricos, la ganancia aumenta a una tasa de 18 dólares por taladro; a un nivel de producción de 4000 taladros inalámbricos, la ganancia disminuye a una tasa de 162 dólares por taladro.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739274864">
+<problem id="fs-id1169739274866">
+<para id="fs-id1169739274868">Una pequeña ciudad de Ohio encargó a una empresa de servicios actuariales un estudio que modelara la tasa de cambio demográfico de la ciudad. El estudio reveló que la población de la ciudad (medida en miles de personas) puede modelarse mediante la función <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>−</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>64</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>3000</m:mn><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:mi>t</m:mi></m:mrow></m:math> se mide en años.</para>
+<list id="fs-id1169739187776" list-type="enumerated" number-style="lower-alpha">
+<item>Halle la función de tasa de cambio <m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de la función de población.</item>
+<item>Halle <m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>4</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Interprete lo que los resultados significan para la ciudad.</item>
+<item>Halle <m:math><m:mrow><m:mi>P</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>P</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>P</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>P</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mn>4</m:mn><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Interprete lo que los resultados significan para la población de la ciudad.</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1169736662792">
+<problem id="fs-id1169736662794">
+<para id="fs-id1169736662796"><emphasis effect="bold">[T]</emphasis> Un cultivo de bacterias crece en número según la función <m:math><m:mrow><m:mi>N</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3000</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>4</m:mn><m:mi>t</m:mi></m:mrow><m:mrow><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>100</m:mn></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>t</m:mi></m:math> se mide en horas.</para>
+<list id="fs-id1169739242521" list-type="enumerated" number-style="lower-alpha">
+<item>Halle la tasa de cambio del número de bacterias.</item>
+<item>Encuentre <m:math><m:mrow><m:msup><m:mi>N</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msup><m:mi>N</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>10</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msup><m:mi>N</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>20</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>N</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>30</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Interprete los resultados en (b).</item>
+<item>Encuentre <m:math><m:mrow><m:mi>N</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>N</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>10</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>N</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>20</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>N</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>30</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Interprete lo que implican las respuestas sobre el crecimiento de la población de bacterias.</item>
+</list>
+</problem>
+<solution id="fs-id1169736611359">
+<para id="fs-id1169736611361">a. <m:math><m:mrow><m:msup><m:mi>N</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3000</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>−4</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>400</m:mn></m:mrow><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>100</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> b. <m:math><m:mrow><m:mn>120</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>−14,4</m:mn><m:mo>,</m:mo><m:mn>−9,6</m:mn></m:mrow></m:math> c. La población de bacterias aumenta desde el tiempo de 0 hasta las 10 horas; posteriormente, la población de bacterias disminuye. d. <m:math><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>−6</m:mn><m:mo>,</m:mo><m:mn>0,384</m:mn><m:mo>,</m:mo><m:mn>0,432</m:mn><m:mo>.</m:mo></m:mrow></m:math> La tasa de aumento de las bacterias decrece durante las primeras 10 horas. De allí en adelante, disminuye paulatinamente.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169736610051">
+<problem id="fs-id1169736610053">
+<para id="fs-id1169736610055">La fuerza centrípeta de un objeto de masa <m:math><m:mi>m</m:mi></m:math> viene dada por <m:math><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>r</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>m</m:mi><m:msup><m:mi>v</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mi>r</m:mi></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>v</m:mi></m:math> es la velocidad de rotación y <m:math><m:mi>r</m:mi></m:math> es la distancia desde el centro de rotación.</para>
+<list id="fs-id1169739300089" list-type="enumerated" number-style="lower-alpha">
+<item>Halle la tasa de cambio de la fuerza centrípeta con respecto a la distancia desde el centro de rotación.</item>
+<item>Halle la tasa de cambio de la fuerza centrípeta de un objeto con una masa de 1.000 kilogramos, una velocidad de 13,89 m/s y una distancia de 200 metros desde el centro de rotación.</item>
+</list>
+</problem>
+</exercise>
+<para id="fs-id1169736656016">Las siguientes preguntas se refieren a la población de Londres (en millones) por década en el siglo XIX, que se muestra en la siguiente tabla.</para>
+<table id="fs-id1169736656020" summary="This table has 11 rows and two columns. The first row is a header row and it labels each column. The first column header is Years since 1800 and the second column is Population (millions). Under the first column are the values 1, 11, 21, 31, 41, 51, 61, 71, 81, and 91. Under the second column are the values 0.8795, 1.040, 1.264, 1.516, 1.661, 2.000, 2.634, 3.272, 3.911, and 4.422.">
+<title>Población de Londres</title>
+<tgroup cols="2">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left">Años desde 1800</entry>
+<entry valign="top" align="left">Población (millones)</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry valign="top" align="left">1</entry>
+<entry valign="top" align="left">0,8795</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">11</entry>
+<entry valign="top" align="left">1,040</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">21</entry>
+<entry valign="top" align="left">1,264</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">31</entry>
+<entry valign="top" align="left">1,516</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">41</entry>
+<entry valign="top" align="left">1,661</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">51</entry>
+<entry valign="top" align="left">2,000</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">61</entry>
+<entry valign="top" align="left">2,634</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">71</entry>
+<entry valign="top" align="left">3,272</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">81</entry>
+<entry valign="top" align="left">3,911</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">91</entry>
+<entry valign="top" align="left">4,422</entry>
+</row>
+</tbody>
+</tgroup>
+<caption>Fuente: http://en.wikipedia.org/wiki/Demographics_of_London.</caption>
+</table>
+<exercise id="fs-id1169739270171">
+<problem id="fs-id1169739270173">
+<para id="fs-id1169739270175"><emphasis effect="bold">[T]</emphasis></para>
+<list id="fs-id1169739270180" list-type="enumerated" number-style="lower-alpha">
+<item>Con una calculadora o un programa informático halle la función lineal de mejor ajuste para medir la población.</item>
+<item>Halle la derivada de la ecuación en a. y explique su significado físico.</item>
+<item>Calcule la segunda derivada de la ecuación y explique su significado físico.</item>
+</list>
+</problem>
+<solution id="fs-id1169739270196">
+<para id="fs-id1169739270198">a. <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0,03983</m:mn><m:mo>+</m:mo><m:mn>0,4280</m:mn></m:mrow></m:math> b. <m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0,03983</m:mn><m:mo>.</m:mo></m:mrow></m:math> La población aumenta. c. <m:math><m:mrow><m:mi>P</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> El ritmo de aumento de la población es constante.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739343732">
+<problem id="fs-id1169739343734">
+<para id="fs-id1169739343736"><emphasis effect="bold">[T]</emphasis></para>
+<list id="fs-id1169739343742" list-type="enumerated" number-style="lower-alpha">
+<item>Con una calculadora o un programa informático, halle la curva cuadrática que mejor se ajuste a los datos.</item>
+<item>Halle la derivada de la ecuación y explique su significado físico.</item>
+<item>Calcule la segunda derivada de la ecuación y explique su significado físico.</item>
+</list>
+</problem>
+</exercise>
+<para id="fs-id1169739251285">En los siguientes ejercicios, piense en un astronauta en un gran planeta de otra galaxia. Para conocer mejor la composición de este planeta, el astronauta deja caer un sensor electrónico en una zanja profunda. El sensor transmite su posición vertical cada segundo en relación con la posición del astronauta. El resumen de los datos del sensor mientras cae se expone en la siguiente tabla.</para>
+<table id="fs-id1169739251296" class="unnumbered" summary="This table has seven rows and two columns. The first row is a header row and it labels each column. The first column header is Time after dropping (s) and the second column is Position (m). Under the first column are the values 0, 1, 2, 3, 4, and 5. Under the second column are the values 0, −1, −2, −5, −7, and −14.">
+<label/>
+<tgroup cols="2">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left">Tiempo después de la caída (s)</entry>
+<entry valign="top" align="left">Posición (m)</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry valign="top" align="left">0</entry>
+<entry valign="top" align="left">0</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">1</entry>
+<entry valign="top" align="left">-1</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">2</entry>
+<entry valign="top" align="left">-2</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">3</entry>
+<entry valign="top" align="left">-5</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">4</entry>
+<entry valign="top" align="left">−7</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">5</entry>
+<entry valign="top" align="left">−14</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<exercise id="fs-id1169736654815">
+<problem id="fs-id1169736654817">
+<para id="fs-id1169736654819"><emphasis effect="bold">[T]</emphasis></para>
+<list id="fs-id1169736654824" list-type="enumerated" number-style="lower-alpha">
+<item>Con una calculadora o un programa informático, halle la curva cuadrática que mejor se ajuste a los datos.</item>
+<item>Calcule la derivada de la función de posición y explique su significado físico.</item>
+<item>Calcule la segunda derivada de la función de posición y explique su significado físico.</item>
+</list>
+</problem>
+<solution id="fs-id1169736654840">
+<para id="fs-id1169736654842">a. <m:math><m:mrow><m:mi>p</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>-0,6071</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>0,4357</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>0,3571</m:mn></m:mrow></m:math> b. <m:math><m:mrow><m:msup><m:mi>p</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-1,214</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>0,4357</m:mn><m:mo>.</m:mo></m:mrow></m:math> Esta es la velocidad del sensor. c <m:math><m:mrow><m:mi>p</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-1,214</m:mn><m:mo>.</m:mo></m:mrow></m:math> Esta es la aceleración del sensor; es una aceleración constante hacia abajo.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739269446">
+<problem id="fs-id1169739269449">
+<para id="fs-id1169739269451"><emphasis effect="bold">[T]</emphasis></para>
+<list id="fs-id1169739269456" list-type="enumerated" number-style="lower-alpha">
+<item>Con una calculadora o un programa informático halle la curva cúbica que mejor se ajuste a los datos.</item>
+<item>Calcule la derivada de la función de posición y explique su significado físico.</item>
+<item>Calcule la segunda derivada de la función de posición y explique su significado físico.</item>
+<item>Con base en el resultado de c. explique por qué una función cúbica no es una opción adecuada para este problema.</item>
+</list>
+</problem>
+</exercise>
+<para id="fs-id1169739336089">Los siguientes problemas tratan de las ecuaciones de Holling tipo I, II y III. Estas ecuaciones describen el evento ecológico de crecimiento de una población de depredadores dada la cantidad de presas disponibles para su consumo.</para>
+<exercise id="fs-id1169739336094">
+<problem id="fs-id1169739336096">
+<para id="fs-id1169736609871"><emphasis effect="bold">[T]</emphasis> La <term class="no-emphasis">ecuación de Holling tipo I</term> se describe mediante <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>a</m:mi><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>x</m:mi></m:math> es la cantidad de presas disponibles y <m:math><m:mrow><m:mi>a</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> es la velocidad a la que el depredador se encuentra con la presa para consumirla.</para>
+<list id="fs-id1169736609917" list-type="enumerated" number-style="lower-alpha">
+<item>Grafique la ecuación de Holling tipo I, dada <m:math><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>0,5</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Determine la primera derivada de la ecuación de Holling tipo I y explique físicamente lo que la derivada implica.</item>
+<item>Determine la segunda derivada de la ecuación de Holling tipo I y explique físicamente lo que la derivada implica.</item>
+<item>Con base en las interpretaciones de b. y c. explique por qué la ecuación de Holling tipo I quizá no sea realista.</item>
+</list>
+</problem>
+<solution id="fs-id1169736609949">
+<para id="fs-id1169736609951">a<newline/>
+<media id="fs-id1169736609955" alt="La gráfica es una recta que pasa por el origen con pendiente 1/2.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_04_203.jpg"/>
+</media><newline/> b. <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Cuanto mayor sea el aumento de presas, mayor será el crecimiento de los depredadores c <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> A medida que aumenta la cantidad de presas, la tasa de crecimiento demográfico de depredadores es constante. d. Esta ecuación supone que si hay más presas, el depredador es capaz de aumentar el consumo linealmente. Esta suposición no es física, porque esperaríamos algún punto de saturación con demasiadas presas para que el depredador las consuma adecuadamente.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169739190647">
+<problem id="fs-id1169739190649">
+<para id="fs-id1169739190651"><emphasis effect="bold">[T]</emphasis> La ecuación de Holling tipo II está descrita por <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>a</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>x</m:mi></m:math> es la cantidad de presas disponibles y <m:math><m:mrow><m:mi>a</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> es la tasa máxima de consumo del depredador.</para>
+<list id="fs-id1169739190702" list-type="enumerated" number-style="lower-alpha">
+<item>Grafique la ecuación de Holling tipo II dada <m:math><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>0,5</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math> ¿Cuáles son las diferencias entre las ecuaciones de Holling tipo I y II?</item>
+<item>Tome la primera derivada de la ecuación de Holling tipo II e interprete su significado físico.</item>
+<item>Demostrar que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>n</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>a</m:mi></m:mrow></m:math> e interprete el significado del parámetro <m:math><m:mi>n</m:mi><m:mo>.</m:mo></m:math></item>
+<item>Halle e interprete el significado de la segunda derivada. ¿Qué hace que la función de Holling tipo II sea más realista que la función de Holling tipo I?</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1169739299237">
+<problem id="fs-id1169739299239">
+<para id="fs-id1169739299241"><emphasis effect="bold">[T]</emphasis> La ecuación de Holling tipo III se describe mediante <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>a</m:mi><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>x</m:mi></m:math> es la cantidad de presas disponibles y <m:math><m:mrow><m:mi>a</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> es la tasa máxima de consumo del depredador.</para>
+<list id="fs-id1169736592115" list-type="enumerated" number-style="lower-alpha">
+<item>Grafique la ecuación de Holling tipo III dada <m:math><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>0,5</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math> ¿Cuáles son las diferencias entre las ecuaciones de Holling tipo II y III?</item>
+<item>Tome la primera derivada de la ecuación de Holling tipo III e interprete su significado físico.</item>
+<item>Halle e interprete el significado de la segunda derivada (sería conveniente graficarla).</item>
+<item>¿Qué otros fenómenos ecológicos describen la función de Holling tipo III en comparación con la de tipo II?</item>
+</list>
+</problem>
+<solution id="fs-id1169736592158">
+<para id="fs-id1169736592160">a<newline/>
+<media id="fs-id1169736592164" alt="El gráfico aumenta desde el origen rápidamente al principio y luego lentamente hasta (10, 0,4).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_04_205.jpg"/>
+</media><newline/> b. <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>a</m:mi><m:mi>x</m:mi><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> A mayor cantidad de presas, mayor es la tasa de crecimiento de los depredadores. c <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>a</m:mi><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Cuando la cantidad de presas es extremadamente pequeña, la tasa de crecimiento de los depredadores es ascendente, pero cuando la cantidad de presas supera un determinado umbral, la tasa de crecimiento de los depredadores comienza a disminuir. d. Mientras menos presas hay, es más fácil que eviten ser vistas por el depredador, por lo que se consumen menos individuos, lo que resulta en una menor tasa de crecimiento de los depredadores.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169736617625">
+<problem id="fs-id1169736617627">
+<para id="fs-id1169736617629"><emphasis effect="bold">[T]</emphasis> Las poblaciones de la liebre americana (en miles) y del lince (en cientos) a lo largo de 7 años, de 1937 a 1943, se exponen en la siguiente tabla. La liebre americana es la presa principal del lince.</para>
+<table id="fs-id1169736617637" summary="This table has five rows and two columns. The first row is a header row and it labels each column. The first column header is Population of snowshoe hare (thousands) and the second column is Population of lynx (hundreds). Under the first column are the values 20, 55, 65, and 95. Under the second column are the values 10, 15, 55, and 60.">
+<title>Población de liebre americana y de linces.</title>
+<tgroup cols="2">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left">Población de liebre americana (en miles)</entry>
+<entry valign="top" align="left">Población de linces (en cientos)</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry valign="top" align="left">20</entry>
+<entry valign="top" align="left">10</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">55</entry>
+<entry valign="top" align="left">15</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">65</entry>
+<entry valign="top" align="left">55</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">95</entry>
+<entry valign="top" align="left">60</entry>
+</row>
+</tbody>
+</tgroup>
+<caption>Fuente: http://www.biotopics.co.uk/newgcse/predatorprey.html.</caption>
+</table>
+<list id="fs-id1169739348460" list-type="enumerated" number-style="lower-alpha">
+<item>Grafique los puntos de datos y determine qué función de tipo Holling se ajusta mejor a los datos.</item>
+<item>Con base en los significados de los parámetros <m:math><m:mi>a</m:mi></m:math> y <m:math><m:mrow><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> determine sus valores mediante el examen de un gráfico de los datos. Recordemos que <m:math><m:mi>n</m:mi></m:math> mida qué valor de la presa resulta en el medio máximo del valor del depredador.</item>
+<item>Trace las funciones resultantes de tipo Holling I, II y III sobre los datos. ¿Es correcto el resultado de la parte a.?</item>
+</list>
+</problem>
+</exercise>
+</section>
+  </content>
+<glossary>
+<definition id="fs-id1169739252840">
+<term>aceleración</term>
+<meaning id="fs-id1169739252845">tasa de cambio de la velocidad, es decir, la derivada de la velocidad</meaning>
+</definition>
+<definition id="fs-id1169739252849">
+<term>cantidad de cambio</term>
+<meaning id="fs-id1169739252854">la cantidad de una función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en un intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> es <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></meaning>
+</definition>
+<definition id="fs-id1169739190003">
+<term>tasa promedio de cambio</term>
+<meaning id="fs-id1169739190009">es una función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en un intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> es <m:math><m:mrow><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>h</m:mi></m:mrow></m:mfrac></m:mrow></m:math></meaning>
+</definition>
+<definition id="fs-id1169739190084">
+<term>costo marginal</term>
+<meaning id="fs-id1169739190090">es la derivada de la función de costo o el costo aproximado de producir un artículo más</meaning>
+</definition>
+<definition id="fs-id1169739190095">
+<term>ingreso marginal</term>
+<meaning id="fs-id1169739190100">es la derivada de la función de ingresos o el ingreso aproximado que se obtiene al vender un artículo más</meaning>
+</definition>
+<definition id="fs-id1169739190106">
+<term>ganancia marginal</term>
+<meaning id="fs-id1169739190111">es la derivada de la función de ganancias o la ganancia aproximada que se obtiene al producir y vender un artículo más</meaning>
+</definition>
+<definition id="fs-id1169739190116">
+<term>tasa de crecimiento demográfico</term>
+<meaning id="fs-id1169739190122">es la derivada de la población con respecto al tiempo</meaning>
+</definition>
+<definition id="fs-id1169739190126">
+<term>rapidez</term>
+<meaning id="fs-id1169739190131">es el valor absoluto de la velocidad, es decir <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> es la velocidad de un objeto en el tiempo <m:math><m:mi>t</m:mi></m:math> cuya velocidad viene dada por <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></meaning>
+</definition>
+</glossary>
+</document>

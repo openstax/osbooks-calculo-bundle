@@ -1,0 +1,20 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" class="introduction">
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m10087</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:abstract/>
+  <md:uuid>032ada87-8085-4478-bf4b-9c6810fc2c6d</md:uuid>
+</metadata>
+
+<content>
+<figure id="CNX_Calc_Figure_12_00_001" class="splash">
+<media id="fs-id1163722618179" alt="Esta imagen es una foto de radiotelescopios. Tienen grandes cúpulas parabólicas como receptores con una antena en el centro.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_00_001.jpg"/>
+</media>
+<caption>El observatorio Karl G. Jansky Very Large Array, situado en Socorro (Nuevo México), está formado por un gran número de radiotelescopios que pueden recoger las ondas de radio y juntarlas como si recogieran las ondas en un área enorme sin vacíos en la cobertura. (Crédito: modificación del trabajo de CGP Grey, Wikimedia Commons)</caption>
+</figure>
+<para id="fs-id1163722788872">Los observatorios astronómicos modernos suelen estar formados por un gran número de reflectores parabólicos, conectados por computadoras, que se utilizan para analizar las ondas de radio. Cada plato enfoca los haces paralelos de ondas de radio entrantes hacia un punto focal preciso, donde pueden sincronizarse por computadora. Si la superficie de uno de los reflectores parabólicos está descrita por la ecuación <m:math><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:mn>100</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:mn>100</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mi>z</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> ¿dónde está el punto focal del reflector? (Vea <link document="m53874" target-id="fs-id1163723955608"/>.)</para>
+<para id="fs-id1163722788687">Ahora vamos a empezar una nueva parte del curso de cálculo, donde estudiamos funciones de dos o tres variables independientes en un espacio multidimensional. Muchos de los cálculos son similares a los del estudio de las funciones de una sola variable, pero también hay muchas diferencias. En este primer capítulo, examinamos los sistemas de coordenadas para trabajar en el espacio tridimensional, junto con los vectores, que son una herramienta matemática clave para tratar con cantidades en más de una dimensión. Empecemos aquí con las ideas básicas y vayamos avanzando hacia las herramientas más generales y potentes de las matemáticas en capítulos posteriores.</para>
+ </content>
+</document>
