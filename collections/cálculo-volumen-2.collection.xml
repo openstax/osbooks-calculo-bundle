@@ -1,18 +1,259 @@
-<col:collection 
-  xmlns:col="http://cnx.rice.edu/collxml"
-  xmlns:md="http://cnx.rice.edu/mdml"
-  xmlns:sys="http://cnx.rice.edu/system-info"
-  xmlns="http://cnx.rice.edu/collxml">
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en">
+  <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
+  <md:content-id>col10016</md:content-id>
+  <md:title>Calculus Volume 2</md:title>
+  
+  
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <md:language>en</md:language>
 
-  <col:metadata>
-    <md:uuid>526832cb-7315-4418-ac81-04fdb78d2d7c</md:uuid>
-    <md:title>Cálculo Volumen 2</md:title>
-    <md:slug>cálculo-volumen-2</md:slug>
-    <md:license url="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</md:license>
-    <md:content-id>col10016</md:content-id>
-    <md:language>es</md:language>
-  </col:metadata>
+  
+
+  
+  
+  
+  
+  
+
+  <md:uuid>8079f22f-c0a0-43ed-bb35-871d8d9743f3</md:uuid>
+<md:slug>cálculo-volumen-2</md:slug>
+</metadata>
+
   <col:content>
+    
+      <col:module document="m10141"/>
+        
+      
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Techniques of Integration</md:title>
+        
+        
+        
 
+        <col:content>
+          
+    
+      <col:module document="m10049"/>
+        
+      
+    
+    
+      <col:module document="m10051"/>
+        
+      
+    
+    
+      <col:module document="m10052"/>
+        
+      
+    
+    
+      <col:module document="m10053"/>
+        
+      
+    
+    
+      <col:module document="m10054"/>
+        
+      
+    
+    
+      <col:module document="m10056"/>
+        
+      
+    
+    
+      <col:module document="m10057"/>
+        
+      
+    
+    
+      <col:module document="m10058"/>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Introduction to Differential Equations</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m10059"/>
+        
+      
+    
+    
+      <col:module document="m10060"/>
+        
+      
+    
+    
+      <col:module document="m10061"/>
+        
+      
+    
+    
+      <col:module document="m10063"/>
+        
+      
+    
+    
+      <col:module document="m10064"/>
+        
+      
+    
+    
+      <col:module document="m10065"/>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Sequences and Series</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m10066"/>
+        
+      
+    
+    
+      <col:module document="m10067"/>
+        
+      
+    
+    
+      <col:module document="m10068"/>
+        
+      
+    
+    
+      <col:module document="m10069"/>
+        
+      
+    
+    
+      <col:module document="m10070"/>
+        
+      
+    
+    
+      <col:module document="m10071"/>
+        
+      
+    
+    
+      <col:module document="m10072"/>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Power Series</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m10074"/>
+        
+      
+    
+    
+      <col:module document="m10075"/>
+        
+      
+    
+    
+      <col:module document="m10076"/>
+        
+      
+    
+    
+      <col:module document="m10077"/>
+        
+      
+    
+    
+      <col:module document="m10078"/>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Parametric Equations and Polar Coordinates</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m10079"/>
+        
+      
+    
+    
+      <col:module document="m10080"/>
+        
+      
+    
+    
+      <col:module document="m10082"/>
+        
+      
+    
+    
+      <col:module document="m10083"/>
+        
+      
+    
+    
+      <col:module document="m10084"/>
+        
+      
+    
+    
+      <col:module document="m10085"/>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
   </col:content>
 </col:collection>

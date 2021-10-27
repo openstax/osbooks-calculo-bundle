@@ -1,0 +1,1113 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Cylindrical and Spherical Coordinates</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m10094</md:content-id>
+  <md:title>Cylindrical and Spherical Coordinates</md:title>
+  <md:abstract><list>
+<item>Convertir de coordenadas cilíndricas a rectangulares.</item>
+<item>Convertir de coordenadas rectangulares a cilíndricas.</item>
+<item>Convertir de coordenadas esféricas a rectangulares.</item>
+<item>Convertir de coordenadas rectangulares a esféricas.</item>
+</list></md:abstract>
+  <md:uuid>ecca0b3c-03c6-423c-84e3-4a6a6724716b</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1163724053839">El sistema de coordenadas cartesianas ofrece una forma sencilla de describir la ubicación de los puntos en el espacio. Sin embargo, algunas superficies pueden ser difíciles de modelar con ecuaciones basadas en el sistema cartesiano. Este es un problema conocido; recordemos que, en dos dimensiones, las coordenadas polares a menudo ofrecen un sistema alternativo útil para describir la ubicación de un punto en el plano, sobre todo en los casos que involucran círculos. En esta sección, estudiamos dos maneras de describir la ubicación de los puntos en el espacio, ambas basadas en extensiones de las coordenadas polares. Como su nombre lo indica, las coordenadas cilíndricas sirven para tratar problemas en los que intervienen cilindros, como calcular el volumen de un depósito redondo de agua o la cantidad de aceite que fluye por una tubería. Asimismo, las coordenadas esféricas son útiles para tratar problemas relacionados con esferas, como la búsqueda del volumen de estructuras abovedadas.</para>
+<section id="fs-id1163723994186">
+<title>Coordenadas cilíndricas</title>
+<para id="fs-id1163723287899">Cuando ampliamos el sistema tradicional de coordenadas cartesianas de dos a tres dimensiones, simplemente añadimos un nuevo eje para modelar la tercera dimensión. Partiendo de las coordenadas polares, podemos seguir este mismo proceso para crear un nuevo sistema tridimensional, llamado sistema de coordenadas cilíndricas. De este modo, las coordenadas cilíndricas proporcionan una extensión natural de las coordenadas polares a las tres dimensiones.</para>
+<note id="fs-id1163723948419">
+<title>Definición</title>
+<para id="fs-id1163723216822">En el <term>sistema de coordenadas cilíndricas</term>, un punto en el espacio (<link target-id="CNX_Calc_Figure_12_07_001"/>) está representado por la triple ordenada <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde</para>
+<list id="fs-id1163723236536" list-type="bulleted" bullet-style="bullet">
+<item><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> son las coordenadas polares de la proyección del punto en el plano <emphasis effect="italics">xy</emphasis></item>
+<item><m:math><m:mi>z</m:mi></m:math> es la coordenada <m:math><m:mrow><m:mi>z</m:mi><m:mtext>habitual</m:mtext></m:mrow></m:math> en el sistema de coordenadas cartesianas</item>
+</list>
+</note>
+<figure id="CNX_Calc_Figure_12_07_001">
+<media id="fs-id1163723891415" alt="Esta figura es el primer octante del sistema tridimensional de coordenadas. Hay un punto marcado &quot;(x, y, z) = (r, theta, z)”. En el plano x y, hay un segmento lineal que se extiende hasta debajo del punto. Este segmento lineal está marcado como &quot;r&quot; El ángulo entre el segmento lineal y el eje de la x es theta. Hay un segmento lineal, perpendicular al eje de la x. Junto con el segmento lineal, marcado como r, este segmento lineal y el eje de la x forman un triángulo rectángulo.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_001.jpg"/>
+</media>
+<caption>El triángulo rectángulo se encuentra en el plano <emphasis effect="italics">xy</emphasis>. La longitud de la hipotenusa es <m:math><m:mi>r</m:mi></m:math> y <m:math><m:mi>θ</m:mi></m:math> es la medida del ángulo formado por el eje de la <emphasis effect="italics">x</emphasis> positivo y la hipotenusa. La<newline/>coordenada <emphasis effect="italics">z</emphasis> describe la ubicación del punto por encima o por debajo del plano <emphasis effect="italics">xy</emphasis>.</caption>
+</figure>
+<para id="fs-id1163724101575">En el plano <emphasis effect="italics">xy</emphasis>, el triángulo rectángulo que se indica en la <link target-id="CNX_Calc_Figure_12_07_001"/> proporciona la clave para la transformación entre coordenadas cilíndricas y cartesianas o rectangulares.</para>
+<note id="fs-id1163723500624" class="theorem">
+<title>Conversión entre coordenadas cilíndricas y cartesianas</title>
+<para id="fs-id1163724076636">Las coordenadas rectangulares <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y las coordenadas cilíndricas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de un punto se relacionan de la siguiente manera:</para>
+<equation id="fs-id1163723864707" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>x</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>r</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Estas ecuaciones se utilizan para convertir de</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>y</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>r</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>coordenadas cilíndricas a coordenadas</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>z</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>z</m:mi></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>rectangulares.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="center"><m:mtext>y</m:mtext></m:mtd><m:mtd/><m:mtd/><m:mtd/><m:mtd/></m:mtr><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Estas ecuaciones se utilizan para convertir de</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mtext>tan</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mi>y</m:mi><m:mi>x</m:mi></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>coordenadas rectangulares a coordenadas</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>z</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>z</m:mi></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>rectangulares.</m:mtext></m:mtd></m:mtr></m:mtable></m:math></equation>
+</note>
+<para id="fs-id1163723656797">Al igual que cuando hablamos de la conversión de coordenadas rectangulares a coordenadas polares en dos dimensiones, hay que tener en cuenta que la ecuación <m:math><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>y</m:mi><m:mi>x</m:mi></m:mfrac></m:mrow></m:math> tiene infinidad de soluciones. Sin embargo, si restringimos <m:math><m:mi>θ</m:mi></m:math> a valores entre <m:math><m:mrow><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces podemos hallar una solución única, basada en el cuadrante del plano <emphasis effect="italics">xy</emphasis> en el que se encuentra el punto original <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math>. Observe que, si <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces el valor de <m:math><m:mi>θ</m:mi></m:math> es <m:math><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> o <m:math><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> en función del valor de <m:math><m:mrow><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1163724079531">Observe que estas ecuaciones se derivan de las propiedades de los triángulos rectángulos. Para verlo de manera fácil, considere el punto <m:math><m:mi>P</m:mi></m:math> en el plano <emphasis effect="italics">xy</emphasis> con coordenadas rectangulares <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y con coordenadas cilíndricas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> como se muestra en la siguiente figura.</para>
+<figure id="CNX_Calc_Figure_12_07_002">
+<media id="fs-id1163723948912" alt="Esta figura es el primer cuadrante del sistema de coordenadas rectangulares. Hay un punto marcado &quot;P = (x, y, 0) = (r, theta, 0)”. Existe un segmento lineal desde el origen hasta el punto P. Este segmento lineal está marcado como “r”. El ángulo entre el eje de la x y el segmento lineal está marcado como “theta”. También hay un segmento lineal, marcado &quot;y&quot;, desde P hasta el eje de la x. Forma un triángulo rectángulo.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_002.jpg"/>
+</media>
+<caption>El teorema de Pitágoras proporciona la ecuación <m:math><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math> Las relaciones de triángulo rectángulo nos indican que <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mrow><m:mi>y</m:mi><m:mtext>/</m:mtext><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:mrow></m:math></caption>
+</figure>
+<para id="fs-id1163723986878">Consideremos las diferencias entre las coordenadas rectangulares y cilíndricas al observar las superficies generadas cuando cada una de las coordenadas se mantiene constante. Si <m:math><m:mi>c</m:mi></m:math> es una constante, entonces en las coordenadas rectangulares, las superficies de la forma <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> o <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> son todas unos planos. Los planos de estas formas son paralelos al plano <emphasis effect="italics">yz</emphasis>, al plano <emphasis effect="italics">xz</emphasis> y al plano <emphasis effect="italics">xy</emphasis>, respectivamente. Cuando convertimos a coordenadas cilíndricas, la coordenada <emphasis effect="italics">z</emphasis> no cambia. Por lo tanto, en las coordenadas cilíndricas, las superficies de la forma <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> son planos paralelos al plano <emphasis effect="italics">xy</emphasis>. Ahora, pensemos en superficies de la forma <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math> Los puntos de estas superficies están a una distancia fija del eje de la <emphasis effect="italics">z</emphasis>. En otras palabras, estas superficies son cilindros circulares verticales. Por último, ¿qué pasa con <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>?</m:mo></m:mrow></m:math> Los puntos de una superficie de la forma <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> están en un ángulo fijo con respecto al eje de la <emphasis effect="italics">x</emphasis>, lo que nos da un semiplano que comienza en el eje de la <emphasis effect="italics">z</emphasis> (<link target-id="CNX_Calc_Figure_12_07_003"/> y <link target-id="CNX_Calc_Figure_12_07_004"/>).</para>
+<figure id="CNX_Calc_Figure_12_07_003">
+<media id="fs-id1163723632990" alt="Esta figura tiene tres imágenes. La primera imagen es un plano en el sistema de coordenadas tridimensional. Es paralelo al plano y z, donde x = c. La segunda imagen es un plano en el sistema de coordenadas tridimensional. Es paralelo al plano x z donde y = c. La tercera imagen es un plano en el sistema de coordenadas tridimensional, donde z = c.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_017.jpg"/>
+</media>
+<caption>En coordenadas rectangulares, (a) las superficies de la forma <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> son planos paralelos al plano <emphasis effect="italics">yz</emphasis>, (b) las superficies de la forma <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> son planos paralelos al plano <emphasis effect="italics">xz</emphasis>, y (c) las superficies de la forma <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> son planos paralelos al plano <emphasis effect="italics">xy</emphasis>.</caption>
+</figure>
+<figure id="CNX_Calc_Figure_12_07_004">
+<media id="fs-id1163723989280" alt="Esta figura tiene tres imágenes. La primera imagen es un cilindro circular derecho en el sistema de coordenadas tridimensional. Tiene el eje de la z en el centro. La segunda imagen es un plano en el sistema de coordenadas tridimensional. Es vertical con el eje de la z en un borde. La tercera imagen es un plano en el sistema de coordenadas tridimensional, donde z = c.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_018.jpg"/>
+</media>
+<caption>En las coordenadas cilíndricas, (a) las superficies de la forma <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> son cilindros verticales de radio <m:math><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo></m:mrow></m:math> (b) las superficies de la forma <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> son semiplanos en ángulo <m:math><m:mi>θ</m:mi></m:math> desde el eje de la <emphasis effect="italics">x</emphasis>, y (c) las superficies de la forma <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> son planos paralelos al plano <emphasis effect="italics">xy</emphasis>.</caption>
+</figure>
+<example id="fs-id1163723767231">
+<exercise id="fs-id1163723287888">
+<problem id="fs-id1163723225945">
+<title>Convertir de coordenadas cilíndricas a rectangulares</title>
+<para id="fs-id1163723758758">Marque el punto con coordenadas cilíndricas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mo>,</m:mo><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>−2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y exprese su ubicación en coordenadas rectangulares.</para>
+</problem>
+<solution id="fs-id1163724049133">
+<para id="fs-id1163724079613">La conversión de coordenadas cilíndricas a coordenadas rectangulares requiere una simple aplicación de las ecuaciones enumeradas en <link target-id="fs-id1163723500624"/>:</para>
+<equation id="fs-id1163723140262" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>x</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>r</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>−2</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>y</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>r</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>z</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>−2.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1163723199277">El punto con coordenadas cilíndricas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mo>,</m:mo><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>−2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> tiene coordenadas rectangulares <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−2</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>,</m:mo><m:mn>−2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> (vea la siguiente figura).</para>
+<figure id="CNX_Calc_Figure_12_07_005">
+<media id="fs-id1163724072785" alt="Esta figura es el sistema de coordenadas tridimensional. Tiene un punto donde r = 4, z = -2 y theta = 2 pi /3.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_003.jpg"/>
+</media>
+<caption>La proyección del punto en el plano <emphasis effect="italics">xy</emphasis> es de 4 unidades desde el origen. La línea que va del origen a la proyección del punto forma un ángulo de <m:math><m:mrow><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> con el eje <emphasis effect="italics">x</emphasis> positivo. El punto se encuentra <m:math><m:mn>2</m:mn></m:math> unidades por debajo del plano <emphasis effect="italics">xy</emphasis>.</caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1163723210095" class="checkpoint">
+<exercise id="fs-id1163724045592">
+<problem id="fs-id1163724164467">
+<para id="fs-id1163724038055">El punto <m:math><m:mi>R</m:mi></m:math> tiene las coordenadas cilíndricas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>5</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math>. Grafique <m:math><m:mi>R</m:mi></m:math> y describa su ubicación en el espacio con coordenadas rectangulares o cartesianas.</para>
+</problem>
+<solution id="fs-id1163723726188">
+<para id="fs-id1163723726992">Las coordenadas rectangulares del punto son <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>5</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>5</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math><newline/>
+<media id="fs-id1163723168627" alt="Esta figura es el sistema tridimensional de coordenadas. Hay un punto marcado “(5, pi/6, 4)”. El punto está situado arriba de un segmento lineal en el plano x y marcado como r = 5 que está a pi/6 grados del eje de la x. La distancia del plano x y al punto está marcada como “z = 4”.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_004.jpg"/>
+</media></para>
+</solution>
+<commentary id="fs-id1163724052672" type="hint">
+<title>Pista:</title>
+<para id="fs-id1163723955644">las dos primeras componentes coinciden con las coordenadas polares del punto en el plano <emphasis effect="italics">xy</emphasis>.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1163723086795">Si este proceso le resulta familiar, hay una razón para esto. Este es exactamente el mismo proceso que seguimos en <link class="target-chapter" document="m53831">Introducción a las ecuaciones paramétricas y coordenadas polares</link> para convertir de coordenadas polares a coordenadas rectangulares bidimensionales.</para>
+<example id="fs-id1163723335773">
+<exercise id="fs-id1163724048668">
+<problem id="fs-id1163724036112">
+<title>Convertir de coordenadas rectangulares a cilíndricas</title>
+<para id="fs-id1163723775851">Convierta las coordenadas rectangulares <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>−3</m:mn><m:mo>,</m:mo><m:mn>5</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en coordenadas cilíndricas.</para>
+</problem>
+<solution id="fs-id1163724138362">
+<para id="fs-id1163723094403">Utilice el segundo conjunto de ecuaciones de <link target-id="fs-id1163723500624"/> para convertir de coordenadas rectangulares en cilíndricas:</para>
+<equation id="fs-id1163723281411" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>r</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mtext>±</m:mtext><m:msqrt><m:mrow><m:msup><m:mn>1</m:mn><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mo>=</m:mo><m:mtext>±</m:mtext><m:msqrt><m:mrow><m:mn>10</m:mn></m:mrow></m:msqrt><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1163723932354">Elegimos la raíz cuadrada positiva, por lo que <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>10</m:mn></m:mrow></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> Ahora, aplicamos la fórmula para hallar <m:math><m:mrow><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math> En este caso, <m:math><m:mi>y</m:mi></m:math> es negativo y <m:math><m:mi>x</m:mi></m:math> es positivo, lo que significa que debemos seleccionar el valor de <m:math><m:mi>θ</m:mi></m:math> entre <m:math><m:mrow><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> y <m:math><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:mtext>:</m:mtext></m:mrow></m:math></para>
+<equation id="fs-id1163723768190" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mtext>tan</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mi>y</m:mi><m:mi>x</m:mi></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>−3</m:mn></m:mrow><m:mn>1</m:mn></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>θ</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mtext>arctan</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mn>5,03</m:mn><m:mspace width="0.2em"/><m:mtext>rad</m:mtext><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1163724052119">En este caso, las coordenadas <emphasis effect="italics">z</emphasis> son las mismas tanto en las coordenadas rectangulares como en las cilíndricas:</para>
+<equation id="fs-id1163723690559" class="unnumbered"><label/><m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1163724079567">El punto con las coordenadas rectangulares <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>−3</m:mn><m:mo>,</m:mo><m:mn>5</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> tiene coordenadas cilíndricas aproximadamente iguales a <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msqrt><m:mrow><m:mn>10</m:mn></m:mrow></m:msqrt><m:mo>,</m:mo><m:mn>5,03</m:mn><m:mo>,</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1163724016541" class="checkpoint">
+<exercise id="fs-id1163723693689">
+<problem id="fs-id1163723689773">
+<para id="fs-id1163724077402">Convierta los puntos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−8</m:mn><m:mo>,</m:mo><m:mn>8</m:mn><m:mo>,</m:mo><m:mn>−7</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de coordenadas cartesianas en coordenadas cilíndricas.</para>
+</problem>
+<solution id="fs-id1163723887531">
+<para id="fs-id1163723705908"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>8</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>,</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>−7</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1163724014901" type="hint">
+<title>Pista:</title>
+<para id="fs-id1163723884356"><m:math><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>y</m:mi><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1163723880864">El uso de coordenadas cilíndricas es habitual en campos como la física. Los físicos que estudian las cargas eléctricas y los condensadores utilizados para almacenarlas han descubierto que estos sistemas a veces tienen una simetría cilíndrica. Estos sistemas tienen complicadas ecuaciones de modelado en el sistema de coordenadas cartesianas, lo que dificulta su descripción y análisis. A menudo, las ecuaciones se expresan en términos más sencillos mediante las coordenadas cilíndricas. Por ejemplo, el cilindro que se describe en la ecuación <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>25</m:mn></m:mrow></m:math> en el sistema cartesiano se representa mediante la ecuación cilíndrica <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<example id="fs-id1163723093082">
+<exercise id="fs-id1163723139300">
+<problem id="fs-id1163723755845">
+<title>Identificar superficies en el sistema de coordenadas cilíndricas</title>
+<para id="fs-id1163723479630">Describa las superficies con las ecuaciones cilíndricas dadas.</para>
+<list id="fs-id1163723206980" list-type="enumerated" number-style="lower-alpha">
+<item><m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>9</m:mn></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>r</m:mi></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1163724049225">
+<list id="fs-id1163723569688" list-type="enumerated" number-style="lower-alpha">
+<item>Cuando el ángulo <m:math><m:mi>θ</m:mi></m:math> se mantiene constante mientras <m:math><m:mi>r</m:mi></m:math> y <m:math><m:mi>z</m:mi></m:math> pueden variar, el resultado es un semiplano (vea la siguiente figura).<newline/>
+<figure id="CNX_Calc_Figure_12_07_007">
+<media id="fs-id1163723497714" alt="Esta figura es el primer cuadrante del sistema tridimensional de coordenadas. Hay un plano unido al eje de la z, que divide el plano x y con una línea diagonal. El ángulo entre el eje de la x y este plano es pi/4.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_005.jpg"/>
+</media>
+<caption>En las coordenadas polares, la ecuación <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>4</m:mn></m:mrow></m:math> describe el rayo que se extiende en diagonal a través del primer cuadrante. En tres dimensiones, esta misma ecuación describe un semiplano.</caption>
+</figure>
+</item>
+<item>Sustituya <m:math><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> en la ecuación <m:math><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>9</m:mn></m:mrow></m:math> para expresar la forma rectangular de la ecuación <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>9</m:mn><m:mo>.</m:mo></m:mrow></m:math> Esta ecuación describe una esfera centrada en el origen con radio <m:math><m:mn>3</m:mn></m:math> (vea la siguiente figura).<newline/>
+<figure id="CNX_Calc_Figure_12_07_008">
+<media id="fs-id1163723755454" alt="Esta figura es una esfera. Tiene el eje de la z que atraviesa el centro verticalmente. El punto de intersección con el eje de la z y la esfera es (0, 0, 3). También está el eje de la y, que atraviesa el centro de la esfera en horizontal. La intersección de la esfera con el eje de la y es el punto (0, 3, 0).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_006.jpg"/>
+</media>
+<caption>La esfera centrada en el origen con radio <m:math><m:mn>3</m:mn></m:math> se describe mediante la ecuación cilíndrica <m:math><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>9</m:mn><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+</item>
+<item>Para describir la superficie definida por la ecuación <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mo>,</m:mo></m:mrow></m:math> vale la pena examinar las trazas paralelas al plano <emphasis effect="italics">xy</emphasis>. Por ejemplo, la traza en el plano <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> es el círculo <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> la traza en el plano <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math> es el círculo <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> y así sucesivamente. Cada traza es un círculo. Dado que el valor de <m:math><m:mi>z</m:mi></m:math> aumenta, el radio del círculo también lo hace. La superficie resultante es un cono (vea la siguiente figura)<newline/>
+<figure id="CNX_Calc_Figure_12_07_009">
+<media id="fs-id1163724060509" alt="Esta figura es el sistema tridimensional de coordenadas. Tiene un cono elíptico con el eje de la z en el centro. Los dos conos, uno al derecho y el otro al revés, se encuentran en el origen.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_007.jpg"/>
+</media>
+<caption>Las trazas en planos paralelos al plano <emphasis effect="italics">xy</emphasis> son círculos. El radio de los círculos aumenta a medida que <m:math><m:mi>z</m:mi></m:math> lo hace.</caption>
+</figure>
+</item></list>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1163724072725" class="checkpoint">
+<exercise id="fs-id1163724017856">
+<problem id="fs-id1163723724949">
+<para id="fs-id1163724164478">Describa la superficie con la ecuación cilíndrica <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723566483">
+<para id="fs-id1163723353439">Esta superficie es un cilindro de radio <m:math><m:mrow><m:mn>6</m:mn><m:mo>.</m:mo></m:mrow></m:math><newline/>
+<media id="fs-id1163724079597" alt="Esta figura es un cilindro circular recto. Está en posición vertical con el eje de la z por el centro. Se encuentra en la parte superior del plano x y.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_008.jpg"/>
+</media></para>
+</solution>
+<commentary id="fs-id1163724040438" type="hint">
+<title>Pista:</title>
+<para id="fs-id1163723110169">Las componentes <m:math><m:mi>θ</m:mi></m:math> y <m:math><m:mi>z</m:mi></m:math> de los puntos de la superficie pueden tomar cualquier valor.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1163723526079">
+<title>Coordenadas esféricas</title>
+<para id="fs-id1163723669991">En el sistema de coordenadas cartesianas, la ubicación de un punto en el espacio se describe mediante una triple ordenada en el que cada coordenada representa una distancia. En el sistema de coordenadas cilíndricas, la ubicación de un punto en el espacio se describe mediante dos distancias <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y una medida de ángulo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>θ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> En el sistema de coordenadas esféricas, volvemos a utilizar una triple ordenada para ubicar un punto en el espacio. En este caso, la triple describe una distancia y dos ángulos. Las coordenadas esféricas facilitan la descripción de una esfera, al igual que las coordenadas cilíndricas facilitan la descripción de un cilindro. Las líneas de cuadrícula para las coordenadas esféricas se basan en las medidas de los ángulos, como las de las coordenadas polares.</para>
+<note id="fs-id1163724078135">
+<title>Definición</title>
+<para id="fs-id1163723830824">En el <term>sistema de coordenadas esféricas</term>, un punto <m:math><m:mi>P</m:mi></m:math> en el espacio (<link target-id="CNX_Calc_Figure_12_07_011"/>) está representado por la triple ordenada <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>ρ</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>φ</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> donde</para>
+<list id="fs-id1163723954970" list-type="bulleted" bullet-style="bullet">
+<item><m:math><m:mi>ρ</m:mi></m:math> (la letra griega rho) es la distancia entre <m:math><m:mi>P</m:mi></m:math> y el origen <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>ρ</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo></m:mrow></m:math></item>
+<item><m:math><m:mi>θ</m:mi></m:math> es el mismo ángulo que se utiliza para ubicar las coordenadas cilíndricas;</item>
+<item><m:math><m:mi>φ</m:mi></m:math> (la letra griega phi) es el ángulo formado por el eje de la <emphasis effect="italics">z</emphasis> positivo y el segmento lineal <m:math><m:mrow><m:mover accent="true"><m:mrow><m:mi>O</m:mi><m:mi>P</m:mi></m:mrow><m:mo stretchy="true">—</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>O</m:mi></m:math> es el origen y <m:math><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>φ</m:mi><m:mo>≤</m:mo><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</note>
+<figure id="CNX_Calc_Figure_12_07_011">
+<media id="fs-id1163723567684" alt="Esta figura es el primer cuadrante del sistema tridimensional de coordenadas. Tiene un punto marcado &quot;(x, y, z) = (rho, theta, phi)&quot;. Hay un segmento lineal desde el origen hasta el punto. Está marcado como &quot;rho&quot;. El ángulo entre este segmento lineal y el eje de la z es phi. Hay un segmento lineal en el plano x y desde el origen hasta la sombra del punto. Este segmento está marcado como &quot;r&quot;. El ángulo entre el eje x y r es theta.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_009.jpg"/>
+</media>
+<caption>La relación entre las coordenadas esféricas, rectangulares y cilíndricas.</caption>
+</figure>
+<para id="fs-id1163724023793">Por convención, el origen se representa como <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en las coordenadas esféricas.</para>
+<note id="fs-id1163723844895" class="theorem">
+<title>Conversión entre coordenadas esféricas, cilíndricas y rectangulares</title>
+<para id="fs-id1163723772032">Las coordenadas rectangulares <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y las coordenadas esféricas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>ρ</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>φ</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de un punto se relacionan de la siguiente manera:</para>
+<equation id="fs-id1163723216769" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>x</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Estas ecuaciones se utilizan para convertir de</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>y</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>coordenadas esféricas en coordenadas</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>z</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>rectangulares.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="center"><m:mtext>y</m:mtext></m:mtd><m:mtd/><m:mtd/><m:mtd/><m:mtd/></m:mtr><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>ρ</m:mi><m:mn>2</m:mn></m:msup></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Estas ecuaciones se utilizan para convertir de</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mtext>tan</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mi>y</m:mi><m:mi>x</m:mi></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>coordenadas rectangulares en coordenadas</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>φ</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mtext>arccos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>z</m:mi><m:mrow><m:msqrt><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>rectangulares.</m:mtext></m:mtd></m:mtr></m:mtable></m:math></equation><para id="fs-id1163723968448">Si un punto tiene coordenadas cilíndricas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> entonces estas ecuaciones definen la relación entre las coordenadas cilíndricas y las esféricas.</para>
+<equation id="fs-id1163723563904" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>r</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Estas ecuaciones se utilizan para convertir de</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>θ</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>θ</m:mi></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>coordenadas esféricas en coordenadas</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>z</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>rectangulares.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="center"><m:mtext>y</m:mtext></m:mtd><m:mtd/><m:mtd/><m:mtd/><m:mtd/></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>ρ</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:msqrt><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Estas ecuaciones se utilizan para convertir de</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>θ</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>θ</m:mi></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>coordenadas cilíndricas en coordenadas</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>φ</m:mi></m:mtd><m:mtd columnalign="center"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mtext>arccos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>z</m:mi><m:mrow><m:msqrt><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>rectangulares.</m:mtext></m:mtd></m:mtr></m:mtable></m:math></equation></note>
+<para id="fs-id1163723222256">Las fórmulas para convertir las coordenadas esféricas en coordenadas rectangulares lucen complejas, pero son aplicaciones sencillas de la trigonometría. Al mirar la <link target-id="CNX_Calc_Figure_12_07_012"/>, es fácil ver que <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Entonces, con respecto al triángulo en el plano <emphasis effect="italics">xy</emphasis> con <m:math><m:mi>r</m:mi></m:math> como su hipotenusa, tenemos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math> La derivación de la fórmula de <m:math><m:mi>y</m:mi></m:math> es similar. La <link target-id="CNX_Calc_Figure_12_07_009"/> también muestra que <m:math><m:mrow><m:msup><m:mi>ρ</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Resolviendo esta última ecuación para <m:math><m:mi>φ</m:mi></m:math> y, a continuación, sustituyendo <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:msqrt><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:math> (a partir de la primera ecuación) da como resultado <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mtext>arccos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>z</m:mi><m:mrow><m:msqrt><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Además, observe que, al igual que antes, hay que tener cuidado al utilizar la fórmula <m:math><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>y</m:mi><m:mi>x</m:mi></m:mfrac></m:mrow></m:math> para elegir el valor correcto de <m:math><m:mrow><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_12_07_012">
+<media id="fs-id1163723200709" alt="Esta figura es el primer cuadrante del sistema tridimensional de coordenadas. Tiene un punto marcado &quot;(x, y, z) = (r, theta, z) = (rho, theta, phi)&quot;. Hay un segmento lineal desde el origen hasta el punto. Está marcado como &quot;rho&quot;. El ángulo entre este segmento lineal y el eje de la z es phi. Hay un segmento lineal en el plano x y desde el origen hasta la sombra del punto. Este segmento está marcado como &quot;r&quot;. El ángulo entre el eje x y r es theta. La distancia de r al punto está marcada como &quot;z”.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_010.jpg"/>
+</media>
+<caption>Las ecuaciones que convierten de un sistema a otro se derivan de relaciones de triángulo rectángulo.</caption>
+</figure>
+<para id="fs-id1163723569870">Al igual que hicimos con las coordenadas cilíndricas, consideremos las superficies que se generan cuando cada una de las coordenadas se mantiene constante. Supongamos que <m:math><m:mi>c</m:mi></m:math> es una constante, y consideremos las superficies de la forma <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math> Los puntos de estas superficies están a una distancia fija del origen y forman una esfera. La coordenada <m:math><m:mi>θ</m:mi></m:math> en el sistema de coordenadas esféricas es la misma que en el sistema de coordenadas cilíndricas, por lo que las superficies de la forma <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> son semiplanos, como antes. Por último, consideremos las superficies de la forma <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math> Los puntos de estas superficies tienen un ángulo fijo respecto al eje de la <emphasis effect="italics">z</emphasis> y forman un semicono (<link target-id="CNX_Calc_Figure_12_07_013"/>).</para><figure id="CNX_Calc_Figure_12_07_013">
+<media id="fs-id1163723948410" alt="Esta figura tiene tres imágenes. La primera imagen es una esfera centrada en el sistema de coordenadas tridimensional. La segunda imagen es un plano vertical con una arista en el eje de la z, en el sistema tridimensional de coordenadas. La tercera imagen es un cono elíptico con centro en el origen del sistema tridimensional de coordenadas.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_019.jpg"/>
+</media>
+<caption>En las coordenadas esféricas, las superficies de la forma <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> son esferas de radio <m:math><m:mi>ρ</m:mi></m:math> (a), superficies de la forma <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> son semiplanos en ángulo <m:math><m:mi>θ</m:mi></m:math> desde el eje de la <emphasis effect="italics">x</emphasis> (b), y superficies de la forma <m:math><m:mrow><m:mi>ϕ</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> son semiconos en ángulo <m:math><m:mi>ϕ</m:mi></m:math> desde el eje de la <emphasis effect="italics">z</emphasis> (c).</caption>
+</figure>
+<example id="fs-id1163724074684">
+<exercise id="fs-id1163724058060">
+<problem id="fs-id1163724058062">
+<title>Convertir de coordenadas esféricas</title>
+<para id="fs-id1163724017759">Trace el punto con coordenadas esféricas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>8</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y exprese su ubicación en coordenadas rectangulares y cilíndricas.</para>
+</problem>
+<solution id="fs-id1163723236540">
+<para id="fs-id1163723236542">Utilice las ecuaciones en <link target-id="fs-id1163723844895"/> para convertir entre coordenadas esféricas y cilíndricas (<link target-id="CNX_Calc_Figure_12_07_014"/>):</para>
+<equation id="fs-id1163723567222" class="unnumbered"><label/><m:math><m:mtable><m:mtr/><m:mtr/><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mn>8</m:mn><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>8</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>2</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mn>8</m:mn><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mtext>seno</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>8</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mfrac><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>=</m:mo><m:mn>8</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>8</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<figure id="CNX_Calc_Figure_12_07_014">
+<media id="fs-id1163724049161" alt="Esta figura es el primer cuadrante del sistema tridimensional de coordenadas. Tiene un punto marcado &quot;(8, pi/3, pi/6)&quot;. Hay un segmento lineal desde el origen hasta el punto. Está marcado como &quot;rho = 8”. El ángulo entre este segmento lineal y el eje de la z está marcado como &quot;phi = pi/6”. Hay un segmento lineal en el plano x y desde el origen hasta la sombra del punto. El ángulo entre el eje x y r está marcado como &quot;theta = pi/3”.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_011.jpg"/>
+</media>
+<caption>La proyección del punto en el plano <emphasis effect="italics">xy</emphasis> es <m:math><m:mn>4</m:mn></m:math> unidades desde el origen. La línea que va del origen a la proyección del punto forma un ángulo de <m:math><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:math> con el eje <emphasis effect="italics">x</emphasis> positivo. El punto se encuentra <m:math><m:mrow><m:mn>4</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow></m:math> unidades sobre el plano <emphasis effect="italics">xy</emphasis>.</caption>
+</figure>
+<para id="fs-id1163724035807">El punto con coordenadas esféricas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>8</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> tiene coordenadas rectangulares <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>,</m:mo><m:mn>4</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1163723242019">Hallar los valores en coordenadas cilíndricas es igualmente sencillo:</para>
+<equation id="fs-id1163724082339" class="unnumbered"><label/><m:math><m:mtable><m:mtr/><m:mtr><m:mtd columnalign="right"><m:mi>r</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>=</m:mo><m:mn>8</m:mn><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>4</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>θ</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>θ</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>z</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>=</m:mo><m:mn>8</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>4</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1163723994378">Así, las coordenadas cilíndricas del punto son <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>4</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1163723967965" class="checkpoint">
+<exercise id="fs-id1163723967968">
+<problem id="fs-id1163723293776">
+<para id="fs-id1163723293778">Trace el punto con coordenadas esféricas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mo>−</m:mo><m:mfrac><m:mrow><m:mn>5</m:mn><m:mi>π</m:mi></m:mrow><m:mn>6</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y describa su ubicación en coordenadas rectangulares y cilíndricas.</para>
+</problem>
+<solution id="fs-id1163724052077"><para id="fs-id1163724052078"><newline/>
+<media id="fs-id1163724052081" alt="Esta figura es del sistema tridimensional de coordenadas. Tiene un punto. Hay un segmento lineal desde el origen hasta el punto. El ángulo entre este segmento lineal y el eje de la z es phi. Hay un segmento lineal en el plano de la x y desde el origen hasta la sombra del punto. El ángulo entre el eje x y rho es theta.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_012.jpg"/>
+</media><newline/> Cartesiano: <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>−</m:mo><m:mfrac><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mo>−</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> cilíndrico: <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mo>−</m:mo><m:mfrac><m:mrow><m:mn>5</m:mn><m:mi>π</m:mi></m:mrow><m:mn>6</m:mn></m:mfrac><m:mo>,</m:mo><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1163724060871" type="hint">
+<title>Pista:</title>
+<para id="fs-id1163723521504">Convertir primero las coordenadas permite ubicar el punto en el espacio más fácilmente.</para>
+</commentary>
+</exercise>
+</note>
+<example id="fs-id1163724042585">
+<exercise id="fs-id1163724042587">
+<problem id="fs-id1163724042589">
+<title>Convertir de coordenadas rectangulares</title>
+<para id="fs-id1163723735522">Convierta las coordenadas rectangulares <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:msqrt><m:mn>6</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> tanto en coordenadas esféricas como en cilíndricas.</para>
+</problem>
+<solution id="fs-id1163724081413">
+<para id="fs-id1163723719347">Comience por convertir las coordenadas rectangulares en esféricas:</para>
+<equation id="fs-id1163723719350" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mtable><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>ρ</m:mi><m:mn>2</m:mn></m:msup></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mn>1</m:mn><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msqrt><m:mn>6</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>8</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>ρ</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>2</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mtd></m:mtr></m:mtable></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtable><m:mtr><m:mtd columnalign="right"><m:mtext>tan</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>−1</m:mn></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>θ</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mtext>arctan</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1163724120398">Dado que <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> entonces, la opción correcta para <m:math><m:mi>θ</m:mi></m:math> es <m:math><m:mrow><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1163723727982">En realidad hay dos formas de identificar <m:math><m:mrow><m:mi>φ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Podemos utilizar la ecuación <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mtext>arccos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>z</m:mi><m:mrow><m:msqrt><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Sin embargo, un enfoque más sencillo es utilizar la ecuación <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Sabemos que <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:msqrt><m:mn>6</m:mn></m:msqrt></m:mrow></m:math> y <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>,</m:mo></m:mrow></m:math> así que</para>
+<equation id="fs-id1163723325144" class="unnumbered"><label/><m:math><m:mrow><m:msqrt><m:mn>6</m:mn></m:msqrt><m:mo>=</m:mo><m:mn>2</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>así que</m:mtext><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:msqrt><m:mn>6</m:mn></m:msqrt></m:mrow><m:mrow><m:mn>2</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></equation>
+<para id="fs-id1163724023218">y, por ende, <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Las coordenadas esféricas del punto son <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>,</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1163724081108">Para hallar las coordenadas cilíndricas del punto, solo necesitamos hallar <m:math><m:mrow><m:mi>r</m:mi><m:mtext>:</m:mtext></m:mrow></m:math></para>
+<equation id="fs-id1163723804093" class="unnumbered"><label/><m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1163723095252">Las coordenadas cilíndricas del punto son <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>,</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:msqrt><m:mn>6</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1163724018907">
+<exercise id="fs-id1163724018909">
+<problem id="fs-id1163724018911">
+<title>Identificar superficies en el sistema de coordenadas esféricas</title>
+<para id="fs-id1163724128608">Describa las superficies con las ecuaciones esféricas dadas.</para>
+<list id="fs-id1163724128611" list-type="enumerated" number-style="lower-alpha">
+<item><m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>5</m:mn><m:mi>π</m:mi></m:mrow><m:mn>6</m:mn></m:mfrac></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1163724069757">
+<list id="fs-id1163724069760" list-type="enumerated" number-style="lower-alpha">
+<item>La variable <m:math><m:mi>θ</m:mi></m:math> representa la medida del mismo ángulo tanto en el sistema de coordenadas cilíndricas como en el de coordenadas esféricas. Los puntos con coordenadas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>ρ</m:mi><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo><m:mi>φ</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se encuentran en el plano que forma el ángulo <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> con el eje <emphasis effect="italics">x</emphasis> positivo. Dado que <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> la superficie que describe la ecuación <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> es el semiplano que se muestra en la <link target-id="CNX_Calc_Figure_12_07_016"/>.<newline/>
+<figure id="CNX_Calc_Figure_12_07_016">
+<media id="fs-id1163724023646" alt="Esta figura es el primer cuadrante del sistema tridimensional de coordenadas. Hay un plano unido al eje de la z, que divide el plano x y con una línea diagonal. El ángulo entre el eje de la x y este plano es theta = pi/3.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_020.jpg"/>
+</media>
+<caption>La superficie que describe la ecuación <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> es un semiplano.</caption>
+</figure>
+</item>
+<item>La ecuación <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>5</m:mn><m:mi>π</m:mi></m:mrow><m:mn>6</m:mn></m:mfrac></m:mrow></m:math> describe todos los puntos del sistema de coordenadas esféricas que se encuentran en una línea desde el origen que forma un ángulo que mide <m:math><m:mrow><m:mfrac><m:mrow><m:mn>5</m:mn><m:mi>π</m:mi></m:mrow><m:mn>6</m:mn></m:mfrac></m:mrow></m:math> rad con el eje <emphasis effect="italics">z</emphasis> positivo. Estos puntos forman un semicono (<link target-id="CNX_Calc_Figure_12_07_017"/>). Dado que solo hay un valor para <m:math><m:mi>φ</m:mi></m:math> que se mide desde el eje <emphasis effect="italics">z</emphasis> positivo, no obtenemos el cono completo (con dos partes).<newline/>
+<figure id="CNX_Calc_Figure_12_07_017">
+<media id="fs-id1163723568834" alt="Esta figura es la parte superior de un cono elíptico. La parte de abajo del cono está en el origen del sistema tridimensional de coordenadas.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_014.jpg"/>
+</media>
+<caption>La ecuación <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>5</m:mn><m:mi>π</m:mi></m:mrow><m:mn>6</m:mn></m:mfrac></m:mrow></m:math> describe un cono.</caption>
+</figure><newline/> Para hallar la ecuación en coordenadas rectangulares, utilice la ecuación <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mtext>arccos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>z</m:mi><m:mrow><m:msqrt><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math><newline/>
+<equation id="fs-id1163723887595" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mfrac><m:mrow><m:mn>5</m:mn><m:mi>π</m:mi></m:mrow><m:mn>6</m:mn></m:mfrac></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mtext>arccos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>z</m:mi><m:mrow><m:msqrt><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mfrac><m:mrow><m:mn>5</m:mn><m:mi>π</m:mi></m:mrow><m:mn>6</m:mn></m:mfrac></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mi>z</m:mi><m:mrow><m:msqrt><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mo>−</m:mo><m:mfrac><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mn>2</m:mn></m:mfrac></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mi>z</m:mi><m:mrow><m:msqrt><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mrow><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>4</m:mn></m:mfrac></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>−</m:mo><m:mfrac><m:mrow><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>4</m:mn></m:mfrac></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>0.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation><newline/> Esta es la ecuación de un cono centrado en el eje de la <emphasis effect="italics">z</emphasis>.</item>
+<item>La ecuación <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math> describe el conjunto de todos los puntos <m:math><m:mn>6</m:mn></m:math> unidades desde el origen, una esfera de radio <m:math><m:mn>6</m:mn></m:math> (<link target-id="CNX_Calc_Figure_12_07_018"/>)<newline/>
+<figure id="CNX_Calc_Figure_12_07_018">
+<media id="fs-id1163724080858" alt="Esta figura es una esfera. El eje de la z pasa verticalmente por el centro e interseca la esfera en (0, 0, 6). El eje de la y pasa horizontalmente por el centro e interseca la esfera en (0, 6, 0).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_015.jpg"/>
+</media>
+<caption>La ecuación <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math> describe una esfera de radio <m:math><m:mrow><m:mn>6</m:mn><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+</item>
+<item>Para identificar esta superficie, convierta la ecuación de coordenadas esféricas en rectangulares, mediante las ecuaciones <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>ρ</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mtext>:</m:mtext></m:mrow></m:math><newline/>
+<equation id="fs-id1163724073744" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>ρ</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi></m:mtd><m:mtd/><m:mtd/><m:mtd/></m:mtr><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>ρ</m:mi><m:mn>2</m:mn></m:msup></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Multiplique ambos lados de la ecuación por</m:mtext><m:mspace width="0.2em"/><m:mi>ρ</m:mi><m:mo>.</m:mo></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>y</m:mi></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Sustituya las variables rectangulares mediante las ecuaciones anteriores.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>0</m:mn></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Reste</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mspace width="0.2em"/><m:mtext>de ambos lados de la ecuación.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Complete el cuadrado.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>y</m:mi><m:mo>−</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>.</m:mo></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Reescriba los términos medios como un cuadrado perfecto.</m:mtext></m:mtd></m:mtr></m:mtable></m:math></equation><newline/> La ecuación describe una esfera centrada en el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> con radio <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1163723570244" class="checkpoint">
+<exercise id="fs-id1163723523033">
+<problem id="fs-id1163723523035">
+<para id="fs-id1163723523037">Describa las superficies definidas por las siguientes ecuaciones.</para>
+<list id="fs-id1163723523040" list-type="enumerated" number-style="lower-alpha">
+<item><m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mn>13</m:mn></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1163723957293">
+<para id="fs-id1163723957295">a. Este es el conjunto de todos los puntos <m:math><m:mrow><m:mn>13</m:mn></m:mrow></m:math> unidades desde el origen. Este conjunto forma una esfera de radio <m:math><m:mrow><m:mn>13</m:mn><m:mo>.</m:mo></m:mrow></m:math> b. Este conjunto de puntos forma un semiplano. El ángulo entre el semiplano y el eje <emphasis effect="italics">x</emphasis> positivo es <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> c. Supongamos que <m:math><m:mi>P</m:mi></m:math> es un punto en esta superficie. El vector de posición de este punto forma un ángulo de <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac></m:mrow></m:math> con el eje <emphasis effect="italics">z</emphasis> positivo, lo que significa que los puntos más cercanos al origen están más cerca del eje. Estos puntos forman un semicono.</para>
+</solution>
+<commentary id="fs-id1163723500190" type="hint">
+<title>Pista:</title>
+<para id="fs-id1163723500197">Piense en lo que representa cada componente y en lo que significa mantenerla constante.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1163724023236">Las coordenadas esféricas son útiles para analizar sistemas que tienen cierto grado de simetría en torno a un punto, como el volumen del espacio dentro de un estadio abovedado o la rapidez del viento en la atmósfera de un planeta. Una esfera que tiene la ecuación cartesiana <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>c</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> tiene la ecuación sencilla <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> en las coordenadas esféricas.</para>
+<para id="fs-id1163724023526">En geografía, la latitud y la longitud se utilizan para señalar ubicaciones en la superficie de la Tierra, como se muestra en la <link target-id="CNX_Calc_Figure_12_07_019"/>. Aunque la Tierra no es una esfera perfecta, utilizamos coordenadas esféricas para comunicar la ubicación de los puntos en la Tierra. Supongamos que la Tierra tiene la forma de una esfera con radio de <m:math><m:mrow><m:mn>4000</m:mn></m:mrow></m:math> millas. Expresamos las medidas de los ángulos en grados y no en radianes, porque la latitud y la longitud se miden en grados.</para>
+<figure id="CNX_Calc_Figure_12_07_019">
+<media id="fs-id1163723795827" alt="Esta figura es una imagen de la Tierra. Tiene marcado el primer meridiano, que es un círculo en la superficie que abarca la Tierra verticalmente a través de los polos. También tiene marcado el ecuador, que es un círculo horizontal que abarca la Tierra. Tres vectores se extienden desde el centro de la Tierra. Dos de ellos se extienden hasta el ecuador e indican una medida de longitud. Dos de ellos se extienden hasta un círculo polar vertical e indican una medida de latitud.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_016.jpg"/>
+</media>
+<caption>En el sistema de latitud-longitud, los ángulos ubican a un punto de la Tierra en relación con el ecuador y el primer meridiano.</caption>
+</figure>
+<para id="fs-id1163723236500">Supongamos que el centro de la Tierra es el centro de la esfera, donde la raya desde el centro a través del Polo Norte representa el eje <emphasis effect="italics">z</emphasis> positivo. El primer meridiano representa la traza de la superficie en su intersección con el plano <emphasis effect="italics">xz</emphasis>. El ecuador es la traza de la esfera que interseca el plano <emphasis effect="italics">xy</emphasis>.</para>
+<example id="fs-id1163724072588">
+<exercise id="fs-id1163724072590">
+<problem id="fs-id1163724072593">
+<title>Convertir latitud y longitud en coordenadas esféricas</title>
+<para id="fs-id1163724072598">La latitud de Columbus, Ohio, es <m:math><m:mrow><m:mn>40</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> N y la longitud es <m:math><m:mrow><m:mn>83</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> O, lo que significa que Columbus está <m:math><m:mrow><m:mn>40</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> al norte del ecuador. Imagine una raya desde el centro de la Tierra a través de Columbus y una raya desde el centro de la Tierra a través del ecuador directamente al sur de Columbus. La medida del ángulo que forman las rayas es <m:math><m:mrow><m:mn>40</m:mn><m:mtext>°</m:mtext><m:mo>.</m:mo></m:mrow></m:math> De la misma manera, midiendo desde el primer meridiano, Columbus se encuentra <m:math><m:mrow><m:mn>83</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> al oeste. Exprese la ubicación de Columbus en coordenadas esféricas.</para>
+</problem>
+<solution id="fs-id1163723570197">
+<para id="fs-id1163723570199">El radio de la Tierra es <m:math><m:mrow><m:mn>4000</m:mn></m:mrow></m:math> millas, así que <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mn>4000</m:mn><m:mo>.</m:mo></m:mrow></m:math> La intersección del primer meridiano con el ecuador se encuentra en el eje <emphasis effect="italics">x</emphasis> positivo. El movimiento hacia el oeste se describe entonces con medidas de ángulo negativo, lo que demuestra que <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mn>−83</m:mn><m:mtext>°</m:mtext><m:mo>,</m:mo></m:mrow></m:math> Dado que Columbus está <m:math><m:mrow><m:mn>40</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> al norte del ecuador, se encuentra <m:math><m:mrow><m:mn>50</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> al sur del Polo Norte, así que <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mn>50</m:mn><m:mtext>°</m:mtext><m:mo>.</m:mo></m:mrow></m:math> En coordenadas esféricas, Columbus se encuentra en el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4000</m:mn><m:mo>,</m:mo><m:mn>−83</m:mn><m:mtext>°</m:mtext><m:mo>,</m:mo><m:mn>50</m:mn><m:mtext>°</m:mtext></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1163723183892" class="checkpoint">
+<exercise id="fs-id1163723183896">
+<problem id="fs-id1163723183898">
+<para id="fs-id1163723567241">Sídney, Australia, está a <m:math><m:mrow><m:mn>34</m:mn><m:mtext>°</m:mtext><m:mtext>S</m:mtext></m:mrow></m:math> y <m:math><m:mrow><m:mn>151</m:mn><m:mtext>°</m:mtext><m:mtext>E</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Exprese la ubicación de Sydney en coordenadas esféricas.</para>
+</problem>
+<solution id="fs-id1163723795779">
+<para id="fs-id1163723795781"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4000</m:mn><m:mo>,</m:mo><m:mn>151</m:mn><m:mtext>°</m:mtext><m:mo>,</m:mo><m:mn>124</m:mn><m:mtext>°</m:mtext></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1163723523277" type="hint">
+<title>Pista:</title>
+<para id="fs-id1163723523283">Dado que Sydney se encuentra al sur del ecuador, tenemos que sumar <m:math><m:mrow><m:mn>90</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> para hallar el ángulo medido desde el eje <emphasis effect="italics">z</emphasis> positivo.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1163724119527">Las coordenadas cilíndricas y esféricas nos dan la flexibilidad de seleccionar un sistema de coordenadas que sea apropiado para el problema en cuestión. Con la elección meditada del sistema de coordenadas, es mucho más fácil resolver un problema, mientras que una mala elección conduce a cálculos innecesariamente complejos. En el siguiente ejemplo, examinamos varios problemas y analizamos cómo seleccionar el mejor sistema de coordenadas para cada uno de ellos.</para>
+<example id="fs-id1163724119534">
+<exercise id="fs-id1163724119536">
+<problem id="fs-id1163724119538">
+<title>Elegir el mejor sistema de coordenadas</title>
+<para id="fs-id1163723217907">En cada una de las siguientes situaciones, determinamos qué sistema de coordenadas es el más adecuado y describimos cómo orientaríamos los ejes de las coordenadas. Podría haber más de una respuesta correcta sobre cómo deben orientarse los ejes, pero seleccionamos una orientación que tenga sentido en el contexto del problema. <emphasis effect="italics">Nota</emphasis>: No hay suficiente información para establecer o resolver estos problemas; simplemente seleccionamos el sistema de coordenadas (<link target-id="CNX_Calc_Figure_12_07_021"/>).</para>
+<list id="fs-id1163723217922" list-type="enumerated" number-style="lower-alpha">
+<item>Halle el centro de gravedad de una bola de boliche.</item>
+<item>Determine la velocidad de un submarino sometido a una corriente oceánica.</item>
+<item>Calcule la presión en un depósito de agua cónico.</item>
+<item>Halle el volumen de petróleo que fluye por un oleoducto.</item>
+<item>Determine la cantidad de cuero necesaria para hacer un balón de fútbol<newline/>
+<figure id="CNX_Calc_Figure_12_07_021"><media id="fs-id1163723563750" alt="Esta figura tiene 5 imágenes. La primera imagen muestra bolas de boliche. La segunda imagen es un submarino que viaja por la superficie del océano. La tercera imagen es un cono de tráfico. La cuarta imagen es un oleoducto que atraviesa un terreno baldío. La quinta imagen es un balón de fútbol.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_021.jpg"/>
+</media>
+
+<caption>(Créditos: (a) modificación de la obra de scl hua, Wikimedia, (b) modificación de la obra de DVIDSHUB, Flickr, (c) modificación de la obra de Michael Malak, Wikimedia, (d) modificación de la obra de Sean Mack, Wikimedia, (e) modificación de la obra de Elvert Barnes, Flickr).</caption></figure></item></list>
+</problem>
+<solution id="fs-id1163723563762">
+<list id="fs-id1163723567687" list-type="enumerated" number-style="lower-alpha">
+<item>Obviamente, la bola de boliche es una esfera, por lo que las coordenadas esféricas serían las más adecuadas en este caso. El origen debe situarse en el centro físico de la bola. No hay ninguna opción obvia para la orientación de los ejes <emphasis effect="italics">x</emphasis>, <emphasis effect="italics">y</emphasis>, y <emphasis effect="italics">z</emphasis>. Las bolas de boliche normalmente tienen un bloque de peso en el centro. Una opción posible es alinear el eje de la <emphasis effect="italics">z</emphasis> con el eje de simetría del bloque de peso.</item>
+<item>Un submarino se mueve generalmente en línea recta. No hay simetría rotacional o esférica que se aplique en esta situación, por lo que las coordenadas rectangulares son una buena opción. El eje de la <emphasis effect="italics">z</emphasis> debería apuntar hacia arriba. El eje de la <emphasis effect="italics">x</emphasis> y el eje de la <emphasis effect="italics">y</emphasis> podrían alinearse para apuntar al este y al norte, respectivamente. El origen debería ser algún lugar físico conveniente, como la posición inicial del submarino o la ubicación de un puerto concreto.</item>
+<item>Un cono tiene varios tipos de simetría. En las coordenadas cilíndricas, un cono se representa con la ecuación <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>k</m:mi><m:mi>r</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>k</m:mi></m:math> es una constante. En coordenadas esféricas, hemos visto que las superficies de la forma <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mi>c</m:mi></m:mrow></m:math> son semiconos. Por último, en coordenadas rectangulares, los conos elípticos son superficies cuádricas y se representan mediante ecuaciones de la forma <m:math><m:mrow><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>a</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>b</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> En este caso, podríamos elegir cualquiera de los tres. Sin embargo, la ecuación de la superficie es más complicada en coordenadas rectangulares que en los otros dos sistemas, por lo que quizá queramos evitar esa opción. Además, estamos hablando de un tanque de agua, y la profundidad del agua podría entrar en juego en algún momento de nuestros cálculos. En tal sentido, valdría la pena tener una componente que represente la altura y la profundidad directamente. Según este razonamiento, las coordenadas cilíndricas serían la mejor opción. Elija el eje de la <emphasis effect="italics">z</emphasis> para alinearlo con el eje del cono. La orientación de los otros dos ejes es arbitraria. El origen debería ser el punto inferior del cono.</item>
+<item>Una tubería es un cilindro, por lo que las coordenadas cilíndricas serían la mejor opción. En este caso, sin embargo, elegiríamos orientar nuestro eje de la <emphasis effect="italics">z</emphasis> con el eje central de la tubería. El eje de la <emphasis effect="italics">x</emphasis> se elige para que apunte directamente hacia abajo o hacia alguna otra dirección lógica. El origen debería elegirse en función del planteamiento del problema. Tenga en cuenta que esto pone el eje de la <emphasis effect="italics">z</emphasis> en una orientación horizontal, que es un poco diferente de lo que solemos hacer. Valdría la pena elegir una orientación inusual para los ejes si tiene sentido para el problema.</item>
+<item>Un balón de fútbol tiene simetría rotacional en torno a un eje central, por lo que las coordenadas cilíndricas serían las más adecuadas. El eje de la <emphasis effect="italics">z</emphasis> debería alinearse con el eje del balón. El origen puede ser el centro del balón o quizás uno de los extremos. La posición del eje de la <emphasis effect="italics">x</emphasis> es arbitraria.</item>
+</list>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1163723566659" class="checkpoint">
+<exercise id="fs-id1163723566663">
+<problem id="fs-id1163723566665">
+<para id="fs-id1163723566667">¿Cuál sistema de coordenadas es el ideal para crear un mapa estelar, visto desde la Tierra? (Véase la siguiente figura).</para>
+<media id="fs-id1163723566671" alt="Esta figura es un círculo con un gráfico de estrellas en el centro.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_022.jpg"/>
+</media>
+<para id="fs-id1163723566680">¿Cómo debemos orientar los ejes de coordenadas?</para>
+</problem>
+<solution id="fs-id1163723519409">
+<para id="fs-id1163723519411">Coordenadas esféricas con el origen situado en el centro de la tierra, el eje de la <emphasis effect="italics">z</emphasis> está alineado con el Polo Norte y el eje de la <emphasis effect="italics">x</emphasis> está alineado con el primer meridiano.</para>
+</solution>
+<commentary id="fs-id1163723519427" type="hint">
+<title>Pista:</title>
+<para id="fs-id1163723519434">¿Qué tipos de simetría se dan en esta situación?</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1163723570270" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1163723570276" list-type="bulleted" bullet-style="bullet">
+<item>En el sistema de coordenadas cilíndricas, un punto en el espacio está representado por la triple ordenada. <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> representa las coordenadas polares de la proyección del punto en el plano <emphasis effect="italics">xy</emphasis>, y <m:math><m:mi>z</m:mi></m:math> representa la proyección del punto sobre el eje de la <emphasis effect="italics">z</emphasis>.</item>
+<item>Para convertir un punto de coordenadas cilíndricas en coordenadas cartesianas, utilice las ecuaciones <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Para convertir un punto de coordenadas cartesianas en coordenadas cilíndricas, utilice las ecuaciones <m:math><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>y</m:mi><m:mi>x</m:mi></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>En el sistema de coordenadas esféricas, un punto <m:math><m:mi>P</m:mi></m:math> en el espacio se representa con la triple ordenada <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>ρ</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>φ</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>ρ</m:mi></m:math> es la distancia entre <m:math><m:mi>P</m:mi></m:math> y el origen <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>ρ</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mi>θ</m:mi></m:math> es el mismo ángulo que se utiliza para describir la ubicación en coordenadas cilíndricas, mientras que <m:math><m:mi>φ</m:mi></m:math> es el ángulo que forman el eje de la <emphasis effect="italics">z</emphasis> positivo y el segmento lineal <m:math><m:mrow><m:mover accent="true"><m:mrow><m:mi>O</m:mi><m:mi>P</m:mi></m:mrow><m:mo stretchy="true">—</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>O</m:mi></m:math> es el origen y <m:math><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>φ</m:mi><m:mo>≤</m:mo><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Para convertir un punto de coordenadas esféricas en coordenadas cartesianas, utilice las ecuaciones <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Para convertir un punto de coordenadas cartesianas en coordenadas esféricas, utilice las ecuaciones <m:math><m:mrow><m:msup><m:mi>ρ</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>y</m:mi><m:mi>x</m:mi></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mtext>arccos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>z</m:mi><m:mrow><m:msqrt><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Para convertir un punto de coordenadas esféricas en coordenadas cilíndricas, utilice las ecuaciones <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Para convertir un punto de coordenadas cilíndricas en coordenadas esféricas, utilice las ecuaciones <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:msqrt><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mtext>arccos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>z</m:mi><m:mrow><m:msqrt><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</section>
+<section id="fs-id1163723566429" class="section-exercises">
+<para id="fs-id1163723566432">Utilice la siguiente figura como ayuda para identificar la relación entre los sistemas de coordenadas rectangulares, cilíndricas y esféricas.</para>
+<media id="fs-id1163723566440" alt="Esta figura es el primer octante del sistema tridimensional de coordenadas. Hay un segmento lineal desde el origen hacia arriba. Está marcado como &quot;rho&quot;. El ángulo entre este segmento lineal y el eje de la z está marcado como “phi”. También hay una línea discontinua desde el origen hasta la sombra del punto. Este segmento lineal se encuentra en el plano x y, y está marcado como “r”. El ángulo entre r y el eje de la x está marcado como “theta”.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_201.jpg"/>
+</media>
+<para id="fs-id1163723566449">En los siguientes ejercicios, se dan las coordenadas cilíndricas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de un punto. Halle las coordenadas rectangulares <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> del punto.</para>
+<exercise id="fs-id1163723560107">
+<problem id="fs-id1163723560109">
+<para id="fs-id1163723560111"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723569902">
+<para id="fs-id1163723569904"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723569931">
+<problem id="fs-id1163723189320">
+<para id="fs-id1163723189322"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723330516">
+<problem id="fs-id1163723330518">
+<para id="fs-id1163723330520"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mo>,</m:mo><m:mfrac><m:mrow><m:mn>7</m:mn><m:mi>π</m:mi></m:mrow><m:mn>6</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723246587">
+<para id="fs-id1163723246589"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>,</m:mo><m:mn>−2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723246616">
+<problem id="fs-id1163723246618">
+<para id="fs-id1163723246620"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mn>−4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1163724017816">En los siguientes ejercicios, se dan las coordenadas rectangulares <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de un punto. Halle las coordenadas cilíndricas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> del punto.</para>
+<exercise id="fs-id1163723561014">
+<problem id="fs-id1163723561017">
+<para id="fs-id1163723561019"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723561042">
+<para id="fs-id1163723093270"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723093296">
+<problem id="fs-id1163723093298">
+<para id="fs-id1163723093300"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723186992">
+<problem id="fs-id1163723186994">
+<para id="fs-id1163723186996"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>−3</m:mn><m:mo>,</m:mo><m:mn>7</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723570405">
+<para id="fs-id1163723570407"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>,</m:mo><m:mo>−</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>7</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723570439">
+<problem id="fs-id1163723570441">
+<para id="fs-id1163723570443"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−2</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>,</m:mo><m:mn>2</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1163723187105">En los siguientes ejercicios, se da la ecuación de una superficie en coordenadas cilíndricas.</para>
+<para id="fs-id1163723187108">Calcule la ecuación de la superficie en coordenadas rectangulares. Identifique y grafique la superficie.</para>
+<exercise id="fs-id1163723187112">
+<problem id="fs-id1163723187114">
+<para id="fs-id1163723187116"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723569477">
+<para id="fs-id1163723569479">Un cilindro de ecuación <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>16</m:mn><m:mo>,</m:mo></m:mrow></m:math> con su centro en el origen y las reglas paralelas al eje de la <emphasis effect="italics">z</emphasis>,<newline/>
+<media id="fs-id1163723569513" alt="Esta figura es un cilindro circular derecho, vertical. Está dentro de un recuadro. Los bordes del recuadro representan los ejes x, y, y z.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_221.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723569525">
+<problem id="fs-id1163723077216">
+<para id="fs-id1163723077218"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>θ</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723248454">
+<problem id="fs-id1163723248456">
+<para id="fs-id1163723248459"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>θ</m:mi><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723248502">
+<para id="fs-id1163723248504">Hiperboloide de dos hojas de ecuación <m:math><m:mrow><m:mtext>−</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> con el eje de la <emphasis effect="italics">y</emphasis> como eje de simetría,<newline/>
+<media id="fs-id1163723144973" alt="Esta figura es una superficie de cono elíptico que es horizontal. Está dentro de un recuadro. Los bordes del recuadro representan los ejes x, y, y z.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_223.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723144985">
+<problem id="fs-id1163723144987">
+<para id="fs-id1163723144989"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723103383">
+<problem id="fs-id1163723103385">
+<para id="fs-id1163723103387"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723103408">
+<para id="fs-id1163723103410">Cilindro de ecuación <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> con un centro en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y el radio <m:math><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> con reglas paralelas al eje de la <emphasis effect="italics">z</emphasis>,<newline/>
+<media id="fs-id1163723560912" alt="Esta figura es un cilindro circular derecho, vertical. Está dentro de un recuadro. Los bordes del recuadro representan los ejes x, y, y z.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_225.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723560924">
+<problem id="fs-id1163723560926">
+<para id="fs-id1163723560928"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723571904">
+<problem id="fs-id1163723571906">
+<para id="fs-id1163723571909"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>sec</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723093184">
+<para id="fs-id1163723093186">Plano de la ecuación <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math><newline/>
+<media id="fs-id1163723093201" alt="Esta figura es un paralelogramo vertical donde x = 2 y paralelo al plano y z. Está dentro de un recuadro. Los bordes del recuadro representan los ejes x, y, y z.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_227.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723093213">
+<problem id="fs-id1163723093215">
+<para id="fs-id1163723093217"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>csc</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1163724081928">En los siguientes ejercicios, se da la ecuación de una superficie en coordenadas rectangulares. Halle la ecuación de la superficie en coordenadas cilíndricas.</para>
+<exercise id="fs-id1163724081932">
+<problem id="fs-id1163724081935">
+<para id="fs-id1163724081937"><m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724081948">
+<para id="fs-id1163724081951"><m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163724081963">
+<problem id="fs-id1163724081966">
+<para id="fs-id1163724081968"><m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163724081999">
+<problem id="fs-id1163724082001">
+<para id="fs-id1163724082003"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>9</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724018933">
+<para id="fs-id1163724018935"><m:math><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>9</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163724018959">
+<problem id="fs-id1163724018961">
+<para id="fs-id1163724018963"><m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163724019018">
+<problem id="fs-id1163724019020">
+<para id="fs-id1163724019022"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>16</m:mn><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724019051">
+<para id="fs-id1163724019053"><m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>16</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723529577">
+<problem id="fs-id1163723529579">
+<para id="fs-id1163723529581"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>3</m:mn><m:msqrt><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1163723529652">En los siguientes ejercicios, se dan las coordenadas esféricas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>ρ</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>φ</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de un punto. Halle las coordenadas rectangulares <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> del punto.</para>
+<exercise id="fs-id1163724074697">
+<problem id="fs-id1163724074700">
+<para id="fs-id1163724074702"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>π</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724074724">
+<para id="fs-id1163724074726"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>−3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163724074750">
+<problem id="fs-id1163724074752">
+<para id="fs-id1163724074754"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163724074822">
+<problem id="fs-id1163724074824">
+<para id="fs-id1163724074826"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>12</m:mn><m:mo>,</m:mo><m:mo>−</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723572497">
+<para id="fs-id1163723572499"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>6</m:mn><m:mo>,</m:mo><m:mn>−6</m:mn><m:mo>,</m:mo><m:mn>6</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723572524">
+<problem id="fs-id1163723572526">
+<para id="fs-id1163723572528"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1163723572605">En los siguientes ejercicios, se dan las coordenadas rectangulares <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de un punto. Halle las coordenadas esféricas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>ρ</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>φ</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> del punto. Exprese la medida de los ángulos en grados redondeados al entero más cercano.</para>
+<exercise id="fs-id1163723572648">
+<problem id="fs-id1163723572650">
+<para id="fs-id1163723572653"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723183700">
+<para id="fs-id1163723183702"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>90</m:mn><m:mtext>°</m:mtext></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723183730">
+<problem id="fs-id1163723183732">
+<para id="fs-id1163723183734"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723183788">
+<problem id="fs-id1163723183790">
+<para id="fs-id1163723183792"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723183814">
+<para id="fs-id1163723183816"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>90</m:mn><m:mtext>°</m:mtext><m:mo>,</m:mo><m:mn>90</m:mn><m:mtext>°</m:mtext></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723183848">
+<problem id="fs-id1163723183850">
+<para id="fs-id1163723183853"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−2</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1163723573540">En los siguientes ejercicios, se da la ecuación de una superficie en coordenadas esféricas. Calcule la ecuación de la superficie en coordenadas rectangulares. Identifique y grafique la superficie.</para>
+<exercise id="fs-id1163723573545">
+<problem id="fs-id1163723573547">
+<para id="fs-id1163723573549"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723573565">
+<para id="fs-id1163723573567">Esfera de la ecuación <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>9</m:mn></m:mrow></m:math> centrada en el origen con radio <m:math><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math><newline/>
+<media id="fs-id1163723573606" alt="Esta figura es una esfera. Está dentro de un recuadro. Los bordes del recuadro representan los ejes x, y, y z.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_229.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723573616">
+<problem id="fs-id1163723573619">
+<para id="fs-id1163723573621"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163724049525">
+<problem id="fs-id1163724049527">
+<para id="fs-id1163724049529"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724049550">
+<para id="fs-id1163724049552">Esfera de la ecuación <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>z</m:mi><m:mo>−</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> centrada en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> con radio <m:math><m:mn>1</m:mn><m:mo>,</m:mo></m:math><newline/>
+<media id="fs-id1163724049621" alt="Esta figura es una esfera de radio 1 centrada en un recuadro. El centro de la esfera es el punto (0, 0, 1).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_031.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163724049632">
+<problem id="fs-id1163724049634">
+<para id="fs-id1163724049636"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>csc</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163724049712">
+<problem id="fs-id1163724049714">
+<para id="fs-id1163724049716"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724065957">
+<para id="fs-id1163724065959">El plano <emphasis effect="italics">xy</emphasis> de la ecuación <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math><newline/>
+<media id="fs-id1163724065983" alt="Esta figura es un paralelogramo que representa un plano. Es paralelo al plano x y en z = 0. Está dentro de un recuadro. Los bordes del recuadro representan los ejes x, y, y z.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_233.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163724065996">
+<problem id="fs-id1163724065998">
+<para id="fs-id1163724066000"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mspace width="0.2em"/><m:mtext>csc</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mspace width="0.2em"/><m:mtext>sec</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1163724066054">En los siguientes ejercicios, se da la ecuación de una superficie en coordenadas rectangulares. Halle la ecuación de la superficie en coordenadas esféricas. Identifique la superficie.</para>
+<exercise id="fs-id1163724066058">
+<problem id="fs-id1163724066061">
+<para id="fs-id1163724066063"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>3</m:mn><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>z</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724066106">
+<para id="fs-id1163724066109"><m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> o <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>;</m:mo></m:mrow></m:math> Cono elíptico</para>
+</solution>
+</exercise>
+<exercise id="fs-id1163724066144">
+<problem id="fs-id1163724066146">
+<para id="fs-id1163724066148"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723566851">
+<problem id="fs-id1163723566853">
+<para id="fs-id1163723566856"><m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723566867">
+<para id="fs-id1163723566869"><m:math><m:mrow><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>;</m:mo></m:mrow></m:math> Plano en <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723566898">
+<problem id="fs-id1163723566900">
+<para id="fs-id1163723566902"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>9</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1163723566953">En los siguientes ejercicios, se dan las coordenadas cilíndricas de un punto. Halle sus coordenadas esféricas asociadas, con la medida del ángulo <m:math><m:mi>φ</m:mi></m:math> en radianes redondeados a cuatro decimales.</para>
+<exercise id="fs-id1163723566962">
+<problem id="fs-id1163723566964">
+<para id="fs-id1163723566966"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723566996">
+<para id="fs-id1163723566998"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msqrt><m:mrow><m:mn>10</m:mn></m:mrow></m:msqrt><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>0,3218</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163724050198">
+<problem id="fs-id1163724050200">
+<para id="fs-id1163724050202"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>5</m:mn><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mn>12</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163724050254">
+<problem id="fs-id1163724050256">
+<para id="fs-id1163724050258"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724050284">
+<para id="fs-id1163724050286"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163724050319">
+<problem id="fs-id1163724050321">
+<para id="fs-id1163724050324"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mo>−</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1163724050389">En los siguientes ejercicios, se dan las coordenadas esféricas de un punto. Halle sus coordenadas cilíndricas.</para>
+<exercise id="fs-id1163724050393">
+<problem id="fs-id1163723298884">
+<para id="fs-id1163723298886"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mo>−</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723298917">
+<para id="fs-id1163723298919"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mo>−</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723298948">
+<problem id="fs-id1163723298950">
+<para id="fs-id1163723298952"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723299013">
+<problem id="fs-id1163723299015">
+<para id="fs-id1163723299018"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>8</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723299046">
+<para id="fs-id1163723299048"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>8</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723299075">
+<problem id="fs-id1163723299077">
+<para id="fs-id1163723299079"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>9</m:mn><m:mo>,</m:mo><m:mo>−</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1163724057689">En los siguientes ejercicios, halle el sistema de coordenadas que sea más adecuado para describir los sólidos.</para>
+<exercise id="fs-id1163724057692">
+<problem id="fs-id1163724057694">
+<para id="fs-id1163724057696">El sólido situado en el primer octante con vértice en el origen y encerrado en un cubo de longitud de arista <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:mi>a</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724057718">
+<para id="fs-id1163724057720">Sistema cartesiano, <m:math><m:mrow><m:mrow><m:mo>{</m:mo><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>≤</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>z</m:mi><m:mo>≤</m:mo><m:mi>a</m:mi></m:mrow><m:mo>}</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163724057789">
+<problem id="fs-id1163724057791">
+<para id="fs-id1163724057794">Corteza esférica, determinada por la región entre dos esferas concéntricas centradas en el origen, de radios <m:math><m:mi>a</m:mi></m:math> y <m:math><m:mrow><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> respectivamente, donde <m:math><m:mrow><m:mi>b</m:mi><m:mo>&gt;</m:mo><m:mi>a</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723073046">
+<problem id="fs-id1163723073048">
+<para id="fs-id1163723073050">Una esfera interior sólida <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>9</m:mn></m:mrow></m:math> y cilindro exterior <m:math><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mfrac><m:mn>9</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723073120">
+<para id="fs-id1163723073122">Sistema cilíndrico, <m:math><m:mrow><m:mrow><m:mo>{</m:mo><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>≤</m:mo><m:mn>9</m:mn><m:mo>,</m:mo><m:mi>r</m:mi><m:mo>≥</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>θ</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mo>}</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723073200">
+<problem id="fs-id1163723073202">
+<para id="fs-id1163723073204">Corteza cilíndrica de altura <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math> determinada por la región entre dos cilindros con el mismo centro, reglas paralelas y radios de <m:math><m:mn>2</m:mn></m:math> y <m:math><m:mrow><m:mn>5</m:mn><m:mo>,</m:mo></m:mrow></m:math> respectivamente</para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723314891">
+<problem id="fs-id1163723314893">
+<para id="fs-id1163723314896"><emphasis effect="bold">[T]</emphasis> Utilice un sistema de álgebra computacional (Computer Algebra Systems, CAS) para graficar en coordenadas cilíndricas la región entre el paraboloide elíptico <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> y el cono <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723314952">
+<para id="fs-id1163723314954">La región se describe por el conjunto de puntos <m:math><m:mrow><m:mrow><m:mo>{</m:mo><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>|</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>r</m:mi><m:mo>≤</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>θ</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>,</m:mo><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>≤</m:mo><m:mi>z</m:mi><m:mo>≤</m:mo><m:mi>r</m:mi></m:mrow><m:mo>}</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math><newline/>
+<media id="fs-id1163723339375" alt="Esta figura es un paraboloide vertical. Está dentro de un recuadro. Los bordes del recuadro representan los ejes x, y, y z.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_235.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723339386">
+<problem id="fs-id1163723339389">
+<para id="fs-id1163723339391"><emphasis effect="bold">[T]</emphasis> Utilice un CAS para graficar en coordenadas esféricas la "región del cono de helado", situada sobre el plano <emphasis effect="italics">xy</emphasis> entre la esfera <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math> y cono elíptico <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723339550">
+<problem id="fs-id1163723339552">
+<para id="fs-id1163723339554">Washington, DC, se encuentra a <m:math><m:mrow><m:mn>39</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> N y <m:math><m:mrow><m:mn>77</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> O (vea la siguiente figura). Supongamos que el radio de la Tierra es <m:math><m:mrow><m:mn>4000</m:mn></m:mrow></m:math> millas. Exprese la ubicación de Washington, DC, en coordenadas esféricas.</para>
+<media id="fs-id1163724138488" alt="Esta figura es la imagen de un globo terráqueo. En el globo terráqueo hay un punto marcado donde se encuentra Washington, DC. Está marcado con 39 grados de latitud norte y 77 grados de longitud oeste.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_237.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1163724138499">
+<para id="fs-id1163724138501"><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4000</m:mn><m:mo>,</m:mo><m:mtext>−</m:mtext><m:mn>77</m:mn><m:mtext>°</m:mtext><m:mo>,</m:mo><m:mn>51</m:mn><m:mtext>°</m:mtext></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163724138535">
+<problem id="fs-id1163724138537">
+<para id="fs-id1163724138539">San Francisco se sitúa a <m:math><m:mrow><m:mn>37,78</m:mn><m:mtext>°</m:mtext><m:mtext>N</m:mtext></m:mrow></m:math> y <m:math><m:mrow><m:mn>122,42</m:mn><m:mtext>°</m:mtext><m:mtext>O</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Supongamos que el radio de la Tierra es <m:math><m:mrow><m:mn>4000</m:mn></m:mrow></m:math> millas. Exprese la ubicación de San Francisco en coordenadas esféricas.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1163724138611">
+<problem id="fs-id1163724138613">
+<para id="fs-id1163724138615">Halle la latitud y la longitud de Río de Janeiro si sus coordenadas esféricas son <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4000</m:mn><m:mo>,</m:mo><m:mtext>−</m:mtext><m:mn>43,17</m:mn><m:mtext>°</m:mtext><m:mo>,</m:mo><m:mn>102,91</m:mn><m:mtext>°</m:mtext></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724138651">
+<para id="fs-id1163724138653"><m:math><m:mrow><m:mn>43,17</m:mn><m:mtext>°</m:mtext><m:mtext>O</m:mtext><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mn>22,91</m:mn><m:mtext>°</m:mtext><m:mtext>S</m:mtext></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163724138680">
+<problem id="fs-id1163724138682">
+<para id="fs-id1163724138684">Halle la latitud y la longitud de Berlín si sus coordenadas esféricas son <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4000</m:mn><m:mo>,</m:mo><m:mn>13,38</m:mn><m:mtext>°</m:mtext><m:mo>,</m:mo><m:mn>37,48</m:mn><m:mtext>°</m:mtext></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723341675">
+<problem id="fs-id1163723341677">
+<para id="fs-id1163723341679"><emphasis effect="bold">[T]</emphasis> Considere el toro de la ecuación <m:math><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>R</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>4</m:mn><m:msup><m:mi>R</m:mi><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:mi>R</m:mi><m:mo>≥</m:mo><m:mi>r</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1163723341781" list-type="enumerated" number-style="lower-alpha">
+<item>Escriba la ecuación del toro en coordenadas esféricas.</item>
+<item>Si <m:math><m:mrow><m:mi>R</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mo>,</m:mo></m:mrow></m:math> la superficie se llama <emphasis effect="italics">toro de cuerno</emphasis>. Demuestre que la ecuación de un toro de cuerno en coordenadas esféricas es <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>R</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Utilice un CAS para graficar el toro de cuerno con <m:math><m:mrow><m:mi>R</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> en las coordenadas esféricas.</item>
+</list>
+</problem>
+<solution id="fs-id1163723341844">
+<para id="fs-id1163723341846">a. <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>+</m:mo><m:msup><m:mi>R</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>2</m:mn><m:mi>R</m:mi><m:mspace width="0.2em"/><m:mtext>seno</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>;</m:mo></m:mrow></m:math><newline/> c.<newline/>
+<media id="fs-id1163723361972" alt="Esta figura es un toro. Está dentro de un recuadro. Los bordes del recuadro representan los ejes x, y, y z.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_238.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723361983">
+<problem id="fs-id1163723361985">
+<para id="fs-id1163723361987"><emphasis effect="bold">[T]</emphasis> La "esfera con bultos" con una ecuación en coordenadas esféricas es <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>m</m:mi><m:mi>θ</m:mi><m:mo stretchy="false">)</m:mo><m:mtext>seno</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>n</m:mi><m:mi>φ</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> con <m:math><m:mrow><m:mi>θ</m:mi><m:mo>∈</m:mo><m:mo stretchy="false">[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo stretchy="false">]</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>φ</m:mi><m:mo>∈</m:mo><m:mo stretchy="false">[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>π</m:mi><m:mo stretchy="false">]</m:mo><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>a</m:mi></m:math> y <m:math><m:mi>b</m:mi></m:math> son números positivos y <m:math><m:mi>m</m:mi></m:math> y <m:math><m:mi>n</m:mi></m:math> son números enteros positivos, pueden utilizarse en matemáticas aplicadas para modelar el crecimiento de los tumores.</para>
+<list id="fs-id1163723362099" list-type="enumerated" number-style="lower-alpha">
+<item>Demuestre que la "esfera con bultos" está contenida dentro de una esfera de ecuación <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math> Halle los valores de <m:math><m:mi>θ</m:mi></m:math> y <m:math><m:mi>φ</m:mi></m:math> en la que se cruzan las dos superficies.</item>
+<item>Utilice un CAS para graficar la superficie para <m:math><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>14</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>b</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>m</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math> junto con la esfera <m:math><m:mrow><m:mi>ρ</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Halle la ecuación de la curva de intersección de la superficie en b. con el cono <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mrow><m:mn>12</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Grafique la curva de intersección en el plano de intersección.</item>
+</list>
+</problem>
+</exercise>
+</section>
+<section id="fs-id1163723113379" class="review-exercises">
+<title>Ejercicios de repaso del capítulo</title>
+<para id="fs-id1163723113386">En los siguientes ejercicios, determine si la afirmación es <emphasis effect="italics">verdadera o falsa</emphasis>. Justifique la respuesta con una comprobación o un contraejemplo.</para>
+<exercise id="fs-id1163723139824">
+<problem id="fs-id1163723139827">
+<para id="fs-id1163723139829">En los vectores <m:math><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle></m:math> y <m:math><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle></m:math> y cualquier escalar dado <m:math><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>c</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle><m:mo>·</m:mo><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>c</m:mi><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>·</m:mo><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723139916">
+<para id="fs-id1163723139918">Verdadero</para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723139923">
+<problem id="fs-id1163723139925">
+<para id="fs-id1163723139927">En los vectores <m:math><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle></m:math> y <m:math><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle></m:math> y cualquier escalar dado <m:math><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>c</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>c</m:mi><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723140022">
+<problem id="fs-id1163723140024">
+<para id="fs-id1163723140026">La ecuación simétrica de la línea de intersección entre dos planos <m:math><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>y</m:mi><m:mo>−</m:mo><m:mn>4</m:mn><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math> viene dada por <m:math><m:mrow><m:mo>−</m:mo><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn></m:mrow><m:mn>6</m:mn></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>y</m:mi><m:mo>−</m:mo><m:mn>1</m:mn></m:mrow><m:mn>5</m:mn></m:mfrac><m:mo>=</m:mo><m:mi>z</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723995126">
+<para id="fs-id1163723995128">Falso</para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723995134">
+<problem id="fs-id1163723995136">
+<para id="fs-id1163723995138">Si <m:math><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle><m:mo>·</m:mo><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> luego, <m:math><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle></m:math> es perpendicular a <m:math><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1163723995197">En los siguientes ejercicios, utilice los vectores dados para hallar las cantidades.</para>
+<exercise id="fs-id1163723995200">
+<problem id="fs-id1163723995202">
+<para id="fs-id1163723995204"><m:math><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle><m:mo>=</m:mo><m:mn>9</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>i</m:mtext></m:mstyle><m:mo>−</m:mo><m:mn>2</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>j</m:mtext></m:mstyle><m:mo>,</m:mo><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle><m:mo>=</m:mo><m:mn>−3</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>i</m:mtext></m:mstyle><m:mo>+</m:mo><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>j</m:mtext></m:mstyle></m:mrow></m:math></para>
+<list id="fs-id1163723995269" list-type="enumerated" number-style="lower-alpha">
+<item><m:math><m:mrow><m:mn>3</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle><m:mo>+</m:mo><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle><m:mo>|</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/></m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/></m:mrow></m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>c</m:mtext></m:mstyle><m:mo>|</m:mo></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle><m:mspace width="0.2em"/><m:mo>·</m:mo><m:mspace width="0.2em"/></m:mrow></m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1163723477992">
+<para id="fs-id1163723477994">a. <m:math><m:mrow><m:mrow><m:mo>〈</m:mo><m:mrow><m:mn>24</m:mn><m:mo>,</m:mo><m:mn>−5</m:mn></m:mrow><m:mo>〉</m:mo></m:mrow><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:msqrt><m:mrow><m:mn>85</m:mn></m:mrow></m:msqrt><m:mo>;</m:mo></m:mrow></m:math> c. No se puede puntear un vector con un escalar; d. <m:math><m:mrow><m:mn>−29</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1163723478033">
+<problem id="fs-id1163723478035">
+<para id="fs-id1163723478037"><m:math><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle><m:mo>=</m:mo><m:mn>2</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>i</m:mtext></m:mstyle><m:mo>+</m:mo><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>j</m:mtext></m:mstyle><m:mo>−</m:mo><m:mn>9</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>k</m:mtext></m:mstyle><m:mo>,</m:mo><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>i</m:mtext></m:mstyle><m:mo>+</m:mo><m:mn>2</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>k</m:mtext></m:mstyle><m:mo>,</m:mo><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>c</m:mtext></m:mstyle><m:mo>=</m:mo><m:mn>4</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>i</m:mtext></m:mstyle><m:mo>−</m:mo><m:mn>2</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>j</m:mtext></m:mstyle><m:mo>+</m:mo><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>k</m:mtext></m:mstyle></m:mrow></m:math></para>
+<list id="fs-id1163723499856" list-type="enumerated" number-style="lower-alpha">
+<item><m:math><m:mrow><m:mn>2</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle><m:mo>−</m:mo><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>c</m:mtext></m:mstyle></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:mrow><m:mo>|</m:mo><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>c</m:mtext></m:mstyle></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>c</m:mtext></m:mstyle><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:mrow><m:mo>|</m:mo><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:msub><m:mrow><m:mtext>proy</m:mtext></m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle></m:msub><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle></m:mrow></m:math></item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1163724053929">
+<problem id="fs-id1163724053931">
+<para id="fs-id1163724053933">Halle los valores de <m:math><m:mi>a</m:mi></m:math> de modo que los vectores <m:math><m:mrow><m:mrow><m:mo>〈</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mi>a</m:mi></m:mrow><m:mo>〉</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mrow><m:mo>〈</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>−1</m:mn><m:mo>,</m:mo><m:mi>a</m:mi></m:mrow><m:mo>〉</m:mo></m:mrow></m:mrow></m:math> sean ortogonales.</para>
+</problem>
+<solution id="fs-id1163724053982">
+<para id="fs-id1163724053984"><m:math><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mtext>±</m:mtext><m:mn>2</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1163724053999">En los siguientes ejercicios, halle los vectores unitarios.</para>
+<exercise id="fs-id1163724054003">
+<problem id="fs-id1163724054005">
+<para id="fs-id1163724054007">Calcule el vector unitario que tiene la misma dirección que el vector <m:math><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>v</m:mtext></m:mstyle></m:math> que comienza en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>−3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y termina en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mo>,</m:mo><m:mn>10</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723326762">
+<problem id="fs-id1163723326764">
+<para id="fs-id1163723326766">Calcule el vector unitario que tiene la misma dirección que el vector <m:math><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>v</m:mtext></m:mstyle></m:math> que comienza en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mn>10</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y termina en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723326821">
+<para id="fs-id1163723326824"><m:math><m:mrow><m:mrow><m:mo>〈</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:msqrt><m:mrow><m:mn>14</m:mn></m:mrow></m:msqrt></m:mrow></m:mfrac><m:mo>,</m:mo><m:mo>−</m:mo><m:mfrac><m:mn>2</m:mn><m:mrow><m:msqrt><m:mrow><m:mn>14</m:mn></m:mrow></m:msqrt></m:mrow></m:mfrac><m:mo>,</m:mo><m:mo>−</m:mo><m:mfrac><m:mn>3</m:mn><m:mrow><m:msqrt><m:mrow><m:mn>14</m:mn></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mrow><m:mo>〉</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1163723326870">En los siguientes ejercicios, calcule el área o el volumen de las formas dadas.</para>
+<exercise id="fs-id1163723326874">
+<problem id="fs-id1163723326876">
+<para id="fs-id1163723326878">El paralelogramo que abarcan los vectores <m:math><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle><m:mo>=</m:mo><m:mrow><m:mo>〈</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>13</m:mn></m:mrow><m:mo>〉</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle><m:mo>=</m:mo><m:mrow><m:mo>〈</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>21</m:mn></m:mrow><m:mo>〉</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723326948">
+<problem id="fs-id1163723326950">
+<para id="fs-id1163723326952">El paralelepípedo formado por <m:math><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>a</m:mtext></m:mstyle><m:mo>=</m:mo><m:mrow><m:mo>〈</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>〉</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>b</m:mtext></m:mstyle><m:mo>=</m:mo><m:mrow><m:mo>〈</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>6</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>〉</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>c</m:mtext></m:mstyle><m:mo>=</m:mo><m:mrow><m:mo>〈</m:mo><m:mrow><m:mn>−2</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>−5</m:mn></m:mrow><m:mo>〉</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724066245">
+<para id="fs-id1163724066247"><m:math><m:mrow><m:mn>27</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1163724066256">En los siguientes ejercicios, halle las ecuaciones vectoriales y paramétricas de la línea con las propiedades dadas.</para>
+<exercise id="fs-id1163724066260">
+<problem id="fs-id1163724066262">
+<para id="fs-id1163724066264">La línea que pasa por el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>−3</m:mn><m:mo>,</m:mo><m:mn>7</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> que es paralela al vector <m:math><m:mrow><m:mrow><m:mo>〈</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>−2</m:mn></m:mrow><m:mo>〉</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163724022775">
+<problem id="fs-id1163724022777">
+<para id="fs-id1163724022779">La línea que pasa por los puntos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−2</m:mn><m:mo>,</m:mo><m:mn>6</m:mn><m:mo>,</m:mo><m:mn>−3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724022823">
+<para id="fs-id1163724022825"><m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>−</m:mo><m:mn>8</m:mn><m:mi>t</m:mi><m:mo>,</m:mo><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>r</m:mtext></m:mstyle><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>3</m:mn><m:mi>t</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>i</m:mtext></m:mstyle><m:mo>+</m:mo><m:mn>3</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>t</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>j</m:mtext></m:mstyle><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>5</m:mn><m:mo>−</m:mo><m:mn>8</m:mn><m:mi>t</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>k</m:mtext></m:mstyle></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1163723312390">En los siguientes ejercicios, halle la ecuación del plano con las propiedades dadas.</para>
+<exercise id="fs-id1163723312394">
+<problem id="fs-id1163723312396">
+<para id="fs-id1163723312398">El plano que pasa por el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mo>,</m:mo><m:mn>7</m:mn><m:mo>,</m:mo><m:mn>−1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y tiene un vector normal <m:math><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>n</m:mtext></m:mstyle><m:mo>=</m:mo><m:mrow><m:mo>〈</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>〉</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163723312481">
+<problem id="fs-id1163723312483">
+<para id="fs-id1163723312485">El plano que pasa por los puntos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>−1</m:mn><m:mo>,</m:mo><m:mn>6</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163723312557">
+<para id="fs-id1163723312559"><m:math><m:mrow><m:mtext>−</m:mtext><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>y</m:mi><m:mo>+</m:mo><m:mn>8</m:mn><m:mi>z</m:mi><m:mo>=</m:mo><m:mn>43</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1163723312587">En los siguientes ejercicios, halle las trazas de las superficies en los planos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>k</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>k</m:mi><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>k</m:mi><m:mo>.</m:mo></m:mrow></m:math> Luego, describa y dibuje las superficies.</para>
+<exercise id="fs-id1163723171298">
+<problem id="fs-id1163723171300">
+<para id="fs-id1163723171302"><m:math><m:mrow><m:mn>9</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>16</m:mn><m:mi>y</m:mi><m:mo>+</m:mo><m:mn>36</m:mn><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>20</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163724060998">
+<problem id="fs-id1163724061000">
+<para id="fs-id1163724061002"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724061028">
+<para id="fs-id1163724061030"><m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>k</m:mi></m:mrow></m:math> traza: <m:math><m:mrow><m:msup><m:mi>k</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> es un círculo, <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>k</m:mi></m:mrow></m:math> traza: <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>k</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> es una hipérbola (o un par de líneas si <m:math><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:mi>k</m:mi></m:mrow></m:math> traza: <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>k</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> es una hipérbola (o un par de líneas si <m:math><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> La superficie es un cono.<newline/>
+<media id="fs-id1163724061164" alt="Esta figura es un cono elíptico de lado. Está dentro de un recuadro. Los bordes del recuadro representan los ejes x, y, y z.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_218.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<para id="fs-id1163724061179">En los siguientes ejercicios, escriba la ecuación dada en coordenadas cilíndricas y en coordenadas esféricas.</para>
+<exercise id="fs-id1163724061183">
+<problem id="fs-id1163724061185">
+<para id="fs-id1163724061187"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>144</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163724055534">
+<problem id="fs-id1163724055537">
+<para id="fs-id1163724055539"><m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724055565">
+<para id="fs-id1163724055568">Cilíndrica: <m:math><m:mrow><m:mi>z</m:mi><m:mo>=</m:mo><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> esférica: <m:math><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>φ</m:mi><m:mo>=</m:mo><m:mi>ρ</m:mi><m:mspace width="0.2em"/><m:msup><m:mrow><m:mtext>seno</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>φ</m:mi><m:mo>−</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>ρ</m:mi></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1163724055619">En los siguientes ejercicios, convierta las ecuaciones dadas de coordenadas cilíndricas o esféricas en coordenadas rectangulares. Identifique la superficie dada.</para>
+<exercise id="fs-id1163724055623">
+<problem id="fs-id1163724055626">
+<para id="fs-id1163724055628"><m:math><m:mrow><m:msup><m:mi>ρ</m:mi><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mrow><m:mtext>seno</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mi>φ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mi>φ</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1163724034883">
+<problem id="fs-id1163724034885">
+<para id="fs-id1163724034887"><m:math><m:mrow><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>2</m:mn><m:mi>r</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>θ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724034925">
+<para id="fs-id1163724034927"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>−</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> esfera</para>
+</solution>
+</exercise>
+<para id="fs-id1163724034968">En los siguientes ejercicios, considere un pequeño barco que cruza un río.</para>
+<exercise id="fs-id1163724034971">
+<problem id="fs-id1163724034973">
+<para id="fs-id1163724034975">Si la velocidad del barco es <m:math><m:mn>5</m:mn></m:math> km/h hacia el norte en aguas tranquilas y la corriente es de <m:math><m:mn>2</m:mn></m:math> km/h hacia el oeste (vea la siguiente figura), ¿cuál es la velocidad del barco con respecto a la orilla? ¿Cuál es el ángulo <m:math><m:mi>θ</m:mi></m:math> al que el barco navega realmente?</para>
+<media id="fs-id1163724034996" alt="Esta figura es una imagen de la vista elevada de un barco. Hay un segmento lineal desde la popa. Esta marcado como “5 km/h r”. Este segmento lineal otro perpendicular. Está marcado como “2 km/h r”. Hay otro segmento lineal que forma un triángulo rectángulo con los otros dos. El ángulo entre los segmentos lineales desd el barco es theta.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_219.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1163724035036">
+<problem id="fs-id1163724035038">
+<para id="fs-id1163724035041">Cuando el barco llega a la orilla, se lanzan dos cuerdas a unas personas para que lo halen hasta la orilla. Una cuerda está en un ángulo de <m:math><m:mrow><m:mn>25</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> y la otra está a <m:math><m:mrow><m:mn>35</m:mn><m:mtext>°</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Si hay que halar el barco en línea recta y a una fuerza de <m:math><m:mrow><m:mn>500</m:mn><m:mtext>N</m:mtext><m:mo>,</m:mo></m:mrow></m:math> calcule la magnitud de la fuerza para cada cuerda (vea la siguiente figura).</para>
+<media id="fs-id1163724035078" alt="Esta figura es la vista elevada de un barco. Desde la proa hay un vector horizontal. Está marcado como “500 N”. Hay otros dos segmentos lineales desde el barco. El primer segmento forma un ángulo con el vector horizontal de 35 grados arriba del vector. El segundo segmento lineal forma un ángulo de 25 grados por debajo del vector.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_07_220.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1163724035090">
+<para id="fs-id1163724035092">331 N, y 244 N</para>
+</solution>
+</exercise>
+<exercise id="fs-id1163724035097">
+<problem id="fs-id1163724035099">
+<para id="fs-id1163724035101">Un avión vuela en la dirección de 52° al este del norte, a una rapidez de 450 mph. Un fuerte viento tiene un rumbo 33° al este del norte, a una rapidez de 50 mph. ¿Cuál es la rapidez resultante con respecto al suelo y el rumbo del avión?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1163724042043">
+<problem id="fs-id1163724042045">
+<para id="fs-id1163724042047">Calcule el trabajo realizado al mover una partícula desde la posición <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> hasta <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>8</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mn>5</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> a lo largo de una línea recta con una fuerza <m:math><m:mrow><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>F</m:mtext></m:mstyle><m:mo>=</m:mo><m:mn>2</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>i</m:mtext></m:mstyle><m:mo>+</m:mo><m:mn>3</m:mn><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>j</m:mtext></m:mstyle><m:mo>−</m:mo><m:mstyle mathvariant="bold" mathsize="normal"><m:mtext>k</m:mtext></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1163724042139">
+<para id="fs-id1163724042142"><m:math><m:mrow><m:mn>15</m:mn><m:mspace width="0.2em"/><m:mtext>J</m:mtext></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1163724042155">Los siguientes problemas tienen que ver con su intento infructuoso por desmontar el neumático de su automóvil con una llave inglesa para aflojar los tornillos. Supongamos que la llave tiene <m:math><m:mrow><m:mn>0,3</m:mn></m:mrow></m:math> m de longitud y se aplica una fuerza de 200 N.</para>
+<exercise id="fs-id1163724042170">
+<problem id="fs-id1163724042173">
+<para id="fs-id1163724042175">Debido a que su neumático está desinflado, solo puede aplicar su fuerza a unos <m:math><m:mrow><m:mn>60</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> ¿Cuál es el torque en el centro de la tuerca? Supongamos que esta fuerza no es suficiente para aflojar la tuerca.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1163724042202">
+<problem id="fs-id1163724042205">
+<para id="fs-id1163724042207">Alguien le presta un gato para neumáticos y ahora puede aplicar una fuerza de 200 N a unos <m:math><m:mrow><m:mn>80</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> ¿El torque resultante será mayor o menor? ¿Cuál es el nuevo torque resultante en el centro de la tuerca? Supongamos que esta fuerza no es suficiente para aflojar la tuerca.</para>
+</problem>
+<solution id="fs-id1163724042225">
+<para id="fs-id1163724042228">Más, <m:math><m:mrow><m:mn>59,09</m:mn></m:mrow></m:math> J</para>
+</solution>
+</exercise>
+</section>
+ </content>
+<glossary>
+<definition id="fs-id1163724042242">
+<term>sistema de coordenadas cilíndricas</term>
+<meaning id="fs-id1163724042248">la forma de describir una ubicación en el espacio con una triple ordenada <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>z</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> representa las coordenadas polares de la proyección del punto en el plano <emphasis effect="italics">xy</emphasis>, y <m:math><m:mi>z</m:mi></m:math> representa la proyección del punto sobre el eje de la <emphasis effect="italics">z</emphasis></meaning>
+</definition>
+<definition id="fs-id1163723290017">
+<term>sistema de coordenadas esféricas</term>
+<meaning id="fs-id1163723290022">la forma de describir una ubicación en el espacio con una triple ordenada <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>ρ</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>φ</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>ρ</m:mi></m:math> es la distancia entre <m:math><m:mi>P</m:mi></m:math> y el origen <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>ρ</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mi>θ</m:mi></m:math> es el mismo ángulo que se utiliza para describir la ubicación en coordenadas cilíndricas, mientras que <m:math><m:mi>φ</m:mi></m:math> es el ángulo que forman el eje de la <emphasis effect="italics">z</emphasis> positivo y el segmento lineal <m:math><m:mrow><m:mover accent="true"><m:mrow><m:mi>O</m:mi><m:mi>P</m:mi></m:mrow><m:mo stretchy="true">—</m:mo></m:mover><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>O</m:mi></m:math> es el origen y <m:math><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>φ</m:mi><m:mo>≤</m:mo><m:mi>π</m:mi></m:mrow></m:math></meaning>
+</definition>
+</glossary>
+</document>

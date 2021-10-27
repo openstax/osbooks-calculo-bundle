@@ -1,0 +1,710 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+<title>A Preview of Calculus</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m10139</md:content-id>
+  <md:title>A Preview of Calculus</md:title>
+  <md:abstract><list>
+<item>Describir el problema de la tangente y cómo condujo a la idea de la derivada.</item>
+<item>Explicar cómo interviene la idea de límite en la resolución del problema de la tangente.</item>
+<item>Reconocer una tangente a una curva en un punto como límite de líneas secantes.</item>
+<item>Identificar la velocidad instantánea como el límite de la velocidad media en un pequeño intervalo de tiempo.</item>
+<item>Describir el problema del área y cómo se resolvió con la integral.</item>
+<item>Explicar cómo interviene la idea de límite en la resolución del problema de área.</item>
+<item>Reconocer cómo las ideas de límite, derivada e integral condujeron a los estudios de series infinitas y al cálculo multivariable.
+</item>
+</list></md:abstract>
+  <md:uuid>66039b8b-edaa-4fed-bf79-539554e38c1f</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1170571068193">A medida que nos embarcamos en el estudio del cálculo, veremos cómo su desarrollo surgió a partir de soluciones comunes a problemas prácticos en áreas como la física de la ingeniería, como el problema del viaje espacial planteado en el inicio del capítulo. Dos problemas clave condujeron a la formulación inicial del cálculo: (1) el problema de la tangente, o cómo determinar la pendiente de una línea tangente a una curva en un punto; y (2) el problema del área, o cómo determinar el área bajo una curva.</para>
+<section id="fs-id1170573393290">
+<title>El problema de la tangente y el cálculo diferencial</title>
+<para id="fs-id1170573581969">La tasa de cambio es uno de los conceptos más importantes del cálculo. Comenzamos nuestra investigación de las tasas de cambio observando los gráficos de las tres líneas <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-2</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> se muestra en la <link target-id="CNX_Calc_Figure_02_01_001"/>.</para>
+<figure id="CNX_Calc_Figure_02_01_001">
+<media id="fs-id1170570998445" alt="Se muestran tres gráficos de diferentes funciones lineales. El primero es f(x) = -2x - 3, con pendiente de -2 e intersección de -3. El segundo es g(x) = x / 2 + 1, con pendiente de 1/2 e intersección de 1. El tercero es h(x) = 2, con pendiente 0 e intersección 2. La tasa de cambio de cada uno es constante, como lo determina la pendiente.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_01_001.jpg"/>
+</media>
+<caption>La tasa de cambio de una función lineal es constante en cada una de estos tres gráficos, con la constante determinada por la pendiente.</caption>
+</figure>
+<para id="fs-id1170573436660">A medida que nos movemos de izquierda a derecha a lo largo del gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-2</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> vemos que el gráfico disminuye a una tasa constante. Por cada 1 unidad que nos movemos hacia la derecha a lo largo del eje <emphasis effect="italics">x</emphasis>, la coordenada <emphasis effect="italics">y</emphasis> disminuye en 2 unidades. Esta <term class="no-emphasis">tasa de cambio</term> está determinada por la pendiente (-2) de la línea. Del mismo modo, la pendiente de 1/2 en la función <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> nos dice que por cada cambio en <emphasis effect="italics">x</emphasis> de 1 unidad hay un cambio correspondiente en <emphasis effect="italics">y</emphasis> de 1/2 unidad. La función <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> tiene una pendiente de cero, lo que indica que los valores de la función permanecen constantes. Vemos que la pendiente de cada función lineal indica la tasa de cambio de la función.</para>
+<para id="fs-id1170573403364">Compare los gráficos de estas tres funciones con el gráfico de <m:math><m:mrow><m:mi>k</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> (<link target-id="CNX_Calc_Figure_02_01_002"/>). El gráfico de <m:math><m:mrow><m:mi>k</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> empieza por la izquierda disminuyendo rápidamente, luego empieza a disminuir más lentamente y a nivelarse, y finalmente empieza a aumentar; lentamente al principio, seguido por una tasa de aumento creciente a medida que se mueve hacia la derecha. A diferencia de una función lineal, ningún número representa la tasa de cambio de esta función. Preguntamos con toda naturalidad: ¿Cómo se mide la tasa de cambio de una función no lineal?</para>
+<figure id="CNX_Calc_Figure_02_01_002">
+<media id="fs-id1170573429353" alt="Un gráfico de la parábola k(x) = x^2, que se abre y tiene su vértice en el origen.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_01_002.jpg"/>
+</media>
+<caption>La función <m:math><m:mrow><m:mi>k</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> no tiene una tasa de cambio constante.</caption>
+</figure>
+<para id="fs-id1170573328521">Podemos aproximar la tasa de cambio de una función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en un punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en su gráfico tomando otro punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> dibujando una línea a través de los dos puntos y calculando la pendiente de la línea resultante. Tal línea se llama línea <term>secante</term>. La <link target-id="CNX_Calc_Figure_02_01_003"/> muestra una línea secante a una función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en un punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_02_01_003">
+<media id="fs-id1170573436389" alt="Un gráfico que muestra una función curva genérica que pasa por los puntos (0,0), (a, fa.), y (x, f(x)). Por los puntos (a, fa.), y (x, f(x)) se traza una recta llamada línea secante que pasa por debajo de la función curva entre a y x y que pasa por encima de la función curva en valores mayores que x o menores que a. La función curva y la línea secante se cruzan de nuevo en algún punto del tercer cuadrante. La pendiente de la línea secante es ( f(x) - fa. ) / (x - a).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_01_003.jpg"/>
+</media>
+<caption>La pendiente de una línea secante que pasa por un punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> estima la tasa de cambio de la función en el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+<para id="fs-id1170573399408">Definimos formalmente una línea secante como sigue:</para>
+<note id="fs-id1170573442415">
+<title>Definición</title>
+<para id="fs-id1170571120822">La <emphasis effect="bold">secante</emphasis> de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> que pasa por los puntos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es la línea que pasa por estos puntos. Su pendiente está dada por</para>
+<equation id="fs-id1170573290247"><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+</note>
+<para id="fs-id1170573384217">La exactitud de la aproximación de la tasa de cambio de la función con una línea secante depende de lo cerca que esté <emphasis effect="italics">x</emphasis> de <emphasis effect="italics">a</emphasis>. Como vemos en la <link target-id="CNX_Calc_Figure_02_01_004"/>, si <emphasis effect="italics">x</emphasis> está más cerca de <emphasis effect="italics">a</emphasis>, la pendiente de la línea secante es una mejor medida de la tasa de cambio de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <emphasis effect="italics">a</emphasis>.</para>
+<figure id="CNX_Calc_Figure_02_01_004">
+<media id="fs-id1170573430103" alt="Este gráfico es el mismo que el de la línea secante anterior y el de la función curva genérica. Sin embargo, se añade otro punto x, esta vez trazado más cerca de a en el eje x. Así, se traza otra línea secante que pasa por los puntos (a, fa.) y el nuevo, más cercano (x, f(x)). La línea se mantiene mucho más cerca de la función curva genérica alrededor de (a, fa.). La pendiente de esta línea secante se ha convertido en una mejor aproximación a la tasa de cambio de la función genérica.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_01_004.jpg"/>
+</media>
+<caption>A medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis>, la pendiente de la línea secante se convierte en una mejor aproximación a la tasa de cambio de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <emphasis effect="italics">a</emphasis>.</caption>
+</figure>
+<para id="fs-id1170573570406">Las propias líneas secantes se acercan a una línea que se llama <term>tangente</term> a la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <emphasis effect="italics">a</emphasis> (<link target-id="CNX_Calc_Figure_02_01_005"/>). La pendiente de la línea tangente al gráfico en <emphasis effect="italics">a</emphasis> mide la tasa de cambio de la función en <emphasis effect="italics">a</emphasis>. Este valor también representa la derivada de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <emphasis effect="italics">a</emphasis>, o la tasa de cambio de la función en <emphasis effect="italics">a</emphasis>. Esta derivada se denomina <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> El <term>cálculo diferencial</term> es el campo del cálculo que se ocupa del estudio de las derivadas y sus aplicaciones.</para>
+<note id="fs-id1170573582868" class="media-2">
+<para id="fs-id1170571137117">Para una demostración interactiva de la pendiente de una línea secante que puede manipular usted mismo, visite este applet<emphasis effect="italics">(Nota:</emphasis> este sitio requiere un plugin de Java para el navegador): <link url="http://www.openstax.org/l/20_mathinsight">Visión de las matemáticas</link>.</para></note>
+<figure id="CNX_Calc_Figure_02_01_005">
+<media id="fs-id1170573421769" alt="Este gráfico es una continuación de los dos anteriores. Esta vez, el gráfico contiene la función curva, las dos líneas secantes y una línea tangente. A medida que x se acerca a a, las líneas secantes se acercan a la línea tangente.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_01_005.jpg"/>
+</media>
+<caption>Resolver el <term class="no-emphasis">problema de la tangente</term>: A medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis>, las líneas secantes se acercan a la línea tangente.</caption>
+</figure>
+<para id="fs-id1170573360908">El <link target-id="fs-id1170573387465"/> ilustra cómo calcular las pendientes de las líneas secantes. Estas pendientes estiman la pendiente de la línea tangente o, lo que es lo mismo, la tasa de cambio de la función en el punto en el que se calculan las pendientes.</para>
+<example id="fs-id1170573387465">
+<exercise id="fs-id1170573426580">
+<problem id="fs-id1170573409161">
+<title>Cálculo de las pendientes de las líneas secantes</title>
+<para id="fs-id1170573581550">Estime la pendiente de la línea tangente (tasa de cambio) a <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> calculando las pendientes de las líneas secantes que pasan por <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y cada uno de los siguientes puntos del gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1170573502433" list-type="enumerated" number-style="lower-alpha">
+<item><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>9</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1170573405502">
+<para id="fs-id1170573397397">Utilice la fórmula de la pendiente de una línea secante a partir de la definición.</para>
+<list id="fs-id1170573397100" list-type="enumerated" number-style="lower-alpha">
+<item><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mn>2</m:mn><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mfrac><m:mn>9</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>5</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>2,5</m:mn></m:mrow></m:math></item>
+</list>
+<para id="fs-id1170573421632">El punto de la parte b. está más cerca del punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> por lo que la pendiente de 2,5 está más cerca de la pendiente de la línea tangente. Una buena estimación de la pendiente de la tangente estaría en el rango de 2 a 2,5 (<link target-id="CNX_Calc_Figure_02_01_011"/>).</para>
+<figure id="CNX_Calc_Figure_02_01_011">
+<media id="fs-id1170573405748" alt="Se muestran dos gráficos de la parábola f(x) = x^2. El primero tiene dibujado una línea secante que interseca la parábola en (1,1) y (2,4). El segundo tiene dibujada una línea secante que interseca la parábola en (1,1) y (3/2, 9/4). Estas líneas proporcionan aproximaciones sucesivas a la línea tangente a la función en (1,1).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_01_011.jpg"/>
+</media>
+<caption>Las líneas secantes a <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> hasta (a) <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y (b) <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>9</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> proporcionan aproximaciones sucesivas a la línea tangente a <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170573399904" class="checkpoint">
+<exercise id="fs-id1170571257812">
+<problem id="fs-id1170570995740">
+<para id="fs-id1170573289693">Estime la pendiente de la línea tangente (tasa de cambio) a <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> calculando las pendientes de las líneas secantes que pasan por <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>5</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mrow><m:mn>25</m:mn></m:mrow><m:mrow><m:mn>16</m:mn></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170573425542">
+<para id="fs-id1170573369377">2,25</para>
+</solution>
+<commentary id="fs-id1170573750314" type="hint">
+<title>Pista</title>
+<para id="fs-id1170573426669">Utilice <link target-id="fs-id1170573387465"/> y <link target-id="CNX_Calc_Figure_02_01_011"/> como guía de resolución.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1170573414802">Continuamos nuestra investigación explorando una pregunta relacionada. Teniendo en cuenta que la velocidad puede ser considerada como la tasa de cambio de posición, supongamos que tenemos una función <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> que da la posición de un objeto a lo largo de un eje de coordenadas en un tiempo dado <emphasis effect="italics">t</emphasis>. ¿Podemos utilizar estas mismas ideas para crear una definición razonable de la velocidad instantánea en un momento dado <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>?</m:mo></m:mrow></m:math> Comenzamos aproximando la velocidad instantánea con una velocidad media. En primer lugar, recuerde que la velocidad de un objeto que se desplaza a una velocidad constante es el cociente entre la distancia recorrida y el tiempo que ha recorrido. Definimos la <term>velocidad media</term> de un objeto durante un periodo como el cambio de su posición dividido entre la duración del periodo.</para>
+<note id="fs-id1170573503064">
+<title>Definición</title>
+<para id="fs-id1170573360519">Supongamos que <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es la posición de un objeto que se mueve a lo largo de un eje de coordenadas en el tiempo <emphasis effect="italics">t</emphasis>. La <emphasis effect="bold">velocidad media</emphasis> del objeto en un intervalo de tiempo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>t</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> donde <m:math><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>t</m:mi></m:mrow></m:math> (o <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>a</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> si <m:math><m:mrow><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:math> es</para>
+<equation id="fs-id1170573390058"><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+</note>
+<para id="fs-id1170573309855">A medida que <emphasis effect="italics">t</emphasis> se elige más cerca de <emphasis effect="italics">a</emphasis>, la velocidad media se acerca más a la velocidad instantánea. Observe que calcular la velocidad media de una función de posición en un intervalo de tiempo es esencialmente lo mismo que calcular la pendiente de una línea secante a una función. Además, para calcular la pendiente de una línea tangente en un punto <emphasis effect="italics">a</emphasis>, dejamos que los valores de <emphasis effect="italics">x</emphasis> se acerquen a <emphasis effect="italics">a</emphasis> en la pendiente de la línea secante. Del mismo modo, para calcular la velocidad instantánea en el tiempo <emphasis effect="italics">a</emphasis>, dejamos que los valores de <emphasis effect="italics">t</emphasis> se acerquen a <emphasis effect="italics">a</emphasis> en la velocidad media. Este proceso de dejar que <emphasis effect="italics">x</emphasis> o <emphasis effect="italics">t</emphasis> se acerquen a <emphasis effect="italics">a</emphasis> en una expresión se llama tomar un <term>límite</term>. Por lo tanto, podemos definir la <term>velocidad instantánea</term> de la siguiente manera.</para>
+<note id="fs-id1170573364091">
+<title>Definición</title>
+<para id="fs-id1170573571261">Para una función de posición <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> la <emphasis effect="bold">velocidad instantánea</emphasis> en un tiempo <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> es el valor al que se acercan las velocidades medias en intervalos de la forma <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>t</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>a</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> a medida que los valores de <emphasis effect="italics">t</emphasis> se acercan a <emphasis effect="italics">a</emphasis>, siempre que dicho valor exista.</para>
+</note>
+<para id="fs-id1170570997278">El <link target-id="fs-id1170573397285"/> ilustra este concepto de límites y velocidad media.</para>
+<example id="fs-id1170573397285">
+<exercise id="fs-id1170573570896">
+<problem id="fs-id1170573366500">
+<title>Cálculo de la velocidad media</title>
+<para id="fs-id1170573405085">Se deja caer una roca desde una altura de 64 pies. Se determina que su altura (en pies) sobre el suelo <emphasis effect="italics">t</emphasis> segundos después (para <m:math><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:math> está dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-16</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>64</m:mn><m:mo>.</m:mo></m:mrow></m:math> Calcule la velocidad media de la roca en cada uno de los intervalos de tiempo dados. Utilice esta información para adivinar la velocidad instantánea de la roca en el tiempo <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0,5</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1170570998751" list-type="enumerated" number-style="lower-alpha">
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0,49</m:mn><m:mo>,</m:mo><m:mn>0,5</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0,5</m:mn><m:mo>,</m:mo><m:mn>0,51</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1170573406320">
+<para id="fs-id1170573428397">Sustituya los datos en la fórmula para la definición de la velocidad media.</para>
+<list id="fs-id1170573271242" list-type="enumerated" number-style="lower-alpha"><item><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0,5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0,49</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>0,5</m:mn><m:mo>-</m:mo><m:mn>0,49</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>-15,84</m:mn></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0,51</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0,5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>0,51</m:mn><m:mo>-</m:mo><m:mn>0,5</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>-16,16</m:mn></m:mrow></m:math></item>
+</list><para id="fs-id1170573577674">La velocidad instantánea está entre -15,84 y -16,16 ft/s. Una buena estimación podría ser -16 ft/s.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170573306956" class="checkpoint">
+<exercise id="fs-id1170573409999">
+<problem id="fs-id1170573307243">
+<para id="fs-id1170573399707">Un objeto se mueve a lo largo de un eje de coordenadas de manera que su posición en el tiempo <emphasis effect="italics">t</emphasis> está dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math> Estime su velocidad instantánea en el tiempo <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> calculando su velocidad media en el intervalo de tiempo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>2,001</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170573428105">
+<para id="fs-id1170573263102">12,006001</para>
+</solution>
+<commentary id="fs-id1170573230978" type="hint">
+<title>Pista</title>
+<para id="fs-id1170573431685">Utilice la sustitución en <m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2,001</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>2,001</m:mn><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1170573230979">
+<title>El problema del área y el cálculo integral</title>
+<para id="fs-id1170571096292">Ahora nos centramos en una pregunta clásica del cálculo. Muchas cantidades en física, por ejemplo, las cantidades de trabajo, pueden interpretarse como el área bajo una curva. Esto nos lleva a plantear la pregunta: ¿Cómo podemos calcular el área entre el gráfico de una función y el eje <emphasis effect="italics">x</emphasis> en un intervalo (<link target-id="CNX_Calc_Figure_02_01_006"/>)?</para>
+<figure id="CNX_Calc_Figure_02_01_006">
+<media id="fs-id1170573262592" alt="Se muestra un gráfico de una función curva genérica f(x) con forma de colina en el cuadrante uno. El área bajo la función está sombreada sobre el eje x y entre x=a y x=b.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_01_006.jpg"/>
+</media>
+<caption>El <term class="no-emphasis">problema del área</term>: ¿Cómo calculamos el área de la región sombreada?</caption>
+</figure>
+<para id="fs-id1170573290874">Al igual que en la respuesta a nuestras preguntas anteriores sobre la velocidad, primero intentamos aproximar la solución. Aproximamos el área dividiendo el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> en intervalos más pequeños en forma de rectángulo. La aproximación del área proviene de la suma de las áreas de estos rectángulos (<link target-id="CNX_Calc_Figure_02_01_007"/>).</para>
+<figure id="CNX_Calc_Figure_02_01_007">
+<media id="fs-id1170573287769" alt="El gráfico es el mismo que el de la imagen anterior, con una diferencia. En lugar del área completamente sombreada bajo la función curva, el intervalo [a, b] se divide en intervalos más pequeños en forma de rectángulos. Los rectángulos tienen el mismo ancho pequeño. La altura de cada rectángulo es la altura de la función en el punto medio de la base de ese rectángulo específico.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_01_007.jpg"/>
+</media>
+<caption>El área de la región bajo la curva se aproxima sumando las áreas de los rectángulos delgados.</caption>
+</figure>
+<para id="fs-id1170573402146">A medida que los anchos de los rectángulos se hacen más pequeños (se acercan a cero), las sumas de las áreas de los rectángulos se acercan al área entre el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y el eje <emphasis effect="italics">x</emphasis> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Una vez más, nos encontramos con un límite. Los límites de este tipo sirven de base para la definición de la integral definida. El <term>cálculo integral</term> es el estudio de las integrales y sus aplicaciones.</para>
+<example id="fs-id1170573406196">
+<exercise id="fs-id1170573256580">
+<problem id="fs-id1170573436687">
+<title>Estimación mediante rectángulos</title>
+<para id="fs-id1170573425705">Estime el área entre el eje <emphasis effect="italics">x</emphasis> y el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> utilizando los tres rectángulos que se muestran en la <link target-id="CNX_Calc_Figure_02_01_008"/>.</para>
+<figure id="CNX_Calc_Figure_02_01_008">
+<media id="fs-id1170573429458" alt="Un gráfico de la parábola f(x) - x^2 + 1 dibujado en papel cuadriculado con todas las unidades indicadas. Los rectángulos completamente contenidos bajo la función y sobre el eje x en el intervalo [0,3] están sombreados. Esta estrategia establece las alturas de los rectángulos como la menor de las dos esquinas que podrían intersecarse con la función. Por ello, los rectángulos son más cortos que la altura de la función.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_01_008.jpg"/>
+</media>
+<caption>El área de la región bajo la curva de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> se puede estimar mediante rectángulos.</caption>
+</figure>
+</problem>
+<solution id="fs-id1170573398981">
+<para id="fs-id1170573420317">Las áreas de los tres rectángulos son 1 unidad<sup>2</sup>, 2 unidad<sup>2</sup> y 5 unidad<sup>2</sup>. Utilizando estos rectángulos, nuestra estimación de área es de 8 unidades<sup>2</sup>.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170573571035" class="checkpoint">
+<exercise id="fs-id1170573502534">
+<problem id="fs-id1170573442120">
+<para id="fs-id1170573310917">Estime el área entre el eje <emphasis effect="italics">x</emphasis> y el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> utilizando los tres rectángulos que se muestran aquí:</para>
+<media id="fs-id1170573422153" alt="Un gráfico de la misma parábola f(x) = x^2 + 1, pero con una estrategia de sombreado diferente sobre el intervalo [0,3]. Esta vez, los rectángulos sombreados reciben la altura de la esquina más alta que podría intersecarse con la función. Así, los rectángulos superan la altura de la función.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_01_009.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1170573410427">
+<para id="fs-id1170573575235">16 unidad<sup>2</sup></para>
+</solution>
+<commentary id="fs-id1170573370690" type="hint">
+<title>Pista</title>
+<para id="fs-id1170573405358">Utilice <link target-id="fs-id1170573406196"/> como guía.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1170573368474">
+<title>Otros aspectos del cálculo</title>
+<para id="fs-id1170573406539">Hasta ahora, hemos estudiado funciones de una sola variable. Estas funciones pueden representarse visualmente mediante gráficos en dos dimensiones; sin embargo, no hay ninguna razón de peso para restringir nuestra investigación a dos dimensiones. Supongamos, por ejemplo, que en lugar de determinar la velocidad de un objeto que se mueve a lo largo de un eje de coordenadas, queremos determinar la velocidad de una roca disparada desde una catapulta en un momento dado, o de un avión que se mueve en tres dimensiones. Tal vez queramos graficar funciones de valor real de dos variables o determinar volúmenes de sólidos del tipo que se muestra en la <link target-id="CNX_Calc_Figure_02_01_010"/>. Estos son solo algunos de los tipos de preguntas que pueden plantearse y responderse utilizando el <term>cálculo multivariable</term>. Informalmente, el cálculo multivariable puede caracterizarse como el estudio del cálculo de funciones de dos o más variables. Sin embargo, antes de explorar estas y otras ideas, primero debemos sentar las bases para el estudio del cálculo en una variable explorando el concepto de límite.</para>
+<figure id="CNX_Calc_Figure_02_01_010">
+<media id="fs-id1170573217136" alt="Un diagrama en un espacio tridimensional, sobre los ejes x, y y z donde z = f(x,y). La base es el eje x,y, y la altura es el eje z. La base es un rectángulo contenido en el plano del eje x,y. La parte superior es una superficie de altura cambiante con esquinas situadas directamente sobre las del rectángulo en el plano x,y. El punto más alto está sobre la esquina en x=0, y=0. El punto más bajo está en la esquina en algún lugar del primer cuadrante del plano x,y. Los otros dos puntos tienen aproximadamente la misma altura y están situados por encima de las esquinas en el eje x y en el eje y. Se dibujan líneas que conectan las esquinas del rectángulo con las de la superficie.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_01_010.jpg"/>
+</media>
+<caption>Podemos utilizar el cálculo multivariable para calcular el volumen entre una superficie definida por una función de dos variables y un plano.</caption>
+</figure>
+</section>
+<section id="fs-id1170573367906" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1170573534245" list-type="bulleted" bullet-style="bullet">
+<item>El cálculo diferencial surgió al tratar de resolver el problema de determinar la pendiente de una línea tangente a una curva en un punto. La pendiente de la línea tangente indica la tasa de cambio de la función, también llamada <emphasis effect="italics">derivada</emphasis>. El cálculo de una derivada requiere calcular un límite.</item>
+<item>El cálculo integral surgió al tratar de resolver el problema de calcular el área de una región entre el gráfico de una función y el eje <emphasis effect="italics">x</emphasis>. Podemos aproximar el área dividiéndola en rectángulos finos y sumando las áreas de estos rectángulos. Esta suma conduce al valor de una función llamada <emphasis effect="italics">integral</emphasis>. La integral también se calcula hallando un límite y, de hecho, está relacionada con la derivada de una función.</item>
+<item>El cálculo multivariable nos permite resolver problemas en el espacio tridimensional, incluyendo la determinación del movimiento en el espacio y la búsqueda de volúmenes de sólidos.</item>
+</list>
+</section>
+<section id="fs-id1170573400272" class="key-equations">
+<title>Ecuaciones clave</title>
+<table id="eip-483" summary="." class="unnumbered unstyled">
+<tgroup cols="2"><tbody>
+  <row>
+    <entry><emphasis effect="bold">Pendiente de una línea secante</emphasis></entry>
+    <entry><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></entry>
+  </row>
+  <row>
+    <entry><emphasis effect="bold">Velocidad media en el intervalo</emphasis> <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>t</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></entry>
+    <entry><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></entry>
+  </row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section id="fs-id1170573580495" class="section-exercises">
+<para id="fs-id1170573593926">En los siguientes ejercicios, los puntos <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> están en el gráfico de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1170570997908">
+<problem id="fs-id1170571069411">
+<para id="fs-id1170573355696"><emphasis effect="bold">[T]</emphasis> Complete la siguiente tabla con los valores adecuados: coordenada <emphasis effect="italics">y</emphasis> de <emphasis effect="italics">Q</emphasis>, el punto <m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y la pendiente de la línea secante que pasa por los puntos <emphasis effect="italics">P</emphasis> y <emphasis effect="italics">Q</emphasis>. Redondee su respuesta a ocho dígitos significativos.</para>
+<table id="fs-id1170573319637" summary="A table with four columns and five rows. The first row has the headings x, y, Q(x,y), and msec, the slope of the secant line. The values under x are 1.1, 1.01, 1.001, and 1.0001. The values under y are a, b, c, and d. The values under Q(x,y) are e, f, g, and h. The values under msec¬  are i, j, k, and l." class="unnumbered">
+<tgroup cols="4">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<thead>
+<row valign="top">
+<entry align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry align="left"><emphasis effect="italics">y</emphasis></entry>
+<entry align="left"><m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></entry>
+<entry align="left"><emphasis effect="italics">m</emphasis><sub>sec</sub></entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">1,1</entry>
+<entry align="left">a.</entry>
+<entry align="left">e.</entry>
+<entry align="left">i.</entry>
+</row>
+<row valign="top">
+<entry align="left">1,01</entry>
+<entry align="left">b.</entry>
+<entry align="left">f.</entry>
+<entry align="left">j.</entry>
+</row>
+<row valign="top">
+<entry align="left">1,001</entry>
+<entry align="left">c.</entry>
+<entry align="left">g.</entry>
+<entry align="left">k.</entry>
+</row>
+<row valign="top">
+<entry align="left">1,0001</entry>
+<entry align="left">d.</entry>
+<entry align="left">h.</entry>
+<entry align="left">l.</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</problem>
+<solution id="fs-id1170573297750">
+<para id="fs-id1170573244874">a. 2,2100000; b. 2,0201000; c. 2,0020010; d. 2,0002000; e. (1,1000000, 2,2100000); f. (1,0100000, 2,0201000); g. (1,0010000, 2,0020010); h. (1,0001000, 2,0002000); i. 2,1000000; j. 2,0100000; k. 2,0010000; l. 2,0001000</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170570990874">
+<problem id="fs-id1170573382636">
+<para id="fs-id1170570998096">Utilice los valores de la columna derecha de la tabla del ejercicio anterior para estimar el valor de la pendiente de la línea tangente a <emphasis effect="italics">f</emphasis> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573369540">
+<problem id="fs-id1170570995180">
+<para id="fs-id1170573361009">Utilice el valor del ejercicio anterior para hallar la ecuación de la línea tangente en el punto <emphasis effect="italics">P</emphasis>. Grafique <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y la línea tangente.</para>
+</problem>
+<solution id="fs-id1170573333081">
+<para id="fs-id1170573571230"><m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1170570999797">En los siguientes ejercicios, los puntos <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> están en el gráfico de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1170573414344">
+<problem id="fs-id1170573361428">
+<para id="fs-id1170573583105"><emphasis effect="bold">[T]</emphasis> Complete la siguiente tabla con los valores adecuados: coordenada <emphasis effect="italics">y</emphasis> de <emphasis effect="italics">Q</emphasis>, el punto <m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y la pendiente de la línea secante que pasa por los puntos <emphasis effect="italics">P</emphasis> y <emphasis effect="italics">Q</emphasis>. Redondee su respuesta a ocho dígitos significativos.</para>
+<table id="fs-id1170573581648" summary="A table with four columns and five rows. The first row has the headings x, y, Q(x,y), and msec, the slope of the secant line. The values under x are 1.1, 1.01, 1.001, and 1.0001. The values under y are a, b, c, and d. The values under Q(x,y) are e, f, g, and h. The values under msec¬  are i, j, k, and l." class="unnumbered">
+<tgroup cols="4">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<thead>
+<row valign="top">
+<entry align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry align="left"><emphasis effect="italics">y</emphasis></entry>
+<entry align="left"><m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></entry>
+<entry align="left"><emphasis effect="italics">m</emphasis><sub>sec</sub></entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">1,1</entry>
+<entry align="left">a.</entry>
+<entry align="left">e.</entry>
+<entry align="left">i.</entry>
+</row>
+<row valign="top">
+<entry align="left">1,01</entry>
+<entry align="left">b.</entry>
+<entry align="left">f.</entry>
+<entry align="left">j.</entry>
+</row>
+<row valign="top">
+<entry align="left">1,001</entry>
+<entry align="left">c.</entry>
+<entry align="left">g.</entry>
+<entry align="left">k.</entry>
+</row>
+<row valign="top">
+<entry align="left">1,0001</entry>
+<entry align="left">d.</entry>
+<entry align="left">h.</entry>
+<entry align="left">l.</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</problem>
+</exercise>
+<exercise id="fs-id1170571048191">
+<problem id="fs-id1170571121629">
+<para id="fs-id1170573406189">Utilice los valores de la columna derecha de la tabla del ejercicio anterior para estimar el valor de la pendiente de la línea tangente a <emphasis effect="italics">f</emphasis> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170573381205">
+<para id="fs-id1170573403971">3</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170573263712">
+<problem id="fs-id1170570996505">
+<para id="fs-id1170571138298">Utilice el valor del ejercicio anterior para hallar la ecuación de la línea tangente en el punto <emphasis effect="italics">P</emphasis>. Grafique <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y la línea tangente.</para>
+</problem>
+</exercise>
+<para id="fs-id1170573501916">En los siguientes ejercicios, los puntos <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> están en el gráfico de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1170573371452">
+<problem id="fs-id1170573442500">
+<para id="fs-id1170573429382"><emphasis effect="bold">[T]</emphasis> Complete la siguiente tabla con los valores adecuados: coordenada <emphasis effect="italics">y</emphasis> de <emphasis effect="italics">Q</emphasis>, el punto <m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y la pendiente de la línea secante que pasa por los puntos <emphasis effect="italics">P</emphasis> y <emphasis effect="italics">Q</emphasis>. Redondee su respuesta a ocho dígitos significativos.</para>
+<table id="fs-id1170573423698" summary="A table with four columns and five rows. The first row has the headings x, y, Q(x,y), and msec, the slope of the secant line. The values under x are 4.1, 4.01, 4.001, and 4.0001. The values under y are a, b, c, and d. The values under Q(x,y) are e, f, g, and h. The values under msec¬  are i, j, k, and l." class="unnumbered">
+<tgroup cols="4">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<thead>
+<row valign="top">
+<entry align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry align="left"><emphasis effect="italics">y</emphasis></entry>
+<entry align="left"><m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></entry>
+<entry align="left"><emphasis effect="italics">m</emphasis><sub>sec</sub></entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">4,1</entry>
+<entry align="left">a.</entry>
+<entry align="left">e.</entry>
+<entry align="left">i.</entry>
+</row>
+<row valign="top">
+<entry align="left">4,01</entry>
+<entry align="left">b.</entry>
+<entry align="left">f.</entry>
+<entry align="left">j.</entry>
+</row>
+<row valign="top">
+<entry align="left">4,001</entry>
+<entry align="left">c.</entry>
+<entry align="left">g.</entry>
+<entry align="left">k.</entry>
+</row>
+<row valign="top">
+<entry align="left">4,0001</entry>
+<entry align="left">d.</entry>
+<entry align="left">h.</entry>
+<entry align="left">l.</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</problem>
+<solution id="fs-id1170571089615">
+<para id="fs-id1170571119936">a. 2,0248457; b. 2,0024984; c. 2,0002500; d. 2,0000250; e. (4,1000000,2,0248457); f. (4,0100000,2,0024984); g. (4,0010000,2,0002500); h. (4,00010000,2,0000250); i. 0,24845673; j. 0,24984395; k. 0,24998438; l. 0,24999844</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170573419319">
+<problem id="fs-id1170573419321">
+<para id="fs-id1170570976425">Utilice los valores de la columna derecha de la tabla del ejercicio anterior para estimar el valor de la pendiente de la línea tangente a <emphasis effect="italics">f</emphasis> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170570997493">
+<problem id="fs-id1170570997495">
+<para id="fs-id1170573396387">Utilice el valor del ejercicio anterior para hallar la ecuación de la línea tangente en el punto <emphasis effect="italics">P</emphasis>.</para>
+</problem>
+<solution id="fs-id1170573419625">
+<para id="fs-id1170571124877"><m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>x</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1170571068221">En los siguientes ejercicios, los puntos <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1,5</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>ϕ</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> están en el gráfico de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>ϕ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mi>ϕ</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1170573350763">
+<problem id="fs-id1170571118641">
+<para id="fs-id1170571118644"><emphasis effect="bold">[T]</emphasis> Complete la siguiente tabla con los valores adecuados: coordenada <emphasis effect="italics">y</emphasis> de <emphasis effect="italics">Q</emphasis>, el punto <m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>φ</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y la pendiente de la línea secante que pasa por los puntos <emphasis effect="italics">P</emphasis> y <emphasis effect="italics">Q</emphasis>. Redondee su respuesta a ocho dígitos significativos.</para><table id="fs-id1170570997485" summary="A table with four columns and five rows. The first row has the headings x, y, Q(phi,y), and msec, the slope of the secant line. The values under x are 1.4, 1.49, 1.499, and 1.4999. The values under y are a, b, c, and d. The values under Q(phi,y) are e, f, g, and h. The values under msec¬  are i, j, k, and l." class="unnumbered">
+<tgroup cols="4">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<thead>
+<row valign="top">
+<entry align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry align="left"><emphasis effect="italics">y</emphasis></entry>
+<entry align="left"><m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>ϕ</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></entry>
+<entry align="left"><emphasis effect="italics">m</emphasis><sub>sec</sub></entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">1,4</entry>
+<entry align="left">a.</entry>
+<entry align="left">e.</entry>
+<entry align="left">i.</entry>
+</row>
+<row valign="top">
+<entry align="left">1,49</entry>
+<entry align="left">b.</entry>
+<entry align="left">f.</entry>
+<entry align="left">j.</entry>
+</row>
+<row valign="top">
+<entry align="left">1,499</entry>
+<entry align="left">c.</entry>
+<entry align="left">g.</entry>
+<entry align="left">k.</entry>
+</row>
+<row valign="top">
+<entry align="left">1,4999</entry>
+<entry align="left">d.</entry>
+<entry align="left">h.</entry>
+<entry align="left">l.</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</problem>
+</exercise>
+<exercise id="fs-id1170573449494">
+<problem id="fs-id1170573575349">
+<para id="fs-id1170573575351">Utilice los valores de la columna derecha de la tabla del ejercicio anterior para estimar el valor de la pendiente de la línea tangente a <emphasis effect="italics">f</emphasis> en <m:math><m:mrow><m:mi>φ</m:mi><m:mo>=</m:mo><m:mn>1,5</m:mn><m:mo>.</m:mo></m:mrow></m:math></para></problem>
+<solution id="fs-id1170573351715">
+<para id="fs-id1170573417203"><emphasis effect="italics">π</emphasis></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170573589729">
+<problem id="fs-id1170573589731">
+<para id="fs-id1170573589733">Utilice el valor del ejercicio anterior para hallar la ecuación de la línea tangente en el punto <emphasis effect="italics">P</emphasis>.</para>
+</problem>
+</exercise>
+<para id="fs-id1170573396155">En los siguientes ejercicios, los puntos <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>-1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> están en el gráfico de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1170573419372">
+<problem id="fs-id1170573430365">
+<para id="fs-id1170573430367"><emphasis effect="bold">[T]</emphasis> Complete la siguiente tabla con los valores adecuados: coordenada <emphasis effect="italics">y</emphasis> de <emphasis effect="italics">Q</emphasis>, el punto <m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y la pendiente de la línea secante que pasa por los puntos <emphasis effect="italics">P</emphasis> y <emphasis effect="italics">Q</emphasis>. Redondee su respuesta a ocho dígitos significativos.</para>
+<table id="fs-id1170573396260" summary="A table with four columns and five rows. The first row has the headings x, y, Q(x,y), and msec, the slope of the secant line. The values under x are -1.05, -1.01, -1.005, and -1.001. The values under y are a, b, c, and d. The values under Q(x,y) are e, f, g, and h. The values under msec¬  are i, j, k, and l." class="unnumbered">
+<tgroup cols="4">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<thead>
+<row valign="top">
+<entry align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry align="left"><emphasis effect="italics">y</emphasis></entry>
+<entry align="left"><m:math><m:mrow><m:mi>Q</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></entry>
+<entry align="left"><emphasis effect="italics">m</emphasis><sub>sec</sub></entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">-1,05</entry>
+<entry align="left">a.</entry>
+<entry align="left">e.</entry>
+<entry align="left">i.</entry>
+</row>
+<row valign="top">
+<entry align="left">-1,01</entry>
+<entry align="left">b.</entry>
+<entry align="left">f.</entry>
+<entry align="left">j.</entry>
+</row>
+<row valign="top">
+<entry align="left">-1,005</entry>
+<entry align="left">c.</entry>
+<entry align="left">g.</entry>
+<entry align="left">k.</entry>
+</row>
+<row valign="top">
+<entry align="left">-1,001</entry>
+<entry align="left">d.</entry>
+<entry align="left">h.</entry>
+<entry align="left">l.</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</problem>
+<solution id="fs-id1170573424998">
+<para id="fs-id1170573595212">a. -0,95238095; b. -0,99009901; c. -0,99502488; d. -0,99900100; e. (-1;.0500000,-0;.95238095); f. (-1;.0100000,-0;.9909901); g. (-1;.0050000,-0;.99502488); h. (1,0010000,-0;.99900100); i. -0,95238095; j. -0,99009901; k. -0,99502488; l. -0,99900100</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170573408094">
+<problem id="fs-id1170573408096">
+<para id="fs-id1170573381197">Utilice los valores de la columna derecha de la tabla del ejercicio anterior para estimar el valor de la pendiente de la línea tangente a <emphasis effect="italics">f</emphasis> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573382504">
+<problem id="fs-id1170573382506">
+<para id="fs-id1170573406148">Utilice el valor del ejercicio anterior para hallar la ecuación de la línea tangente en el punto <emphasis effect="italics">P</emphasis>.</para>
+</problem>
+<solution id="fs-id1170571033603">
+<para id="fs-id1170571033605"><m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1170573392558">En los siguientes ejercicios, la función de posición de una bola lanzada desde lo alto de un edificio de 200 metros de altura está dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>200</m:mn><m:mo>-</m:mo><m:mn>4,9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> donde la posición <emphasis effect="italics">s</emphasis> se mide en metros y el tiempo <emphasis effect="italics">t</emphasis> se mide en segundos. Redondee su respuesta a ocho dígitos significativos.</para>
+<exercise id="fs-id1170573393541">
+<problem id="fs-id1170573393543">
+<para id="fs-id1170570997263"><emphasis effect="bold">[T]</emphasis> Calcule la velocidad media de la pelota en los intervalos de tiempo dados.</para>
+<list id="fs-id1170573429346" list-type="enumerated" number-style="lower-alpha">
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>4,99</m:mn><m:mo>,</m:mo><m:mn>5</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>5</m:mn><m:mo>,</m:mo><m:mn>5,01</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>4,999</m:mn><m:mo>,</m:mo><m:mn>5</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>5</m:mn><m:mo>,</m:mo><m:mn>5,001</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1170570997916">
+<problem id="fs-id1170570997918">
+<para id="fs-id1170570997920">Utilice el ejercicio anterior para adivinar la velocidad instantánea de la pelota en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math> seg.</para>
+</problem>
+<solution id="fs-id1170573400112">
+<para id="fs-id1170571124871">-49 m/s (la velocidad de la pelota es de 49 m/s hacia abajo)</para>
+</solution>
+</exercise>
+<para id="fs-id1170573396248">En los siguientes ejercicios, considere una piedra lanzada al aire desde el nivel del suelo con una velocidad inicial de 15 m/s. Su altura en metros en el tiempo <emphasis effect="italics">t</emphasis> segundos es <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>15</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>4,9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1170573430332">
+<problem id="fs-id1170573430334">
+<para id="fs-id1170573430336"><emphasis effect="bold">[T]</emphasis> Calcule la velocidad media de la piedra en los intervalos de tiempo dados.</para>
+<list id="fs-id1170573364356" list-type="enumerated" number-style="lower-alpha">
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1,05</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1,01</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1,005</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1,001</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1170573324864">
+<problem id="fs-id1170573324866">
+<para id="fs-id1170571101644">Utilice el ejercicio anterior para adivinar la velocidad instantánea de la piedra en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> seg.</para>
+</problem>
+<solution id="fs-id1170573427740">
+<para id="fs-id1170573427742">5,2 m/s</para>
+</solution>
+</exercise>
+<para id="fs-id1170573442443">En los siguientes ejercicios, considere un cohete lanzado al aire que luego regresa a la Tierra. La altura del cohete en metros está dada por <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>600</m:mn><m:mo>+</m:mo><m:mn>78,4</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>4,9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> donde <emphasis effect="italics">t</emphasis> se mide en segundos.</para>
+<exercise id="fs-id1170573425872">
+<problem id="fs-id1170571262060">
+<para id="fs-id1170571262062"><emphasis effect="bold">[T]</emphasis> Calcule la velocidad media del cohete en los intervalos de tiempo dados.</para>
+<list id="fs-id1170570999667" list-type="enumerated" number-style="lower-alpha">
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>9</m:mn><m:mo>,</m:mo><m:mn>9,01</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>8,99</m:mn><m:mo>,</m:mo><m:mn>9</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>9</m:mn><m:mo>,</m:mo><m:mn>9,001</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>8,999</m:mn><m:mo>,</m:mo><m:mn>9</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1170573369087">
+<problem id="fs-id1170573593195">
+<para id="fs-id1170573593197">Utilice el ejercicio anterior para adivinar la velocidad instantánea del cohete en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>9</m:mn></m:mrow></m:math> seg.</para>
+</problem>
+<solution id="fs-id1170570997253">
+<para id="fs-id1170570997255">-9,8 m/s</para>
+</solution>
+</exercise>
+<para id="fs-id1170570997261">En los siguientes ejercicios, considere que un atleta corre los 40 metros planos. La posición del atleta está dada por <m:math><m:mrow><m:mi>d</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mn>6</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <emphasis effect="italics">d</emphasis> es la posición en metros y <emphasis effect="italics">t</emphasis> es el tiempo transcurrido, medido en segundos.</para>
+<exercise id="fs-id1170571136683">
+<problem id="fs-id1170571136686">
+<para id="fs-id1170571136688"><emphasis effect="bold">[T]</emphasis> Calcule la velocidad media del corredor en los intervalos de tiempo dados.</para>
+<list id="fs-id1170573590290" list-type="enumerated" number-style="lower-alpha">
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1,95</m:mn><m:mo>,</m:mo><m:mn>2,05</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1,995</m:mn><m:mo>,</m:mo><m:mn>2,005</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1,9995</m:mn><m:mo>,</m:mo><m:mn>2,0005</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>2,00001</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1170571123766">
+<problem id="fs-id1170571258656">
+<para id="fs-id1170571258658">Utilice el ejercicio anterior para adivinar la velocidad instantánea del corredor en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> seg.</para>
+</problem>
+<solution id="fs-id1170573429474">
+<para id="fs-id1170573429477">6 m/s</para>
+</solution>
+</exercise>
+<para id="fs-id1170573392317">En los siguientes ejercicios, considere la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1170573582782">
+<problem id="fs-id1170573582785">
+<para id="fs-id1170571138902">Dibuje el gráfico de <emphasis effect="italics">f</emphasis> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> y sombree la región por encima del eje <emphasis effect="italics">x</emphasis>.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571259931">
+<problem id="fs-id1170571259933">
+<para id="fs-id1170571259935">Utilice el ejercicio anterior para calcular el valor aproximado del área entre el eje <emphasis effect="italics">x</emphasis> y el gráfico de <emphasis effect="italics">f</emphasis> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> utilizando rectángulos. Para los rectángulos, utilice las unidades cuadradas, y aproxime tanto por encima como por debajo de las líneas. Utilice la geometría para hallar la respuesta exacta.</para>
+</problem>
+<solution id="fs-id1170573413782">
+<para id="fs-id1170573413784">Por debajo, 1 unidad<sup>2</sup>; por encima: 4 unidad<sup>2</sup>. El área exacta de los dos triángulos es <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2,5</m:mn><m:msup><m:mrow><m:mspace width="0.2em"/><m:mtext>unidades</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1170573255256">En los siguientes ejercicios, considere la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> (<emphasis effect="italics">Pista</emphasis>: Se trata de la mitad superior de un círculo de radio 1 situado en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mtext>.)</m:mtext></m:mrow></m:math></para>
+<exercise id="fs-id1170571050086">
+<problem id="fs-id1170571050088">
+<para id="fs-id1170571050090">Dibuje el gráfico de <emphasis effect="italics">f</emphasis> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573615200">
+<problem id="fs-id1170573615202">
+<para id="fs-id1170573615204">Utilice el ejercicio anterior para calcular el área aproximada entre el eje <emphasis effect="italics">x</emphasis> y el gráfico de <emphasis effect="italics">f</emphasis> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> utilizando rectángulos. Para los rectángulos, utilice cuadrados de 0,4 por 0,4 unidades y aproxime tanto por encima como por debajo de las líneas. Utilice la geometría para hallar la respuesta exacta.</para>
+</problem>
+<solution id="fs-id1170573586839">
+<para id="fs-id1170573397798">Por debajo, 0,96 unidad<sup>2</sup>; por encima, 1,92 unidad<sup>2</sup>. El área exacta del semicírculo de radio 1 es <m:math><m:mrow><m:mfrac><m:mrow><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> unidad<sup>2</sup>.</para>
+</solution>
+</exercise>
+<para id="fs-id1170573594037">En los siguientes ejercicios, considere la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1170573750527">
+<problem id="fs-id1170573413761">
+<para id="fs-id1170573413763">Dibuje el gráfico de <emphasis effect="italics">f</emphasis> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571137056">
+<problem id="fs-id1170571137058">
+<para id="fs-id1170571137060">Aproxime el área de la región entre el eje <emphasis effect="italics">x</emphasis> y el gráfico de <emphasis effect="italics">f</emphasis> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170573255381">
+<para id="fs-id1170573255383">Aproximadamente 1,3333333 unidad<sup>2</sup></para>
+</solution>
+</exercise>
+</section>
+  </content>
+<glossary>
+<definition id="fs-id1170573583169">
+<term>velocidad media</term>
+<meaning id="fs-id1170573583174">el cambio en la posición de un objeto dividido entre la duración de un periodo; la velocidad media de un objeto en un intervalo de tiempo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>a</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> (si <m:math><m:mrow><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi></m:mrow></m:math> o <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>t</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> si <m:math><m:mrow><m:mi>t</m:mi><m:mo>&gt;</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:math>, con una posición dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> que es <m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></meaning>
+</definition>
+<definition id="fs-id1170571047938">
+<term>cálculo diferencial</term>
+<meaning id="fs-id1170571047943">el campo del cálculo que se ocupa del estudio de las derivadas y sus aplicaciones</meaning>
+</definition>
+<definition id="fs-id1170571100400">
+<term>velocidad instantánea</term>
+<meaning id="fs-id1170571100405">La velocidad instantánea de un objeto con una función de posición que viene dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es el valor que tienen las velocidades medias en intervalos de la forma <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>a</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>t</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> se acercan a medida que los valores de <emphasis effect="italics">t</emphasis> se acercan a <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> siempre que exista tal valor</meaning>
+</definition>
+<definition id="fs-id1170573399066">
+<term>cálculo integral</term>
+<meaning id="fs-id1170573410590">el estudio de las integrales y sus aplicaciones</meaning>
+</definition>
+<definition id="fs-id1170573410594">
+<term>límite</term>
+<meaning id="fs-id1170573410599">el proceso de dejar que <emphasis effect="italics">x</emphasis> o <emphasis effect="italics">t</emphasis> se acerquen a <emphasis effect="italics">a</emphasis> en una expresión; el límite de una función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> a medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis> es el valor al que se acerca <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> a medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis></meaning>
+</definition>
+<definition id="fs-id1170573396205">
+<term>cálculo multivariable</term>
+<meaning id="fs-id1170573753163">el estudio del cálculo de funciones de dos o más variables</meaning>
+</definition>
+<definition id="fs-id1170573753167">
+<term>secante</term>
+<meaning id="fs-id1170573753172">Una línea secante a una función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <emphasis effect="italics">a</emphasis> es una línea que pasa por el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y otro punto de la función; la pendiente de la línea secante está dada por <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></meaning>
+</definition>
+<definition id="fs-id1170573396339">
+<term>tangente</term>
+<meaning id="fs-id1170573396345">Una línea tangente al gráfico de una función en un punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es la línea a la que se aproximan las líneas secantes a través de <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> a medida que pasan por puntos de la función con valores de <emphasis effect="italics">x</emphasis> que se aproximan a <emphasis effect="italics">a</emphasis>; la pendiente de la línea tangente a un gráfico en <emphasis effect="italics">a</emphasis> mide la tasa de cambio de la función en <emphasis effect="italics">a</emphasis></meaning>
+</definition>
+</glossary>
+</document>

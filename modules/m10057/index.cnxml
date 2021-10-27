@@ -1,0 +1,756 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Numerical Integration</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m10057</md:content-id>
+  <md:title>Numerical Integration</md:title>
+  <md:abstract><list>
+<item>Aproximar el valor de una integral definida utilizando las reglas del punto medio y la trapezoidal.</item>
+<item>Determinar el error absoluto y relativo al utilizar una técnica de integración numérica.</item>
+<item>Estimar el error absoluto y relativo mediante una fórmula de limitación de errores.</item>
+<item>Reconocer cuándo las reglas del punto medio y trapezoidal sobrestiman o subestiman el valor real de una integral.</item>
+<item>Utilizar la regla de Simpson para aproximar el valor de una integral definida con una exactitud determinada.</item>
+</list></md:abstract>
+  <md:uuid>17687f0d-5f4f-421c-8615-499b3b3689d2</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1165040744703">Las antiderivadas de muchas funciones no se pueden expresar o no se pueden expresar fácilmente en forma cerrada (es decir, en términos de funciones conocidas). En consecuencia, en lugar de evaluar directamente las integrales definidas de estas funciones, recurrimos a diversas técnicas de <term>integración numérica</term> para aproximar sus valores. En esta sección exploramos varias de estas técnicas. Además, examinamos el proceso de estimación del error al utilizar estas técnicas.</para>
+<section id="fs-id1165041769647">
+<title>La regla del punto medio</title>
+<para id="fs-id1165041958773">Anteriormente en este texto hemos definido la integral definida de una función sobre un intervalo como el límite de las <term class="no-emphasis">sumas de Riemann</term>. En general, cualquier suma de Riemann de una función <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en un intervalo <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo stretchy="false">]</m:mo></m:mrow></m:math> puede verse como una estimación de <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> Recordemos que la suma de Riemann de una función <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en un intervalo <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo stretchy="false">]</m:mo></m:mrow></m:math> se obtiene seleccionando una partición</para>
+<equation id="fs-id1165042273486" class="unnumbered"><label/><m:math><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mtext>,…</m:mtext><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>}</m:mo></m:mrow><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>donde</m:mtext><m:mspace width="0.2em"/><m:mi>a</m:mi><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>&lt;</m:mo><m:mo>⋯</m:mo><m:mo>&lt;</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>b</m:mi></m:mrow></m:math></equation>
+<para id="fs-id1165041952162">y un conjunto</para>
+<equation id="fs-id1165041974915" class="unnumbered"><label/><m:math><m:mrow><m:mi>S</m:mi><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mrow><m:msubsup><m:mi>x</m:mi><m:mn>1</m:mn><m:mo>*</m:mo></m:msubsup><m:mo>,</m:mo><m:msubsup><m:mi>x</m:mi><m:mn>2</m:mn><m:mo>*</m:mo></m:msubsup><m:mtext>,…</m:mtext><m:mo>,</m:mo><m:msubsup><m:mi>x</m:mi><m:mi>n</m:mi><m:mo>*</m:mo></m:msubsup></m:mrow><m:mo>}</m:mo></m:mrow><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>donde</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>≤</m:mo><m:msubsup><m:mi>x</m:mi><m:mi>i</m:mi><m:mo>*</m:mo></m:msubsup><m:mo>≤</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mspace width="0.2em"/><m:mtext>para todo</m:mtext><m:mspace width="0.2em"/><m:mi>i</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165041762259">La suma de Riemann correspondiente a la partición <m:math><m:mi>P</m:mi></m:math> y el conjunto <m:math><m:mi>S</m:mi></m:math> está dado por <m:math><m:mrow><m:mstyle displaystyle="true"><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msubsup><m:mi>x</m:mi><m:mi>i</m:mi><m:mo>*</m:mo></m:msubsup><m:mo stretchy="false">)</m:mo><m:mtext>Δ</m:mtext><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:mstyle><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:mtext>Δ</m:mtext><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo></m:mrow></m:math> la longitud del <emphasis effect="italics">i</emphasis>-ésimo subintervalo.</para>
+<para id="fs-id1165041843704">La <term>regla del punto medio</term> para estimar una integral definida utiliza una suma de Riemann con subintervalos de igual ancho y los puntos medios, <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mi>i</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> de cada subintervalo en lugar de <m:math><m:mrow><m:msubsup><m:mi>x</m:mi><m:mi>i</m:mi><m:mo>*</m:mo></m:msubsup><m:mo>.</m:mo></m:mrow></m:math> Formalmente, enunciamos un teorema relativo a la convergencia de la regla del punto medio de la siguiente forma.</para>
+<note id="fs-id1165042137683" class="theorem">
+<title>La regla del punto medio</title>
+<para id="fs-id1165040775196">Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> es continua en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Supongamos que <emphasis effect="italics">n</emphasis> es un número entero positivo y <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow><m:mi>n</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> se divide en <m:math><m:mi>n</m:mi></m:math> subintervalos, cada uno de ellos de longitud <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> es el punto medio del <emphasis effect="italics">i</emphasis>-ésimo subintervalo, establezca</para>
+<equation id="fs-id1165040697119"><m:math><m:mrow><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:munderover><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∑</m:mo></m:mstyle><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>m</m:mi><m:mi>i</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042262133">Entonces <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>n</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</note>
+<para id="fs-id1165041977672">Como podemos ver en la <link target-id="CNX_Calc_Figure_07_06_001"/>, si <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> en <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo stretchy="false">]</m:mo><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:munderover><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∑</m:mo></m:mstyle><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>m</m:mi><m:mi>i</m:mi></m:msub><m:mo stretchy="false">)</m:mo><m:mtext>Δ</m:mtext><m:mi>x</m:mi></m:mrow></m:math> corresponde a la suma de las áreas de los rectángulos que aproximan el área entre el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y el eje <emphasis effect="italics">x</emphasis> en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> El gráfico muestra los rectángulos correspondientes a <m:math><m:mrow><m:msub><m:mi>M</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math> para una función no negativa en un intervalo cerrado <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo stretchy="false">]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_07_06_001">
+<media id="fs-id1165042089985" alt="Esta figura es un gráfico de una función no negativa en el primer cuadrante. La función aumenta y disminuye. El cuadrante está dividido en una cuadrícula. Comenzando en el eje x en el punto marcado como a = x sub 0, hay rectángulos sombreados cuyas alturas son aproximadamente la altura de la curva. El eje x está escalado por incrementos de msub1, x sub 1, m sub 2, x sub 2, m sub 3, x sub 3, m sub 4 y b = x sub 4.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_07_06_001.jpg"/>
+</media>
+<caption>La regla del punto medio aproxima el área entre el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y el eje <emphasis effect="italics">x</emphasis> sumando las áreas de los rectángulos con puntos medios que son puntos en <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+<example id="fs-id1165040799117">
+<exercise id="fs-id1165041845776">
+<problem id="fs-id1165041843774">
+<title>Usar la regla del punto medio con <m:math><m:mrow><m:msub><m:mi>M</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math></title>
+<para id="fs-id1165040716416">Utilice la regla del punto medio para estimar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando cuatro subintervalos. Compare el resultado con el valor real de esta integral.</para>
+</problem>
+<solution id="fs-id1165042276048">
+<para id="fs-id1165042050773">Cada subintervalo tiene una longitud <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>0</m:mn></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, los subintervalos están compuestos por</para>
+<equation id="fs-id1165042066546" class="unnumbered"><label/><m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165041815762">Los puntos medios de estos subintervalos son <m:math><m:mrow><m:mrow><m:mo>{</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>8</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>8</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>5</m:mn><m:mn>8</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>7</m:mn><m:mn>8</m:mn></m:mfrac></m:mrow><m:mo>}</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto,</para>
+<equation id="fs-id1165041791048" class="unnumbered"><label/><m:math><m:mrow><m:msub><m:mi>M</m:mi><m:mn>4</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>8</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>8</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>5</m:mn><m:mn>8</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>7</m:mn><m:mn>8</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>·</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>64</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>·</m:mo><m:mfrac><m:mn>9</m:mn><m:mrow><m:mn>64</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>·</m:mo><m:mfrac><m:mrow><m:mn>25</m:mn></m:mrow><m:mrow><m:mn>64</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>·</m:mo><m:mfrac><m:mrow><m:mn>21</m:mn></m:mrow><m:mrow><m:mn>64</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>21</m:mn></m:mrow><m:mrow><m:mn>64</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165041770066">Dado que</para>
+<equation id="fs-id1165041915328" class="unnumbered"><label/><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mrow><m:mo>|</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>-</m:mo><m:mfrac><m:mrow><m:mn>21</m:mn></m:mrow><m:mrow><m:mn>64</m:mn></m:mrow></m:mfrac></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>192</m:mn></m:mrow></m:mfrac><m:mo>≈</m:mo><m:mn>0,0052</m:mn><m:mo>,</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042134377">vemos que la regla del punto medio produce una estimación algo cercana al valor real de la integral definida.</para>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1165041840100">
+<exercise id="fs-id1165042126032">
+<problem id="fs-id1165041827477">
+<title>Usar la regla del punto medio con <m:math><m:mrow><m:msub><m:mi>M</m:mi><m:mn>6</m:mn></m:msub></m:mrow></m:math></title>
+<para id="fs-id1165042128953">Utilice <m:math><m:mrow><m:msub><m:mi>M</m:mi><m:mn>6</m:mn></m:msub></m:mrow></m:math> para estimar la longitud de la curva <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo stretchy="false">]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165040754773">
+<para id="fs-id1165041805251">La longitud de <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo stretchy="false">]</m:mo></m:mrow></m:math> es</para>
+<equation id="fs-id1165041813602" class="unnumbered"><label/><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mspace width="0.1em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165040691246">Dado que <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> esta integral se convierte en <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mspace width="0.1em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1165041893161">Si <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo stretchy="false">]</m:mo></m:mrow></m:math> se divide en seis subintervalos, entonces cada subintervalo tiene una longitud <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mn>6</m:mn></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> y los puntos medios de los subintervalos son <m:math><m:mrow><m:mrow><m:mo>{</m:mo><m:mrow><m:mfrac><m:mn>5</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>7</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>9</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mrow><m:mn>11</m:mn></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mrow><m:mn>13</m:mn></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mrow><m:mn>15</m:mn></m:mrow><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>}</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Si establecemos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mo>,</m:mo></m:mrow></m:math></para>
+<equation id="fs-id1165042017909" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:msub><m:mi>M</m:mi><m:mn>6</m:mn></m:msub></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>5</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>7</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>9</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>11</m:mn></m:mrow><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>13</m:mn></m:mrow><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>15</m:mn></m:mrow><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>≈</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1,6008</m:mn><m:mo>+</m:mo><m:mn>2,0156</m:mn><m:mo>+</m:mo><m:mn>2,4622</m:mn><m:mo>+</m:mo><m:mn>2,9262</m:mn><m:mo>+</m:mo><m:mn>3,4004</m:mn><m:mo>+</m:mo><m:mn>3,8810</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>8,1431.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165041894379" class="checkpoint">
+<exercise id="fs-id1165042058790">
+<problem id="fs-id1165042231132">
+<para id="fs-id1165040706128">Utilice la regla del punto medio con <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> para estimar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165041815897">
+<para id="fs-id1165041816976"><m:math><m:mrow><m:mfrac><m:mrow><m:mn>24</m:mn></m:mrow><m:mrow><m:mn>35</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165041834633" type="hint">
+<title>Pista</title>
+<para id="fs-id1165040743320"><m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>5</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>7</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1165041822197">
+<title>La regla trapezoidal</title>
+<para id="fs-id1165042006539">También podemos aproximar el valor de una integral definida utilizando trapecios en lugar de rectángulos. En la <link target-id="CNX_Calc_Figure_07_06_002"/>, el área bajo la curva se aproxima mediante trapecios en lugar de rectángulos.</para>
+<figure id="CNX_Calc_Figure_07_06_002">
+<media id="fs-id1165042085598" alt="Esta figura es un gráfico de una función no negativa en el primer cuadrante. La función aumenta y disminuye. El cuadrante está dividido en una cuadrícula. Comenzando en el eje x en el punto marcado como a = x sub 0, hay trapecios sombreados cuyas alturas son aproximadamente la altura de la curva. El eje x está escalado por incrementos de a = x sub 0, x sub 1, x sub 2, x sub 3, y b = x sub 4.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_07_06_002.jpg"/>
+</media>
+<caption>Los trapecios pueden utilizarse para aproximar el área bajo una curva, aproximando así la integral definida.</caption>
+</figure>
+<para id="fs-id1165041821083">La <term>regla trapezoidal</term> para estimar integrales definidas utiliza trapecios en lugar de rectángulos para aproximar el área bajo una curva. Para comprender la forma final de la regla, consideremos los trapecios que se muestran en la <link target-id="CNX_Calc_Figure_07_06_002"/>. Suponemos que la longitud de cada subintervalo está dada por <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> En primer lugar, recordemos que el área de un trapecio con una altura <emphasis effect="italics">h</emphasis> y bases de longitud <m:math><m:mrow><m:msub><m:mi>b</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> está dada por <m:math><m:mrow><m:mtext>Área</m:mtext><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>h</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>b</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>b</m:mi><m:mn>2</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Vemos que el primer trapecio tiene una altura <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi></m:mrow></m:math> y bases paralelas de longitud <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, el área del primer trapecio en la <link target-id="CNX_Calc_Figure_07_06_002"/> es</para>
+<equation id="fs-id1165040644975" class="unnumbered"><label/><m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo stretchy="false">(</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165040713973">Las áreas de los tres trapecios restantes son</para>
+<equation id="fs-id1165042135238" class="unnumbered"><label/><m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo stretchy="false">(</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo stretchy="false">(</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo stretchy="false">(</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165041818057">En consecuencia,</para>
+<equation id="fs-id1165042136358" class="unnumbered"><label/><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>≈</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo stretchy="false">(</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo stretchy="false">(</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo stretchy="false">(</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo stretchy="false">(</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165041800257">Después de sacar un factor común de <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>Δ</m:mtext><m:mi>x</m:mi></m:mrow></m:math> y combinando términos semejantes, tenemos</para>
+<equation id="fs-id1165041782960" class="unnumbered"><label/><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>≈</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></equation>
+<para id="fs-id1165040671242">Generalizando, enunciamos formalmente la siguiente regla.</para>
+<note id="fs-id1165041809779" class="theorem">
+<title>La regla trapezoidal</title>
+<para id="fs-id1165042129188">Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> es continua en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Supongamos que <emphasis effect="italics">n</emphasis> es un número entero positivo y <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow><m:mi>n</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Supongamos que <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> se divide en <m:math><m:mi>n</m:mi></m:math> subintervalos, cada uno de ellos de longitud <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> con puntos finales en <m:math><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mtext>…</m:mtext><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math> Establezca que</para>
+<equation id="fs-id1165041762506"><m:math><m:mrow><m:msub><m:mi>T</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mo>⋯</m:mo><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165040744211">Entonces, <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>n</m:mi><m:mo stretchy="false">→</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:munder><m:msub><m:mi>T</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</note>
+<para id="fs-id1165041846939">Antes de continuar, hagamos algunas observaciones sobre la regla trapezoidal. En primer lugar, es útil señalar que</para>
+<equation id="fs-id1165040697663" class="unnumbered"><label/><m:math><m:mrow><m:msub><m:mi>T</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>L</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:msub><m:mi>R</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>donde</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>L</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:munderover><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∑</m:mo></m:mstyle><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo stretchy="false">)</m:mo><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>R</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:munderover><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∑</m:mo></m:mstyle><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo stretchy="false">)</m:mo><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042027656">Es decir, <m:math><m:mrow><m:msub><m:mi>L</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>R</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> aproximan la integral utilizando los puntos extremos izquierdo y derecho de cada subintervalo, respectivamente. Además, un análisis cuidadoso de la <link target-id="CNX_Calc_Figure_07_06_003"/> nos lleva a hacer las siguientes observaciones sobre el uso de las reglas trapezoidales y las reglas del punto medio para estimar la integral definida de una función no negativa. La regla trapezoidal tiende a sobreestimar el valor de una integral definida sistemáticamente en los intervalos donde la función es cóncava hacia arriba y a subestimar el valor de una integral definida sistemáticamente en los intervalos donde la función es cóncava hacia abajo. Por otro lado, la regla del punto medio tiende a promediar un poco estos errores al sobrestimar y subestimar parcialmente el valor de la integral definida en estos mismos tipos de intervalos. Esto nos lleva a plantear la hipótesis de que, en general, la regla del punto medio tiende a ser más precisa que la regla trapezoidal.</para>
+<figure id="CNX_Calc_Figure_07_06_003">
+<media id="fs-id1165040797444" alt="Esta figura tiene dos gráficos, ambos de la misma función no negativa en el primer cuadrante. La función aumenta y disminuye. El cuadrante está dividido en una cuadrícula. En el primer gráfico, comenzando en el eje x en el punto marcado como a = x sub 0, hay trapecios sombreados cuyas alturas son aproximadamente la altura de la curva. El eje x está escalado por incrementos de a = x sub 0, xsub1, x sub 2, x sub 3, y b = x sub 4. El segundo gráfico comienza en el eje x en el punto marcado como a = x sub 0. Hay rectángulos sombreados cuyas alturas son aproximadamente la altura de la curva. El eje x está escalado por incrementos de m sub 1, x sub 1, m sub 2, x sub 2, m sub 3, x sub 3, m sub 4 y b = x sub 4.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_07_06_003.jpg"/>
+</media>
+<caption>La regla trapezoidal tiende a ser menos precisa que la regla del punto medio.</caption>
+</figure>
+<example id="fs-id1165042234318">
+<exercise id="fs-id1165042008444">
+<problem id="fs-id1165042008447">
+<title>Uso de la regla trapezoidal</title>
+<para id="fs-id1165040682509">Utilice la regla trapezoidal para estimar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando cuatro subintervalos.</para>
+</problem>
+<solution id="fs-id1165042108930">
+<para id="fs-id1165042108932">Los puntos finales de los subintervalos están formados por elementos del conjunto <m:math><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>}</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>0</m:mn></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto,</para>
+<equation id="fs-id1165041788152" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>≈</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>·</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>8</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>·</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>16</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>·</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>·</m:mo><m:mfrac><m:mn>9</m:mn><m:mrow><m:mn>16</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>11</m:mn></m:mrow><m:mrow><m:mn>32</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165042009032" class="checkpoint">
+<exercise id="fs-id1165041814721">
+<problem id="fs-id1165041814723">
+<para id="fs-id1165041814725">Utilice la regla trapezoidal con <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> para estimar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165041782503">
+<para id="fs-id1165041782505"><m:math><m:mrow><m:mfrac><m:mrow><m:mn>17</m:mn></m:mrow><m:mrow><m:mn>24</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165040692039" type="hint">
+<title>Pista</title>
+<para id="fs-id1165041803658">Establezca <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Los puntos finales de los subintervalos son los elementos del conjunto <m:math><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>}</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1165040757737">
+<title>Error absoluto y relativo</title>
+<para id="fs-id1165040757743">Un aspecto importante de la utilización de estas reglas de aproximación numérica consiste en calcular el error cuando se utilizan para estimar el valor de una integral definida. Primero tenemos que definir el <term>error absoluto</term> y el <term>error relativo</term>.</para>
+<note id="fs-id1165040741548">
+<title>Definición</title>
+<para id="fs-id1165042047534">Si <m:math><m:mi>B</m:mi></m:math> es nuestra estimación de alguna cantidad que tiene un valor real de <m:math><m:mrow><m:mi>A</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces el error absoluto está dado por <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>A</m:mi><m:mo>-</m:mo><m:mi>B</m:mi></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> El error relativo es el error en porcentaje del valor absoluto y está dado por <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>A</m:mi><m:mo>-</m:mo><m:mi>B</m:mi></m:mrow><m:mi>A</m:mi></m:mfrac></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>A</m:mi><m:mo>-</m:mo><m:mi>B</m:mi></m:mrow><m:mi>A</m:mi></m:mfrac></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>·</m:mo><m:mn>100</m:mn><m:mtext>%</m:mtext><m:mo>.</m:mo></m:mrow></m:math></para>
+</note>
+<example id="fs-id1165040640346">
+<exercise id="fs-id1165040640348">
+<problem id="fs-id1165040640350">
+<title>Cálculo del error en la regla del punto medio</title>
+<para id="fs-id1165041770837">Calcule el error absoluto y relativo en la estimación de <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando la regla del punto medio, que se encuentra en el <link target-id="fs-id1165040799117"/>.</para>
+</problem>
+<solution id="fs-id1165041788187">
+<para id="fs-id1165041788189">El valor calculado es <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> y nuestra estimación del ejemplo es <m:math><m:mrow><m:msub><m:mi>M</m:mi><m:mn>4</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>21</m:mn></m:mrow><m:mrow><m:mn>64</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, el error absoluto está dado por <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>21</m:mn></m:mrow><m:mrow><m:mn>64</m:mn></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>192</m:mn></m:mrow></m:mfrac><m:mo>≈</m:mo><m:mn>0,0052</m:mn><m:mo>.</m:mo></m:mrow></m:math> El error relativo es</para>
+<equation id="fs-id1165042048763" class="unnumbered"><label/><m:math><m:mrow><m:mfrac><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>192</m:mn></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>64</m:mn></m:mrow></m:mfrac><m:mo>≈</m:mo><m:mn>0,015625</m:mn><m:mo>≈</m:mo><m:mn>1,6</m:mn><m:mtext>%</m:mtext><m:mo>.</m:mo></m:mrow></m:math></equation>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1165040736472">
+<exercise id="fs-id1165040736474">
+<problem id="fs-id1165040771110">
+<title>Cálculo del error en la regla trapezoidal</title>
+<para id="fs-id1165040771115">Calcule el error absoluto y relativo en la estimación de <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando la regla trapezoidal, que se encuentra en el <link target-id="fs-id1165042234318"/>.</para>
+</problem>
+<solution id="fs-id1165042091200">
+<para id="fs-id1165042091202">El valor calculado es <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> y nuestra estimación del ejemplo es <m:math><m:mrow><m:msub><m:mi>T</m:mi><m:mn>4</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>11</m:mn></m:mrow><m:mrow><m:mn>32</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, el error absoluto está dado por <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>-</m:mo><m:mfrac><m:mrow><m:mn>11</m:mn></m:mrow><m:mrow><m:mn>32</m:mn></m:mrow></m:mfrac></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>96</m:mn></m:mrow></m:mfrac><m:mo>≈</m:mo><m:mn>0,0104</m:mn><m:mo>.</m:mo></m:mrow></m:math> El error relativo está dado por</para>
+<equation id="fs-id1165040745022" class="unnumbered"><label/><m:math><m:mrow><m:mfrac><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>96</m:mn></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0,03125</m:mn><m:mo>≈</m:mo><m:mn>3,1</m:mn><m:mtext>%</m:mtext><m:mo>.</m:mo></m:mrow></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165040641404" class="checkpoint">
+<exercise id="fs-id1165042133506">
+<problem id="fs-id1165042133508">
+<para id="fs-id1165042133510">En una comprobación anterior, estimamos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> para que fuera <m:math><m:mrow><m:mfrac><m:mrow><m:mn>24</m:mn></m:mrow><m:mrow><m:mn>35</m:mn></m:mrow></m:mfrac></m:mrow></m:math> utilizando <m:math><m:mrow><m:msub><m:mi>T</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> El valor real de esta integral es <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Utilizando <m:math><m:mrow><m:mfrac><m:mrow><m:mn>24</m:mn></m:mrow><m:mrow><m:mn>35</m:mn></m:mrow></m:mfrac><m:mo>≈</m:mo><m:mn>0,6857</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>2</m:mn><m:mo>≈</m:mo><m:mn>0,6931</m:mn><m:mo>,</m:mo></m:mrow></m:math> calcule el error absoluto y el error relativo.</para>
+</problem>
+<solution id="fs-id1165041840001">
+<para id="fs-id1165041840003">0,0074, 1,1 %</para>
+</solution>
+<commentary id="fs-id1165041766748" type="hint">
+<title>Pista</title>
+<para id="fs-id1165041826394">Utilice los ejemplos anteriores como guía.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1165041812124">En los dos ejemplos anteriores, pudimos comparar nuestra estimación de una integral con el valor real de la misma; sin embargo, no solemos tener este lujo. En general, si estamos aproximando una integral, lo hacemos porque no podemos calcular fácilmente el valor exacto de la propia integral. Por lo tanto, a menudo es útil poder determinar un límite superior para el error en una aproximación de una integral. El siguiente teorema proporciona límites de error para las reglas del punto medio y trapezoidal. El teorema se enuncia sin pruebas.</para>
+<note id="fs-id1165041812126" class="theorem">
+<title>Límites de error para las reglas del punto medio y trapezoidal</title>
+<para id="fs-id1165041952031">Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> es una función continua en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> que tiene una segunda derivada <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en este intervalo. Si <m:math><m:mi>M</m:mi></m:math> es el valor máximo de <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> en <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo stretchy="false">]</m:mo><m:mo>,</m:mo></m:mrow></m:math> entonces los límites superiores para el error en el uso de <m:math><m:mrow><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>T</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> para estimar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> son</para>
+<equation id="fs-id1165041827796"><m:math><m:mrow><m:mtext>Error en</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub><m:mo>≤</m:mo><m:mfrac><m:mrow><m:mi>M</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow><m:mrow><m:mn>24</m:mn><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></equation>
+<para id="fs-id1165042278502">y</para>
+<equation id="fs-id1165041814747"><m:math><m:mrow><m:mtext>Error en</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>T</m:mi><m:mi>n</m:mi></m:msub><m:mo>≤</m:mo><m:mfrac><m:mrow><m:mi>M</m:mi><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>3</m:mn></m:msup></m:mrow><m:mrow><m:mn>12</m:mn><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+</note>
+<para id="fs-id1165040641464">Podemos utilizar estos límites para determinar el valor de <m:math><m:mi>n</m:mi></m:math> necesario para garantizar que el error de una estimación sea inferior a un valor específico.</para>
+<example id="fs-id1165042277050">
+<exercise id="fs-id1165042277052">
+<problem id="fs-id1165041952725">
+<title>Determinación del número de intervalos a utilizar</title>
+<para id="fs-id1165042137782">¿Qué valor de <m:math><m:mi>n</m:mi></m:math> debe utilizarse para garantizar que una estimación de <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> tiene una precisión de 0,01 si utilizamos la regla del punto medio?</para>
+</problem>
+<solution id="fs-id1165041791703">
+<para id="fs-id1165041791705">Empezamos por determinar el valor de <m:math><m:mrow><m:mi>M</m:mi><m:mo>,</m:mo></m:mrow></m:math> el valor máximo de <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> en <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo stretchy="false">]</m:mo></m:mrow></m:math> para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> tenemos</para>
+<equation id="fs-id1165040656611" class="unnumbered"><label/><m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mtext>″</m:mtext></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:msup><m:mi>e</m:mi><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042196940">Por lo tanto,</para>
+<equation id="fs-id1165042196943" class="unnumbered"><label/><m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mn>2</m:mn><m:mo>·</m:mo><m:mi>e</m:mi><m:mo>·</m:mo><m:mn>3</m:mn><m:mo>=</m:mo><m:mn>6</m:mn><m:mi>e</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165041804288">A partir del límite de error en la <link target-id="fs-id1165041827796"/>, tenemos</para>
+<equation id="fs-id1165040716363" class="unnumbered"><label/><m:math><m:mrow><m:mtext>Error en</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub><m:mo>≤</m:mo><m:mfrac><m:mrow><m:mi>M</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow><m:mrow><m:mn>24</m:mn><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>≤</m:mo><m:mfrac><m:mrow><m:mn>6</m:mn><m:mi>e</m:mi><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>3</m:mn></m:msup></m:mrow><m:mrow><m:mn>24</m:mn><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>6</m:mn><m:mi>e</m:mi></m:mrow><m:mrow><m:mn>24</m:mn><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165040772778">Ahora resolvemos la siguiente inecuación para <m:math><m:mi>n</m:mi><m:mtext>:</m:mtext></m:math></para>
+<equation id="fs-id1165042265412" class="unnumbered"><label/><m:math><m:mrow><m:mfrac><m:mrow><m:mn>6</m:mn><m:mi>e</m:mi></m:mrow><m:mrow><m:mn>24</m:mn><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>≤</m:mo><m:mn>0,01</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042005486">Por lo tanto, <m:math><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:msqrt><m:mrow><m:mfrac><m:mrow><m:mn>600</m:mn><m:mi>e</m:mi></m:mrow><m:mrow><m:mn>24</m:mn></m:mrow></m:mfrac></m:mrow></m:msqrt><m:mo>≈</m:mo><m:mn>8,24</m:mn><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mi>n</m:mi></m:math> debe ser un número entero que satisfaga esta inecuación, una elección de <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>9</m:mn></m:mrow></m:math> garantizaría que <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>-</m:mo><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:mrow></m:mstyle></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0,01</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165040794903">
+<title>Análisis</title>
+<para id="fs-id1165042039031">Podríamos haber estado tentados de redondear <m:math><m:mrow><m:mn>8,24</m:mn></m:mrow></m:math> hacia abajo y elegir <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>8</m:mn><m:mo>,</m:mo></m:mrow></m:math> pero esto sería incorrecto porque debemos tener un número entero mayor o igual a <m:math><m:mrow><m:mn>8,24</m:mn><m:mo>.</m:mo></m:mrow></m:math> Debemos tener en cuenta que las estimaciones de error solo proporcionan un límite superior para el error. De hecho, la estimación real puede ser una aproximación mucho mejor de lo que indica el límite de error.</para>
+</commentary>
+</exercise>
+</example>
+<note id="fs-id1165041832106" class="checkpoint">
+<exercise id="fs-id1165041832109">
+<problem id="fs-id1165041831948">
+<para id="fs-id1165041831950">Utilice la <link target-id="fs-id1165041814747"/> para hallar un límite superior para el error al utilizar <m:math><m:mrow><m:msub><m:mi>M</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math> para estimar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165040640441">
+<para id="fs-id1165040640443"><m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>192</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165041836992" type="hint">
+<title>Pista</title>
+<para id="fs-id1165041836999"><m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> así que <m:math><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1165042275650">
+<title>Regla de Simpson</title>
+<para id="fs-id1165041836263">Con la regla del punto medio, estimamos las áreas de las regiones bajo las curvas utilizando rectángulos. En cierto sentido, aproximamos la curva con funciones constantes por partes. Con la regla trapezoidal, aproximamos la curva utilizando funciones lineales por partes. ¿Y si, en cambio, aproximáramos una curva utilizando funciones cuadráticas por partes? Con la <term>regla de Simpson</term>, hacemos precisamente esto. Partimos el intervalo en un número par de subintervalos, cada uno de ellos de igual ancho. En el primer par de subintervalos aproximamos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> con <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:msubsup><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> donde <m:math><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>A</m:mi><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>B</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math> es la función cuadrática que pasa por <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:math> (<link target-id="CNX_Calc_Figure_07_06_004"/>). En el siguiente par de subintervalos aproximamos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mrow><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> con la integral de otra función cuadrática que pasa por <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Este proceso se continúa con cada par sucesivo de subintervalos.</para>
+<figure id="CNX_Calc_Figure_07_06_004">
+<media id="fs-id1165042088543" alt="Esta figura tiene dos gráficos, ambos de la misma función no negativa en el primer cuadrante. La función aumenta y disminuye. El cuadrante está dividido en una cuadrícula. En el primer gráfico, comenzando en el eje x en el punto marcado como x sub 0, hay trapecios sombreados cuyas alturas están representadas por la función p(x), que es una curva que sigue una trayectoria aproximada del gráfico original. El eje x está escalado por incrementos de x sub 0, x sub 1, x sub 2. El segundo gráfico comienza en el eje x en el punto marcado como x sub 0. Hay regiones sombreadas bajo la curva, divididas por x sub 0, x sub 1, x sub 2, x sub 3 y x sub 4. La curva se divide en dos partes diferentes por encima de las zonas sombreadas. Estas dos partes se denominan p sub 1(x) y p sub 2(x).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_07_06_004.jpg"/>
+</media>
+<caption>Con la regla de Simpson, aproximamos una integral definida integrando una función cuadrática por partes.</caption>
+</figure>
+<para id="fs-id1165040644477">Para entender la fórmula que obtenemos para la regla de Simpson, empezamos por derivar una fórmula para esta aproximación sobre los dos primeros subintervalos. A medida que avanzamos en la derivación, debemos tener en cuenta las siguientes relaciones:</para>
+<equation id="fs-id1165040644485" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>A</m:mi><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>B</m:mi><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>A</m:mi><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>B</m:mi><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>A</m:mi><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>B</m:mi><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1165040777282"><m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi></m:mrow></m:math> es la longitud de un subintervalo.</para>
+<equation id="fs-id1165042288603" class="unnumbered"><label/><m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>dado que</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165041782442">Por lo tanto,</para>
+<equation id="fs-id1165041782445" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>≈</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:msubsup><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd/><m:mtd/><m:mtd/></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:msubsup><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>A</m:mi><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>B</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>C</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd/><m:mtd/><m:mtd/></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mi>A</m:mi><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mfrac><m:mi>B</m:mi><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>C</m:mi><m:mi>x</m:mi><m:mrow><m:mo>|</m:mo><m:mrow><m:mtable><m:mtr><m:mtd><m:mrow><m:msup><m:mrow/><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:msup></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:msub><m:mrow/><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:msub></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:mrow></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Calcule la antiderivada.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mi>A</m:mi><m:mn>3</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:msup><m:mrow/><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:msup><m:mrow/><m:mn>3</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac><m:mi>B</m:mi><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo stretchy="false">)</m:mo></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Evalúe la antiderivada.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mi>A</m:mi><m:mn>3</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd/><m:mtd/><m:mtd/></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>+</m:mo><m:mfrac><m:mi>B</m:mi><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo stretchy="false">)</m:mo></m:mtd><m:mtd/><m:mtd/><m:mtd/></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mn>6</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>B</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mn>6</m:mn><m:mi>C</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Saque el factor común</m:mtext><m:mspace width="0.2em"/><m:mfrac><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mn>6</m:mn></m:mfrac><m:mo>.</m:mo></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>A</m:mi><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>B</m:mi><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mo stretchy="false">(</m:mo><m:mi>A</m:mi><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>B</m:mi><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd/><m:mtd/><m:mtd/></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>+</m:mo><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>B</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>C</m:mi><m:mo stretchy="false">)</m:mo></m:mtd><m:mtd/><m:mtd/><m:mtd/></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>A</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>B</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>C</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Reordene los términos.</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd/><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtable><m:mtr><m:mtd columnalign="left"><m:mtext>Factorice y sustituya</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>A</m:mi><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>B</m:mi><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:mi>C</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>A</m:mi><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>B</m:mi><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>A</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>B</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>C</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>Sustituya</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtable><m:mtr><m:mtd columnalign="left"><m:mtext>Expanda y sustituya</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>A</m:mi><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>B</m:mi><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mtext>+</m:mtext><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:mtd></m:mtr></m:mtable></m:math></equation><para id="fs-id1165040770954">Si aproximamos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mrow><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando el mismo método, vemos que tenemos</para>
+<equation id="fs-id1165041832972" class="unnumbered"><label/><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mrow><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>≈</m:mo><m:mfrac><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></equation>
+<para id="fs-id1165042311586">Combinando estas dos aproximaciones, obtenemos</para>
+<equation id="fs-id1165042092359" class="unnumbered"><label/><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mrow><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></equation>
+<para id="fs-id1165041921702">El patrón continúa a medida que añadimos pares de subintervalos a nuestra aproximación. La regla general puede ser la siguiente.</para>
+<note id="fs-id1165041921707" class="theorem">
+<title>Regla de Simpson</title>
+<para id="fs-id1165040721553">Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> es continua en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Supongamos que <emphasis effect="italics">n</emphasis> es un número entero par positivo y <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow><m:mi>n</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Supongamos que <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> se divide en <m:math><m:mi>n</m:mi></m:math> subintervalos, cada uno de ellos de longitud <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> con puntos finales en <m:math><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mtext>,…</m:mtext><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math> Establezca que</para>
+<equation id="fs-id1165041953720"><m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mo>⋯</m:mo><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042243662">Entonces,</para>
+<equation id="fs-id1165042243666" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>n</m:mi><m:mo stretchy="false">→</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:munder><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></equation>
+</note>
+<para id="fs-id1165042108863">Al igual que la regla trapezoidal es el promedio de las reglas de la izquierda y de la derecha para estimar integrales definidas, la regla de Simpson puede obtenerse a partir de las reglas del punto medio y de la trapezoidal utilizando un promedio ponderado. Se puede demostrar que <m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mrow><m:mn>2</m:mn><m:mi>n</m:mi></m:mrow></m:msub><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>2</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:msub><m:mi>T</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1165042264461">También es posible poner un límite al error cuando se utiliza la regla de Simpson para aproximar una integral definida. El límite del error viene dado por la siguiente regla:</para>
+<note id="fs-id1165042264468">
+<title>Regla: Límite de error para la regla de Simpson</title>
+<para id="fs-id1165041836425">Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> es una función continua en <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo stretchy="false">]</m:mo></m:mrow></m:math> que tiene una cuarta derivada, <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> en este intervalo. Si <m:math><m:mi>M</m:mi></m:math> es el valor máximo de <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math> en <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo stretchy="false">]</m:mo><m:mo>,</m:mo></m:mrow></m:math> entonces el límite superior del error al utilizar <m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> para estimar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> está dada por</para>
+<equation id="fs-id1165042109950"><m:math><m:mrow><m:mtext>Error en</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>≤</m:mo><m:mfrac><m:mrow><m:mi>M</m:mi><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>5</m:mn></m:msup></m:mrow><m:mrow><m:mn>180</m:mn><m:msup><m:mi>n</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+</note>
+<example id="fs-id1165042217547">
+<exercise id="fs-id1165042217549">
+<problem id="fs-id1165042217551">
+<title>Aplicación de la regla de Simpson 1</title>
+<para id="fs-id1165042217557">Utilice <m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> para aproximar a <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> Estime un límite para el error en <m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165041848372">
+<para id="fs-id1165041848374">Dado que <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo stretchy="false">]</m:mo></m:mrow></m:math> se divide en dos intervalos, cada subintervalo tiene una longitud <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>0</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Los puntos finales de estos subintervalos son <m:math><m:mrow><m:mrow><m:mo>{</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>}</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Si establecemos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> entonces</para>
+<para id="fs-id1165041962775"><m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mn>4</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>·</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>6</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>·</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>8</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mrow><m:mo>(</m:mo><m:mn>4</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y en consecuencia <m:math><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> vemos que</para>
+<equation id="fs-id1167793627790" class="unnumbered"><label/><m:math><m:mrow><m:mtext>Error en</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub><m:mo>≤</m:mo><m:mfrac><m:mrow><m:mn>0</m:mn><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>5</m:mn></m:msup></m:mrow><m:mrow><m:mn>180</m:mn><m:mo>⋅</m:mo><m:msup><m:mn>2</m:mn><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165041971466">Este límite indica que el valor obtenido mediante la regla de Simpson es exacto. Una comprobación rápida lo verificará, de hecho, <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1165042199249">
+<exercise id="fs-id1165042199251">
+<problem id="fs-id1165042199253">
+<title>Aplicación de la regla de Simpson 2</title>
+<para id="fs-id1165042199259">Utilice <m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mn>6</m:mn></m:msub></m:mrow></m:math> para estimar la longitud de la curva <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo stretchy="false">]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165040668581">
+<para id="fs-id1165040668583">La longitud de <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo stretchy="false">]</m:mo></m:mrow></m:math> es <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mspace width="0.1em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> Si dividimos <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo stretchy="false">]</m:mo></m:mrow></m:math> en seis subintervalos, entonces cada subintervalo tiene una longitud <m:math><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mn>6</m:mn></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> y los puntos finales de los subintervalos son <m:math><m:mrow><m:mrow><m:mo>{</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>5</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>7</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>}</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Si establecemos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mo>,</m:mo></m:mrow></m:math></para>
+<equation id="fs-id1165040758286" class="unnumbered"><label/><m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mn>6</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>·</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>5</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>7</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>4</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042296653">Tras la sustitución, tenemos</para>
+<equation id="fs-id1165042296656" class="unnumbered"><label/><m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:msub><m:mi>S</m:mi><m:mn>6</m:mn></m:msub></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>6</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1,4142</m:mn><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>·</m:mo><m:mn>1,80278</m:mn><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>·</m:mo><m:mn>2,23607</m:mn><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>·</m:mo><m:mn>2,69258</m:mn><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>·</m:mo><m:mn>3,16228</m:mn><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>·</m:mo><m:mn>3,64005</m:mn><m:mo>+</m:mo><m:mn>4,12311</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>≈</m:mo><m:mn>8,14594.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165040796317" class="checkpoint">
+<exercise id="fs-id1165040796321">
+<problem id="fs-id1165041899066">
+<para id="fs-id1165041899068">Utilice <m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> para estimar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165040638577">
+<para id="fs-id1165040638579"><m:math><m:mrow><m:mfrac><m:mrow><m:mn>25</m:mn></m:mrow><m:mrow><m:mn>36</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165040638592" type="hint">
+<title>Pista</title>
+<para id="fs-id1165042002716"><m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo stretchy="false">(</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1165042276347" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1165041757005" list-type="bulleted" bullet-style="bullet">
+<item>Podemos utilizar la integración numérica para estimar los valores de las integrales definidas cuando una forma cerrada de la integral es difícil de calcular o cuando solo se necesita un valor aproximado de la integral definida.</item>
+<item>Las técnicas más utilizadas para la integración numérica son la regla del punto medio, la regla trapezoidal y la regla de Simpson.</item>
+<item>La regla del punto medio aproxima la integral definida utilizando regiones rectangulares mientras que la regla trapezoidal aproxima la integral definida utilizando aproximaciones con trapecios.</item>
+<item>La regla de Simpson aproxima la integral definida aproximando primero la función original mediante funciones cuadráticas por partes.</item>
+</list>
+</section>
+<section id="fs-id1165041757034" class="key-equations">
+<title>Ecuaciones clave</title>
+<table id="eip-514" summary="." class="unnumbered unstyled">
+<tgroup cols="2"><tbody>
+  <row>
+    <entry><emphasis effect="bold">Regla del punto medio</emphasis></entry>
+    <entry><m:math><m:mrow><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:munderover><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∑</m:mo></m:mstyle><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>m</m:mi><m:mi>i</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi></m:mrow></m:math></entry>
+  </row>
+  <row>
+    <entry><emphasis effect="bold">Regla trapezoidal</emphasis></entry>
+    <entry><m:math><m:mrow><m:msub><m:mi>T</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mo>⋯</m:mo><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></entry>
+  </row>
+  <row>
+    <entry><emphasis effect="bold">Regla de Simpson</emphasis></entry>
+    <entry><m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mo>⋯</m:mo><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></entry>
+  </row>
+  <row>
+    <entry><emphasis effect="bold">Límite de error para la regla del punto medio</emphasis></entry>
+    <entry><m:math><m:mrow><m:mtext>Error en</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub><m:mo>≤</m:mo><m:mfrac><m:mrow><m:mi>M</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow><m:mrow><m:mn>24</m:mn><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></entry>
+  </row>
+  <row>
+    <entry><emphasis effect="bold">Límite de error para la regla trapezoidal</emphasis></entry>
+    <entry><m:math><m:mrow><m:mtext>Error en</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>T</m:mi><m:mi>n</m:mi></m:msub><m:mo>≤</m:mo><m:mfrac><m:mrow><m:mi>M</m:mi><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>3</m:mn></m:msup></m:mrow><m:mrow><m:mn>12</m:mn><m:msup><m:mi>n</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></entry>
+  </row>
+  <row>
+    <entry><emphasis effect="bold">Límite de error para la regla de Simpson</emphasis></entry>
+    <entry><m:math><m:mrow><m:mtext>Error en</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>≤</m:mo><m:mfrac><m:mrow><m:mi>M</m:mi><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>b</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>5</m:mn></m:msup></m:mrow><m:mrow><m:mn>180</m:mn><m:msup><m:mi>n</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></entry>
+  </row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section id="fs-id1165040744472" class="section-exercises">
+<para id="fs-id1165040744476">Aproxime las siguientes integrales utilizando la regla del punto medio, la regla trapezoidal o la regla de Simpson, según se indique. (Redondee las respuestas a tres decimales).</para>
+<exercise id="fs-id1165040744481">
+<problem id="fs-id1165040744483">
+<para id="fs-id1165040744485"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo></m:mrow></m:math> regla trapezoidal; <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042028259">
+<para id="fs-id1165042028261">0,696</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042028267">
+<problem id="fs-id1165042028269">
+<para id="fs-id1165040775257"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>3</m:mn></m:msubsup><m:mrow><m:msqrt><m:mrow><m:mn>4</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:msqrt><m:mspace width="0.1em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo></m:mrow></m:math> regla trapezoidal; <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165040775005">
+<problem id="fs-id1165040775008">
+<para id="fs-id1165040775010"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>3</m:mn></m:msubsup><m:mrow><m:msqrt><m:mrow><m:mn>4</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:msqrt><m:mspace width="0.1em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo></m:mrow></m:math> regla trapezoidal; <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042088605">
+<para id="fs-id1165042088608">9,298</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165041887553">
+<problem id="fs-id1165041887555">
+<para id="fs-id1165041887558"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>12</m:mn></m:mrow></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo></m:mrow></m:math> regla del punto medio; <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165040639595">
+<problem id="fs-id1165040639597">
+<para id="fs-id1165040639599"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo></m:mrow></m:math> regla del punto medio; <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042018113">
+<para id="fs-id1165042018115">0,5000</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042018120">
+<problem id="fs-id1165042018123">
+<para id="fs-id1165042018125">Utilice la regla del punto medio con ocho subdivisiones para estimar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>2</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165040726935">
+<problem id="fs-id1165040726937">
+<para id="fs-id1165040726939">Utilice la regla trapezoidal con cuatro subdivisiones para estimar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>2</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042137586">
+<para id="fs-id1165042137588"><m:math><m:mrow><m:msub><m:mi>T</m:mi><m:mn>4</m:mn></m:msub><m:mo>=</m:mo><m:mn>18,75</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042137604">
+<problem id="fs-id1165042137606">
+<para id="fs-id1165040762255">Halle el valor exacto de <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>2</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> Calcule el error de aproximación entre el valor exacto y el valor calculado mediante la regla trapezoidal con cuatro subdivisiones. Dibuje un gráfico para ilustrarlo.</para>
+</problem>
+</exercise>
+<para id="fs-id1165041932612">Aproxime la integral a tres decimales utilizando la regla indicada.</para>
+<exercise id="fs-id1165041932616">
+<problem id="fs-id1165041932618">
+<para id="fs-id1165041932620"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo></m:mrow></m:math> regla trapezoidal; <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042107327">
+<para id="fs-id1165042107329">0,500</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165041899175">
+<problem id="fs-id1165041899177">
+<para id="fs-id1165041899179"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>3</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo></m:mrow></m:math> regla trapezoidal; <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042045947">
+<problem id="fs-id1165042045949">
+<para id="fs-id1165042045951"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>3</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo></m:mrow></m:math> regla trapezoidal; <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165040646191">
+<para id="fs-id1165040646193">1,2819</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165040727766">
+<problem id="fs-id1165040727768">
+<para id="fs-id1165040727770"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>0,8</m:mn></m:mrow></m:msubsup><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo></m:mrow></m:math> regla trapezoidal; <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165040777086">
+<problem id="fs-id1165040777089">
+<para id="fs-id1165040777091"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>0,8</m:mn></m:mrow></m:msubsup><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo></m:mrow></m:math> regla de Simpson; <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042039182">
+<para id="fs-id1165042039184">0,6577</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042039190">
+<problem id="fs-id1165042039192">
+<para id="fs-id1165042039194"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>0,4</m:mn></m:mrow></m:msubsup><m:mrow><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo></m:mrow></m:math> regla trapezoidal; <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165040742872">
+<problem id="fs-id1165040742874">
+<para id="fs-id1165040742876"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>0,4</m:mn></m:mrow></m:msubsup><m:mrow><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo></m:mrow></m:math> regla de Simpson; <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042073645">
+<para id="fs-id1165042073647">0,0213</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042073652">
+<problem id="fs-id1165042073654">
+<para id="fs-id1165042073656"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mrow><m:mn>0,1</m:mn></m:mrow><m:mrow><m:mn>0,5</m:mn></m:mrow></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo></m:mrow></m:math> regla trapezoidal; <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042029584">
+<problem id="fs-id1165042029586">
+<para id="fs-id1165042029588"><m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mrow><m:mn>0,1</m:mn></m:mrow><m:mrow><m:mn>0,5</m:mn></m:mrow></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo></m:mrow></m:math> regla de Simpson; <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042225085">
+<para id="fs-id1165042225087">1,5629</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042225093">
+<problem id="fs-id1165042225095">
+<para id="fs-id1165042225097">Evalúe <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> exactamente y demuestre que el resultado es <m:math><m:mrow><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>4</m:mn></m:mrow><m:mo>.</m:mo></m:mrow></m:math> A continuación, halle el valor aproximado de la integral utilizando la regla trapezoidal con <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math> subdivisiones. Utilice el resultado para aproximar el valor de <m:math><m:mrow><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165040775723">
+<problem id="fs-id1165040775725">
+<para id="fs-id1165040775727">Aproxime <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>2</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando la regla del punto medio con cuatro subdivisiones y redondee a cuatro decimales.</para>
+</problem>
+<solution id="fs-id1165040778495">
+<para id="fs-id1165040778497">1,9133</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165040778503">
+<problem id="fs-id1165040778505">
+<para id="fs-id1165040778507">Aproxime <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>2</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando la regla trapezoidal con ocho subdivisiones y redondee a cuatro decimales.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042277205">
+<problem id="fs-id1165042277207">
+<para id="fs-id1165042277209">Utilice la regla trapezoidal con cuatro subdivisiones para estimar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>0,8</m:mn></m:mrow></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> con cuatro decimales.</para>
+</problem>
+<solution id="fs-id1165040768909">
+<para id="fs-id1165040768911"><m:math><m:mrow><m:mtext>T(4)</m:mtext><m:mo>=</m:mo><m:mn>0,1088</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165040768924">
+<problem id="fs-id1165040762196">
+<para id="fs-id1165040762198">Utilice la regla trapezoidal con cuatro subdivisiones para estimar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>0,8</m:mn></m:mrow></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> Compare este valor con el valor exacto y calcule la estimación del error.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165041980048">
+<problem id="fs-id1165041980050">
+<para id="fs-id1165041980053">Utilizando la regla de Simpson con cuatro subdivisiones, calcule <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msubsup><m:mrow><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042058699">
+<para id="fs-id1165042058701">1,0</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042058706">
+<problem id="fs-id1165042058708">
+<para id="fs-id1165042058711">Demuestre que el valor exacto de <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:mi>x</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mn>2</m:mn><m:mi>e</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> Calcule el error absoluto si aproxima la integral utilizando la regla del punto medio con 16 subdivisiones.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165041962891">
+<problem id="fs-id1165041962893">
+<para id="fs-id1165041962895">Dada <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:mi>x</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mn>2</m:mn><m:mi>e</m:mi></m:mfrac><m:mo>,</m:mo></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilice la regla trapezoidal con 16 subdivisiones para aproximar la integral y hallar el error absoluto.</para>
+</problem>
+<solution id="fs-id1165041893007">
+<para id="fs-id1165041893009">El error aproximado es de 0,000325.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042312907">
+<problem id="fs-id1165042312909">
+<para id="fs-id1165042312911">Halle un límite superior para el error de estimación <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>3</m:mn></m:msubsup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>5</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando la regla trapezoidal con seis pasos.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165040744885">
+<problem id="fs-id1165040744888">
+<para id="fs-id1165040744890">Halle un límite superior para el error de estimación <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>4</m:mn><m:mn>5</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando la regla trapezoidal con siete subdivisiones.</para>
+</problem>
+<solution id="fs-id1165041932665">
+<para id="fs-id1165041932667"><m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>7938</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165041932680">
+<problem id="fs-id1165041932682">
+<para id="fs-id1165041932684">Halle un límite superior para el error de estimación <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>3</m:mn></m:msubsup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>6</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando la regla de Simpson con <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math> pasos.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165040668874">
+<problem id="fs-id1165040668876">
+<para id="fs-id1165040668878">Halle un límite superior para el error de estimación <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>2</m:mn><m:mn>5</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando la regla de Simpson con <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math> pasos.</para>
+</problem>
+<solution id="fs-id1165042247107">
+<para id="fs-id1165042247109"><m:math><m:mrow><m:mfrac><m:mrow><m:mn>81</m:mn></m:mrow><m:mrow><m:mn>25</m:mn><m:mo>,</m:mo><m:mn>000</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042311501">
+<problem id="fs-id1165042311503">
+<para id="fs-id1165042311505">Halle un límite superior para el error de estimación <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mi>π</m:mi></m:msubsup><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando la regla de Simpson con cuatro pasos.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042035511">
+<problem id="fs-id1165042035513">
+<para id="fs-id1165042035516">Estime el número mínimo de subintervalos necesarios para aproximar la integral <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>5</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>8</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> con una magnitud de error inferior a 0,0001 utilizando la regla trapezoidal.</para>
+</problem>
+<solution id="fs-id1165042035560">
+<para id="fs-id1165042035562">475</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165040669718">
+<problem id="fs-id1165040669720">
+<para id="fs-id1165040669722">Determine un valor <emphasis effect="italics">n</emphasis> tal que la regla trapezoidal aproxime la integral <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mspace width="0.1em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> con un error no superior a 0,01.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042229596">
+<problem id="fs-id1165042229598">
+<para id="fs-id1165042229600">Estime el número mínimo de subintervalos necesarios para aproximar la integral <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>2</m:mn><m:mn>3</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> con un error de magnitud inferior a 0,0001 utilizando la regla trapezoidal.</para>
+</problem>
+<solution id="fs-id1165040741411">
+<para id="fs-id1165040741413">174</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165040741418">
+<problem id="fs-id1165040741420">
+<para id="fs-id1165040741422">Estime el número mínimo de subintervalos necesarios para aproximar la integral <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>3</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> con una magnitud de error inferior a 0,0001 utilizando la regla trapezoidal.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042235475">
+<problem id="fs-id1165042235478">
+<para id="fs-id1165042235480">Utilice la regla de Simpson con cuatro subdivisiones para aproximar el área bajo la función de densidad de probabilidad <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mrow></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mrow><m:mrow><m:mtext>-</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:msup></m:mrow></m:math> de <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> a <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0,4</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165040668400">
+<para id="fs-id1165040668402">0,1544</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165040668407">
+<problem id="fs-id1165040668410">
+<para id="fs-id1165040668412">Utilice la regla de Simpson con <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>14</m:mn></m:mrow></m:math> para aproximar (con tres decimales) el área de la región delimitada por los gráficos de <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165040763968">
+<problem id="fs-id1165040763970">
+<para id="fs-id1165040763973">La longitud de un arco de la curva <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> está dada por <m:math><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msubsup><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>36</m:mn><m:mspace width="0.1em"/><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:msqrt><m:mspace width="0.1em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> Estime <emphasis effect="italics">L</emphasis> utilizando la regla trapezoidal con <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165040762400">
+<para id="fs-id1165040762402">6,2807</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165040762407">
+<problem id="fs-id1165040762409">
+<para id="fs-id1165040762411">La longitud de la elipse <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>b</m:mi><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:math> está dada por <m:math><m:mrow><m:mi>L</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mi>a</m:mi><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msubsup><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>e</m:mi><m:mn>2</m:mn></m:msup><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:msqrt><m:mspace width="0.1em"/><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>,</m:mo></m:mrow></m:math> donde <emphasis effect="italics">e</emphasis> es la excentricidad de la elipse. Utilice la regla de Simpson con <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math> subdivisiones para estimar la longitud de la elipse cuando <m:math><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>e</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042033122">
+<problem id="fs-id1165042033124">
+<para id="fs-id1165042033126">Estime el área superficial generada cuando se gira la curva <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac></m:mrow></m:math> alrededor del eje <emphasis effect="italics">x</emphasis>. Utilice la regla trapezoidal con seis subdivisiones.</para>
+</problem>
+<solution id="fs-id1165040795637">
+<para id="fs-id1165040795639">4,606</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165040795644">
+<problem id="fs-id1165040795646">
+<para id="fs-id1165040795648">Estime el área superficial generada cuando se gira la curva <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>3</m:mn></m:mrow></m:math> alrededor del eje <emphasis effect="italics">x</emphasis>. Utilice la regla de Simpson con <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042281440">
+<problem id="fs-id1165042281443">
+<para id="fs-id1165042281445">La tasa de crecimiento de un determinado árbol (en pies) está dada por <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>2</m:mn><m:mrow><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> donde <emphasis effect="italics">t</emphasis> es el tiempo en años. Estime el crecimiento del árbol hasta el final del segundo año utilizando la regla de Simpson con dos subintervalos. (Redondee la respuesta a la centésima más cercana).</para>
+</problem>
+<solution id="fs-id1165042040108">
+<para id="fs-id1165042040110">3,41 pies</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042040116">
+<problem id="fs-id1165042040118">
+<para id="fs-id1165042040120"><emphasis effect="bold">[T]</emphasis> Use una calculadora para aproximar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando la regla del punto medio con 25 subdivisiones. Calcule el error relativo de aproximación.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165041899114">
+<problem id="fs-id1165041899116">
+<para id="fs-id1165041899118"><emphasis effect="bold">[T]</emphasis> Dada <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>5</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mn>100</m:mn><m:mo>,</m:mo></m:mrow></m:math> aproxime el valor de esta integral utilizando la regla trapezoidal con 16 subdivisiones y determine el error absoluto.</para>
+</problem>
+<solution id="fs-id1165042038774">
+<para id="fs-id1165042038776"><m:math><m:mrow><m:msub><m:mi>T</m:mi><m:mrow><m:mn>16</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mn>100,125</m:mn><m:mo>;</m:mo></m:mrow></m:math> error absoluto = 0,125</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042038796">
+<problem id="fs-id1165042038798">
+<para id="fs-id1165042038800">Dado que conocemos el teorema fundamental del cálculo, ¿por qué querríamos desarrollar métodos numéricos para integrales definidas?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042038815">
+<problem id="fs-id1165040730902">
+<para id="fs-id1165040730904">La tabla representa las coordenadas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mtext>​</m:mtext><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> que dan el límite de un terreno. Las unidades de medida son metros. Utilice la regla trapezoidal para estimar el número de metros cuadrados de terreno que hay en este terreno.</para>
+<table id="fs-id1165040730931" class="unnumbered" summary="This is a table with four columns and seven rows. The first row is a header row and is labeled “x,” “y,” “x,” “y.” The entries under the first column are 0, 100, 200, 300, 400, and 500. The entries in the second column are 125, 125, 120, 112, 90, and 90. The entries in the third column are 600, 700, 800, 900, 1000, and blank. The entries in the fourth column are 95, 88, 75, 35, 0, and blank.">
+<tgroup cols="4">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry valign="top" align="left"><emphasis effect="italics">y</emphasis></entry>
+<entry valign="top" align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry valign="top" align="left"><emphasis effect="italics">y</emphasis></entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry valign="top" align="left">0</entry>
+<entry valign="top" align="left">125</entry>
+<entry valign="top" align="left">600</entry>
+<entry valign="top" align="left">95</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">100</entry>
+<entry valign="top" align="left">125</entry>
+<entry valign="top" align="left">700</entry>
+<entry valign="top" align="left">88</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">200</entry>
+<entry valign="top" align="left">120</entry>
+<entry valign="top" align="left">800</entry>
+<entry valign="top" align="left">75</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">300</entry>
+<entry valign="top" align="left">112</entry>
+<entry valign="top" align="left">900</entry>
+<entry valign="top" align="left">35</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">400</entry>
+<entry valign="top" align="left">90</entry>
+<entry valign="top" align="left">1000</entry>
+<entry valign="top" align="left">0</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">500</entry>
+<entry valign="top" align="left">90</entry>
+<entry valign="top" align="left"/>
+<entry valign="top" align="left"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</problem>
+<solution id="fs-id1165042262057">
+<para id="fs-id1165042262059">unos 89.250 m<sup>2</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042262066">
+<problem id="fs-id1165042262068">
+<para id="fs-id1165042262071">Elija la respuesta correcta. Cuando se utiliza la regla de Simpson para aproximar la integral definida, es necesario que el número de particiones sea____</para>
+<list id="fs-id1165042262077" list-type="enumerated" number-style="lower-alpha">
+<item>un número par</item>
+<item>un número impar</item>
+<item>un número par o impar</item>
+<item>un múltiplo de 4</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1165042262106">
+<problem id="fs-id1165042262108">
+<para id="fs-id1165042271882">La suma de "Simpson" se basa en el área bajo un ____.</para>
+</problem>
+<solution id="fs-id1165042271888">
+<para id="fs-id1165042271890">parábola</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042271895">
+<problem id="fs-id1165042271897">
+<para id="fs-id1165042271899">La fórmula de error de la regla de Simpson depende de___.</para>
+<list id="fs-id1165042271902" list-type="enumerated" number-style="lower-alpha">
+<item><m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math></item>
+<item>el número de pasos</item>
+</list>
+</problem>
+</exercise>
+</section>
+ </content>
+<glossary>
+<definition id="fs-id1165040778942">
+<term>error absoluto</term><meaning id="fs-id1165040778947">si <m:math><m:mi>B</m:mi></m:math> estimación de alguna cantidad que tiene un valor real de <m:math><m:mrow><m:mi>A</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces el error absoluto está dado por <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>A</m:mi><m:mo>-</m:mo><m:mi>B</m:mi></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math></meaning>
+</definition>
+<definition id="fs-id1165042040454">
+<term>regla del punto medio</term><meaning id="fs-id1165042040459">regla que utiliza una suma de Riemann de la forma <m:math><m:mrow><m:msub><m:mi>M</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:munderover><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∑</m:mo></m:mstyle><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msub><m:mi>m</m:mi><m:mi>i</m:mi></m:msub><m:mo stretchy="false">)</m:mo><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> es el punto medio del <emphasis effect="italics">i</emphasis>-ésimo subintervalo para aproximar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></meaning>
+</definition>
+<definition id="fs-id1165040796205">
+<term>integración numérica</term><meaning id="fs-id1165040720628">variedad de métodos numéricos utilizados para estimar el valor de una integral definida, incluyendo la regla del punto medio, la regla trapezoidal y la regla de Simpson</meaning>
+</definition>
+<definition id="fs-id1165040720635">
+<term>error relativo</term><meaning id="fs-id1165040720640">error como porcentaje del valor absoluto, dado por <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>A</m:mi><m:mo>-</m:mo><m:mi>B</m:mi></m:mrow><m:mi>A</m:mi></m:mfrac></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>A</m:mi><m:mo>-</m:mo><m:mi>B</m:mi></m:mrow><m:mi>A</m:mi></m:mfrac></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>·</m:mo><m:mn>100</m:mn><m:mtext>%</m:mtext></m:mrow></m:math></meaning>
+</definition>
+<definition id="fs-id1165040720689">
+<term>regla de Simpson</term><meaning id="fs-id1165041825148">regla que aproxima <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando las integrales de una función cuadrática por partes. La aproximación <m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> a <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> está dada por <m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mtable><m:mtr><m:mtd><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mo>+</m:mo><m:mo>⋯</m:mo><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr></m:mtable><m:mo>)</m:mo></m:mrow></m:mrow></m:math> regla trapezoidal regla que aproxima <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> utilizando trapecios</meaning>
+</definition>
+</glossary>
+</document>
