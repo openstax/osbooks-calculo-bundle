@@ -1,0 +1,918 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Las derivadas y la forma de un gráfico</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53613</md:content-id>
+  <md:title>Las derivadas y la forma de un gráfico</md:title>
+  <md:abstract><list id="list-00001">
+<item>Explicar cómo el signo de la primera derivada afecta a la forma del gráfico de una función.</item>
+<item>Enunciar la prueba de la primera derivada para los puntos críticos.</item>
+<item>Utilizar la concavidad y los puntos de inflexión para explicar cómo el signo de la segunda derivada afecta a la forma del gráfico de una función.</item>
+<item>Explicar la prueba de concavidad para una función en un intervalo abierto.</item>
+<item>Explicar la relación entre una función y sus derivadas primera y segunda.</item>
+<item>Enunciar la prueba de la segunda derivada para los extremos locales.</item>
+</list></md:abstract>
+  <md:uuid>ce336553-5ce0-4a5d-afcb-21187fc5b29b</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1165043276297">Anteriormente en este capítulo dijimos que si una función <m:math><m:mi>f</m:mi></m:math> tiene un extremo local en un punto <m:math><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>c</m:mi></m:math> debe ser un punto crítico de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math> Sin embargo, no hay garantía de que una función tenga un extremo local en un punto crítico. Por ejemplo, <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math> tiene un punto crítico en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> dado que <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> es cero en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> pero <m:math><m:mi>f</m:mi></m:math> no tienen un extremo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Utilizando los resultados de la sección anterior, podremos determinar si un punto crítico de una función corresponde realmente a un valor extremo local. En esta sección, también veremos cómo la segunda derivada proporciona información sobre la forma de un gráfico de una función si al describirlo este se curva hacia arriba o hacia abajo.</para>
+<section id="fs-id1165043199295">
+<title>La prueba de la primera derivada</title>
+<para id="fs-id1165043093996">El corolario <m:math><m:mn>3</m:mn></m:math> del teorema del valor medio demostró que si la derivada de una función es positiva en un intervalo <m:math><m:mi>I</m:mi></m:math> entonces la función es creciente en <m:math><m:mrow><m:mi>I</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por otro lado, si la derivada de la función es negativa en un intervalo <m:math><m:mrow><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces la función es decreciente en <m:math><m:mi>I</m:mi></m:math> como se muestra en la siguiente figura.</para>
+<figure id="CNX_Calc_Figure_04_05_001"><media id="fs-id1165043251941" alt="Esta figura se divide en cuatro figuras marcadas como a, b, c y d. La figura a muestra una función que aumenta convexamente desde (a, f(a)) hasta (b, f(b)). En dos puntos se toma la derivada y se observa que en ambos f' > 0. En otras palabras, f es creciente. La figura b muestra una función que aumenta cóncavamente desde (a, f(a)) hasta (b, f(b)). En dos puntos se toma la derivada y se observa que en ambos f' > 0. En otras palabras, f es creciente. La figura c muestra una función que decrece cóncavamente desde (a, f(a)) hasta (b, f(b)). En dos puntos se toma la derivada y se observa que en ambos f' &lt; 0. En otras palabras, f es decreciente. La figura d muestra una función que decrece convexamente desde (a, f(a)) hasta (b, f(b)). En dos puntos se toma la derivada y se observa que en ambos f' &lt; 0. En otras palabras, f es decreciente.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_001.jpg"/>
+</media>
+
+<caption>Ambas funciones son crecientes en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> En cada punto <m:math><m:mi>x</m:mi><m:mo>,</m:mo></m:math> la derivada <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Ambas funciones son decrecientes en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> En cada punto <m:math><m:mi>x</m:mi><m:mo>,</m:mo></m:math> la derivada <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></caption></figure><para id="fs-id1165042319627">Una función continua <m:math><m:mi>f</m:mi></m:math> tiene un máximo local en el punto <m:math><m:mi>c</m:mi></m:math> si y solo si <m:math><m:mi>f</m:mi></m:math> pasa de aumentar a disminuir en el punto <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math> Del mismo modo, <m:math><m:mi>f</m:mi></m:math> tiene un mínimo local en <m:math><m:mi>c</m:mi></m:math> si y solo si <m:math><m:mi>f</m:mi></m:math> pasa de disminuir a aumentar en <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mi>f</m:mi></m:math> es una función continua en un intervalo <m:math><m:mi>I</m:mi></m:math> que contiene <m:math><m:mi>c</m:mi></m:math> y diferenciable sobre <m:math><m:mi>I</m:mi><m:mo>,</m:mo></m:math> excepto posiblemente en <m:math><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> la única manera <m:math><m:mi>f</m:mi></m:math> puede pasar de creciente a decreciente (o viceversa) en el punto <m:math><m:mi>c</m:mi></m:math> es si <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> cambia de signo cuando <m:math><m:mi>x</m:mi></m:math> aumenta a través de <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mi>f</m:mi></m:math> es diferenciable en <m:math><m:mi>c</m:mi><m:mo>,</m:mo></m:math> la única manera de que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math> pueda cambiar de signo cuando <m:math><m:mi>x</m:mi></m:math> aumenta a través de <m:math><m:mi>c</m:mi></m:math> es si <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, para una función <m:math><m:mi>f</m:mi></m:math> que es continua en un intervalo <m:math><m:mi>I</m:mi></m:math> que contiene <m:math><m:mi>c</m:mi></m:math> y diferenciable sobre <m:math><m:mrow><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> excepto posiblemente en <m:math><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> la única manera <m:math><m:mi>f</m:mi></m:math> pueda pasar de creciente a decreciente (o viceversa) es si <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> o <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es indefinida. En consecuencia, para localizar los extremos locales de una función <m:math><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> buscamos puntos <m:math><m:mi>c</m:mi></m:math> en el dominio de <m:math><m:mi>f</m:mi></m:math> tal que <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> o <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es indefinida. Recordemos que estos puntos se denominan puntos críticos de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1165043051419">Observe que <m:math><m:mi>f</m:mi></m:math> need not have local extrema at a critical point. Solo los puntos críticos son candidatos a extremos locales. En la <link target-id="CNX_Calc_Figure_04_05_002"/>, demostramos que si una función continua <m:math><m:mi>f</m:mi></m:math> tiene un extremo local, debe ocurrir en un punto crítico, pero es posible que una función no tenga un extremo local en un punto crítico. Demostramos que si <m:math><m:mi>f</m:mi></m:math> tiene un extremo local en un punto crítico, entonces el signo de <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> cambia cuando <m:math><m:mi>x</m:mi></m:math> aumenta a través de ese punto.</para>
+<figure id="CNX_Calc_Figure_04_05_002">
+<media id="fs-id1165042924700" alt="Se grafica una función f(x). Comienza en el segundo cuadrante y aumenta hasta x = a, que es demasiado agudo y por lo tanto, f'(a) es indefinido. En esta sección f' > 0. Entonces, f disminuye de x = a a x = b (por lo que f' &lt; 0 aquí), antes de aumentar en x = b. Se observa que f'(b) = 0. Al aumentar de x = b a x = c, f' > 0. La función tiene un punto de inversión en c, y se marca f'(c) = 0. La función aumenta un poco más hasta d (por lo que f' > 0), que es el máximo global. Se marca que f'(d) = 0. Entonces la función disminuye y se marca que f' > 0.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_002.jpg"/>
+</media>
+<caption>La función <m:math><m:mi>f</m:mi></m:math> tiene cuatro puntos críticos: <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>d</m:mi><m:mo>.</m:mo></m:mrow></m:math> La función <m:math><m:mi>f</m:mi></m:math> tiene máximos locales en <m:math><m:mi>a</m:mi></m:math> y <m:math><m:mi>d</m:mi><m:mo>,</m:mo></m:math> y un mínimo local en <m:math><m:mi>b</m:mi><m:mo>.</m:mo></m:math> La función <m:math><m:mi>f</m:mi></m:math> no tienen un extremo local en <m:math><m:mi>c</m:mi><m:mo>.</m:mo></m:math> El signo de <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo></m:mrow></m:math> cambia en todos los extremos locales.</caption>
+</figure>
+<para id="fs-id1165043095850">Utilizando la <link target-id="CNX_Calc_Figure_04_05_002"/>, resumimos los principales resultados relativos a los extremos locales.</para>
+<list id="fs-id1165043257290" list-type="bulleted" bullet-style="bullet">
+<item>Si una función continua <m:math><m:mi>f</m:mi></m:math> tiene un extremo local, este debe ocurrir en un punto crítico <m:math><m:mi>c</m:mi><m:mo>.</m:mo></m:math></item>
+<item>La función tiene un extremo local en el punto crítico <m:math><m:mi>c</m:mi></m:math> si y sólo si la derivada <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> cambia de signo cuando <m:math><m:mi>x</m:mi></m:math> aumenta a través de <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Por lo tanto, para comprobar si una función tiene un extremo local en un punto crítico <m:math><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> debemos determinar el signo de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> a la izquierda y a la derecha de <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+<para id="fs-id1165043262520">Este resultado se conoce como la <term id="term-00001">prueba de la primera derivada</term>.</para>
+<note id="fs-id1165042327970" class="theorem">
+<title>Prueba de la primera derivada</title>
+<para id="fs-id1165043067802">Supongamos que <m:math><m:mi>f</m:mi></m:math> es una función continua en un intervalo <m:math><m:mi>I</m:mi></m:math> que contiene un punto crítico <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mi>f</m:mi></m:math> es diferenciable sobre <m:math><m:mrow><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> excepto posiblemente en el punto <m:math><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> cumple una de los siguientes criterios:</para>
+<list id="fs-id1165043068012" list-type="enumerated" number-style="lower-roman">
+<item>Si los valores de <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> cambia el signo de positivo cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>c</m:mi></m:mrow></m:math> a negativo cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es un máximo local de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Si <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> cambia el signo de negativo cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>c</m:mi></m:mrow></m:math> a positivo cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es un mínimo local de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Si <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo></m:mrow></m:math> tiene el mismo signo para <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>c</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> no es ni un máximo ni un mínimo local de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</note>
+<para id="fs-id1165043354060">Podemos resumir la prueba de la primera derivada como una estrategia para localizar los extremos locales.</para>
+<note id="fs-id1165043183681" class="problem-solving">
+<title>Estrategia para la resolución de problemas: Uso de la prueba de la primera derivada</title>
+<para id="fs-id1165042349982">Considere una función <m:math><m:mi>f</m:mi></m:math> que es continua en un intervalo <m:math><m:mrow><m:mi>I</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1165042905754" list-type="enumerated" number-style="arabic">
+<item>Halle todos los puntos críticos de <m:math><m:mi>f</m:mi></m:math> y dividimos el intervalo <m:math><m:mi>I</m:mi></m:math> en intervalos más pequeños utilizando los puntos críticos como puntos extremos.</item>
+<item>Analice el signo de <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo></m:mrow></m:math> en cada uno de los subintervalos. Si los valores de <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo></m:mrow></m:math> es continua a lo largo de un subintervalo dado (que es el caso típico), entonces el signo de <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo></m:mrow></m:math> en ese subintervalo no cambia y, por lo tanto, se puede determinar eligiendo un punto de prueba arbitrario <m:math><m:mi>x</m:mi></m:math> en ese subintervalo y evaluando el signo de <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo></m:mrow></m:math> en ese punto de prueba. Utilice el análisis de signos para determinar si <m:math><m:mi>f</m:mi></m:math> aumenta o disminuye en ese intervalo.</item>
+<item>Utilice <link target-id="fs-id1165042327970"/>, (prueba de la primera derivada) y los resultados del paso <m:math><m:mn>2</m:mn></m:math> para determinar si <m:math><m:mi>f</m:mi></m:math> tiene un máximo local, un mínimo local o ninguno en cada uno de los puntos críticos.</item>
+</list>
+</note>
+<para id="fs-id1165043066683">Veamos ahora cómo utilizar esta estrategia para localizar todos los extremos locales de determinadas funciones.</para>
+<example id="fs-id1165043423022">
+<exercise id="fs-id1165042973802">
+<problem id="fs-id1165043273079">
+<title>Uso de la prueba de la primera derivada para encontrar los extremos locales</title>
+<para id="fs-id1165042946304">Utilice la prueba de la primera derivada para ubicar todos los extremos locales para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>9</m:mn><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Utilice una herramienta gráfica para confirmar sus resultados.</para>
+</problem>
+<solution id="fs-id1165042375856">
+<para id="fs-id1165043253635">Paso 1. La derivada es <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>6</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>9</m:mn><m:mo>.</m:mo></m:mrow></m:math> Para encontrar los puntos críticos, tenemos que encontrar dónde <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Al factorizar el polinomio, concluimos que los puntos críticos deben satisfacer</para><equation id="fs-id1165043318988" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mn>3</m:mn><m:mrow><m:mo stretchy="false">(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043041063">Por lo tanto, los puntos críticos son <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>-1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Ahora divida el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en los intervalos más pequeños <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>-1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1165043097583">Paso 2. Dado que <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo></m:mrow></m:math> es una función continua, para determinar el signo de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> sobre cada subintervalo, basta con elegir un punto sobre cada uno de los intervalos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>-1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y determinar el signo de <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> en cada uno de estos puntos. Por ejemplo, elijamos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-2</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math> como puntos de prueba.</para><table id="fs-id1165042978447" class="unnumbered" summary="This table has four rows and four columns. The first row is a header row, and it reads from left to right Interval, Test Point, Sign of f’(x) = 3(x −3)(x + 1) at Test Point, and Conclusion. Below the header, the first column reads (−∞, −1), (−1, 3), and (3, ∞). The second column reads x = −2, x = 0, and x = 4. The third column reads (+)(−)(−) = +, (+)(−)(+) = −, and (+)(+)(+) = +. The fourth column reads f is increasing, f is decreasing, and f is increasing.">
+<label/>
+<tgroup cols="4">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left">Intervalo</entry>
+<entry valign="top" align="left">Punto de prueba</entry>
+<entry valign="top" align="left">Signo de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en el punto de prueba</entry>
+<entry valign="top" align="left">Conclusión</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>-1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-2</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>+</m:mtext><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>- −</m:mtext><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>- −</m:mtext><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>+</m:mo></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mi>f</m:mi></m:math> aumenta.</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>+</m:mtext><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>- −</m:mtext><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>+</m:mtext><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mi>f</m:mi></m:math> decrece.</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>+</m:mtext><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>+</m:mtext><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>+</m:mtext><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>+</m:mo></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mi>f</m:mi></m:math> aumenta.</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<para id="fs-id1165042931764">Paso 3. Dado que <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> cambia el signo de positivo a negativo cuando <m:math><m:mi>x</m:mi></m:math> aumenta a través de <m:math><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mi>f</m:mi></m:mrow></m:math> tiene un máximo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> cambia el signo de negativo a positivo cuando <m:math><m:mi>x</m:mi></m:math> aumenta a través de <m:math><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:mi>f</m:mi></m:mrow></m:math> tiene un mínimo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math> Estos resultados analíticos coinciden con el siguiente gráfico.</para><figure id="CNX_Calc_Figure_04_05_003">
+<media id="fs-id1165042925692" alt="Se representa gráficamente la función f(x) = x3 - 3x2 - 9x - 1. Tiene un máximo en x = -1 y un mínimo en x = 3. La función es creciente antes de x = -1, decreciente hasta x = 3 y creciente después.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_008.jpg"/>
+</media>
+<caption>La función <m:math><m:mi>f</m:mi></m:math> tiene un máximo en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn></m:mrow></m:math> y un mínimo en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165043122322" class="checkpoint">
+<exercise id="fs-id1165043317506">
+<problem id="fs-id1165043074826">
+<para id="fs-id1165043392317">Utilice la prueba de la primera derivada para localizar todos los extremos locales para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>18</m:mn><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043385478">
+<para id="fs-id1165043281485">Los términos <m:math><m:mi>f</m:mi></m:math> tiene un mínimo local en <m:math><m:mrow><m:mn>-2</m:mn></m:mrow></m:math> y un máximo local en <m:math><m:mrow><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165042923236" type="hint">
+<title>Pista</title>
+<para id="fs-id1165043429519">Halle todos los puntos críticos de <m:math><m:mi>f</m:mi></m:math> y determine los signos de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> sobre los intervalos particulares determinados por los puntos críticos.</para>
+</commentary>
+</exercise>
+</note>
+<example id="fs-id1165043312782">
+<exercise id="fs-id1165042640287">
+<problem id="fs-id1165042479991">
+<title>Uso de la prueba de la primera derivada</title>
+<para id="fs-id1165042319589">Utilice la prueba de la primera derivada para ubicar todos los extremos locales para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math> Utilice una herramienta gráfica para confirmar sus resultados.</para>
+</problem>
+<solution id="fs-id1165042369651">
+<para id="fs-id1165043109175">Paso 1. La derivada es</para><equation id="fs-id1165043066545" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>5</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mrow><m:mn>-2</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup><m:mo>-</m:mo><m:mfrac><m:mn>5</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mrow><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup><m:mo>=</m:mo><m:mfrac><m:mn>5</m:mn><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup></m:mrow></m:mfrac><m:mo>-</m:mo><m:mfrac><m:mrow><m:mn>5</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>5</m:mn><m:mo>-</m:mo><m:mn>5</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>4</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup></m:mrow><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>5</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mn>4</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042514176">La derivada <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> cuando <m:math><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mn>4</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> a las <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>±</m:mtext><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> La derivada <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es indefinida en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, tenemos tres puntos críticos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>.</m:mo></m:mrow></m:math> En consecuencia, divida el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en los intervalos más pequeños <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>-1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1165042354821">Paso 2: Dado que <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> es continua en cada subintervalo, basta con elegir un punto de prueba <m:math><m:mi>x</m:mi></m:math> en cada uno de los intervalos del paso <m:math><m:mn>1</m:mn></m:math> y determinar el signo de <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> en cada uno de estos puntos. Los puntos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-2</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> son puntos de prueba para estos intervalos.</para>
+<table id="fs-id1165043032734" class="unnumbered" summary="This table has five rows and four columns. The first row is a header row, and it reads from left to right Interval, Test Point, Sign of f’(x) = 5(1 – x4/3)/(3x2/3) at Test Point, and Conclusion. Below the header, the first column reads (−∞, −1), (−1, 0), (0, 1), and (1, ∞). The second column reads x = −2, x = −1/2, x = 1/2, and x = 2. The third column reads (+)(−)/(+) = −, (+)(+)/(+) = +, (+)(+)/(+) = +, and (+)(−)/(+) = −. The fourth column reads f is decreasing, f is increasing, f is increasing, and f is decreasing."><label/>
+<tgroup cols="4"><colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left">Intervalo</entry>
+<entry valign="top" align="left">Punto de prueba</entry>
+<entry valign="top" align="left">Signo de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>5</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mn>4</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup></m:mrow></m:mfrac></m:mrow></m:math> en el punto de prueba</entry>
+<entry valign="top" align="left">Conclusión</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>-1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-2</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>+</m:mtext><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>- −</m:mtext><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>+</m:mo></m:mfrac><m:mo>=</m:mo><m:mtext>- −</m:mtext></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mi>f</m:mi></m:math> decrece.</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>+</m:mtext><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>+</m:mtext><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>+</m:mo></m:mfrac><m:mo>=</m:mo><m:mo>+</m:mo></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mi>f</m:mi></m:math> aumenta.</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>+</m:mtext><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>+</m:mtext><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>+</m:mo></m:mfrac><m:mo>=</m:mo><m:mo>+</m:mo></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mi>f</m:mi></m:math> aumenta.</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>+</m:mtext><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mtext>- −</m:mtext><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>+</m:mo></m:mfrac><m:mo>=</m:mo><m:mtext>- −</m:mtext></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mi>f</m:mi></m:math> decrece.</entry>
+</row>
+</tbody>
+
+</tgroup>
+</table><para id="fs-id1165043062405">Paso 3: Dado que <m:math><m:mi>f</m:mi></m:math> es decreciente en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>-1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y creciente en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mi>f</m:mi></m:math> tiene un mínimo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mi>f</m:mi></m:math> es creciente en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mi>f</m:mi></m:math> no tienen un extremo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mi>f</m:mi></m:math> es creciente en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y decreciente en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>f</m:mi></m:mrow></m:math> tiene un máximo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Los resultados analíticos coinciden con el siguiente gráfico.</para>
+<figure id="CNX_Calc_Figure_04_05_004">
+<media id="fs-id1165043350494" alt="Se representa gráficamente la función f(x) = 5x1/3 - x5/3. Esta disminuye hasta su mínimo local en x = -1, aumenta hasta x = 1 y luego disminuye.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_009.jpg"/>
+</media>
+<caption>La función <emphasis effect="italics">f</emphasis> tiene un mínimo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn></m:mrow></m:math> y un máximo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165043262496" class="checkpoint">
+<exercise id="fs-id1165043428512">
+<problem id="fs-id1165043119394">
+<para id="fs-id1165043119396">Utilice la prueba de la primera derivada para encontrar todos los extremos locales para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mroot><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mn>3</m:mn></m:mroot><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043305742">
+<para id="fs-id1165042982077">Los términos <m:math><m:mi>f</m:mi></m:math> no tiene extremos locales porque <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> no cambia de signo en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165042604838" type="hint">
+<title>Pista</title>
+<para id="fs-id1165042608705">El único punto crítico de <m:math><m:mi>f</m:mi></m:math> ¿es <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1165043423622">
+<title>Concavidad y puntos de inflexión</title>
+<para id="fs-id1165042517819">Ahora sabemos cómo determinar si una función es creciente o decreciente. Sin embargo, hay otra cuestión a tener en cuenta respecto a la forma de la gráfica de una función. Si el gráfico se curva, ¿lo hace hacia arriba o hacia abajo? Esta noción se denomina <term id="term-00002">concavidad</term> de la función.</para>
+<para id="fs-id1165043256949">La <link target-id="CNX_Calc_Figure_04_05_005"/>(a) muestra una función <m:math><m:mi>f</m:mi></m:math> con un gráfico que se curva hacia arriba. A medida que <m:math><m:mi>x</m:mi></m:math> aumenta, la pendiente de la línea tangente aumenta. Por lo tanto, dado que la derivada aumenta a medida que <m:math><m:mi>x</m:mi></m:math> aumenta, <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> es una función creciente. Decimos que esta función <m:math><m:mi>f</m:mi></m:math> es cóncava hacia arriba. La <link target-id="CNX_Calc_Figure_04_05_005"/>(b) muestra una función <m:math><m:mi>f</m:mi></m:math> que se curva hacia abajo. A medida que <m:math><m:mi>x</m:mi></m:math> aumenta, la pendiente de la línea tangente disminuye. Dado que la derivada disminuye a medida que <m:math><m:mi>x</m:mi></m:math> aumenta, <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> es una función decreciente. Decimos que esta función <m:math><m:mi>f</m:mi></m:math> es cóncava hacia abajo.</para>
+<note id="fs-id1165042559132">
+<title>Definición</title>
+<para id="fs-id1165042559135">Supongamos que <m:math><m:mi>f</m:mi></m:math> es una función diferenciable en un intervalo abierto <m:math><m:mi>I</m:mi><m:mo>.</m:mo></m:math> Si <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> aumenta en <m:math><m:mrow><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> decimos <m:math><m:mi>f</m:mi></m:math> es <term id="term-00003">cóncava hacia arriba</term> en <m:math><m:mrow><m:mi>I</m:mi><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> disminuye en <m:math><m:mrow><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> decimos <m:math><m:mi>f</m:mi></m:math> es <term id="term-00004">cóncava hacia abajo</term> en <m:math><m:mrow><m:mi>I</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</note>
+<figure id="CNX_Calc_Figure_04_05_005">
+<media id="fs-id1165043105064" alt="Esta figura se divide en cuatro figuras marcadas como a, b, c y d. La figura a muestra una función que aumenta convexamente desde (a, f(a)) hasta (b, f(b)). En dos puntos se toma la derivada y ambas son crecientes, pero la que se toma más a la derecha aumenta más. Se observa que f' es creciente y f es cóncava hacia arriba. La figura b muestra una función que aumenta cóncavamente desde (a, f(a)) hasta (b, f(b)). En dos puntos se toma la derivada y ambas son crecientes, pero la que se toma más a la derecha aumenta menos. Se observa que f' es decreciente y f es cóncava hacia abajo. La figura c muestra una función que decrece cóncavamente desde (a, f(a)) hasta (b, f(b)). En dos puntos se toma la derivada y ambas son decrecientes, pero la que se toma más a la derecha decrece menos. Se observa que f' es creciente y f es cóncava hacia arriba. La figura d muestra una función que decrece convexamente desde (a, f(a)) hasta (b, f(b)). En dos puntos se toma la derivada y ambas son decrecientes, pero la que se toma más a la derecha es más decreciente. Se observa que f' es decreciente y f es cóncava hacia abajo.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_010.jpg"/>
+</media>
+<caption>(a), (c) Ya que <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo></m:mrow></m:math> es creciente en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> decimos <m:math><m:mi>f</m:mi></m:math> es cóncava hacia arriba en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> (b), (d) Ya que <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo></m:mrow></m:math> es decreciente en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> decimos <m:math><m:mi>f</m:mi></m:math> es cóncava hacia abajo en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+<para id="fs-id1165042343198">En general, sin tener la gráfica de una función <m:math><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> ¿cómo podemos determinar su concavidad? Por definición, una función <m:math><m:mi>f</m:mi></m:math> es cóncava hacia arriba si <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> aumenta. Por el corolario <m:math><m:mn>3</m:mn><m:mo>,</m:mo></m:math> sabemos que si <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> es una función diferenciable, entonces <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> es creciente si su derivada <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, una función <m:math><m:mi>f</m:mi></m:math> que es dos veces diferenciable es cóncava hacia arriba cuando <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Del mismo modo, una función <m:math><m:mi>f</m:mi></m:math> es cóncava hacia abajo si <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> decrece. Sabemos que una función diferenciable <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> es decreciente si su derivada <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, una función dos veces diferenciable <m:math><m:mi>f</m:mi></m:math> es cóncava hacia abajo cuando <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> La aplicación de esta lógica se conoce como la <term id="term-00005">prueba de concavidad</term>.</para>
+<note id="fs-id1165043082168" class="theorem">
+<title>Prueba de concavidad</title>
+<para id="fs-id1165043088519">Supongamos que <m:math><m:mi>f</m:mi></m:math> es una función doblemente diferenciable en un intervalo <m:math><m:mrow><m:mi>I</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1165042925616" list-type="enumerated" number-style="lower-roman">
+<item>Si los valores de <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> para todo <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> es cóncava hacia arriba en <m:math><m:mrow><m:mi>I</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Si <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> para todo <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> es cóncava hacia abajo en <m:math><m:mrow><m:mi>I</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</note>
+<para id="fs-id1165043195362">Concluimos que podemos determinar la concavidad de una función <m:math><m:mi>f</m:mi></m:math> mirando la segunda derivada de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math> Además, observamos que una función <m:math><m:mi>f</m:mi></m:math> puede cambiar de concavidad (<link target-id="CNX_Calc_Figure_04_05_006"/>). Sin embargo, una función continua puede cambiar de concavidad solo en un punto <m:math><m:mi>x</m:mi></m:math> si <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> o <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es indefinida. En consecuencia, para determinar los intervalos en los que una función <m:math><m:mi>f</m:mi></m:math> es cóncava hacia arriba y cóncava hacia abajo, buscamos aquellos valores de <m:math><m:mi>x</m:mi></m:math> donde <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> o <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es indefinida. Una vez determinados estos puntos, dividimos el dominio de <m:math><m:mi>f</m:mi></m:math> en intervalos más pequeños y determinamos el signo de <m:math><m:mi>f</m:mi><m:mtext>″</m:mtext></m:math> en cada uno de estos intervalos más pequeños. Si los valores de <m:math><m:mi>f</m:mi><m:mtext>″</m:mtext></m:math> cambia de signo al pasar por un punto <m:math><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> cambia la concavidad. Es importante recordar que una función <m:math><m:mi>f</m:mi></m:math> no puede cambiar la concavidad en un punto <m:math><m:mi>x</m:mi></m:math> incluso si <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> o <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es indefinida. Sin embargo, si, <m:math><m:mi>f</m:mi></m:math> sí cambia la concavidad en un punto <m:math><m:mi>a</m:mi></m:math> y <m:math><m:mi>f</m:mi></m:math> es continua en <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> decimos que el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es un punto de inflexión de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<note id="fs-id1165043120988">
+<title>Definición</title>
+<para id="fs-id1165043120992">Si <m:math><m:mi>f</m:mi></m:math> es continua en <m:math><m:mi>a</m:mi></m:math> y <m:math><m:mi>f</m:mi></m:math> cambia la concavidad en <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es un <term id="term-00006">punto de inflexión</term> de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</note>
+<figure id="CNX_Calc_Figure_04_05_006">
+<media id="fs-id1165043313430" alt="Se muestra una función sinusoidal que ha sido desplazada al primer cuadrante. La función comienza a decrecer, por lo que f' &lt; 0 y f'' > 0. La función alcanza el mínimo local y comienza a aumentar, por lo que f' > 0 y f'' > 0. Se observa que la pendiente es creciente para estos dos intervalos. La función alcanza entonces un punto de inflexión (a, f(a)) y a partir de aquí la pendiente es decreciente aunque la función siga aumentando, por lo que f' > 0 y f'' &lt; 0. La función alcanza el máximo y luego comienza a disminuir, por lo que f' &lt; 0 y f'' &lt; 0.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_004.jpg"/>
+</media>
+<caption>Dado que <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> por <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> la función <m:math><m:mi>f</m:mi></m:math> es cóncava hacia arriba en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> por <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> la función <m:math><m:mi>f</m:mi></m:math> es cóncava hacia abajo en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> El punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es un punto de inflexión de <m:math><m:mi>f</m:mi><m:mo>.</m:mo></m:math></caption>
+</figure>
+<example id="fs-id1165042558993">
+<exercise id="fs-id1165042558995">
+<problem id="fs-id1165042558998">
+<title>Prueba de concavidad</title>
+<para id="fs-id1165043197105">Para que la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>6</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>9</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>30</m:mn><m:mo>,</m:mo></m:mrow></m:math> determine todos los intervalos en los que <m:math><m:mi>f</m:mi></m:math> es cóncavo hacia arriba y todos los intervalos donde <m:math><m:mi>f</m:mi></m:math> es cóncava hacia abajo. Enumere todos los puntos de inflexión para <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math> Utilice una herramienta gráfica para confirmar sus resultados.</para>
+</problem>
+<solution id="fs-id1165043306697">
+<para id="fs-id1165043306699">Para determinar la concavidad, necesitamos encontrar la segunda derivada <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> La primera derivada es <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>12</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>9</m:mn><m:mo>,</m:mo></m:mrow></m:math> por lo que la segunda derivada es <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>12</m:mn><m:mo>.</m:mo></m:mrow></m:math> Si la función cambia de concavidad, esto ocurre ya sea cuando <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> o <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es indefinida. Dado que <m:math><m:mi>f</m:mi><m:mtext>″</m:mtext></m:math> se define para todos los números reales <m:math><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> solo tenemos que encontrar dónde <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Si resolvemos la ecuación <m:math><m:mrow><m:mn>6</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>12</m:mn><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> vemos que <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> es el único lugar donde <m:math><m:mi>f</m:mi></m:math> puede cambiar la concavidad. Ahora probamos los puntos sobre los intervalos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para determinar la concavidad de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math> Los puntos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math> son puntos de prueba para estos intervalos.</para>
+<table id="fs-id1165042960171" class="unnumbered" summary="This table has three rows and four columns. The first row is a header row, and it reads from left to right Interval, Test Point, Sign of f’’(x) = 6x – 12 at Test Point, and Conclusion. Below the header, the first column reads (−∞, 2) and (2, ∞). The second column reads x = 0 and x = 3. The third column reads − and +. The fourth column reads f is concave down and f is concave up.">
+<label/>
+<tgroup cols="4">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left">Intervalo</entry>
+<entry valign="top" align="left">Punto de prueba</entry>
+<entry valign="top" align="left">Signo de <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>12</m:mn></m:mrow></m:math> en el punto de prueba</entry>
+<entry valign="top" align="left">Conclusión</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mo>- −</m:mo></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mi>f</m:mi></m:math> es cóncava hacia abajo</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mo>+</m:mo></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mi>f</m:mi></m:math> es cóncava hacia arriba.</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<para id="fs-id1165042329993">Concluimos que <m:math><m:mi>f</m:mi></m:math> es cóncava hacia abajo en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y cóncava hacia arriba en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mi>f</m:mi></m:math> cambia la concavidad en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>32</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es un punto de inflexión. La <link target-id="CNX_Calc_Figure_04_05_007"/> confirma los resultados analíticos.</para>
+<figure id="CNX_Calc_Figure_04_05_007">
+<media id="fs-id1165042517330" alt="Se representa gráficamente la función f(x) = x3 - 6x2 + 9x + 30. El punto de inflexión (2, 32) está marcado, y es aproximadamente equidistante de los dos extremos locales.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_011.jpg"/>
+</media>
+<caption>La función dada tiene un punto de inflexión en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>32</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> donde el gráfico cambia de concavidad.</caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165043321424" class="checkpoint">
+<exercise id="fs-id1165043321427">
+<problem id="fs-id1165042946144">
+<para id="fs-id1165042946146">Para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>18</m:mn><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> encuentre todos los intervalos en los que <m:math><m:mi>f</m:mi></m:math> es cóncavo hacia arriba y todos los intervalos donde <m:math><m:mi>f</m:mi></m:math> es cóncava hacia abajo.</para>
+</problem>
+<solution id="fs-id1165042369707">
+<para id="fs-id1165042369709">Los términos <m:math><m:mi>f</m:mi></m:math> es cóncava hacia arriba en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y cóncava hacia abajo en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165043286727" type="hint">
+<title>Pista</title>
+<para id="fs-id1165043199180">Halle el valor donde <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1165043163933">Ahora resumimos en la <link target-id="fs-id1165043353366"/>, la información que las derivadas primera y segunda de una función <m:math><m:mi>f</m:mi></m:math> proporcionan sobre el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> e ilustramos esta información en la <link target-id="CNX_Calc_Figure_04_05_008"/>.</para>
+<table id="fs-id1165043353366" summary="This table has five rows and four columns. The first row is a header row, and it reads from left to right Sign of f’, Sign of f’’, Is f increasing or decreasing?, and Concavity. Below the header, the first column reads Positive, Positive, Negative, and Negative. The second column reads Positive, Negative, Positive, and Negative. The third column reads Increasing, Increasing, Decreasing, and Decreasing. The fourth column reads Concave up, Concave down, Concave up, and Concave down.">
+<title>Lo que las derivadas nos dicen sobre los gráficos</title>
+<tgroup cols="4">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left">Signo de <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo></m:mrow></m:math></entry>
+<entry valign="top" align="left">Signo de <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext></m:mrow></m:math></entry>
+<entry valign="top" align="left">¿Es <m:math><m:mi>f</m:mi></m:math> ¿aumenta o disminuye?</entry>
+<entry valign="top" align="left">Concavidad</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry valign="top" align="left">Positivo</entry>
+<entry valign="top" align="left">Positivo</entry>
+<entry valign="top" align="left">Creciente</entry>
+<entry valign="top" align="left">Cóncava hacia arriba</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">Positivo</entry>
+<entry valign="top" align="left">Negativo</entry>
+<entry valign="top" align="left">Creciente</entry>
+<entry valign="top" align="left">Cóncava hacia abajo</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">Negativo</entry>
+<entry valign="top" align="left">Positivo</entry>
+<entry valign="top" align="left">Decreciente</entry>
+<entry valign="top" align="left">Cóncava hacia arriba</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">Negativo</entry>
+<entry valign="top" align="left">Negativo</entry>
+<entry valign="top" align="left">Decreciente</entry>
+<entry valign="top" align="left">Cóncava hacia abajo</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<figure id="CNX_Calc_Figure_04_05_008">
+<media id="fs-id1165043395702" alt="Se grafica una función en el primer cuadrante. Este está dividido en cuatro secciones, con secciones en el mínimo local, el punto de inflexión y el máximo local, respectivamente. La primera sección es decreciente y cóncava hacia arriba; aquí, f' &lt; 0 y f'' > 0. La segunda sección es creciente y cóncava hacia arriba; aquí, f' > 0 y f'' > 0. La tercera sección es creciente y cóncava hacia abajo; aquí, f' > 0 y f'' &lt; 0. La cuarta sección es creciente y cóncava hacia abajo; aquí, f' &lt; 0 y f'' &lt; 0.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_005.jpg"/>
+</media>
+<caption>Consideremos una función dos veces diferenciable <m:math><m:mi>f</m:mi></m:math> en un intervalo abierto <m:math><m:mi>I</m:mi><m:mo>.</m:mo></m:math> Si <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> para todo <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> la función es creciente en <m:math><m:mi>I</m:mi><m:mo>.</m:mo></m:math> Si <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> para todo <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> la función es decreciente en <m:math><m:mi>I</m:mi><m:mo>.</m:mo></m:math> Si <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> para todo <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> la función es cóncava hacia arriba. Si los valores de <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> para todo <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> la función es cóncava hacia abajo en <m:math><m:mi>I</m:mi><m:mo>.</m:mo></m:math></caption>
+</figure>
+</section>
+<section id="fs-id1165042355740">
+<title>La prueba de la segunda derivada</title>
+<para id="fs-id1165042621320">La prueba de la primera derivada proporciona una herramienta analítica para encontrar los extremos locales, pero la segunda derivada también puede utilizarse para localizar los valores extremos. Utilizar la segunda derivada puede ser a veces un método más sencillo que utilizar la primera derivada.</para>
+<para id="fs-id1165042621325">We know that if a continuous function has local extrema, it must occur at a critical point. However, a function need not have local extrema at a critical point. Aquí examinamos cómo se puede utilizar la <term id="term-00007">prueba de la segunda derivada</term> para determinar si una función tiene un extremo local en un punto crítico. Supongamos que <m:math><m:mi>f</m:mi></m:math> es una función dos veces diferenciable tal que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mi>f</m:mi><m:mtext>″</m:mtext></m:math> es continua en un intervalo abierto <m:math><m:mi>I</m:mi></m:math> que contiene <m:math><m:mrow><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mi>f</m:mi><m:mtext>″</m:mtext></m:math> es continua en <m:math><m:mrow><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> para todo <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi></m:mrow></m:math> (<link target-id="CNX_Calc_Figure_04_05_009"/>). Entonces, por el corolario <m:math><m:mn>3</m:mn><m:mo>,</m:mo></m:math> <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> es una función decreciente sobre <m:math><m:mrow><m:mi>I</m:mi><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> concluimos que para todo <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> si <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> si <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, mediante la prueba de la primera derivada, <m:math><m:mi>f</m:mi></m:math> tiene un máximo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por otro lado, supongamos que existe un punto <m:math><m:mi>b</m:mi></m:math> de manera que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> pero <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mi>f</m:mi><m:mtext>″</m:mtext></m:math> es continua en un intervalo abierto <m:math><m:mi>I</m:mi></m:math> que contiene <m:math><m:mrow><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> para todo <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi></m:mrow></m:math> (<link target-id="CNX_Calc_Figure_04_05_009"/>). Entonces, por el corolario <m:math><m:mrow><m:mn>3</m:mn><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:mrow></m:math> es una función creciente sobre <m:math><m:mrow><m:mi>I</m:mi><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> concluimos que para todo <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> si <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> si <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, mediante la prueba de la primera derivada, <m:math><m:mi>f</m:mi></m:math> tiene un mínimo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_04_05_009">
+<media id="fs-id1165043251374" alt="Una función f(x) se representa gráficamente en el primer cuadrante con a y b marcados en el eje x. La función es vagamente sinusoidal, aumentando primero hasta x = a, luego disminuyendo hasta x = b, y aumentando de nuevo. En (a, f(a)) se marca la tangente y se observa que f'(a) = 0 y f''(a) &lt; 0. En (b, f(b)) se marca la tangente y se observa que f'(b) = 0 y f''(b) > 0.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_006.jpg"/>
+</media>
+<caption>Consideremos una función dos veces diferenciable <m:math><m:mi>f</m:mi></m:math> tal que <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext></m:mrow></m:math> es continuo. Dado que <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> hay un intervalo <m:math><m:mi>I</m:mi></m:math> que contiene <m:math><m:mi>a</m:mi></m:math> tal que para todo <m:math><m:mi>x</m:mi></m:math> en <m:math><m:mi>I</m:mi><m:mo>,</m:mo></m:math> <m:math><m:mi>f</m:mi></m:math> es creciente si <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi></m:mrow></m:math> y <m:math><m:mi>f</m:mi></m:math> es decreciente si <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Como resultado, <m:math><m:mi>f</m:mi></m:math> tiene un máximo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> hay un intervalo <m:math><m:mi>I</m:mi></m:math> que contiene <m:math><m:mi>b</m:mi></m:math> tal que para todo <m:math><m:mi>x</m:mi></m:math> en <m:math><m:mi>I</m:mi><m:mo>,</m:mo></m:math> <m:math><m:mi>f</m:mi></m:math> es decreciente si <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi></m:mrow></m:math> y <m:math><m:mi>f</m:mi></m:math> es creciente si <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math> Como resultado, <m:math><m:mi>f</m:mi></m:math> tiene un mínimo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+<note id="fs-id1165043254223" class="theorem">
+<title>Prueba de la segunda derivada</title>
+<para id="fs-id1165043254229">Supongamos que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>f</m:mi><m:mtext>″</m:mtext></m:mrow></m:math> es continua en un intervalo que contiene <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1165042319133" list-type="enumerated" number-style="lower-roman">
+<item>Si los valores de <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> tiene un mínimo local en <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Si <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> tiene un máximo local en <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Si <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces la prueba no es concluyente.</item>
+</list>
+</note>
+<para id="fs-id1165043180196">Note que en el caso iii., cuando <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> puede tener un máximo local, un mínimo local o ninguno de los dos en <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por ejemplo, las funciones <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:math> todas tienen puntos críticos en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> En cada caso, la segunda derivada es cero en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Sin embargo, la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:math> tiene un mínimo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> mientras que la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:math> tiene un máximo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> y la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math> no tienen un extremo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1165043425387">Veamos ahora cómo utilizar la prueba de la segunda derivada para determinar si <m:math><m:mi>f</m:mi></m:math> tiene un máximo local o un mínimo local en un punto crítico <m:math><m:mi>c</m:mi></m:math> donde <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<example id="fs-id1165042710827">
+<exercise id="fs-id1165042710829">
+<problem id="fs-id1165042710831">
+<title>Usar la prueba de la segunda derivada</title>
+<para id="fs-id1165042631706">Utilice la segunda derivada para encontrar la ubicación de todos los extremos locales para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>5</m:mn></m:msup><m:mo>-</m:mo><m:mn>5</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042320873">
+<para id="fs-id1165042320876">Para aplicar la prueba de la segunda derivada, primero tenemos que encontrar los puntos críticos <m:math><m:mi>c</m:mi></m:math> donde <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> La derivada es <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>- −</m:mo><m:mn>15</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>- −</m:mo><m:mn>15</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>5</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mtext>±3,...</m:mtext><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1165043431475">Para determinar si <m:math><m:mi>f</m:mi></m:math> has local extrema at any of these points, we need to evaluate the sign of <m:math><m:mi>f</m:mi><m:mtext>″</m:mtext></m:math> en estos puntos. La segunda derivada es</para>
+<equation id="fs-id1165042318723" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>20</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>- −</m:mo><m:mn>30</m:mn><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>10</m:mn><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042373916">En la siguiente tabla, evaluamos la segunda derivada en cada uno de los puntos críticos y utilizamos la prueba de la segunda derivada para determinar si <m:math><m:mi>f</m:mi></m:math> tiene un máximo local o un mínimo local en cualquiera de estos puntos.</para>
+<table id="fs-id1165042705774" class="unnumbered" summary="This table has four rows and three columns. The first row is a header row, and it reads x, f’’(x), and Conclusion. After the header, the first column reads negative square root of 3, 0, and square root of 3. The second column reads negative 30 times the square root of 3, 0, and 30 times the square root of 3. The third column reads Local maxiumum, Second derivative test is inconclusive, and Local minimum.">
+<label/>
+<tgroup cols="3">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="left">Los términos <m:math><m:mi>x</m:mi></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></entry>
+<entry valign="top" align="left">Conclusión</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mtext>-</m:mtext><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>-30</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow></m:math></entry>
+<entry valign="top" align="left">Máximo</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">Los términos <m:math><m:mn>0</m:mn></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mn>0</m:mn></m:math></entry>
+<entry valign="top" align="left">La prueba de la segunda derivada no es concluyente</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>30</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow></m:math></entry>
+<entry valign="top" align="left">Mínimo</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<para id="fs-id1165042476082">Mediante la prueba de la segunda derivada, concluimos que <m:math><m:mi>f</m:mi></m:math> tiene un máximo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow></m:math> y <m:math><m:mi>f</m:mi></m:math> tiene un mínimo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> La prueba de la segunda derivada no es concluyente en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Para determinar si <m:math><m:mi>f</m:mi></m:math> has local extrema at <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> aplicamos la prueba de la primera derivada. Para evaluar el signo de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> supongamos que <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> son los dos puntos de prueba. Dado que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> concluimos que <m:math><m:mi>f</m:mi></m:math> es decreciente en ambos intervalos y, por tanto, <m:math><m:mi>f</m:mi></m:math> does not have local extrema at <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> como se muestra en la siguiente gráfica.</para>
+<figure id="CNX_Calc_Figure_04_05_010">
+<media id="fs-id1165043423980" alt="La función f(x) = x5 - 5x3 se representa gráficamente. La función aumenta hasta (raíz cuadrada negativa de 3, 10), luego disminuye hasta un punto de inflexión en 0, continúa disminuyendo hasta (raíz cuadrada de 3, -10), y luego aumenta.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_007.jpg"/>
+</media>
+<caption>La función <m:math><m:mi>f</m:mi></m:math> tiene un máximo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow></m:math> y un mínimo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow></m:math></caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165042373292" class="checkpoint">
+<exercise id="fs-id1165042373296">
+<problem id="fs-id1165042373298">
+<para id="fs-id1165042373300">Considere la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>- −</m:mo><m:mn>18</m:mn><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Los puntos <m:math><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>-2</m:mn></m:mrow></m:math> satisfacen <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Utilice la prueba de la segunda derivada para determinar si <m:math><m:mi>f</m:mi></m:math> tiene un máximo o un mínimo local en esos puntos.</para>
+</problem>
+<solution id="fs-id1165043173988">
+<para id="fs-id1165043173990">Los términos <m:math><m:mi>f</m:mi></m:math> tiene un máximo local en <m:math><m:mrow><m:mn>-2</m:mn></m:mrow></m:math> y un mínimo local en <m:math><m:mrow><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165043395279" type="hint">
+<title>Pista</title>
+<para id="fs-id1165043395285">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1165042318777">Ahora hemos desarrollado las herramientas que necesitamos para determinar dónde una función es creciente y decreciente una, así como hemos adquirido una comprensión de la forma básica del gráfico. En la siguiente sección discutiremos lo que ocurre con una función cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mtext>±</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> En ese momento, tenemos suficientes herramientas para proporcionar gráficos precisos de una gran variedad de funciones.</para>
+</section>
+<section id="fs-id1165042606819" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1165043163899" list-type="bulleted" bullet-style="bullet">
+<item>Si los valores de <m:math><m:mi>c</m:mi></m:math> es un punto crítico de <m:math><m:mi>f</m:mi></m:math> como <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> por <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>c</m:mi></m:mrow></m:math> como <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> por <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> tiene un máximo local en <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Si los valores de <m:math><m:mi>c</m:mi></m:math> es un punto crítico de <m:math><m:mi>f</m:mi></m:math> como <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> por <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>c</m:mi></m:mrow></m:math> como <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> por <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> tiene un mínimo local en <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Si <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> en un intervalo <m:math><m:mrow><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> es cóncava hacia arriba en <m:math><m:mrow><m:mi>I</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Si <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> en un intervalo <m:math><m:mrow><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> es cóncava hacia abajo en <m:math><m:mrow><m:mi>I</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Si <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> tiene un mínimo local en <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Si <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> tiene un máximo local en <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Si <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> evalúe entonces <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en un punto de prueba <m:math><m:mi>x</m:mi></m:math> a la izquierda de <m:math><m:mi>c</m:mi></m:math> y en un punto de prueba <m:math><m:mi>x</m:mi></m:math> a la derecha de <m:math><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> para determinar si <m:math><m:mi>f</m:mi></m:math> tiene un extremo local en <m:math><m:mrow><m:mi>c</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</section>
+<section id="fs-id1165043390972" class="section-exercises">
+<exercise id="fs-id1165043390976">
+<problem id="fs-id1165043390978">
+<para id="fs-id1165043390980">Si los valores de <m:math><m:mi>c</m:mi></m:math> es un punto crítico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> ¿cuándo no hay un máximo o un mínimo local en <m:math><m:mrow><m:mi>c</m:mi><m:mo>con dígito d?</m:mo></m:mrow></m:math> Explique.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042474277">
+<problem id="fs-id1165042474279">
+<para id="fs-id1165042474281">Para que la función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> ¿es x <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> tanto un punto de inflexión como un máximo/mínimo local?</para>
+</problem>
+<solution id="fs-id1165043308452">
+<para id="fs-id1165043308454">No es un máximo/mínimo local porque <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> no cambia de signo</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043251844">
+<problem id="fs-id1165043251846">
+<para id="fs-id1165043251848">Para que la función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> ¿es x <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> ¿un punto de inflexión?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043286677">
+<problem id="fs-id1165043286679">
+<para id="fs-id1165043286681">¿Es posible que un punto <m:math><m:mi>c</m:mi></m:math> to be both an inflection point and a local extremum of a twice differentiable function?</para>
+</problem>
+<solution id="fs-id1165043286690">
+<para id="fs-id1165043348566">No</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043348571">
+<problem id="fs-id1165043348573">
+<para id="fs-id1165043348576">¿Por qué se necesita continuidad para la prueba de la primera derivada? Proponga un ejemplo.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043348587">
+<problem id="fs-id1165042376751">
+<para id="fs-id1165042376754">Explique si una función cóncava hacia abajo tiene que cruzar <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> para algún valor de <m:math><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043327493">
+<para id="fs-id1165043327495">Falso; por ejemplo, <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043327512">
+<problem id="fs-id1165042331752">
+<para id="fs-id1165042331754">Explique si un polinomio de grado <m:math><m:mn>2</m:mn></m:math> puede tener un punto de inflexión.</para>
+</problem>
+</exercise>
+<para id="fs-id1165042331770">Para los siguientes ejercicios, analice los gráficos de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo>,</m:mo></m:mrow></m:math> y, a continuación, enumere todos los intervalos en los que <m:math><m:mi>f</m:mi></m:math> es creciente o decreciente.</para>
+<exercise id="fs-id1165042970465">
+<problem id="fs-id1165042970467">
+<media id="fs-id1165042970473" alt="La función f'(x) se representa gráficamente. La función comienza negativa y cruza el eje x en (-2, 0). Luego sigue aumentando un poco antes de disminuir y cruzar el eje x en (-1, 0). Alcanza un mínimo local en (1, -6) antes de aumentar y cruzar el eje x en (2, 0).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_201.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1165042476013">
+<para id="fs-id1165042476015">Es creciente en <m:math><m:mrow><m:mn>-2</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>-1</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>2</m:mn><m:mo>;</m:mo></m:mrow></m:math> decreciente en <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>-2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mn>-1</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043428273">
+<problem id="fs-id1165043428275">
+<media id="fs-id1165043317452" alt="La función f'(x) se representa gráficamente. La función comienza negativa y cruza el eje x en (-2, 0). Luego sigue aumentando un poco antes de disminuir y tocar el eje x en (-1, 0). A continuación, aumenta un poco antes de disminuir y cruzar el eje x en el origen. A continuación, la función disminuye hasta un mínimo local antes de aumentar, cruzando el eje x en (1, 0), y continuando el aumento.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_202.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1165043395896">
+<problem id="fs-id1165043395898">
+<media id="fs-id1165043331170" alt="La función f'(x) se representa gráficamente. La función comienza negativa y toca el eje x en el origen. Luego disminuye un poco antes de aumentar hasta cruzar el eje x en (1, 0) y seguir aumentando.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_203.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1165043331178">
+<para id="fs-id1165043331180">Decreciente para <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> creciente para <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043281857">
+<problem id="fs-id1165043281859">
+<media id="fs-id1165043281865" alt="La función f'(x) se representa gráficamente. La función comienza positiva y disminuye hasta tocar el eje x en (-1, 0). Luego aumenta hasta (0, 4,5) antes de disminuir hasta tocar el eje x en (1, 0). Entonces la función aumenta.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_204.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1165043183805">
+<problem id="fs-id1165043183807">
+<media id="fs-id1165043183809" alt="La función f'(x) se representa gráficamente. La función comienza en (-2, 0), disminuye hasta (-1,5, -1,5), aumenta hasta (-1, 0) y sigue aumentando antes de disminuir hasta el origen. Entonces el otro lado es simétrico: es decir, la función aumenta y luego disminuye para pasar por (1, 0). Sigue disminuyendo hasta (1,5, -1,5), y luego aumenta hasta (2, 0).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_205.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1165043424812">
+<para id="fs-id1165043424814">Decreciente para <m:math><m:mrow><m:mn>-2</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>-1</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mn>1</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>2</m:mn><m:mo>;</m:mo></m:mrow></m:math> creciente para <m:math><m:mrow><m:mn>-1</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>-2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1165043319017">Para los siguientes ejercicios, analice los gráficos de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo>,</m:mo></m:mrow></m:math> y, a continuación, enumere todos los intervalos en los que</para>
+<list id="fs-id1165043319031" list-type="enumerated" number-style="lower-alpha">
+<item>Los términos <m:math><m:mi>f</m:mi></m:math> aumenta y disminuye y</item>
+<item>los mínimos y los máximos están localizados.</item>
+</list>
+<exercise id="fs-id1165042373730">
+<problem id="fs-id1165042373733">
+<media id="fs-id1165042373738" alt="La función f'(x) se representa gráficamente. La función comienza en (-2, 0), disminuye un poco y luego aumenta hasta (-1, 0), sigue aumentando antes de disminuir hasta el origen, punto en el que aumenta.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_206.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1165042373655">
+<problem id="fs-id1165042373657">
+<media id="fs-id1165042373659" alt="La función f'(x) se representa gráficamente. La función comienza en (-2, 0), aumenta y luego disminuye hasta (-1, 0), disminuye y luego aumenta hasta un punto de inflexión en el origen. Entonces la función aumenta y disminuye hasta cruzar (1, 0). Sigue disminuyendo y luego aumenta hasta (2, 0).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_207.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1165042367880">
+<para id="fs-id1165042367883">a. Creciente en <m:math><m:mrow><m:mn>-2</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>></m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> decreciente en <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>-2</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mn>-1</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>2</m:mn><m:mo>;</m:mo></m:mrow></m:math> b. máximos en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> mínimos en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043323823">
+<problem id="fs-id1165043323825">
+<media id="fs-id1165042632604" alt="La función f'(x) se representa gráficamente desde x = -2 hasta x = 2. Comienza cerca de cero en x = -2, pero luego aumenta rápidamente y se mantiene positiva durante toda la longitud de la gráfica.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_208.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1165042331804">
+<problem id="fs-id1165042331806">
+<media id="fs-id1165042331810" alt="La función f'(x) se representa gráficamente. La función comienza negativa y cruza el eje x en el origen, que es un punto de inflexión. Luego sigue aumentando.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_209.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1165042371993">
+<para id="fs-id1165042371995">a. Creciente en <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> decreciente en <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>;</m:mo></m:mrow></m:math> b. Mínimo en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043108776">
+<problem id="fs-id1165043108778">
+<media id="fs-id1165043108784" alt="La función f'(x) se representa gráficamente. La función comienza negativa y cruza el eje x en (-1, 0). Luego sigue aumentando un poco antes de disminuir y tocar el eje x en el origen. Vuelve a aumentar y luego disminuye hasta (1, 0). Entonces aumenta.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_210.jpg"/>
+</media>
+</problem>
+</exercise>
+<para id="fs-id1165042318715">Para los siguientes ejercicios, analice los gráficos de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo>,</m:mo></m:mrow></m:math> y, a continuación, haga una lista de todos los puntos de inflexión e intervalos <m:math><m:mi>f</m:mi></m:math> que son cóncavos hacia arriba y cóncavos hacia abajo.</para>
+<exercise id="fs-id1165043395336">
+<problem id="fs-id1165043395338">
+<media id="fs-id1165043395342" alt="La función f'(x) se representa gráficamente. La función es lineal y empieza a ser negativa. Cruza el eje x en el origen.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_211.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1165043312612">
+<para id="fs-id1165043312615">Cóncava hacia arriba en todo <m:math><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> sin puntos de inflexión</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043312627">
+<problem id="fs-id1165043312630">
+<media id="fs-id1165043312634" alt="La función f'(x) se representa gráficamente. Es una parábola orientada hacia arriba con 0 como mínimo local.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_212.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1165043431030">
+<problem id="fs-id1165043431032">
+<media id="fs-id1165043431036" alt="La función f'(x) se representa gráficamente. La función se asemeja a la gráfica de x3: es decir, empieza negativa y cruza el eje x en el origen. Luego sigue aumentando.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_213.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1165043348466">
+<para id="fs-id1165043348468">Cóncava hacia arriba en todo <m:math><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> sin puntos de inflexión</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043348481">
+<problem id="fs-id1165043348483">
+<media id="fs-id1165043348489" alt="La función f'(x) se representa gráficamente. La función comienza negativa y cruza el eje x en (-0,5, 0). Luego sigue aumentando hasta (0, 1,5) antes de disminuir y tocar el eje x en (1, 0). A continuación, aumenta.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_214.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1165042364601">
+<problem id="fs-id1165042364603">
+<media id="fs-id1165042364609" alt="La función f'(x) se representa gráficamente. La función comienza negativa y cruza el eje x en (-1, 0). Luego sigue aumentando hasta un máximo local en (0, 1), momento en el que disminuye y toca el eje x en (1, 0). A continuación, aumenta.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_05_215.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1165042364617">
+<para id="fs-id1165042364619">Cóncava hacia arriba para <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> cóncavo hacia abajo para <m:math><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> puntos de inflexión en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1165043323993">En los siguientes ejercicios, dibuje un gráfico que satisfaga las especificaciones dadas para el dominio <m:math><m:mrow><m:mi>x</m:mi><m:mo>ϵ</m:mo><m:mo stretchy="false">[</m:mo><m:mn>−3</m:mn><m:mo>,</m:mo><m:mn>3</m:mn><m:mo stretchy="false">]</m:mo><m:mo>.</m:mo></m:mrow></m:math> La función no tiene que ser continua ni diferenciable.</para>
+<exercise id="fs-id1165042708286">
+<problem id="fs-id1165042708288">
+<para id="fs-id1165042708290">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>−3</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> en <m:math><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042364310">
+<problem id="fs-id1165042364312">
+<para id="fs-id1165042364314">Los términos <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>−3</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>-1</m:mn><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> en <m:math><m:mrow><m:mn>-1</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> para todo <m:math><m:mi>x</m:mi></m:math></para>
+</problem>
+<solution id="fs-id1165042705925">
+<para id="fs-id1165042705927">Las respuestas variarán</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042705932">
+<problem id="fs-id1165042705934">
+<para id="fs-id1165042705936">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> en <m:math><m:mrow><m:mn>-1</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>−3</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> máximo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> mínimos locales en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>±</m:mtext><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042333449">
+<problem id="fs-id1165042333451">
+<para id="fs-id1165042333453">Hay un máximo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> mínimo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> y el gráfico no es cóncavo hacia arriba ni cóncavo hacia abajo.</para>
+</problem>
+<solution id="fs-id1165042418824">
+<para id="fs-id1165042418826">Las respuestas variarán</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042418832">
+<problem id="fs-id1165042418834">
+<para id="fs-id1165042418836">Hay máximos locales en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>±</m:mtext><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> la función es cóncava hacia arriba para toda <m:math><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> y la función sigue siendo positiva para toda <m:math><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1165043430918">Para los siguientes ejercicios, determine</para>
+<list id="fs-id1165043430921" list-type="enumerated" number-style="lower-alpha">
+<item>intervalos en los que <m:math><m:mi>f</m:mi></m:math> aumenta o disminuye y</item>
+<item>mínimos y máximos locales de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+<exercise id="fs-id1165042709552">
+<problem id="fs-id1165042709554">
+<para id="fs-id1165042709556">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mn>3</m:mn></m:msup><m:mi>x</m:mi></m:mrow></m:math> en <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>π</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>π</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042705526">
+<para id="fs-id1165042705528">a. Creciente en <m:math><m:mrow><m:mo>- −</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> decreciente en <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mo>- −</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>></m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> b. Máximo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>;</m:mo></m:mrow></m:math> mínimo local en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043327552">
+<problem id="fs-id1165043327554">
+<para id="fs-id1165043327556">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1165043430997">En los siguientes ejercicios, determine a. los intervalos en los que <m:math><m:mi>f</m:mi></m:math> es cóncava hacia arriba o cóncava hacia abajo, y b. los puntos de inflexión de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1165042705948">
+<problem id="fs-id1165042705950">
+<para id="fs-id1165042705952">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042708482">
+<para id="fs-id1165042708484">a. Cóncava hacia arriba para <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mfrac><m:mn>4</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> cóncavo hacia abajo para <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mfrac><m:mn>4</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> b. Punto de inflexión en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>4</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1165042708716">Para los siguientes ejercicios, determine</para>
+<list id="fs-id1165042708719" list-type="enumerated" number-style="lower-alpha">
+<item>intervalos en los que <m:math><m:mi>f</m:mi></m:math> es creciente o decreciente.</item>
+<item>mínimos y máximos locales de <m:math><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math></item>
+<item>intervalos en los que <m:math><m:mi>f</m:mi></m:math> es cóncava hacia arriba y cóncava hacia abajo y</item>
+<item>los puntos de inflexión de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+<exercise id="fs-id1165043253476">
+<problem id="fs-id1165043253479">
+<para id="fs-id1165043253481">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>6</m:mn><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043430810">
+<problem id="fs-id1165043430812">
+<para id="fs-id1165043430814">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>6</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042333206">
+<para id="fs-id1165042333208">a. Creciente en <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>4</m:mn><m:mo>,</m:mo></m:mrow></m:math> decreciente en <m:math><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>4</m:mn></m:mrow></m:math> b. Máximo en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> mínimo en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math> c. Cóncava hacia arriba para <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> cóncavo hacia abajo para <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>2</m:mn></m:mrow></m:math> d. Punto de inflexión en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042369583">
+<problem id="fs-id1165042369585">
+<para id="fs-id1165042369587">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>- −</m:mo><m:mn>6</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042710974">
+<problem id="fs-id1165042710976">
+<para id="fs-id1165042710978">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mn>11</m:mn></m:mrow></m:msup><m:mo>- −</m:mo><m:mn>6</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>10</m:mn></m:mrow></m:msup></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042711012">
+<para id="fs-id1165042711014">a. Creciente en <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mfrac><m:mrow><m:mn>60</m:mn></m:mrow><m:mrow><m:mn>11</m:mn></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> decreciente en <m:math><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mfrac><m:mrow><m:mn>60</m:mn></m:mrow><m:mrow><m:mn>11</m:mn></m:mrow></m:mfrac></m:mrow></m:math> b. Mínimo en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>60</m:mn></m:mrow><m:mrow><m:mn>11</m:mn></m:mrow></m:mfrac></m:mrow></m:math>, local maximum at x = 0 c. Cóncavo hacia abajo para <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mfrac><m:mrow><m:mn>54</m:mn></m:mrow><m:mrow><m:mn>11</m:mn></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> cóncavo hacia arriba para <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mfrac><m:mrow><m:mn>54</m:mn></m:mrow><m:mrow><m:mn>11</m:mn></m:mrow></m:mfrac></m:mrow></m:math> d. Punto de inflexión en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>54</m:mn></m:mrow><m:mrow><m:mn>11</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042327371">
+<problem id="fs-id1165042327373">
+<para id="fs-id1165042327376">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043424018">
+<problem id="fs-id1165043424020">
+<para id="fs-id1165043424023">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042364259">
+<para id="fs-id1165042364262">a. Creciente en <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mo>- −</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> decreciente en <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> b. Mínimo en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> c. Cóncavo hacia arriba para toda <m:math><m:mi>x</m:mi></m:math> d. No hay puntos de inflexión</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042710942">
+<problem id="fs-id1165042710945">
+<para id="fs-id1165042710947">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1165043380485">Para los siguientes ejercicios, determine</para>
+<list id="fs-id1165043380488" list-type="enumerated" number-style="lower-alpha">
+<item>intervalos en los que <m:math><m:mi>f</m:mi></m:math> es creciente o decreciente.</item>
+<item>mínimos y máximos locales de <m:math><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math></item>
+<item>intervalos en los que <m:math><m:mi>f</m:mi></m:math> es cóncava hacia arriba y cóncava hacia abajo y</item>
+<item>los puntos de inflexión de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math> Dibuje la curva y luego utilice una calculadora para comparar tu respuesta. Si no puede determinar la respuesta exacta de forma analítica, utilice una calculadora.</item>
+</list>
+<exercise id="fs-id1165043430751">
+<problem id="fs-id1165043430753">
+<para id="fs-id1165043430756"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043327634">
+<para id="fs-id1165043327636">a. Es creciente en <m:math><m:mrow><m:mo>- −</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> decreciente a lo largo de <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow></m:math> b. Mínimo en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> máximo en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow></m:math> c. Cóncava hacia arriba para <m:math><m:mrow><m:mo>- −</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> cóncavo hacia abajo para <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mo>- −</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow></m:math> d. Puntos de inflexión en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043174067">
+<problem id="fs-id1165043281280">
+<para id="fs-id1165043281282"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mo>-</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042315743">
+<problem id="fs-id1165042315745">
+<para id="fs-id1165042315748"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>-</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042375680">
+<para id="fs-id1165042375682">a. Creciente para todo <m:math><m:mi>x</m:mi></m:math> b. No hay mínimo ni máximo local c. Cóncava hacia arriba para <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> cóncavo hacia abajo para <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> d. Punto de inflexión en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042323656">
+<problem id="fs-id1165042323658">
+<para id="fs-id1165042323660"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042327441">
+<problem id="fs-id1165042327444">
+<para id="fs-id1165042327446"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042708181">
+<para id="fs-id1165042708183">a. Creciente para todo <m:math><m:mi>x</m:mi></m:math> donde se define b. No hay mínimos ni máximos locales c. Cóncava hacia arriba para <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>;</m:mo></m:mrow></m:math> cóncavo hacia abajo para <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>1</m:mn></m:mrow></m:math> d. No hay puntos de inflexión en el dominio</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042708214">
+<problem id="fs-id1165042708216">
+<para id="fs-id1165042708218"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>,</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>∪</m:mo><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo stretchy="false">]</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043395208">
+<problem id="fs-id1165043395210">
+<para id="fs-id1165043395212">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043250993">
+<para id="fs-id1165043250995">a. Creciente en <m:math><m:mrow><m:mo>- −</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> decreciente en <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mo>- −</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac></m:mrow></m:math> b. Mínimo en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> máximo en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>4</m:mn></m:mfrac></m:mrow></m:math> c. Cóncava hacia arriba para <m:math><m:mrow><m:mo>- −</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> cóncavo hacia abajo para <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mo>- −</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>></m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> d. Puntos de inflexión en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>±</m:mtext><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042374784">
+<problem id="fs-id1165042374786">
+<para id="fs-id1165042374789">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042320285">
+<problem id="fs-id1165042320287">
+<para id="fs-id1165042320290">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042320331">
+<para id="fs-id1165042323564">a. Creciente en <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>4</m:mn><m:mo>,</m:mo></m:mrow></m:math> decreciente en <m:math><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>4</m:mn></m:mrow></m:math> b. Mínimo en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math> c. Cóncava hacia arriba para <m:math><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>8</m:mn><m:mroot><m:mn>2</m:mn><m:mn>3</m:mn></m:mroot><m:mo>,</m:mo></m:mrow></m:math> cóncavo hacia abajo para <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>8</m:mn><m:mroot><m:mn>2</m:mn><m:mn>3</m:mn></m:mroot></m:mrow></m:math> d. Punto de inflexión en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>8</m:mn><m:mroot><m:mn>2</m:mn><m:mn>3</m:mn></m:mroot></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042364146">
+<problem id="fs-id1165042364149">
+<para id="fs-id1165042364151">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1165043248682">En los siguientes ejercicios, interprete las frases en términos de <m:math><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1165043248713">
+<problem id="fs-id1165043248715">
+<para id="fs-id1165043248718">La población crece más lentamente. Aquí <m:math><m:mi>f</m:mi></m:math> es la población.</para>
+</problem>
+<solution id="fs-id1165042638488">
+<para id="fs-id1165042638490">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042638526">
+<problem id="fs-id1165042638528">
+<para id="fs-id1165042638531">Una moto acelera más rápido, pero un coche va más rápido. Aquí <m:math><m:mrow><m:mi>f</m:mi><m:mo>=</m:mo></m:mrow></m:math> Posición de la moto menos la posición del coche.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042708313">
+<problem id="fs-id1165042708315">
+<para id="fs-id1165042708317">El avión aterriza sin problemas. Aquí <m:math><m:mi>f</m:mi></m:math> es la altitud del avión.</para>
+</problem>
+<solution id="fs-id1165042708326">
+<para id="fs-id1165042708328">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042708364">
+<problem id="fs-id1165042708366">
+<para id="fs-id1165042708369">Los precios de las acciones están en su punto más alto. Aquí <m:math><m:mi>f</m:mi></m:math> es el precio de las acciones.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043390836">
+<problem id="fs-id1165043390838">
+<para id="fs-id1165043390840">La economía se está acelerando. Aquí <m:math><m:mi>f</m:mi></m:math> es una medida de la economía, como el PIB.</para>
+</problem>
+<solution id="fs-id1165043390849">
+<para id="fs-id1165043390851">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1165043219075">En los siguientes ejercicios, considere un polinomio de tercer grado <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> que tiene las propiedades <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Determine si las siguientes afirmaciones son <emphasis effect="italics">verdaderas o falsas</emphasis>. Justifique su respuesta.</para><exercise id="fs-id1165043219135">
+<problem id="fs-id1165043219137">
+<para id="fs-id1165043219139">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> para algunos <m:math><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043173868">
+<problem id="fs-id1165043173870">
+<para id="fs-id1165043173872">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> para algunos <m:math><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042707183">
+<para id="fs-id1165042707185">Cierto, según el teorema del valor medio</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042707190">
+<problem id="fs-id1165042707192">
+<para id="fs-id1165042707194">No hay un máximo absoluto en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042707227">
+<problem id="fs-id1165042707230">
+<para id="fs-id1165042707232">Si <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> tiene tres raíces, entonces tiene <m:math><m:mn>1</m:mn></m:math> punto de inflexión.</para>
+</problem>
+<solution id="fs-id1165043427339">
+<para id="fs-id1165043427341">Cierto, examine la derivada</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043427346">
+<problem id="fs-id1165043427348">
+<para id="fs-id1165043427351">Si los valores de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> tiene un punto de inflexión, entonces tiene tres raíces reales.</para>
+</problem>
+</exercise>
+</section>
+  </content>
+<glossary>
+<definition id="fs-id1165043427379">
+<term>cóncava hacia abajo</term>
+<meaning id="fs-id1165043427385">si <m:math><m:mi>f</m:mi></m:math> es diferenciable en un intervalo <m:math><m:mi>I</m:mi></m:math> y <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> disminuye en <m:math><m:mrow><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> es cóncava hacia abajo en <m:math><m:mi>I</m:mi></m:math></meaning>
+</definition>
+<definition id="fs-id1165043396223">
+<term>cóncavo hacia arriba</term>
+<meaning id="fs-id1165043396229">si <m:math><m:mi>f</m:mi></m:math> es diferenciable en un intervalo <m:math><m:mi>I</m:mi></m:math> y <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> aumenta en <m:math><m:mrow><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> es cóncava hacia arriba en <m:math><m:mi>I</m:mi></m:math></meaning>
+</definition>
+<definition id="fs-id1165043396264">
+<term>concavidad</term>
+<meaning id="fs-id1165043396269">la curva ascendente o descendente gráfico de una función</meaning>
+</definition>
+<definition id="fs-id1165043396274">
+<term>prueba de concavidad</term>
+<meaning id="fs-id1165043396279">supongamos que <m:math><m:mi>f</m:mi></m:math> es dos veces diferenciable en un intervalo <m:math><m:mrow><m:mi>I</m:mi><m:mo>;</m:mo></m:mrow></m:math> si <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> en <m:math><m:mrow><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> es cóncava hacia arriba en <m:math><m:mrow><m:mi>I</m:mi><m:mo>;</m:mo></m:mrow></m:math> si <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mo>&lt;</m:mo><m:mn>0</m:mn></m:mrow></m:math> en <m:math><m:mrow><m:mi>I</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> es cóncava hacia abajo en <m:math><m:mi>I</m:mi></m:math></meaning>
+</definition>
+<definition id="fs-id1165043281605">
+<term>prueba de la primera derivada</term>
+<meaning id="fs-id1165043281610">supongamos que <m:math><m:mi>f</m:mi></m:math> es una función continua en un intervalo <m:math><m:mi>I</m:mi></m:math> que contiene un punto crítico <m:math><m:mi>c</m:mi></m:math> de manera que <m:math><m:mi>f</m:mi></m:math> es diferenciable sobre <m:math><m:mi>I</m:mi></m:math> excepto posiblemente en <m:math><m:mrow><m:mi>c</m:mi><m:mo>;</m:mo></m:mrow></m:math> si <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> cambia de signo de positivo a negativo a medida que <m:math><m:mi>x</m:mi></m:math> aumenta a través de <m:math><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> tiene un máximo local en <m:math><m:mrow><m:mi>c</m:mi><m:mo>;</m:mo></m:mrow></m:math> si <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> cambia el signo de negativo a positivo a medida que <m:math><m:mi>x</m:mi></m:math> aumenta a través de <m:math><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> tiene un mínimo local en <m:math><m:mrow><m:mi>c</m:mi><m:mo>;</m:mo></m:mrow></m:math> si <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> no cambia de signo cuando <m:math><m:mi>x</m:mi></m:math> aumenta a través de <m:math><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> no tienen un extremo local en <m:math><m:mi>c</m:mi></m:math></meaning>
+</definition>
+<definition id="fs-id1165042364543">
+<term>punto de inflexión</term>
+<meaning id="fs-id1165042364548">si <m:math><m:mi>f</m:mi></m:math> es continua en <m:math><m:mi>c</m:mi></m:math> como <m:math><m:mi>f</m:mi></m:math> cambia la concavidad en <m:math><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es un punto de inflexión de <m:math><m:mi>f</m:mi></m:math></meaning>
+</definition>
+<definition id="fs-id1165043131579">
+<term>prueba de la segunda derivada</term>
+<meaning id="fs-id1165043131584">supongamos que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mi>f</m:mi><m:mtext>″</m:mtext></m:math> es continua en un intervalo que contiene <m:math><m:mrow><m:mi>c</m:mi><m:mo>;</m:mo></m:mrow></m:math> si <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> tiene un mínimo local en <m:math><m:mrow><m:mi>c</m:mi><m:mo>;</m:mo></m:mrow></m:math> si <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> tiene un máximo local en <m:math><m:mrow><m:mi>c</m:mi><m:mo>;</m:mo></m:mrow></m:math> si <m:math><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>c</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces la prueba no es concluyente</meaning>
+</definition>
+</glossary>
+</document>

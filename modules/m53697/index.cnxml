@@ -1,0 +1,786 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Fundamentos de las ecuaciones diferenciales</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53697</md:content-id>
+  <md:title>Fundamentos de las ecuaciones diferenciales</md:title>
+  <md:abstract><list id="list-00001">
+<item>Identificar el orden de una ecuación diferencial.</item>
+<item>Explicar qué se entiende por solución de una ecuación diferencial.</item>
+<item>Distinguir entre la solución general y la solución particular de una ecuación diferencial.</item>
+<item>Identificar un problema de valor inicial.</item>
+<item>Identificar si una función dada es una solución de una ecuación diferencial o un problema de valor inicial.</item>
+</list></md:abstract>
+  <md:uuid>f7bfe1ec-a15f-4ca3-8d11-a4461e713ec7</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1170571285666">El cálculo es la matemática del cambio, y las tasas de cambio se expresan mediante derivadas. Así, una de las formas más comunes de utilizar el cálculo es plantear una ecuación que contenga una función desconocida <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y su derivada, conocida como <emphasis effect="italics">ecuación diferencial</emphasis>. La resolución de estas ecuaciones suele proporcionar información sobre cómo cambian las cantidades y, con frecuencia, permite comprender cómo y por qué se producen los cambios.</para>
+<para id="fs-id1170571235223">Las técnicas para resolver ecuaciones diferenciales pueden adoptar muchas formas diferentes, como la solución directa, el uso de gráficos o los cálculos por computadora. En este capítulo presentamos las ideas principales y las describimos con un poco más de detalle más adelante en el curso. En esta sección estudiamos qué son las ecuaciones diferenciales, cómo verificar sus soluciones, algunos métodos que se utilizan para resolverlas y algunos ejemplos de ecuaciones comunes y útiles.</para>
+<section id="fs-id1170573512410">
+<title>Ecuaciones diferenciales generales</title>
+<para id="fs-id1170573209923">Considere la ecuación <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> que es un ejemplo de ecuación diferencial porque incluye una derivada. Existe una relación entre las variables <m:math><m:mi>x</m:mi></m:math> como <m:math><m:mrow><m:mi>y</m:mi><m:mtext>:</m:mtext></m:mrow><m:mspace width="0.2em"/><m:mi>y</m:mi></m:math> es una función desconocida de <m:math><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Además, el lado izquierdo de la ecuación es la derivada de <m:math><m:mrow><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, podemos interpretar esta ecuación de la siguiente manera: Comience con alguna función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y tome su derivada. La respuesta debe ser igual a <m:math><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math> ¿Qué función tiene una derivada que es igual a <m:math><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>con dígito d?</m:mo></m:mrow></m:math> Una de estas funciones es <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> por lo que esta función se considera una <term id="term-00001">solución a una ecuación diferencial</term>.</para>
+<note id="fs-id1170573431367">
+<title>Definición</title>
+<para id="fs-id1170571131063">Una <term id="term-00002">ecuación diferencial</term> es una ecuación que implica una función desconocida <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y una o varias de sus derivadas. Una solución de una ecuación diferencial es una función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> que satisface la ecuación diferencial cuando <m:math><m:mi>f</m:mi></m:math> y sus derivadas se sustituyen en la ecuación.</para>
+</note>
+<note id="fs-id1170573411846" class="media-2">
+<para id="fs-id1170571255388">Visite este <link url="http://www.openstax.org/l/20_Differential">sitio web</link> para saber más sobre este tema.</para>
+</note>
+<para id="fs-id1170573308275">Algunos ejemplos de ecuaciones diferenciales y sus soluciones aparecen en la <link target-id="fs-id1170573355757"/>.</para>
+<table id="fs-id1170573355757" summary="A table with two rows and two columns. The first column has the header “Equation” and the values y’ = 2 x, y’ + 3 y = 6 x + 11, and y’’ – 3 y’ + 2 y = 24 e ^ (-2 x). The second column has the header “Solution” and the values y = x ^ 2, y = e ^ (-3 x) – 4 e ^ (2 x) + 2 e ^ (-2 x).">
+<title>Ejemplos de ecuaciones diferenciales y sus soluciones</title>
+<tgroup cols="2">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<thead>
+<row valign="top">
+<entry align="left">Ecuación</entry>
+<entry align="left">Solución</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>′</m:mo><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:math></entry>
+<entry align="left">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry align="left">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>′</m:mo><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>11</m:mn></m:mrow></m:math></entry>
+<entry align="left">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>−3</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry align="left">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>′</m:mo><m:mo>′</m:mo><m:mo>-</m:mo><m:mn>3</m:mn><m:mi>y</m:mi><m:mo>′</m:mo><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>24</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math></entry>
+<entry align="left">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<para id="fs-id1170573514019">Observe que una solución de una ecuación diferencial no es necesariamente única, principalmente porque la derivada de una constante es cero. Por ejemplo, <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:math> es también una solución de la primera ecuación diferencial en la <link target-id="fs-id1170573355757"/>. Volveremos a esta idea un poco más adelante en esta sección. Por ahora, vamos a centrarnos en lo que significa que una función sea una solución de una ecuación diferencial.</para>
+<example id="fs-id1170573540760">
+<exercise id="fs-id1170573412377">
+<problem id="fs-id1170573734340">
+<title>Verificación de soluciones de ecuaciones diferenciales</title>
+<para id="fs-id1170573590002">Verifique que la función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>−3</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:math> es una solución de la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>11</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170573263434">
+<para id="fs-id1170573410898">Para verificar la solución, primero calculamos <m:math><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup></m:math> utilizando la regla de la cadena para las derivadas. Esto da <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>−3</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>−3</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> A continuación sustituimos <m:math><m:mi>y</m:mi></m:math> y <m:math><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup></m:math> en el lado izquierdo de la ecuación diferencial:</para>
+<equation id="fs-id1170573368104" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>−3</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>−3</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mn>3</m:mn><m:mo stretchy="false">(</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>−3</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170573401064">La expresión resultante puede simplificarse distribuyendo primero para eliminar los paréntesis, dando</para>
+<equation id="fs-id1170573401703" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mn>−3</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>−3</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>−3</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mn>6</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>9</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170573582262">Combinando términos semejantes se obtiene la expresión <m:math><m:mrow><m:mn>6</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>11</m:mn><m:mo>,</m:mo></m:mrow></m:math> que es igual al lado derecho de la ecuación diferencial. Este resultado verifica que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>−3</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:math> es una solución de la ecuación diferencial.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170573403872" class="checkpoint">
+<exercise id="fs-id1170571153281">
+<problem id="fs-id1170573365858">
+<para id="fs-id1170573397796">Verifique que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:math> es una solución de la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<commentary id="fs-id1170573294900" type="hint">
+<title>Pista</title>
+<para id="fs-id1170573627896">Calcule primero <m:math><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup></m:math> luego sustituya ambas <m:math><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup></m:math> y <m:math><m:mi>y</m:mi></m:math> en el lado izquierdo.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1170573366028">Es conveniente definir características de las ecuaciones diferenciales que faciliten hablar de ellas y clasificarlas. La característica más básica de una ecuación diferencial es su orden.</para>
+<note id="fs-id1170573393994">
+<title>Definición</title>
+<para id="fs-id1170573394653">El <term id="term-00003">orden de una ecuación diferencial</term> es el mayor orden de cualquier derivada de la función desconocida que aparece en la ecuación.</para>
+</note>
+<example id="fs-id1170571085382">
+<exercise id="fs-id1170573394321">
+<problem id="fs-id1170573438001">
+<title>Identificación del orden de una ecuación diferencial</title>
+<para id="fs-id1170570999537">¿Cuál es el orden de cada una de las siguientes ecuaciones diferenciales?</para>
+<list id="fs-id1170573386836" list-type="enumerated" number-style="lower-alpha">
+<item>Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:math></item>
+<item>Los términos <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>y</m:mi><m:mtext>‴</m:mtext><m:mo>-</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mi>y</m:mi><m:mtext>″</m:mtext><m:mo>+</m:mo><m:mi>x</m:mi><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></item>
+<item>Los términos <m:math><m:mrow><m:mfrac><m:mn>4</m:mn><m:mi>x</m:mi></m:mfrac><m:msup><m:mi>y</m:mi><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:msup><m:mo>-</m:mo><m:mfrac><m:mn>6</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mi>y</m:mi><m:mtext>″</m:mtext><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>12</m:mn></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>12</m:mn></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1170573405146">
+<list id="fs-id1170573391881" list-type="enumerated" number-style="lower-alpha">
+<item>La derivada más alta de la ecuación es <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>,</m:mo></m:mrow></m:math> por lo que el orden es <m:math><m:mrow><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>La derivada más alta de la ecuación es <m:math><m:mrow><m:mi>y</m:mi><m:mtext>‴</m:mtext><m:mtext>,</m:mtext></m:mrow></m:math> por lo que el orden es <m:math><m:mrow><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>La derivada más alta de la ecuación es <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> por lo que el orden es <m:math><m:mrow><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170573494361" class="checkpoint">
+<exercise id="fs-id1170573290714">
+<problem id="fs-id1170570995771">
+<para id="fs-id1170573262020">¿Cuál es el orden de la siguiente ecuación diferencial?</para>
+<equation id="fs-id1170573604103" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>y</m:mi><m:mrow><m:mrow><m:mo>(</m:mo><m:mn>5</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:msup><m:mo>-</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></equation>
+</problem>
+<solution id="fs-id1170571141543">
+<para id="fs-id1170570993950">Los términos <m:math><m:mn>5</m:mn></m:math></para>
+</solution>
+<commentary id="fs-id1170573362785" type="hint">
+<title>Pista</title>
+<para id="fs-id1170573389448">¿Cuál es la derivada más alta de la ecuación?</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1170573365611">
+<title>Soluciones generales y particulares</title>
+<para id="fs-id1170573587030">Ya hemos señalado que la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:math> tiene al menos dos soluciones: <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math> La única diferencia entre estas dos soluciones es el último término, que es una constante. ¿Y si el último término es una constante diferente? ¿Esta expresión seguirá siendo una solución de la ecuación diferencial? De hecho, cualquier función de la forma <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>C</m:mi></m:math> representa cualquier constante, es también una solución. La razón es que la derivada de <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math> es <m:math><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> independientemente del valor de <m:math><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math> Se puede demostrar que cualquier solución de esta ecuación diferencial debe ser de la forma <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math> Este es un ejemplo de <term id="term-00004">solución general</term> de una ecuación diferencial. Un gráfico de algunas de estas soluciones se ofrece en la <link target-id="CNX_Calc_Figure_08_01_001"/>. (<emphasis effect="italics">Nota</emphasis>: En este gráfico hemos utilizado valores enteros pares para <m:math><m:mi>C</m:mi></m:math>, que oscila entre <m:math><m:mrow><m:mn>-4</m:mn></m:mrow></m:math> y <m:math><m:mn>4</m:mn><m:mo>.</m:mo></m:math> De hecho, no hay ninguna restricción en el valor de <m:math><m:mrow><m:mi>C</m:mi><m:mo>;</m:mo></m:mrow></m:math> puede ser un número entero o no).</para><figure id="CNX_Calc_Figure_08_01_001">
+<media id="fs-id1170573408430" alt="Gráfico de una familia de soluciones de la ecuación diferencial y' = 2 x, que son de la forma y = x ^ 2 + C. Se dibujan parábolas para los valores de C: -4, -2, 0, 2 y 4.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_08_01_001.jpg"/>
+</media>
+<caption>Familia de soluciones de la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+<para id="fs-id1170571277005">En este ejemplo, somos libres de elegir cualquier solución que deseemos; por ejemplo, <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow></m:math> es un miembro de la familia de soluciones de esta ecuación diferencial. Esto se llama una <term id="term-00005">solución particular</term> de la ecuación diferencial. A menudo se puede identificar una solución concreta de forma exclusiva si se nos da información adicional sobre el problema.</para>
+<example id="fs-id1170573439706">
+<exercise id="fs-id1170573282406">
+<problem id="fs-id1170571254551">
+<title>Hallar una solución particular</title>
+<para id="fs-id1170573273508">Halle la solución particular de la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:math> que pasa por el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>7</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170573327628">
+<para id="fs-id1170570994384">Cualquier función de la forma <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math> es una solución de esta ecuación diferencial. Para determinar el valor de <m:math><m:mrow><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> sustituimos los valores <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>7</m:mn></m:mrow></m:math> en esta ecuación y resolvemos para <m:math><m:mrow><m:mi>C</m:mi><m:mtext>:</m:mtext></m:mrow></m:math></para>
+<equation id="fs-id1170573418890" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr/><m:mtr/><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mn>7</m:mn><m:mo>=</m:mo><m:msup><m:mn>2</m:mn><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>C</m:mi><m:mo>=</m:mo><m:mn>3.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170573499195">Por lo tanto, la solución particular que pasa por el punto <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>7</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> es <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170573407571" class="checkpoint">
+<exercise id="fs-id1170573243576">
+<problem id="fs-id1170571281440">
+<para id="fs-id1170573430997">Halle la solución particular de la ecuación diferencial</para>
+<equation id="fs-id1170573310732" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:math></equation>
+<para id="fs-id1170573273901">que pasa por el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>7</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> dado que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math> es una solución general de la ecuación diferencial.</para>
+</problem>
+<solution id="fs-id1170573407290">
+<para id="fs-id1170571048789">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1170573399195" type="hint">
+<title>Pista</title>
+<para id="fs-id1170573574483">Primero sustituya <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>7</m:mn></m:mrow></m:math> en la ecuación, y luego resuelva para <m:math><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1170573369171">
+<title>Problemas de valor inicial</title>
+<para id="fs-id1170573427887">Normalmente, una ecuación diferencial dada tiene un número infinito de soluciones, por lo que es natural preguntarse cuál queremos utilizar. Para elegir una solución, se necesita más información. Una información específica que puede ser útil es un <term id="term-00006">valor inicial</term>, que es un par ordenado que se utiliza para hallar una solución particular.</para>
+<para id="fs-id1170573423616">Una ecuación diferencial con uno o varios valores iniciales se denomina <term id="term-00007">problema de valor inicial</term>. La regla general es que el número de valores iniciales necesarios para un problema de valor inicial es igual al orden de la ecuación diferencial. Por ejemplo, si tenemos la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>7</m:mn></m:mrow></m:math> es un valor inicial, y cuando se toman juntas, estas ecuaciones forman un problema de valor inicial. La ecuación diferencial <m:math><m:mrow><m:mi>y</m:mi><m:mtext>″</m:mtext><m:mo>-</m:mo><m:mn>3</m:mn><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math> es de segundo orden, por lo que necesitamos dos valores iniciales. En los problemas de valor inicial de orden superior a uno, se debe utilizar el mismo valor para la variable independiente. Un ejemplo de valores iniciales para esta ecuación de segundo orden sería <m:math><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Estos dos valores iniciales junto con la ecuación diferencial forman un problema de valor inicial. Estos problemas se llaman así porque a menudo la variable independiente de la función desconocida es <m:math><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:math> que representa el tiempo. Así, un valor de <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> representa el principio del problema.</para>
+<example id="fs-id1170573712028">
+<exercise id="fs-id1170573391210">
+<problem id="fs-id1170573720384">
+<title>Verificación de la solución de un problema de valor inicial</title>
+<para id="fs-id1170571021375">Verifique que la función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup></m:mrow></m:math> es una solución al problema de valor inicial</para>
+<equation id="fs-id1170573368596" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+</problem>
+<solution id="fs-id1170573400425">
+<para id="fs-id1170573366765">Para que una función satisfaga un problema de valor inicial, debe satisfacer tanto la ecuación diferencial como la condición inicial. Para demostrar que <m:math><m:mi>y</m:mi></m:math> satisface la ecuación diferencial, empezamos por calcular <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math> Esto da como resultado <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>-4</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math> A continuación sustituimos ambas <m:math><m:mi>y</m:mi></m:math> y <m:math><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup></m:math> en el lado izquierdo de la ecuación diferencial y simplificamos:</para>
+<equation id="fs-id1170571448884" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>y</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-4</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>-4</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170573381839">Esto es igual al lado derecho de la ecuación diferencial, por lo que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup></m:mrow></m:math> resuelve la ecuación diferencial. A continuación calculamos <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mtext>:</m:mtext></m:mrow></m:math></para>
+<equation id="fs-id1170573407815" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mn>0</m:mn></m:msup></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mn>1</m:mn></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170571120266">Este resultado verifica el valor inicial. Por lo tanto, la función dada satisface el problema de valor inicial.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170573246209" class="checkpoint">
+<exercise id="fs-id1170570975800">
+<problem id="fs-id1170573365823">
+<para id="fs-id1170573429527">Verifique que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>t</m:mi></m:mrow></m:math> es una solución al problema de valor inicial</para>
+<equation id="fs-id1170573368474" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>8</m:mn><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>t</m:mi><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+</problem>
+<commentary id="fs-id1170571276500" type="hint">
+<title>Pista</title>
+<para id="fs-id1170573338054">Primero verifique que <m:math><m:mi>y</m:mi></m:math> resuelve la ecuación diferencial. A continuación, compruebe el valor inicial.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1170573415467">En el <link target-id="fs-id1170573712028"/>, el problema de valor inicial constaba de dos partes. La primera parte era la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math> y la segunda parte era el valor inicial <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math> Estas dos ecuaciones forman en conjunto el problema de valor inicial.</para>
+<para id="fs-id1170573439347">Lo mismo ocurre en general. Un problema de valor inicial constará de dos partes: la ecuación diferencial y la condición inicial. La ecuación diferencial tiene una familia de soluciones, y la condición inicial determina el valor de <m:math><m:mi>C</m:mi><m:mo>.</m:mo></m:math> La familia de soluciones de la ecuación diferencial en el <link target-id="fs-id1170573712028"/> está dada por <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mi>C</m:mi><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math> Esta familia de soluciones se muestra en la <link target-id="CNX_Calc_Figure_08_01_002"/>, con la solución particular <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup></m:mrow></m:math> marcada.</para>
+<figure id="CNX_Calc_Figure_08_01_002">
+<media id="fs-id1170573209544" alt="Gráfico de una familia de soluciones de la ecuación diferencial y' + 2 y = 3 e ^ t, que son de la forma y = 2 e ^ (-2 t) + C e ^ t. Se muestran las versiones con C = 1, 0,5 y -0,2, entre otras no marcadas. Para todos los valores de C, la función aumenta rápidamente para t &lt; 0 a medida que t va hacia el infinito negativo. Para C > 0, la función cambia de dirección y aumenta en una curva suave a medida que t llega al infinito. Los valores más grandes de C tienen una curva más ajustada, más cerca del eje y y con un valor y más alto. Para C = 0, la función va a 0 cuando t va al infinito. Para C &lt; 0, la función sigue disminuyendo a medida que t llega al infinito.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_08_01_002.jpg"/>
+</media>
+<caption>Una familia de soluciones de la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math> La solución particular <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup></m:mrow></m:math> está marcada.</caption>
+</figure>
+<example id="fs-id1170571123767">
+<exercise id="fs-id1170571169678">
+<problem id="fs-id1170573623483">
+<title>Resolución de un problema de valor inicial</title>
+<para id="fs-id1170573449571">Resuelva el siguiente problema de valor inicial:</para>
+<equation id="fs-id1170571227292" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+</problem>
+<solution id="fs-id1170571069707">
+<para id="fs-id1170573412250">El primer paso para resolver este problema de valor inicial es hallar una familia general de soluciones. Para ello, calculamos una antiderivada de ambos lados de la ecuación diferencial</para>
+<equation id="fs-id1170573413466" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.1em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>,</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170571506197">es decir,</para>
+<equation id="fs-id1170571122530">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>+</m:mo><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170573277276">Podemos integrar ambos lados porque el término <emphasis effect="italics">y</emphasis> aparece solo. Observe que hay dos constantes de integración <m:math><m:mrow><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Resolviendo la <link target-id="fs-id1170571122530"/> para <m:math><m:mi>y</m:mi></m:math> da</para>
+<equation id="fs-id1170571131874" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170573425777">Debido a que <m:math><m:mrow><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> son ambas constantes, <m:math><m:mrow><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> también es una constante. Por lo tanto, podemos definir <m:math><m:mrow><m:mi>C</m:mi><m:mo>=</m:mo><m:msub><m:mi>C</m:mi><m:mn>2</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>C</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> lo que lleva a la ecuación</para>
+<equation id="fs-id1170571120799" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170571098957">A continuación, determinamos el valor de <m:math><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math> Para ello, sustituimos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math> en la <link target-id="fs-id1170571122530"/> y resolvemos para <m:math><m:mi>C</m:mi><m:mtext>:</m:mtext></m:math></para>
+<equation id="fs-id1170571417379" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr/><m:mtr><m:mtd columnalign="right"><m:mn>5</m:mn></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mn>0</m:mn></m:msup><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mn>0</m:mn><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mn>5</m:mn></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>3</m:mn><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>C</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>2</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170571115031">Ahora sustituimos el valor <m:math><m:mrow><m:mi>C</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> en la <link target-id="fs-id1170571122530"/>. La solución del problema de valor inicial es <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1170571098825">
+<title>Análisis</title>
+<para id="fs-id1170571247622">La diferencia entre una solución general y una solución particular es que una solución general implica una familia de funciones, definidas explícita o implícitamente, de la variable independiente. El valor o los valores iniciales determinan qué solución concreta de la familia de soluciones satisface las condiciones deseadas.</para>
+</commentary>
+</exercise>
+</example>
+<note id="fs-id1170571329487" class="checkpoint">
+<exercise id="fs-id1170571329490">
+<problem id="fs-id1170573362845">
+<para id="fs-id1170573362847">Resuelva el problema de valor inicial</para>
+<equation id="fs-id1170573570394" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn><m:mo>-</m:mo><m:mn>6</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>8</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+</problem>
+<solution id="fs-id1170571455482">
+<para id="fs-id1170571203542">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>6</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>+</m:mo><m:mn>14</m:mn></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1170571418500" type="hint">
+<title>Pista</title>
+<para id="fs-id1170573502068">Primero tome la antiderivada de ambos lados de la ecuación diferencial. Luego sustituya <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>8</m:mn></m:mrow></m:math> en la ecuación resultante y resuelva para <m:math><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1170573396215">En las aplicaciones de la física y la ingeniería, a menudo consideramos las fuerzas que actúan sobre un objeto y utilizamos esta información para comprender el movimiento resultante que puede producirse. Por ejemplo, si empezamos con un objeto en la superficie de la Tierra, la fuerza principal que actúa sobre ese objeto es la gravedad. Los físicos e ingenieros pueden utilizar esta información, junto con <term class="no-emphasis" id="term-00008">la segunda ley del movimiento de Newton</term> (en forma de ecuación <m:math><m:mrow><m:mi>F</m:mi><m:mo>=</m:mo><m:mi>m</m:mi><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>F</m:mi></m:math> representa la fuerza, <m:math><m:mi>m</m:mi></m:math> representa la masa y <m:math><m:mi>a</m:mi></m:math> representa la aceleración), para derivar una ecuación que se pueda resolver.</para>
+<figure id="CNX_Calc_Figure_08_01_003">
+<media id="fs-id1170571121687" alt="Una imagen de una pelota de béisbol con una flecha por debajo apuntando hacia abajo. La flecha está marcada como g = -9,8 m/seg ^ 2.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_08_01_003.jpg"/>
+</media>
+<caption>Para una pelota de béisbol que cae en el aire, la única fuerza que actúa sobre ella es la gravedad (sin tener en cuenta la resistencia del aire).</caption>
+</figure>
+<para id="fs-id1170573536932">En la <link target-id="CNX_Calc_Figure_08_01_003"/> asumimos que la única fuerza que actúa sobre una pelota de béisbol es la fuerza de la gravedad. Esta suposición ignora la resistencia del aire. (La fuerza debida a la resistencia del aire se considera en una discusión posterior). La aceleración debida a la gravedad en la superficie de la Tierra, <m:math><m:mrow><m:mi>g</m:mi><m:mo>,</m:mo></m:mrow></m:math> es, aproximadamente, <m:math><m:mrow><m:mn>9,8</m:mn><m:msup><m:mrow><m:mspace width="0.2em"/><m:mtext>m/s</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math> Introducimos un marco de referencia, donde la superficie de la Tierra está a una altura de 0 metros. Supongamos que <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> representa la velocidad del objeto en metros por segundo. Si <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> la pelota está subiendo, y si <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> la pelota está cayendo (<link target-id="CNX_Calc_Figure_08_01_004"/>).</para>
+<figure id="CNX_Calc_Figure_08_01_004">
+<media id="fs-id1170573603065" alt="Una imagen de una pelota de béisbol con una flecha por encima apuntando hacia arriba y una flecha por debajo apuntando hacia abajo. La flecha que apunta hacia arriba está marcada como v(t) > 0, y la flecha que apunta hacia abajo está marcada como v(t) &lt; 0.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_08_01_004.jpg"/>
+</media>
+<caption>Posibles velocidades de la pelota de béisbol que sube/baja.</caption>
+</figure>
+<para id="fs-id1170571509335">Nuestro objetivo es resolver la velocidad <m:math><m:mrow><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en cualquier tiempo <m:math><m:mrow><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math> Para ello, planteamos un problema de valor inicial. Supongamos que la masa de la pelota es <m:math><m:mrow><m:mi>m</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>m</m:mi></m:math> se mide en kilogramos. Utilizamos la segunda ley de Newton, que establece que la fuerza que actúa sobre un objeto es igual a su masa por su aceleración <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>F</m:mi><m:mo>=</m:mo><m:mi>m</m:mi><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> La aceleración es la derivada de la velocidad, por lo que <m:math><m:mrow><m:mi>a</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>v</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, la fuerza que actúa sobre la pelota de béisbol está dada por <m:math><m:mrow><m:mi>F</m:mi><m:mo>=</m:mo><m:mi>m</m:mi><m:mspace width="0.2em"/><m:msup><m:mi>v</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Sin embargo, esta fuerza debe ser igual a la fuerza de gravedad que actúa sobre el objeto, que (de nuevo utilizando la segunda ley de Newton) está dada por <m:math><m:mrow><m:msub><m:mi>F</m:mi><m:mi>g</m:mi></m:msub><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>m</m:mi><m:mi>g</m:mi><m:mo>,</m:mo></m:mrow></m:math> ya que esta fuerza actúa en sentido descendente. Por lo tanto, obtenemos la ecuación <m:math><m:mrow><m:mi>F</m:mi><m:mo>=</m:mo><m:msub><m:mi>F</m:mi><m:mi>g</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> que se convierte en <m:math><m:mrow><m:mi>m</m:mi><m:mspace width="0.2em"/><m:msup><m:mi>v</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>m</m:mi><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math> Dividiendo ambos lados de la ecuación entre <m:math><m:mi>m</m:mi></m:math> da la ecuación</para>
+<equation id="fs-id1170573414975" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mi>v</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>g</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170571118060">Observe que esta ecuación diferencial sigue siendo la misma independientemente de la masa del objeto.</para>
+<para id="fs-id1170571118063">Ahora necesitamos un valor inicial. Como estamos resolviendo la velocidad, tiene sentido en el contexto del problema asumir que conocemos la <term id="term-00009">velocidad inicial</term>, o la velocidad en el momento <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Esto se denota como <m:math><m:mrow><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msub><m:mi>v</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+<example id="fs-id1170571084135">
+<exercise id="fs-id1170571084137">
+<problem id="fs-id1170571263710">
+<title>Velocidad de una pelota de béisbol en movimiento</title>
+<para id="fs-id1170571273705">Una pelota de béisbol se lanza hacia arriba desde una altura de <m:math><m:mn>3</m:mn></m:math> metros sobre la superficie de la Tierra con una velocidad inicial de <m:math><m:mrow><m:mn>10</m:mn><m:mspace width="0.2em"/><m:mtext>m/s</m:mtext><m:mo>,</m:mo></m:mrow></m:math> y la única fuerza que actúa sobre ella es la gravedad. La pelota tiene una masa de <m:math><m:mrow><m:mn>0,15</m:mn><m:mspace width="0.2em"/><m:mtext>kg</m:mtext></m:mrow></m:math> en la superficie de la Tierra.</para>
+<list id="fs-id1170571216089" list-type="enumerated" number-style="lower-alpha">
+<item>Calcule la velocidad <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de la pelota de béisbol en el momento <m:math><m:mrow><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>¿Cuál es su velocidad después de <m:math><m:mn>2</m:mn></m:math> segundos?</item>
+</list>
+</problem>
+<solution id="fs-id1170571270205">
+<list id="fs-id1170571270207" list-type="enumerated" number-style="lower-alpha">
+<item>A partir de la discusión anterior, la ecuación diferencial que se aplica en esta situación es<newline/>
+<equation id="fs-id1170573401342" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mi>v</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>g</m:mi><m:mo>,</m:mo></m:mrow></m:math></equation><newline/> donde <m:math><m:mrow><m:mi>g</m:mi><m:mo>=</m:mo><m:mn>9,8</m:mn><m:msup><m:mrow><m:mspace width="0.2em"/><m:mtext>m/s</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math> La condición inicial es <m:math><m:mrow><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msub><m:mi>v</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>10</m:mn><m:mspace width="0.2em"/><m:mtext>m/s</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math> Por lo tanto, el problema de valor inicial es <m:math><m:mrow><m:msup><m:mi>v</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>-9,8</m:mn><m:msup><m:mrow><m:mspace width="0.2em"/><m:mtext>m/s</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mo>,</m:mo><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>10</m:mn><m:mspace width="0.2em"/><m:mtext>m/s</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math><newline/> El primer paso para resolver este problema de valor inicial es tomar la antiderivada de ambos lados de la ecuación diferencial. Esto da<newline/>
+<equation id="fs-id1170573289010" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>v</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.1em"/><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:mn>-9,8</m:mn><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>-9,8</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation><newline/> El siguiente paso es resolver para <m:math><m:mrow><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math> Para ello, sustituya <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>10</m:mn><m:mtext>:</m:mtext></m:mrow></m:math><newline/>
+<equation id="fs-id1170573623436" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>-9,8</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>-9,8</m:mn><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mn>10</m:mn></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>C</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation><newline/> Por lo tanto <m:math><m:mrow><m:mi>C</m:mi><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math> y la función de la velocidad está dada por <m:math><m:mrow><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>-9,8</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>10</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Para calcular la velocidad después de <m:math><m:mn>2</m:mn></m:math> segundos, sustituya <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> en <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math><newline/>
+<equation id="fs-id1170571152980" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>-9,8</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>10</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>-9,8</m:mn><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>10</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>-9,6.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation><newline/> Las unidades de velocidad son metros por segundo. Como la respuesta es negativa, el objeto está cayendo a una velocidad de <m:math><m:mrow><m:mn>9,6</m:mn><m:mspace width="0.2em"/><m:mtext>m/s</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></item>
+</list>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170573419495" class="checkpoint">
+<exercise id="fs-id1170573419498">
+<problem id="fs-id1170573352098">
+<para id="fs-id1170573352100">Supongamos que una roca cae en reposo desde una altura de <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> metros y la única fuerza que actúa sobre ella es la gravedad. Halle una ecuación para la velocidad <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en función del tiempo, medida en metros por segundo.</para>
+</problem>
+<solution id="fs-id1170573493548">
+<para id="fs-id1170573400886">Los términos <m:math><m:mrow><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>-9,8</m:mn><m:mi>t</m:mi></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1170573318642" type="hint">
+<title>Pista</title>
+<para id="fs-id1170571098717">¿Cuál es la velocidad inicial de la roca? Utilice esto con la ecuación diferencial en <link target-id="fs-id1170571084135"/> para formar un problema de valor inicial, luego resuelva para <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1170571302110">Una pregunta natural que se hace después de resolver este tipo de problemas es a qué altura estará el objeto sobre la superficie de la Tierra en un momento determinado. Supongamos que <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> denota la altura sobre la superficie terrestre del objeto, medida en metros. Como la velocidad es la derivada de la posición (en este caso la altura), esta suposición da la ecuación <m:math><m:mrow><m:msup><m:mi>s</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Es necesario un valor inicial; en este caso funciona bien la altura inicial del objeto. Supongamos que la altura inicial sea dada por la ecuación <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>s</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> En conjunto, estas suposiciones dan el problema de valor inicial</para>
+<equation id="fs-id1170571026947" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mi>s</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>s</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170573367468">Si se conoce la función de velocidad, entonces es posible resolver también la función de posición.</para>
+<example id="fs-id1170571046594">
+<exercise id="fs-id1170571046596">
+<problem id="fs-id1170571046598">
+<title>Altura de una pelota de béisbol en movimiento</title>
+<para id="fs-id1170573207847">Una pelota de béisbol se lanza hacia arriba desde una altura de <m:math><m:mn>3</m:mn></m:math> metros sobre la superficie de la Tierra con una velocidad inicial de <m:math><m:mrow><m:mn>10</m:mn><m:mspace width="0.2em"/><m:mtext>m/s</m:mtext><m:mo>,</m:mo></m:mrow></m:math> y la única fuerza que actúa sobre ella es la gravedad. La pelota tiene una masa de <m:math><m:mrow><m:mn>0,15</m:mn></m:mrow></m:math> kilos en la superficie de la Tierra.</para>
+<list id="fs-id1170573719641" list-type="enumerated" number-style="lower-alpha">
+<item>Halle la posición <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de la pelota de béisbol en el momento <m:math><m:mrow><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>¿Cuál es su altura después de <m:math><m:mn>2</m:mn></m:math> segundos?</item>
+</list>
+</problem>
+<solution id="fs-id1170571232747">
+<list id="fs-id1170571232749" list-type="enumerated" number-style="lower-alpha">
+<item>Ya sabemos que la función de velocidad para este problema es <m:math><m:mrow><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>-9,8</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>10</m:mn><m:mo>.</m:mo></m:mrow></m:math> La altura inicial de la pelota de béisbol es <m:math><m:mn>3</m:mn></m:math> metros, así que <m:math><m:mrow><m:msub><m:mi>s</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, el problema de valor inicial para este ejemplo es<newline/>. Para resolver el problema de valor inicial, primero calculamos las antiderivadas<newline/>
+<equation id="fs-id1170571207187" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>s</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.1em"/><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:mn>-9,8</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>10</m:mn><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>-4,9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>10</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation><newline/> A continuación sustituimos <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y resolvemos para <m:math><m:mrow><m:mi>C</m:mi><m:mtext>:</m:mtext></m:mrow></m:math><newline/>
+<equation id="fs-id1170573384332" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>-4,9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>10</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>-4,9</m:mn><m:msup><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>10</m:mn><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mn>3</m:mn></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>C</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation><newline/> Por lo tanto, la función de posición es <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-4,9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>10</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>La altura de la pelota de béisbol después de <m:math><m:mrow><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>s</m:mtext></m:mrow></m:math> está dado por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mtext>:</m:mtext></m:mrow></m:math><newline/>
+<equation id="fs-id1170571064335" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>-4,9</m:mn><m:msup><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>10</m:mn><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>3</m:mn></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>-4,9</m:mn><m:mrow><m:mo>(</m:mo><m:mn>4</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>23</m:mn></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>3,4.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation><newline/> Por lo tanto, la pelota de béisbol está a <m:math><m:mrow><m:mn>3,4</m:mn></m:mrow></m:math> metros sobre la superficie de la Tierra después de <m:math><m:mn>2</m:mn></m:math> segundos. Cabe destacar que la masa de la pelota se anula completamente en el proceso de resolución del problema.</item>
+</list>
+</solution>
+</exercise>
+</example>
+</section>
+<section id="fs-id1170571025566" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1170571508562" list-type="bulleted" bullet-style="bullet">
+<item>Una ecuación diferencial es una ecuación que implica una función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y una o varias de sus derivadas. Una solución es una función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> que satisface la ecuación diferencial cuando <m:math><m:mi>f</m:mi></m:math> y sus derivadas se sustituyen en la ecuación.</item>
+<item>El orden de una ecuación diferencial es el mayor orden de cualquier derivada de la función desconocida que aparece en la ecuación.</item>
+<item>Una ecuación diferencial acoplada a un valor inicial se denomina problema de valor inicial. Para resolver un problema de valor inicial, primero hay que hallar la solución general de la ecuación diferencial y luego determinar el valor de la constante. Los problemas de valor inicial tienen muchas aplicaciones en la ciencia y la ingeniería.</item>
+</list>
+</section>
+<section id="fs-id1170573740738" class="section-exercises">
+<para id="fs-id1170573512391">Determine el orden de las siguientes ecuaciones diferenciales.</para>
+<exercise id="fs-id1170573512394">
+<problem id="fs-id1170573512396">
+<para id="fs-id1170571143400">Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571068083">
+<para id="fs-id1170571429898">Los términos <m:math><m:mrow><m:mn>1</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571429903">
+<problem id="fs-id1170573733808">
+<para id="fs-id1170573733810">Los términos <m:math><m:mrow><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>y</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571429907">
+<problem id="fs-id1170571429909">
+<para id="fs-id1170571429911">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mtext>‴</m:mtext><m:mo>+</m:mo><m:mi>y</m:mi><m:mtext>″</m:mtext><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571369094">
+<para id="fs-id1170571369096">Los términos <m:math><m:mn>3</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170573604151">
+<problem id="fs-id1170573604153">
+<para id="fs-id1170573604155">Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mi>y</m:mi><m:mtext>″</m:mtext><m:mo>+</m:mo><m:mn>3</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571169530">
+<problem id="fs-id1170571169532">
+<para id="fs-id1170571169534">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mi>t</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170573709071">
+<para id="fs-id1170573709073">Los términos <m:math><m:mn>1</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571448841">
+<problem id="fs-id1170571448844">
+<para id="fs-id1170571235332">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:msup><m:mi>d</m:mi><m:mn>2</m:mn></m:msup><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571027308">
+<problem id="fs-id1170571027310">
+<para id="fs-id1170571027312">Los términos <m:math><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>8</m:mn><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mi>t</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571384875">
+<para id="fs-id1170571384877">Los términos <m:math><m:mn>1</m:mn></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1170573591935">Verifique que las siguientes funciones son soluciones de la ecuación diferencial dada.</para>
+<exercise id="fs-id1170573591938">
+<problem id="fs-id1170573591941">
+<para id="fs-id1170573591943">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> resuelve <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573608042">
+<problem id="fs-id1170573608044">
+<para id="fs-id1170571253772">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:math> resuelve <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>y</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571095386">
+<problem id="fs-id1170571095388">
+<para id="fs-id1170571095390">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>-</m:mo><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> resuelve <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>y</m:mi><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571431595">
+<problem id="fs-id1170571431597">
+<para id="fs-id1170571431599">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math> resuelve <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573726216">
+<problem id="fs-id1170571190775">
+<para id="fs-id1170571190777">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:msup></m:mrow></m:math> resuelve <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mi>y</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573514703">
+<problem id="fs-id1170573514705">
+<para id="fs-id1170573514707">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>+</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> resuelve <m:math><m:mrow><m:mi>x</m:mi><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571298240">
+<problem id="fs-id1170571298242">
+<para id="fs-id1170571511535">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> resuelve <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571080766">
+<problem id="fs-id1170571080769">
+<para id="fs-id1170571080771">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>–</m:mo><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:math> resuelve <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573520552">
+<problem id="fs-id1170573520554">
+<para id="fs-id1170573520556">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>+</m:mo><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>-</m:mo><m:mfrac><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> resuelve <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571235292">
+<problem id="fs-id1170571243504">
+<para id="fs-id1170571243506">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math> resuelve <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mi>y</m:mi><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1170570999455">Verifique las siguientes soluciones generales y halle la solución particular.</para>
+<exercise id="fs-id1170570999458">
+<problem id="fs-id1170570999460">
+<para id="fs-id1170570999462">Halle la solución particular de la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>4</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> que pasa por <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>−3</m:mn><m:mo>,</m:mo><m:mn>-30</m:mn><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> dado que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>4</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> es una solución general.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573756900">
+<problem id="fs-id1170573756902">
+<para id="fs-id1170573756904">Halle la solución particular de la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math> que pasa por <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4,75</m:mn><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> dado que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow><m:mn>4</m:mn></m:mfrac></m:mrow></m:math> es una solución general.</para>
+</problem>
+<solution id="fs-id1170570999486">
+<para id="fs-id1170570999488">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow><m:mn>4</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571048929">
+<problem id="fs-id1170571302391">
+<para id="fs-id1170571302393">Halle la solución particular de la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>y</m:mi></m:mrow></m:math> que pasa por <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>12</m:mn><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> dado que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:msup></m:mrow></m:math> es una solución general.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571346530">
+<problem id="fs-id1170571346532">
+<para id="fs-id1170571346535">Halle la solución particular de la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mi>y</m:mi></m:mrow></m:math> que pasa por <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> dado que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup></m:mrow></m:math> es una solución general.</para>
+</problem>
+<solution id="fs-id1170571169563">
+<para id="fs-id1170571169565">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170573544254">
+<problem id="fs-id1170573544256">
+<para id="fs-id1170573544258">Halle la solución particular de la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> que pasa por <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> dado que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mn>3</m:mn><m:mrow><m:mi>C</m:mi><m:mo>+</m:mo><m:mn>4</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math> es una solución general.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573604115">
+<problem id="fs-id1170573604117">
+<para id="fs-id1170573604119">Halle la solución particular de la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math> que pasa por <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mfrac><m:mn>2</m:mn><m:mi>e</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> dado que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mrow></m:msup></m:mrow></m:math> es una solución general.</para>
+</problem>
+<solution id="fs-id1170571227023">
+<para id="fs-id1170571227025">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mrow></m:msup></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571227052">
+<problem id="fs-id1170571227054">
+<para id="fs-id1170571227056">Halle la solución particular de la ecuación diferencial <m:math><m:mrow><m:mn>8</m:mn><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>-2</m:mn><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> que pasa por <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>π</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> dado que <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>8</m:mn></m:mfrac><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>32</m:mn></m:mrow></m:mfrac><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> es una solución general.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571041493">
+<problem id="fs-id1170571041495">
+<para id="fs-id1170571041498">Halle la solución particular de la ecuación diferencial <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>u</m:mi></m:mrow></m:math> que pasa por <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> dado que <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>C</m:mi><m:mo>+</m:mo><m:mi>t</m:mi></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es una solución general.</para>
+</problem>
+<solution id="fs-id1170571158417">
+<para id="fs-id1170571158419">Los términos <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-1</m:mn><m:mo>+</m:mo><m:mi>t</m:mi></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571158455">
+<problem id="fs-id1170571158457">
+<para id="fs-id1170571158459">Halle la solución particular de la ecuación diferencial <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:msup></m:mrow></m:math> que pasa por <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> dado que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mtext>ln</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>C</m:mi><m:mo>-</m:mo><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mo stretchy="false">)</m:mo></m:mrow></m:math> es una solución general.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571105977">
+<problem id="fs-id1170571105980">
+<para id="fs-id1170571105982">Halle la solución particular de la ecuación diferencial <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>y</m:mi></m:mrow></m:math> que pasa por <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>-2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> dado que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:mfrac><m:mrow><m:msqrt><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msqrt></m:mrow><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:msqrt></m:mrow></m:mfrac><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:math> es una solución general.</para>
+</problem>
+<solution id="fs-id1170571252584">
+<para id="fs-id1170571252586">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mrow><m:msqrt><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msqrt></m:mrow><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:msqrt></m:mrow></m:mfrac><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1170571474493">Para los siguientes problemas, halle la solución general de la ecuación diferencial.</para>
+<exercise id="fs-id1170571474496">
+<problem id="fs-id1170571474498">
+<para id="fs-id1170571474500">Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571080687">
+<problem id="fs-id1170571080689">
+<para id="fs-id1170571080691">Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571346829">
+<para id="fs-id1170571346831">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>-</m:mo><m:mtext>ln</m:mtext><m:mo stretchy="false">(</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> grandes.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571346878">
+<problem id="fs-id1170571346880">
+<para id="fs-id1170571346882">Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573622381">
+<problem id="fs-id1170573622383">
+<para id="fs-id1170570993072">Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:msup><m:mn>4</m:mn><m:mi>x</m:mi></m:msup></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170570993091">
+<para id="fs-id1170570993093">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:mo>+</m:mo><m:mfrac><m:mrow><m:msup><m:mn>4</m:mn><m:mi>x</m:mi></m:msup></m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:mfrac></m:mrow></m:math> grandes.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170570993127">
+<problem id="fs-id1170570993129">
+<para id="fs-id1170570993131">Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571167972">
+<problem id="fs-id1170571167974">
+<para id="fs-id1170571167976">Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:msqrt><m:mrow><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>16</m:mn></m:mrow></m:msqrt></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571168005">
+<para id="fs-id1170571168007">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>2</m:mn><m:mn>3</m:mn></m:mfrac><m:msqrt><m:mrow><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>16</m:mn></m:mrow></m:msqrt><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>16</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571334902">
+<problem id="fs-id1170571334904">
+<para id="fs-id1170571334906">Los términos <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mtext>coth</m:mtext><m:mspace width="0.1em"/><m:mi>t</m:mi><m:mo>+</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>3</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571096316">
+<problem id="fs-id1170571096318">
+<para id="fs-id1170571096320">Los términos <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mi>t</m:mi><m:msqrt><m:mrow><m:mn>4</m:mn><m:mo>+</m:mo><m:mi>t</m:mi></m:mrow></m:msqrt></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571096343">
+<para id="fs-id1170571096345">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>2</m:mn><m:mrow><m:mn>15</m:mn></m:mrow></m:mfrac><m:msqrt><m:mrow><m:mn>4</m:mn><m:mo>+</m:mo><m:mi>t</m:mi></m:mrow></m:msqrt><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>32</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170573737687">
+<problem id="fs-id1170573737689">
+<para id="fs-id1170573737691">Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573529236">
+<problem id="fs-id1170573529239">
+<para id="fs-id1170573529241">Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mfrac><m:mi>y</m:mi><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170573529259">
+<para id="fs-id1170573529261">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:mi>x</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1170573529276">Resuelva los siguientes problemas de valor inicial con la condición inicial <m:math><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Dibuje ambas soluciones en el mismo gráfico.</para>
+<exercise id="fs-id1170571231964">
+<problem id="fs-id1170571231966">
+<para id="fs-id1170571231969">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>t</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573727022">
+<problem id="fs-id1170573727025">
+<para id="fs-id1170573727027">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>t</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170573727050">
+<para id="fs-id1170573727052">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mrow><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mrow><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571299351">
+<problem id="fs-id1170571299354">
+<para id="fs-id1170571299356">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>y</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571332689">
+<problem id="fs-id1170571332691">
+<para id="fs-id1170571332693">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>y</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571332717">
+<para id="fs-id1170571332719">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:mi>t</m:mi></m:mrow></m:msup><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170573762581">
+<problem id="fs-id1170573762583">
+<para id="fs-id1170573762585">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1170573628722">Resuelva los siguientes problemas de valor inicial con la condición inicial <m:math><m:mrow><m:msub><m:mi>y</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>10</m:mn><m:mo>.</m:mo></m:mrow></m:math> ¿En qué tiempo <m:math><m:mi>y</m:mi></m:math> aumenta a <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> o baja a <m:math><m:mrow><m:mn>1</m:mn><m:mo>con dígito d?</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1170573628757">
+<problem id="fs-id1170573628759">
+<para id="fs-id1170573628761">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>4</m:mn><m:mi>t</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571346195">
+<para id="fs-id1170571346197">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:msqrt><m:mn>5</m:mn></m:msqrt></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571346238">
+<problem id="fs-id1170571346240">
+<para id="fs-id1170571346242">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>4</m:mn><m:mi>y</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571332630">
+<problem id="fs-id1170571332632">
+<para id="fs-id1170573583222">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>-2</m:mn><m:mi>y</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170573583246">
+<para id="fs-id1170573583248">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>10</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>10</m:mn></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571210835">
+<problem id="fs-id1170571210838">
+<para id="fs-id1170571210840">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>4</m:mn><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573519515">
+<problem id="fs-id1170573519517">
+<para id="fs-id1170573519519">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-4</m:mn><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170573519547">
+<para id="fs-id1170573519549">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>41</m:mn><m:mo>-</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-4</m:mn><m:mi>t</m:mi></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> nunca</para>
+</solution>
+</exercise>
+<para id="fs-id1170571035075">Recuerde que una familia de soluciones incluye soluciones de una ecuación diferencial que difieren en una constante. Para los siguientes problemas, utilice su calculadora para graficar una familia de soluciones de la ecuación diferencial dada. Utilice las condiciones iniciales de <m:math><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>-10</m:mn></m:mrow></m:math> a <m:math><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>10</m:mn></m:mrow></m:math> aumentando en <m:math><m:mrow><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> ¿Hay algún punto crítico en el que el comportamiento de la solución empiece a cambiar?</para>
+<exercise id="fs-id1170573491844">
+<problem id="fs-id1170573491846">
+<para id="fs-id1170573491848"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573491900">
+<problem id="fs-id1170571248378">
+<para id="fs-id1170571248380"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>x</m:mi><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571248401">
+<para id="fs-id1170571248403">La solución cambia de creciente a decreciente en <m:math><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571248426">
+<problem id="fs-id1170571248428">
+<para id="fs-id1170571248430"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571143237">
+<problem id="fs-id1170571143239">
+<para id="fs-id1170571143241"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi></m:mrow></m:math> (<emphasis effect="italics">Pista:</emphasis> <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>C</m:mi><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>–</m:mo><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:math> es la solución general)</para>
+</problem>
+<solution id="fs-id1170571143289">
+<para id="fs-id1170571143291">La solución cambia de creciente a decreciente en <m:math><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571260225">
+<problem id="fs-id1170571260227">
+<para id="fs-id1170571260229"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571260273">
+<problem id="fs-id1170571260275">
+<para id="fs-id1170571260277">Halle la solución general para describir la velocidad de una pelota de masa <m:math><m:mrow><m:mn>1</m:mn><m:mspace width="0.2em"/><m:mtext>lb</m:mtext></m:mrow></m:math> que se lanza hacia arriba a una velocidad <m:math><m:mi>a</m:mi></m:math> ft/s.</para>
+</problem>
+<solution id="fs-id1170573514627">
+<para id="fs-id1170573514630">Los términos <m:math><m:mrow><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>-32</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>a</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170573514657">
+<problem id="fs-id1170573514659">
+<para id="fs-id1170573514662">En el problema anterior, si la velocidad inicial de la pelota lanzada al aire es <m:math><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>25</m:mn></m:mrow></m:math> ft/s, escriba la solución particular de la velocidad de la pelota. Resuelva para calcular el momento en que la pelota toca el suelo.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571097477">
+<problem id="fs-id1170571097479">
+<para id="fs-id1170571097481">Se lanzan dos objetos con masas diferentes <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> hacia arriba en el aire con la misma velocidad inicial <m:math><m:mi>a</m:mi></m:math> ft/s. ¿Cuál es la diferencia en su velocidad después de <m:math><m:mn>1</m:mn></m:math> segundo?</para>
+</problem>
+<solution id="fs-id1170571097511">
+<para id="fs-id1170571097513">Los términos <m:math><m:mn>0</m:mn></m:math> ft/s.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571097522">
+<problem id="fs-id1170571097524">
+<para id="fs-id1170571097526"><emphasis effect="bold">[T]</emphasis> Se lanza una pelota de masa <m:math><m:mn>1</m:mn></m:math> kilogramo hacia arriba con una velocidad de <m:math><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>25</m:mn></m:mrow></m:math> m/s en Marte, donde la fuerza de gravedad es <m:math><m:mrow><m:mi>g</m:mi><m:mo>=</m:mo><m:mn>-3,711</m:mn></m:mrow></m:math> m/s<sup>2</sup>. Use your calculator to approximate how much longer the ball is in the air on Mars than on Earth, where <m:math><m:mi>g</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>9</m:mn><m:mo>.</m:mo><m:mn>8</m:mn><m:mi>m</m:mi><m:mo>/</m:mo><m:msup><m:mi>s</m:mi><m:mn>2</m:mn></m:msup></m:math>.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571041164">
+<problem id="fs-id1170571041166">
+<para id="fs-id1170571041169"><emphasis effect="bold">[T]</emphasis> For the previous problem, use your calculator to approximate how much higher the ball went on Mars, where <m:math><m:mi>g</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mn>9</m:mn><m:mo>.</m:mo><m:mn>8</m:mn><m:mi>m</m:mi><m:mo>/</m:mo><m:msup><m:mi>s</m:mi><m:mn>2</m:mn></m:msup></m:math>.</para>
+</problem>
+<solution id="fs-id1170571041176">
+<para id="fs-id1170571041178">Los términos <m:math><m:mrow><m:mn>4,86</m:mn></m:mrow></m:math> metros</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571041188">
+<problem id="fs-id1170571041190">
+<para id="fs-id1170571041192"><emphasis effect="bold">[T]</emphasis> Un automóvil en la autopista acelera según <m:math><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>15</m:mn><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>π</m:mi><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>t</m:mi></m:math> se mide en horas. Plantee y resuelva la ecuación diferencial para determinar la velocidad del automóvil si tiene una velocidad inicial de <m:math><m:mrow><m:mn>51</m:mn></m:mrow></m:math> mph. Después de <m:math><m:mrow><m:mn>40</m:mn></m:mrow></m:math> minutos de conducción, ¿cuál es la velocidad del conductor?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571335736">
+<problem id="fs-id1170571335738">
+<para id="fs-id1170571335740"><emphasis effect="bold">[T]</emphasis> Para el automóvil del problema anterior, halle la expresión de la distancia que ha recorrido el automóvil en el tiempo <m:math><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:math> suponiendo una distancia inicial de <m:math><m:mrow><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> ¿Cuánto tiempo tarda el automóvil en recorrer <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> millas? Redondee su respuesta a horas y minutos.</para>
+</problem>
+<solution id="fs-id1170571335769">
+<para id="fs-id1170571335771">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>50</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mfrac><m:mrow><m:mn>15</m:mn></m:mrow><m:mrow><m:msup><m:mi>π</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>π</m:mi><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mfrac><m:mn>3</m:mn><m:mrow><m:msup><m:mi>π</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow></m:math> horas <m:math><m:mn>1</m:mn></m:math> minuto</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571027388">
+<problem id="fs-id1170571027390">
+<para id="fs-id1170571027392"><emphasis effect="bold">[T]</emphasis> Para el problema anterior, calcule la distancia total recorrida en la primera hora.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571027411">
+<problem id="fs-id1170571027413">
+<para id="fs-id1170571027415">Sustituya <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>B</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mn>3</m:mn><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>-</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>8</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>3</m:mn><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:math> para hallar una solución particular.</para>
+</problem>
+<solution id="fs-id1170571244203">
+<para id="fs-id1170571244205">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>3</m:mn><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571244226">
+<problem id="fs-id1170571244228">
+<para id="fs-id1170571244231">Sustituya <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mi>b</m:mi><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> para hallar una solución particular.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170573715282">
+<problem id="fs-id1170573715284">
+<para id="fs-id1170573715286">Sustituya <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>c</m:mi><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> para hallar una solución particular.</para>
+</problem>
+<solution id="fs-id1170573718770">
+<para id="fs-id1170573718773">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170573718799">
+<problem id="fs-id1170573718801">
+<para id="fs-id1170573718804">Sustituya <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>t</m:mi></m:mrow></m:math> en <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>t</m:mi></m:mrow></m:math> para hallar una solución particular.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170571277917">
+<problem id="fs-id1170571277919">
+<para id="fs-id1170571277921">Resuelva <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>k</m:mi><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:math> con la condición inicial <m:math><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y resuelva <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> con la misma condición inicial. A medida que <m:math><m:mi>k</m:mi></m:math> se acerca a <m:math><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> ¿qué observa?</para>
+</problem>
+<solution id="fs-id1170571277987">
+<para id="fs-id1170571278790">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>k</m:mi></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mi>k</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y de <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+</section>
+ </content>
+<glossary>
+<definition id="fs-id1170571278839">
+<term>ecuación diferencial</term>
+<meaning id="fs-id1170571278844">ecuación que implica una función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y una o varias de sus derivados</meaning>
+</definition>
+<definition id="fs-id1170571146732">
+<term>solución general (o familia de soluciones)</term>
+<meaning id="fs-id1170571146738">conjunto de soluciones de una ecuación diferencial dada</meaning>
+</definition>
+<definition id="fs-id1170571146742">
+<term>valor(es) inicial(es)</term>
+<meaning id="fs-id1170571146747">valor o conjunto de valores que satisface una solución de una ecuación diferencial para un valor fijo de la variable independiente</meaning>
+</definition>
+<definition id="fs-id1170571146753">
+<term>velocidad inicial</term>
+<meaning id="fs-id1170571146758">velocidad en el momento <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></meaning>
+</definition>
+<definition id="fs-id1170571146771">
+<term>problema de valor inicial</term>
+<meaning id="fs-id1170571146776">ecuación diferencial junto con uno o varios valores iniciales</meaning>
+</definition>
+<definition id="fs-id1170571146780">
+<term>orden de una ecuación diferencial</term>
+<meaning id="fs-id1170571146786">el mayor orden de cualquier derivada de la función desconocida que aparezca en la ecuación</meaning>
+</definition>
+<definition id="fs-id1170571146790">
+<term>solución particular</term>
+<meaning id="fs-id1170571146795">miembro de una familia de soluciones de una ecuación diferencial que satisface una determinada condición inicial</meaning>
+</definition>
+<definition id="fs-id1170571146801">
+<term>solución de una ecuación diferencial</term>
+<meaning id="fs-id1170571146806">una función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> que satisface una ecuación diferencial dada</meaning>
+</definition>
+</glossary>
+</document>

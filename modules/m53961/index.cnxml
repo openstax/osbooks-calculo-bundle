@@ -1,0 +1,20 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" class="introduction">
+<title>Introducción</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53961</md:content-id>
+  <md:title>Introducción</md:title>
+  <md:abstract/>
+  <md:uuid>e4a91a96-4397-48af-a960-c72f16214c51</md:uuid>
+</metadata>
+
+<content>
+<figure id="CNX_Calc_Figure_15_00_001" class="splash">
+<media id="fs-id1167793250834" alt="Una foto de una cúpula ovoide de vidrio que se refleja en el agua para hacer algo parecido a la forma de un balón de fútbol americano.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_15_00_001.jpg"/>
+</media>
+<caption>La Ciudad de las Artes y las Ciencias en Valencia (España) cuenta con una estructura única a lo largo de un eje de apenas dos kilómetros que antiguamente era el cauce del río Turia. El Hemisfèric cuenta con una sala de cine IMAX con tres sistemas de proyecciones digitales modernas sobre una pantalla cóncava de 900 metros cuadrados. Un techo ovalado de más de 100 metros de largo se ha hecho para que parezca un enorme ojo humano que cobra vida y se abre al mundo como el "Ojo de la Sabiduría" (crédito: modificación de la obra de Javier Yaya Tur, Wikimedia Commons)</caption>
+</figure>
+<para id="fs-id1167794325378">En este capítulo ampliamos el concepto de integral definida de una sola variable a las integrales dobles y triples de funciones de dos y tres variables, respectivamente. Examinamos aplicaciones que implican la integración para calcular volúmenes, masas y centroides de regiones más generales. También veremos cómo el uso de otros sistemas de coordenadas (como las coordenadas polares, cilíndricas y esféricas) simplifica el cálculo de integrales múltiples sobre algunos tipos de regiones y funciones. Como ejemplo, utilizaremos las coordenadas polares para encontrar el volumen de estructuras como el Hemisfèric. (Vea <link document="m53967" target-id="fs-id1167793926329"/>.)</para>
+<para id="fs-id1167793240561">En el capítulo anterior, hablado del cálculo diferencial con múltiples variables independientes. Ahora examinamos el cálculo integral en múltiples dimensiones. Al igual que una derivada parcial nos permite diferenciar una función con respecto a una variable manteniendo las otras variables constantes, veremos que una integral iterada nos permite integrar una función con respecto a una variable manteniendo las otras variables constantes.</para>
+ </content>
+</document>

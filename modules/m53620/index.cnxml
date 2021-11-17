@@ -1,0 +1,656 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Método de Newton</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53620</md:content-id>
+  <md:title>Método de Newton</md:title>
+  <md:abstract><list id="list-00001">
+<item>Describir los pasos del método de Newton.</item>
+<item>Explicar qué significa un proceso iterativo.</item>
+<item>Reconocer cuando el método de Newton no funciona.</item>
+<item>Aplicar procesos iterativos en diversas situaciones.</item>
+</list></md:abstract>
+  <md:uuid>c0e46c4d-3d5c-400e-a3b9-af3cb3e066e2</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1165042319056">En muchas áreas de la matemática pura y aplicada, nos interesa encontrar soluciones a una ecuación de la forma <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Para la mayoría de las funciones, sin embargo, es difícil (si no imposible) calcular sus ceros explícitamente. En esta sección, echamos un vistazo a una técnica que proporciona una forma muy eficiente de aproximar los <term class="no-emphasis" id="term-00001">ceros de las funciones</term>. Esta técnica usa aproximaciones de rectas tangentes y está detrás del método utilizado a menudo por calculadoras y computadoras para encontrar ceros.</para>
+<section id="fs-id1165042613128">
+<title>Descripción del método de Newton</title>
+<para id="fs-id1165043187457">Consideremos la tarea de encontrar las soluciones de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mi>f</m:mi></m:math> es el polinomio de primer grado <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>a</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces la solución de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> está dado por la fórmula <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mi>b</m:mi><m:mi>a</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mi>f</m:mi></m:math> es el polinomio de segundo grado <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>a</m:mi><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>b</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> las soluciones de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> pueden hallarse utilizando la fórmula cuadrática. Sin embargo, en los polinomios de grado <m:math><m:mn>3</m:mn></m:math> o más, hallar raíces de <m:math><m:mi>f</m:mi></m:math> es más complicado. Aunque existen fórmulas para los polinomios de tercer y cuarto grado, son bastante complicadas. Además, si <m:math><m:mi>f</m:mi></m:math> es un polinomio de grado <m:math><m:mn>5</m:mn></m:math> o mayor, sabemos que tales fórmulas no existen. Por ejemplo, consideremos la función</para>
+<equation id="fs-id1165042548842" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>5</m:mn></m:msup><m:mo>+</m:mo><m:mn>8</m:mn><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>7</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043013826">No existe ninguna fórmula que nos permita encontrar las soluciones de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Existen dificultades similares para las funciones no polinómicas. Por ejemplo, consideremos la tarea de encontrar soluciones para <m:math><m:mrow><m:mtext>tan</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> No existe ninguna fórmula sencilla para las soluciones de esta ecuación. En estos casos, podemos utilizar el método de Newton para aproximar las raíces.</para>
+<para id="fs-id1165043104195"><term id="term-00002">El método de Newton</term> utiliza la siguiente idea para aproximar las soluciones de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Trazando un gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> podemos estimar una raíz de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Llamemos a esta estimación <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> A continuación, trazamos la línea tangente a <m:math><m:mi>f</m:mi></m:math> en <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> esta línea tangente se cruza con el eje <m:math><m:mi>x</m:mi></m:math> en algún momento <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Ahora supongamos que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> es la siguiente aproximación a la raíz real. Típicamente, <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> está más cerca que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> a una raíz real. A continuación trazamos la línea tangente a <m:math><m:mi>f</m:mi></m:math> en <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> esta línea tangente también se interseca con el eje <m:math><m:mi>x</m:mi></m:math>, produciendo otra aproximación, <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Continuamos así, derivando una lista de aproximaciones <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mtext>,…</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Normalmente, los números <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mtext>,…</m:mtext></m:mrow></m:math> se acercan rápidamente a una raíz real <m:math><m:mrow><m:mi>x</m:mi><m:mo>*</m:mo><m:mo>,</m:mo></m:mrow></m:math> como se muestra en la siguiente figura.</para>
+<figure id="CNX_Calc_Figure_04_09_001">
+<media id="fs-id1165043089642" alt="Esta función f(x) se dibuja con los puntos (x0, f(x0)), (x1, f(x1)) y (x2, f(x2)), marcados en la función. A partir de (x0, f(x0)), se traza una recta tangente que choca con el eje x en x1. A partir de (x0, f(x0)), se traza una recta tangente que choca con el eje x en x2. Si se trazara una recta tangente desde (x2, f(x2)), parece que se acercaría mucho a x*, que es la raíz real. Cada recta tangente trazada en este orden parece acercarse cada vez más a x*.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_09_001.jpg"/>
+</media>
+<caption>Las aproximaciones <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mtext>,…</m:mtext></m:mrow></m:math> se acercan a la raíz real <m:math><m:mrow><m:mi>x</m:mi><m:mo>*</m:mo><m:mo>.</m:mo></m:mrow></m:math> Las aproximaciones se obtienen mirando las rectas tangentes al gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+<para id="fs-id1165042981157">Veamos ahora cómo calcular las aproximaciones <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mtext>,…</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> es nuestra primera aproximación, la aproximación <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> se define dejando que <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es la intersección en <m:math><m:mi>x</m:mi></m:math> de la línea tangente a <m:math><m:mi>f</m:mi></m:math> en <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> La ecuación de esta recta tangente viene dada por</para>
+<equation id="fs-id1165042526516" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042370716">Por lo tanto, <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> deben satisfacer</para>
+<equation id="fs-id1165043276857" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042328480">Resolviendo esta ecuación para <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> concluimos que</para>
+<equation id="fs-id1165043021803" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>- −</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042881142">Del mismo modo, el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es la intersección en <m:math><m:mi>x</m:mi></m:math> de la línea tangente a <m:math><m:mi>f</m:mi></m:math> en <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> satisface la ecuación</para>
+<equation id="fs-id1165043082009" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>-</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043351477">En general, para <m:math><m:mrow><m:mi>n</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> satisface</para>
+<equation id="fs-id1165043389758">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>-</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042609059">A continuación veremos cómo hacer uso de esta técnica para aproximar la raíz del polinomio <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<example id="fs-id1165043423917">
+<exercise id="fs-id1165042708755">
+<problem id="fs-id1165043117138">
+<title>Encontrar la raíz de un polinomio</title>
+<para id="fs-id1165042985492">Utilice el método de Newton para aproximar una raíz de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Supongamos que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> y calculemos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043001449">
+<para id="fs-id1165042941724">En la <link target-id="CNX_Calc_Figure_04_09_002"/>, vemos que <m:math><m:mi>f</m:mi></m:math> tiene una raíz en el intervalo <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> parece una primera aproximación razonable. Para encontrar la siguiente aproximación, utilizamos la <link target-id="fs-id1165043389758"/>. Dado que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> la derivada es <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math> Utilizando la <link target-id="fs-id1165043389758"/> con <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> (y una calculadora que muestre <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math> dígitos), obtenemos</para>
+<equation id="fs-id1165042946219" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>- −</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>–</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>-</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>9</m:mn></m:mfrac><m:mo>≈</m:mo><m:mn>1,666666667</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043352896">Para encontrar la siguiente aproximación, <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> utilizamos la <link target-id="fs-id1165043389758"/> con <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> y el valor de <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> almacenado en la calculadora. Tenemos que</para>
+<equation id="fs-id1165042482873" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>≈</m:mo><m:mn>1,548611111</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043391703">Al continuar de esta manera, obtenemos los siguientes resultados:</para>
+<equation id="fs-id1165042705837" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,666666667</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,548611111</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1.532390162</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1.532088989</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,532088886</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>6</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,532088886</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1165043093355">Observamos que obtuvimos el mismo valor para <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>6</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, cualquier aplicación posterior del método de Newton dará muy probablemente el mismo valor para <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_04_09_002">
+<media id="fs-id1165043153016" alt="Se dibuja la función f(x) = x3 - 3x + 1. Tiene raíces entre -2 y -1, 0 y 1, y 1 y 2.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_09_002.jpg"/>
+</media>
+<caption>La función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> tiene una raíz en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165043433379" class="checkpoint">
+<exercise id="fs-id1165043373616">
+<problem id="fs-id1165042970573">
+<para id="fs-id1165043166841">Suponiendo que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> utilizaremos el método de Newton para aproximar la raíz de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> calculando <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042374545">
+<para id="fs-id1165043345490">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>≈</m:mo><m:mn>0.33333333</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>≈</m:mo><m:mn>0.347222222</m:mn></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165042329085" type="hint">
+<title>Pista</title>
+<para id="fs-id1165043113651">Utilice la <link target-id="fs-id1165043389758"/>.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1165043348404">El método de Newton también puede utilizarse para aproximar raíces cuadradas. Aquí mostramos cómo aproximar <m:math><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> Este método puede ser modificado para aproximar la raíz cuadrada de cualquier número positivo.</para>
+<example id="fs-id1165042936506">
+<exercise id="fs-id1165043182674">
+<problem id="fs-id1165043259888">
+<title>Encontrar una raíz cuadrada</title>
+<para id="fs-id1165042982086">Utilice el método de Newton para aproximar <m:math><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow></m:math> (<link target-id="CNX_Calc_Figure_04_09_003"/>). Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> supongamos que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> y calcule <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> (Observamos que como <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:math> tiene un cero en <m:math><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>,</m:mo></m:mrow></m:math> el valor inicial <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> es una opción razonable para aproximar <m:math><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>.</m:mo><m:mo stretchy="false">)</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043001571">
+<para id="fs-id1165043433206">Para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por la <link target-id="fs-id1165043389758"/>, sabemos que</para>
+<equation id="fs-id1165043010307" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>-</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>-</m:mo><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:msub><m:mrow/><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow><m:mrow><m:mn>2</m:mn><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>+</m:mo><m:mfrac><m:mn>2</m:mn><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1165042321204">Por lo tanto,</para>
+<equation id="fs-id1165042705668" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr/><m:mtr/><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mfrac><m:mn>2</m:mn><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>+</m:mo><m:mfrac><m:mn>2</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1,5</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:mfrac><m:mn>2</m:mn><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1,5</m:mn><m:mo>+</m:mo><m:mfrac><m:mn>2</m:mn><m:mrow><m:mn>1,5</m:mn></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mn>1,416666667.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1165043327685">Al continuar de esta manera, hallamos que</para>
+<equation id="fs-id1165043384502" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>1,5</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1.416666667</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1.414215686</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,414213562</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,414213562.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1165043190853">Como obtuvimos el mismo valor para <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> es poco probable que el valor <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> cambie en cualquier aplicación posterior del método de Newton. Concluimos que <m:math><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>≈</m:mo><m:mn>1,414213562</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_04_09_003">
+<media id="fs-id1165042331472" alt="Se dibuja la función y = x2 - 2. Desde x0 = 2 sale una línea discontinua y desde ahí se traza una línea tangente hacia abajo. Toca x1 = 1,5, que está cerca de x* = la raíz cuadrada de 2.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_09_003.jpg"/>
+</media>
+<caption>Podemos utilizar el método de Newton para hallar <m:math><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165043098719" class="checkpoint">
+<exercise id="fs-id1165043211934">
+<problem id="fs-id1165043349095">
+<para id="fs-id1165043081769">Utilice el método de Newton para aproximar <m:math><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow></m:math> suponiendo que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math> Halle <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042374688">
+<para id="fs-id1165043395413">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>1,75</m:mn></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165043425183" type="hint">
+<title>Pista</title>
+<para id="fs-id1165043197098">Para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> La <link target-id="fs-id1165043389758"/> se reduce a <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mn>3</m:mn><m:mrow><m:mn>2</m:mn><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1165042317491">Cuando se utiliza el método de Newton, cada aproximación después de la conjetura inicial se define en términos de la aproximación anterior utilizando la misma fórmula. En particular, al definir la función <m:math><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>- −</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> podemos reescribir la <link target-id="fs-id1165043389758"/> como <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Este tipo de proceso, en el que cada <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> se define en términos de <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow></m:math> repitiendo la misma función, es un ejemplo de <term id="term-00003">proceso iterativo</term>. En breve, examinaremos otros procesos iterativos. En primer lugar, veamos las razones por las que el método de Newton podría no encontrar una raíz.</para>
+</section>
+<section id="fs-id1165043286743">
+<title>Fallos del método de Newton</title>
+<para id="fs-id1165043086275">Normalmente, el método de Newton se utiliza para hallar las raíces con bastante rapidez. Sin embargo, las cosas pueden salir mal. Algunas de las razones por las que el método de Newton puede fallar son las siguientes:</para>
+<list id="fs-id1165042429145" list-type="enumerated" number-style="arabic">
+<item>En una de las aproximaciones <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> la derivada <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> es cero en <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> pero <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Como resultado, la recta tangente de <m:math><m:mi>f</m:mi></m:math> en <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> no se interseca con el eje <m:math><m:mi>x</m:mi></m:math>. Por lo tanto, no podemos continuar el proceso iterativo.</item>
+<item>Las aproximaciones <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mtext>,…</m:mtext></m:mrow></m:math> puede acercarse a una raíz diferente. Si se grafica la función <m:math><m:mi>f</m:mi></m:math> tiene más de una raíz, es posible que nuestras aproximaciones no se acerquen a la que estamos buscando, sino que se acerquen a una raíz diferente (ver la <link target-id="CNX_Calc_Figure_04_09_004"/>). Este hecho se produce con mayor frecuencia cuando no elegimos la aproximación <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> lo suficientemente cerca de la raíz deseada.</item>
+<item>Las aproximaciones pueden no acercarse completamente a una raíz. En el <link target-id="fs-id1165043091063"/>, proporcionamos un ejemplo de una función y una conjetura inicial <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> tal que las aproximaciones sucesivas nunca se acercan a una raíz porque las aproximaciones sucesivas siguen alternando entre dos valores.</item>
+</list>
+<figure id="CNX_Calc_Figure_04_09_004">
+<media id="fs-id1165042561497" alt="Se dibuja una función con dos raíces, marcadas como raíz buscada y raíz encontrada. Se elige un punto x0 tal que cuando se toma la tangente de x0, aunque esté más cerca de la raíz buscada, la tangente apunta a la raíz encontrada.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_09_004.jpg"/>
+</media>
+<caption>Si la suposición inicial <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> está demasiado lejos de la raíz buscada, puede llevarnos a aproximaciones que se acerquen a una raíz diferente.</caption>
+</figure>
+<example id="fs-id1165043091063">
+<exercise id="fs-id1165042562908">
+<problem id="fs-id1165042621684">
+<title>Cuando el método de Newton falla</title>
+<para id="fs-id1165042706105">Considere la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Supongamos que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Demuestre que la secuencia <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mtext>,…</m:mtext></m:mrow></m:math> no se acerca a una raíz de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043178203">
+<para id="fs-id1165043327561">Para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> la derivada es <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto,</para>
+<equation id="fs-id1165042551991" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>- −</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>- −</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mn>2</m:mn><m:mrow><m:mn>-2</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043092291">En el siguiente paso,</para>
+<equation id="fs-id1165043321518" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>-</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>1</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042926618">En consecuencia, los números <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mtext>,…</m:mtext></m:mrow></m:math> siguen rebotando de un lado a otro entre <m:math><m:mn>0</m:mn></m:math> y <m:math><m:mn>1</m:mn></m:math> y nunca se acercan a la raíz de <m:math><m:mi>f</m:mi></m:math> que está en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-2</m:mn><m:mo>,</m:mo><m:mn>-1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> (vea la <link target-id="CNX_Calc_Figure_04_09_005"/>). Afortunadamente, si elegimos una aproximación inicial <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> más cerca de la raíz real, podemos evitar esta situación.</para>
+<figure id="CNX_Calc_Figure_04_09_005">
+<media id="fs-id1165043281724" alt="Se dibuja la función f(x) = x3 - 2x + 2, que tiene una raíz entre -2 y -1. La tangente de x = 0 va a x = 1, y la tangente de x = 1 va a x = 0.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_09_005.jpg"/>
+</media>
+<caption>Las aproximaciones siguen alternando entre <m:math><m:mrow><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mn>1</m:mn></m:mrow></m:math> y nunca se acercan a la raíz de <m:math><m:mi>f</m:mi><m:mo>.</m:mo></m:math></caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165043428456" class="checkpoint">
+<exercise id="fs-id1165043428459">
+<problem id="fs-id1165042550425">
+<para id="fs-id1165042550427">Para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> supongamos que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>-1,5</m:mn></m:mrow></m:math> y hallar <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043174093">
+<para id="fs-id1165042608726">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>≈</m:mo><m:mo>- −</m:mo><m:mn>1.842105263</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>≈</m:mo><m:mo>- −</m:mo><m:mn>1.772826920</m:mn></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165043107517" type="hint">
+<title>Pista</title>
+<para id="fs-id1165043333775">Utilice la <link target-id="fs-id1165043389758"/>.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1165042331529">En el <link target-id="fs-id1165043091063"/>, vemos que el método de Newton no siempre funciona. Sin embargo, cuando lo hace, la secuencia de aproximaciones se acerca a la raíz muy rápidamente. En los textos de análisis numérico se discute la rapidez con la que la secuencia de aproximaciones se acerca a una raíz encontrada mediante el método de Newton.</para>
+</section>
+<section id="fs-id1165042535234">
+<title>Otros procesos iterativos</title>
+<para id="fs-id1165043396127">Como se ha mencionado anteriormente, el método de Newton es un tipo de proceso iterativo. Ahora veremos un ejemplo de un tipo diferente de proceso iterativo.</para>
+<para id="fs-id1165043396129">Considere una función <m:math><m:mi>F</m:mi></m:math> y un número inicial <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Defina los números siguientes <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> mediante la fórmula <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Este proceso es un proceso iterativo que crea una lista de números <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mtext>,…</m:mtext><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mtext>,…</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Esta lista de números puede acercarse a un número finito <m:math><m:mrow><m:mi>x</m:mi><m:mo>*</m:mo></m:mrow></m:math> a medida que <m:math><m:mi>n</m:mi></m:math> se hace más grande, o es posible que no lo haga. En el <link target-id="fs-id1165043210088"/>, vemos un ejemplo de función <m:math><m:mi>F</m:mi></m:math> y una conjetura inicial <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> de manera que la lista de números resultante se aproxime a un valor finito.</para>
+<example id="fs-id1165043210088">
+<exercise id="fs-id1165042710988">
+<problem id="fs-id1165042710990">
+<title>Encontrar un límite para un proceso iterativo</title>
+<para id="fs-id1165043331185">Supongamos que <m:math><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:math> y supongamos que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Para todo <m:math><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> supongamos que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Encuentre los valores <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Haga una conjetura sobre lo que ocurre con esta lista de números <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mtext>…</m:mtext><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mtext>,…</m:mtext></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>n</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Si la lista de números <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mtext>,…</m:mtext></m:mrow></m:math> se acerca a un número finito <m:math><m:mrow><m:mi>x</m:mi><m:mo>*</m:mo><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:mi>x</m:mi><m:mo>*</m:mo></m:mrow></m:math> satisface <m:math><m:mrow><m:mi>x</m:mi><m:mo>*</m:mo><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>*</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>*</m:mo></m:mrow></m:math> se llama punto fijo de <m:math><m:mrow><m:mi>F</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042373678">
+<para id="fs-id1165042373851">Si los valores de <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces</para>
+<equation id="fs-id1165042330836" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr/><m:mtr/><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>=</m:mo><m:mn>4</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mn>4</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>=</m:mo><m:mn>6</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mn>6</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>=</m:mo><m:mn>7</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mn>7</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>=</m:mo><m:mn>7,5</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>7,5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>=</m:mo><m:mn>7,75</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>6</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>7,75</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>=</m:mo><m:mn>7,875</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>7</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>7,875</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>=</m:mo><m:mn>7,9375</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>8</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>7,9375</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>=</m:mo><m:mn>7,96875</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>9</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>7,96875</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>=</m:mo><m:mn>7,984375.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1165042980764">A partir de esta lista, hacemos la conjetura de que los valores <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> se acercan a <m:math><m:mrow><m:mn>8</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1165043378115">La <link target-id="CNX_Calc_Figure_04_09_006"/> proporciona un argumento gráfico de que los valores se aproximan <m:math><m:mn>8</m:mn></m:math> cuando <m:math><m:mrow><m:mi>n</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> A partir del punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> trazamos una recta vertical hasta el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> El siguiente número de nuestra lista es <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Utilizamos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> para calcular <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, trazamos una recta horizontal que une <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> al punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en la línea <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> y luego dibujar una recta vertical que conecte <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> al punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> La salida <m:math><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se convierte en <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Si continuamos de esta manera, podríamos crear un número infinito de segmentos de recta. Estos segmentos de recta están atrapados entre las líneas <m:math><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mi>x</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:math> en tanto que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Los segmentos de recta se acercan al punto de intersección de estas dos líneas, lo que ocurre cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Si resolvemos la ecuación <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>x</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>,</m:mo></m:mrow></m:math> concluimos que se intersecan en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>8</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, nuestra evidencia gráfica concuerda con nuestra evidencia numérica de que la lista de números <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mtext>,…</m:mtext></m:mrow></m:math> se acerca a <m:math><m:mrow><m:mi>x</m:mi><m:mo>*</m:mo><m:mo>=</m:mo><m:mn>8</m:mn></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>n</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_04_09_006">
+<media id="fs-id1165042367912" alt="La función F(x) = (1/2)x + 4 se representa gráficamente junto con y = x. Desde x0, que parece estar en el origen, se traza una recta hacia la función F(x) en x1 = F(x0). A continuación se traza una recta hacia la derecha desde este punto hasta la recta y = x, en cuyo punto se traza una recta hasta x2 = F(x1). A continuación se traza una recta hacia la derecha desde este punto hasta la recta y = x, en cuyo punto se traza una recta hasta x3 = F(x2). Si este proceso continúa, se convergería en el punto de intersección de las dos rectas en x* = 8.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_09_006.jpg"/>
+</media>
+<caption>Este proceso iterativo se acerca al valor <m:math><m:mrow><m:mi>x</m:mi><m:mo>*</m:mo><m:mo>=</m:mo><m:mn>8</m:mn><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165042954795" class="checkpoint">
+<exercise id="fs-id1165042954798">
+<problem id="fs-id1165042954800">
+<para id="fs-id1165043351657">Considere la función <m:math><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>6</m:mn><m:mo>.</m:mo></m:mrow></m:math> Supongamos que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y supongamos que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> por <m:math><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Halle <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Haga una conjetura sobre lo que ocurre con la lista de números <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mtext>,…</m:mtext><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mtext>,…</m:mtext></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>n</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043063234">
+<para id="fs-id1165042705588">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>8</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>26</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>80</m:mn></m:mrow><m:mn>9</m:mn></m:mfrac><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>242</m:mn></m:mrow><m:mrow><m:mn>27</m:mn></m:mrow></m:mfrac><m:mo>;</m:mo><m:mi>x</m:mi><m:mo>*</m:mo><m:mo>=</m:mo><m:mn>9</m:mn></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165043423440" type="hint">
+<title>Pista</title>
+<para id="fs-id1165042647554">Considere el punto donde las rectas <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> como <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se intersecan.</para>
+</commentary>
+</exercise>
+</note>
+<note id="fs-id1165043004906" class="project">
+<title>Procesos iterativos y caos</title>
+<para id="fs-id1165042708293">Los procesos iterativos pueden tener un comportamiento muy interesante. En esta sección, hemos visto varios ejemplos de procesos iterativos que convergen en un punto fijo. También hemos visto en el <link target-id="fs-id1165043091063"/> que el proceso iterativo rebota entre dos valores. A este tipo de comportamiento lo llamamos <m:math><m:mn>2</m:mn></m:math>-<emphasis effect="italics">ciclo</emphasis>. Los procesos iterativos pueden converger en ciclos con diversas periodicidades, como <m:math><m:mrow><m:mn>2</m:mn><m:mo>- −</m:mo><m:mtext>ciclos</m:mtext><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mn>4</m:mn><m:mo>- −</m:mo><m:mtext>ciclos</m:mtext></m:mrow></m:math> (donde el proceso iterativo repite una secuencia de cuatro valores), 8 ciclos, etc.</para>
+<para id="fs-id1165043134163">Algunos procesos iterativos dan lugar a lo que los matemáticos llaman <emphasis effect="italics">caos</emphasis>. En este caso, el proceso iterativo salta de un valor a otro de forma aparentemente aleatoria y nunca converge ni se asienta en un ciclo. Aunque una exploración completa del <term class="no-emphasis" id="term-00004">caos</term> está más allá del alcance de este texto, en este proyecto examinamos una de las propiedades clave de un proceso iterativo caótico: la dependencia sensible de las condiciones iniciales. Esta propiedad se refiere al concepto de que pequeños cambios en las condiciones iniciales pueden generar un comportamiento drásticamente diferente en el proceso iterativo.</para>
+<para id="fs-id1165043110064">Probablemente el ejemplo más conocido de caos es el <term class="no-emphasis" id="term-00005">conjunto de Mandelbrot</term> (véase la <link target-id="CNX_Calc_Figure_04_09_007"/>), llamado así por Benoit Mandelbrot (1924-2010), que investigó sus propiedades y ayudó a popularizar el campo de la teoría del caos. El conjunto de Mandelbrot suele generarse por computadora y muestra detalles fascinantes al ampliarse, incluida la autorreplicación del conjunto. Varias versiones coloreadas del conjunto se han expuesto en museos y pueden encontrarse en Internet y en libros populares sobre el tema.</para>
+<figure id="CNX_Calc_Figure_04_09_007">
+<media id="fs-id1165042966021" alt="Un fractal muy complicado y de aspecto orgánico.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_09_007.jpg"/>
+</media>
+<caption>El conjunto de Mandelbrot es un ejemplo bien conocido de un conjunto de puntos generados por el comportamiento caótico iterativo de una función relativamente simple.</caption>
+</figure>
+<para id="fs-id1165042955768">En este proyecto utilizamos el mapa logístico</para>
+<equation id="fs-id1165042707686" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>r</m:mi><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>donde</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>∈</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>r</m:mi><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math></equation>
+<para id="fs-id1165043094009">como la función en nuestro proceso iterativo. El mapa logístico es una función aparentemente sencilla, pero dependiendo del valor de <m:math><m:mrow><m:mi>r</m:mi><m:mo>,</m:mo></m:mrow></m:math> el proceso iterativo resultante muestra un comportamiento muy interesante. Puede conducir a puntos fijos, ciclos e incluso al caos.</para>
+<para id="fs-id1165042713994">Para visualizar el comportamiento a largo plazo del proceso iterativo asociado al mapa logístico, utilizaremos una herramienta llamada <emphasis effect="italics">diagrama de telaraña</emphasis>. Tal como hicimos con el proceso iterativo que examinamos anteriormente en esta sección, primero trazaremos una recta vertical desde el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> al punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> A continuación, trazamos una recta horizontal desde ese punto hasta el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> luego dibujamos una recta vertical a <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y continuamos el proceso hasta que el comportamiento a largo plazo del sistema se haga evidente. La <link target-id="CNX_Calc_Figure_04_09_008"/> muestra el comportamiento a largo plazo del mapa logístico cuando <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>3,55</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0,2</m:mn><m:mo>.</m:mo></m:mrow></m:math> (Las primeras <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> iteraciones no están representadas). El comportamiento a largo plazo de este proceso iterativo es un <m:math><m:mrow><m:mn>8</m:mn></m:mrow></m:math>-ciclo.</para>
+<figure id="CNX_Calc_Figure_04_09_008">
+<media id="fs-id1165042552046" alt="En el primer cuadrante, f(x) = 3,55x(1 - x) se representa gráficamente al igual que y = x. Desde algún punto del eje x, se traza una línea hasta la recta y = x, momento en el que gira para ser horizontal y continúa hasta tocar el borde exterior de f(x), momento en el que vuelve a girar para ser vertical hasta llega a la recta y = x. Este proceso continúa varias veces y crea una interesante serie de cajas.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_09_008.jpg"/>
+</media>
+<caption>Un diagrama de telaraña para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3,55</m:mn><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow>se presenta aquí</m:math>. La secuencia de valores da lugar a un <m:math><m:mn>8</m:mn></m:math>-ciclo.</caption>
+</figure>
+<list id="fs-id1165043251229" list-type="enumerated" number-style="arabic">
+<item>Supongamos que <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>0,5</m:mn></m:mrow></m:math> y elegir <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0,2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Calcule, a mano o con una computadora, los primeros <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math> valores en la secuencia. ¿Parece que la secuencia converge? Si es así, ¿a qué valor? ¿Resulta un ciclo? Si es así, ¿qué tipo de ciclo (por ejemplo, <m:math><m:mrow><m:mn>2</m:mn><m:mo>- −</m:mo><m:mtext>ciclo</m:mtext><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mn>4</m:mn><m:mo>- −</m:mo><m:mtext>ciclo</m:mtext><m:mo>.</m:mo><m:mo stretchy="false">)</m:mo><m:mo>con dígito d?</m:mo></m:mrow></m:math></item>
+<item>¿Qué sucede cuando <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>con dígito d?</m:mo></m:mrow></m:math></item>
+<item>Para <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>3,2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>3,5</m:mn><m:mo>,</m:mo></m:mrow></m:math> calcule los primeros <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> valores de la secuencia. Genere un diagrama de telaraña para cada proceso iterativo. (Existen varias aplicaciones gratuitas en línea que generan diagramas de telaraña para el mapa logístico). ¿Cuál es el comportamiento a largo plazo en cada uno de estos casos?</item>
+<item>Ahora supongamos que <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math> Calcule los primeros <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> valores de la secuencia y genere un diagrama de telaraña. ¿Cuál es el comportamiento a largo plazo en este caso?</item>
+<item>Repita el proceso para <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>,</m:mo></m:mrow></m:math> pero suponga que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0.201</m:mn><m:mo>.</m:mo></m:mrow></m:math> ¿Cómo se compara este comportamiento con el de <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0,2</m:mn><m:mo>con dígito d?</m:mo></m:mrow></m:math></item>
+</list>
+</note>
+</section>
+<section id="fs-id1165042369575" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1165043219075" list-type="bulleted" bullet-style="bullet">
+<item>El método de Newton aproxima las raíces de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> partiendo de una aproximación inicial <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> utilice entonces las rectas tangentes al gráfico de <m:math><m:mi>f</m:mi></m:math> para crear una secuencia de aproximaciones <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mtext>,…</m:mtext><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Por lo general, el método de Newton es un método eficaz para encontrar una raíz determinada. En ciertos casos, el método de Newton no funciona porque la lista de números <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mtext>,…</m:mtext></m:mrow></m:math> no se aproxima a un valor finito o se aproxima a un valor distinto de la raíz buscada.</item>
+<item>Cualquier proceso en el que una lista de números <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mtext>,…</m:mtext></m:mrow></m:math> se genera definiendo un número inicial <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> y definiendo los números siguientes por la ecuación <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para alguna función <m:math><m:mi>F</m:mi></m:math> es un proceso iterativo. El método de Newton es un ejemplo de proceso iterativo, donde la función <m:math><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>- −</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> para una función determinada <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</section>
+<section id="fs-id1165043191850" class="section-exercises">
+<para id="fs-id1165043191853">En los siguientes ejercicios, escriba la fórmula de Newton como <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para resolver <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1165043395265">
+<problem id="fs-id1165043395268">
+<para id="fs-id1165043395270">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042320000">
+<problem id="fs-id1165042329446">
+<para id="fs-id1165042329448">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043272877">
+<para id="fs-id1165042562970">Los términos <m:math><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>–</m:mo><m:mfrac><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow/><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mn>3</m:mn><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043250239">
+<problem id="fs-id1165042551225">
+<para id="fs-id1165042551228">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043390900">
+<problem id="fs-id1165043390902">
+<para id="fs-id1165043390904">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043390795">
+<para id="fs-id1165043390797">Los términos <m:math><m:mrow><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:msup></m:mrow><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:msup></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043430597">
+<problem id="fs-id1165042632548">
+<para id="fs-id1165042632550">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1165042327943">En los siguientes ejercicios, resuelva <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> utilizando la iteración <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>- −</m:mo><m:mi>c</m:mi><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> la cual difiere ligeramente del método de Newton. Halle una <m:math><m:mi>c</m:mi></m:math> que funcione y una <m:math><m:mi>c</m:mi></m:math> que no converja, con la excepción de <m:math><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1165042706893">
+<problem id="fs-id1165042706895">
+<para id="fs-id1165042706897">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mo>,</m:mo></m:mrow></m:math> con la <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043219869">
+<para id="fs-id1165042910261">Los términos <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>c</m:mi><m:mo>|</m:mo></m:mrow><m:mo>></m:mo><m:mn>0,5</m:mn></m:mrow></m:math> no funciona, <m:math><m:mrow><m:mrow><m:mo>|</m:mo><m:mi>c</m:mi><m:mo>|</m:mo></m:mrow><m:mo>≤</m:mo><m:mn>0,5</m:mn></m:mrow></m:math> funciona</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042708723">
+<problem id="fs-id1165042708725">
+<para id="fs-id1165042708728">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> con la <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042710979">
+<problem id="fs-id1165042710981">
+<para id="fs-id1165042710983">¿Cuál es el valor de <m:math><m:mtext>“</m:mtext><m:mi>c</m:mi><m:mtext>”</m:mtext></m:math> en el método de Newton?</para>
+</problem>
+<solution id="fs-id1165043249485">
+<para id="fs-id1165043249487">Los términos <m:math><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1165042708714">En los siguientes ejercicios, comience en</para>
+<para id="fs-id1163721445258">a. <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0,6</m:mn></m:mrow></m:math> y</para>
+<para id="fs-id1163721445274">b. <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1163721451483">Calcule <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> utilizando el método iterativo especificado.</para>
+<exercise id="fs-id1165042330022">
+<problem id="fs-id1165042330024">
+<para id="fs-id1165042330026">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>–</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042328680">
+<problem id="fs-id1165042328682">
+<para id="fs-id1165043248521">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mn>2</m:mn><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042376398">
+<para id="fs-id1165042376400">a. <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>12</m:mn></m:mrow><m:mrow><m:mn>25</m:mn></m:mrow></m:mfrac><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>312</m:mn></m:mrow><m:mrow><m:mn>625</m:mn></m:mrow></m:mfrac><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>-4</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>-40</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042583690">
+<problem id="fs-id1165042583692">
+<para id="fs-id1165042472048">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:msqrt><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:msqrt></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043393828">
+<problem id="fs-id1165043393830">
+<para id="fs-id1165043312491">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msqrt><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042364663">
+<para id="fs-id1165042318572">a. <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>1.291</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>0.8801</m:mn><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>0.7071</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>1.189</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043286618">
+<problem id="fs-id1165043286620">
+<para id="fs-id1165043286622">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mn>3</m:mn><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042319140">
+<problem id="fs-id1165042709643">
+<para id="fs-id1165042709645">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow/><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>–</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043427458">
+<para id="fs-id1165043427460">a. <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mo>- −</m:mo><m:mfrac><m:mrow><m:mn>26</m:mn></m:mrow><m:mrow><m:mn>25</m:mn></m:mrow></m:mfrac><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mo>- −</m:mo><m:mfrac><m:mrow><m:mn>1224</m:mn></m:mrow><m:mrow><m:mn>625</m:mn></m:mrow></m:mfrac><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>18</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043131639">
+<problem id="fs-id1165043393891">
+<para id="fs-id1165043393893">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043327548">
+<problem id="fs-id1165043327550">
+<para id="fs-id1165043327553">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mrow><m:mo>|</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043253494">
+<para id="fs-id1165043253496">a. <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>6</m:mn><m:mrow><m:mn>10</m:mn></m:mrow></m:mfrac><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>6</m:mn><m:mrow><m:mn>10</m:mn></m:mrow></m:mfrac><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1165043317299">En los siguientes ejercicios, resuelva con cuatro decimales utilizando el método de Newton y una computadora o calculadora. Elija cualquier conjetura inicial <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> que no sea la raíz exacta.</para>
+<exercise id="fs-id1165042609041">
+<problem id="fs-id1165042609043">
+<para id="fs-id1165042319981">Los términos <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>10</m:mn><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043379909">
+<problem id="fs-id1165043379911">
+<para id="fs-id1165043379913">Los términos <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>- −</m:mo><m:mn>100</m:mn><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042333504">
+<para id="fs-id1165042333506">Los términos <m:math><m:mrow><m:mn>3,1623</m:mn><m:mspace width="0.2em"/><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mo>- −</m:mo><m:mn>3,1623</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042372001">
+<problem id="fs-id1165042372004">
+<para id="fs-id1165043174014">Los términos <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043078171">
+<problem id="fs-id1165043078173">
+<para id="fs-id1165043078176">Los términos <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043422654">
+<para id="fs-id1165043257524">Los términos <m:math><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>-1</m:mn><m:mspace width="0.2em"/><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mn>1</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043327755">
+<problem id="fs-id1165043327757">
+<para id="fs-id1165042603988">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>5</m:mn><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043298557">
+<problem id="fs-id1165042476074">
+<para id="fs-id1165042476076">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mtext>tan</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> elija <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>∈</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>-</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1165042318560">
+<para id="fs-id1165042318562">Los términos <m:math><m:mn>0</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043398519">
+<problem id="fs-id1165043398522">
+<para id="fs-id1165043398524">Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042639363">
+<problem id="fs-id1165042639365">
+<para id="fs-id1165042639367">Los términos <m:math><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042376466">
+<para id="fs-id1165042376468">Los términos <m:math><m:mrow><m:mn>0.5188</m:mn><m:mspace width="0.2em"/><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mo>- −</m:mo><m:mn>1.2906</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043395050">
+<problem id="fs-id1165043317210">
+<para id="fs-id1165043317212">Los términos <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mn>10</m:mn></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042660241">
+<problem id="fs-id1165042660243">
+<para id="fs-id1165042660245">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1165042604693">
+<para id="fs-id1165042604695">Los términos <m:math><m:mn>0</m:mn></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1165042320904">En los siguientes ejercicios, utilice el método de Newton para encontrar los puntos fijos de la función donde <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>;</m:mo></m:mrow></m:math> redondee a tres decimales.</para>
+<exercise id="fs-id1165043321501">
+<problem id="fs-id1165043321504">
+<para id="fs-id1165043321506">Los términos <m:math><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043194445">
+<problem id="fs-id1165043194447">
+<para id="fs-id1165043194449">Los términos <m:math><m:mrow><m:mtext>tan</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> sobre <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1165043348635">
+<para id="fs-id1165043276353">Los términos <m:math><m:mrow><m:mn>4.493</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043276362">
+<problem id="fs-id1165043276364">
+<para id="fs-id1165043276366">Los términos <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042705973">
+<problem id="fs-id1165042705975">
+<para id="fs-id1165043174073">Los términos <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043395326">
+<para id="fs-id1165043395328">Los términos <m:math><m:mrow><m:mn>0.159</m:mn><m:mo>,</m:mo><m:mn>3.146</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1165043391879">El método de Newton puede utilizarse para encontrar los máximos y los mínimos de las funciones, además de las raíces. En este caso aplique el método de Newton a la función derivada <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para encontrar sus raíces, en lugar de la función original. En los siguientes ejercicios, considere la formulación del método.</para>
+<exercise id="fs-id1165042708278">
+<problem id="fs-id1165042708281">
+<para id="fs-id1165042708283">Para encontrar candidatos a máximos y mínimos, necesitamos encontrar los puntos críticos <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Demuestre que para resolver los puntos críticos de una función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> El método de Newton viene dado por <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>-</m:mo><m:mfrac><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>f</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042318840">
+<problem id="fs-id1165042318842">
+<para id="fs-id1165042318844">¿Qué restricciones adicionales son necesarias en la función <m:math><m:mi>f</m:mi><m:mo>con dígito d?</m:mo></m:math></para>
+</problem>
+<solution id="fs-id1165042350211">
+<para id="fs-id1165042350213">Necesitamos <m:math><m:mi>f</m:mi></m:math> para ser dos veces continuamente diferenciable.</para>
+</solution>
+</exercise>
+<para id="fs-id1165042350222">En los siguientes ejercicios, utilice el método de Newton para encontrar la ubicación de los mínimos o máximos locales de las siguientes funciones; redondee a tres decimales.</para>
+<exercise id="fs-id1165043425469">
+<problem id="fs-id1165043425471">
+<para id="fs-id1165043425473">Un mínimo de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043393663">
+<problem id="fs-id1165043393665">
+<para id="fs-id1165042710860">Un mínimo de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>16</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042709554">
+<para id="fs-id1165042709556">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042709569">
+<problem id="fs-id1165042709571">
+<para id="fs-id1165042327355">Un mínimo de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043327319">
+<problem id="fs-id1165043327321">
+<para id="fs-id1165043327323">Máximo de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043248808">
+<para id="fs-id1165043248810">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042407298">
+<problem id="fs-id1165042407300">
+<para id="fs-id1165042407302">Máximo de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>10</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>15</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042364609">
+<problem id="fs-id1165042364611">
+<para id="fs-id1165042364613">Máximo de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>–</m:mo><m:mroot><m:mi>x</m:mi><m:mn>3</m:mn></m:mroot></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043431657">
+<para id="fs-id1165043431659">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>5.619</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043431672">
+<problem id="fs-id1165042331752">
+<para id="fs-id1165042331754">Un mínimo de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> mínimo diferente a cero más cercano a <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043426178">
+<problem id="fs-id1165043426180">
+<para id="fs-id1165043426182">Un mínimo de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>12</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>6</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043327280">
+<para id="fs-id1165043427422">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-1,326</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1165043427435">En los siguientes ejercicios, utilice el método especificado para resolver la ecuación. Si no funciona, explique por qué.</para>
+<exercise id="fs-id1165043427439">
+<problem id="fs-id1165043427441">
+<para id="fs-id1165043427444">Método de Newton, <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042461106">
+<problem id="fs-id1165042461108">
+<para id="fs-id1165042461110">Método de Newton, <m:math><m:mrow><m:mn>0</m:mn><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042461126">
+<para id="fs-id1165042374581">La ecuación no tiene solución.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042374586">
+<problem id="fs-id1165042374588">
+<para id="fs-id1165042374591">Método de Newton, <m:math><m:mrow><m:mn>0</m:mn><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> a partir de <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042705923">
+<problem id="fs-id1165042705925">
+<para id="fs-id1165042705927">Resolver <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:msup><m:mrow/><m:mn>3</m:mn></m:msup></m:mrow></m:math> a partir de <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>-1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042480091">
+<para id="fs-id1165042480093">Entra en un ciclo.</para>
+</solution>
+</exercise>
+<para id="fs-id1165042480098">En los siguientes ejercicios, utilice el <term class="no-emphasis" id="term-00006">método de la secante</term>, un método iterativo alternativo al método de Newton. La fórmula viene dada por</para>
+<equation id="fs-id1165043390951" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mfrac><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>2</m:mn></m:mrow></m:msub></m:mrow><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>2</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<exercise id="fs-id1165043333903">
+<problem id="fs-id1165043333905">
+<para id="fs-id1165043333908">Halle una raíz para <m:math><m:mrow><m:mn>0</m:mn><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow></m:math> con una precisión de tres decimales.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042450785">
+<problem id="fs-id1165042450788">
+<para id="fs-id1165042450790">Halle una raíz para <m:math><m:mrow><m:mn>0</m:mn><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>x</m:mi></m:mrow></m:math> con una precisión de cuatro decimales.</para>
+</problem>
+<solution id="fs-id1165043094066">
+<para id="fs-id1165043094069">Los términos <m:math><m:mn>0</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043094076">
+<problem id="fs-id1165043094078">
+<para id="fs-id1165043374285">Halle una raíz para <m:math><m:mrow><m:mn>0</m:mn><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:math> con una precisión de cuatro decimales.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043174650">
+<problem id="fs-id1165043174652">
+<para id="fs-id1165043174655">Halle una raíz para <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> con una precisión de cuatro decimales.</para>
+</problem>
+<solution id="fs-id1165042479710">
+<para id="fs-id1165042479712">Los términos <m:math><m:mrow><m:mn>-0,3513</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043394928">
+<problem id="fs-id1165043394930">
+<para id="fs-id1165043394932">¿Por qué utilizar el método de la secante en lugar del método de Newton? ¿Cuáles son las restricciones necesarias para <m:math><m:mrow><m:mi>f</m:mi><m:mo>con dígito d?</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1165043251679">En los siguientes ejercicios, utilice tanto el método de Newton como el método de la secante para calcular la raíz de las siguientes ecuaciones. Utilice una calculadora o una computadora para calcular cuántas iteraciones de cada una son necesarias para llegar a tres decimales de la respuesta exacta. En el método de la secante, utilice la primera conjetura del método de Newton.</para>
+<exercise id="fs-id1165043251688">
+<problem id="fs-id1165043251691">
+<para id="fs-id1165043251693">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042473412">
+<para id="fs-id1165042473414">Newton: <m:math><m:mrow><m:mn>11</m:mn></m:mrow></m:math> iteraciones, secante: <m:math><m:mrow><m:mn>16</m:mn></m:mrow></m:math> iteraciones</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042645634">
+<problem id="fs-id1165042645637">
+<para id="fs-id1165042645639">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043183794">
+<problem id="fs-id1165043183796">
+<para id="fs-id1165043183798">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042364333">
+<para id="fs-id1165042364336">Newton: tres iteraciones, secante: seis iteraciones</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042632602">
+<problem id="fs-id1165042632604">
+<para id="fs-id1165042632606">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>–</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042545815">
+<problem id="fs-id1165042545817">
+<para id="fs-id1165042545819">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043395616">
+<para id="fs-id1165042681162">Newton: cinco iteraciones, secante: ocho iteraciones</para>
+</solution>
+</exercise>
+<para id="fs-id1165042681168">En los siguientes ejercicios, considere la ecuación de Kepler relativa a las órbitas planetarias, <m:math><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mi>E</m:mi><m:mo>- −</m:mo><m:mi>ε</m:mi><m:mspace width="0.1em"/><m:mtext>sin</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>E</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>M</m:mi></m:math> es la anomalía media, <m:math><m:mi>E</m:mi></m:math> es una anomalía excéntrica, y <m:math><m:mi>ε</m:mi></m:math> mide la excentricidad.</para>
+<exercise id="fs-id1165043393688">
+<problem id="fs-id1165043393690">
+<para id="fs-id1165043348664">Utilice el método de Newton para resolver la anomalía excéntrica <m:math><m:mi>E</m:mi></m:math> cuando la anomalía media <m:math><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> y la excentricidad de la órbita <m:math><m:mrow><m:mi>ε</m:mi><m:mo>=</m:mo><m:mn>0,25</m:mn><m:mo>;</m:mo></m:mrow></m:math> redondee a tres decimales.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042320304">
+<problem id="fs-id1165042320306">
+<para id="fs-id1165042709795">Utilice el método de Newton para resolver la anomalía excéntrica <m:math><m:mi>E</m:mi></m:math> cuando la anomalía media <m:math><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> y la excentricidad de la órbita <m:math><m:mrow><m:mi>ε</m:mi><m:mo>=</m:mo><m:mn>0,8</m:mn><m:mo>;</m:mo></m:mrow></m:math> redondee a tres decimales.</para>
+</problem>
+<solution id="fs-id1165042374773">
+<para id="fs-id1165042374775">Los términos <m:math><m:mrow><m:mi>E</m:mi><m:mo>=</m:mo><m:mn>4.071</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1165042332049">Los dos ejercicios siguientes consideran una inversión bancaria. La inversión inicial es de <m:math><m:mrow><m:mtext>$</m:mtext><m:mn>10.000</m:mn><m:mo>.</m:mo></m:mrow></m:math> Después de <m:math><m:mrow><m:mn>25</m:mn></m:mrow></m:math> años, la inversión se triplicó hasta <m:math><m:mrow><m:mtext>$</m:mtext><m:mn>30.000</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<exercise id="fs-id1165042710933">
+<problem id="fs-id1165042710935">
+<para id="fs-id1165042710937">Utilice el método de Newton para determinar el tipo de interés si este se calcula anualmente.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043317181">
+<problem id="fs-id1165043317184">
+<para id="fs-id1165043317186">Utilice el método de Newton para determinar el tipo de interés si este se calcula continuamente.</para>
+</problem>
+<solution id="fs-id1165043317192">
+<para id="fs-id1165043317194">Los términos <m:math><m:mrow><m:mn>4</m:mn><m:mo>.</m:mo><m:mn>394</m:mn><m:mtext>%</m:mtext></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043423992">
+<problem id="fs-id1165043423994">
+<para id="fs-id1165043423996">El costo de impresión de un libro expresarse mediante la ecuación <m:math><m:mrow><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1000</m:mn><m:mo>+</m:mo><m:mn>12</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math> Utilice el método de Newton para encontrar el punto de equilibrio si la imprenta vende cada libro por <m:math><m:mrow><m:mtext>$</m:mtext><m:mn>2</m:mn><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+</section>
+  </content>
+<glossary>
+<definition id="fs-id1165043426273">
+<term>proceso iterativo</term>
+<meaning id="fs-id1165043426278">proceso en el que una lista de números <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mtext>…</m:mtext></m:mrow></m:math> se genera empezando por un número <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> y definiendo <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> por <m:math><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn></m:mrow></m:math></meaning>
+</definition>
+<definition id="fs-id1165042323633">
+<term>método de Newton</term>
+<meaning id="fs-id1165042323638">método de aproximación a las raíces de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>;</m:mo></m:mrow></m:math> utilizando una conjetura inicial <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>;</m:mo></m:mrow></m:math> cada aproximación posterior se define por la ecuación <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>-</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mrow></m:math></meaning>
+</definition>
+</glossary>
+</document>

@@ -1,0 +1,22 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" class="introduction">
+
+<title>Introducción</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53929</md:content-id>
+  <md:title>Introducción</md:title>
+  <md:abstract/>
+  <md:uuid>65c5e1d9-872e-4319-831f-1c0fca58586a</md:uuid>
+</metadata>
+
+<content>
+<figure id="CNX_Calc_Figure_14_00_001" class="splash">
+<media id="fs-id1167793363288" alt="Una foto de muchas pelotas de golf.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_14_00_001.jpg"/>
+</media>
+<caption>Los estadounidenses utilizan (y pierden) millones de pelotas de golf al año, lo que mantiene a los fabricantes de pelotas de golf en el negocio. En este capítulo, estudiamos un modelo de beneficios y aprendemos métodos para calcular los niveles óptimos de producción de una empresa típica de fabricación de pelotas de golf. (crédito: modificación del trabajo de oatsy40, Flickr)</caption>
+</figure>
+<para id="fs-id1167793961034">En <link document="m53602">Introducción a las aplicaciones de las derivadas</link>, estudiamos cómo determinar el máximo y el mínimo de una función de una variable sobre un intervalo cerrado. Esta función puede representar la temperatura en un intervalo de tiempo determinado, la posición de un automóvil en función del tiempo o la altitud de un avión en su viaje de Nueva York a San Francisco. En cada uno de estos ejemplos, la función tiene una variable independiente.</para>
+<para id="fs-id1167793951043">Supongamos, sin embargo, que tenemos una cantidad que depende de más de una variable. Por ejemplo, la temperatura puede depender de la ubicación y de la hora del día, o el modelo de beneficios de una empresa puede depender del número de unidades vendidas y de la cantidad de dinero gastada en publicidad. En este capítulo, analizamos una empresa que produce pelotas de golf. Desarrollamos un modelo de beneficios y, bajo varias restricciones, encontramos que el nivel óptimo de producción y la cantidad de dólares gastados en publicidad determinan el máximo beneficio posible. Dependiendo de la naturaleza de las restricciones, tanto el método de solución como la propia solución cambian (véase <link document="m53942" target-id="fs-id1167793423548"/>).</para>
+<para id="fs-id1167794047323">Cuando se trata de una función de más de una variable independiente, naturalmente surgen varias preguntas. Por ejemplo, ¿cómo calculamos los límites de las funciones de más de una variable? La definición de <emphasis effect="italics">derivada</emphasis> que utilizamos antes implicaba un límite. ¿La nueva definición de derivada implica también límites? ¿Se aplican las normas de diferenciación en este contexto? ¿Podemos encontrar los extremos relativos de las funciones utilizando las derivadas? Todas estas preguntas tienen respuesta en este capítulo.</para>
+ </content>
+</document>

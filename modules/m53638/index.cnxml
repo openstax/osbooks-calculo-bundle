@@ -1,0 +1,21 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" class="introduction">
+
+<title>Introducción</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53638</md:content-id>
+  <md:title>Introducción</md:title>
+  <md:abstract/>
+  <md:uuid>0e9b28ca-f080-4d11-add1-28820fd7b281</md:uuid>
+</metadata>
+
+<content>
+<figure id="CNX_Calc_Figure_06_00_001" class="splash">
+<media id="fs-id1167794069403" alt="Una imagen de la presa Hoover. La imagen tiene la presa en el fondo y el agua que fluye en primer plano por debajo de la presa.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_00_001.jpg"/>
+</media>
+<caption>La presa Hoover es uno de los lugares emblemáticos de los Estados Unidos, y proporciona riego y energía hidroeléctrica a millones de personas en el suroeste del país. (Crédito: modificación de la obra de Lynn Betts, Wikimedia)</caption>
+</figure>
+<para id="fs-id1167793372187">La presa Hoover es una maravilla de la ingeniería. Cuando el lago Mead, el embalse que hay detrás de la presa, está lleno, la presa soporta una gran fuerza. Sin embargo, los niveles de agua del lago varían considerablemente como consecuencia de las sequías y de las distintas demandas de agua. Más adelante en este capítulo, utilizaremos las integrales definidas para calcular la fuerza que soporta la presa cuando el embalse está lleno y examinaremos cómo los cambios en el nivel del agua afectan a esa fuerza (véase la <link document="m53648" target-id="fs-id1167793421214"/>).</para>
+<para id="fs-id1167794035470">La fuerza hidrostática es sólo una de las muchas aplicaciones de las integrales definidas que exploramos en este capítulo. Desde las aplicaciones geométricas como área superficial y volumen, aplicaciones físicas como masa y trabajo, hasta los modelos de crecimiento y decaimiento, las integrales definidas son una herramienta poderosa para ayudarnos a comprender y modelar el mundo que nos rodea.</para>
+   </content>
+</document>

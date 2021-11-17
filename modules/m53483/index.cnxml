@@ -1,0 +1,22 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" class="introduction">
+<title>Introducción</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53483</md:content-id>
+  <md:title>Introducción</md:title>
+  <md:abstract/>
+  <md:uuid>7ebb4d1b-98e5-4f5f-a950-b097168c8130</md:uuid>
+</metadata>
+
+<content>
+<figure id="CNX_Calc_Figure_02_00_001" class="splash">
+<media id="fs-id1170572451778" alt="Una imagen de una nave espacial futurista atravesando el espacio sideral a toda velocidad.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_00_001.jpg"/>
+</media>
+<caption>La visión de la exploración humana por parte de la Administración Nacional de Aeronáutica y del Espacio (National Aeronautics and Space Administration, NASA) a lugares lejanos del universo ilustra la idea de los viajes espaciales a gran velocidad. Pero, ¿hay un límite para la velocidad de una nave espacial? (crédito: NASA).</caption>
+</figure>
+<para id="fs-id1170572287122">Los escritores de ciencia ficción suelen imaginar naves espaciales que pueden viajar a planetas lejanos en galaxias distantes. Sin embargo, en 1905, Albert Einstein demostró que existe un límite a la velocidad que puede alcanzar cualquier objeto. El problema es que cuanto más rápido se mueve un objeto, más masa alcanza (en forma de energía), según la ecuación</para>
+<equation id="fs-id1170572390878" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>m</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:msub><m:mi>m</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mrow><m:msup><m:mi>v</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>c</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:msqrt></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170571698984">donde <emphasis effect="italics">m</emphasis><sub>0</sub> es la masa del objeto en reposo, <emphasis effect="italics">v</emphasis> es su velocidad y <emphasis effect="italics">c</emphasis> es la velocidad de la luz. ¿Cuál es el límite de velocidad? (Analizamos este problema con más detalle en el <link document="m53491" target-id="fs-id1170572624544"/>.)</para>
+<para id="fs-id1170572419075">La idea de límite es fundamental para todo el cálculo. Comenzamos este capítulo examinando por qué los límites son tan importantes. A continuación, pasamos a describir cómo calcular el límite de una función en un punto determinado. No todas las funciones tienen límites en todos los puntos, y discutimos lo que esto significa y cómo podemos saber si una función tiene o no un límite en un valor particular. Este capítulo se ha creado de manera informal e intuitiva, pero esto no siempre es suficiente si necesitamos demostrar un enunciado matemático que implique límites. La última sección de este capítulo presenta la definición más precisa de un límite y muestra cómo demostrar si una función tiene un límite.</para>
+  </content>
+</document>

@@ -1,0 +1,832 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Funciones inversas</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53480</md:content-id>
+  <md:title>Funciones inversas</md:title>
+  <md:abstract><list id="list-00001">
+<item>Determinar las condiciones para que una función tenga una inversa.</item>
+<item>Utilizar la prueba de la línea horizontal para reconocer cuándo una función es biunívoca.</item>
+<item>Hallar la inversa de una función dada.</item>
+<item>Dibujar el gráfico de una función inversa.</item>
+<item>Evaluar funciones trigonométricas inversas.</item>
+</list></md:abstract>
+  <md:uuid>21bf0e2b-d95b-4e26-b9b9-fb7179ceaed1</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1170572215818">Una función inversa invierte la operación realizada por una determinada función. En otras palabras, lo que hace una función, lo deshace la función inversa. En esta sección, definiremos formalmente una función inversa y estableceremos las condiciones necesarias para que exista. Examinaremos cómo encontrar una función inversa y estudiaremos la relación entre el gráfico de una función y el gráfico de su inversa. A continuación, aplicaremos estas ideas para definir y discutir las propiedades de las funciones trigonométricas inversas.</para>
+<section id="fs-id1170572245927">
+<title>Existencia de una función inversa</title>
+<para id="fs-id1170572151010">Comencemos con un ejemplo. Dada una función <m:math><m:mi>f</m:mi></m:math> y una salida <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> a menudo nos interesa encontrar qué valor o valores <m:math><m:mi>x</m:mi></m:math> se asignaron a <m:math><m:mi>y</m:mi></m:math> entre <m:math><m:mi>f</m:mi><m:mo>.</m:mo></m:math> Por ejemplo, consideremos la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math> Dado que cualquier salida <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>,</m:mo></m:mrow></m:math> podemos resolver esta ecuación para <m:math><m:mi>x</m:mi></m:math> y hallar que la entrada es <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mroot><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mn>3</m:mn></m:mroot><m:mo>.</m:mo></m:mrow></m:math> Esta ecuación define <m:math><m:mi>x</m:mi></m:math> en función de <m:math><m:mi>y</m:mi><m:mo>.</m:mo></m:math> Denotando esta función como <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> y escribiendo <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mroot><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mn>3</m:mn></m:mroot><m:mo>,</m:mo></m:mrow></m:math> vemos que para cualquier <m:math><m:mi>x</m:mi></m:math> en el dominio de <m:math><m:mi>f</m:mi><m:mo>,</m:mo><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Así, esta nueva función, <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> "deshizo" lo que la función original <m:math><m:mi>f</m:mi></m:math> hizo. Una función con esta propiedad se denomina función inversa de la función original.</para>
+<note id="fs-id1170572137845">
+<title>Definición</title>
+<para id="fs-id1170572110489">Dada una función <m:math><m:mi>f</m:mi></m:math> con dominio <m:math><m:mi>D</m:mi></m:math> y rango <m:math><m:mi>R</m:mi><m:mo>,</m:mo></m:math> su <term id="term-00001">función inversa</term> (si la hay) es la función <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> con dominio <m:math><m:mi>R</m:mi></m:math> y rango <m:math><m:mrow><m:mi>D</m:mi></m:mrow></m:math> de manera que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> si <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math> En otras palabras, para una función <m:math><m:mi>f</m:mi></m:math> y su inversa <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math></para>
+<equation id="fs-id1170572141883">Los términos <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>para todo</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>in</m:mtext><m:mspace width="0.2em"/><m:mi>D</m:mi><m:mo>,</m:mo><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>y</m:mi><m:mspace width="0.2em"/><m:mtext>para todo</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mspace width="0.2em"/><m:mtext>in</m:mtext><m:mspace width="0.2em"/><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+</note>
+<para id="fs-id1170572548323">Observe que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> se lee como "f inversa" Aquí, el <m:math><m:mrow><m:mn>-1</m:mn></m:mrow></m:math> no se utiliza como exponente y <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> La <link target-id="CNX_Calc_Figure_01_04_001"/> muestra la relación entre el dominio y el rango de <emphasis effect="italics">f</emphasis> y el dominio y el rango de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_01_04_001">
+<media id="fs-id1170572452071" alt="Imagen de dos burbujas. La primera burbuja es de color naranja y tiene dos marcas: la de arriba es &quot;Dominio de f&quot; y la de abajo es &quot;Rango de f inversa&quot;. Dentro de esta burbuja está la variable &quot;x&quot;. Una flecha naranja marcada como &quot;f&quot; apunta desde esta burbuja a la segunda burbuja. La segunda burbuja es azul y tiene dos marcas: la de arriba es &quot;rango de f&quot; y la de abajo es &quot;dominio de f inversa&quot;. Dentro de esta burbuja está la variable &quot;y&quot;. Una flecha azul con la marca &quot;f inversa&quot; apunta desde esta burbuja a la primera.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_001.jpg"/>
+</media>
+<caption>Dada una función <m:math><m:mi>f</m:mi></m:math> y su inversa <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> si y solo si <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math> El rango de <m:math><m:mi>f</m:mi></m:math> se convierte en el dominio de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> y el dominio de <m:math><m:mi>f</m:mi></m:math> se convierte en el rango de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+<para id="fs-id1170572141586">Recordemos que una función tiene exactamente una salida para cada entrada. Por lo tanto, para definir una función inversa, necesitamos asignar cada entrada a una sola salida. Por ejemplo, intentemos encontrar la función inversa de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math> Si resolvemos la ecuación <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> por <m:math><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> llegamos a la ecuación <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mo>±</m:mo><m:msqrt><m:mi>y</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> Esta ecuación no describe <m:math><m:mi>x</m:mi></m:math> en función de <m:math><m:mi>y</m:mi></m:math> porque hay dos soluciones a esta ecuación para cada <m:math><m:mrow><m:mi>y</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> El problema de intentar encontrar una función inversa para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> es que se envían dos entradas a una sola salida en cada salida <m:math><m:mrow><m:mi>y</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> La función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:math> que se comentó anteriormente no presentaba ese problema. En esa función, cada entrada se enviaba a una salida diferente. Una función que envía cada entrada a una salida <emphasis effect="italics">diferente</emphasis> se llama función biunívoca.</para>
+<note id="fs-id1170572110310">
+<title>Definición</title>
+<para id="fs-id1170572229709">Decimos que <m:math><m:mi>f</m:mi></m:math> es una <term id="term-00002">función biunívoca</term> si <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> cuando <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>≠</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
+</note>
+<para id="fs-id1170572103424">Una forma de determinar si una función es biunívoca es observando su gráfico. Si una función es biunívoca, entonces no se pueden enviar dos entradas a la misma salida. Entonces, si dibujamos una línea horizontal en cualquier parte del plano <m:math><m:mrow><m:mi>x</m:mi><m:mi>y</m:mi></m:mrow></m:math> según la <term id="term-00003">prueba de la línea horizontal</term>, esta no puede intersecar el gráfico más de una vez. Podemos notar que la prueba de la línea horizontal es diferente de la prueba de la línea vertical. La prueba de la línea vertical determina si un gráfico es el de una función. La prueba de la línea horizontal determina si una función es biunívoca (<link target-id="CNX_Calc_Figure_01_04_002"/>).</para>
+<note id="fs-id1170572226107">
+<title>Regla: Prueba de la línea horizontal</title>
+<para id="fs-id1170572137262">Una función <m:math><m:mi>f</m:mi></m:math> es biunívoca si y solo si cada línea horizontal interseca el gráfico de <m:math><m:mi>f</m:mi></m:math> solo una vez.</para>
+</note>
+<figure id="CNX_Calc_Figure_01_04_002">
+<media id="fs-id1170572130120" alt="Imagen de dos gráficos. Ambos gráficos tienen un eje x que va de -3 a 3 y un eje y que va de -3 a 4. El primer gráfico es de la función &quot;f(x) = x al cuadrado&quot;, que es una parábola. La función disminuye hasta llegar al origen, donde comienza a aumentar. La intersección en x y la intersección en y están ambas en el origen. También hay dos líneas horizontales naranja en el gráfico, que pasan por la función en dos puntos cada una. El segundo gráfico es de la función &quot;f(x) = x al cubo&quot;, que es una función curva creciente. La intersección en x y la intersección en y están ambas en el origen. También hay tres líneas naranjas en el gráfico y cada una cruza la función en un solo punto.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_002.jpg"/>
+</media>
+<caption>(a) La función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> no es biunívoca porque falla la prueba de la línea horizontal. (b) La función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math> es biunívoca porque pasa la prueba de la línea horizontal.</caption>
+</figure>
+<example id="fs-id1170572228079">
+<exercise id="fs-id1170572102492">
+<problem id="fs-id1170572103254">
+<title>Cómo determinar si una función es biunívoca</title>
+<para id="fs-id1170572150756">En cada una de las siguientes funciones, utilice la prueba de la línea horizontal para determinar si son biunívocas.</para>
+<list id="fs-id1170572174892" list-type="enumerated" number-style="lower-alpha">
+<item><media id="fs-id1170572108141" alt="Imagen de un gráfico. El eje x va de -3 a 11 y el eje y va de -3 a 11. El gráfico es de una función escalonada que contiene 10 pasos horizontales. Cada paso comienza con un círculo cerrado y termina con un círculo abierto. El primer paso comienza en el origen y termina en el punto (1, 0). El segundo paso comienza en el punto (1, 1) y termina en el punto (1, 2). Cada uno de los siguientes 8 pasos comienza 1 unidad más arriba en la dirección y que donde terminó el paso anterior. El décimo y último paso comienza en el punto (9, 9) y termina en el punto (10, 9)">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_003.jpg"/>
+</media></item>
+<item><media id="fs-id1170572140980" alt="Imagen de un gráfico. El eje x va de -3 a 6 y el eje y va de -3 a 6. El gráfico es de la función &quot;f(x) = (1/x)&quot;, una función curva decreciente. El gráfico de la función comienza justo debajo del eje x en el 4.º cuadrante y comienza a disminuir hasta acercarse al eje y. El gráfico va disminuyendo a medida que se acerca al eje y, pero nunca lo toca debido a la asíntota vertical. En el primer cuadrante, el gráfico de la función comienza cerca del eje y y sigue disminuyendo hasta acercarse al eje x. A medida que la función sigue disminuyendo se acerca cada vez más al eje x sin tocarlo, donde hay una asíntota horizontal.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_004.jpg"/>
+</media></item>
+</list>
+</problem>
+<solution id="fs-id1170572167761">
+<list id="fs-id1170572241370" list-type="enumerated" number-style="lower-alpha">
+<item>Dado que la línea horizontal <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>n</m:mi></m:mrow></m:math> para cualquier número entero <m:math><m:mrow><m:mi>n</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> interseca el gráfico más de una vez, esta función no es unívoca<newline/>
+<media id="fs-id1170572107320" alt="Imagen de un gráfico. El eje x va de -3 a 11 y el eje y va de -3 a 11. El gráfico es de una función escalonada que contiene 10 pasos horizontales. Cada paso comienza con un círculo cerrado y termina con un círculo abierto. El primer paso comienza en el origen y termina en el punto (1, 0). El segundo paso comienza en el punto (1, 1) y termina en el punto (1, 2). Cada uno de los siguientes 8 pasos comienza 1 unidad más arriba en la dirección y que donde terminó el paso anterior. El décimo y último paso comienza en el punto (9, 9) y termina en el punto (10, 9). También hay dos líneas horizontales de color naranja trazadas en el gráfico, cada una de las cuales recorre un paso completo de la función.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_005.jpg"/>
+</media></item>
+<item>Dado que cada línea horizontal interseca el gráfico una vez (como máximo), esta función es biunívoca<newline/>
+<media id="fs-id1170572454307" alt="Imagen de un gráfico. El eje x va de -3 a 6 y el eje y va de -3 a 6. El gráfico es de la función &quot;f(x) = (1/x)&quot;, una función curva decreciente. El gráfico de la función comienza justo debajo del eje x en el 4.º cuadrante y comienza a disminuir hasta acercarse al eje y. El gráfico va disminuyendo a medida que se acerca al eje y, pero nunca lo toca debido a la asíntota vertical. En el primer cuadrante, el gráfico de la función comienza cerca del eje y y sigue disminuyendo hasta acercarse al eje x. A medida que la función sigue disminuyendo se acerca cada vez más al eje x sin tocarlo, donde hay una asíntota horizontal. También hay tres líneas horizontales de color naranja trazadas en el gráfico y cada una atraviesa la función en un solo punto.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_006.jpg"/>
+</media></item>
+</list>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170572151745" class="checkpoint">
+<exercise id="fs-id1170572141532">
+<problem id="fs-id1170572479279">
+<para id="fs-id1170572294776">¿La función <m:math><m:mi>f</m:mi></m:math> graficada biunívoca en la siguiente imagen?</para>
+<media id="fs-id1170572224899" alt="Imagen de un gráfico. El eje x va de -3 a 4 y el eje y va de -3 a 5. El gráfico es de la función &quot;f(x) = (x al cubo) - x&quot; que es una función curva. La función aumenta, disminuye y vuelve a aumentar. Las intersecciones en x están en los puntos (-1, 0), (0,0) y (1, 0). La intersección en y está en el origen.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_007.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1170572548943">
+<para id="fs-id1170572216730">No.</para>
+</solution>
+<commentary id="fs-id1165042132352" type="hint">
+<title>Pista</title>
+<para id="fs-id1165042094151">Utilice la prueba de la línea horizontal.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1170572177789">
+<title>Encontrar la inversa de una función</title>
+<para id="fs-id1170572150503">Ahora podemos considerar las funciones biunívocas y mostrar cómo encontrar sus inversas. Recordemos que una función asigna elementos en el dominio de <m:math><m:mi>f</m:mi></m:math> a elementos en el rango de <m:math><m:mi>f</m:mi><m:mo>.</m:mo></m:math> La función inversa asigna cada elemento del rango de <m:math><m:mi>f</m:mi></m:math> a su elemento correspondiente del dominio de <m:math><m:mi>f</m:mi><m:mo>.</m:mo></m:math> Por lo tanto, para encontrar la función inversa de una función biunívoca <m:math><m:mi>f</m:mi><m:mo>,</m:mo></m:math> dada cualquier <m:math><m:mi>y</m:mi></m:math> en el rango de <m:math><m:mi>f</m:mi><m:mo>,</m:mo></m:math> tenemos que determinar qué <m:math><m:mi>x</m:mi></m:math> en el dominio de <m:math><m:mi>f</m:mi></m:math> satisface <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mi>f</m:mi></m:math> es biunívoca, hay exactamente un valor de este tipo <m:math><m:mi>x</m:mi><m:mo>.</m:mo></m:math> Podemos encontrar ese valor <m:math><m:mi>x</m:mi></m:math> resolviendo la ecuación <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math> para <m:math><m:mi>x</m:mi><m:mo>.</m:mo></m:math> Al hacer esto, podemos escribir <m:math><m:mi>x</m:mi></m:math> en función de <m:math><m:mi>y</m:mi></m:math> donde el dominio de esta función es el rango de <m:math><m:mi>f</m:mi></m:math> y el rango de esta nueva función es el dominio de <m:math><m:mi>f</m:mi><m:mo>.</m:mo></m:math> En consecuencia, esta función es la inversa de <m:math><m:mi>f</m:mi><m:mo>,</m:mo></m:math> y escribimos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>y</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Dado que normalmente utilizamos la variable <m:math><m:mi>x</m:mi></m:math> para denotar la variable independiente y <m:math><m:mi>y</m:mi></m:math> para denotar la variable dependiente, a menudo intercambiamos los papeles de <m:math><m:mi>x</m:mi></m:math> como <m:math><m:mi>y</m:mi><m:mo>,</m:mo></m:math> y se escribe <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Representar la función inversa de esta manera también es útil más adelante cuando grafiquemos una función <m:math><m:mi>f</m:mi></m:math> y su inversa <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> en los mismos ejes.</para>
+<note id="fs-id1170572552427" class="problem-solving">
+<title>Estrategia para la resolución de problemas: Halle una función inversa</title>
+<list id="fs-id1170572450945" list-type="enumerated" number-style="arabic">
+<item>Resuelva la ecuación <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para <m:math><m:mi>x</m:mi><m:mo>.</m:mo></m:math></item>
+<item>Intercambie las variables de <m:math><m:mi>x</m:mi></m:math> como <m:math><m:mi>y</m:mi></m:math> y se escribe <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</note>
+<example id="fs-id1170572208522">
+<exercise id="fs-id1170572240528">
+<problem id="fs-id1170572546518">
+<title>Halle una función inversa</title>
+<para id="fs-id1170572546520">Halle la inversa de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math> Indique el dominio y el rango de la función inversa. Verifique que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572481494">
+<para id="fs-id1170572481500">Siga los pasos indicados en la estrategia.</para>
+<para id="fs-id1170572548820">Paso 1. Si los valores de <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>4</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>y</m:mi><m:mo>+</m:mo><m:mfrac><m:mn>4</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170572479776">Paso 2. Reescriba como <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>x</m:mi><m:mo>+</m:mo><m:mfrac><m:mn>4</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> y supongamos que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170572453043">Por lo tanto, <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>x</m:mi><m:mo>+</m:mo><m:mfrac><m:mn>4</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170572240611">Dado que el dominio de <m:math><m:mi>f</m:mi></m:math> ¿es <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> el rango de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> ¿es <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Dado que el rango de <m:math><m:mi>f</m:mi></m:math> ¿es <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> el dominio de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> ¿es <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170572222969">Puede comprobar que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> escribiendo</para>
+<equation id="fs-id1170572453591" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>4</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>4</m:mn><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mfrac><m:mn>4</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mfrac><m:mn>4</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mn>4</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170572546429">Tenga en cuenta que para que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> sea la inversa de <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> ambos <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> como <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> para todo <emphasis effect="italics">x</emphasis> en el dominio de la función interior.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170572478768" class="checkpoint">
+<exercise id="fs-id1170572478772">
+<problem id="fs-id1170572478774">
+<para id="fs-id1170572478776">Halle la inversa de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mtext>/</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Indique el dominio y el rango de la función inversa.</para>
+</problem>
+<solution id="fs-id1170572479043">
+<para id="fs-id1170572479045">Los términos <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> El dominio de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> ¿es <m:math><m:mrow><m:mo>{</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>3</m:mn><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math> El rango de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> ¿es <m:math><m:mrow><m:mo>{</m:mo><m:mi>y</m:mi><m:mo>|</m:mo><m:mi>y</m:mi><m:mo>≠</m:mo><m:mn>2</m:mn><m:mo>}</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165042047502" type="hint">
+<title>Pista</title>
+<para id="fs-id1165042050880">Utiliza la <link target-id="fs-id1170572552427"/> para encontrar funciones inversas.</para>
+</commentary>
+</exercise>
+</note>
+<section id="fs-id1170572363370">
+<title>Gráficos de funciones inversas</title>
+<para id="fs-id1170572363375">Consideremos la relación entre el gráfico de una función <m:math><m:mi>f</m:mi></m:math> y el gráfico de su inversa. Consideremos el gráfico de <m:math><m:mi>f</m:mi></m:math> que se muestra en la <link target-id="CNX_Calc_Figure_01_04_008"/> y un punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en el gráfico. Dado que <m:math><m:mrow><m:mi>b</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, cuando graficamos <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> el punto <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> está en el gráfico. Como resultado, el gráfico de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> es un reflejo del gráfico de <m:math><m:mi>f</m:mi></m:math> sobre la línea <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_01_04_008">
+<media id="fs-id1170572222251" alt="Imagen de dos gráficos. El primer gráfico es de &quot;y = f(x)&quot;, que es una función curva creciente, que aumenta a un ritmo más rápido a medida que aumenta x. El punto (a, b) está en el gráfico de la función en el primer cuadrante. El segundo gráfico también grafica &quot;y = f(x)&quot; con el punto (a, b), pero también grafica la función &quot;y = f inversa (x)&quot;, una función curva creciente, que aumenta a un ritmo más lento a medida que x aumenta. Esta función incluye el punto (b, a). Además de las dos funciones, hay una línea diagonal punteada con la ecuación &quot;y =x&quot;, que muestra que &quot;f(x)&quot; y &quot;f inversa (x)&quot; son imágenes reflejadas sobre la línea &quot;y =x&quot;.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_017.jpg"/>
+</media>
+<caption>(a) El gráfico de esta función <m:math><m:mi>f</m:mi></m:math> muestra el punto <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en el gráfico de <m:math><m:mi>f</m:mi><m:mo>.</m:mo></m:math> (b) Ya que <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> está en el gráfico de <m:math><m:mi>f</m:mi><m:mo>,</m:mo></m:math> el punto <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> está en el gráfico de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math> La gráfica de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> es un reflejo del gráfico de <m:math><m:mi>f</m:mi></m:math> sobre la línea <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+<example id="fs-id1170572213184">
+<exercise id="fs-id1170572213190">
+<problem id="fs-id1170572213192">
+<title>Trazado de gráficos de funciones inversas</title>
+<para id="fs-id1170572213194">En el gráfico de <m:math><m:mi>f</m:mi></m:math> en la siguiente imagen, dibuje un gráfico de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> trazando la línea <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> y utilizando la simetría. Identifique el dominio y el rango de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+<media id="fs-id1170572222895" alt="Imagen de un gráfico. El eje x va de -2 a 2 y el eje y va de 0 a 2. El gráfico es de la función &quot;f(x) = raíz cuadrada de (x +2)&quot;, una función curva creciente. La función comienza en el punto (-2, 0). La intersección x está en (-2, 0) y la intersección y está en el punto aproximado (0, 1,4).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_009.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1170572222904">
+<para id="fs-id1170572222910">Refleje el gráfico sobre la línea <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> El dominio de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> ¿es <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> El rango de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> ¿es <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-2</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Utilizando la estrategia anterior para encontrar funciones inversas, podemos comprobar que la función inversa es <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> como se muestra en el gráfico.</para>
+<media id="fs-id1170572480252" alt="Imagen de un gráfico. El eje x va de -2 a 2 y el eje y va de -2 a 2. El gráfico es de dos funciones. La primera función es &quot;f(x) = raíz cuadrada de (x +2)&quot;, una función curva creciente. La función comienza en el punto (-2, 0). La intersección x está en (-2, 0) y la intersección y está en el punto aproximado (0, 1,4). La segunda función es &quot;f inversa (x) = (x al cuadrado) -2&quot;, una función curva creciente que parte del punto (0, -2). La intersección en x está en el punto aproximado (1,4, 0) y la intersección en y está en el punto (0, -2). Además de las dos funciones, hay una línea diagonal punteada con la ecuación &quot;y =x&quot;, que muestra que &quot;f(x)&quot; y &quot;f inversa (x)&quot; son imágenes reflejadas sobre la línea &quot;y =x&quot;.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_010.jpg"/>
+</media>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170572480264" class="checkpoint">
+<exercise id="fs-id1170572480267">
+<problem id="fs-id1170572480269">
+<para id="fs-id1170572480271">Dibuje la gráfica de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:math> y el gráfico de su inversa utilizando la propiedad de simetría de las funciones inversas.</para>
+</problem>
+<solution id="fs-id1170572481066">
+<para id="fs-id1170572481068"><newline/><media id="fs-id1170572481077" alt="Imagen de un gráfico. El eje x va de -3 a 4 y el eje y va de -3 a 5. El gráfico es de dos funciones. La primera función es &quot;f(x) = 2x +3&quot;, una función rectilínea creciente. La función tiene una intersección en x en (-1,5, 0) y una intersección en y en (0, 3). La segunda función es &quot;f inversa (x) = (x - 3)/2&quot;, una función rectilínea creciente, que aumenta a un ritmo más lento que la primera función. La función tiene una intersección en x en (3, 0) y una intersección en y en (0, -1,5). Además de las dos funciones, hay una línea diagonal punteada con la ecuación &quot;y =x&quot;, que muestra que &quot;f(x)&quot; y &quot;f inversa (x)&quot; son imágenes reflejadas sobre la línea &quot;y =x&quot;.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_011.jpg"/>
+</media></para>
+</solution>
+<commentary id="fs-id1165041797872" type="hint">
+<title>Pista</title>
+<para id="fs-id1165041823836">Los gráficos son simétricos respecto a la línea <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mtext>.</m:mtext></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1170572481090">
+<title>Restricciones de dominio</title>
+<para id="fs-id1170572481095">Como hemos visto, <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> no tiene una función inversa porque no es biunívoca. Sin embargo, podemos elegir un subconjunto del dominio de <m:math><m:mi>f</m:mi></m:math> tal que la función es biunívoca. Este subconjunto se denomina <term id="term-00004">dominio restringido</term>. Al restringir el dominio de <m:math><m:mi>f</m:mi><m:mo>,</m:mo></m:math> podemos definir una nueva función <m:math><m:mi>g</m:mi></m:math> tal que el dominio de <m:math><m:mi>g</m:mi></m:math> es el dominio restringido de <m:math><m:mi>f</m:mi></m:math> y <m:math><m:mrow><m:mi>g</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> para todo <m:math><m:mi>x</m:mi></m:math> en el dominio de <m:math><m:mi>g</m:mi><m:mo>.</m:mo></m:math> Entonces podemos definir una función inversa para <m:math><m:mi>g</m:mi></m:math> en ese dominio. Por ejemplo, ya que <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> es biunívoca en el intervalo <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> podemos definir una nueva función <m:math><m:mi>g</m:mi></m:math> tal que el dominio de <m:math><m:mi>g</m:mi></m:math> ¿es <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>g</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> para todas las <m:math><m:mi>x</m:mi></m:math> en su dominio. Dado que <m:math><m:mi>g</m:mi></m:math> es una función biunívoca, tiene una función inversa, dada por la fórmula <m:math><m:mrow><m:msup><m:mi>g</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> Por otro lado, la función <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> también es biunívoca en el dominio <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>0</m:mn><m:mo stretchy="false">]</m:mo><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, también podríamos definir una nueva función <m:math><m:mi>h</m:mi></m:math> tal que el dominio de <m:math><m:mi>h</m:mi></m:math> ¿es <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>0</m:mn><m:mo stretchy="false">]</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>h</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> para todas las <m:math><m:mi>x</m:mi></m:math> en el dominio de <m:math><m:mrow><m:mi>h</m:mi><m:mo>.</m:mo></m:mrow></m:math> Entonces <m:math><m:mrow><m:mi>h</m:mi></m:mrow></m:math> es una función biunívoca y también debe tener una inversa. Su inversa viene dada por la fórmula <m:math><m:mrow><m:msup><m:mi>h</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:math> (<link target-id="CNX_Calc_Figure_01_04_012"/>).</para>
+<figure id="CNX_Calc_Figure_01_04_012">
+<media id="fs-id1170572549478" alt="Imagen de dos gráficos. Ambos gráficos tienen un eje x que va de -2 a 5 y un eje y que va de -2 a 5. El primer gráfico es de dos funciones. La primera función es &quot;g(x) = x al cuadrado&quot;, una función curva creciente que parte del punto (0, 0). Esta función aumenta a un ritmo más rápido para valores mayores de x. La segunda función es &quot;g inversa (x) = raíz cuadrada de x&quot;, una función curva creciente que parte del punto (0, 0). Esta función aumenta a un ritmo más lento para valores mayores de x. La primera función es &quot;h(x) = x al cuadrado&quot;, una función curva decreciente que termina en el punto (0, 0). Esta función disminuye a un ritmo más lento para valores mayores de x. La segunda función es &quot;h inversa (x) = -(raíz cuadrada de x)&quot;, una función curva creciente que parte del punto (0, 0). Esta función disminuye a un ritmo más lento para valores mayores de x. Además de las dos funciones, hay una línea diagonal punteada con la ecuación &quot;y =x&quot;, que muestra que &quot;f(x)&quot; y &quot;f inversa (x)&quot; son imágenes reflejadas sobre la línea &quot;y =x&quot;.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_012.jpg"/>
+</media>
+<caption>(a) Para <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> limitada a <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:msup><m:mi>g</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> (b) Para <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> limitada a <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>0</m:mn><m:mo stretchy="false">]</m:mo><m:mo>,</m:mo><m:msup><m:mi>h</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+<example id="fs-id1170572551599">
+<exercise id="fs-id1170572551604">
+<problem id="fs-id1170572551606">
+<title>Restringir el dominio</title>
+<para id="fs-id1170572551608">Considere la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1170572551645" list-type="enumerated" number-style="lower-alpha">
+<item>Dibuje la gráfica de <m:math><m:mi>f</m:mi></m:math> y utilice la prueba de la línea horizontal para demostrar que <m:math><m:mi>f</m:mi></m:math> no es biunívoca.</item>
+<item>Demuestre que <m:math><m:mi>f</m:mi></m:math> es biunívoca en el dominio restringido <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>-1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Determine el dominio y el rango de la inversa de <m:math><m:mi>f</m:mi></m:math> en este dominio restringido y encuentre una fórmula para <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1170572477855">
+<list id="fs-id1170572477860" list-type="enumerated" number-style="lower-alpha">
+<item>El gráfico de <m:math><m:mi>f</m:mi></m:math> es el gráfico de <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> desplazado a la izquierda en 1 unidad. Dado que existe una línea horizontal que interseca el gráfico más de una vez, <m:math><m:mi>f</m:mi></m:math> no es biunívoca.<newline/>
+<media id="fs-id1170572477898" alt="Imagen de un gráfico. El eje x va de -6 a 6 y el eje y va de -2 a 10. El gráfico es de la función &quot;f(x) = (x+ 1) al cuadrado&quot;, que es una parábola. La función disminuye hasta el punto (-1, 0), donde comienza a aumentar. La intersección x está en el punto (-1, 0) y la intersección y está en el punto (0, 1). También hay una línea de puntos horizontal trazada en el gráfico, que atraviesa la función en dos puntos.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_013.jpg"/>
+</media></item>
+<item>En el intervalo <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>-1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow><m:mspace width="0.2em"/><m:mi>f</m:mi></m:math> es biunívoca.<newline/>
+<media id="fs-id1170572236096" alt="Imagen de un gráfico. El eje x va de -6 a 6 y el eje y va de -2 a 10. El gráfico es de la función &quot;f(x) = (x+ 1) al cuadrado&quot;, en el intervalo [1, infinito). La función parte del punto (-1, 0) y va aumentando. La intersección x está en el punto (-1, 0) y la intersección y está en el punto (0, 1).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_014.jpg"/>
+</media><newline/> El dominio y el rango de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> vienen dados por el rango y el dominio de <m:math><m:mi>f</m:mi><m:mo>,</m:mo></m:math> respectivamente. Por lo tanto, el dominio de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> ¿es <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y el rango de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> ¿es <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Para encontrar una fórmula para <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> resuelva la ecuación <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> por <m:math><m:mi>x</m:mi><m:mo>.</m:mo></m:math> Si <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>±</m:mo><m:msqrt><m:mi>y</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> Como estamos restringiendo el dominio al intervalo donde <m:math><m:mrow><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>-1</m:mn><m:mo>,</m:mo></m:mrow></m:math> necesitamos <m:math><m:mrow><m:mo>±</m:mo><m:msqrt><m:mi>y</m:mi></m:msqrt><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>+</m:mo><m:msqrt><m:mi>y</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> Al intercambiar <m:math><m:mrow><m:mi>x</m:mi></m:mrow></m:math> como <m:math><m:mi>y</m:mi><m:mo>,</m:mo></m:math> escribimos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>+</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:math> y concluimos que <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>+</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170572551765" class="checkpoint">
+<exercise id="fs-id1170572551769">
+<problem id="fs-id1170572551771">
+<para id="fs-id1170572551773">Considere <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mtext>/</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> restringida al dominio <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Verifique que <m:math><m:mi>f</m:mi></m:math> es biunívoca en este dominio. Determine el dominio y el rango de la inversa de <m:math><m:mi>f</m:mi></m:math> y encuentre una fórmula para <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572141201">
+<para id="fs-id1170572141203">El dominio de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> ¿es <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> El rango de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> ¿es <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> La función inversa viene dada por la fórmula <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-1</m:mn><m:mtext>/</m:mtext><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165041816987" type="hint">
+<title>Pista</title>
+<para id="fs-id1165042134545">El dominio y el rango de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> vienen dados por el rango y el dominio de <m:math><m:mi>f</m:mi><m:mo>,</m:mo></m:math> respectivamente. Para hallar <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> resuelva <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mtext>/</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> por <m:math><m:mi>x</m:mi><m:mtext>.</m:mtext></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+</section>
+<section id="fs-id1170572141300">
+<title>Funciones trigonométricas inversas</title>
+<para id="fs-id1170572478796">Las seis funciones trigonométricas básicas son periódicas y, por tanto, no son biunívocas. Sin embargo, si restringimos el dominio de una función trigonométrica a un intervalo en el que es biunívoca, podemos definir su inversa. Consideremos la función seno (<link document="m53479" target-id="CNX_Calc_Figure_01_03_009"/>). La función seno es biunívoca en un número infinito de intervalos, pero la convención estándar es restringir el dominio al intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mo>-</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Al hacerlo, definimos la función seno inversa en el dominio <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo stretchy="false">]</m:mo></m:mrow></m:math> tal que para cualquier <m:math><m:mi>x</m:mi></m:math> en el intervalo <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo stretchy="false">]</m:mo><m:mo>,</m:mo></m:mrow></m:math> la función seno inversa nos dice qué ángulo <m:math><m:mi>θ</m:mi></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mo>-</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> satisface <m:math><m:mrow><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Del mismo modo, podemos restringir los dominios de las otras funciones trigonométricas para definir las <term id="term-00005">funciones trigonométricas inversas</term>, que son funciones que nos dicen qué ángulo en un determinado intervalo tiene un valor trigonométrico específico.</para>
+<note id="fs-id1170572547395">
+<title>Definición</title>
+<para id="fs-id1170572547399">La función seno inversa, denotada <m:math><m:mrow><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> o arcsin, y la función coseno inversa, denotada <m:math><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> o arccos, se definen en el dominio <m:math><m:mrow><m:mi>D</m:mi><m:mo>=</m:mo><m:mtext>{</m:mtext><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>1</m:mn><m:mo>}</m:mo></m:mrow></m:math> de la siguiente forma:</para>
+<equation id="fs-id1170572547453">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>y</m:mi><m:mspace width="0.2em"/><m:mtext>si y solo si</m:mtext><m:mspace width="0.2em"/><m:mtext>sin</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mo>- −</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>≤</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>;</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>y</m:mi><m:mspace width="0.2em"/><m:mtext>si y solo si</m:mtext><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>≤</m:mo><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation><para id="fs-id1170572550974">La función tangente inversa, denotada <m:math><m:mrow><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> o arctan, y la función cotangente inversa, denotada <m:math><m:mrow><m:msup><m:mrow><m:mtext>cot</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> o arccot, se definen en el dominio <m:math><m:mrow><m:mi>D</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mo>- −</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>}</m:mo></m:mrow></m:math> de la siguiente forma:</para>
+<equation id="fs-id1170572551028">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>y</m:mi><m:mspace width="0.2em"/><m:mtext>si y solo si</m:mtext><m:mspace width="0.2em"/><m:mtext>tan</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mo>- −</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>&lt;</m:mo><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>;</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mrow><m:msup><m:mrow><m:mtext>cot</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>y</m:mi><m:mspace width="0.2em"/><m:mtext>si y solo si</m:mtext><m:mspace width="0.2em"/><m:mtext>cot</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation><para id="fs-id1170572434001">La función cosecante inversa, denotada <m:math><m:mrow><m:msup><m:mrow><m:mtext>csc</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> o arccsc, y la función secante inversa, denotada <m:math><m:mrow><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> o arcsec, se definen en el dominio <m:math><m:mrow><m:mi>D</m:mi><m:mo>=</m:mo><m:mo>{</m:mo><m:mi>x</m:mi><m:mo>|</m:mo><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>}</m:mo></m:mrow></m:math> de la siguiente forma:</para>
+<equation id="fs-id1170572548730">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:msup><m:mrow><m:mtext>csc</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>y</m:mi><m:mspace width="0.2em"/><m:mtext>si y solo si</m:mtext><m:mspace width="0.2em"/><m:mtext>csc</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mo>- −</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>≤</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>;</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mrow><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>y</m:mi><m:mspace width="0.2em"/><m:mtext>si y solo si</m:mtext><m:mspace width="0.2em"/><m:mtext>sec</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>≤</m:mo><m:mi>π</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>≠</m:mo><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:math></equation></note>
+<para id="fs-id1170572551163">Para graficar las funciones trigonométricas inversas, utilizamos las gráficas de las funciones trigonométricas restringidas a los dominios definidos anteriormente y reflejamos las gráficas sobre la recta <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> (<link target-id="CNX_Calc_Figure_01_04_015"/>).</para>
+<figure id="CNX_Calc_Figure_01_04_015">
+<media id="fs-id1170572551187" alt="Una imagen de seis gráficos. El primer gráfico es de la función &quot;f(x) = sen inversa(x)&quot;, que es una función de curva creciente. La función comienza en el punto (-1, -(pi/2)) y aumenta hasta terminar en el punto (1, (pi/2)). La intersección en x y la intersección en y están en el origen. El segundo gráfico es de la función &quot;f(x) = cos inversa (x)&quot;, que es una función curva decreciente. La función comienza en el punto (-1, pi) y disminuye hasta terminar en el punto (1, 0). La intersección en x está en el punto (1, 0). La intersección en y está en el punto (0, (pi/2)). El tercer gráfico es de la función f(x) = tan inversa (x)&quot;, que es una función de curva creciente. La función comienza cerca de la línea horizontal &quot;y = -(pi/2)&quot; y aumenta hasta acercarse a la &quot;y = (pi/2)&quot;. La función nunca interseca ninguna de estas líneas, siempre se mantiene entre ellas; son asíntotas horizontales. La intersección en x y la intersección en y están ambas en el origen. El cuarto gráfico es de la función &quot;f(x) = cot inversa (x)&quot;, que es una función curva decreciente. La función comienza ligeramente por debajo de la línea horizontal &quot;y = pi&quot; y va disminuyendo hasta acercarse al eje x. La función nunca interseca ninguna de estas líneas, siempre se mantiene entre ellas; son asíntotas horizontales. El quinto gráfico es de la función &quot;f(x) = csc inversa (x)&quot;, una función curva decreciente. La función comienza ligeramente por debajo del eje x, y luego disminuye hasta llegar a un punto de círculo cerrado en (-1, -(pi/2)). A continuación, la función retoma el punto (1, (pi/2)), donde comienza a disminuir y a acercarse al eje x, sin llegar a tocarlo. Hay una asíntota horizontal en el eje x. El sexto gráfico es de la función &quot;f(x) = sec inversa (x)&quot;, una función curva creciente. La función comienza ligeramente por encima de la línea horizontal &quot;y = (pi/2)&quot;, y luego aumenta hasta llegar a un punto de círculo cerrado en (-1, pi). La función retoma su curso en el punto (1, 0), donde comienza a aumentar y a acercarse a la recta horizontal &quot;y = (pi/2)&quot;, sin llegar a tocarla. Hay una asíntota horizontal en la &quot;y = (pi/2)&quot;.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_018.jpg"/>
+</media>
+<caption>El gráfico de cada una de las funciones trigonométricas inversas es una reflexión sobre la recta <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> de la correspondiente función trigonométrica restringida.</caption>
+</figure>
+<note id="fs-id1170572366188" class="media-2">
+<para id="fs-id1170572366192">Visita la <link url="http://www.openstax.org/l/20_inversefun">siguiente página web</link> para ver más comparaciones de funciones y sus inversas.</para>
+</note>
+<para id="fs-id1170572366201">Al evaluar una función trigonométrica inversa, la salida es un ángulo. Por ejemplo, para evaluar <m:math><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> necesitamos encontrar un ángulo <m:math><m:mi>θ</m:mi></m:math> de manera que <m:math><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Evidentemente, muchos ángulos tienen esta propiedad. Sin embargo, dada la definición de <m:math><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> necesitamos el ángulo <m:math><m:mi>θ</m:mi></m:math> que no sólo resuelve esta ecuación, sino que se halla en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>π</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Concluimos que <m:math><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170572472189">Ahora consideraremos una composición de una función trigonométrica y su inversa. Por ejemplo, veamos las dos expresiones <m:math><m:mrow><m:mtext>sin</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow><m:mrow><m:mspace width="0.2em"/><m:mtext/><m:mspace width="0.2em"/><m:mn>2</m:mn></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>π</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> En la primera, simplificamos como sigue:</para>
+<equation id="fs-id1170572472267" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170572548620">En la segunda, tenemos</para>
+<equation id="fs-id1170572548623" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>π</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170572548676">La función inversa se supone que "deshace" la función original, así que ¿por qué no es <m:math><m:mrow><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>π</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>π</m:mi><m:mo>con dígito d?</m:mo></m:mrow></m:math> Recordando nuestra definición de funciones inversas, una función <m:math><m:mi>f</m:mi></m:math> y su inversa <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> cumplen las condiciones <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math> para todos los <m:math><m:mi>y</m:mi></m:math> en el dominio de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> para todos los valores <m:math><m:mrow><m:mi>x</m:mi></m:mrow></m:math> en el dominio de <m:math><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> ¿Qué pasó aquí? La cuestión es que la función inversa del seno, <m:math><m:mrow><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> es la inversa de la función seno <emphasis effect="italics">restringida</emphasis> definida en el dominio <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mo>-</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow><m:mtext>.</m:mtext></m:mrow></m:math> Por lo tanto, para <m:math><m:mrow><m:mi>x</m:mi></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mo>-</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow><m:mtext>,</m:mtext></m:mrow></m:math> es cierto que <m:math><m:mrow><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Sin embargo, para valores de <m:math><m:mrow><m:mi>x</m:mi></m:mrow></m:math> fuera de este intervalo, la ecuación no se cumple, aunque <m:math><m:mrow><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> se define para todos los números reales <m:math><m:mi>x</m:mi><m:mo>.</m:mo></m:math></para>
+<para id="fs-id1170572089863">¿Qué pasa con <m:math><m:mrow><m:mtext>sin</m:mtext><m:mo stretchy="false">(</m:mo><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mi>y</m:mi><m:mo stretchy="false">)</m:mo><m:mo>con dígito d?</m:mo></m:mrow></m:math> ¿Presenta un problema similar? La respuesta es <emphasis effect="italics">no</emphasis>. Dado que el dominio de <m:math><m:mrow><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> es el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> concluimos que <m:math><m:mrow><m:mtext>sin</m:mtext><m:mo stretchy="false">(</m:mo><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mi>y</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math> si <m:math><m:mrow><m:mn>-1</m:mn><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>≤</m:mo><m:mn>1</m:mn></m:mrow></m:math> y la expresión no está definida para otros valores de <m:math><m:mrow><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math> En resumen,</para>
+<equation id="fs-id1170572550786" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mi>y</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mi>y</m:mi><m:mspace width="0.2em"/><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mn>-1</m:mn><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>≤</m:mo><m:mn>1</m:mn></m:mrow></m:math></equation>
+<para id="fs-id1170572550837">y</para>
+<equation id="fs-id1170572550840" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mo>- −</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170572550900">Del mismo modo, para la función coseno,</para>
+<equation id="fs-id1170572550903" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mi>y</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mi>y</m:mi><m:mspace width="0.2em"/><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mn>-1</m:mn><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>≤</m:mo><m:mn>1</m:mn></m:mrow></m:math></equation>
+<para id="fs-id1170572549577">y</para>
+<equation id="fs-id1170572549580" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170572549631">Propiedades similares son válidas para las demás funciones trigonométricas y sus inversas.</para>
+<example id="fs-id1170572549634">
+<exercise id="fs-id1170572549640">
+<problem id="fs-id1170572549642">
+<title>Evaluación de expresiones que implican funciones trigonométricas inversas</title>
+<para id="fs-id1170572549644">Evalúe cada una de las siguientes expresiones.</para>
+<list id="fs-id1170572549647" list-type="enumerated" number-style="lower-alpha">
+<item>Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>-</m:mo><m:mfrac><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</item>
+<item>Los términos <m:math><m:mrow><m:mtext>tan</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</item>
+<item>Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>5</m:mn><m:mi>π</m:mi></m:mrow><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</item>
+<item>Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1170572549356">
+<list id="fs-id1170572549361" list-type="enumerated" number-style="lower-alpha">
+<item>Al evaluar <m:math><m:mrow><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> equivale a encontrar el ángulo <m:math><m:mi>θ</m:mi></m:math> de manera que <m:math><m:mrow><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn><m:mo>≤</m:mo><m:mi>θ</m:mi><m:mo>≤</m:mo><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> El ángulo <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:math> satisface estas dos condiciones. Por lo tanto, <m:math><m:mrow><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Primero utilizamos el hecho de que <m:math><m:mrow><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn><m:mtext>/</m:mtext><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>6</m:mn><m:mo>.</m:mo></m:mrow></m:math> Entonces <m:math><m:mrow><m:mtext>tan</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>-π</m:mi><m:mtext>/</m:mtext><m:mn>6</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-1</m:mn><m:mtext>/</m:mtext><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, <m:math><m:mrow><m:mtext>tan</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn><m:mtext>/</m:mtext><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-1</m:mn><m:mtext>/</m:mtext><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Para evaluar <m:math><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>5</m:mn><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> utiliza primero el hecho de que <m:math><m:mrow><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>5</m:mn><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mtext>/</m:mtext><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Entonces tenemos que encontrar el ángulo <m:math><m:mi>θ</m:mi></m:math> de manera que <m:math><m:mrow><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>θ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>θ</m:mi><m:mo>≤</m:mo><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>4</m:mn></m:mrow></m:math> satisface estas dos condiciones, tenemos <m:math><m:mrow><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>5</m:mn><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>–</m:mtext><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Dado que <m:math><m:mrow><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> tenemos que evaluar <m:math><m:mrow><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Es decir, necesitamos encontrar el ángulo <m:math><m:mi>θ</m:mi></m:math> de manera que <m:math><m:mrow><m:mtext>sin</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>θ</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn><m:mo>≤</m:mo><m:mi>θ</m:mi><m:mo>≤</m:mo><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>6</m:mn></m:mrow></m:math> satisface estas dos condiciones, podemos concluir que <m:math><m:mrow><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>6</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170572169395" class="project">
+<title>Valor máximo de una función</title>
+<para id="fs-id1170572169402">En muchas áreas de la ciencia, la ingeniería y las matemáticas, es útil conocer el valor máximo que puede obtener una función, aunque no conozcamos su valor exacto en un instante determinado. Por ejemplo, si tenemos una función que describe la resistencia de una viga del tejado, querremos saber el peso máximo que puede soportar la viga sin romperse. Si tenemos una función que describe la velocidad de un tren, nos gustaría saber su velocidad máxima antes de que salte de los raíles. El diseño seguro depende a menudo de conocer los valores máximos.</para>
+<para id="fs-id1170572169416">Este proyecto describe un ejemplo sencillo de una función con un valor máximo dependiente de los coeficientes de dos ecuaciones. Veremos que los valores máximos pueden depender de varios factores distintos de la variable independiente <emphasis effect="italics">x</emphasis>.</para>
+<list id="fs-id1170572169426" list-type="enumerated" number-style="arabic">
+<item>Consideremos el gráfico en la <link target-id="CNX_Calc_Figure_01_04_016"/> de la función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Describa su forma general. ¿Es periódico? ¿Cómo lo sabe?<newline/>
+<figure id="CNX_Calc_Figure_01_04_016">
+<media id="fs-id1170572173092" alt="Imagen de un gráfico. El eje x va de -4 a 4 y el eje y va de -4 a 4. El gráfico es de la función &quot;y = sin(x) + cos(x)&quot;, una función de onda curva. El gráfico de la función disminuye hasta llegar al punto aproximado (-(3pi/4), -1,4), donde aumenta hasta el punto aproximado ((pi/4), 1,4), donde comienza a disminuir de nuevo. Las intersecciones en x que se muestran en esta gráfica de la función están en (-(5pi/4), 0), (-(pi/4), 0) y ((3pi/4), 0). La intersección y está en (0, 1).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_016.jpg"/>
+</media>
+<caption>El gráfico de <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure><newline/> Utilizando una calculadora gráfica u otro dispositivo para graficar, estime los valores <m:math><m:mi>x</m:mi></m:math> como de la intersección en <m:math><m:mi>y</m:mi></m:math> del punto máximo del gráfico (el primer punto de este tipo donde <emphasis effect="italics">x</emphasis> > 0). Puede ser útil expresar el valor de <m:math><m:mi>x</m:mi></m:math> como múltiplo de π.</item>
+<item>Consideremos ahora otros gráficos de la forma <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>A</m:mi><m:mspace width="0.1em"/><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>B</m:mi><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> para varios valores de <emphasis effect="italics">A</emphasis> y <emphasis effect="italics">B</emphasis>. Dibuje el gráfico cuando <emphasis effect="italics">A</emphasis> = 2 y <emphasis effect="italics">B</emphasis> = 1, y encuentre los valores <m:math><m:mi>x</m:mi></m:math> y los <emphasis effect="italics">y</emphasis> para el punto máximo. (Recuerde expresar el valor <emphasis effect="italics">x</emphasis>como un múltiplo de π, si es posible) ¿Se movió?</item>
+<item>Repita para <emphasis effect="italics">A</emphasis> = 1, <emphasis effect="italics">B</emphasis> = 2. ¿Hay alguna relación con lo que encontró en la parte (2)?</item>
+<item>Complete la siguiente tabla, añadiendo algunas opciones propias para <emphasis effect="italics">A</emphasis> y <emphasis effect="italics">B</emphasis>:<newline/>
+<table id="fs-id1170572554057" class="unnumbered" summary="A table containing 8 columns and 9 rows is shown. The first column is labeled “A” and contains the values “0,1,1,1,2,2,3, and 4.” The second column is labeled “B” and contains the values “1,0,1,2,1,2,4, and 3.” The third column is labeled “x” and has no values for any of the rows. The fourth column is labeled “y” and contains no values for any of the rows. The fifth column is separated from the fourth column by a gutter, is labeled “A” and contains the values “the square root of 3,1,12, and 5.” The sixth column is labeled “B” and contains the values 1, the square root of 3,5, and 12.” The seventh column is labeled “x” and contains no values for any of the rows. The eighth column is labeled “y” and contains no values for any of the rows.">
+<label/>
+<tgroup cols="9">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<colspec colnum="5" colname="c5"/>
+<colspec colnum="6" colname="c6"/>
+<colspec colnum="7" colname="c7"/>
+<colspec colnum="8" colname="c8"/>
+<colspec colnum="9" colname="c9"/>
+<thead>
+<row valign="top">
+<entry align="left"><emphasis effect="italics">A</emphasis></entry>
+<entry align="left"><emphasis effect="italics">B</emphasis></entry>
+<entry align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry align="left"><emphasis effect="italics">y</emphasis></entry>
+<entry align="left"/>
+<entry align="left"><emphasis effect="italics">A</emphasis></entry>
+<entry align="left"><emphasis effect="italics">B</emphasis></entry>
+<entry align="left"><emphasis effect="italics">x</emphasis></entry>
+<entry align="left"><emphasis effect="italics">y</emphasis></entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry align="left">0</entry>
+<entry align="left">1</entry>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left" morerows="7"/>
+<entry align="left">Los términos <m:math><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow></m:math></entry>
+<entry align="left">1</entry>
+<entry align="left"/>
+<entry align="left"/>
+</row>
+<row valign="top">
+<entry align="left">1</entry>
+<entry align="left">0</entry>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left">1</entry>
+<entry align="left">Los términos <m:math><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow></m:math></entry>
+<entry align="left"/>
+<entry align="left"/>
+</row>
+<row valign="top">
+<entry align="left">1</entry>
+<entry align="left">1</entry>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left">12</entry>
+<entry align="left">5</entry>
+<entry align="left"/>
+<entry align="left"/>
+</row>
+<row valign="top">
+<entry align="left">1</entry>
+<entry align="left">2</entry>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left">5</entry>
+<entry align="left">12</entry>
+<entry align="left"/>
+<entry align="left"/>
+</row>
+<row valign="top">
+<entry align="left">2</entry>
+<entry align="left">1</entry>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+</row>
+<row valign="top">
+<entry align="left">2</entry>
+<entry align="left">2</entry>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+</row>
+<row valign="top">
+<entry align="left">3</entry>
+<entry align="left">4</entry>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+</row>
+<row valign="top">
+<entry align="left">4</entry>
+<entry align="left">3</entry>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+<entry align="left"/>
+</row>
+</tbody>
+</tgroup>
+</table></item>
+<item>Trate de averiguar la fórmula de los valores <emphasis effect="italics">y</emphasis>.</item>
+<item>La fórmula de los valores <m:math><m:mi>x</m:mi></m:math> es un poco más difícil. Los puntos más útiles de la tabla son <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> (<emphasis effect="italics">Pista</emphasis>: Considere las funciones trigonométricas inversas)</item>
+<item>Si halló fórmulas para las partes (5) y (6), demuestre que funcionan juntas. Es decir, sustituya la fórmula de valor <m:math><m:mi>x</m:mi></m:math> que encontró en <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>A</m:mi><m:mspace width="0.1em"/><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>B</m:mi><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> y simplifíquela para llegar a la fórmula de valor <m:math><m:mi>y</m:mi></m:math> que encontró.</item>
+</list>
+</note>
+</section>
+<section id="fs-id1170572470426" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1170572470433" list-type="bulleted" bullet-style="bullet">
+<item>Para que una función tenga una inversa, la función debe ser biunívoca. Dado el gráfico de una función, podemos determinar si esta es biunívoca utilizando la prueba de la recta horizontal.</item>
+<item>Si una función no es biunívoca, podemos restringir el dominio a otro más pequeño en el que la función lo sea, y a continuación, definimos la inversa de la función en el dominio más pequeño.</item>
+<item>Para una función <m:math><m:mi>f</m:mi></m:math> y su inversa <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> para todos los valores <m:math><m:mi>x</m:mi></m:math> en el dominio de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> para todos los valores <m:math><m:mrow><m:mi>x</m:mi></m:mrow></m:math> en el dominio de <m:math><m:mrow><m:mi>f</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Como las funciones trigonométricas son periódicas, necesitamos restringir sus dominios para definir las funciones trigonométricas inversas.</item>
+<item>El gráfico de una función <m:math><m:mi>f</m:mi></m:math> y su inversa <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> son simétricos respecto a la línea <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</section>
+<section id="fs-id1170572453118" class="key-equations">
+<title>Ecuaciones clave</title>
+<table id="eip-482" summary="." class="unnumbered unstyled">
+<tgroup cols="2"><tbody>
+  <row>
+    <entry><emphasis effect="bold">Funciones inversas</emphasis></entry>
+    <entry>Los términos <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>para todo</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mtext>in</m:mtext><m:mspace width="0.2em"/><m:mi>D</m:mi><m:mo>,</m:mo><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>y</m:mi><m:mspace width="0.2em"/><m:mtext>para todo</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mspace width="0.2em"/><m:mtext>in</m:mtext><m:mspace width="0.2em"/><m:mi>R</m:mi><m:mo>.</m:mo></m:mrow></m:math></entry>
+  </row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section id="fs-id1170572547960" class="section-exercises">
+<para id="fs-id1170572547964">En los siguientes ejercicios, utilice la prueba de la línea horizontal para determinar si las funciones en cada uno de los gráficos dados son biunívocas.</para>
+<exercise id="fs-id1170572547969">
+<problem id="fs-id1170572547971">
+<media id="fs-id1170572547973" alt="Imagen de un gráfico. El eje x va de -4 a 4 y el eje y va de -4 a 4. El gráfico es de una función que disminuye en línea recta hasta el origen, donde comienza a aumentar en línea recta. La intersección en x y la intersección en y están ambas en el origen.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_201.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1170572547988">
+<para id="fs-id1170572547990">No biunívoca</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572547995">
+<problem id="fs-id1170572547997">
+<media id="fs-id1170572547999" alt="Imagen de un gráfico. El eje x va de 0 a 7 y el eje y va de -4 a 4. El gráfico es de una función que siempre es creciente. Hay una intersección en x aproximada en el punto (1, 0) y no se muestra ninguna intersección en y.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_202.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1170572548022">
+<problem id="fs-id1170572548024">
+<media id="fs-id1170572548026" alt="Imagen de un gráfico. El eje x va de -4 a 4 y el eje y va de -4 a 4. El gráfico es de una función que se asemeja a un semicírculo, la mitad superior de un círculo. La función comienza en el punto (-3, 0) y aumenta hasta el punto (0, 3), donde comienza a disminuir hasta terminar en el punto (3, 0). Las intersecciones en x están en (-3, 0) y (3, 0). La intersección y está en (0, 3).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_203.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1170572548042">
+<para id="fs-id1170572548044">No biunívoca</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572548050">
+<problem id="fs-id1170572548052">
+<media id="fs-id1170572548054" alt="Imagen de un gráfico. El eje x va de -4 a 4 y el eje y va de -4 a 4. El gráfico es de una función curva. La función aumenta hasta llegar al origen, luego disminuye hasta llegar al punto (2, -4), donde comienza a aumentar de nuevo. Hay intersecciones en x en el origen y en el punto (3, 0). La intersección en y está en el origen.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_204.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1170572548077">
+<problem id="fs-id1170572548079">
+<media id="fs-id1170572548081" alt="Imagen de un gráfico. El eje x va de -4 a 4 y el eje y va de -4 a 4. El gráfico es de una función curva que siempre es creciente. La intersección en x y la intersección en y están ambas en el origen.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_205.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1170572548096">
+<para id="fs-id1170572548098">Biunívoca</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572452097">
+<problem id="fs-id1170572452099">
+<media id="fs-id1170572452101" alt="Imagen de un gráfico. El eje x va de -4 a 7 y el eje y va de -4 a 4. El gráfico es de una función que aumenta en línea recta hasta el punto aproximado (0, 3). Después de este punto, la función se convierte en una línea recta horizontal. La intersección en x y la intersección en y están ambas en el origen.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_206.jpg"/>
+</media>
+</problem>
+</exercise>
+<para id="fs-id1170572452124">En los siguientes ejercicios, a. halle la función inversa, y b. halle el dominio y el rango de la función inversa.</para>
+<exercise id="fs-id1170572452128">
+<problem id="fs-id1170572452130">
+<para id="fs-id1170572452132">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572452168">
+<para id="fs-id1170572452170">a. <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:msqrt></m:mrow></m:math> b. Dominio <m:math><m:mrow><m:mtext>:</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>-4</m:mn><m:mo>,</m:mo><m:mtext>rango</m:mtext><m:mtext>:</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572452229">
+<problem id="fs-id1170572452231">
+<para id="fs-id1170572452233">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mroot><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mn>3</m:mn></m:mroot></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572176863">
+<problem id="fs-id1170572176865">
+<para id="fs-id1170572176867">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572176894">
+<para id="fs-id1170572176896">a. <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mroot><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mn>3</m:mn></m:mroot></m:mrow></m:math> b. Dominio: todos los números reales, rango: todos los números reales</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572176931">
+<problem id="fs-id1170572176934">
+<para id="fs-id1170572176936">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572549738">
+<problem id="fs-id1170572549740">
+<para id="fs-id1170572549742">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msqrt></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572549767">
+<para id="fs-id1170572549770">a. <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> b. Dominio: <m:math><m:mrow><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> rango: <m:math><m:mrow><m:mi>y</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572549826">
+<problem id="fs-id1170572549828">
+<para id="fs-id1170572549831">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1170572451519">En los siguientes ejercicios, utilice el gráfico de <m:math><m:mi>f</m:mi></m:math> para dibujar el gráfico de su función inversa.</para>
+<exercise id="fs-id1170572451526">
+<problem id="fs-id1170572451528">
+<media id="fs-id1170572451534" alt="Imagen de un gráfico. El eje x va de -4 a 4 y el eje y va de -4 a 4. El gráfico es de una función recta creciente denominada &quot;f&quot; que siempre es creciente. La intersección x está en (-2, 0) y la intersección y está en (0, 1).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_207.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1170572451546">
+<para id="fs-id1170572451548"><newline/><media id="fs-id1170572451558" alt="Imagen de un gráfico. El eje x va de -4 a 4 y el eje y va de -4 a 4. El gráfico es de dos funciones. La primera función es una función rectilínea creciente marcada como &quot;f&quot;. La intersección x está en (-2, 0) y la intersección y está en (0, 1). La segunda función es la de una recta creciente denominada &quot;f inversa&quot;. La intersección en x está en el punto (1, 0) y la intersección en y está en el punto (0, -2).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_208.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572451569">
+<problem id="fs-id1170572451571">
+<media id="fs-id1170572451577" alt="Imagen de un gráfico. El eje x va de -4 a 4 y el eje y va de -4 a 4. El gráfico es de una función curva decreciente marcada &quot;f&quot;. A medida que la función disminuye, se acerca al eje x pero nunca lo toca. La función no tiene intersección x y la intersección y es (0, 1).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_209.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1170572452480">
+<problem id="fs-id1170572452482">
+<media id="fs-id1170572452491" alt="Imagen de un gráfico. El eje x va de -8 a 8 y el eje y va de -8 a 8. El gráfico es de una función rectilínea creciente denominada &quot;f&quot;. La función comienza en el punto (0, 1) y aumenta en línea recta hasta el punto (4, 6). Después de este punto, la función sigue aumentando, pero a un ritmo más lento que antes, a medida que se acerca al punto (8, 8). La función no tiene intersección x y la intersección y es (0, 1).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_211.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1170572452501">
+<para id="fs-id1170572452503"><newline/><media id="fs-id1170572452513" alt="Imagen de un gráfico. El eje x va de 0 a 8 y el eje y va de 0 a 8. El gráfico es de dos funciones. La primera función es una función rectilínea creciente marcada como &quot;f&quot;. La función comienza en el punto (0, 1) y aumenta en línea recta hasta el punto (4, 6). Después de este punto, la función sigue aumentando, pero a un ritmo más lento que antes, a medida que se acerca al punto (8, 8). La función no tiene intersección x y la intersección y es (0, 1). La segunda función es una función rectilínea creciente denominada &quot;f inversa&quot;. La función comienza en el punto (1, 0) y aumenta en línea recta hasta el punto (6, 4). Después de este punto, la función sigue aumentando pero a un ritmo más rápido que antes a medida que se acerca al punto (8, 8). La función no tiene intersección en y y la intersección en x es (1, 0).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_212.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572452528">
+<problem id="fs-id1170572452530">
+<media id="fs-id1170572452536" alt="Imagen de un gráfico. El eje x va de -4 a 4 y el eje y va de -4 a 4. El gráfico es de una función curva decreciente denominada &quot;f&quot;, que termina en el origen, que es a la vez la intersección en x y la intersección en y. Otro punto de la función es (-4, 2).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_213.jpg"/>
+</media>
+</problem>
+</exercise>
+<para id="fs-id1170572452571">En los siguientes ejercicios, utilice la composición para determinar qué pares de funciones son inversas.</para>
+<exercise id="fs-id1170572452575">
+<problem id="fs-id1170572452577">
+<para id="fs-id1170572452579">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>8</m:mn><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mi>x</m:mi><m:mn>8</m:mn></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572452620">
+<para id="fs-id1170572452622">Son inversas.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572452628">
+<problem id="fs-id1170572452630">
+<para id="fs-id1170572452632">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>8</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow><m:mn>8</m:mn></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572449207">
+<problem id="fs-id1170572449209">
+<para id="fs-id1170572449211">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>7</m:mn><m:mo>,</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mn>7</m:mn></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572449261">
+<para id="fs-id1170572449263">No son inversas.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572449269">
+<problem id="fs-id1170572449271">
+<para id="fs-id1170572449273">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>2</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572548356">
+<problem id="fs-id1170572548358">
+<para id="fs-id1170572548360">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572548428">
+<para id="fs-id1170572548430">Son inversas.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572548436">
+<problem id="fs-id1170572548438">
+<para id="fs-id1170572548440">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572548511">
+<problem id="fs-id1170572229236">
+<para id="fs-id1170572229238">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>-1</m:mn><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>g</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>+</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572229324">
+<para id="fs-id1170572229326">Son inversas.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572229332">
+<problem id="fs-id1170572229334">
+<para id="fs-id1170572229336">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1170572451285">En los siguientes ejercicios, evalúe las funciones. Indique el valor exacto.</para>
+<exercise id="fs-id1170572451288">
+<problem id="fs-id1170572451291">
+<para id="fs-id1170572451293">Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1170572451320">
+<para id="fs-id1170572451322">Los términos <m:math><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572451334">
+<problem id="fs-id1170572451336">
+<para id="fs-id1170572451338">Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>–</m:mo><m:mfrac><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572451384">
+<problem id="fs-id1170572451386">
+<para id="fs-id1170572451388">Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>cot</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1170572451409">
+<para id="fs-id1170572451411">Los términos <m:math><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572451423">
+<problem id="fs-id1170572451425">
+<para id="fs-id1170572451427">Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572142146">
+<problem id="fs-id1170572142148">
+<para id="fs-id1170572142150">Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1170572142177">
+<para id="fs-id1170572142179">Los términos <m:math><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572142191">
+<problem id="fs-id1170572142193">
+<para id="fs-id1170572142195">Los términos <m:math><m:mrow><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572142240">
+<problem id="fs-id1170572142242">
+<para id="fs-id1170572142245">Los términos <m:math><m:mrow><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1170572142280">
+<para id="fs-id1170572142282">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572142296">
+<problem id="fs-id1170572548960">
+<para id="fs-id1170572548962">Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572549009">
+<problem id="fs-id1170572549011">
+<para id="fs-id1170572549013">Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>tan</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>-</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1170572549049">
+<para id="fs-id1170572549051">Los términos <m:math><m:mrow><m:mo>- −</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572549065">
+<problem id="fs-id1170572549067">
+<para id="fs-id1170572549069">La función <m:math><m:mrow><m:mi>C</m:mi><m:mo>=</m:mo><m:mi>T</m:mi><m:mrow><m:mo>(</m:mo><m:mi>F</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo stretchy="false">(</m:mo><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mn>9</m:mn><m:mo stretchy="false">)</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>F</m:mi><m:mo>- −</m:mo><m:mn>32</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> convierte los grados Fahrenheit en grados Celsius.</para>
+<list id="fs-id1170572549118" list-type="enumerated" number-style="lower-alpha">
+<item>Halle la función inversa <m:math><m:mrow><m:mi>F</m:mi><m:mo>=</m:mo><m:msup><m:mi>T</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>C</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math></item>
+<item>¿Para qué sirve la función inversa?</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1170572451744">
+<problem id="fs-id1170572451746">
+<para id="fs-id1170572451748"><emphasis effect="bold">[T]</emphasis> La velocidad <emphasis effect="italics">V</emphasis> (en centímetros por segundo) de la sangre en una arteria a una distancia <emphasis effect="italics">x</emphasis> cm del centro de esta puede modelarse por la función <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>500</m:mn><m:mo stretchy="false">(</m:mo><m:mn>0,04</m:mn><m:mo>- −</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo stretchy="false">)</m:mo></m:mrow></m:math> para <m:math><m:mrow><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>0,2</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1170572451823" list-type="enumerated" number-style="lower-alpha">
+<item>Calcule <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mi>V</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Interprete para qué sirve la función inversa.</item>
+<item>Halle la distancia del centro de una arteria con una velocidad de 15 cm/seg, 10 cm/seg y 5 cm/seg.</item>
+</list>
+</problem>
+<solution id="fs-id1170572547750">
+<para id="fs-id1170572547753">a. <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>V</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>0,04</m:mn><m:mo>- −</m:mo><m:mfrac><m:mi>V</m:mi><m:mrow><m:mn>500</m:mn></m:mrow></m:mfrac></m:mrow></m:msqrt></m:mrow></m:math> b. La función inversa determina la distancia desde el centro de la arteria, en la que la sangre fluye con velocidad <emphasis effect="italics">V</emphasis>. c. 0,1 cm; 0,14 cm; 0,17 cm</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572547801">
+<problem id="fs-id1170572547803">
+<para id="fs-id1170572547805">Una función que convierte las tallas de los vestidos en Estados Unidos a las de Europa viene dada por <m:math><m:mrow><m:mi>D</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>24</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1170572547832" list-type="enumerated" number-style="lower-alpha">
+<item>Encuentre las tallas de vestido europeas que corresponden a las tallas 6, 8, 10 y 12 en los Estados Unidos.</item>
+<item>Encuentre la función que convierte las tallas de vestidos europeas en tallas estadounidenses de vestidos.</item>
+<item>Utiliza la parte b. para encontrar las tallas de vestido en los Estados Unidos que corresponden a la 46, 52, 62 y 70.</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1170572547878">
+<problem id="fs-id1170572547880">
+<para id="fs-id1170572547882"><emphasis effect="bold">[T]</emphasis> El costo de eliminar una toxina de un lago se modela mediante la función</para>
+<para id="fs-id1170572547889">Los términos <m:math><m:mrow><m:mi>C</m:mi><m:mo stretchy="false">(</m:mo><m:mi>p</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mrow><m:mrow><m:mn>75</m:mn><m:mi>p</m:mi></m:mrow><m:mtext>/</m:mtext><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>85</m:mn><m:mo>- −</m:mo><m:mi>p</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:mrow></m:mrow></m:math> donde <m:math><m:mi>C</m:mi></m:math> es el costo (en miles de dólares) y <m:math><m:mi>p</m:mi></m:math> es la cantidad de toxina en un lago pequeño (medida en partes por mil millones [parts per billion, ppb]). Este modelo solo es válido cuando la cantidad de toxina es inferior a 85 ppb.</para>
+<list id="fs-id1170572542869" list-type="enumerated" number-style="lower-alpha">
+<item>Calcule el costo de eliminar 25 ppb, 40 ppb y 50 ppb de la toxina del lago.</item>
+<item>Halle la función inversa. c. Utilice la parte b. para determinar qué cantidad de toxina se elimina por 50.000 dólares.</item>
+</list>
+</problem>
+<solution id="fs-id1170572542885">
+<para id="fs-id1170572542887">a. 31.250 dólares, 66.667 dólares, 107.143 dólares b. <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>p</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>85</m:mn><m:mi>C</m:mi></m:mrow><m:mrow><m:mi>C</m:mi><m:mo>+</m:mo><m:mn>75</m:mn></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> c. 34 ppb</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572542921">
+<problem id="fs-id1170572542923">
+<para id="fs-id1170572542925"><emphasis effect="bold">[T]</emphasis> Un coche de carreras acelera a una velocidad dada por</para>
+<para id="fs-id1170572542932">Los términos <m:math><m:mrow><m:mi>v</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>25</m:mn></m:mrow><m:mn>4</m:mn></m:mfrac><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>54</m:mn><m:mo>,</m:mo></m:mrow></m:math> donde <emphasis effect="italics">v</emphasis> es la velocidad (en pies por segundo) en el tiempo <emphasis effect="italics">t</emphasis>.</para>
+<list id="fs-id1170572542980" list-type="enumerated" number-style="lower-alpha">
+<item>Halle la velocidad del coche a los 10 seg.</item>
+<item>Halle la función inversa.</item>
+<item>Utilice la parte b. para determinar el tiempo que tarda el coche en alcanzar una velocidad de 150 pies/seg.</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1170572543027">
+<problem id="fs-id1170572455080">
+<para id="fs-id1170572455082"><emphasis effect="bold">[T]</emphasis> El número Mach <emphasis effect="italics">M</emphasis> de un avión es la relación entre su velocidad y la velocidad del sonido. Cuando un avión vuela a una altitud constante, su ángulo de Mach viene dado por <m:math><m:mrow><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>M</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170572455127">Encuentre el ángulo de Mach (al grado más cercano) para los siguientes números Mach.</para>
+<media id="fs-id1170572455137" alt="Imagen de un avión a vuelo de pájaro. Directamente delante del avión hay una forma de &quot;V&quot; lateral, con el avión volando directamente hacia la apertura de dicha forma. La forma de &quot;V&quot; se denomina &quot;onda mach&quot;. Hay dos flechas marcadas. La primera flecha señala desde el morro del avión hasta la esquina de la &quot;V&quot;. Esta flecha tiene la marca &quot;velocidad = v&quot;. La segunda flecha apunta en diagonal desde el morro del avión hasta el borde de la parte superior de la forma de &quot;V&quot;. Esta flecha tiene la marca &quot;velocidad del sonido = a&quot;. Entre estas dos flechas hay un ángulo denominado &quot;ángulo de Mach&quot;. También hay un texto en la imagen que dice &quot;mach = M > 1,0&quot;.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_01_04_215.jpg"/>
+</media>
+<list id="fs-id1170572455148" list-type="enumerated" number-style="lower-alpha"><item>Los términos <m:math><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mn>1,4</m:mn></m:mrow></m:math></item>
+<item>Los términos <m:math><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mn>2,8</m:mn></m:mrow></m:math></item>
+<item>Los términos <m:math><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mn>4,3 </m:mn></m:mrow></m:math></item>
+</list></problem>
+<solution id="fs-id1170572455188">
+<para id="fs-id1170572455191">a. <m:math><m:mrow><m:mo>~</m:mo><m:mn>92</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> b. <m:math><m:mrow><m:mo>~</m:mo><m:mn>42</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> c. <m:math><m:mrow><m:mo>~</m:mo><m:mn>27</m:mn><m:mtext>°</m:mtext></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572455224">
+<problem id="fs-id1170572455226">
+<para id="fs-id1170572455228"><emphasis effect="bold">[T]</emphasis> Usando <m:math><m:mrow><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>M</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> encuentre el número Mach <emphasis effect="italics">M</emphasis> para los siguientes ángulos.</para>
+<list id="fs-id1170572551412" list-type="enumerated" number-style="lower-alpha">
+<item>Los términos <m:math><m:mrow><m:mi>μ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow></m:math></item>
+<item>Los términos <m:math><m:mrow><m:mi>μ</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mn>7</m:mn></m:mfrac></m:mrow></m:math></item>
+<item>Los términos <m:math><m:mrow><m:mi>μ</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>8</m:mn></m:mfrac></m:mrow></m:math></item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1170572551494">
+<problem id="fs-id1170572551497">
+<para id="fs-id1170572551499"><emphasis effect="bold">[T]</emphasis> La temperatura media (en grados Celsius) de una ciudad del norte de los Estados Unidos puede modelarse mediante la función</para>
+<para id="fs-id1170572551507">Los términos <m:math><m:mrow><m:mi>T</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>+</m:mo><m:mn>18</m:mn><m:mspace width="0.1em"/><m:mtext>sin</m:mtext><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>- −</m:mo><m:mn>4,6</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>x</m:mi></m:math> es el tiempo en meses y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1,00</m:mn></m:mrow></m:math> corresponde al 1 de enero. Determine the day(s) (month and day) when the average temperature is <m:math><m:mrow><m:mn>21</m:mn><m:mtext>°</m:mtext><m:mtext>C</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Use the integer portion of your answer(s) as the month and calculate the day of the month from the decimal portion.</para>
+</problem>
+<solution id="fs-id1170572545092">
+<para id="fs-id1170572545094">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>≈</m:mo><m:mn>6.69</m:mn><m:mo>,</m:mo><m:mn>8.51</m:mn><m:mo>;</m:mo></m:mrow></m:math> así, la temperatura tiene lugat el 21 de junio y el 15 de agosto.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572545115">
+<problem id="fs-id1170572545117">
+<para id="fs-id1170572545119"><emphasis effect="bold">[T]</emphasis> La profundidad (en pies) del agua en un muelle cambia con la subida y bajada de las mareas. Se modela mediante la función</para>
+<para id="fs-id1170572545127">Los términos <m:math><m:mrow><m:mi>D</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac><m:mi>t</m:mi><m:mo>-</m:mo><m:mfrac><m:mrow><m:mn>7</m:mn><m:mi>π</m:mi></m:mrow><m:mn>6</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>8</m:mn><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>t</m:mi></m:math> es el número de horas después de la medianoche. Determine el primer momento después de medianoche cuando la profundidad es de 11,75 ft.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572545202">
+<problem id="fs-id1170572545204">
+<para id="fs-id1170572545207"><emphasis effect="bold">[T]</emphasis> Un objeto que se mueve con movimiento armónico simple se modela mediante la función</para>
+<para id="fs-id1170572545214">Los términos <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-6</m:mn><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>π</m:mi><m:mi>t</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>s</m:mi></m:math> se mide en pulgadas y <m:math><m:mi>t</m:mi></m:math> se mide en segundos. Determina el primer tiempo cuando la distancia recorrida es de 4,5 in.</para></problem>
+<solution id="fs-id1170572545265">
+<para id="fs-id1170572545267">Los términos <m:math><m:mrow><m:mo>~</m:mo><m:mn>1,5</m:mn><m:mspace width="0.2em"/><m:mtext>sec</m:mtext></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572169073">
+<problem id="fs-id1170572169076">
+<para id="fs-id1170572169078">Una galería de arte local tiene un retrato de 3 ft de altura que está colgado a 2,5 ft por encima del nivel de los ojos de una persona de estatura media<emphasis effect="bold">.</emphasis> El ángulo de visión <m:math><m:mi>θ</m:mi></m:math> se puede modelar mediante la función</para>
+<para id="fs-id1170572169091">Los términos <m:math><m:mrow><m:mi>θ</m:mi><m:mo>=</m:mo><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mfrac><m:mrow><m:mn>5,5</m:mn></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>-</m:mo><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mfrac><m:mrow><m:mn>2,5</m:mn></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>x</m:mi></m:math> es la distancia (en pies) desde el retrato. Halle el ángulo de visión de una persona que está a 4 ft del retrato.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572169169">
+<problem id="fs-id1170572169171">
+<para id="fs-id1170572169173"><emphasis effect="bold">[T]</emphasis> Utilice una calculadora para evaluar <m:math><m:mrow><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>tan</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2,1</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2,1</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Explique los resultados de cada uno.</para>
+</problem>
+<solution id="fs-id1170572243717">
+<para id="fs-id1170572243719">Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>tan</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2,1</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mo>- −</m:mo><m:mn>1.0416</m:mn><m:mo>;</m:mo></m:mrow></m:math> la expresión no es igual a 2,1 ya que <m:math><m:mrow><m:mn>2,1</m:mn><m:mo>></m:mo><m:mn>1,57</m:mn><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow></m:math>; en otras palabras, no está en el dominio restringido de <m:math><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>.</m:mo><m:mspace width="0.2em"/><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2,1</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2,1</m:mn><m:mo>,</m:mo></m:mrow></m:math> ya que 2,1 está en el dominio restringido de <m:math><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572243833">
+<problem id="fs-id1170572243835">
+<para id="fs-id1170572243837"><emphasis effect="bold">[T]</emphasis> Utilice una calculadora para evaluar <m:math><m:mrow><m:mtext>sin</m:mtext><m:mo stretchy="false">(</m:mo><m:msup><m:mrow><m:mtext>sin</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mn>-2</m:mn><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mtext>tan</m:mtext><m:mo stretchy="false">(</m:mo><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mn>-2</m:mn><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Explique los resultados de cada uno.</para>
+</problem>
+</exercise>
+</section>
+  </content>
+<glossary>
+<definition id="fs-id1170572229168">
+<term>prueba de la línea horizontal</term>
+<meaning id="fs-id1170572229174">una función <m:math><m:mi>f</m:mi></m:math> es biunívoca si y solo si cada línea horizontal interseca el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo></m:mrow></m:math> como máximo, una vez</meaning>
+</definition>
+<definition id="fs-id1170572229190">
+<term>función inversa</term>
+<meaning id="fs-id1170572229195">para una función <m:math><m:mi>f</m:mi><m:mo>,</m:mo></m:math> la función inversa <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> satisface <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> si <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math></meaning>
+</definition>
+<definition id="fs-id1170572482608">
+<term>funciones trigonométricas inversas</term>
+<meaning id="fs-id1170572482614">las inversas de las funciones trigonométricas están definidas en dominios restringidos donde son funciones biunívocas</meaning>
+</definition>
+<definition id="fs-id1170572482619">
+<term>función biunívoca</term>
+<meaning id="fs-id1170572482624">una función <m:math><m:mi>f</m:mi></m:math> es biunívoca si <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> si <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>≠</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math></meaning>
+</definition>
+<definition id="fs-id1170572482683">
+<term>dominio restringido</term>
+<meaning id="fs-id1170572482689">subconjunto del dominio de una función <m:math><m:mi>f</m:mi></m:math></meaning>
+</definition>
+</glossary>
+</document>

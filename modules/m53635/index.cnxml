@@ -1,0 +1,934 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Integrales con funciones exponenciales y logarítmicas</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53635</md:content-id>
+  <md:title>Integrales con funciones exponenciales y logarítmicas</md:title>
+  <md:abstract><list id="list-00001">
+<item>Integrar funciones que impliquen funciones exponenciales.</item>
+<item>Integrar funciones que impliquen funciones logarítmicas.</item>
+</list></md:abstract>
+  <md:uuid>b05b4322-00d3-48e5-b476-66ceaa747220</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1170572130673">Las funciones exponenciales y logarítmicas se utilizan para modelar el crecimiento de la población, el crecimiento celular y el crecimiento financiero, así como la depreciación, el decaimiento radiactivo y el consumo de recursos, por nombrar sólo algunas aplicaciones. En esta sección, exploraremos la integración con funciones exponenciales y logarítmicas.</para>
+<section id="fs-id1170572137421">
+<title>Integrales de funciones exponenciales</title>
+<para id="fs-id1170571602573">La función exponencial es quizás la función más eficiente en cuanto a las operaciones de cálculo. La función exponencial <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math> es su propia derivada y su propia integral.</para>
+<note id="fs-id1170572370390">
+<title>Regla: Integrales de funciones exponenciales</title>
+<para id="fs-id1170572375243">Las funciones exponenciales se pueden integrar mediante las siguientes fórmulas.</para>
+<equation id="fs-id1170572374424">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>a</m:mi><m:mi>x</m:mi></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mrow><m:msup><m:mi>a</m:mi><m:mi>x</m:mi></m:msup></m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr></m:mtable></m:mrow></m:math></equation>
+</note>
+<example id="fs-id11705722115180">
+<exercise id="fs-id1170572606041">
+<problem id="fs-id1170572222389">
+<title>Encuentre una antiderivada de una función exponencial</title>
+<para id="fs-id1170572150624">Encuentre la antiderivada de la función exponencial <emphasis effect="italics">e</emphasis><sup>−<emphasis effect="italics">x</emphasis></sup>.</para>
+</problem>
+<solution id="fs-id1170572299080">
+<para id="fs-id1170571601500">Utilice la sustitución, estableciendo <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> y luego <m:math><m:mrow><m:mi>d</m:mi><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Multiplique la ecuación <emphasis effect="italics">du</emphasis> por -1, por lo que ahora tiene <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>d</m:mi><m:mi>u</m:mi><m:mo>=</m:mo><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Entonces,</para>
+<equation id="fs-id1170572454214" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr/><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170572248011" class="checkpoint">
+<exercise id="fs-id1170571655362">
+<problem id="fs-id1170572206116">
+<para id="fs-id1170572430365">Encuentre la antiderivada de la función utilizando la sustitución <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572403454">
+<para id="fs-id1170572269592">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>6</m:mn></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1170573205217" type="hint">
+<title>Pista</title>
+<para id="fs-id1170571622632">Supongamos que <emphasis effect="italics">u</emphasis> es igual al exponente de <emphasis effect="italics">e</emphasis>.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1170572607911">Un error común al tratar con expresiones exponenciales es tratar el exponente en <emphasis effect="italics">e</emphasis> de la misma manera que tratamos los exponentes en las expresiones polinómicas. No podemos utilizar la regla de la potencia para el exponente en <emphasis effect="italics">e</emphasis>. Esto puede ser especialmente confuso cuando tenemos tanto exponenciales como polinomios en la misma expresión, como en el punto de comprobación anterior. En estos casos, siempre debemos verificar que estemos utilizando las reglas correctas en las funciones que estamos integrando.</para>
+<example id="fs-id1170572209244">
+<exercise id="fs-id1170571602248">
+<problem id="fs-id1170572509298">
+<title>Raíz cuadrada de una función exponencial</title>
+<para id="fs-id1170571773419">Encuentre la antiderivada de la función exponencial <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572170580">
+<para id="fs-id1170572551693">Primero reescriba el problema utilizando un exponente racional:</para>
+<equation id="fs-id1170572549246" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:msqrt></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170572224660">Utilizando la sustitución, elija <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math> Entonces, <m:math><m:mrow><m:mi>d</m:mi><m:mi>u</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Tenemos (<link target-id="CNX_Calc_Figure_05_06_001"/>)</para>
+<equation id="fs-id1170572373474" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>u</m:mi><m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:msup><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170572307548">Entonces</para>
+<equation id="fs-id1170572560605" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>u</m:mi><m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:msup><m:mi>d</m:mi><m:mi>u</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>u</m:mi><m:mrow><m:mrow><m:mn>3</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:msup></m:mrow><m:mrow><m:mrow><m:mn>3</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:mfrac><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mfrac><m:mn>2</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>u</m:mi><m:mrow><m:mrow><m:mn>3</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:msup><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>2</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mrow><m:mn>3</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:msup><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<figure id="CNX_Calc_Figure_05_06_001">
+<media id="fs-id1170572239788" alt="Gráfico de la función f(x) = e^x * sqrt(1 + e^x), que es una curva creciente cóncava hacia arriba, sobre [-3, 1]. Comienza cerca del eje x en el cuadrante dos, cruza el eje y en (0, sqrt(2)) y continúa aumentando rápidamente.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_06_001.jpg"/>
+</media>
+<caption>El gráfico muestra una función exponencial por la raíz cuadrada de una función exponencial.</caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170572207056" class="checkpoint">
+<exercise id="fs-id1170572451630">
+<problem id="fs-id1170571609364">
+<para id="fs-id1170572363371">Encuentre la antiderivada de <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571655282">
+<para id="fs-id1170572209127">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>9</m:mn></m:mfrac><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1170573502097" type="hint">
+<title>Pista</title>
+<para id="fs-id1170572141909">Supongamos que <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow><m:mspace width="0.2em"/><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<example id="fs-id1170572168487">
+<exercise id="fs-id1170572240614">
+<problem id="fs-id1170572209184">
+<title>Uso de la sustitución con una función exponencial</title>
+<para id="fs-id1170572481139">Utilice la sustitución para evaluar la integral indefinida <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572608016">
+<para id="fs-id1170572216534">Aquí optamos por dejar que <emphasis effect="italics">u</emphasis> sea igual a la expresión en el exponente sobre <emphasis effect="italics">e</emphasis>. Supongamos que <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:mi>d</m:mi><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo><m:mo>.</m:mo></m:mrow></m:math> De nuevo, <emphasis effect="italics">du</emphasis> se desvía por un multiplicador constante; la función original contiene un factor de 3<emphasis effect="italics">x</emphasis><sup>2</sup>, no de 6<emphasis effect="italics">x</emphasis><sup>2</sup>. Multiplique ambos lados de la ecuación por <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> para que el integrando en <emphasis effect="italics">u</emphasis> sea igual al integrando en <emphasis effect="italics">x</emphasis>. Por lo tanto,</para>
+<equation id="fs-id1170572470447" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:msup></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170572101855">Integre la expresión en <emphasis effect="italics">u</emphasis> y luego sustituya la expresión original en <emphasis effect="italics">x</emphasis> de nuevo en la integral de <emphasis effect="italics">u</emphasis>:</para>
+<equation id="fs-id1170572448333" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>u</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:msup><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170572551647" class="checkpoint">
+<exercise id="fs-id1170572294922">
+<problem id="fs-id1170572095031">
+<para id="fs-id1170572295300">Evalúe la integral indefinida <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mn>2</m:mn></m:mrow></m:mstyle><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:msup><m:mi>e</m:mi><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572560118">
+<para id="fs-id1170572242344">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mn>2</m:mn></m:mrow></m:mstyle><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:msup><m:mi>e</m:mi><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:msup></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1170573414530" type="hint">
+<title>Pista</title>
+<para id="fs-id1170572232621">Supongamos que <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1170571733816">Como se mencionó al principio de esta sección, las funciones exponenciales se utilizan en muchas aplicaciones de la vida real. El número <emphasis effect="italics">e</emphasis> se asocia a menudo con el crecimiento compuesto o acelerado, como hemos visto en las secciones anteriores sobre la derivada. Aunque la derivada representa una tasa de cambio o una tasa de crecimiento, la integral representa el cambio total o el crecimiento total. Veamos un ejemplo en el que la integración de una función exponencial resuelve una aplicación empresarial común.</para>
+<para id="fs-id1170571571226">Una <term class="no-emphasis" id="term-00001">función precio-demanda</term> nos indica la relación entre la cantidad de la demanda de un producto y el precio del mismo. En general, el precio disminuye a medida que aumenta la cantidad demandada. La función precio-demanda marginal es la derivada de la función precio-demanda y nos indica la rapidez con la que cambia el precio a un nivel de producción determinado. Las empresas utilizan estas funciones para determinar la elasticidad del precio de la demanda y para determinar si el cambio en los niveles de producción sería rentable.</para>
+<example id="fs-id1170572100406">
+<exercise id="fs-id1170571597871">
+<problem id="fs-id1170572206422">
+<title>Encuentre una ecuación precio-demanda</title>
+<para id="fs-id1170571526652">Encuentre la ecuación precio-demanda para una marca concreta de pasta de dientes en una cadena de supermercados cuando la demanda es de 50 tubos por semana a 2,35 dólares el tubo, dado que la función marginal precio-demanda, <m:math><m:mrow><m:msup><m:mi>p</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mtext>(</m:mtext><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> para un número <emphasis effect="italics">x</emphasis> de tubos por semana, se da como</para>
+<equation id="fs-id1170572141865" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>p</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-0,015</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-0,01</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170571595414">Si la cadena de supermercados vende 100 tubos a la semana, ¿qué precio debe fijar?</para>
+</problem>
+<solution id="fs-id1170572551049">
+<para id="fs-id1170571543163">Para hallar la ecuación precio-demanda, se integra la función marginal precio-demanda. Primero halle la antiderivada y luego observe los detalles. Por lo tanto,</para>
+<equation id="fs-id1170572216339" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr/><m:mtr/><m:mtr><m:mtd columnalign="left"><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mn>-0,015</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-0,01</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>-0,015</m:mn><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-0,01</m:mn><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170572507579">Utilizando la sustitución, supongamos que <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>-0,01</m:mn><m:mi>x</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:mi>d</m:mi><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>-0,01</m:mn><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Luego, divida ambos lados de la ecuación <emphasis effect="italics">du</emphasis> por -0,01. Esto da</para>
+<equation id="fs-id1170572522381" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mfrac><m:mrow><m:mn>-0,015</m:mn></m:mrow><m:mrow><m:mn>-0,01</m:mn></m:mrow></m:mfrac><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>1,5</m:mn><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr/><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>1,5</m:mn><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>1,5</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-0,01</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170572111467">El siguiente paso es resolver <emphasis effect="italics">C</emphasis>. Sabemos que cuando el precio es de 2,35 dólares por tubo, la demanda es de 50 tubos por semana. Esto significa que</para>
+<equation id="fs-id1170571704350" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr/><m:mtr/><m:mtr><m:mtd columnalign="left"><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>50</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>1,5</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-0,01</m:mn><m:mo stretchy="false">(</m:mo><m:mn>50</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>2,35</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170571569187">Ahora, solo hay que resolver para <emphasis effect="italics">C</emphasis>:</para>
+<equation id="fs-id1170572415392" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr/><m:mtr><m:mtd columnalign="left"><m:mi>C</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>2,35</m:mn><m:mo>- −</m:mo><m:mn>1,5</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-0,5</m:mn></m:mrow></m:msup></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>2,35</m:mn><m:mo>- −</m:mo><m:mn>0,91</m:mn></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>1,44</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170572140846">Por lo tanto,</para>
+<equation id="fs-id1170572375703" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1,5</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-0,01</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mn>1,44</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170571547617">Si el supermercado vende 100 tubos de pasta de dientes a la semana, el precio sería</para>
+<equation id="fs-id1170571653359" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>p</m:mi><m:mo stretchy="false">(</m:mo><m:mn>100</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>1,5</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-0,01</m:mn><m:mo stretchy="false">(</m:mo><m:mn>100</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:msup><m:mo>+</m:mo><m:mn>1,44</m:mn><m:mo>=</m:mo><m:mn>1,5</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:mn>1,44</m:mn><m:mo>≈</m:mo><m:mn>1,99</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170572393399">El supermercado debería cobrar 1,99 dólares por tubo si vende 100 tubos a la semana.</para>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1170571637964">
+<exercise id="fs-id1170572204890">
+<problem id="fs-id1170572169148">
+<title>Evaluación de una integral definida que incluye una función exponencial</title>
+<para id="fs-id1170571657942">Evalúe la integral definida <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571596791">
+<para id="fs-id1170572247799">De nuevo, la sustitución es el método a utilizar. Supongamos que <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> así que <m:math><m:mrow><m:mi>d</m:mi><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math> o <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>d</m:mi><m:mi>u</m:mi><m:mo>=</m:mo><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Entonces <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> A continuación, cambie los límites de integración. Si utilizamos la ecuación <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> tenemos</para>
+<equation id="fs-id1170571652053" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:mrow></m:math></equation>
+<para id="fs-id1170571645662">La integral se convierte entonces en</para>
+<equation id="fs-id1170571645665" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>0</m:mn><m:mrow><m:mn>-1</m:mn></m:mrow></m:msubsup><m:mrow><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr/><m:mtr/><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mn>-1</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup><m:mrow><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:msubsup><m:mrow><m:mrow><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup></m:mrow><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow><m:mn>0</m:mn></m:msubsup></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mn>0</m:mn></m:msup><m:mo>-</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:mn>1.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170572495875">Vea el <link target-id="CNX_Calc_Figure_05_06_002"/>.</para>
+<figure id="CNX_Calc_Figure_05_06_002">
+<media id="fs-id1170572495885" alt="Gráfico de la función f(x) = e^(1-x) sobre [0, 3]. Interseca el eje y en (0, e) como una curva cóncava decreciente hacia arriba y se aproxima asintóticamente a 0 a medida que x va al infinito.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_06_002.jpg"/>
+</media>
+<caption>El área indicada se puede calcular evaluando una integral definida mediante una sustitución.</caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170571599287" class="checkpoint">
+<exercise id="fs-id1170571599290">
+<problem id="fs-id1170571599292">
+<para id="fs-id1170571599295">Evalúe <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572274758">
+<para id="fs-id1170572274760">Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mi>d</m:mi><m:mi>u</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mn>4</m:mn></m:msup><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1170573206282" type="hint">
+<title>Pista</title>
+<para id="fs-id1170572242289">Supongamos que <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<example id="fs-id1170572624841">
+<exercise id="fs-id1170572624843">
+<problem id="fs-id1170572337835">
+<title>Crecimiento de las bacterias en un cultivo</title>
+<para id="fs-id1170572337840">Supongamos que la tasa de <term class="no-emphasis" id="term-00002">crecimiento de las bacterias</term> en una placa de Petri viene dada por <m:math><m:mrow><m:mi>q</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mn>3</m:mn><m:mi>t</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math> donde <emphasis effect="italics">t</emphasis> está expresado en horas y <m:math><m:mrow><m:mi>q</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> en miles de bacterias por hora. Si un cultivo comienza con 10.000 bacterias, encuentre una función <m:math><m:mrow><m:mi>Q</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> que dé el número de bacterias en la placa de Petri en cualquier tiempo <emphasis effect="italics">t</emphasis>. ¿Cuántas bacterias hay en la placa después de 2 horas?</para>
+</problem>
+<solution id="fs-id1170571699000">
+<para id="fs-id1170571699005">Tenemos</para>
+<equation id="fs-id1170571699008" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>Q</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mn>3</m:mn><m:mi>t</m:mi></m:msup><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mn>3</m:mn><m:mi>t</m:mi></m:msup></m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>3</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></equation>
+<para id="fs-id1170571613514">Entonces, en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> tenemos <m:math><m:mrow><m:mi>Q</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>10</m:mn><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>3</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> por lo que <m:math><m:mrow><m:mi>C</m:mi><m:mo>≈</m:mo><m:mn>9,090</m:mn></m:mrow></m:math> y obtenemos</para>
+<equation id="fs-id1170571775806" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>Q</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mn>3</m:mn><m:mi>t</m:mi></m:msup></m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>3</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:mn>9,090</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170571609258">En el tiempo <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> tenemos</para>
+<equation id="fs-id1170571698223" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>Q</m:mi><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mn>3</m:mn><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>3</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:mn>9,090</m:mn></m:mrow></m:math></equation>
+<equation id="fs-id1170571637497" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mo>=</m:mo><m:mn>17.282</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170571637508">Después de 2 horas, hay 17.282 bacterias en la placa.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170571637514" class="checkpoint">
+<exercise id="fs-id1170571637518">
+<problem id="fs-id1170571637520">
+<para id="fs-id1170572437454">A partir del <link target-id="fs-id1170572624841"/>, supongamos que las bacterias crecen a una tasa de <m:math><m:mrow><m:mi>q</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mn>2</m:mn><m:mi>t</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math> Supongamos que el cultivo aún comienza con 10.000 bacterias. Halle <m:math><m:mrow><m:mi>Q</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> ¿Cuántas bacterias hay en la placa después de 3 horas?</para>
+</problem>
+<solution id="fs-id1170572444234">
+<para id="fs-id1170572444236">Los términos <m:math><m:mrow><m:mi>Q</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mn>2</m:mn><m:mi>t</m:mi></m:msup></m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>2</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:mn>8.557</m:mn><m:mo>.</m:mo></m:mrow></m:math> Hay 20.099 bacterias en la placa después de 3 horas.</para>
+</solution>
+<commentary id="fs-id1170573623952" type="hint">
+<title>Pista</title>
+<para id="fs-id1170572444227">Utilice el procedimiento del <link target-id="fs-id1170572624841"/> para resolver el problema.</para>
+</commentary>
+</exercise>
+</note>
+<example id="fs-id1170571807209">
+<exercise id="fs-id1170571807211">
+<problem id="fs-id1170571807213">
+<title>Crecimiento de la población de moscas de la fruta</title>
+<para id="fs-id1170571807219">Supongamos que una población de <term class="no-emphasis" id="term-00003">moscas de la fruta</term> aumenta a un ritmo de <m:math><m:mrow><m:mi>g</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>0,02</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> de moscas al día. Si la población inicial de moscas de la fruta es de 100 individuos, ¿cuántas moscas hay en la población después de 10 días?</para>
+</problem>
+<solution id="fs-id1170572183850">
+<para id="fs-id1170572183855">Supongamos que <m:math><m:mrow><m:mi>G</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> representa el número de moscas en la población en el tiempo <emphasis effect="italics">t</emphasis>. Si aplicamos el teorema del cambio neto, tenemos</para>
+<equation id="fs-id1170571712220" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr/><m:mtr/><m:mtr><m:mtd columnalign="left"><m:mi>G</m:mi><m:mo stretchy="false">(</m:mo><m:mn>10</m:mn><m:mo stretchy="false">)</m:mo></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mi>G</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:msubsup><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∫</m:mo></m:mstyle><m:mn>0</m:mn><m:mrow><m:mn>10</m:mn></m:mrow></m:msubsup><m:mn>2</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>0,02</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mi>d</m:mi><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>100</m:mn><m:mo>+</m:mo><m:msubsup><m:mrow><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mn>2</m:mn><m:mrow><m:mn>0,02</m:mn></m:mrow></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mn>0,02</m:mn><m:mi>t</m:mi></m:mrow></m:msup></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow><m:mn>0</m:mn><m:mrow><m:mn>10</m:mn></m:mrow></m:msubsup></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>100</m:mn><m:mo>+</m:mo><m:msubsup><m:mrow><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>100</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>0,02</m:mn><m:mi>t</m:mi></m:mrow></m:msup></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow><m:mn>0</m:mn><m:mrow><m:mn>10</m:mn></m:mrow></m:msubsup></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>100</m:mn><m:mo>+</m:mo><m:mn>100</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>0,2</m:mn></m:mrow></m:msup><m:mo>- −</m:mo><m:mn>100</m:mn></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>≈</m:mo><m:mn>122</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170572338467">Pasados 10 días hay 122 moscas en la población.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170572338474" class="checkpoint">
+<exercise id="fs-id1170572338477">
+<problem id="fs-id1170572338479">
+<para id="fs-id1170572338481">Supongamos que la tasa de crecimiento de la población de moscas viene dada por <m:math><m:mrow><m:mi>g</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>0,01</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> y la población inicial es de 100 moscas. ¿Cuántas moscas hay en la población después de 15 días?</para>
+</problem>
+<solution id="fs-id1170571653080">
+<para id="fs-id1170571653083">Hay 116.</para>
+</solution>
+<commentary id="fs-id1170573548872" type="hint">
+<title>Pista</title>
+<para id="fs-id1170571653073">Utilice el proceso del <link target-id="fs-id1170571807209"/> para resolver el problema.</para>
+</commentary>
+</exercise>
+</note>
+<example id="fs-id1170571653089">
+<exercise id="fs-id1170571653091">
+<problem id="fs-id1170571653093">
+<title>Evaluación de una integral definida mediante la sustitución</title>
+<para id="fs-id1170572217480">Evalúe la integral definida utilizando la sustitución <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572217525">
+<para id="fs-id1170572587719">Este problema requiere reescribirse para simplificar la aplicación de las propiedades. Primero, reescriba el exponente en <emphasis effect="italics">e</emphasis> como una potencia de <emphasis effect="italics">x</emphasis>, luego lleve la <emphasis effect="italics">x</emphasis><sup>2</sup> en el denominador hasta el numerador usando un exponente negativo. Tenemos</para>
+<equation id="fs-id1170572587738" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mrow></m:msup></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:msup><m:msup><m:mi>x</m:mi><m:mrow><m:mn>-2</m:mn></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170571636291">Supongamos que <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> es el exponente en <emphasis effect="italics">e</emphasis>. Entonces</para>
+<equation id="fs-id1170571636314" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>d</m:mi><m:mi>u</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msup><m:mi>x</m:mi><m:mrow><m:mn>-2</m:mn></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mo>–</m:mo><m:mi>d</m:mi><m:mi>u</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mn>-2</m:mn></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170571599633">Llevando el signo negativo fuera del signo de la integral, el problema ahora se lee</para>
+<equation id="fs-id1170571599636" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtext>-</m:mtext><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170571599663">A continuación, cambie los límites de integración:</para>
+<equation id="fs-id1170571599666" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtable columnalign="left"><m:mtr/><m:mtr/><m:mtr><m:mtd columnalign="left"><m:mi>u</m:mi><m:mo>=</m:mo><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>=</m:mo><m:mn>1</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>u</m:mi><m:mo>=</m:mo><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:mrow></m:math></equation>
+<para id="fs-id1170572293461">Observe que ahora los límites comienzan con el número mayor, lo que significa que debemos multiplicar por -1 e intercambiar los límites. Por lo tanto,</para>
+<equation id="fs-id1170572293466" class="unnumbered"><label/>Los términos <m:math><m:mtable columnalign="left"><m:mtr/><m:mtr/><m:mtr/><m:mtr><m:mtd columnalign="left"><m:mtext>-</m:mtext><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msubsup><m:mrow><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>u</m:mi></m:msup><m:mrow><m:msubsup><m:mo>|</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mi>e</m:mi><m:mo>- −</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:msup></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mi>e</m:mi><m:mo>- −</m:mo><m:msqrt><m:mi>e</m:mi></m:msqrt><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170572554374" class="checkpoint">
+<exercise id="fs-id1170572554378">
+<problem id="fs-id1170572554380">
+<para id="fs-id1170572554382">Evalúe la integral definida utilizando la sustitución <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mn>4</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>-2</m:mn></m:mrow></m:msup></m:mrow></m:msup></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572628417">
+<para id="fs-id1170572628419">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mn>4</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>-2</m:mn></m:mrow></m:msup></m:mrow></m:msup></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>8</m:mn></m:mfrac><m:mrow><m:mo>[</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mn>4</m:mn></m:msup><m:mo>-</m:mo><m:mi>e</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1170571419835" type="hint">
+<title>Pista</title>
+<para id="fs-id1170572554429">Supongamos que <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:msup><m:mi>x</m:mi><m:mrow><m:mn>-2</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1170572565328">
+<title>Integrales con funciones logarítmicas</title>
+<para id="fs-id1170572565333">Integrar funciones de la forma <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:math> dan como resultado el valor absoluto de la función logarítmica natural, como se muestra en la siguiente regla. Las fórmulas integrales para otras funciones logarítmicas, tales como <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> como <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msub><m:mrow><m:mtext>log</m:mtext></m:mrow><m:mi>a</m:mi></m:msub><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> también se incluyen en la regla.</para>
+<note id="fs-id1170572543658">
+<title>Regla: Fórmulas de integración que implican funciones logarítmicas</title>
+<para id="fs-id1170572543663">Las siguientes fórmulas se pueden utilizar para evaluar integrales que implican funciones logarítmicas.</para>
+<equation id="fs-id1170572543666">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="right"><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mtext>ln</m:mtext><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:mtext>ln</m:mtext></m:mrow></m:mrow></m:mstyle><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msub><m:mrow><m:mtext>log</m:mtext></m:mrow><m:mi>a</m:mi></m:msub></m:mrow></m:mrow></m:mstyle><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mi>x</m:mi><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>a</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr></m:mtable></m:mrow></m:math></equation>
+</note>
+<example id="fs-id1170571653392">
+<exercise id="fs-id1170571653394">
+<problem id="fs-id1170571653396">
+<title>Encontrar una antiderivada que implique <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi></m:mrow></m:math></title>
+<para id="fs-id1170571653410">Encuentre la antiderivada de la función <m:math><m:mrow><m:mfrac><m:mn>3</m:mn><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>10</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571653430">
+<para id="fs-id1170571653435">Primero factorice el 3 fuera del símbolo de la integral. Entonces utilice la regla <emphasis effect="italics">u</emphasis><sup>−1</sup>. Por lo tanto,</para>
+<equation id="fs-id1170571653444" class="unnumbered"><label/>Los términos <m:math><m:mtable columnalign="left"><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mn>3</m:mn><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>10</m:mn></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>3</m:mn><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>10</m:mn></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr/><m:mtr/><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>3</m:mn><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow><m:mi>u</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mrow><m:mo>|</m:mo><m:mi>u</m:mi><m:mo>|</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>10</m:mn></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>10</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170571597433">Vea el <link target-id="CNX_Calc_Figure_05_06_003"/>.</para>
+<figure id="CNX_Calc_Figure_05_06_003">
+<media id="fs-id1170571597447" alt="Gráfico de la función f(x) = 3 / (x - 10). Hay una asíntota en x=10. El primer segmento es una curva cóncava decreciente hacia abajo que se aproxima a 0 cuando x llega al infinito negativo y se aproxima al infinito negativo cuando x llega a 10. El segundo segmento es una curva cóncava decreciente hacia arriba que se aproxima al infinito cuando x llega a 10 y se aproxima a 0 cuando x se acerca al infinito.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_06_003.jpg"/>
+</media>
+<caption>El dominio de esta función es <m:math><m:mrow><m:mi>x</m:mi><m:mo>≠</m:mo><m:mn>10</m:mn><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170571597473" class="checkpoint">
+<exercise id="fs-id1170571597476">
+<problem id="fs-id1170571597479">
+<para id="fs-id1170571597481">Encuentre la antiderivada de <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572480514">
+<para id="fs-id1170572480516">Los términos <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1170573721513" type="hint">
+<title>Pista</title>
+<para id="fs-id1170572480506">Siga el patrón del <link target-id="fs-id1170571653392"/> para resolver el problema.</para>
+</commentary>
+</exercise>
+</note>
+<example id="fs-id1170572480542">
+<exercise id="fs-id1170572480545">
+<problem id="fs-id1170572480547">
+<title>Encontrar una antiderivada de una función racional</title>
+<para id="fs-id1170572480552">Encuentre la antiderivada de <m:math><m:mrow><m:mfrac><m:mrow><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572369347">
+<para id="fs-id1170572369353">Esto se puede reescribir como <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> Utilice la sustitución. Supongamos que <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:mi>d</m:mi><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>6</m:mn><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Modifique <emphasis effect="italics">du</emphasis> mediante la factorización del 2. Por lo tanto,</para>
+<equation id="fs-id1170571807881" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr/><m:mtr><m:mtd columnalign="right"><m:mi>d</m:mi><m:mi>u</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>6</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mspace width="0.2em"/><m:mi>d</m:mi><m:mi>u</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1170572373464">Reescriba el integrando en <emphasis effect="italics">u</emphasis>:</para>
+<equation id="fs-id1170572331833" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>u</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>u</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170571733965">Entonces tenemos</para>
+<equation id="fs-id1170571733968" class="unnumbered"><label/>Los términos <m:math><m:mtable columnalign="left"><m:mtr><m:mtd columnalign="left"><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>u</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>ln</m:mtext><m:mrow><m:mo>|</m:mo><m:mi>u</m:mi><m:mo>|</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mtd></m:mtr><m:mtr/><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>ln</m:mtext><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+</solution>
+</exercise>
+</example>
+<example id="fs-id1170571649922">
+<exercise id="fs-id1170571649924">
+<problem id="fs-id1170571649926">
+<title>Hallar una antiderivada de una función logarítmica</title>
+<para id="fs-id1170571649932">Halle la antiderivada de la función logarítmica <m:math><m:mrow><m:msub><m:mrow><m:mtext>log</m:mtext></m:mrow><m:mn>2</m:mn></m:msub><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571649949">
+<para id="fs-id1170571649954">Siga el formato de la fórmula que aparece en la regla sobre fórmulas de integración que implican funciones logarítmicas. Con base en este formato, tenemos</para>
+<equation id="fs-id1170571649959" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msub><m:mrow><m:mtext>log</m:mtext></m:mrow><m:mn>2</m:mn></m:msub><m:mi>x</m:mi><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>x</m:mi><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>2</m:mn></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1170571660181" class="checkpoint">
+<exercise id="fs-id1170571660184">
+<problem id="fs-id1170571660186">
+<para id="fs-id1170571660188">Encuentre la antiderivada de <m:math><m:mrow><m:msub><m:mrow><m:mtext>log</m:mtext></m:mrow><m:mn>3</m:mn></m:msub><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571660212">
+<para id="fs-id1170571660214">Los términos <m:math><m:mrow><m:mfrac><m:mi>x</m:mi><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>3</m:mn></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1170573418990" type="hint">
+<title>Pista</title>
+<para id="fs-id1170571660204">Siga el <link target-id="fs-id1170571649922"/> y consulte la regla sobre las fórmulas de integración que implican funciones logarítmicas.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1170572274900">El <link target-id="fs-id1170572274908"/> es una integral definida de una función trigonométrica. Con las funciones trigonométricas, a menudo tenemos que aplicar una propiedad trigonométrica o una identidad antes de avanzar. Hallar la forma correcta del integrando suele ser la clave para una integración sin problemas.</para>
+<example id="fs-id1170572274908">
+<exercise id="fs-id1170572274910">
+<problem id="fs-id1170572274912">
+<title>Evaluación de una integral definida</title>
+<para id="fs-id1170572274917">Calcule la integral definida de <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572274967">
+<para id="fs-id1170571636148">Necesitamos la sustitución para evaluar este problema. Supongamos que <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>,</m:mo><m:mo>,</m:mo></m:mrow></m:math> así que <m:math><m:mrow><m:mi>d</m:mi><m:mi>u</m:mi><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Reescriba la integral en términos de <emphasis effect="italics">u</emphasis>, cambiando también los límites de integración. Por lo tanto,</para>
+<equation id="fs-id1170571636203" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>2</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:mrow></m:math></equation>
+<para id="fs-id1170572510108">Entonces</para>
+<equation id="fs-id1170572510111" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:mrow></m:mstyle></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>2</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>u</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr/><m:mtr/><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:msup><m:mi>u</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:msubsup><m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>|</m:mo><m:mi>u</m:mi><m:mo>|</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mo stretchy="false">[</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>2</m:mn><m:mo>-</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>1</m:mn><m:mo stretchy="false">]</m:mo></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>2.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
+</solution>
+</exercise>
+</example>
+</section>
+<section id="fs-id1170571712566" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1170571712573" list-type="bulleted" bullet-style="bullet">
+<item>Las funciones exponenciales y logarítmicas se presentan en muchas aplicaciones del mundo real, especialmente las que implican crecimiento y decaimiento.</item>
+<item>La sustitución se utiliza a menudo para evaluar integrales que implican funciones exponenciales o logaritmos.</item>
+</list>
+</section>
+<section id="fs-id1170571712590" class="key-equations">
+<title>Ecuaciones clave</title>
+<table id="eip-502" summary="." class="unnumbered unstyled">
+<tgroup cols="2"><tbody>
+  <row>
+    <entry><emphasis effect="bold">Integrales de funciones exponenciales</emphasis></entry>
+    <entry>Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math><newline/> <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>a</m:mi><m:mi>x</m:mi></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>a</m:mi><m:mi>x</m:mi></m:msup></m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></entry>
+  </row>
+  <row>
+    <entry><emphasis effect="bold">Fórmulas de integración que implican funciones logarítmicas</emphasis></entry>
+    <entry>Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mrow><m:mo>|</m:mo><m:mi>x</m:mi><m:mo>|</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math><newline/> <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math><newline/> <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msub><m:mrow><m:mtext>log</m:mtext></m:mrow><m:mi>a</m:mi></m:msub><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>x</m:mi><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>a</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></entry>
+  </row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section id="fs-id1170571699478" class="section-exercises">
+<para id="fs-id1170571699482">En los siguientes ejercicios, calcule cada integral indefinida.</para>
+
+<exercise id="fs-id1170571699485">
+<problem id="fs-id1170571699487">
+<para id="fs-id1170571699489">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170571678838">
+<problem id="fs-id1170571678840">
+<para id="fs-id1170571678842">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>−3</m:mn><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571678868">
+<para id="fs-id1170571678870">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>-1</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mn>−3</m:mn><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572601241">
+<problem id="fs-id1170572601243">
+<para id="fs-id1170572601245">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mn>2</m:mn><m:mi>x</m:mi></m:msup></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572601296">
+<problem id="fs-id1170572601298">
+<para id="fs-id1170572601300">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mn>3</m:mn><m:mrow><m:mtext>-</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571679783">
+<para id="fs-id1170571679785">Los términos <m:math><m:mrow><m:mo>-</m:mo><m:mfrac><m:mrow><m:msup><m:mn>3</m:mn><m:mrow><m:mtext>-</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>3</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170571679817">
+<problem id="fs-id1170571679819">
+<para id="fs-id1170571679821">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572611839">
+<problem id="fs-id1170572611841">
+<para id="fs-id1170572611843">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mn>2</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572611867">
+<para id="fs-id1170572611870">Los términos <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572611894">
+<problem id="fs-id1170572611896">
+<para id="fs-id1170572611898">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572333073">
+<problem id="fs-id1170572333075">
+<para id="fs-id1170572333077">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572333102">
+<para id="fs-id1170572333105">Los términos <m:math><m:mrow><m:mn>2</m:mn><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1170572333121">En los siguientes ejercicios, encuentre cada integral indefinida utilizando las sustituciones adecuadas.</para>
+
+<exercise id="fs-id1170572333125">
+<problem id="fs-id1170572333127">
+<para id="fs-id1170572333129">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170571638228">
+<problem id="fs-id1170571638230">
+<para id="fs-id1170571638233">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>x</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571810851">
+<para id="fs-id1170571810853">Los términos <m:math><m:mrow><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170571810876">
+<problem id="fs-id1170571810878">
+<para id="fs-id1170571810880">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:mrow></m:mstyle></m:mrow><m:mspace width="0.2em"/><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo>></m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> grandes.</para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170571697166">
+<problem id="fs-id1170571697168">
+<para id="fs-id1170571697170">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mo stretchy="false">(</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:mfrac></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1170571697225">
+<para id="fs-id1170571697227">Los términos <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170571539147">
+<problem id="fs-id1170571539149">
+<para id="fs-id1170571539151">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>θ</m:mi><m:mspace width="0.2em"/><m:mi>d</m:mi><m:mi>θ</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170571539202">
+<problem id="fs-id1170571539204">
+<para id="fs-id1170571539206">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571543234">
+<para id="fs-id1170571543236">Los términos <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170571543268">
+<problem id="fs-id1170571543270">
+<para id="fs-id1170571543272">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572456410">
+<problem id="fs-id1170572456412">
+<para id="fs-id1170572456414">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mo stretchy="false">(</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mstyle><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572396513">
+<para id="fs-id1170572396515">Los términos <m:math><m:mrow><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572396562">
+<problem id="fs-id1170572396564">
+<para id="fs-id1170572396567">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mi>x</m:mi></m:mrow></m:mstyle><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170571580978">
+<problem id="fs-id1170571580980">
+<para id="fs-id1170571580982">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mrow></m:mstyle><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571581016">
+<para id="fs-id1170572218578">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mtext>-</m:mtext><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:msup></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572218606">
+<problem id="fs-id1170572218608">
+<para id="fs-id1170572218611">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msup><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572218671">
+<problem id="fs-id1170572386105">
+<para id="fs-id1170572386107">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:mrow></m:mstyle><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572386144">
+<para id="fs-id1170572386146">Los términos <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572386168">
+<problem id="fs-id1170572386170">
+<para id="fs-id1170572386172">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msup><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572643203">
+<problem id="fs-id1170572643206">
+<para id="fs-id1170572643208">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>ln</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:msup></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572643257">
+<para id="fs-id1170572643259">Los términos <m:math><m:mrow><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1170572643272">En los siguientes ejercicios, verifique por diferenciación que <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo>∫</m:mo><m:mrow><m:mtext>ln</m:mtext></m:mrow></m:mrow></m:mstyle><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces utilice los cambios de variables apropiados para calcular la integral.</para>
+
+<exercise id="fs-id1170572373699">
+<problem id="fs-id1170572373702">
+<para id="fs-id1170572373704"><m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mo>∫</m:mo><m:mi>x</m:mi><m:mo> </m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mi>d</m:mi><m:mi>x</m:mi></m:math> <m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mtext>(</m:mtext><m:mi>P</m:mi><m:mi>is</m:mi><m:mi>t</m:mi><m:mi>a</m:mi><m:mtext>:</m:mtext><m:mspace width="0.2em"/><m:mo>∫</m:mo><m:mtext>x ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>∫</m:mo><m:mi>x</m:mi><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mtext>; x>0)</m:mtext></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170571710720">
+<problem id="fs-id1170571710722">
+<para id="fs-id1170571710724">Los términos <m:math><m:mo>∫</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mtext>ln(</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo><m:mspace width="0.2em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:math></para>
+</problem>
+<solution id="fs-id1170572398997">
+<para id="fs-id1170572399000">Los términos <m:math><m:mrow><m:mfrac><m:mn>2</m:mn><m:mn>9</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572399045">
+<problem id="fs-id1170572399048">
+<para id="fs-id1170572399050">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math> <m:math><m:mrow><m:mtext>(</m:mtext><m:mi>P</m:mi><m:mi>is</m:mi><m:mi>t</m:mi><m:mi>a</m:mi><m:mtext>:</m:mtext><m:mspace width="0.2em"/><m:mtext>Establezca</m:mtext><m:mspace width="0.2em"/><m:mi>u</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mtext>.</m:mtext><m:mtext>)</m:mtext></m:mrow></m:math> grandes.</para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572415189">
+<problem id="fs-id1170572415191">
+<para id="fs-id1170572415193">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> <m:math><m:mrow><m:mtext>(</m:mtext><m:mi>P</m:mi><m:mi>is</m:mi><m:mi>t</m:mi><m:mi>a</m:mi><m:mtext>:</m:mtext><m:mspace width="0.2em"/><m:mtext>Establezca</m:mtext><m:mspace width="0.2em"/><m:mi>u</m:mi><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mtext>.</m:mtext><m:mtext>)</m:mtext></m:mrow></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1170572168710">
+<para id="fs-id1170572168712">Los términos <m:math><m:mrow><m:mn>2</m:mn><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572168746">
+<problem id="fs-id1170572168748">
+<para id="fs-id1170572168750">Escriba una integral para expresar el área bajo el gráfico de <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>t</m:mi></m:mfrac></m:mrow></m:math> a partir de <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> a <emphasis effect="italics">e<sup>x</sup></emphasis> y evalúe la integral.</para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572629242">
+<problem id="fs-id1170572629244">
+<para id="fs-id1170572629246">Escriba una integral para expresar el área bajo el gráfico de <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup></m:mrow></m:math> entre <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> y evalúe la integral.</para>
+</problem>
+<solution id="fs-id1170571689750">
+<para id="fs-id1170571689752">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msubsup><m:mrow><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mrow><m:msubsup><m:mo>|</m:mo><m:mrow><m:mn>0</m:mn></m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msubsup></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msup><m:mo>-</m:mo><m:msup><m:mi>e</m:mi><m:mn>0</m:mn></m:msup><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1170572569960">En los siguientes ejercicios, utilice las sustituciones adecuadas para expresar las integrales trigonométricas en términos de composiciones con logaritmos.</para>
+
+<exercise id="fs-id1170572569965">
+<problem id="fs-id1170572569967">
+<para id="fs-id1170572569969">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mtext>tan</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170571571932">
+<problem id="fs-id1170571571934">
+<para id="fs-id1170571571936">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571572014">
+<para id="fs-id1170571572016">Los términos <m:math><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mtext>ln</m:mtext><m:mfenced open="|" close="|"><m:mrow><m:mtext>sin</m:mtext><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfenced><m:mtext>+C</m:mtext></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572379018">
+<problem id="fs-id1170572379020">
+<para id="fs-id1170572379022">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170571777887">
+<problem id="fs-id1170571777889">
+<para id="fs-id1170571777891">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>csc</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571777929">
+<para id="fs-id1170571777931">Los términos <m:math><m:mrow><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>ln</m:mtext><m:mrow><m:mo>|</m:mo><m:mrow><m:mtext>csc</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mtext>cot</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572310019">
+<problem id="fs-id1170572310021">
+<para id="fs-id1170572310023">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170571613744">
+<problem id="fs-id1170571613746">
+<para id="fs-id1170571613748">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>csc</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mtext>cot</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571613790">
+<para id="fs-id1170571613792">Los términos <m:math><m:mrow><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>csc</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572451363">
+<problem id="fs-id1170572451366">
+<para id="fs-id1170572451368">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>-</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>+</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1170572346997">En los siguientes ejercicios, evalúe la integral definida.</para>
+
+<exercise id="fs-id1170572347000">
+<problem id="fs-id1170572347002">
+<para id="fs-id1170572347004">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mn>2</m:mn></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572347069">
+<para id="fs-id1170572329918">Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>26</m:mn></m:mrow><m:mn>7</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572329945">
+<problem id="fs-id1170572329947">
+<para id="fs-id1170572329949">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>4</m:mn></m:mrow></m:mrow></m:msubsup><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572330008">
+<problem id="fs-id1170572330010">
+<para id="fs-id1170572330012">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571613653">
+<para id="fs-id1170571613655">Los términos <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170571613677">
+<problem id="fs-id1170571613679">
+<para id="fs-id1170571613681">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>6</m:mn></m:mrow><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msubsup></m:mrow><m:mtext>csc</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mi>d</m:mi><m:mi>x</m:mi></m:mstyle></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572434951">
+<problem id="fs-id1170572434953">
+<para id="fs-id1170572434955">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>4</m:mn></m:mrow><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>3</m:mn></m:mrow></m:msubsup></m:mrow><m:mtext>cot</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mi>d</m:mi><m:mi>x</m:mi></m:mstyle></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572412256">
+<para id="fs-id1170572412258">Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1170572412280">En los siguientes ejercicios, integre utilizando la sustitución indicada.</para>
+
+<exercise id="fs-id1170572412283">
+<problem id="fs-id1170572412285">
+<para id="fs-id1170572412287">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mi>x</m:mi><m:mrow><m:mi>x</m:mi><m:mo>- −</m:mo><m:mn>100</m:mn></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo><m:mi>u</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>- −</m:mo><m:mn>100</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572627084">
+<problem id="fs-id1170572627086">
+<para id="fs-id1170572627088">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mi>y</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo><m:mi>u</m:mi><m:mo>=</m:mo><m:mi>y</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572627136">
+<para id="fs-id1170572627138">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mn>2</m:mn><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>y</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572627173">
+<problem id="fs-id1170572627176">
+<para id="fs-id1170572572238">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>–</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo><m:mi>u</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>–</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572572338">
+<problem id="fs-id1170572572340">
+<para id="fs-id1170572572342">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo><m:mi>u</m:mi><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571712848">
+<para id="fs-id1170571712850">Los términos <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>|</m:mo><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572129747">
+<problem id="fs-id1170572129749">
+<para id="fs-id1170572129752">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:mrow></m:mstyle><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:msqrt><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>;</m:mo><m:mi>u</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572379189">
+<problem id="fs-id1170572379191">
+<para id="fs-id1170572379193">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mfrac><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow><m:mi>x</m:mi></m:mfrac><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>;</m:mo><m:mi>u</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572379264">
+<para id="fs-id1170572379266">Los términos <m:math><m:mrow><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:msup><m:mrow><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:mrow><m:mrow><m:mn>3</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1170572330224">En los siguientes ejercicios, ¿la aproximación del extremo derecho sobrestima o subestima el área exacta? Calcule la estimación del punto extremo derecho <emphasis effect="italics">R</emphasis><sub>50</sub> y resuelva el área exacta.</para>
+
+<exercise id="fs-id1170572330236">
+<problem id="fs-id1170572330238">
+<para id="fs-id1170572330240"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572129062">
+<problem id="fs-id1170572129064">
+<para id="fs-id1170572129066"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572129106">
+<para id="fs-id1170572129108">Solución exacta: <m:math><m:mrow><m:mfrac><m:mrow><m:mi>e</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mi>e</m:mi></m:mfrac><m:mo>,</m:mo><m:msub><m:mi>R</m:mi><m:mrow><m:mn>50</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mn>0.6258</m:mn><m:mo>.</m:mo></m:mrow></m:math> Como <emphasis effect="italics">f</emphasis> es decreciente, la estimación del punto extremo derecho subestima el área.</para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572129147">
+<problem id="fs-id1170572129149">
+<para id="fs-id1170572129152"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572223556">
+<problem id="fs-id1170572223558">
+<para id="fs-id1170572223560"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>6</m:mn></m:mrow></m:mfrac></m:mrow></m:math> en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571568949">
+<para id="fs-id1170571568951">Solución exacta: <m:math><m:mrow><m:mfrac><m:mrow><m:mn>2</m:mn><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mn>6</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:msub><m:mi>R</m:mi><m:mrow><m:mn>50</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mn>0.2033</m:mn><m:mo>.</m:mo></m:mrow></m:math> Como <emphasis effect="italics">f</emphasis> es creciente, la estimación del punto extremo derecho sobreestima el área.</para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170571569011">
+<problem id="fs-id1170571569013">
+<para id="fs-id1170571569015"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mn>2</m:mn><m:mi>x</m:mi></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572309777">
+<problem id="fs-id1170572309779">
+<para id="fs-id1170572309781"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msup><m:mn>2</m:mn><m:mrow><m:mtext>-</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math> en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571628908">
+<para id="fs-id1170571628910">Solución exacta: <m:math><m:mrow><m:mo>- −</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mn>4</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>,</m:mo><m:msub><m:mi>R</m:mi><m:mrow><m:mn>50</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mn>-0,7164</m:mn><m:mo>.</m:mo></m:mrow></m:math> Como <emphasis effect="italics">f</emphasis> es creciente, la estimación del punto extremo derecho sobreestima el área (el área real es un número negativo mayor).</para>
+</solution>
+</exercise>
+<para id="fs-id1170571628956">En los siguientes ejercicios, <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> por <m:math><m:mrow><m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math> Halle el área bajo el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> entre los valores dados <emphasis effect="italics">a</emphasis> y <emphasis effect="italics">b</emphasis> mediante la integración.</para>
+
+<exercise id="fs-id1170572582554">
+<problem id="fs-id1170572582556">
+<para id="fs-id1170572582558">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msub><m:mrow><m:mtext>log</m:mtext></m:mrow><m:mrow><m:mn>10</m:mn></m:mrow></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>;</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>10</m:mn><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>=</m:mo><m:mn>100</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572582636">
+<problem id="fs-id1170572582638">
+<para id="fs-id1170572582641">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msub><m:mrow><m:mtext>log</m:mtext></m:mrow><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>;</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>32</m:mn><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>=</m:mo><m:mn>64</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572351519">
+<para id="fs-id1170572351521">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>11</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mn>2</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572351541">
+<problem id="fs-id1170572351543">
+<para id="fs-id1170572351545">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mn>2</m:mn><m:mrow><m:mtext>-</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mo>;</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170571638055">
+<problem id="fs-id1170571638057">
+<para id="fs-id1170571638060">Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mn>2</m:mn><m:mrow><m:mtext>-</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mo>;</m:mo><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571638102">
+<para id="fs-id1170571638104">Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>65</m:mn><m:mo>,</m:mo><m:mn>536</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170571638130">
+<problem id="fs-id1170571638132">
+<para id="fs-id1170571638134">Halle el área bajo el gráfico de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup></m:mrow></m:math> entre <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170571610335">
+<problem id="fs-id1170571610337">
+<para id="fs-id1170571610339">Calcule la integral de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup></m:mrow></m:math> y encuentre el menor valor de <emphasis effect="italics">N</emphasis> tal que el área bajo el gráfico <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup></m:mrow></m:math> entre <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>N</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>N</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> es, como máximo, de 0,01.</para>
+</problem>
+<solution id="fs-id1170572504510">
+<para id="fs-id1170572504512">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mi>N</m:mi><m:mrow><m:mi>N</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msubsup><m:mrow><m:mi>x</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:msup><m:mi>N</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mo>-</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>N</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> La cantidad es inferior a 0,01 cuando <m:math><m:mrow><m:mi>N</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572368492">
+<problem id="fs-id1170572368494">
+<para id="fs-id1170572368496">Halle el límite, cuando <emphasis effect="italics">N</emphasis> tiende a infinito, del área bajo el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup></m:mrow></m:math> entre <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>N</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572448465">
+<problem id="fs-id1170572448467">
+<para id="fs-id1170572448469">Demuestre que <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow><m:mi>t</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>b</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>a</m:mi></m:mrow></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow><m:mi>t</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> cuando <m:math><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572306384">
+<para id="fs-id1170572306386">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>a</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>b</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>b</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>a</m:mi></m:mrow></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572503285">
+<problem id="fs-id1170572503288">
+<para id="fs-id1170572503290">Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> para toda <emphasis effect="italics">x</emphasis> y que <emphasis effect="italics">f</emphasis> y <emphasis effect="italics">g</emphasis> son diferenciables. Utilice la identidad <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mi>g</m:mi></m:msup><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mi>g</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>f</m:mi></m:mrow></m:msup></m:mrow></m:math> y la regla de la cadena para encontrar la derivada de <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mi>g</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170572558119">
+<problem id="fs-id1170572558121">
+<para id="fs-id1170572558123">Utilice el ejercicio anterior para encontrar la antiderivada de <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mi>x</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y evalúe <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo>∫</m:mo><m:mn>2</m:mn><m:mn>3</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mi>x</m:mi></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571814002">
+<para id="fs-id1170571814004">23</para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170571814009">
+<problem id="fs-id1170571814011">
+<para id="fs-id1170571814013">Demuestre que si <m:math><m:mrow><m:mi>c</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces la integral de <m:math><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:math> de <emphasis effect="italics">ac</emphasis> a <emphasis effect="italics">bc</emphasis> <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es la misma que la integral de <m:math><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:math> de <emphasis effect="italics">a</emphasis> a <emphasis effect="italics">b</emphasis>.</para>
+</problem>
+</exercise>
+<para id="fs-id1170572307624">Los siguientes ejercicios pretenden derivar las propiedades fundamentales del logaritmo natural partiendo de la <emphasis effect="italics">definición</emphasis> <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mi>x</m:mi></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow><m:mi>t</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mo>,</m:mo></m:mrow></m:math> utilizando las propiedades de la integral definida y sin hacer más suposiciones.</para>
+
+<exercise id="fs-id1170572307674">
+<problem id="fs-id1170572307676">
+<para id="fs-id1170572307678">Utilice la identidad <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mi>x</m:mi></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow><m:mi>t</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> para derivar la identidad <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572296600">
+<para id="fs-id1170572296602">Podemos suponer que <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mtext>por lo que</m:mtext><m:mspace width="0.2em"/><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Entonces, <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow><m:mi>t</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math> Ahora haga la sustitución <m:math><m:mrow><m:mi>u</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>t</m:mi></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> así que <m:math><m:mrow><m:mi>d</m:mi><m:mi>u</m:mi><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow><m:mrow><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math> y <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow><m:mi>u</m:mi></m:mfrac><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow><m:mi>t</m:mi></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> y cambie los puntos finales: <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow><m:mi>t</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mi>x</m:mi></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow><m:mi>u</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+
+<exercise id="fs-id1170572218470">
+<problem id="fs-id1170572218472">
+<para id="fs-id1170572218474">Utilice un cambio de variable en la integral <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mrow><m:mi>x</m:mi><m:mi>y</m:mi></m:mrow></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>t</m:mi></m:mfrac><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> para demostrar que <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>y</m:mi><m:mspace width="0.2em"/><m:mtext>para</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+
+<exercise id="fs-id1170571629695">
+<problem id="fs-id1170571629697">
+<para id="fs-id1170571629699">Utilice la identidad <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>1</m:mn><m:mi>x</m:mi></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow><m:mi>t</m:mi></m:mfrac></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> para demostrar que <m:math><m:mrow><m:mtext>ln</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> es una función creciente de <emphasis effect="italics">x</emphasis> en <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> y utilice los ejercicios anteriores para demostrar que el rango de <m:math><m:mrow><m:mtext>ln</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> es <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Sin más suposiciones, concluya que <m:math><m:mrow><m:mtext>ln</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> tiene una función inversa definida en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id11705716296992">
+  <para id="fs-id117057162969923">Las respuestas variarán.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571624156">
+<problem id="fs-id1170571624158">
+<para id="fs-id1170571624160">Imagine, por el momento, que no sabemos que <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math> es la función inversa de <m:math><m:mrow><m:mtext>ln</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> pero tenga en cuenta que <m:math><m:mrow><m:mtext>ln</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> tiene una función inversa definida en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Llamémoslo <emphasis effect="italics">E</emphasis>. Use la identidad <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>y</m:mi></m:mrow></m:math> para deducir que <m:math><m:mrow><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo><m:mi>b</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para cualquier número real <emphasis effect="italics">a</emphasis>, <emphasis effect="italics">b</emphasis>.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572554258">
+<problem id="fs-id1170572554260">
+<para id="fs-id1170572554263">Imagine, por el momento, que no sabemos que <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math> es la función inversa de <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> pero tenga en cuenta que <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> tiene una función inversa definida en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Llamémoslo <emphasis effect="italics">E</emphasis>. Demuestre que <m:math><m:mrow><m:mi>E</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170572309575">
+<para id="fs-id1170572309577">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Entonces, <m:math><m:mrow><m:mn>1</m:mn><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>E</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>x</m:mi></m:mfrac><m:mspace width="0.2em"/><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>E</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Dado que cualquier número <emphasis effect="italics">t</emphasis> se puede escribir <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> para alguna <emphasis effect="italics">x</emphasis>, y para tal <emphasis effect="italics">t</emphasis> tenemos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> luego se deduce que para cualquier <m:math><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>E</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170571612023">
+<problem id="fs-id1170571612025">
+<para id="fs-id1170571612028">La integral de seno, definida como <m:math><m:mrow><m:mi>S</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mi>x</m:mi></m:msubsup><m:mrow><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>t</m:mi></m:mrow><m:mi>t</m:mi></m:mfrac><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math> es una cantidad importante en ingeniería. Aunque no tiene una fórmula cerrada simple, es posible estimar su comportamiento para grandes <emphasis effect="italics">x</emphasis>. Demuestre que para <m:math><m:mrow><m:mi>k</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>S</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:mi>k</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>S</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow><m:mo>≤</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mi>k</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>π</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(</m:mtext><m:mi>P</m:mi><m:mi>is</m:mi><m:mi>t</m:mi><m:mi>a</m:mi><m:mtext>:</m:mtext><m:mspace width="0.2em"/><m:mtext>sin</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>π</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>t</m:mi><m:mtext>)</m:mtext></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1170572373482">
+<problem id="fs-id1170572373484">
+<para id="fs-id1170572373486"><emphasis effect="bold">[T]</emphasis> La distribución normal en probabilidad viene dada por <m:math><m:mrow><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mi>σ</m:mi><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mrow></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>μ</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mtext>/</m:mtext><m:mn>2</m:mn><m:msup><m:mi>σ</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> donde <emphasis effect="italics">σ</emphasis> es la desviación estándar y <emphasis effect="italics">μ</emphasis> es la media. La <emphasis effect="italics">distribución normal estándar</emphasis> en probabilidad, <m:math><m:mrow><m:msub><m:mi>p</m:mi><m:mi>s</m:mi></m:msub><m:mo>,</m:mo></m:mrow></m:math> corresponde a <m:math><m:mrow><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>σ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Calcule las estimaciones del punto extremo correcto <m:math><m:mrow><m:msub><m:mi>R</m:mi><m:mrow><m:mn>10</m:mn></m:mrow></m:msub><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>R</m:mi><m:mrow><m:mn>100</m:mn></m:mrow></m:msub></m:mrow></m:math> de <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mrow><m:mn>-1</m:mn></m:mrow><m:mn>1</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mrow></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:msup><m:mi>x</m:mi><m:mrow><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:msup></m:mrow></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1170571652254">
+<para id="fs-id1170571652256">Los términos <m:math><m:mrow><m:msub><m:mi>R</m:mi><m:mrow><m:mn>10</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mn>0.6811</m:mn><m:mo>,</m:mo><m:msub><m:mi>R</m:mi><m:mrow><m:mn>100</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mn>0,6827</m:mn></m:mrow></m:math><newline/>
+<media id="fs-id1170571652285" alt="Gráfico de la función f(x) = 0,5 * (sqrt(2)*e^(-.5x^2)) / sqrt(pi). Se trata de una curva de apertura descendente que es simétrica a lo largo del eje y, que se cruza aproximadamente en (0, 0,4). Se aproxima a 0 a medida que x llega al infinito positivo y negativo. Entre 1 y -1, se dibujan diez rectángulos para una estimación del punto extremo derecho del área bajo la curva.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_06_202.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1170572380098">
+<problem id="fs-id1170572380101">
+<para id="fs-id1170572380103"><emphasis effect="bold">[T]</emphasis> Calcule las estimaciones del punto extremo derecho <m:math><m:mrow><m:msub><m:mi>R</m:mi><m:mrow><m:mn>50</m:mn></m:mrow></m:msub><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>R</m:mi><m:mrow><m:mn>100</m:mn></m:mrow></m:msub></m:mrow></m:math> de <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mrow><m:mn>−3</m:mn></m:mrow><m:mn>5</m:mn></m:msubsup><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:msqrt></m:mrow></m:mfrac><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mtext>/</m:mtext><m:mn>8</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></para>
+</problem>
+</exercise>
+</section>
+   </content>
+</document>

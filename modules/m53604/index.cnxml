@@ -1,0 +1,561 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+<title>Tasas relacionadas</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53604</md:content-id>
+  <md:title>Tasas relacionadas</md:title>
+  <md:abstract><list id="list-00001">
+<item>Expresar cantidades cambiantes en términos de derivadas.</item>
+<item>Hallar relaciones entre las derivadas en un problema dado.</item>
+<item>Utilizar la regla de la cadena para encontrar la tasa de cambio de una cantidad que depende de la tasa de cambio de otras cantidades.</item>
+</list></md:abstract>
+  <md:uuid>ef8bd00f-7d2e-47a5-a840-2be08285798a</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1165043094761">Hemos visto que para las cantidades que cambian en el tiempo, las tasas a las que estas cantidades cambian están dadas por las derivadas. Si dos cantidades relacionadas cambian en el tiempo, las tasas a las que cambian las cantidades están relacionadas. Por ejemplo, si un globo se llena de aire, tanto el radio como el volumen del globo aumentan. En esta sección, consideramos varios problemas en los que dos o más cantidades relacionadas están cambiando y estudiamos cómo determinar la relación entre las tasas de cambio de estas cantidades.</para>
+<section id="fs-id1165043085169">
+<title>Establecer problemas de tasas relacionadas</title>
+<para id="fs-id1165043085174">En muchas aplicaciones del mundo real, las cantidades relacionadas cambian con respecto al tiempo. Por ejemplo, si volvemos a considerar el ejemplo del globo, podemos decir que la tasa de cambio del volumen, <m:math><m:mrow><m:mi>V</m:mi><m:mo>,</m:mo></m:mrow></m:math> está relacionada con la tasa de cambio del radio, <m:math><m:mrow><m:mi>r</m:mi><m:mo>.</m:mo></m:mrow></m:math> En este caso, decimos que <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>V</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math> y <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>r</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math> son <term id="term-00001">tasas relacionadas</term> porque <emphasis effect="italics">V</emphasis> está relacionada con <emphasis effect="italics">r</emphasis>. Aquí estudiamos varios ejemplos de cantidades relacionadas que cambian con respecto al tiempo y vemos cómo calcular una tasa de cambio dada otra tasa de cambio.</para>
+<example id="fs-id1165042990634">
+<exercise id="fs-id1165042978641">
+<problem id="fs-id1165043091539">
+<title>Inflar un globo</title>
+<para id="fs-id1165043084830">Un globo esférico se está llenando de aire a un ritmo constante de <m:math><m:mrow><m:mn>2</m:mn><m:msup><m:mrow><m:mspace width="0.2em"/><m:mtext>cm</m:mtext></m:mrow><m:mn>3</m:mn></m:msup><m:mtext>/</m:mtext><m:mtext>s</m:mtext></m:mrow></m:math> (<link target-id="CNX_Calc_Figure_04_01_001"/>). ¿Qué tan rápido aumenta el radio cuando el radio es <m:math><m:mrow><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>cm</m:mtext><m:mo>con dígito d?</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_04_01_001">
+<media id="fs-id1165043121052" alt="Se muestran tres globos en los tiempos 1, 2 y 3. Estos globos aumentan de volumen y radio a medida que aumenta el tiempo.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_01_001.jpg"/>
+</media>
+<caption>A medida que el globo se llena de aire, tanto el radio como el volumen aumentan con respecto al tiempo.</caption>
+</figure>
+</problem>
+<solution id="fs-id1165042969908">
+<para id="fs-id1165043021803">El volumen de una esfera de radio <m:math><m:mi>r</m:mi></m:math> centímetros es</para>
+<equation id="fs-id1165042990072" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>4</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>3</m:mn></m:msup><m:msup><m:mtext>cm</m:mtext><m:mn>3</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042881658">Como el globo se está llenando de aire, tanto el volumen como el radio son funciones del tiempo. Por lo tanto, <m:math><m:mi>t</m:mi></m:math> segundos después de comenzar a llenar el globo con aire, el volumen de aire en el globo es</para>
+<equation id="fs-id1165043013475" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mfrac><m:mn>4</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>π</m:mi><m:msup><m:mrow><m:mo stretchy="false">[</m:mo><m:mi>r</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">]</m:mo></m:mrow><m:mn>3</m:mn></m:msup><m:msup><m:mtext>cm</m:mtext><m:mn>3</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042941218">Diferenciando ambos lados de esta ecuación con respecto al tiempo y aplicando la regla de la cadena, vemos que la tasa de cambio del volumen está relacionada con la tasa de cambio del radio mediante la ecuación</para>
+<equation id="fs-id1165043119522" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:msup><m:mi>r</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043111378">El globo se está llenando de aire a una velocidad constante de 2 cm<sup>3</sup>/s, por lo que <m:math><m:mrow><m:mi>V</m:mi><m:mo>′</m:mo><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mrow><m:mspace width="0.2em"/><m:mtext>cm</m:mtext></m:mrow><m:mn>3</m:mn></m:msup><m:mtext>/</m:mtext><m:mtext>sec</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto,</para>
+<equation id="fs-id1165043009965" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mn>2</m:mn><m:msup><m:mrow><m:mtext>cm</m:mtext></m:mrow><m:mn>3</m:mn></m:msup><m:mtext>/</m:mtext><m:mtext>sec</m:mtext><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>r</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:msup><m:mrow><m:mtext>cm</m:mtext></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>·</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mtext>cm/s</m:mtext></m:mrow><m:mo>)</m:mo></m:mrow><m:mtext>,</m:mtext></m:mrow></m:math></equation>
+<para id="fs-id1165043051118">lo que implica</para>
+<equation id="fs-id1165043060683" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>r</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mspace width="0.1em"/><m:mtext>cm/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043105262">Cuando el radio <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>cm,</m:mtext></m:mrow></m:math></para>
+<equation id="fs-id1165043035926" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>r</m:mi><m:mo>′</m:mo><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>18</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:mspace width="0.1em"/><m:mtext>cm/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165043115633" class="checkpoint">
+<exercise id="fs-id1165042966918">
+<problem id="fs-id1165042962649">
+<para id="fs-id1165042979340">¿Cuál es la tasa instantánea de cambio del radio cuando <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mspace width="0.2em"/><m:mtext>cm</m:mtext><m:mo>con dígito d?</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042988435">
+<para id="fs-id1165043018863">Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>72</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:mspace width="0.2em"/><m:mtext>cm/s</m:mtext><m:mo>,</m:mo></m:mrow></m:math> o aproximadamente 0,0044 cm/s</para>
+</solution>
+<commentary id="fs-id1165043001449" type="hint">
+<title>Pista</title>
+<para id="fs-id1165042954639">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>r</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1165042989383">Antes de ver otros ejemplos, vamos a esbozar la estrategia de resolución de problemas que vamos a utilizar para resolver problemas de tasas relacionadas.</para>
+<note id="fs-id1165042947732" class="problem-solving">
+<title>Estrategia para la resolución de problemas: Resolver un problema de tasas relacionadas</title>
+<list id="fs-id1165042985160" list-type="enumerated" number-style="arabic">
+<item>Asigne símbolos a todas las variables que intervienen en el problema. Dibuje una figura si procede.</item>
+<item>Indique, en función de las variables, la información que se da y el índice que debe determinarse.</item>
+<item>Halle una ecuación que relacione las variables introducidas en el paso 1.</item>
+<item>Utilizando la regla de la cadena, diferencie ambos lados de la ecuación hallada en el paso 3 con respecto a la variable independiente. Esta nueva ecuación relacionará las derivadas.</item>
+<item>Sustituya todos los valores conocidos en la ecuación del paso 4, y luego resuelva la tasa de cambio desconocida.</item>
+</list>
+</note>
+<para id="fs-id1165043101012">Tenga en cuenta que al resolver un problema de tasas relacionadas, es crucial no sustituir los valores conocidos demasiado pronto. Por ejemplo, si el valor de una cantidad cambiante se sustituye en una ecuación antes de diferenciar ambos lados de la ecuación, entonces esa cantidad se comportará como una constante y su derivada no aparecerá en la nueva ecuación halla en el paso 4. Examinamos este posible error en el siguiente ejemplo.</para>
+</section>
+<section id="fs-id1165043105118">
+<title>Ejemplos del proceso</title>
+<para id="fs-id1165043105123">Pongamos ahora en práctica la estrategia que acabamos de describir para resolver varios problemas de tasas relacionadas. El primer ejemplo es el de un avión que sobrevuela la ciudad. La relación que estudiamos es la que existe entre la velocidad del avión y la velocidad a la que cambia la distancia entre el avión y una persona en el suelo.</para>
+<example id="fs-id1165043105132">
+<exercise id="fs-id1165043105134">
+<problem id="fs-id1165043105136">
+<title>Un avión volando a una altura constante</title>
+<para id="fs-id1165043105141">Un avión sobrevuela a una altura constante de <m:math><m:mrow><m:mn>4.000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Un hombre está viendo el avión desde una posición a <m:math><m:mrow><m:mn>3000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext></m:mrow></m:math> desde la base de una torre de radio. El avión vuela horizontalmente alejándose del hombre. Si el avión vuela a la velocidad de <m:math><m:mrow><m:mn>600</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext><m:mo>,</m:mo></m:mrow></m:math> ¿a qué velocidad aumenta la distancia entre el hombre y el avión cuando este pasa por encima de la torre de radio?</para>
+</problem>
+<solution id="fs-id1165043105181">
+<para id="fs-id1165043105183">Paso 1. Haga un dibujo, introduciendo variables para representar las diferentes cantidades implicadas.</para><figure id="CNX_Calc_Figure_04_01_002">
+<media id="fs-id1165043105190" alt="Se forma un triángulo rectángulo con una persona en el suelo, un avión en el aire y una torre de radio en el ángulo recto en el suelo. La hipotenusa es s, la distancia en el suelo entre la persona y la torre de radio es x, y el lado opuesto a la persona (es decir, la altura desde el suelo hasta el avión) es 4000 pies.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_01_002.jpg"/>
+</media>
+<caption>Un avión vuela a una altura constante de 4000 pies. La distancia entre la persona y el avión y la persona y el lugar en el suelo directamente debajo del avión están cambiando. Denotamos esas cantidades con las variables <m:math><m:mi>s</m:mi></m:math> y <m:math><m:mi>x</m:mi><m:mo>,</m:mo></m:math> respectivamente.</caption>
+</figure>
+<para id="fs-id1165043074248">Como se muestra, <m:math><m:mi>x</m:mi></m:math> denota la distancia entre el hombre y la posición en el suelo directamente debajo del avión. La variable <m:math><m:mi>s</m:mi></m:math> denota la distancia entre el hombre y el avión. Tenga en cuenta que ambas <m:math><m:mi>x</m:mi></m:math> y <m:math><m:mi>s</m:mi></m:math> son funciones del tiempo. No introducimos una variable para la altura del plano porque se mantiene a una altura constante de <m:math><m:mrow><m:mn>4.000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Como la altura de un objeto sobre el suelo se mide como la distancia más corta entre el objeto y el suelo, el segmento de línea de longitud 4000 pies es perpendicular al segmento de línea de longitud <m:math><m:mi>x</m:mi></m:math> pies, creando un triángulo rectángulo.</para>
+<para id="fs-id1165043106330">Paso 2. Dado que <m:math><m:mi>x</m:mi></m:math> denota la distancia horizontal entre el hombre y el punto del suelo por debajo del plano, <m:math><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mtext>/</m:mtext><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:math> representa la velocidad del avión. Nos dicen que la velocidad del avión es de 600 ft/s. Por lo tanto, <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>600</m:mn></m:mrow></m:math> ft/s. Como se nos pide que hallemos la tasa de cambio de la distancia entre el hombre y el avión cuando el avión está directamente sobre la torre de radio, necesitamos calcular <m:math><m:mrow><m:mi>d</m:mi><m:mi>s</m:mi><m:mtext>/</m:mtext><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>.</m:mo></m:mrow></m:math></para><para id="fs-id1165043106403">Paso 3. A partir de la figura, podemos utilizar el <term class="no-emphasis" id="term-00002">teorema de Pitágoras</term> para escribir una ecuación que relacione <m:math><m:mi>x</m:mi></m:math> y <m:math><m:mi>s</m:mi><m:mtext>:</m:mtext></m:math></para><equation id="fs-id1165043106419" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mrow><m:mn>4.000</m:mn></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043073680">Paso 4. Diferenciando esta ecuación con respecto al tiempo y utilizando el hecho de que la derivada de una constante es cero, llegamos a la ecuación</para><equation id="fs-id1165043078488" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mi>s</m:mi><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>s</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042937758">Paso 5. Calcule la tasa a la que aumenta la distancia entre el hombre y el avión cuando el avión está directamente sobre la torre de radio. Es decir, calcule <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>s</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Como la velocidad del avión es <m:math><m:mrow><m:mn>600</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext><m:mo>,</m:mo></m:mrow></m:math> sabemos que <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>600</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math> No se nos da un valor explícito para <m:math><m:mrow><m:mi>s</m:mi><m:mo>;</m:mo></m:mrow></m:math> sin embargo, ya que estamos tratando de calcular <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>s</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>,</m:mo></m:mrow></m:math> podemos utilizar el teorema de Pitágoras para determinar la distancia <m:math><m:mi>s</m:mi></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3000</m:mn></m:mrow></m:math> y la altura es <m:math><m:mrow><m:mn>4.000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Resolviendo la ecuación</para><equation id="fs-id1165042936348" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mrow><m:mn>3000</m:mn></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mrow><m:mn>4.000</m:mn></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>s</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></equation>
+<para id="fs-id1165043010270">para <m:math><m:mrow><m:mi>s</m:mi><m:mo>,</m:mo></m:mrow></m:math> tenemos <m:math><m:mrow><m:mi>s</m:mi><m:mo>=</m:mo><m:mn>5000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext></m:mrow></m:math> en el tiempo de interés. Utilizando estos valores, concluimos que <m:math><m:mrow><m:mi>d</m:mi><m:mi>s</m:mi><m:mtext>/</m:mtext><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:math> es una solución de la ecuación</para>
+<equation id="fs-id1165042927180" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>3000</m:mn><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">(</m:mo><m:mn>600</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mo stretchy="false">(</m:mo><m:mn>5000</m:mn><m:mo stretchy="false">)</m:mo><m:mo>·</m:mo><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>s</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042927230">Por lo tanto,</para>
+<equation id="fs-id1165042927234" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>s</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>3000</m:mn><m:mo>·</m:mo><m:mn>600</m:mn></m:mrow><m:mrow><m:mn>5000</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>360</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042927276"><emphasis effect="italics">Nota</emphasis>: Al resolver problemas de tasas relacionadas, es importante no sustituir los valores de las variables demasiado pronto. Por ejemplo, en el paso 3, relacionamos las cantidades variables <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> por la ecuación</para><equation id="fs-id1165042927307" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mrow><m:mn>4.000</m:mn></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042927366">Como el plano permanece a una altura constante, no es necesario introducir una variable para la altura, y se nos permite utilizar la constante 4000 para denotar esa cantidad. Sin embargo, las otras dos cantidades están cambiando. Si por error sustituimos <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>3000</m:mn></m:mrow></m:math> en la ecuación antes de diferenciarla, nuestra ecuación habría sido</para>
+<equation id="fs-id1165043116367" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mrow><m:mn>3000</m:mn></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mrow><m:mn>4.000</m:mn></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043116413">Después de diferenciar, nuestra ecuación sería</para>
+<equation id="fs-id1165043116416" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mn>0</m:mn><m:mo>=</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>s</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043116450">Como resultado, concluiríamos incorrectamente que <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>s</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165043116477" class="checkpoint">
+<exercise id="fs-id1165043116480">
+<problem id="fs-id1165043116482">
+<para id="fs-id1165043116484">¿Cuál es la velocidad del avión si la distancia entre la persona y el avión aumenta a la tasa de <m:math><m:mrow><m:mn>300</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext><m:mo>con dígito d?</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043116500">
+<para id="fs-id1165043116502">Los términos <m:math><m:mrow><m:mn>500</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165043116514" type="hint">
+<title>Pista</title>
+<para id="fs-id1165043116521">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>s</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>300</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1165043116548">Volvemos ahora al problema del lanzamiento del cohete del principio del capítulo.</para>
+<example id="fs-id1165043116552">
+<exercise id="fs-id1165043116554">
+<problem id="fs-id1165043116556">
+<title>Inicio del capítulo: El lanzamiento de un cohete</title>
+<figure id="fs-id1167793475431">
+<media id="fs-id1165043116561" alt="Una foto de un cohete despegando">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_01_007.jpg"/>
+</media>
+<caption>(crédito: modificación del trabajo de Steve Jurvetson, Wikimedia Commons).</caption>
+</figure>
+<para id="fs-id1165043116570">Se lanza un cohete para que se eleve verticalmente. Se coloca una cámara a <m:math><m:mrow><m:mn>5000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext></m:mrow></m:math> desde la plataforma de lanzamiento. Cuando el cohete está <m:math><m:mrow><m:mn>1000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext></m:mrow></m:math> sobre la plataforma de lanzamiento, su velocidad es <m:math><m:mrow><m:mn>600</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Calcule la tasa de cambio necesaria del ángulo de la cámara en función del tiempo para que se mantenga enfocada en el cohete.</para>
+</problem>
+<solution id="fs-id1165043135406">
+<para id="fs-id1165043135408">Paso 1. Haga un dibujo introduciendo las variables.</para><figure id="CNX_Calc_Figure_04_01_003">
+<media id="fs-id1165043135418" alt="Se forma un triángulo rectángulo con una cámara en uno de los ángulos no rectos y un cohete en el otro ángulo no recto. El ángulo con la cámara tiene la medida θ. La distancia del cohete al suelo es h; observe que es el lado opuesto al ángulo con medida θ. El lado adyacente al ángulo con medida θ es de 5000 pies.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_01_003.jpg"/>
+</media>
+<caption>Se coloca una cámara a 5000 pies de la plataforma de lanzamiento del cohete. La altura del cohete y el ángulo de la cámara cambian con respecto al tiempo. Denotamos esas cantidades con las variables <m:math><m:mi>h</m:mi></m:math> y <m:math><m:mi>θ</m:mi><m:mo>,</m:mo></m:math> respectivamente.</caption>
+</figure>
+<para id="fs-id1165043135441">Supongamos que <m:math><m:mi>h</m:mi></m:math> denotan la altura del cohete sobre la plataforma de lanzamiento y <m:math><m:mi>θ</m:mi></m:math> sea el ángulo entre el objetivo de la cámara y el suelo.</para>
+<para id="fs-id1165043135452">Paso 2. Estamos tratando de calcular la tasa de cambio en el ángulo de la cámara con respecto al tiempo cuando el cohete está a 1000 pies del suelo. Es decir, tenemos que calcular <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>θ</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>1000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>.</m:mo></m:mrow></m:math> En ese momento, sabemos que la velocidad del cohete es <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>h</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>600</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math></para><para id="fs-id1165043135513">Paso 3. Ahora tenemos que hallar una ecuación que relacione las dos cantidades que están cambiando con respecto al tiempo <m:math><m:mi>h</m:mi></m:math> y <m:math><m:mrow><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math> ¿Cómo podemos crear esa ecuación? Partiendo del hecho de que hemos dibujado un triángulo rectángulo, es natural pensar en las funciones trigonométricas. Recordemos que <m:math><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>θ</m:mi></m:mrow></m:math> es la relación entre la longitud del lado opuesto del triángulo y la longitud del lado adyacente. Por lo tanto, tenemos</para><equation id="fs-id1165043135539" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>h</m:mi><m:mrow><m:mn>5000</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043135560">Esto nos da la ecuación</para>
+<equation id="fs-id1165043135563" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>5000</m:mn><m:mspace width="0.1em"/><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043135582">Paso 4. Diferenciando esta ecuación con respecto al tiempo <m:math><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:math> obtenemos</para><equation id="fs-id1165043135593" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>h</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>5000</m:mn><m:mspace width="0.1em"/><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>θ</m:mi><m:mspace width="0.1em"/><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>θ</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043135638">Paso 5. Supongamos que se desea calcular <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>θ</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>1000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>.</m:mo></m:mrow></m:math> En este momento, sabemos que <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>h</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>600</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Tenemos que determinar <m:math><m:mrow><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Recordemos que <m:math><m:mrow><m:mtext>sec</m:mtext><m:mspace width="0.1em"/><m:mi>θ</m:mi></m:mrow></m:math> es la relación entre la longitud de la hipotenusa y la longitud del lado adyacente. Sabemos que la longitud del lado adyacente es <m:math><m:mrow><m:mn>5000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Para determinar la longitud de la hipotenusa, utilizamos el teorema de Pitágoras, donde la longitud de un cateto es <m:math><m:mrow><m:mn>5000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>,</m:mo></m:mrow></m:math> la longitud del otro cateto es <m:math><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>1000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>,</m:mo></m:mrow></m:math> y la longitud de la hipotenusa es <m:math><m:mi>c</m:mi></m:math> pies como se muestra en la siguiente figura.</para><media id="fs-id1165043091120" alt="Un triángulo rectángulo tiene un ángulo con medida θ. La hipotenusa es c, la longitud del lado opuesto al ángulo con medida θ es 1000, y el lado adyacente al ángulo con medida θ es 5000.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_01_005.jpg"/>
+</media>
+<para id="fs-id1165043091129">Vemos que</para>
+<equation id="fs-id1165043091132" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mrow><m:mn>1000</m:mn></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mrow><m:mn>5000</m:mn></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>c</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></equation>
+<para id="fs-id1165043091161">y concluimos que la hipotenusa es</para>
+<equation id="fs-id1165043091164" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>c</m:mi><m:mo>=</m:mo><m:mn>1000</m:mn><m:msqrt><m:mrow><m:mn>26</m:mn></m:mrow></m:msqrt><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043091188">Por lo tanto, cuando <m:math><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>1000</m:mn><m:mo>,</m:mo></m:mrow></m:math> tenemos</para>
+<equation id="fs-id1165043091203" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>θ</m:mi><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>1000</m:mn><m:msqrt><m:mrow><m:mn>26</m:mn></m:mrow></m:msqrt></m:mrow><m:mrow><m:mn>5000</m:mn></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>26</m:mn></m:mrow><m:mrow><m:mn>25</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043091254">Recordemos que en el paso 4 la ecuación que relaciona <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>θ</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math> a nuestros valores conocidos es</para>
+<equation id="fs-id1165043122103" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>h</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>5000</m:mn><m:mspace width="0.1em"/><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>θ</m:mi><m:mspace width="0.1em"/><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>θ</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043122148">Cuando <m:math><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>1000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>,</m:mo></m:mrow></m:math> sabemos que <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>h</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>600</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>26</m:mn></m:mrow><m:mrow><m:mn>25</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Sustituyendo estos valores en la ecuación anterior, llegamos a la ecuación</para>
+<equation id="fs-id1165043122214" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mn>600</m:mn><m:mo>=</m:mo><m:mn>5000</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>26</m:mn></m:mrow><m:mrow><m:mn>25</m:mn></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>θ</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mtext>.</m:mtext></m:mrow></m:math></equation><para id="fs-id1165043122252">Por lo tanto, <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>θ</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>3</m:mn><m:mrow><m:mn>26</m:mn></m:mrow></m:mfrac><m:mspace width="0.2em"/><m:mtext>rad/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165043122287" class="checkpoint">
+<exercise id="fs-id1165043122291">
+<problem id="fs-id1165043122293">
+<para id="fs-id1165043122295">¿Qué tasa de cambio es necesaria para el ángulo de elevación de la cámara si esta se coloca en el suelo a una distancia de <m:math><m:mrow><m:mn>4.000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext></m:mrow></m:math> desde la plataforma de lanzamiento y la velocidad del cohete es de 500 ft/s cuando el cohete está a <m:math><m:mrow><m:mn>2000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext></m:mrow></m:math> del suelo?</para>
+</problem>
+<solution id="fs-id1165043122320">
+<para id="fs-id1165043122322">Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>10</m:mn></m:mrow></m:mfrac><m:mspace width="0.2em"/><m:mtext>rad/s</m:mtext></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165043122338" type="hint">
+<title>Pista</title>
+<para id="fs-id1165043122344">Calcule <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>θ</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mn>2000</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>.</m:mo></m:mrow></m:math> En ese tiempo, <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>h</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>500</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1165043112984">En el siguiente ejemplo, consideramos el agua que sale de un embudo en forma de cono. Comparamos la tasa de disminución del nivel de agua en el cono con la tasa de disminución del volumen de agua.</para>
+<example id="fs-id1165043112989">
+<exercise id="fs-id1165043112991">
+<problem id="fs-id1165043112993">
+<title>Drenaje de agua de un embudo</title>
+<para id="fs-id1165043112999">El agua escurre por el fondo de un embudo en forma de cono a una tasa de <m:math><m:mrow><m:mn>0,0</m:mn><m:msup><m:mrow><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext></m:mrow><m:mn>3</m:mn></m:msup><m:mtext>/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math> La altura del embudo es de 2 pies y el radio en la parte superior del embudo es <m:math><m:mrow><m:mn>1</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>.</m:mo></m:mrow></m:math> ¿A qué tasa cambia la altura del agua en el embudo cuando la altura del agua es <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>con dígito d?</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043113049">
+<para id="fs-id1165043113051">Paso 1: Haga un dibujo introduciendo las variables.</para>
+<figure id="CNX_Calc_Figure_04_01_004">
+<media id="fs-id1165043113057" alt="Se muestra un embudo con altura 2 y radio 1 en su parte superior. El embudo tiene agua hasta la altura h, en cuyo punto el radio es r.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_01_004.jpg"/>
+</media>
+<caption>El agua sale de un embudo de 2 pies de altura y 1 pie de radio. La altura del agua y el radio del agua cambian con el tiempo. Denotamos estas cantidades con las variables <m:math><m:mi>h</m:mi></m:math> y <m:math><m:mi>r</m:mi><m:mo>,</m:mo></m:math> respectivamente.</caption>
+</figure>
+<para id="fs-id1165043113082">Supongamos que <m:math><m:mi>h</m:mi></m:math> denota la altura del agua en el embudo, <m:math><m:mi>r</m:mi></m:math> denota el radio del agua en su superficie y <m:math><m:mi>V</m:mi></m:math> denota el volumen del agua.</para>
+<para id="fs-id1165043113098">Paso 2: Tenemos que determinar <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>h</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Sabemos que <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>V</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>-0,03</m:mn><m:mspace width="0.2em"/><m:msup><m:mtext>ft</m:mtext><m:mn>3</m:mn></m:msup><m:mtext>/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1165043113159">Paso 3: El volumen de agua en el cono es</para>
+<equation id="fs-id1165043113163" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mi>h</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043113190">En la figura, vemos que tenemos triángulos similares. Por lo tanto, la relación de los lados de los dos triángulos es la misma. Por lo tanto, <m:math><m:mrow><m:mfrac><m:mi>r</m:mi><m:mi>h</m:mi></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> o <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>h</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Utilizando este hecho, la ecuación del volumen puede simplificarse a</para>
+<equation id="fs-id1165043106856" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>h</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mi>h</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mrow><m:mn>12</m:mn></m:mrow></m:mfrac><m:mspace width="0.1em"/><m:msup><m:mi>h</m:mi><m:mn>3</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043106908">Paso 4: Aplicando la regla de la cadena y diferenciando ambos lados de esta ecuación con respecto al tiempo <m:math><m:mi>t</m:mi><m:mo>,</m:mo></m:math> obtenemos</para>
+<equation id="fs-id1165043106915" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>V</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mspace width="0.1em"/><m:msup><m:mi>h</m:mi><m:mn>2</m:mn></m:msup><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>h</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043106960">Paso 5: Supongamos que se desea calcular <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>h</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Como el agua sale a una tasa de <m:math><m:mrow><m:mn>0,0</m:mn><m:msup><m:mrow><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext></m:mrow><m:mn>3</m:mn></m:msup><m:mtext>/s</m:mtext><m:mo>,</m:mo></m:mrow></m:math> sabemos que <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>V</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>-0,03</m:mn><m:msup><m:mrow><m:mspace width="0.2em"/><m:mtext>ft</m:mtext></m:mrow><m:mn>3</m:mn></m:msup><m:mtext>/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto,</para>
+<equation id="fs-id1165043107050" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mn>-0,03</m:mn><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>h</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mtext/><m:mo>,</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043107097">lo que implica</para>
+<equation id="fs-id1165043107100" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mn>-0,03</m:mn><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mrow><m:mn>16</m:mn></m:mrow></m:mfrac><m:mspace width="0.2em"/><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>h</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043107131">De ello se desprende que</para>
+<equation id="fs-id1165043098466" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>h</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mo>-</m:mo><m:mfrac><m:mrow><m:mn>0,48</m:mn></m:mrow><m:mi>π</m:mi></m:mfrac><m:mo>=</m:mo><m:mn>-0,153</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165043098509" class="checkpoint">
+<exercise id="fs-id1165043098512">
+<problem id="fs-id1165043098514">
+<para id="fs-id1165043098516">¿A qué tasa cambia la altura del agua cuando la altura del agua es <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mspace width="0.2em"/><m:mtext>ft</m:mtext><m:mo>con dígito d?</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043098534">
+<para id="fs-id1165043098536">Los términos <m:math><m:mrow><m:mn>-0,61</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165043098550" type="hint">
+<title>Pista</title>
+<para id="fs-id1165043098557">Debemos calcular <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>h</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>h</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1165043098593" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1165043098599" list-type="bulleted" bullet-style="bullet">
+<item>Para resolver un problema de tasas relacionadas, primero haga un dibujo que ilustre la relación entre las dos o más cantidades relacionadas que están cambiando con respecto al tiempo.</item>
+<item>En cuanto a las cantidades, indique la información dada y la tasa que se debe encontrar.</item>
+<item>Halle una ecuación que relacione las cantidades.</item>
+<item>Utilice la diferenciación, aplicando la regla de la cadena si es necesario, para hallar una ecuación que relacione las tasas.</item>
+<item>Asegúrese de no sustituir una cantidad variable por una de las variables hasta después de hallar una ecuación que relacione las tasas.</item>
+</list>
+</section>
+<section id="fs-id1165043098625" class="section-exercises">
+<para id="fs-id1165043098628">En los siguientes ejercicios, calcule las cantidades para la ecuación dada.</para>
+<exercise id="fs-id1165043098631">
+<problem id="fs-id1165043098633">
+<para id="fs-id1165043098635">Calcule <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:math> si <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043098701">
+<para id="fs-id1165043098704">Los términos <m:math><m:mn>8</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043098711">
+<problem id="fs-id1165043098713">
+<para id="fs-id1165043098715">Halle <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math> en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> si <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043123744">
+<problem id="fs-id1165043123747">
+<para id="fs-id1165043123749">Halle <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>z</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac></m:mrow></m:math> en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>z</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> si <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043123862">
+<para id="fs-id1165043123864">Los términos <m:math><m:mo>±</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>13</m:mn></m:mrow><m:mrow><m:msqrt><m:mrow><m:mn>10</m:mn></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1165043123880">En los siguientes ejercicios, haga un dibujo de la situación si es necesario y utilice las tasas relacionadas para calcular las cantidades.</para>
+<exercise id="fs-id1165043123884">
+<problem id="fs-id1165043123886">
+<para id="fs-id1165043123888"><emphasis effect="bold">[T]</emphasis> Si se conectan dos resistores eléctricos en paralelo, la resistencia total (medida en ohmios, denotada por la letra griega mayúscula omega, <m:math><m:mrow><m:mtext>Ω</m:mtext><m:mo stretchy="false">)</m:mo></m:mrow></m:math> está dada por la ecuación <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>R</m:mi></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msub><m:mi>R</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msub><m:mi>R</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mrow><m:msub><m:mi>R</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> está aumentando a una tasa de <m:math><m:mrow><m:mn>0,5</m:mn><m:mspace width="0.2em"/><m:mtext>Ω</m:mtext><m:mtext>/</m:mtext><m:mtext>min</m:mtext></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>R</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> disminuye a una tasa de <m:math><m:mrow><m:mn>1,1</m:mn><m:mtext>Ω/min</m:mtext><m:mo>,</m:mo></m:mrow></m:math> ¿a qué tasa cambia la resistencia total cuando <m:math><m:mrow><m:msub><m:mi>R</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>20</m:mn><m:mtext>Ω</m:mtext></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>R</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>50</m:mn><m:mtext>Ω</m:mtext></m:mrow></m:math>?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043109828">
+<problem id="fs-id1165043109830">
+<para id="fs-id1165043109833">Una escalera de 10 pies está apoyada en la pared. Si la parte superior de la escalera se desliza por la pared a una tasa de 2 ft/s, ¿a qué velocidad se mueve la parte inferior por el suelo cuando la parte inferior de la escalera está a 5 pies de la pared?</para>
+<media id="fs-id1165043109840" alt="Un triángulo rectángulo está formado por una escalera apoyada en una pared de ladrillos. La escalera forma la hipotenusa y mide 10 pies. ">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_01_201.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1165043109849">
+<para id="fs-id1165043109851">Los términos <m:math><m:mrow><m:mn>2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow></m:math> ft/s</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043109864">
+<problem id="fs-id1165043109866">
+<para id="fs-id1165043109868">Una escalera de 25 pies está apoyada en una pared. Si empujamos la escalera hacia la pared a una velocidad de 1 ft/s, y la parte inferior de la escalera está inicialmente a <m:math><m:mrow><m:mn>20</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext></m:mrow></m:math> de distancia de la pared, ¿qué tan rápido se mueve la escalera por la pared <m:math><m:mrow><m:mn>5</m:mn><m:mspace width="0.2em"/><m:mtext>s</m:mtext></m:mrow></m:math> después de empezar a empujar?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043109911">
+<problem id="fs-id1165043109914">
+<para id="fs-id1165043109916">Dos aviones están volando en el aire a la misma altura: el avión <emphasis effect="italics">A</emphasis> está volando hacia el este a 250 mi/h y el avión <emphasis effect="italics">B</emphasis> está volando hacia el norte a <m:math><m:mrow><m:mn>300</m:mn><m:mspace width="0.2em"/><m:mtext>mi/h</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Si ambos se dirigen al mismo aeropuerto, situado a 30 millas al este del avión <emphasis effect="italics">A</emphasis> y a 40 millas al norte del avión <emphasis effect="italics">B</emphasis>, ¿a qué tasa cambia la distancia entre los aviones?</para>
+<media id="fs-id1165043109949" alt="Un triángulo rectángulo está formado por dos aviones A y B que se mueven perpendicularmente entre sí. La hipotenusa es la distancia entre los planos A y B. Los otros lados son extensiones de la trayectoria de cada plano hasta que se encuentran.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_01_202.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1165043109958">
+<para id="fs-id1165043109960">La distancia disminuye a <m:math><m:mrow><m:mn>390</m:mn><m:mspace width="0.2em"/><m:mtext>mi/h</m:mtext><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043109976">
+<problem id="fs-id1165043109978">
+<para id="fs-id1165043109980">Usted y un amigo van en bicicleta a un restaurante que usted cree que está al este; su amigo cree que el restaurante está al norte. Ambos parten del mismo punto, usted circulando a 16 mph al este y su amigo circulando a <m:math><m:mrow><m:mn>12</m:mn><m:mspace width="0.2em"/><m:mtext>mph</m:mtext></m:mrow></m:math> al norte. Después de desplazarse <m:math><m:mrow><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>mi,</m:mtext></m:mrow></m:math> ¿a qué tasa cambia la distancia entre ustedes?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043110023">
+<problem id="fs-id1165043110026">
+<para id="fs-id1165043110028">Dos autobuses circulan por autopistas paralelas con una separación de <m:math><m:mrow><m:mn>5</m:mn><m:mspace width="0.2em"/><m:mtext>mi</m:mtext></m:mrow></m:math>, uno hacia el este y el otro hacia el oeste. Asumiendo que cada bus conduce una velocidad constante de <m:math><m:mrow><m:mn>55</m:mn><m:mspace width="0.2em"/><m:mtext>mph,</m:mtext></m:mrow></m:math> calcule la tasa a la que cambia la distancia entre los autobuses cuando tienen una separación de <m:math><m:mrow><m:mn>13</m:mn><m:mspace width="0.2em"/><m:mtext>mi</m:mtext></m:mrow></m:math> y están dirigiéndose el uno hacia el otro.</para>
+</problem>
+<solution id="fs-id1165043116053">
+<para id="fs-id1165043116056">La distancia entre ellos se reduce a una tasa de <m:math><m:mrow><m:mfrac><m:mrow><m:mn>1320</m:mn></m:mrow><m:mrow><m:mn>13</m:mn></m:mrow></m:mfrac><m:mo>≈</m:mo><m:mn>101,5</m:mn><m:mspace width="0.2em"/><m:mtext>mph</m:mtext><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043116081">
+<problem id="fs-id1165043116083">
+<para id="fs-id1165043116085">Una persona de 6 pies de altura se aleja de un poste de luz de 10 pies a una tasa constante de <m:math><m:mrow><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>ft/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math> ¿Cuál es la tasa a la que la punta de la sombra se aleja del poste cuando la persona está a <m:math><m:mrow><m:mn>10</m:mn><m:mspace width="0.2em"/><m:mtext>ft</m:mtext></m:mrow></m:math> del poste?</para>
+<media id="fs-id1165043116117" alt="Se muestra un poste de luz de 10 pies de altura. A su derecha, hay una persona que mide 6 pies de alto. Hay una línea desde la parte superior del poste de luz que toca la parte superior de la cabeza de la persona y luego continúa hasta el suelo. La longitud desde el final de esta línea hasta donde el poste de luz toca el suelo es 10 + x. La distancia del poste de luz a la persona en el suelo es 10, y la distancia de la persona al final de la línea es x.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_01_203.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1165043116140">
+<problem id="fs-id1165043116142">
+<para id="fs-id1165043116144">Utilizando el problema anterior, ¿cuál es la tasa a la que la punta de la sombra se aleja de la persona cuando esta se encuentra a 10 pies del poste?</para>
+</problem>
+<solution id="fs-id1165043116150">
+<para id="fs-id1165043116152">Los términos <m:math><m:mrow><m:mfrac><m:mn>9</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> ft/s</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043116165">
+<problem id="fs-id1165043116167">
+<para id="fs-id1165043116169">Una persona de 5 pies de altura camina hacia una pared a una velocidad de 2 ft/s. Un foco se sitúa en el suelo a 40 pies de la pared. ¿Qué tan rápido cambia la altura de la sombra de la persona en la pared cuando esta se encuentra a 10 pies de la misma?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043116192">
+<problem id="fs-id1165043116194">
+<para id="fs-id1165043116197">Utilizando el problema anterior, ¿cuál es la tasa a la que cambia la sombra cuando la persona está a 10 pies de la pared, si la persona se aleja de la pared a una velocidad de 2 ft/s?</para>
+</problem>
+<solution id="fs-id1165043116202">
+<para id="fs-id1165043116205">Crece a una tasa de <m:math><m:mrow><m:mfrac><m:mn>4</m:mn><m:mn>9</m:mn></m:mfrac></m:mrow></m:math> ft/s</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043116218">
+<problem id="fs-id1165043116221">
+<para id="fs-id1165043116223">Un helicóptero que comienza en el suelo se eleva directamente en el aire a una velocidad de 25 ft/s. Usted está corriendo en el suelo empezando directamente debajo del helicóptero a una tasa de 10 ft/s. Calcule la tasa de cambio de la distancia entre el helicóptero y usted después de 5 segundos.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043116258">
+<problem id="fs-id1165043116260">
+<para id="fs-id1165043116262">Utilizando el problema anterior, ¿cuál es la tasa a la que cambia la distancia entre usted y el helicóptero cuando este se ha elevado a una altura de 60 pies en el aire, suponiendo que, inicialmente, estaba a 30 pies por encima de usted?</para>
+</problem>
+<solution id="fs-id1165043116269">
+<para id="fs-id1165043116271">La distancia aumenta a una tasa de <m:math><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>135</m:mn><m:msqrt><m:mrow><m:mn>26</m:mn></m:mrow></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>26</m:mn></m:mrow></m:mfrac></m:mrow></m:math> ft/s</para>
+</solution>
+</exercise>
+<para id="fs-id1165043116298">En los siguientes ejercicios, dibuje y marque diagramas para ayudar a resolver los problemas de tasas relacionadas.</para>
+<exercise id="fs-id1165043116301">
+<problem id="fs-id1165043116303">
+<para id="fs-id1165043116305">El lado de un cubo aumenta a una tasa de <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> m/s. Calcule la tasa a la que aumenta el volumen del cubo cuando el lado del cubo es de 4 m.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043116333">
+<problem id="fs-id1165043116335">
+<para id="fs-id1165043116337">El volumen de un cubo disminuye a una tasa de 10 m<sup>3</sup>/s. Calcule la tasa a la que cambia el lado del cubo cuando el lado del cubo es de 2 m.</para></problem>
+<solution id="fs-id1165043116347">
+<para id="fs-id1165043114828">Los términos <m:math><m:mrow><m:mo>-</m:mo><m:mfrac><m:mn>5</m:mn><m:mn>6</m:mn></m:mfrac></m:mrow></m:math> m/s</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043114843">
+<problem id="fs-id1165043114845">
+<para id="fs-id1165043114847">El radio de un círculo aumenta a una tasa de <m:math><m:mn>2</m:mn></m:math> m/s. Calcule la tasa a la que aumenta el área del círculo cuando el radio es de 5 m.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043114873">
+<problem id="fs-id1165043114875">
+<para id="fs-id1165043114877">El radio de una esfera disminuye a una tasa de <m:math><m:mn>3</m:mn></m:math> m/s. Calcule la tasa a la que disminuye el área superficial cuando el radio es de 10 m.</para>
+</problem>
+<solution id="fs-id1165043114886">
+<para id="fs-id1165043114888">Los términos <m:math><m:mrow><m:mn>240</m:mn><m:mi>π</m:mi></m:mrow></m:math> m<sup>2</sup>/s</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043114903">
+<problem id="fs-id1165043114905">
+<para id="fs-id1165043114907">El radio de una esfera aumenta a una tasa de <m:math><m:mn>1</m:mn></m:math> m/s. Calcule la tasa a la que aumenta el volumen cuando el radio es <m:math><m:mrow><m:mn>20</m:mn></m:mrow></m:math> m.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043114938">
+<problem id="fs-id1165043114940">
+<para id="fs-id1165043114942">El radio de una esfera aumenta a una tasa de 9 cm/s. Calcule el radio de la esfera cuando el volumen y el radio de la esfera aumentan a la misma tasa numérica.</para>
+</problem>
+<solution id="fs-id1165043114948">
+<para id="fs-id1165043114950">Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:msqrt><m:mi>π</m:mi></m:msqrt></m:mrow></m:mfrac></m:mrow></m:math> cm</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043114967">
+<problem id="fs-id1165043114970">
+<para id="fs-id1165043114972">La base de un triángulo disminuye a una tasa de 1 cm/min y la altura del triángulo aumenta a una tasa de 5 cm/min. Calcule la tasa a la que cambia el área del triángulo cuando la altura es de 22 cm y la base de 10 cm.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043114989">
+<problem id="fs-id1165043114991">
+<para id="fs-id1165043114993">Un triángulo tiene dos lados constantes de longitud 3 pies y 5 pies. El ángulo entre estos dos lados aumenta a una tasa de 0,1 rad/s. Calcule la tasa a la que cambia el área del triángulo cuando el ángulo entre los dos lados es <m:math><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>6</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043115010">
+<para id="fs-id1165043115012">El área aumenta a una tasa de <m:math><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>8</m:mn></m:mfrac><m:mspace width="0.2em"/><m:msup><m:mtext>ft</m:mtext><m:mspace width="0.2em"/><m:mn>2</m:mn></m:msup><m:mtext>/s.</m:mtext></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043115045">
+<problem id="fs-id1165043115047">
+<para id="fs-id1165043115049">Un triángulo tiene una altura que aumenta a una tasa de 2 cm/s y su área aumenta a una tasa de 4 cm<sup>2</sup>/s. Calcule la tasa a la que cambia la base del triángulo cuando la altura del triángulo es de 4 cm y el área es de 20 cm<sup>2</sup>.</para>
+</problem>
+</exercise>
+<para id="fs-id1165043115074">En los siguientes ejercicios, considere un cono derecho que pierde agua. Las dimensiones del tanque cónico son una altura de 16 pies y un radio de 5 pies.</para>
+<exercise id="fs-id1165043115079">
+<problem id="fs-id1165043115081">
+<para id="fs-id1165043115083">¿A qué tasa cambia la profundidad del agua cuando el agua está a 10 pies de altura si el cono pierde agua a una velocidad de 10 ft<sup>3</sup>/min?</para>
+</problem>
+<solution id="fs-id1165043115092">
+<para id="fs-id1165043115094">La profundidad del agua disminuye a una tasa de <m:math><m:mrow><m:mfrac><m:mrow><m:mn>128</m:mn></m:mrow><m:mrow><m:mn>125</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac></m:mrow></m:math> ft/min.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043115112">
+<problem id="fs-id1165043115114">
+<para id="fs-id1165043115116">Calcule la tasa a la que cambia el área superficial del agua cuando el agua está a 10 pies de altura si el cono pierde agua a una tasa de 10 ft<sup>3</sup>/min.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043092123">
+<problem id="fs-id1165043092126">
+<para id="fs-id1165043092128">Si el nivel del agua disminuye a una tasa de 3 in/min cuando la profundidad del agua es de 8 pies, determine la tasa a la que el agua se escapa del cono.</para></problem>
+<solution id="fs-id1165043092133">
+<para id="fs-id1165043092136">El volumen disminuye a una tasa de <m:math><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>25</m:mn><m:mi>π</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>16</m:mn></m:mrow></m:mfrac><m:msup><m:mrow><m:mtext>ft</m:mtext></m:mrow><m:mn>3</m:mn></m:msup><m:mtext>/min</m:mtext><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043092170">
+<problem id="fs-id1165043092172">
+<para id="fs-id1165043092174">Un cilindro vertical pierde agua a una tasa de 1 ft<sup>3</sup>/s. Si el cilindro tiene una altura de 10 pies y un radio de 1 pie, ¿a qué tasa cambia la altura del agua cuando la altura es de 6 pies?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043092199">
+<problem id="fs-id1165043092201">
+<para id="fs-id1165043092203">Un cilindro tiene una fuga de agua, pero usted no puede determinar a qué tasa. El cilindro tiene una altura de 2 m y un radio de 2 m. Calcule la tasa de salida del agua del cilindro si la tasa de disminución de la altura es de 10 cm/min cuando la altura es de 1 m.</para>
+</problem>
+<solution id="fs-id1165043092210">
+<para id="fs-id1165043092212">El agua sale a una tasa de <m:math><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>5</m:mn></m:mfrac><m:mspace width="0.2em"/><m:msup><m:mtext>m</m:mtext><m:mspace width="0.2em"/><m:mn>3</m:mn></m:msup><m:mtext>/min.</m:mtext></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043092244">
+<problem id="fs-id1165043092246">
+<para id="fs-id1165043092248">Un abrevadero tiene los extremos en forma de triángulo isósceles, con un ancho de 3 m y una altura de 4 m, y el abrevadero tiene una longitud de 10 m. El agua se bombea en el abrevadero a una tasa de <m:math><m:mrow><m:mn>5</m:mn><m:mspace width="0.2em"/><m:msup><m:mrow><m:mtext>m</m:mtext></m:mrow><m:mn>3</m:mn></m:msup><m:mtext>/min</m:mtext><m:mo>.</m:mo></m:mrow></m:math> ¿A qué tasa cambia la altura del agua cuando el agua tiene 1 m de profundidad?</para>
+<media id="fs-id1165043092271" alt="Se muestra un abrevadero con extremos en forma de triángulo isósceles. Estos triángulos tienen un ancho de 3 y una altura de 4. El abrevadero está formado por rectángulos que tienen una longitud de 10. Hay algo de agua en el abrevadero.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_01_204.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1165043092297">
+<problem id="fs-id1165043092299">
+<para id="fs-id1165043092301">Un tanque tiene forma de pirámide cuadrada invertida, con una base de 4 m por 4 m y una altura de 12 m (vea la siguiente figura). ¿A qué tasa aumenta la altura cuando el agua tiene 2 m de profundidad si se bombea agua a una tasa de <m:math><m:mrow><m:mfrac><m:mn>2</m:mn><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> m<sup>3</sup>/s?</para>
+<media id="fs-id1165043092315" alt="Se muestra una pirámide cuadrada invertida con lados cuadrados de longitud 4 y altura 12. Hay una cantidad indeterminada de agua dentro de la forma.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_01_205.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1165043092326">
+<para id="fs-id1165043092328">Los términos <m:math><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> m/s</para>
+</solution>
+</exercise>
+<para id="fs-id1165043092341">En los siguientes problemas, considere una piscina con forma de la mitad inferior de una esfera, que se está llenando a una tasa de 25 ft<sup>3</sup>/min. El radio de la piscina es de 10 pies. The formula for the volume of a partial hemisphere is <m:math><m:mi>V</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>πh</m:mi><m:mn>6</m:mn></m:mfrac><m:mo>(</m:mo><m:mn>3</m:mn><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>h</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:math> donde <m:math><m:mi>h</m:mi></m:math> is the height of the water and <m:math><m:mi>r</m:mi></m:math> is the radius of the water.</para>
+<exercise id="fs-id1165043092348">
+<problem id="fs-id1165043092351">
+<para id="fs-id1165043092353">Calcule la tasa a la que cambia la profundidad del agua cuando esta tiene una profundidad de 5 pies.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043092375">
+<problem id="fs-id1165043092377">
+<para id="fs-id1165043092379">Calcule la tasa a la que cambia la profundidad del agua cuando esta tiene una profundidad de 1 pie.</para>
+</problem>
+<solution id="fs-id1165043092384">
+<para id="fs-id1165043092386">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>25</m:mn></m:mrow><m:mrow><m:mn>19</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac></m:mrow></m:math> ft/min</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043092403">
+<problem id="fs-id1165043092405">
+<para id="fs-id1165043092407">Si la altura aumenta a una tasa de 1 in/min cuando la profundidad del agua es de 2 pies, calcule la tasa a la que se está bombeando el agua.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043117974">
+<problem id="fs-id1165043117976">
+<para id="fs-id1165043117978">Se está descargando grava de un camión y cae en un montón con forma de cono a una tasa de 10 ft<sup>3</sup>/min. El radio de la base del cono es tres veces la altura del mismo. Calcule la tasa a la que cambia la altura de la grava cuando el montón tiene una altura de 5 pies.</para>
+</problem>
+<solution id="fs-id1165043117987">
+<para id="fs-id1165043117990">Los términos <m:math><m:mrow><m:mfrac><m:mn>2</m:mn><m:mrow><m:mn>45</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac></m:mrow></m:math> ft/min</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043118006">
+<problem id="fs-id1165043118008">
+<para id="fs-id1165043118010">Utilizando un planteamiento similar al del problema anterior, calcule la tasa a la que se descarga la grava si la pila tiene 5 pies de altura y la altura aumenta a una tasa de 4 in/min.</para>
+</problem>
+</exercise>
+<para id="fs-id1165043118033">En los siguientes ejercicios, dibuje las situaciones y resuelva los problemas de tasas relacionadas.</para>
+<exercise id="fs-id1165043118036">
+<problem id="fs-id1165043118038">
+<para id="fs-id1165043118040">Usted está inmóvil en el suelo y observa cómo un pájaro vuela horizontalmente a una velocidad de <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math> m/s. El pájaro se encuentra a 40 m por encima de su cabeza. ¿A qué tasa cambia el ángulo de elevación cuando la distancia horizontal entre usted y el pájaro es de 9 m?</para>
+</problem>
+<solution id="fs-id1165043118051">
+<para id="fs-id1165043118053">El ángulo disminuye a una tasa de <m:math><m:mrow><m:mfrac><m:mrow><m:mn>400</m:mn></m:mrow><m:mrow><m:mn>1681</m:mn></m:mrow></m:mfrac><m:mspace width="0.2em"/><m:mtext>rad/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043118075">
+<problem id="fs-id1165043118077">
+<para id="fs-id1165043118079">Usted se coloca a 40 pies de un cohete de botella en el suelo y observa cómo despega verticalmente en el aire a una tasa de 20 ft/s. Calcule la tasa a la que cambia el ángulo de elevación cuando el cohete está a 30 pies en el aire.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043118102">
+<problem id="fs-id1165043118104">
+<para id="fs-id1165043118106">Un faro, <emphasis effect="italics">L</emphasis>, se encuentra en una isla a 4 millas de distancia del punto más cercano, <emphasis effect="italics">P</emphasis>, en la playa (vea la siguiente imagen). Si la luz del faro gira en el sentido de las agujas del reloj a una tasa constante de 10 revoluciones/min, ¿a qué tasa se desplaza el haz de luz por la playa a 2 millas del punto más cercano de la playa?</para>
+<media id="fs-id1165043118120" alt="Un triángulo rectángulo está formado por un faro L, un punto P en la orilla que es perpendicular a la línea que va del faro a la orilla, y un punto a 2 millas a la derecha del punto P. La distancia de P a L es de 4 millas.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_01_208.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1165043118132">
+<para id="fs-id1165043118134">Los términos <m:math><m:mrow><m:mn>100</m:mn><m:mi>π</m:mi><m:mtext> mi/min</m:mtext></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043118149">
+<problem id="fs-id1165043118151">
+<para id="fs-id1165043118153">Utilizando el mismo planteamiento que en el problema anterior, determine a qué tasa se desplaza el haz de luz a través de la playa a 1 milla de distancia del punto más cercano de la playa.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043118176">
+<problem id="fs-id1165043118178">
+<para id="fs-id1165043118180">Usted va caminando hacia una parada de autobús en una esquina en ángulo recto. Usted se mueve hacia el norte a una velocidad de 2 m/s y está a 20 metros al sur de la intersección. El autobús se desplaza hacia el oeste a una velocidad de 10 m/s alejándose de la intersección: ¡ha perdido el autobús! ¿Cuál es la tasa a la que cambia el ángulo entre usted y el autobús cuando usted está a 20 metros al sur de la intersección y el autobús está a 10 metros al oeste de la misma?</para>
+</problem>
+<solution id="fs-id1165043118188">
+<para id="fs-id1165043118190">El ángulo cambia a una tasa de <m:math><m:mrow><m:mfrac><m:mrow><m:mn>11</m:mn></m:mrow><m:mrow><m:mn>25</m:mn></m:mrow></m:mfrac><m:mspace width="0.2em"/><m:mtext>rad/s</m:mtext><m:mo>.</m:mo></m:mrow></m:math></para></solution>
+</exercise>
+<para id="fs-id1165043118212">En los siguientes ejercicios, consulte la figura del diamante de béisbol, que tiene lados de 90 pies.</para>
+<media id="fs-id1165043118215" alt="Se muestra un campo de béisbol, con las bases marcadas como Home, 1ra, 2da y 3ra que forman un cuadrado con longitudes de lado de 90 pies.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_01_207.jpg"/>
+</media>
+<exercise id="fs-id1165043118225">
+<problem id="fs-id1165043118227">
+<para id="fs-id1165043118229"><emphasis effect="bold">[T]</emphasis> Un bateador golpea una pelota hacia la tercera base a 75 ft/s y corre hacia la primera base a una tasa de 24 ft/s. ¿A qué tasa cambia la distancia entre la pelota y el bateador cuando han pasado 2 segundos?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043118251">
+<problem id="fs-id1165043118253">
+<para id="fs-id1165043118255"><emphasis effect="bold">[T]</emphasis> Un bateador golpea una pelota hacia la segunda base a 80 ft/s y corre hacia la primera base a una tasa de 30 ft/s. ¿A qué tasa cambia la distancia entre la pelota y el bateador cuando el corredor ha recorrido un tercio de la distancia hasta la primera base? (<emphasis effect="italics">Pista</emphasis>: Recordemos la ley de los cosenos).</para>
+</problem>
+<solution id="fs-id1165043120447">
+<para id="fs-id1165043120449">La distancia aumenta a una tasa de <m:math><m:mrow><m:mn>62,50</m:mn></m:mrow></m:math> ft/s.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043120460">
+<problem id="fs-id1165043120462">
+<para id="fs-id1165043120464"><emphasis effect="bold">[T]</emphasis> Un bateador golpea la pelota y corre hacia la primera base a una velocidad de 22 ft/s. ¿A qué tasa cambia la distancia entre el corredor y la segunda base cuando el corredor ha corrido 30 pies?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043120487">
+<problem id="fs-id1165043120489">
+<para id="fs-id1165043120491"><emphasis effect="bold">[T]</emphasis> Los corredores comienzan en primera y segunda base. Cuando se batea la pelota, el corredor de la primera base corre a una velocidad de 18 ft/s hacia la segunda base y el corredor de la segunda base corre a una velocidad de 20 ft/s hacia la tercera base. ¿A qué tasa cambia la distancia entre los corredores 1 segundo después de que se golpee la pelota?</para>
+</problem>
+<solution id="fs-id1165043120502">
+<para id="fs-id1165043120504">La distancia disminuye a una tasa de <m:math><m:mrow><m:mn>11,99</m:mn></m:mrow></m:math> ft/s.</para>
+</solution>
+</exercise>
+</section>
+  </content>
+<glossary>
+<definition id="fs-id1165043120519">
+<term>tasas relacionadas</term>
+<meaning id="fs-id1165043120524">son tasas de cambio asociadas a dos o más cantidades relacionadas que cambian con el tiempo</meaning>
+</definition>
+</glossary>
+</document>

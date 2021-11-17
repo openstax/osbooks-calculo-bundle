@@ -1,0 +1,953 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Ecuaciones paramétricas</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53834</md:content-id>
+  <md:title>Ecuaciones paramétricas</md:title>
+  <md:abstract><list id="list-00001">
+<item>Graficar una curva descrita por ecuaciones paramétricas.</item>
+<item>Convertir las ecuaciones paramétricas de una curva en la forma <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Reconocer las ecuaciones paramétricas de las curvas básicas, como una recta y un círculo.</item>
+<item>Reconocer las ecuaciones paramétricas de una cicloide.</item>
+</list></md:abstract>
+  <md:uuid>ca1a5fab-9175-444a-a4dd-11cdd0e6a570</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1169293161867">En esta sección examinamos las ecuaciones paramétricas y sus gráficos. En el sistema de coordenadas bidimensional, las ecuaciones paramétricas son útiles para describir curvas que no son necesariamente funciones. El parámetro es una variable independiente de la que dependen tanto <emphasis effect="italics">x</emphasis> como <emphasis effect="italics">y</emphasis>, y a medida que el parámetro aumenta, los valores de <emphasis effect="italics">x</emphasis> e <emphasis effect="italics">y</emphasis> trazan una trayectoria a lo largo de una curva plana. Por ejemplo, si el parámetro es <emphasis effect="italics">t</emphasis> (una elección común), entonces <emphasis effect="italics">t</emphasis> podría representar el tiempo. Entonces <emphasis effect="italics">x</emphasis> e <emphasis effect="italics">y</emphasis> se definen como funciones del tiempo, y <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> puede describir la posición en el plano de un objeto determinado mientras se mueve a lo largo de una trayectoria curva.</para>
+<section id="fs-id1169295516903">
+<title>Ecuaciones paramétricas y sus gráficos</title>
+<para id="fs-id1169295553685">Consideremos la órbita de la Tierra alrededor del Sol. Nuestro año dura aproximadamente 365,25 días, pero para esta discusión utilizaremos 365 días. El 1 de enero de cada año, la ubicación física de la Tierra con respecto al Sol es prácticamente la misma, excepto en los años bisiestos, en los que el desfase introducido por el <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>4</m:mn></m:mfrac></m:mrow></m:math> día de tiempo orbital se incorpora en el calendario. Llamamos al 1 de enero "día 1" del año. Entonces, por ejemplo, el día 31 es el 31 de enero, el día 59 es el 28 de febrero, y así sucesivamente.</para>
+<para id="fs-id1169293250149">El número del día en un año puede considerarse una variable que determina la posición de la Tierra en su órbita. A medida que la Tierra gira alrededor del Sol, su ubicación física cambia con respecto a este. Después de un año completo, volvemos al punto de partida y comienza un nuevo año. Según las leyes del movimiento planetario de Kepler, la forma de la órbita es elíptica, con el Sol en un foco de la elipse. Estudiamos esta idea con más detalle en <link document="m53846">Secciones cónicas</link>.</para>
+<figure id="CNX_Calc_Figure_11_01_001">
+<media id="fs-id1169295638154" alt="Una elipse con el 1 de enero (t = 1) arriba, el 2 de abril (t = 92) a la izquierda, el 1 de julio (t = 182) abajo y el 1 de octubre (t = 274) a la derecha. Los puntos focales de la elipse tienen F2 a la izquierda y el Sol a la derecha.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_001.jpg"/>
+</media>
+<caption>La órbita de la Tierra alrededor del Sol en un año.</caption>
+</figure>
+<para id="fs-id1169293338092">La <link target-id="CNX_Calc_Figure_11_01_001"/> representa la <term class="no-emphasis" id="term-00001">órbita de la Tierra</term> alrededor del Sol durante un año. El punto marcado como <m:math><m:mrow><m:msub><m:mi>F</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> es uno de los focos de la elipse; el otro foco lo ocupa el Sol. Si superponemos los ejes de coordenadas sobre este gráfico, podemos asignar pares ordenados a cada punto de la elipse (<link target-id="CNX_Calc_Figure_11_01_002"/>). Entonces cada valor de <emphasis effect="italics">x</emphasis> en el gráfico es un valor de posición en función del tiempo, y cada valor de <emphasis effect="italics">y</emphasis> es también un valor de posición en función del tiempo. Por lo tanto, cada punto del gráfico corresponde a un valor de la posición de la Tierra en función del tiempo.</para>
+<figure id="CNX_Calc_Figure_11_01_002">
+<media id="fs-id1169295819023" alt="Una elipse con el 1 de enero (t = 1) arriba, el 2 de abril (t = 92) a la izquierda, el 1 de julio (t = 182) abajo y el 1 de octubre (t = 274) a la derecha. Los puntos focales de la elipse tienen F2 a la izquierda y el Sol a la derecha. Hay una línea que va de t = 1 a t = 182. También hay una línea que va de t = 92 a t = 274 que pasa por F2 y el Sol. En la parte superior izquierda hay un punto marcado (x(t), y(t)) con una línea tangente que apunta hacia abajo y hacia la izquierda.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_002.jpg"/>
+</media>
+<caption>Ejes de coordenadas superpuestos a la órbita de la Tierra.</caption>
+</figure>
+<para id="fs-id1169293137188">Podemos determinar las funciones para <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y de <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> parametrizando así la órbita de la Tierra alrededor del Sol. La variable <m:math><m:mi>t</m:mi></m:math> se denomina parámetro independiente y, en este contexto, representa el tiempo relativo al comienzo de cada año.</para>
+<para id="fs-id1169295637245">Una curva en el plano <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se puede representar con ecuaciones paramétricas. Las ecuaciones que se utilizan para definir la curva se denominan <term id="term-00002">ecuaciones paramétricas</term>.</para>
+<note id="fs-id1169295820852">
+<title>Definición</title>
+<para id="fs-id1169293185419">Si <emphasis effect="italics">x</emphasis> y <emphasis effect="italics">y</emphasis> son funciones continuas de <emphasis effect="italics">t</emphasis> en un intervalo <emphasis effect="italics">I</emphasis>, entonces las ecuaciones</para>
+<equation id="fs-id1169295419559" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></equation>
+<para id="fs-id1169295804821">se llaman ecuaciones paramétricas y <emphasis effect="italics">t</emphasis> se llama <term id="term-00003">parámetro</term>. El conjunto de puntos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> que se obtienen al variar <emphasis effect="italics">t</emphasis> sobre el intervalo <emphasis effect="italics">I</emphasis> se denomina gráfico de las ecuaciones paramétricas. El gráfico de las ecuaciones paramétricas se llama <term id="term-00004">curva paramétrica</term> o <emphasis effect="italics">curva plana</emphasis>, y se indica como <emphasis effect="italics">C</emphasis>.</para>
+</note>
+<para id="fs-id1169295465331">Observe en esta definición que <emphasis effect="italics">x</emphasis> y <emphasis effect="italics">y</emphasis> se utilizan de dos maneras. La primera es como funciones de la variable independiente <emphasis effect="italics">t.</emphasis> Cuando se varía <emphasis effect="italics">t</emphasis> en el intervalo <emphasis effect="italics">I</emphasis>, las funciones <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y de <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> generan un conjunto de pares ordenados <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Este conjunto de pares ordenados genera el gráfico de las ecuaciones paramétricas. En este segundo uso, para designar los pares ordenados, <emphasis effect="italics">x</emphasis> y <emphasis effect="italics">y</emphasis> son variables. Es importante distinguir las variables <emphasis effect="italics">x</emphasis> y <emphasis effect="italics">y</emphasis> de las funciones <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y de <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<example id="fs-id1169295362672">
+<exercise id="fs-id1169295870973">
+<problem id="fs-id1169295520035">
+<title>Graficar una curva definida con ecuaciones paramétricas</title>
+<para id="fs-id1169295605391">Dibuje las curvas descritas por las siguientes ecuaciones paramétricas:</para>
+<list id="fs-id1169295858133" list-type="enumerated" number-style="lower-alpha">
+<item>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mspace width="1em"/><m:mn>−3</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn></m:mrow></m:math></item>
+<item>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mspace width="1em"/><m:mn>-2</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>3</m:mn></m:mrow></m:math></item>
+<item>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo><m:mspace width="1em"/><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1169295754533">
+<list id="fs-id1169295439556" list-type="enumerated" number-style="lower-alpha">
+<item>Para crear un gráfico de esta curva, primero hay que crear una tabla de valores. Dado que la variable independiente en ambos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y de <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es <emphasis effect="italics">t</emphasis>, supongamos que <emphasis effect="italics">t</emphasis> aparece en la primera columna. Entonces <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y de <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> aparecerá en la segunda y tercera columna de la tabla<newline/>
+<table id="fs-id1169295361650" class="unnumbered" summary="This table has three columns and seven rows. The first row is a header row, and it reads from left to right t, x(t), and y(t). Below the header row, in the first column, the values read −3, −2, −1, 0, 1, and 2. In the second column, the values read −4, −3, −2, −1, 0, and 1. In the third column, the values read −2, 0, 2, 4, 6, and 8.">
+<label/>
+<tgroup cols="3">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="center"><emphasis effect="italics">t</emphasis></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry valign="top" align="center">−3</entry>
+<entry valign="top" align="center">-4</entry>
+<entry valign="top" align="center">-2</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">-2</entry>
+<entry valign="top" align="center">−3</entry>
+<entry valign="top" align="center">0</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">-1</entry>
+<entry valign="top" align="center">-2</entry>
+<entry valign="top" align="center">2</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">0</entry>
+<entry valign="top" align="center">-1</entry>
+<entry valign="top" align="center">4</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">1</entry>
+<entry valign="top" align="center">0</entry>
+<entry valign="top" align="center">6</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">2</entry>
+<entry valign="top" align="center">1</entry>
+<entry valign="top" align="center">8</entry>
+</row>
+</tbody>
+</tgroup>
+</table><newline/> La segunda y la tercera columna de esta tabla proporcionan un conjunto de puntos que hay que graficar. El gráfico de estos puntos aparece en la <link target-id="CNX_Calc_Figure_11_01_003"/>. Las flechas del gráfico indican la <term id="term-00005">orientación</term> del mismo, es decir, la dirección en que se mueve un punto en el gráfico cuando <emphasis effect="italics">t</emphasis> varía de -3 a 2<newline/>
+<figure id="CNX_Calc_Figure_11_01_003">
+<media id="fs-id1169295416838" alt="Una línea recta que va de (-4, -2) a través de (-3, 0), (-2, 2), y (0, 6) a (1, 8) con la flecha apuntando hacia arriba y hacia la derecha. El punto (-4, -2) está marcado con t = -3, el punto (-2, 2) está marcado con t = -1, y el punto (1, 8) está marcado con t = 2. En el gráfico también aparecen escritas tres ecuaciones: x(t) = t -1, y(t) = 2t + 4, -3 ≤ t ≤ 2.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_003.jpg"/>
+</media>
+<caption>Gráfico de la curva plana descrita por las ecuaciones paramétricas de la parte a.</caption>
+</figure></item>
+<item>Para crear un gráfico de esta curva, vuelva a establecer una tabla de valores<newline/>
+<table id="fs-id1169295730684" class="unnumbered" summary="This table has three columns and seven rows. The first row is a header row, and it reads from left to right t, x(t), and y(t). Below the header row, in the first column, the values read −2, −1, 0, 1, 2, and 3. In the second column, the values read 1, −2, −2, −2, 1, and 6. In the third column, the values read −3, −1, 1, 3, 5, and 7.">
+<label/>
+<tgroup cols="3">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="center"><emphasis effect="italics">t</emphasis></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry valign="top" align="center">-2</entry>
+<entry valign="top" align="center">1</entry>
+<entry valign="top" align="center">−3</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">-1</entry>
+<entry valign="top" align="center">-2</entry>
+<entry valign="top" align="center">-1</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">0</entry>
+<entry valign="top" align="center">−3</entry>
+<entry valign="top" align="center">1</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">1</entry>
+<entry valign="top" align="center">-2</entry>
+<entry valign="top" align="center">3</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">2</entry>
+<entry valign="top" align="center">1</entry>
+<entry valign="top" align="center">5</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">3</entry>
+<entry valign="top" align="center">6</entry>
+<entry valign="top" align="center">7</entry>
+</row>
+</tbody>
+</tgroup>
+</table><newline/> La segunda y la tercera columna de esta tabla dan un conjunto de puntos para graficar (<link target-id="CNX_Calc_Figure_11_01_004"/>). El primer punto del gráfico (correspondiente a <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>-2</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> tiene coordenadas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>−3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y el último punto (correspondiente a <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> tiene coordenadas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>6</m:mn><m:mo>,</m:mo><m:mn>7</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> A medida que <emphasis effect="italics">t</emphasis> avanza de -2 a 3, el punto de la curva recorre una parábola. La dirección en la que se mueve el punto se llama de nuevo orientación y se indica en el gráfico.<newline/>
+<figure id="CNX_Calc_Figure_11_01_004">
+<media id="fs-id1169295439223" alt="Una línea curva que va desde (1, -3) pasando por (-3, 1) hasta (6, 7) con la flecha apuntando en ese orden. El punto (1, -3) está marcado con t = -2, el punto (-3, 1) está marcado con t = 0, y el punto (6, 7) está marcado con t = 3. En el gráfico también aparecen escritas tres ecuaciones: x(t) = t2 - 3, y(t) = 2t + 1, -2 ≤ t ≤ 3.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_004.jpg"/>
+</media>
+<caption>Gráfico de la curva plana descrita por las ecuaciones paramétricas de la parte b.</caption>
+</figure></item>
+<item>En este caso, utilice múltiplos de <m:math><m:mrow><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>6</m:mn></m:mrow></m:mrow></m:math> para <emphasis effect="italics">t</emphasis> y crear otra tabla de valores<newline/>
+<table id="fs-id1169295591562" class="unnumbered" summary="This table has three columns and 14 rows. The first row is a header row, and it reads from left to right t, x(t), and y(t). Below the header row, in the first column, the values read 0, π/6, π/3, π/2, 2π/3, 5π/6, π, 7π/6, 4π/3, 3π/2, 5π/3, 11π/6, and 2π. In the second column, the values read 2 times the square root of 3, which is approximately equal to 3.5, 2, 0, −2, −2 times the square root of 3, which is approximately equal to −3.5, −4, −2 times the square root of 3, which is approximately equal to −3.5, −2, 0, 2, 2 times the square root of 3, which is approximately equal to 3.5, and 5. In the third column, the values read 0, 2, 2 times the square root of 3, which is approximately equal to 3.5, 4, 2 times the square root of 3, which is approximately equal to 3.5, 2, 0, 2, −2 times the square root of 3, which is approximately equal to −3.5, −4, −2 times the square root of 3, which is approximately equal to −3.5, 2, and 0.">
+<label/>
+<tgroup cols="7">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<colspec colnum="5" colname="c5"/>
+<colspec colnum="6" colname="c6"/>
+<colspec colnum="7" colname="c7"/>
+<thead>
+<row valign="top">
+<entry valign="top" align="center"><emphasis effect="italics">t</emphasis></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></entry>
+<entry valign="top" align="center"/>
+<entry valign="top" align="center"><emphasis effect="italics">t</emphasis></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry valign="top" align="center">0</entry>
+<entry valign="top" align="center">4</entry>
+<entry valign="top" align="center">0</entry>
+<entry valign="top" align="center" morerows="6"/>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>7</m:mn><m:mi>π</m:mi></m:mrow><m:mn>6</m:mn></m:mfrac></m:mrow></m:math></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mn>-2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>≈</m:mo><m:mn>-3,5</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="center">2</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac></m:mrow></m:math></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mn>2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>≈</m:mo><m:mn>3,5</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mn>2</m:mn></m:math></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>4</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math></entry>
+<entry valign="top" align="center">-2</entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mn>-2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>≈</m:mo><m:mn>-3,5</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac></m:mrow></m:math></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mn>2</m:mn></m:math></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mn>2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>≈</m:mo><m:mn>3,5</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></entry>
+<entry valign="top" align="center">0</entry>
+<entry valign="top" align="center">-4</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></entry>
+<entry valign="top" align="center">0</entry>
+<entry valign="top" align="center">4</entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>5</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math></entry>
+<entry valign="top" align="center">2</entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mn>-2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>≈</m:mo><m:mn>-3,5</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math></entry>
+<entry valign="top" align="center">-2</entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mn>2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>≈</m:mo><m:mn>3,5</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>11</m:mn><m:mi>π</m:mi></m:mrow><m:mn>6</m:mn></m:mfrac></m:mrow></m:math></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mn>2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>≈</m:mo><m:mn>3,5</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="center">2</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>5</m:mn><m:mi>π</m:mi></m:mrow><m:mn>6</m:mn></m:mfrac></m:mrow></m:math></entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mn>-2</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt><m:mo>≈</m:mo><m:mn>-3,5</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="center">2</entry>
+<entry valign="top" align="center">Los términos <m:math><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:math></entry>
+<entry valign="top" align="center">4</entry>
+<entry valign="top" align="center">0</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="center">Los términos <m:math><m:mi>π</m:mi></m:math></entry>
+<entry valign="top" align="center">-4</entry>
+<entry valign="top" align="center">0</entry>
+<entry valign="top" align="left"/>
+<entry valign="top" align="left"/>
+<entry valign="top" align="left"/>
+</row>
+</tbody>
+</tgroup>
+</table><newline/> El gráfico de esta curva plana aparece en el siguiente gráfico.<newline/>
+<figure id="CNX_Calc_Figure_11_01_005">
+<media id="fs-id1169295816265" alt="Un círculo de radio 4 centrado en el origen se grafica con una flecha que va en sentido contrario a las agujas del reloj. El punto (4, 0) está marcado con t = 0, el punto (0, 4) está marcado con t = π/2, el punto (-4, 0) está marcado con t = π, y el punto (0, -4) está marcado con t = 3π/2. En el gráfico también aparecen escritas tres ecuaciones: x(t) = 4 cos(t), y(t) = 4 =sen(t), 0 ≤ t ≤ 2π.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_005.jpg"/>
+</media>
+<caption>Gráfico de la curva plana descrita por las ecuaciones paramétricas de la parte c.</caption>
+</figure><newline/> Este es el gráfico de un círculo de radio 4 centrado en el origen, con una orientación contraria a las agujas del reloj. Los puntos inicial y final de la curva tienen coordenadas <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1169295454074" class="checkpoint">
+<exercise id="fs-id1169293200600">
+<problem id="fs-id1169295589408">
+<para id="fs-id1169295759487">Dibuje la curva descrita por las ecuaciones paramétricas</para>
+<equation id="fs-id1169295431091" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>–</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mspace width="1em"/><m:mn>−3</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+</problem>
+<solution id="fs-id1169295453647"><para id="fs-id1169295643580"><newline/>
+<media id="fs-id1169295446712" alt="Una línea curva que va de (-7, 8) a través de (-1, 0) y (2, -1) a (8, 3) con flechas que van en ese orden. El punto (-7, 8) está marcado con t = -3, el punto (2, -1) está marcado con t = 0, y el punto (8, 3) está marcado con t = 2. En el gráfico también aparecen escritas tres ecuaciones: x(t) = 3t + 2, y(t) = t2 - 1, -3 ≤ t ≤ 2.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_006.jpg"/>
+</media></para>
+</solution>
+<commentary id="fs-id1169295557869" type="hint">
+<title>Pista</title>
+<para id="fs-id1169295652237">Haga una tabla de valores para <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y de <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> utilizando los valores <emphasis effect="italics">t</emphasis> de -3 a 2.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1169295807788">
+<title>Eliminar el parámetro</title>
+<para id="fs-id1169293341434">Para entender mejor el gráfico de una curva representada con ecuaciones paramétricas, es útil reescribir las dos ecuaciones como una única ecuación que relaciona las variables <emphasis effect="italics">x</emphasis> e <emphasis effect="italics">y.</emphasis> Entonces podemos aplicar cualquier conocimiento previo de ecuaciones de curvas en el plano para identificar la curva. Por ejemplo, las ecuaciones que describen la curva plana en el <link target-id="fs-id1169295362672"/>b. son</para>
+<equation id="fs-id1169295565020" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mspace width="1em"/><m:mn>-2</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169295882380">Resolviendo la segunda ecuación para <emphasis effect="italics">t</emphasis> se obtiene</para>
+<equation id="fs-id1169293137841" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169293144942">Esto se puede sustituir en la primera ecuación:</para>
+<equation id="fs-id1169293130361" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>y</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>y</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>y</m:mi><m:mo>-</m:mo><m:mn>11</m:mn></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169295454203">Esta ecuación describe a <emphasis effect="italics">x</emphasis> como una función de <emphasis effect="italics">y.</emphasis> Estos pasos son un ejemplo de la <emphasis effect="italics">eliminación del parámetro</emphasis>. El gráfico de esta función es una parábola que se abre hacia la derecha. Recordemos que la curva del plano comenzó en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>−3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y terminó en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>6</m:mn><m:mo>,</m:mo><m:mn>7</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Estas terminaciones se deben a la restricción del parámetro <emphasis effect="italics">t.</emphasis></para>
+<example id="fs-id1169295694719">
+<exercise id="fs-id1169293393055">
+<problem id="fs-id1169295362943">
+<title>Eliminar el parámetro</title>
+<para id="fs-id1169295422772">Elimine el parámetro de cada una de las curvas planas descritas por las siguientes ecuaciones paramétricas y describa el gráfico resultante.</para>
+<list id="fs-id1169293340647" list-type="enumerated" number-style="lower-alpha">
+<item>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:msqrt><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mspace width="1em"/><m:mn>-2</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>6</m:mn></m:mrow></m:math></item>
+<item>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo><m:mspace width="1em"/><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1169293275836">
+<list id="fs-id1169293199708" list-type="enumerated" number-style="lower-alpha">
+<item>Para eliminar el parámetro, podemos resolver cualquiera de las ecuaciones para <emphasis effect="italics">t.</emphasis> Por ejemplo, resolviendo la primera ecuación para <emphasis effect="italics">t</emphasis> se obtiene<newline/>
+<equation id="fs-id1169293390065" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>x</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:msqrt><m:mrow><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:msqrt></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>2</m:mn><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>t</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation><newline/> Observe que cuando elevamos al cuadrado ambos lados es importante señalar que <m:math><m:mrow><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Sustituyendo <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> en <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se obtiene<newline/>
+<equation id="fs-id1169293387312" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>y</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>1</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>y</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mo>+</m:mo><m:mn>1</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>y</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3,</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation><newline/> Esta es la ecuación de una parábola que se abre hacia arriba. Sin embargo, existe una restricción de dominio debido a los límites del parámetro <emphasis effect="italics">t</emphasis>. Cuando <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>-2</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:msqrt><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> y cuando <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mn>6</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:msqrt><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math> El gráfico de esta curva plana es el siguiente<newline/>
+<figure id="CNX_Calc_Figure_11_01_007">
+<media id="fs-id1169293390343" alt="Una línea curva que va desde (-3, 0) a través de (2, 1) hasta (4, 13) con una flecha que va en ese orden. El punto (-3, 0) está marcado con t = -2, el punto (2, 1) está marcado con t = 0, el punto (2 veces la raíz cuadrada de 2, 5) está marcado con t = 2, el punto (3 veces la raíz cuadrada de 2, 9) está marcado con t = 4, y el punto (4, 13) está marcado con t = 6. En el gráfico también aparecen escritas tres ecuaciones: x(t) = raíz cuadrada de la cantidad (2t + 4), y(t) = 2t + 1, -2 ≤ t ≤ 6.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_007.jpg"/>
+</media>
+<caption>Gráfico de la curva plana descrita por las ecuaciones paramétricas de la parte a.</caption>
+</figure></item>
+<item>A veces es necesario ser un poco creativo para eliminar el parámetro. Las ecuaciones paramétricas de este ejemplo son<newline/>
+<equation id="fs-id1169295773361" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation><newline/> Resolver directamente cualquiera de las dos ecuaciones para <emphasis effect="italics">t</emphasis> no es aconsejable porque el seno y el coseno no son funciones uno a uno. Sin embargo, dividiendo la primera ecuación entre 4 y la segunda entre 3 (y suprimiendo la <emphasis effect="italics">t</emphasis>) nos da<newline/>
+<equation id="fs-id1169295447894" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>x</m:mi><m:mn>4</m:mn></m:mfrac><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>y</m:mi><m:mn>3</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation><newline/> Ahora use la identidad pitagórica <m:math><m:mrow><m:msup><m:mrow><m:mtext>cos</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>t</m:mi><m:mo>+</m:mo><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> y sustituya las expresiones para <m:math><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow></m:math> con las expresiones equivalentes en términos de <emphasis effect="italics">x</emphasis> ye <emphasis effect="italics">y</emphasis>. Esto da<newline/>
+<equation id="fs-id1169295591977" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>x</m:mi><m:mn>4</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>y</m:mi><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>1</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:mn>16</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>9</m:mn></m:mfrac></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>1.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation><newline/> Esta es la ecuación de una elipse horizontal centrada en el origen, con semieje mayor 4 y semieje menor 3 como se muestra en el siguiente gráfico<newline/>
+<figure id="CNX_Calc_Figure_11_01_008">
+<media id="fs-id1169295459015" alt="Una elipse con eje mayor horizontal y de longitud 8 y con radio menor vertical y de longitud 6 que está centrada en el origen con una flecha que va en sentido contrario a las agujas del reloj. El punto (4, 0) está marcado con t = 0, el punto (0, 3) está marcado con t = π/2, el punto (-4, 0) está marcado con t = π, y el punto (0, -3) está marcado con t = 3π/2. En el gráfico también aparecen escritas tres ecuaciones: x(t) = 4 cos(t), y(t) = 3 =sen(t), 0 ≤ t ≤ 2π.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_008.jpg"/>
+</media>
+<caption>Gráfico de la curva plana descrita por las ecuaciones paramétricas de la parte b.</caption>
+</figure><newline/> A medida que <emphasis effect="italics">t</emphasis> avanza de <m:math><m:mn>0</m:mn></m:math> a <m:math><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>,</m:mo></m:mrow></m:math> un punto de la curva atraviesa la elipse una vez, en sentido contrario a las agujas del reloj. Recordemos que la órbita de la Tierra alrededor del Sol también es elíptica. Este es un ejemplo perfecto de la utilización de curvas paramétricas para modelar un fenómeno del mundo real.</item>
+</list>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1169295362509" class="checkpoint">
+<exercise id="fs-id1169295362512">
+<problem id="fs-id1169295362514">
+<para id="fs-id1169295555110">Elimine el parámetro de la curva plana definida por las siguientes ecuaciones paramétricas y describa el gráfico resultante.</para>
+<equation id="fs-id1169295555115" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mfrac><m:mn>3</m:mn><m:mi>t</m:mi></m:mfrac><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mspace width="1em"/><m:mn>2</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>6</m:mn></m:mrow></m:math></equation>
+</problem>
+<solution id="fs-id1169293397158">
+<para id="fs-id1169293397160">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mfrac><m:mn>3</m:mn><m:mrow><m:mi>y</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> o <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>+</m:mo><m:mfrac><m:mn>3</m:mn><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Esta ecuación describe una parte de una hipérbola rectangular centrada en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>-1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math><newline/>
+<media id="fs-id1169295354478" alt="Una línea curva que va de (3,5, 1) a (2,5, 5) con una flecha que va en ese orden. El punto (3,5, 1) está marcado con t = 2 y el punto (2,5, 5) con t = 6. En la gráfica también aparecen escritas tres ecuaciones: x(t) = 2 + 3/t, y(t) = t - 1, 2 ≤ t ≤ 6.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_009.jpg"/>
+</media></para>
+</solution>
+<commentary id="fs-id1169293185389" type="hint">
+<title>Pista</title>
+<para id="fs-id1169293313963">Resuelva una de las ecuaciones para <emphasis effect="italics">t</emphasis> y sustitúyala en la otra ecuación.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1169295460497">Hasta ahora hemos visto el método de eliminación del parámetro, suponiendo que conocemos un conjunto de ecuaciones paramétricas que describen una curva plana. ¿Y si queremos empezar con la ecuación de una curva y determinar un par de ecuaciones paramétricas para esa curva? Esto es ciertamente posible, y de hecho es posible hacerlo de muchas maneras diferentes para una curva determinada. El proceso se conoce como <term id="term-00006">parametrización de una curva</term>.</para>
+<example id="fs-id1169295460500">
+<exercise id="fs-id1169295398174">
+<problem id="fs-id1169295398176">
+<title>Parametrizar una curva</title>
+<para id="fs-id1169293341360">Halle dos pares de ecuaciones paramétricas diferentes para representar el gráfico de <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169295712606">
+<para id="fs-id1169295712608">En primer lugar, siempre es posible parametrizar una curva definiendo <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:math> luego sustituyendo <emphasis effect="italics">x</emphasis> por <emphasis effect="italics">t</emphasis> en la ecuación para <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Esto nos da la parametrización</para>
+<equation id="fs-id1169295409716" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>t</m:mi><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169295554644">Dado que no hay restricción en el dominio en el gráfico original, no hay restricción en los valores de <emphasis effect="italics">t.</emphasis></para>
+<para id="fs-id1169295353796">Tenemos total libertad en la elección de la segunda parametrización. Por ejemplo, podemos elegir <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Lo único que tenemos que comprobar es que no hay restricciones impuestas a <emphasis effect="italics">x</emphasis>; es decir, el rango de <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> son todos números reales. Este es el caso de <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Ahora, dado que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> podemos sustituir <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:math> para <emphasis effect="italics">x.</emphasis> Esto da</para>
+<equation id="fs-id1169295558068" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>12</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mn>3</m:mn></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>18</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>24</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>8</m:mn><m:mo>-</m:mo><m:mn>3</m:mn></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mn>18</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>24</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>5.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1169293401741">Por lo tanto, una segunda parametrización de la curva puede escribirse como</para>
+<equation id="fs-id1169293401744" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>18</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>24</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1169295461539" class="checkpoint">
+<exercise id="fs-id1169295461542">
+<problem id="fs-id1169295461544">
+<para id="fs-id1169293398615">Halle dos conjuntos diferentes de ecuaciones paramétricas para representar el gráfico de <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293390102">
+<para id="fs-id1169293390104">Una posibilidad es <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>t</m:mi><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math> Otra posibilidad es <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>8</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169295712634">De hecho, hay un número infinito de posibilidades.</para>
+</solution>
+<commentary id="fs-id1169293392950" type="hint">
+<title>Pista</title>
+<para id="fs-id1169293253923">Siga los pasos en <link target-id="fs-id1169295460500"/>. Recuerde que tenemos libertad para elegir la parametrización de <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1169295349662">
+<title>Cicloides y otras curvas paramétricas</title>
+<para id="fs-id1169295349667">Imagine que va a dar un paseo en bicicleta por el campo. Los neumáticos permanecen en contacto con la carretera y giran siguiendo un patrón predecible. Ahora supongamos que una hormiga muy decidida está cansada después de un largo día y quiere llegar a casa. Así que se aferra al lado del neumático y consigue un viaje gratis. El camino que recorre esta hormiga por una carretera recta se llama <term id="term-00007">cicloide</term> (<link target-id="CNX_Calc_Figure_11_01_010"/>). Una cicloide generada por un círculo (o rueda de bicicleta) de radio <emphasis effect="italics">a</emphasis> viene dada por las ecuaciones paramétricas</para>
+<equation id="fs-id1169293253842" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>t</m:mi><m:mo>-</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169295523560">Para ver por qué esto es cierto, considere la trayectoria que sigue el centro de la rueda. El centro se mueve a lo largo del eje <emphasis effect="italics">x</emphasis> a una altura constante igual al radio de la rueda. Si el radio es <emphasis effect="italics">a</emphasis>, entonces las coordenadas del centro pueden ser dadas por las ecuaciones</para>
+<equation id="fs-id1169293199698" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>a</m:mi><m:mi>t</m:mi><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math></equation>
+<para id="fs-id1169293392851">para cualquier valor de <m:math><m:mrow><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math> A continuación, consideremos la hormiga, que gira alrededor del centro siguiendo una trayectoria circular. Si la bicicleta se mueve de izquierda a derecha, las ruedas giran en el sentido de las agujas del reloj. Una posible parametrización del movimiento circular de la hormiga (respecto al centro de la rueda) está dada por</para>
+<equation id="fs-id1169293390280" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>a</m:mi><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>a</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169295557735">(El signo negativo es necesario para invertir la orientación de la curva. Si no existiera el signo negativo, tendríamos que imaginar que la rueda gira en sentido contrario a las agujas del reloj). Sumando estas ecuaciones se obtienen las ecuaciones de la cicloide.</para>
+<equation id="fs-id1169293339997" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>t</m:mi><m:mo>-</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>a</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+<figure id="CNX_Calc_Figure_11_01_010">
+<media id="fs-id1169295557567" alt="Un conjunto de círculo con el centro marcado y un punto en el círculo dibujando una curva como si el círculo estuviera rodando por un plano. La forma realizada parece ser media elipse cuya altura es el diámetro del círculo original y cuyo eje mayor es la circunferencia del círculo.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_010.jpg"/>
+</media>
+<caption>Una rueda que se desplaza por una carretera sin resbalar; la punta del borde de la rueda traza una cicloide.</caption>
+</figure>
+<para id="fs-id1169295453815">Supongamos ahora que la rueda de la bicicleta no se desplaza por una carretera recta, sino que se mueve por el interior de una rueda mayor, como en la <link target-id="CNX_Calc_Figure_11_01_011"/>. En este gráfico, el círculo verde se desplaza alrededor del círculo azul en sentido contrario a las agujas del reloj. Un punto en el borde del círculo verde traza el gráfico rojo, que se llama <term class="no-emphasis" id="term-00008">hipocicloide</term>.</para>
+<figure id="CNX_Calc_Figure_11_01_011">
+<media id="fs-id1169295557520" alt="Se dibujan dos círculos con centro en el origen y con radios 3 y 4, respectivamente; el círculo de radio 3 tiene una flecha que apunta en el sentido contrario a las agujas del reloj. Hay un tercer círculo dibujado con centro en el círculo de radio 3 y que toca el círculo de radio 4 en un punto. Es decir, este tercer círculo tiene radio 1. En este tercer círculo se dibuja un punto que, si rodara por los otros dos círculos, dibujaría una estrella de cuatro puntas con puntos en (4, 0), (0, 4), (-4, 0) y (0, -4). En el gráfico también aparecen escritas dos ecuaciones: x(t) = 3 cos(t) + cos(3t), y(t) = 3 =sen(t) - sen(3t).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_011.jpg"/>
+</media>
+<caption>Gráfico de la hipocicloide descrita por las ecuaciones paramétricas indicadas.</caption>
+</figure>
+<para id="fs-id1169295554627">Las ecuaciones paramétricas generales de una hipocicloide son</para>
+<equation id="fs-id1169295554630" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr/><m:mtr/><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mi>b</m:mi></m:mrow><m:mi>b</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>b</m:mi><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mi>b</m:mi></m:mrow><m:mi>b</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1169295416925">Estas ecuaciones son un poco más complicadas, pero la derivación es algo similar a las ecuaciones de la cicloide. En este caso suponemos que el radio del círculo mayor es <emphasis effect="italics">a</emphasis> y el del menor es <emphasis effect="italics">b.</emphasis> Entonces el centro de la rueda se desplaza a lo largo de un círculo de radio <m:math><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math> Este hecho explica el primer término de cada ecuación anterior. El periodo de la segunda función trigonométrica en ambas <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y de <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es igual a <m:math><m:mrow><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>π</m:mi><m:mi>b</m:mi></m:mrow><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mi>b</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169295712538">El cociente <m:math><m:mrow><m:mfrac><m:mi>a</m:mi><m:mi>b</m:mi></m:mfrac></m:mrow></m:math> está relacionado con el número de <term id="term-00009">cúspides</term> del gráfico (las cúspides son las esquinas o extremos puntiagudos del gráfico), como se ilustra en la <link target-id="CNX_Calc_Figure_11_01_012"/>. Esta razón puede dar lugar a algunos gráficos muy interesantes, dependiendo de si la relación es racional o no. La <link target-id="CNX_Calc_Figure_11_01_011"/> corresponde a <m:math><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>b</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> El resultado es una hipocicloide con cuatro cúspides. La <link target-id="CNX_Calc_Figure_11_01_012"/> muestra otras posibilidades. Las dos últimas hipocicloides tienen valores irracionales para <m:math><m:mrow><m:mfrac><m:mi>a</m:mi><m:mi>b</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> En estos casos las hipocicloides tienen un número infinito de cúspides, por lo que nunca vuelven a su punto de partida. Estos son ejemplos de lo que se conoce como <term class="no-emphasis" id="term-00010"><emphasis effect="italics">curvas de relleno de espacio</emphasis></term>.</para>
+<figure id="CNX_Calc_Figure_11_01_012">
+<media id="fs-id1169293393248" alt="Se muestra un conjunto de hipocicloides. La primera es una estrella de tres puntas marcada como a/b = 3. La segunda es una estrella de cuatro puntas marcada como a/b = 4. La tercera es una estrella de cinco puntas marcada como a/b = 5. Ninguna de estas tres primeras figuras tiene líneas que se crucen entre sí. La cuarta figura es una estrella de cinco puntas, pero esta tiene líneas que se cruzan y se parece a la estrella que los niños aprenden a dibujar por primera vez; está marcada como a/b = 5/3. A continuación tenemos una especie de estrella similar con siete puntas, marcada como a/b = 7/3. A continuación, una estrella similar con ocho puntos y está marcada como a/b = 8/3. La siguiente figura es un conjunto complicado de curvas que, en última instancia, crea una pequeña roseta en el centro; está marcada como a/b = π. Por último, hay un conjunto de curvas aún más complicada que crea una gran roseta con floretes más afilados marcados como a/b = la raíz cuadrada de 2.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_013.jpg"/>
+</media>
+<caption>Gráfico de varias hipocicloides correspondientes a diferentes valores de <m:math><m:mrow><m:mrow><m:mi>a</m:mi><m:mtext>/</m:mtext><m:mi>b</m:mi></m:mrow><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+<note id="fs-id1169295607690" class="project">
+<title>La bruja de Agnesi</title>
+<para id="fs-id1169293394755">Muchas curvas planas de las matemáticas llevan el nombre de las personas que las investigaron por primera vez, como el folium de Descartes (hoja de Descartes) o la espiral de Arquímedes. Sin embargo, quizá el nombre más extraño para una curva sea el de la <term class="no-emphasis" id="term-00011">bruja de Agnesi</term>. ¿Por qué una bruja?</para>
+<para id="fs-id1169293394054">María Gaetana Agnesi (1718-1799) fue una de las pocas mujeres matemáticas reconocidas de la Italia del siglo XVIII. Escribió un popular libro sobre geometría analítica, publicado en 1748, que incluía una interesante curva que había sido estudiada por Fermat en 1630. El matemático Guido Grandi demostró en 1703 cómo construir esta curva, a la que más tarde llamó "versoria", término latino que designa una cuerda utilizada en la navegación. Agnesi utilizó el término italiano para esta cuerda, "versiera", pero en latín, esta misma palabra significa "duende femenino" Cuando el libro de Agnesi se tradujo al inglés en 1801, el traductor utilizó el término "bruja" para la curva, en lugar de cuerda. El nombre de "bruja de Agnesi" se ha mantenido desde entonces.</para>
+<para id="fs-id1169293396612">La bruja de Agnesi es una curva definida de la siguiente forma: Comience con un círculo de radio <emphasis effect="italics">a</emphasis> para que los puntos <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> sean puntos en el círculo (<link target-id="CNX_Calc_Figure_11_01_SP1"/>). Supongamos que <emphasis effect="italics">O</emphasis> es el origen. Elija cualquier otro punto <emphasis effect="italics">A</emphasis> del círculo y dibuje la recta secante <emphasis effect="italics">OA</emphasis>. Supongamos que <emphasis effect="italics">B</emphasis> es el punto de intersección de la recta <emphasis effect="italics">OA</emphasis> con la línea horizontal que pasa por <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> La recta vertical que pasa por <emphasis effect="italics">B</emphasis> interseca la línea horizontal que pasa por <emphasis effect="italics">A</emphasis> en el punto <emphasis effect="italics">P</emphasis>. Al variar el punto <emphasis effect="italics">A</emphasis>, el camino que recorre el punto <emphasis effect="italics">P</emphasis> es el de la curva de Agnesi para el círculo dado.</para>
+<para id="fs-id1169295674449">Las curvas de la bruja de Agnesi tienen aplicaciones en física, incluido el modelado de las ondas de agua y las distribuciones de las líneas espectrales. En teoría de la probabilidad, la curva describe la función de densidad de probabilidad de la distribución de Cauchy. En este proyecto usted parametrizará estas curvas.</para>
+<figure id="CNX_Calc_Figure_11_01_SP1">
+<media id="fs-id1169295835175" alt="Se dibuja un círculo con la parte inferior en el punto O (el origen) y la parte superior en el punto (0, 2a). El eje x se dibuja desde el punto O y el eje y se dibuja hacia arriba desde el punto O a través de (0, 2a). Paralela al eje x se encuentra una recta trazada desde (0, 2a); tiene el punto B marcado a la derecha. Una recta que va del punto B al punto O pasa por el círculo en el punto A. Se traza una recta paralela al eje x desde el punto A, y forma un ángulo recto con una línea trazada hacia abajo desde el punto B; estas rectas se cruzan en el punto P. Hay una curva que es simétrica alrededor del eje y que pasa por el punto P. Esta curva tiene su máximo en (0, 2a) y disminuye suavemente por el punto P.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_012.jpg"/>
+</media>
+<caption>A medida que el punto <emphasis effect="italics">A</emphasis> se mueve alrededor del círculo, el punto <emphasis effect="italics">P</emphasis> traza curva de la bruja de Agnesi para el círculo dado.</caption>
+</figure>
+<list id="fs-id1169295835807" list-type="enumerated" number-style="arabic">
+<item>En la figura, marque los siguientes puntos, longitudes y ángulos: <list id="fs-id1169295839371" list-type="enumerated" number-style="lower-alpha">
+<item><emphasis effect="italics">C</emphasis> es el punto del eje <emphasis effect="italics">x</emphasis> con la misma coordenada <emphasis effect="italics">x</emphasis> que <emphasis effect="italics">A</emphasis>.</item>
+<item><emphasis effect="italics">x</emphasis> es la coordenada <emphasis effect="italics">x</emphasis> de <emphasis effect="italics">P</emphasis> y <emphasis effect="italics">y</emphasis> es la coordenada <emphasis effect="italics">y</emphasis>de <emphasis effect="italics">P</emphasis>.</item>
+<item><emphasis effect="italics">E</emphasis> es el punto <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
+<item><emphasis effect="italics">F</emphasis> es el punto del segmento de recta <emphasis effect="italics">OA</emphasis> tal que el segmento de línea <emphasis effect="italics">EF</emphasis> es perpendicular al segmento de línea <emphasis effect="italics">OA</emphasis>.</item>
+<item><emphasis effect="italics">b</emphasis> es la distancia de <emphasis effect="italics">O</emphasis> a <emphasis effect="italics">F</emphasis>.</item>
+<item><emphasis effect="italics">c</emphasis> es la distancia de <emphasis effect="italics">F</emphasis> a <emphasis effect="italics">A</emphasis>.</item>
+<item><emphasis effect="italics">d</emphasis> es la distancia de <emphasis effect="italics">O</emphasis> a <emphasis effect="italics">B</emphasis>.</item>
+<item>Los términos <m:math><m:mi>θ</m:mi></m:math> es la medida del ángulo <m:math><m:mrow><m:mtext>∠</m:mtext><m:mi>C</m:mi><m:mi>O</m:mi><m:mi>A</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+</list><newline/> El objetivo de este proyecto es parametrizar la bruja utilizando <m:math><m:mi>θ</m:mi></m:math> como parámetro. Para ello, escriba las ecuaciones de <emphasis effect="italics">x</emphasis> y <emphasis effect="italics">y</emphasis> en términos de solo <m:math><m:mrow><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Demuestre que <m:math><m:mrow><m:mi>d</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>a</m:mi></m:mrow><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Tenga en cuenta que <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>d</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Demuestre que <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>a</m:mi><m:mspace width="0.2em"/><m:mtext>cot</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Al hacer esto, habrá parametrizado la coordenada <emphasis effect="italics">x</emphasis>de la curva con respecto a <m:math><m:mrow><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Si puede obtener una ecuación similar para <emphasis effect="italics">y</emphasis>, habrá parametrizado la curva.</item>
+<item>En términos de <m:math><m:mrow><m:mi>θ</m:mi><m:mo>,</m:mo></m:mrow></m:math> cuál es el ángulo <m:math><m:mrow><m:mtext>∠</m:mtext><m:mi>E</m:mi><m:mi>O</m:mi><m:mi>A</m:mi><m:mo>con dígito d?</m:mo></m:mrow></m:math></item>
+<item>Demuestre que <m:math><m:mrow><m:mi>b</m:mi><m:mo>+</m:mo><m:mi>c</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>a</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>-</m:mo><m:mi>θ</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Demuestre que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>a</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>-</m:mo><m:mi>θ</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Demuestre que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>a</m:mi><m:mspace width="0.2em"/><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math> Ahora ha parametrizado la coordenada <emphasis effect="italics">y</emphasis> de la curva con respecto a <m:math><m:mrow><m:mi>θ</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Concluya que una parametrización de la curva de bruja dada es<newline/>
+<equation id="fs-id1169293130393" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>a</m:mi><m:mspace width="0.2em"/><m:mtext>cot</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>a</m:mi><m:mspace width="0.2em"/><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>θ</m:mi><m:mo>,</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>θ</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+<item>Utilice su parametrización para demostrar que la curva de bruja dada es el gráfico de la función <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>8</m:mn><m:msup><m:mi>a</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:msup><m:mi>a</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</note>
+<note id="fs-id1169293391049" class="project">
+<title>Viajes con mi hormiga: Las cicloides acortadas y alargadas.</title>
+<para id="fs-id1169293391056">Anteriormente en esta sección, vimos las ecuaciones paramétricas para una cicloide, que es la trayectoria que un punto en el borde de una rueda traza cuando rueda a lo largo de una trayectoria recta. En este proyecto estudiamos dos variantes diferentes de la cicloide, denominadas cicloide acortada y cicloide alargada.</para>
+<para id="fs-id1169293398753">En primer lugar, revisemos la derivación de las ecuaciones paramétricas de una cicloide. Recordemos que consideramos a una hormiga tenaz que intentaba llegar a casa colgándose del borde de una rueda de bicicleta. Hemos supuesto que la hormiga se subió al neumático en el mismo borde, donde el neumático toca el suelo. Cuando la rueda gira, la hormiga se mueve con el borde del neumático (<link target-id="CNX_Calc_Figure_11_01_SP2_ant1"/>).</para>
+<para id="fs-id1169293325620">Como hemos comentado, tenemos mucha flexibilidad a la hora de parametrizar una curva. En este caso dejamos que nuestro parámetro <emphasis effect="italics">t</emphasis> represente el ángulo que ha girado el neumático. Al observar la <link target-id="CNX_Calc_Figure_11_01_SP2_ant1"/>, vemos que después de que el neumático haya girado un ángulo <emphasis effect="italics">t</emphasis>, la posición del centro de la rueda, <m:math><m:mrow><m:mi>C</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>C</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>C</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> está dada por</para>
+<equation id="fs-id1169293260909" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>C</m:mi></m:msub><m:mo>=</m:mo><m:mi>a</m:mi><m:mi>t</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>y</m:mi><m:mi>C</m:mi></m:msub><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169293136707">Además, supongamos que <m:math><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>A</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>A</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> denota la posición de la hormiga, observamos que</para>
+<equation id="fs-id1169293199728" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>C</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mi>A</m:mi></m:msub><m:mo>=</m:mo><m:mi>a</m:mi><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>y</m:mi><m:mi>C</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>y</m:mi><m:mi>A</m:mi></m:msub><m:mo>=</m:mo><m:mi>a</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1169293335157">Entonces</para>
+<equation id="fs-id1169295377265" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mi>A</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mi>C</m:mi></m:msub><m:mo>-</m:mo><m:mi>a</m:mi><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>y</m:mi><m:mi>A</m:mi></m:msub><m:mo>=</m:mo><m:msub><m:mi>y</m:mi><m:mi>C</m:mi></m:msub><m:mo>-</m:mo><m:mi>a</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>-</m:mo><m:mi>a</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<figure id="CNX_Calc_Figure_11_01_SP2_ant1">
+<media id="fs-id1169293333609" alt="Hay dos figuras marcadas (a) y (b). La figura a tiene un círculo con el punto A del círculo en el origen. El círculo tiene &quot;radios&quot;, con el punto A en el extremo de uno de estos radios. El círculo parece desplazarse hacia la derecha en el eje x, con el punto A por encima del eje x en una segunda imagen del círculo dibujado ligeramente hacia la derecha. La figura b tiene un círculo en el primer cuadrante con centro C. Toca el eje x en xc. Se dibuja un punto A en el círculo y se forma un triángulo recto a partir de este punto y el punto C. La hipotenusa se marca como a y el ángulo en C entre A y xc se marca como t. Las líneas se dibujan para dar los valores x y y de A como xA y yA, respectivamente. Del mismo modo, se dibuja una línea para dar el valor y de C como yC.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_014.jpg"/>
+</media>
+<caption>(a) La hormiga se aferra al borde del neumático de la bicicleta mientras este rueda por el suelo. (b) Se utiliza la geometría para determinar la posición de la hormiga después de que el neumático haya girado un ángulo <emphasis effect="italics">t</emphasis>.</caption>
+</figure>
+<para id="fs-id1169293337521">Observe que son las mismas representaciones paramétricas que teníamos antes, pero ahora hemos asignado un significado físico a la variable paramétrica <emphasis effect="italics">t</emphasis>.</para>
+<para id="fs-id1169293337530">Al cabo de un rato la hormiga se marea de dar vueltas y más vueltas sobre el borde del neumático. Así que sube por uno de los radios hacia el centro de la rueda. Al subir hacia el centro de la rueda, la hormiga ha cambiado su trayectoria de movimiento. La nueva trayectoria tiene menos movimiento ascendente y descendente y se denomina <term class="no-emphasis" id="term-00012">cicloide acortada</term> (<link target-id="CNX_Calc_Figure_11_01_SP2_ant2"/>). Como se muestra en la figura, suponemos que <emphasis effect="italics">b</emphasis> denota la distancia a lo largo del radio desde el centro de la rueda hasta la hormiga. Como antes, suponemos que <emphasis effect="italics">t</emphasis> representa el ángulo que ha girado el neumático. Asimismo, suponemos que <m:math><m:mrow><m:mi>C</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>C</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>C</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> representa la posición del centro de la rueda y <m:math><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>A</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>A</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> representa la posición de la hormiga.</para>
+<figure id="CNX_Calc_Figure_11_01_SP2_ant2">
+<media id="fs-id1169293216997" alt="Hay tres figuras marcadas como (a), (b) y (c). La figura a tiene un círculo con &quot;radios&quot;, donde el punto A está en el centro de uno de estos radios. El círculo es tangente al eje x en el origen. El círculo parece desplazarse hacia la derecha en el eje x, y el punto A está más arriba en una segunda imagen del círculo dibujado ligeramente hacia la derecha. La figura b muestra la curva que trazaría el punto A, cuando el círculo se desplaza hacia la derecha. Es ligeramente sinusoidal. La figura c tiene un círculo en el primer cuadrante con centro C. Toca el eje x en xc. Se dibuja un punto A dentro del círculo y se hace un triángulo rectángulo desde este punto y el punto C. La hipotenusa se marca como b, el ángulo en C entre A y xc se marca como t, y la distancia de C a xc se marca como a. Las líneas se dibujan para dar los valores x y y de A como xA y yA, respectivamente. Del mismo modo, se dibuja una línea para dar el valor y de C como yC.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_015.jpg"/>
+</media>
+<caption>(a) La hormiga sube por uno de los radios hacia el centro de la rueda. (b) La trayectoria del movimiento de la hormiga después de acercarse al centro de la rueda. Esto se conoce como cicloide acortada. (c) La nueva disposición, ahora que la hormiga se ha acercado al centro de la rueda.</caption>
+</figure>
+<list id="fs-id1169293216994" list-type="enumerated" number-style="arabic">
+<item>¿Cuál es la posición del centro de la rueda después de que el neumático haya girado un ángulo <emphasis effect="italics">t</emphasis>?</item>
+<item>Utilice la geometría para hallar expresiones para <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>C</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>x</m:mi><m:mi>A</m:mi></m:msub></m:mrow></m:math> y para <m:math><m:mrow><m:msub><m:mi>y</m:mi><m:mi>C</m:mi></m:msub><m:mo>-</m:mo><m:msub><m:mi>y</m:mi><m:mi>A</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>A partir de sus respuestas a las partes 1 y 2, ¿cuáles son las ecuaciones paramétricas que representan la cicloide acortada?<newline/> Una vez que la cabeza de la hormiga se aclara, se da cuenta de que el ciclista ha hecho un giro y ahora está viajando lejos de su casa. Así que deja la rueda de la bicicleta y mira a su alrededor. Afortunadamente, hay un conjunto de vías de tren cerca, que se dirigen de nuevo en la dirección correcta. Así que la hormiga se dirige a las vías del tren para esperar. Al cabo de un rato, pasa un tren que va en la dirección correcta, y la hormiga consigue saltar y alcanzar el borde de la rueda del tren (¡sin aplastarse!).<newline/> La hormiga sigue preocupada por si se marea, pero la rueda del tren es resbaladiza y no tiene radios por los cuales subir, así que decide agarrarse al borde de la rueda y esperar lo mejor. Ahora, las ruedas de los trenes tienen un reborde para mantener la rueda en las vías. Por lo tanto, en este caso, como la hormiga está colgada del mismo extremo del reborde, la distancia del centro de la rueda a la hormiga es realmente mayor que el radio de la rueda (<link target-id="CNX_Calc_Figure_11_01_SP2_ant3"/>).<newline/> El planteamiento aquí es esencialmente el mismo que cuando la hormiga subió por el radio de la rueda de la bicicleta. Suponemos que <emphasis effect="italics">b</emphasis> denota la distancia desde el centro de la rueda a la hormiga, y que <emphasis effect="italics">t</emphasis> representa el ángulo que ha girado el neumático. Asimismo, suponemos que <m:math><m:mrow><m:mi>C</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>C</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>C</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> representa la posición del centro de la rueda y <m:math><m:mrow><m:mi>A</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mi>A</m:mi></m:msub><m:mo>,</m:mo><m:msub><m:mi>y</m:mi><m:mi>A</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> representa la posición de la hormiga (<link target-id="CNX_Calc_Figure_11_01_SP2_ant3"/>).<newline/> Cuando la distancia del centro de la rueda a la hormiga es mayor que el radio de la rueda, su trayectoria de movimiento se llama <term class="no-emphasis" id="term-00013">cicloide alargada</term>. En la figura se muestra el gráfico de una cicloide alargada<newline/>
+<figure id="CNX_Calc_Figure_11_01_SP2_ant3">
+<media id="fs-id1169293390010" alt="Hay tres figuras marcadas como (a), (b) y (c). La figura a tiene un círculo y un punto A que está fuera del círculo en el eje y (por debajo del origen). El círculo es tangente al eje x en el origen. El círculo parece desplazarse hacia la derecha en el eje x, con el punto A por encima del eje x en una segunda imagen del círculo dibujado ligeramente hacia la derecha. La figura b tiene un círculo en el primer cuadrante con centro C. Toca el eje x en xc. Se dibuja un punto A fuera del círculo y se hace un triángulo rectángulo desde este punto y el punto C. La hipotenusa se marca como b, el ángulo en C entre A y xc se marca como t, y la distancia de C a xc se marca como a. Las líneas se dibujan para dar los valores x y y de A como xA y yA, respectivamente. Del mismo modo, se dibuja una línea para dar el valor y de C como yC. La figura c muestra la curva que trazaría el punto A, cuando el círculo se desplaza hacia la derecha. Es ligeramente sinusoidal con un bucle extra en la parte inferior una vez por revolución.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_016.jpg"/>
+</media>
+<caption>(a) La hormiga se cuelga del reborde de la rueda del tren. (b) El nuevo planteamiento, ahora que la hormiga ha saltado a la rueda del tren. (c) La hormiga se desplaza por una cicloide alargada.</caption>
+</figure></item>
+<item>Usando el mismo enfoque que usó en las partes 1 a 3, halle las ecuaciones paramétricas para la trayectoria del movimiento de la hormiga.</item>
+<item>¿Qué observa en su respuesta a la parte 3 y en su respuesta a la parte 4?<newline/> Fíjese en que la hormiga en realidad está viajando hacia atrás en algunos momentos (los "bucles" del gráfico), aunque el tren siga avanzando. Probablemente estará <emphasis effect="italics">muy</emphasis> mareada cuando llegue a casa</item>
+</list>
+</note>
+</section>
+<section id="fs-id1169293395741" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1169293333646" list-type="bulleted" bullet-style="bullet">
+<item>Las ecuaciones paramétricas ofrecen una forma conveniente de describir una curva. Un parámetro puede representar el tiempo o alguna otra cantidad significativa.</item>
+<item>A menudo es posible eliminar el parámetro en una curva parametrizada para obtener una función o relación que describa esa curva.</item>
+<item>Siempre hay más de una forma de parametrizar una curva.</item>
+<item>Las ecuaciones paramétricas pueden describir curvas complicadas que son difíciles o quizás imposibles de describir utilizando coordenadas rectangulares.</item>
+</list>
+</section>
+<section id="fs-id1169293389862" class="section-exercises">
+<para id="fs-id1169293389866">En los siguientes ejercicios, dibuje las siguientes curvas eliminando el parámetro <emphasis effect="italics">t</emphasis>. Indique la orientación de la curva.</para>
+<exercise id="fs-id1169293216381">
+<problem id="fs-id1169293216383">
+<para id="fs-id1169293216385">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293136737"><para id="fs-id1169293136738"><newline/>
+<media id="fs-id1169293136744" alt="Una parábola abierta a la derecha siendo (-1, 0) el punto más a la izquierda con una flecha que va desde abajo pasando por (-1, 0) y hacia arriba.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_201.jpg"/>
+</media><newline/> orientación: de abajo a arriba</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293387478">
+<problem id="fs-id1169293387480">
+<para id="fs-id1169293387482">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293348680">
+<problem id="fs-id1169293348682">
+<para id="fs-id1169293348684">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293390421"><para id="fs-id1169293219313"><newline/>
+<media id="fs-id1169293219318" alt="Una línea recta que pasa por (0, -3) y (6, 0) con la flecha apuntando hacia arriba y hacia la derecha.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_203.jpg"/>
+</media><newline/> orientación: de izquierda a derecha</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293136776">
+<problem id="fs-id1169293136778">
+<para id="fs-id1169293136780">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>-</m:mo><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>1,5</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1169293394159">En los siguientes ejercicios, elimine el parámetro y dibuje los gráficos.</para>
+<exercise id="fs-id1169293394162">
+<problem id="fs-id1169293394164">
+<para id="fs-id1169293394166">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>4</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293391807">
+<para id="fs-id1169293391810">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>4</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math><newline/>
+<media id="fs-id1169293336853" alt="Media parábola que parte del origen y pasa por (2, 2) con la flecha apuntando hacia arriba y hacia la derecha.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_205.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<para id="fs-id1169293398770">En los siguientes ejercicios, utilice un dispositivo tecnológico (CAS o calculadora) para graficar las ecuaciones paramétricas.</para>
+<exercise id="fs-id1169293398774">
+<problem id="fs-id1169293398776">
+<para id="fs-id1169293398778"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293320748">
+<problem id="fs-id1169293320750">
+<para id="fs-id1169293320753"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:mi>t</m:mi></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293223928"><para id="fs-id1169293223929"><newline/>
+<media id="fs-id1169293223932" alt="Una curva que pasa por (1, 0) y (0, 3) con la flecha apuntando hacia arriba y hacia la izquierda.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_208.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293185308">
+<problem id="fs-id1169293185310">
+<para id="fs-id1169293185312"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169295856403">
+<problem id="fs-id1169295856406">
+<para id="fs-id1169293395064"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>sec</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293253898"><para id="fs-id1169293253899"><newline/>
+<media id="fs-id1169293253902" alt="Un gráfico con asíntotas en los ejes x y y. Hay una parte del gráfico en el tercer cuadrante con una flecha que apunta hacia abajo y hacia la derecha. Hay una parte del gráfico en el primer cuadrante con una flecha que apunta hacia abajo y hacia la derecha.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_210.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<para id="fs-id1169293389316">En los siguientes ejercicios, dibuje las ecuaciones paramétricas eliminando el parámetro. Indique las asíntotas del gráfico.</para>
+<exercise id="fs-id1169293389320">
+<problem id="fs-id1169293389323">
+<para id="fs-id1169293389325">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293398622">
+<problem id="fs-id1169293398625">
+<para id="fs-id1169293398627">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>θ</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>θ</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293398541"><para id="fs-id1169293398542"><newline/>
+<media id="fs-id1169293398545" alt="Una elipse con eje menor vertical y de longitud 8 y eje mayor horizontal y de longitud 12 que está centrada en el origen. Las flechas van en sentido contrario a las agujas del reloj.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_212.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293398560">
+<problem id="fs-id1169293393453">
+<para id="fs-id1169293393456">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>θ</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math> grandes.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293397059">
+<problem id="fs-id1169293397061">
+<para id="fs-id1169293397063">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>-</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>−5</m:mn><m:mo>+</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293396989"><para id="fs-id1169293396990"><newline/>
+<media id="fs-id1169293396993" alt="Una elipse en el cuarto cuadrante con eje menor horizontal y de longitud 4 y eje mayor vertical y de longitud 6. Las flechas van en el sentido de las agujas del reloj.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_214.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293333631">
+<problem id="fs-id1169293333633">
+<para id="fs-id1169293333635">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>+</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>+</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293393259">
+<problem id="fs-id1169293393261">
+<para id="fs-id1169293393263">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>sec</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>tan</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293395137"><para id="fs-id1169293395138"><newline/>
+<media id="fs-id1169293395145" alt="Un gráfico con asíntotas en y = x y y = -x. La primera parte del gráfico ocurre en el segundo y tercer cuadrante con vértice en (-1, 0). La segunda parte del gráfico se produce en el primer y cuarto cuadrante con vértices como (1, 0).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_216.jpg"/>
+</media><newline/> Las asíntotas son <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> como <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>x</m:mi></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293320701">
+<problem id="fs-id1169293320703">
+<para id="fs-id1169293320705">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293282643">
+<problem id="fs-id1169293401936">
+<para id="fs-id1169293401939">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>t</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293401904"><para id="fs-id1169293401905"><newline/>
+<media id="fs-id1169293401908" alt="Una curva que comienza ligeramente por encima del origen y aumenta hacia la derecha con la flecha apuntando hacia arriba y hacia la derecha.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_218.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293402453">
+<problem id="fs-id1169293402455">
+<para id="fs-id1169293402458">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>-2</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>3</m:mn><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293395004">
+<problem id="fs-id1169293395006">
+<para id="fs-id1169293395008">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293393226"><para id="fs-id1169293393227"><newline/>
+<media id="fs-id1169293393231" alt="Una curva cuya asíntota es el eje y. La curva comienza en el cuarto cuadrante y aumenta rápidamente hasta (1, 0), punto en el que aumenta mucho más lentamente.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_220.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293392983">
+<problem id="fs-id1169293392985">
+<para id="fs-id1169293392987">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>sec</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>tan</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1169293394128">En los siguientes ejercicios, convierta las ecuaciones paramétricas de una curva en forma rectangular. No es necesario ningún dibujo. Indique el dominio de la forma rectangular.</para>
+<exercise id="fs-id1169293394133">
+<problem id="fs-id1169293394135">
+<para id="fs-id1169293394137">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>–</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>t</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169295377257">
+<para id="fs-id1169295377260">Los términos <m:math><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:msqrt><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:msqrt><m:mn>2</m:mn></m:mfrac></m:math>; domain: <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>-∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293398516">
+<problem id="fs-id1169293398518">
+<para id="fs-id1169293398520">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msqrt><m:mrow><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msqrt></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>t</m:mi><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>t</m:mi></m:mrow></m:mfrac><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>></m:mo><m:mn>-1</m:mn></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293315628">
+<problem id="fs-id1169293315630">
+<para id="fs-id1169293315632">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>∈</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mi>π</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293395194">
+<para id="fs-id1169293395196">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:mn>16</m:mn></m:mrow></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>9</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>;</m:mo></m:mrow></m:math> dominio <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-4</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169295773309">
+<problem id="fs-id1169295773311">
+<para id="fs-id1169295773313">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>cosh</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>senh</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293390489">
+<problem id="fs-id1169295558463">
+<para id="fs-id1169295558465">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>6</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>7</m:mn></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293339089">
+<para id="fs-id1169293339092">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>;</m:mo></m:mrow></m:math> dominio: todos los números reales.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293339114">
+<problem id="fs-id1169293339116">
+<para id="fs-id1169293343602">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293395820">
+<problem id="fs-id1169293395822">
+<para id="fs-id1169293395824">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>-</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169295835146">
+<para id="fs-id1169295835148">Los términos <m:math><m:mrow><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>y</m:mi><m:mo>-</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>;</m:mo></m:mrow></m:math> dominio: <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169295558232">
+<problem id="fs-id1169295558234">
+<para id="fs-id1169295558236">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msqrt><m:mi>t</m:mi></m:msqrt><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293199778">
+<problem id="fs-id1169293199780">
+<para id="fs-id1169293199782">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>sec</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>tan</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>π</m:mi><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169295558912">
+<para id="fs-id1169295558914">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msqrt><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msqrt><m:mo>;</m:mo></m:mrow></m:math> dominio: <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-∞</m:mn><m:mo>,</m:mo><m:mn>-1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293281179">
+<problem id="fs-id1169293260984">
+<para id="fs-id1169293260986">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>cosh</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>senh</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293339179">
+<problem id="fs-id1169293339181">
+<para id="fs-id1169293339183">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293282558">
+<para id="fs-id1169293282560">Los términos <m:math><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>;</m:mo></m:mrow></m:math> dominio: <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>∪</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>-2</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293387881">
+<problem id="fs-id1169293387883">
+<para id="fs-id1169293387885">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>16</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>9</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169295839311">
+<problem id="fs-id1169295839313">
+<para id="fs-id1169295839315">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169295558611">
+<para id="fs-id1169295558613">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>;</m:mo></m:mrow></m:math> dominio: <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo stretchy="false">[</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169295558766">
+<problem id="fs-id1169295558768">
+<para id="fs-id1169295558771">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293200728">
+<problem id="fs-id1169293200730">
+<para id="fs-id1169293200733">Los términos <m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="left"><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mi>n</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>n</m:mi><m:mspace width="0.2em"/><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>≥</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:math> donde <emphasis effect="italics">n</emphasis> es un número natural</para>
+</problem>
+<solution id="fs-id1169293389386">
+<para id="fs-id1169293389388">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>;</m:mo></m:mrow></m:math> dominio: <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293336913">
+<problem id="fs-id1169293336915">
+<para id="fs-id1169293336917">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>5</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mo stretchy="false">(</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo stretchy="false">)</m:mo></m:mtd></m:mtr></m:mtable></m:math> donde <m:math><m:mrow><m:mn>1</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mi>e</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169295558437">
+<problem id="fs-id1169295558439">
+<para id="fs-id1169295558441">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>8</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>8</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mtd></m:mtr></m:mtable></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1169293393519">
+<para id="fs-id1169293393521">Los términos <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>;</m:mo></m:mrow></m:math> dominio: <m:math><m:mrow><m:mi>x</m:mi><m:mo>∈</m:mo><m:mo stretchy="false">[</m:mo><m:mn>-2</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo stretchy="false">]</m:mo><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293315663">
+<problem id="fs-id1169293315666">
+<para id="fs-id1169293315668">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>tan</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mtext>sec</m:mtext><m:mn>2</m:mn></m:msup><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mtd></m:mtr></m:mtable></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1169293387404">En los siguientes ejercicios, los pares de ecuaciones paramétricas representan rectas, parábolas, círculos, elipses o hipérbolas. Nombre el tipo de curva básica que representa cada par de ecuaciones.</para>
+<exercise id="fs-id1169293387409">
+<problem id="fs-id1169293387411">
+<para id="fs-id1169293387413">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mtd></m:mtr></m:mtable></m:math></para>
+</problem>
+<solution id="fs-id1169293339209">
+<para id="fs-id1169293339211">línea</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293339217">
+<problem id="fs-id1169293339219">
+<para id="fs-id1169293339221">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>4</m:mn><m:mo>=</m:mo><m:mn>5</m:mn><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>=</m:mo><m:mi>t</m:mi></m:mtd></m:mtr></m:mtable></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293339266">
+<problem id="fs-id1169293339268">
+<para id="fs-id1169293339270">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn></m:mtd></m:mtr></m:mtable></m:math></para>
+</problem>
+<solution id="fs-id1169293130303">
+<para id="fs-id1169293130305">parábola</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293130310">
+<problem id="fs-id1169293130312">
+<para id="fs-id1169293130314">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mtd></m:mtr></m:mtable></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293345112">
+<problem id="fs-id1169293345114">
+<para id="fs-id1169293345117">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mtd></m:mtr></m:mtable></m:math></para>
+</problem>
+<solution id="fs-id1169293345172">
+<para id="fs-id1169293345174">círculo</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169295558280">
+<problem id="fs-id1169295558282">
+<para id="fs-id1169295558284">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>cosh</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>senh</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mtd></m:mtr></m:mtable></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169295558322">
+<problem id="fs-id1169295558324">
+<para id="fs-id1169295558327">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mtd></m:mtr></m:mtable></m:math></para>
+</problem>
+<solution id="fs-id1169295558362">
+<para id="fs-id1169293261046">elipse</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293261052">
+<problem id="fs-id1169293261054">
+<para id="fs-id1169293261056">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mtd></m:mtr></m:mtable></m:math> grandes.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293261119">
+<problem id="fs-id1169293261121">
+<para id="fs-id1169293261124">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>cosh</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>senh</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mtd></m:mtr></m:mtable></m:math></para>
+</problem>
+<solution id="fs-id1169295558148">
+<para id="fs-id1169295558150">hipérbola</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169295558155">
+<problem id="fs-id1169295558157">
+<para id="fs-id1169295558159">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>cosh</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>senh</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mtd></m:mtr></m:mtable></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293223957">
+<problem id="fs-id1169293223960">
+<para id="fs-id1169293223962">Demuestre que <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>h</m:mi><m:mo>+</m:mo><m:mi>r</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>k</m:mi><m:mo>+</m:mo><m:mi>r</m:mi><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mtd></m:mtr></m:mtable></m:math> representa la ecuación de un círculo.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293224008">
+<problem id="fs-id1169293224010">
+<para id="fs-id1169293224013">Utilice las ecuaciones del problema anterior para hallar un conjunto de ecuaciones paramétricas para una circunferencia cuyo radio es 5 y cuyo centro es <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-2</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1169293343534">En los siguientes ejercicios, utilice una herramienta gráfica para graficar la curva representada por las ecuaciones paramétricas e identifique la curva a partir de su ecuación.</para>
+<exercise id="fs-id1169293343538">
+<problem id="fs-id1169293343541">
+<para id="fs-id1169293343543"><emphasis effect="bold">[T]</emphasis> <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>θ</m:mi><m:mo>+</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>θ</m:mi></m:mtd></m:mtr></m:mtable></m:math></para>
+</problem>
+<solution id="fs-id1169293392729">
+<para id="fs-id1169293392731">Las ecuaciones representan una cicloide.<newline/>
+<media id="fs-id1169293392717" alt="Un gráfico que comienza en (-6, 0) y que aumenta rápidamente hasta un punto agudo en (-3, 2) y luego disminuye rápidamente hasta el origen. El gráfico es simétrico alrededor del eje y, por lo que el gráfico aumenta rápidamente hasta (3, 2) antes de disminuir rápidamente hasta (6, 0).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_222.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293392736">
+<problem id="fs-id1169293392738">
+<para id="fs-id1169293392740"><emphasis effect="bold">[T]</emphasis> <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>-</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mtd></m:mtr></m:mtable></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293401770">
+<problem id="fs-id1169293401772">
+<para id="fs-id1169293401774"><emphasis effect="bold">[T]</emphasis> <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>0,5</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>1,5</m:mn><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi></m:mtd></m:mtr></m:mtable></m:math></para>
+</problem>
+<solution id="fs-id1169293401823"><para id="fs-id1169293401824"><newline/>
+<media id="fs-id1169293401831" alt="Un gráfico que comienza aproximadamente en (-6, 0) y aumenta hasta un punto redondeado y luego disminuye hasta aproximadamente (0, -0,5). El gráfico es simétrico alrededor del eje y, por lo que el gráfico aumenta hasta un punto redondeado antes de disminuir hasta aproximadamente (6, 0).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_231.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293401843">
+<problem id="fs-id1169293401846">
+<para id="fs-id1169293401848">Un avión que viaja horizontalmente a 100 m/s sobre un terreno plano a una altura de 4.000 metros debe dejar caer un paquete de emergencia sobre un objetivo en el suelo. La trayectoria del paquete está dada por <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>100</m:mn><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>-4,9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>4.000</m:mn><m:mo>,</m:mo><m:mi>t</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn></m:mrow></m:math> donde el origen es el punto en el suelo directamente debajo del avión en el momento de la liberación. ¿Cuántos metros horizontales antes del objetivo debe soltar el paquete para dar en el blanco?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293314055">
+<problem id="fs-id1169293314057">
+<para id="fs-id1169293314059">La trayectoria de una bala está dada por <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msub><m:mi>v</m:mi><m:mn>0</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>α</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:msub><m:mi>v</m:mi><m:mn>0</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>α</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>g</m:mi><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> donde <m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>500</m:mn><m:mspace width="0.2em"/><m:mtext>m/s,</m:mtext></m:mrow></m:math> <m:math><m:mrow><m:mi>g</m:mi><m:mo>=</m:mo><m:mn>9,8</m:mn><m:mo>=</m:mo><m:mn>9,8</m:mn><m:msup><m:mrow><m:mspace width="0.2em"/><m:mtext>m/s</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>α</m:mi><m:mo>=</m:mo><m:mn>30</m:mn><m:mspace width="0.2em"/><m:mtext>grados</m:mtext><m:mo>.</m:mo></m:mrow></m:math> ¿Cuándo llegará la bala al suelo? ¿A qué distancia de la pistola la bala llegará al suelo?</para></problem>
+<solution id="fs-id1169293251471">
+<para id="fs-id1169293251473">22.092 metros a aproximadamente 51 segundos.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293251479">
+<problem id="fs-id1169293251481">
+<para id="fs-id1169293251483"><emphasis effect="bold">[T]</emphasis> Utilice un dispositivo tecnológico para dibujar la curva representada por <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>3</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293251573">
+<problem id="fs-id1169293251575">
+<para id="fs-id1169293251577"><emphasis effect="bold">[T]</emphasis> Utilice un dispositivo tecnológico para dibujar <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>tan</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mspace width="0.2em"/><m:mtext>sec</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mtext>-</m:mtext><m:mi>π</m:mi><m:mo>&lt;</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169295459669"><para id="fs-id1169295459670"><newline/>
+<media id="fs-id1169295459677" alt="Un gráfico con asíntotas aproximadamente cerca de y = x e y = -x. La primera parte del gráfico está en el primer y segundo cuadrante con vértices cercanos a (0, 3). La segunda parte del gráfico se encuentra en los cuadrantes tercero y cuarto con vértices cercanos a (0, -3).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_226.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169295459690">
+<problem id="fs-id1169295459692">
+<para id="fs-id1169295459694">Dibuje la curva conocida como <term class="no-emphasis" id="term-00014"><emphasis effect="italics">epitrocoide</emphasis></term> que da la trayectoria de un punto en un círculo de radio <emphasis effect="italics">b</emphasis> cuando rueda por el exterior de un círculo de radio <emphasis effect="italics">a</emphasis>. Las ecuaciones son</para>
+<para id="fs-id1169295459716">Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo stretchy="false">)</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>·</m:mo><m:mtext>cos</m:mtext><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo stretchy="false">)</m:mo><m:mi>t</m:mi></m:mrow><m:mi>b</m:mi></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo stretchy="false">)</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>c</m:mi><m:mo>·</m:mo><m:mtext>sen</m:mtext><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo stretchy="false">)</m:mo><m:mi>t</m:mi></m:mrow><m:mi>b</m:mi></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math><newline/> Supongamos que <m:math><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>c</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para></problem>
+</exercise>
+<exercise id="fs-id1169293343404">
+<problem id="fs-id1169293343406">
+<para id="fs-id1169293343408"><emphasis effect="bold">[T]</emphasis> Utilice un dispositivo tecnológico para dibujar la curva en espiral dada por <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>t</m:mi><m:mspace width="0.2em"/><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>t</m:mi><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> de <m:math><m:mrow><m:mn>-2</m:mn><m:mi>π</m:mi><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293312102"><para id="fs-id1169293312103"><newline/>
+<media id="fs-id1169293312114" alt="Un gráfico que comienza aproximadamente en (-6, -1) y que disminuye hasta un mínimo en el tercer cuadrante cerca de (-1, -4,8) y que aumenta a través de aproximadamente (0, -4,7) y (3, 0) hasta un máximo cerca de (1, 1,9) antes de disminuir a través de (0, 1,5) hasta el origen. El gráfico es simétrico alrededor del eje y, por lo que el gráfico aumenta a través de (0, 1,5) hasta un máximo en el segundo cuadrante, disminuye de nuevo a través de (0, -4,7), y luego aumenta hasta (6, -1).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_228.jpg"/>
+</media></para>
+</solution>
+</exercise>
+<exercise id="fs-id1169293312123">
+<problem id="fs-id1169293312126">
+<para id="fs-id1169293312128"><emphasis effect="bold">[T]</emphasis> Utilice un dispositivo tecnológico para graficar la curva dada por las ecuaciones paramétricas <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mspace width="0.2em"/><m:mtext>cot</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>2</m:mn><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo><m:mtext>-</m:mtext><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Esta curva se conoce como la bruja de Agnesi.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1169293312229">
+<problem id="fs-id1169293394800">
+<para id="fs-id1169293394802"><emphasis effect="bold">[T]</emphasis> Dibújela curva dada por las ecuaciones paramétricas <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>cosh</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>senh</m:mtext><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mtd></m:mtr></m:mtable></m:math> donde <m:math><m:mrow><m:mn>-2</m:mn><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1169293394872"><para id="fs-id1169293394873"><newline/>
+<media id="fs-id1169293394876" alt="Un gráfico ligeramente parabólico con vértice en el origen que está abierto hacia la derecha.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_11_01_230.jpg"/>
+</media></para>
+</solution>
+</exercise>
+</section>
+  </content>
+<glossary>
+<definition id="fs-id1169293394894">
+<term>cicloide</term>
+<meaning id="fs-id1169293394900">curva trazada por un punto del neumático de una rueda circular cuando esta rueda a lo largo de una línea recta sin deslizarse</meaning>
+</definition>
+<definition id="fs-id1169293394905">
+<term>cúspide</term>
+<meaning id="fs-id1169293394910">extremo o parte puntiaguda donde se juntan dos curvas</meaning>
+</definition>
+<definition id="fs-id1169293394914">
+<term>orientación</term>
+<meaning id="fs-id1169293394920">dirección en la que se mueve un punto en un gráfico cuando aumenta el parámetro</meaning>
+</definition>
+<definition id="fs-id1169293394924">
+<term>parámetro</term>
+<meaning id="fs-id1169293394929">una variable independiente de la que dependen tanto <emphasis effect="italics">x</emphasis> como <emphasis effect="italics">y</emphasis> en una curva paramétrica; normalmente representada por la variable <emphasis effect="italics">t</emphasis></meaning>
+</definition>
+<definition id="fs-id1169293394948">
+<term>curva paramétrica</term>
+<meaning id="fs-id1169293394954">gráfico de las ecuaciones paramétricas <m:math><m:mrow><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y de <m:math><m:mrow><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en un intervalo <m:math><m:mrow><m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi></m:mrow></m:math> combinado con las ecuaciones</meaning>
+</definition>
+<definition id="fs-id1169293296425">
+<term>ecuaciones paramétricas</term>
+<meaning id="fs-id1169293296430">las ecuaciones <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y de <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>y</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> que definen una curva paramétrica</meaning>
+</definition>
+<definition id="fs-id1169293296469">
+<term>parametrización de una curva</term>
+<meaning id="fs-id1169293296474">reescribir la ecuación de una curva definida por una función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> como ecuaciones paramétricas</meaning>
+</definition>
+</glossary>
+</document>

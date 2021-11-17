@@ -1,0 +1,989 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+<title>La regla de L'Hôpital</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53619</md:content-id>
+  <md:title>La regla de L'Hôpital</md:title>
+  <md:abstract><list id="list-00001">
+<item>Reconocer cuándo aplicar la regla de L'Hôpital.</item>
+<item>Identificar las formas indeterminadas producidas por cocientes, productos, restas y potencias, y aplicar la regla de L'Hôpital en cada caso.</item>
+<item>Describir las tasas de crecimiento relativas de las funciones.</item>
+</list></md:abstract>
+  <md:uuid>bb6e333c-402d-4401-b750-4faac36169ff</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1165042709572">En esta sección, examinaremos una poderosa herramienta para evaluar los límites. Esta herramienta, conocida como <term id="term-00001">la regla de L'Hôpital,</term> utiliza derivadas para calcular los límites. Con esta regla, podremos evaluar muchos límites que aún no hemos podido determinar. En lugar de basarnos en pruebas numéricas para conjeturar que existe un límite, demostraremos definitivamente que existe un límite y determinaremos su valor exacto.</para>
+<section id="fs-id1165043085155">
+<title>Aplicación de la regla de L'Hôpital</title>
+<para id="fs-id1165042941863">La regla de L'Hôpital puede utilizarse para evaluar límites que implican el cociente de dos funciones. Considere</para>
+<equation id="fs-id1165042458008" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042613148">Si <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>L</m:mi><m:mn>1</m:mn></m:msub><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub><m:mo>≠</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces</para>
+<equation id="fs-id1165043088102" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:msub><m:mi>L</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mrow><m:msub><m:mi>L</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042330308">Sin embargo, ¿qué ocurre si <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>con dígito d?</m:mo></m:mrow></m:math> A esta la llamamos una de las <term id="term-00002">formas indeterminadas</term>, del tipo <m:math><m:mrow><m:mfrac><m:mn>0</m:mn><m:mn>0</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Se considera una forma indeterminada porque no podemos determinar el comportamiento exacto de <m:math><m:mrow><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:math> sin mayor análisis. Ya hemos visto ejemplos de esto en el texto. Por ejemplo, considere</para>
+<equation id="fs-id1165042515160" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043036412">En el primero de estos ejemplos, podemos evaluar el límite factorizando el numerador y escribiendo</para>
+<equation id="fs-id1165043067705" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043257290">Para <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:math> pudimos demostrar, mediante un argumento geométrico, que</para>
+<equation id="fs-id1165042954700" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043001194">Aquí utilizamos una técnica diferente para evaluar este tipo de límites, que no solo proporciona una manera más fácil de evaluarlos, sino que también, y esto es lo más importante, nos brinda una manera de evaluar muchos otros límites que no podíamos calcular anteriormente.</para>
+<para id="fs-id1165043062373">La idea que subyace a la regla de L'Hôpital puede explicarse mediante aproximaciones lineales locales. Consideremos dos funciones diferenciables <m:math><m:mi>f</m:mi></m:math> y <m:math><m:mi>g</m:mi></m:math> de manera que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y tal que <m:math><m:mrow><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> Para <m:math><m:mi>x</m:mi></m:math> cerca de <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> podemos escribir</para>
+<equation id="fs-id1165043199940" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></equation>
+<para id="fs-id1165042355300">y</para>
+<equation id="fs-id1165042320393" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo><m:mo>.</m:mo></m:mrow></m:mrow></m:math></equation>
+<para id="fs-id1165043178271">Por lo tanto,</para>
+<equation id="fs-id1165042331440" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>≈</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<figure id="CNX_Calc_Figure_04_08_001">
+<media id="fs-id1165043194413" alt="Dos funciones y = f(x) e y = g(x) se dibujan de forma que se cruzan en un punto sobre x = a. También se dibujan las aproximaciones lineales de estas dos funciones y = f(a) + f'(a)(x - a) e y = g(a) + g'(a)(x - a).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_08_003.jpg"/>
+</media>
+<caption>Si los valores de <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> entonces la relación <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mtext>/</m:mtext><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es aproximadamente igual a la relación de sus aproximaciones lineales cerca de <m:math><m:mi>a</m:mi><m:mo>.</m:mo></m:math></caption>
+</figure>
+<para id="fs-id1165043035926">Dado que <m:math><m:mi>f</m:mi></m:math> es diferenciable en <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mi>f</m:mi></m:math> es continua en <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> y por lo tanto <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Del mismo modo, <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Si además suponemos que <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> y <m:math><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup></m:math> son continuas en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Al utilizar estas ideas, concluimos que</para>
+<equation id="fs-id1165042373953" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042552586">Tenga en cuenta que la suposición de que <m:math><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup></m:math> y <m:math><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup></m:math> son continuas en <m:math><m:mi>a</m:mi></m:math> y <m:math><m:mrow><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> puede relajarse. Enunciamos la regla de L'Hôpital formalmente para la forma indeterminada <m:math><m:mrow><m:mfrac><m:mn>0</m:mn><m:mn>0</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> También hay que tener en cuenta que la notación <m:math><m:mrow><m:mfrac><m:mn>0</m:mn><m:mn>0</m:mn></m:mfrac></m:mrow></m:math> no significa que estemos dividiendo realmente cero entre cero. Más bien, utilizamos la notación <m:math><m:mrow><m:mfrac><m:mn>0</m:mn><m:mn>0</m:mn></m:mfrac></m:mrow></m:math> para representar un cociente de límites, cada uno de los cuales es cero.</para>
+<note id="fs-id1165043352593" class="theorem">
+<title>Regla de L'Hôpital (Caso 0/0)</title>
+<para id="fs-id1165043276140">Supongamos que <m:math><m:mi>f</m:mi></m:math> y <m:math><m:mi>g</m:mi></m:math> son funciones diferenciables sobre un intervalo abierto que contiene <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> excepto posiblemente en <m:math><m:mrow><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces</para>
+<equation id="fs-id1165043020148" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043035673">asumiendo que el límite de la derecha existe o es <m:math><m:mi>∞</m:mi></m:math> o <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Este resultado también es válido si consideramos límites unilaterales, o si <m:math><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mi>∞</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mo>- −</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</note>
+<section id="fs-id1165042712928">
+<title>Prueba</title>
+<para id="fs-id1165043429940">Proporcionamos una demostración de este teorema en el caso especial en el que <m:math><m:mrow><m:mi>f</m:mi><m:mo>,</m:mo><m:mi>g</m:mi><m:mo>,</m:mo><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup></m:math> son todos continuos en un intervalo abierto que contiene <m:math><m:mrow><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> En ese caso, ya que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mi>f</m:mi></m:math> y <m:math><m:mi>g</m:mi></m:math> son continuas en <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> se deduce que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>=</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto,</para>
+<equation id="fs-id1165043353664" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>dado que</m:mtext><m:mspace width="0.2em"/><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>=</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow><m:mrow><m:mfrac><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>álgebra</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>límite de un cociente</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>definición de la derivada</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>continuidad de</m:mtext><m:mspace width="0.2em"/><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>.</m:mo></m:mtd><m:mtd/><m:mtd/><m:mtd columnalign="left"><m:mtext>límite de un cociente</m:mtext></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1165043092431">Observe que la regla de L'Hôpital establece que podemos calcular el límite de un cociente <m:math><m:mrow><m:mfrac><m:mi>f</m:mi><m:mi>g</m:mi></m:mfrac></m:mrow></m:math> considerando el límite del cociente de las derivadas <m:math><m:mrow><m:mfrac><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Es importante percatarse de que no estamos calculando la derivada del cociente <m:math><m:mrow><m:mfrac><m:mi>f</m:mi><m:mi>g</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1165042988256">□</para>
+<example id="fs-id1165043397578">
+<exercise id="fs-id1165043104016">
+<problem id="fs-id1165043395456">
+<title>Aplicación de la regla de L'Hôpital (caso 0/0)</title>
+<para id="fs-id1165042456913">Evalúe cada uno de los siguientes límites aplicando la regla de L'Hôpital.</para>
+<list id="fs-id1165042369562" list-type="enumerated" number-style="lower-alpha">
+<item>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></item>
+<item>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math></item>
+<item>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math></item>
+<item>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1165042535043">
+<list id="fs-id1165042535045" list-type="enumerated" number-style="lower-alpha">
+<item>Dado que el numerador <m:math><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:math> y el denominador <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> podemos aplicar la regla de L'Hôpital para evaluar este límite. Tenemos<newline/>
+<equation id="fs-id1165042328696" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mfrac><m:mi>d</m:mi><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mfrac><m:mi>d</m:mi><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mn>1</m:mn></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mn>0</m:mn><m:mn>1</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>0,</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation></item>
+<item>Dado que <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> el numerador <m:math><m:mrow><m:mtext>sin</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:math> y el denominador <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, podemos aplicar la regla de L'Hôpital. Obtenemos<newline/>
+<equation id="fs-id1165043116372" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>π</m:mi><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mo>·</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>-1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>π</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation></item>
+<item>Dado que <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> el numerador <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mo>–</m:mo><m:mn>1</m:mn><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:math> y el denominador <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, podemos aplicar la regla de L'Hôpital. Obtenemos<newline/>
+<equation id="fs-id1165042327460" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>-1</m:mn></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>-1</m:mn></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mn>0</m:mn></m:msup><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+<item>Dado que <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> tanto el numerador como el denominador se acercan a cero. Por lo tanto, podemos aplicar la regla de L'Hôpital. Obtenemos<newline/>
+<equation id="fs-id1165042562974" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation><newline/> Dado que el numerador y el denominador de este nuevo cociente se aproximan a cero a medida que <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> volvemos a aplicar la regla de L'Hôpital. Al hacerlo, vemos que<newline/>
+<equation id="fs-id1165043281524" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>-</m:mtext><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation><newline/> Por lo tanto, concluimos que<newline/>
+<equation id="fs-id1165043284142" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+</list>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165043393593" class="checkpoint">
+<exercise id="fs-id1165043395209">
+<problem id="fs-id1165043395212">
+<para id="fs-id1165043395214">Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mi>x</m:mi><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042377477">
+<para id="fs-id1165042377480">Los términos <m:math><m:mn>1</m:mn></m:math></para>
+</solution>
+<commentary id="fs-id1165043395671" type="hint">
+<title>Pista</title>
+<para id="fs-id1165043395678">Los términos <m:math><m:mrow><m:mfrac><m:mi>d</m:mi><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mspace width="0.1em"/><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1165042318672">También podemos utilizar la regla de L'Hôpital para evaluar los límites de los cocientes <m:math><m:mrow><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mrow></m:math> en la que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mtext>±</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mtext>±</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Los límites de esta forma se clasifican como <emphasis effect="italics">formas indeterminadas del tipo</emphasis> <m:math><m:mrow><m:mi>∞</m:mi><m:mtext>/</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Note de nuevo que en realidad no estamos dividiendo <m:math><m:mi>∞</m:mi></m:math> entre <m:math><m:mrow><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mi>∞</m:mi></m:math> no es un número real, eso es imposible; más bien, <m:math><m:mrow><m:mi>∞</m:mi><m:mtext>/</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> se utiliza para representar un cociente de límites, cada uno de los cuales es <m:math><m:mi>∞</m:mi></m:math> o <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<note id="fs-id1165042330826" class="theorem">
+<title>La regla de L'Hôpital <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>∞</m:mi><m:mtext>/</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> Caso)</title>
+<para id="fs-id1165043426174">Supongamos que <m:math><m:mi>f</m:mi></m:math> y <m:math><m:mi>g</m:mi></m:math> son funciones diferenciables sobre un intervalo abierto que contiene <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> excepto posiblemente en <m:math><m:mrow><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Supongamos que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi></m:mrow></m:math> (o <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi></m:mrow></m:math> (o <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo><m:mo>.</m:mo></m:mrow></m:math> Entonces,</para>
+<equation id="fs-id1165042373703" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042707280">asumiendo que el límite de la derecha existe o es <m:math><m:mi>∞</m:mi></m:math> o <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Este resultado también es válido si el límite es infinito, si <m:math><m:mrow><m:mi>a</m:mi><m:mo>=</m:mo><m:mi>∞</m:mi></m:mrow></m:math> o <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> o el límite es unilateral.</para>
+</note>
+<example id="fs-id1165043427623">
+<exercise id="fs-id1165043427625">
+<problem id="fs-id1165042323490">
+<title>Aplicación de la regla de L'Hôpital <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>∞</m:mi><m:mtext>/</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> Caso)</title>
+<para id="fs-id1165042709794">Evalúe cada uno de los siguientes límites aplicando la regla de L'Hôpital.</para>
+<list id="fs-id1165042709798" list-type="enumerated" number-style="lower-alpha">
+<item>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac></m:mrow></m:math></item>
+<item>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>cot</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1165042376756">
+<list id="fs-id1165042376758" list-type="enumerated" number-style="lower-alpha">
+<item>Dado que <m:math><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> son polinomios de primer grado con coeficientes líderes positivos, <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, aplicamos la regla de L'Hôpital y obtenemos<newline/>
+<equation id="fs-id1165042327389" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation><newline/> Observe que este límite también puede calcularse sin recurrir a la regla de L'Hôpital. Anteriormente en el capítulo mostramos cómo evaluar dicho límite dividiendo el numerador y el denominador por la mayor potencia de <m:math><m:mi>x</m:mi></m:math> en el denominador. Al hacerlo, vimos que<newline/>
+<equation id="fs-id1165042319986" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>3</m:mn><m:mo>+</m:mo><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation><newline/> La regla de L'Hôpital nos proporciona un medio alternativo para evaluar este tipo de límite.</item>
+<item>Aquí, <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mtext>cot</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por tanto, podemos aplicar la regla de L'Hôpital y obtener<newline/>
+<equation id="fs-id1165042374803" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>cot</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>- −</m:mtext><m:msup><m:mrow><m:mtext>csc</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:mtext>-</m:mtext><m:mi>x</m:mi><m:mspace width="0.1em"/><m:msup><m:mrow><m:mtext>csc</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation><newline/> Ahora, dado que <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:msup><m:mrow><m:mtext>csc</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, el primer término del denominador se acerca a cero y el segundo término se hace muy grande. En ese caso, puede ocurrir cualquier cosa con el producto. Por lo tanto, todavía no podemos sacar ninguna conclusión. Para evaluar el límite, utilizamos la definición de <m:math><m:mrow><m:mtext>csc</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> para escribir<newline/>
+<equation id="fs-id1165042376466" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:mtext>-</m:mtext><m:mi>x</m:mi><m:mspace width="0.1em"/><m:msup><m:mrow><m:mtext>csc</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>–</m:mtext><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation><newline/> Ahora <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> por lo que volvemos a aplicar la regla de L'Hôpital. Encontramos<newline/>
+<equation id="fs-id1165043249678" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>–</m:mtext><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>2</m:mn><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>0</m:mn><m:mrow><m:mn>-1</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation><newline/> Concluimos que<newline/>
+<equation id="fs-id1165042315721" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>cot</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+</list>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165042333392" class="checkpoint">
+<exercise id="fs-id1165042708180">
+<problem id="fs-id1165042708182">
+<para id="fs-id1165042708184">Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>5</m:mn><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042367881">
+<para id="fs-id1165042367883">Los términos <m:math><m:mn>0</m:mn></m:math></para>
+</solution>
+<commentary id="fs-id1165042367890" type="hint">
+<title>Pista</title>
+<para id="fs-id1165042705514">Los términos <m:math><m:mrow><m:mfrac><m:mi>d</m:mi><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1165042320327">Como se ha dicho, la regla de L'Hôpital es una herramienta muy útil para evaluar los límites. Sin embargo, es importante recordar que para aplicar la regla de L'Hôpital a un cociente <m:math><m:mrow><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> es fundamental que el límite de <m:math><m:mrow><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mrow></m:math> sea de la forma <m:math><m:mrow><m:mfrac><m:mn>0</m:mn><m:mn>0</m:mn></m:mfrac></m:mrow></m:math> o <m:math><m:mrow><m:mi>∞</m:mi><m:mtext>/</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Considere el siguiente ejemplo.</para>
+<example id="fs-id1165042350228">
+<exercise id="fs-id1165043219076">
+<problem id="fs-id1165043219079">
+<title>Casos en que no se aplica la regla de L'Hôpital</title>
+<para id="fs-id1165043219084">Considere que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Demuestre que el límite no se puede evaluar aplicando la regla de L'Hôpital.</para>
+</problem>
+<solution id="fs-id1165042327370">
+<para id="fs-id1165042327372">Como los límites del numerador y del denominador no son ambos cero y no son ambos infinitos, no podemos aplicar la regla de L'Hôpital. Si intentamos hacerlo, obtendremos</para>
+<equation id="fs-id1165042398961" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mfrac><m:mi>d</m:mi><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:math></equation>
+<para id="fs-id1165043395079">y</para>
+<equation id="fs-id1165042318693" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mfrac><m:mi>d</m:mi><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042364614">En ese momento concluiríamos erróneamente que</para>
+<equation id="fs-id1165042364618" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>2</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043222028">Sin embargo, como <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>7</m:mn><m:mo>,</m:mo></m:mrow></m:math> en realidad tenemos</para>
+<equation id="fs-id1165042970462" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>6</m:mn><m:mn>7</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042383150">Podemos concluir que</para>
+<equation id="fs-id1165042383154" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac><m:mo>≠</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mfrac><m:mi>d</m:mi><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mfrac><m:mi>d</m:mi><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165043174646" class="checkpoint">
+<exercise id="fs-id1165043174649">
+<problem id="fs-id1165043174651">
+<para id="fs-id1165043174654">Explique por qué no podemos aplicar la regla de L'Hôpital para evaluar <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:math> por otros medios.</para>
+</problem>
+<solution id="fs-id1165042632515">
+<para id="fs-id1165042632518">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, no podemos aplicar la regla de L'Hôpital. El límite del cociente es <m:math><m:mi>∞</m:mi></m:math></para>
+</solution>
+<commentary id="fs-id1165042632611" type="hint">
+<title>Pista</title>
+<para id="fs-id1165042632618">Determine los límites del numerador y del denominador por separado.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+</section>
+<section id="fs-id1165042331793">
+<title>Otras formas indeterminadas</title>
+<para id="fs-id1165042331798">La regla de L'Hôpital es muy útil para evaluar los límites que implican las formas indeterminadas <m:math><m:mrow><m:mfrac><m:mn>0</m:mn><m:mn>0</m:mn></m:mfrac></m:mrow></m:math> y <m:math><m:mrow><m:mi>∞</m:mi><m:mtext>/</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Sin embargo, también podemos utilizar la regla de L'Hôpital para ayudar a evaluar los límites que involucran otras formas indeterminadas que surgen al evaluar los límites. Las expresiones <m:math><m:mrow><m:mn>0</m:mn><m:mo>·</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>∞</m:mi><m:mo>- −</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:msup><m:mn>1</m:mn><m:mi>∞</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:msup><m:mi>∞</m:mi><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mn>0</m:mn><m:mn>0</m:mn></m:msup></m:mrow></m:math> se consideran formas indeterminadas. Estas expresiones no son números reales. Más bien, representan formas que surgen al intentar evaluar ciertos límites. A continuación nos daremos cuenta de por qué son formas indeterminadas y luego entenderemos cómo utilizar la regla de L'Hôpital en estos casos. La idea clave es que debemos reescribir las formas indeterminadas de tal manera que lleguemos a la forma indeterminada <m:math><m:mrow><m:mfrac><m:mn>0</m:mn><m:mn>0</m:mn></m:mfrac></m:mrow></m:math> o <m:math><m:mrow><m:mi>∞</m:mi><m:mtext>/</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<section id="fs-id1165042320288">
+<title>Forma indeterminada del tipo <m:math><m:mrow><m:mn>0</m:mn><m:mo>·</m:mo><m:mi>∞</m:mi></m:mrow></m:math></title>
+<para id="fs-id1165042320301">Supongamos que queremos evaluar <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>·</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:math> (o <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo stretchy="false">)</m:mo></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Dado que un término del producto se aproxima a cero pero el otro término se hace arbitrariamente grande (en magnitud), al producto le puede pasar cualquier cosa. Utilizamos la notación <m:math><m:mrow><m:mn>0</m:mn><m:mo>·</m:mo><m:mi>∞</m:mi></m:mrow></m:math> para denotar la forma que surge en esta situación. La expresión <m:math><m:mrow><m:mn>0</m:mn><m:mo>·</m:mo><m:mi>∞</m:mi></m:mrow></m:math> se considera indeterminada porque sin más análisis no podemos determinar el comportamiento exacto del producto <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por ejemplo, supongamos que <m:math><m:mi>n</m:mi></m:math> es un número entero positivo y considere</para><equation id="fs-id1165043259749" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042323522">Dado que <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Sin embargo, el límite cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:math> de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mrow></m:math> varía, dependiendo de <m:math><m:mrow><m:mi>n</m:mi><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Si <m:math><m:mrow><m:mi>n</m:mi><m:mo>n =</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Aquí consideramos otro límite que implica la forma indeterminada <m:math><m:mrow><m:mn>0</m:mn><m:mo>·</m:mo><m:mi>∞</m:mi></m:mrow></m:math> y mostramos cómo reescribir la función como cociente para utilizar la regla de L'Hôpital.</para>
+<example id="fs-id1165042368495">
+<exercise id="fs-id1165042368497">
+<problem id="fs-id1165042323649">
+<title>Forma indeterminada del tipo <m:math><m:mrow><m:mn>0</m:mn><m:mo>·</m:mo><m:mi>∞</m:mi></m:mrow></m:math></title>
+<para id="fs-id1165042323663">Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042545827">
+<para id="fs-id1165042545829">En primer lugar, reescriba la función <m:math><m:mrow><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> como cociente para aplicar la regla de L'Hôpital. Si escribimos</para>
+<equation id="fs-id1165042545843" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042383922">vemos que <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mtext>-</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup><m:mo>.</m:mo></m:mrow></m:math> Por tanto, podemos aplicar la regla de L'Hôpital y obtener</para>
+<equation id="fs-id1165042705715" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mfrac><m:mi>d</m:mi><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mfrac><m:mi>d</m:mi><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>-1</m:mn><m:mtext>/</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation><para id="fs-id1165042318647">Concluimos que</para>
+<equation id="fs-id1165042318650" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<figure id="CNX_Calc_Figure_04_08_002">
+<media id="fs-id1165042333471" alt="La función y = x ln(x) se grafica para valores x ≥ 0. En x = 0, el valor de la función es 0.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_08_004.jpg"/>
+</media>
+<caption>Encontrar el límite en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165043430905" class="checkpoint">
+<exercise id="fs-id1165043430908">
+<problem id="fs-id1165043430910">
+<para id="fs-id1165043430912">Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>cot</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043286667">
+<para id="fs-id1165043286669">Los términos <m:math><m:mn>1</m:mn></m:math></para>
+</solution>
+<commentary id="fs-id1165043286676" type="hint">
+<title>Pista</title>
+<para id="fs-id1165043286682">Escriba <m:math><m:mrow><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>cot</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1165042318802">
+<title>Forma indeterminada del tipo <m:math><m:mrow><m:mi>∞</m:mi><m:mo>- −</m:mo><m:mi>∞</m:mi></m:mrow></m:math></title>
+<para id="fs-id1165042318816">Otro tipo de forma indeterminada es <m:math><m:mrow><m:mi>∞</m:mi><m:mo>- −</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Considere el siguiente ejemplo. Supongamos que <m:math><m:mi>n</m:mi></m:math> es un número entero positivo y que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Estamos interesados en <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Dependiendo de si <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> crece más rápido, <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> crece más rápido, o crecen a la misma tasa, y como veremos a continuación, cualquier cosa puede suceder en este límite. Dado que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> escribimos <m:math><m:mrow><m:mi>∞</m:mi><m:mo>- −</m:mo><m:mi>∞</m:mi></m:mrow></m:math> para denotar la forma de este límite. Al igual que con nuestras otras formas indeterminadas, <m:math><m:mrow><m:mi>∞</m:mi><m:mo>- −</m:mo><m:mi>∞</m:mi></m:mrow></m:math> no tiene ningún significado por sí mismo y debemos hacer más análisis para determinar el valor del límite. Por ejemplo, supongamos que el exponente <m:math><m:mi>n</m:mi></m:math> en la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:math> es <m:math><m:mrow><m:mi>n</m:mi><m:mo>n =</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces</para>
+<equation id="fs-id1165043430807" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042333220">Por otro lado, si <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces</para>
+<equation id="fs-id1165042333235" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−5</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043395183">Sin embargo, si <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> entonces</para>
+<equation id="fs-id1165043254251" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043323851">Por lo tanto, el límite no puede determinarse considerando únicamente <m:math><m:mrow><m:mi>∞</m:mi><m:mo>- −</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> A continuación vemos cómo reescribir una expresión que implica la forma indeterminada <m:math><m:mrow><m:mi>∞</m:mi><m:mo>- −</m:mo><m:mi>∞</m:mi></m:mrow></m:math> como fracción para aplicar la regla de L'Hôpital.</para>
+<example id="fs-id1165043323875">
+<exercise id="fs-id1165043323877">
+<problem id="fs-id1165043323879">
+<title>Forma indeterminada del tipo <m:math><m:mrow><m:mi>∞</m:mi><m:mo>- −</m:mo><m:mi>∞</m:mi></m:mrow></m:math></title>
+<para id="fs-id1165042375663">Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>–</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043281294">
+<para id="fs-id1165043281296">Al combinar las fracciones, podemos escribir la función como un cociente. Dado que el mínimo común denominador es <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>,</m:mo></m:mrow></m:math> tenemos</para>
+<equation id="fs-id1165043281316" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>–</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043259808">Dado que <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup><m:mo>,</m:mo></m:mrow></m:math> el numerador <m:math><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:math> y el denominador <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, podemos aplicar la regla de L'Hôpital. Tomando las derivadas del numerador y del denominador, tenemos</para>
+<equation id="fs-id1165042708221" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043327626">Dado que <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Dado que el denominador es positivo cuando <m:math><m:mi>x</m:mi></m:math> se acerca a cero por la derecha, concluimos que</para>
+<equation id="fs-id1165042710940" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:msup><m:mrow><m:mtext>sec</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043396304">Por lo tanto,</para>
+<equation id="fs-id1165043396307" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>–</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165043348549" class="checkpoint">
+<exercise id="fs-id1165043348552">
+<problem id="fs-id1165043348554">
+<para id="fs-id1165043348557">Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>–</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043317354">
+<para id="fs-id1165043317356">Los términos <m:math><m:mn>0</m:mn></m:math></para>
+</solution>
+<commentary id="fs-id1165043317362" type="hint">
+<title>Pista</title>
+<para id="fs-id1165043317368">Reescriba la diferencia de fracciones como una sola fracción.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1165042364139">Otro tipo de forma indeterminada que surge al evaluar límites involucra a los exponentes. Las expresiones <m:math><m:mrow><m:msup><m:mn>0</m:mn><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:msup><m:mi>∞</m:mi><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mn>1</m:mn><m:mi>∞</m:mi></m:msup></m:mrow></m:math> son todas formas indeterminadas. Por sí solas, estas expresiones no tienen sentido porque no podemos evaluarlas como lo haríamos con una expresión que incluya números reales. Más bien, estas expresiones representan formas que surgen al encontrar los límites. Ahora examinaremos cómo podemos utilizar la regla de L'Hôpital para evaluar los límites que implican estas formas indeterminadas.</para>
+<para id="fs-id1165042364178">Dado que la regla de L'Hôpital se aplica a los cocientes, utilizamos la función logarítmica natural y sus propiedades para reducir un problema que evalúa un límite que involucra exponentes a un problema relacionado que involucra un límite de un cociente. Por ejemplo, supongamos que queremos evaluar <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:msup></m:mrow></m:math> y llegamos a la forma indeterminada <m:math><m:mrow><m:msup><m:mi>∞</m:mi><m:mn>0</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math> (Las formas indeterminadas <m:math><m:mrow><m:msup><m:mn>0</m:mn><m:mn>0</m:mn></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mn>1</m:mn><m:mi>∞</m:mi></m:msup></m:mrow></m:math> se pueden manejar de manera similar) Procedamos de la siguiente manera. Supongamos que</para>
+<equation id="fs-id1165042709633" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043250963">Entonces,</para>
+<equation id="fs-id1165043250966" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042640888">Por lo tanto,</para>
+<equation id="fs-id1165042640891" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mrow><m:mo>[</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043393684">Dado que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> sabemos que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es de la forma indeterminada <m:math><m:mrow><m:mn>0</m:mn><m:mo>·</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> y podemos utilizar las técnicas discutidas anteriormente para reescribir la expresión <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> de manera tal que podamos aplicar la regla de L'Hôpital. Supongamos que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>L</m:mi></m:math> puede ser <m:math><m:mi>∞</m:mi></m:math> o <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Entonces</para>
+<equation id="fs-id1165042638509" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mrow><m:mo>[</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042638551">Dado que la función logarítmica natural es continua, concluimos que</para>
+<equation id="fs-id1165042638554" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>,</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042708323">que nos da</para>
+<equation id="fs-id1165042708326" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>y</m:mi><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>L</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
+<example id="fs-id1165043390815">
+<exercise id="fs-id1165043390817">
+<problem id="fs-id1165043390819">
+<title>Forma indeterminada del tipo <m:math><m:mrow><m:msup><m:mi>∞</m:mi><m:mn>0</m:mn></m:msup></m:mrow></m:math></title>
+<para id="fs-id1165043390832">Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043390864">
+<para id="fs-id1165043390866">Supongamos que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math> Entonces,</para>
+<equation id="fs-id1165043281565" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043281615">Tenemos que evaluar <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math> Aplicando la regla de L'Hôpital, obtenemos</para>
+<equation id="fs-id1165043281645" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow><m:mn>1</m:mn></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043173746">Por lo tanto, <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Dado que la función logarítmica natural es continua, concluimos que</para>
+<equation id="fs-id1165043427351" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043427387">lo que lleva a</para>
+<equation id="fs-id1165043427390" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mi>y</m:mi><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mn>0</m:mn></m:msup><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042407320">Por lo tanto,</para>
+<equation id="fs-id1165042407323" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165042407362" class="checkpoint">
+<exercise id="fs-id1165042407365">
+<problem id="fs-id1165042407368">
+<para id="fs-id1165042407370">Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043108246">
+<para id="fs-id1165043108248">Los términos <m:math><m:mi>e</m:mi></m:math></para>
+</solution>
+<commentary id="fs-id1165043108254" type="hint">
+<title>Pista</title>
+<para id="fs-id1165043108260">Supongamos que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:msup></m:mrow></m:math> y aplicamos el logaritmo natural a ambos lados de la ecuación.</para>
+</commentary>
+</exercise>
+</note>
+<example id="fs-id1165043108292">
+<exercise id="fs-id1165043108295">
+<problem id="fs-id1165043108297">
+<title>Forma indeterminada del tipo <m:math><m:mrow><m:msup><m:mn>0</m:mn><m:mn>0</m:mn></m:msup></m:mrow></m:math></title>
+<para id="fs-id1165042657720">Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042657753">
+<para id="fs-id1165042657755">Supongamos que</para>
+<equation id="fs-id1165042657759" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042657780">Por lo tanto,</para>
+<equation id="fs-id1165042657783" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042707171">Ahora evaluamos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Dado que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> tenemos la forma indeterminada <m:math><m:mrow><m:mn>0</m:mn><m:mo>·</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Para aplicar la regla de L'Hôpital, tenemos que reescribir <m:math><m:mrow><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> como fracción. Podríamos escribir</para>
+<equation id="fs-id1165043173832" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math></equation>
+<para id="fs-id1165043173865">o</para>
+<equation id="fs-id1165043173868" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>csc</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042364489">Consideremos la primera opción. En este caso, al aplicar la regla de L'Hôpital, obtendríamos</para>
+<equation id="fs-id1165042364494" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>-1</m:mn><m:mtext>/</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>-</m:mtext><m:mi>x</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043317274">Desafortunadamente, no solo tenemos otra expresión que implica la forma indeterminada <m:math><m:mrow><m:mn>0</m:mn><m:mo>·</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> sino que el nuevo límite es aún más complicado de evaluar que aquel con el que empezamos. En su lugar, probamos la segunda opción. Al escribir</para>
+<equation id="fs-id1165043131555" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>csc</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043131604">y aplicar la regla de L'Hôpital, obtenemos</para>
+<equation id="fs-id1165043131609" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>csc</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>- −</m:mtext><m:mtext>csc</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>cot</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>-1</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>csc</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>cot</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042651533">Si utilizamos el hecho de que <m:math><m:mrow><m:mtext>csc</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math> y <m:math><m:mrow><m:mtext>cot</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> podemos reescribir la expresión del lado derecho como</para>
+<equation id="fs-id1165043251999" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>- −</m:mtext><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mn>2</m:mn></m:msup><m:mi>x</m:mi></m:mrow><m:mrow><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>·</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>- −</m:mtext><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>·</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>- −</m:mtext><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>·</m:mo><m:mn>0</m:mn><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042676314">Concluimos que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> y tenemos</para>
+<equation id="fs-id1165042327527" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>y</m:mi><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mn>0</m:mn></m:msup><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042327592">Por lo tanto,</para>
+<equation id="fs-id1165042327595" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msup><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1165042660254" class="checkpoint">
+<exercise id="fs-id1165042660257">
+<problem id="fs-id1165042660259">
+<para id="fs-id1165042660261">Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mi>x</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042660291">
+<para id="fs-id1165042660293">Los términos <m:math><m:mn>1</m:mn></m:math></para>
+</solution>
+<commentary id="fs-id1165042660300" type="hint">
+<title>Pista</title>
+<para id="fs-id1165042660306">Supongamos que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math> y tomemos el logaritmo natural de ambos lados de la ecuación.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+</section>
+<section id="fs-id1165042660328">
+<title>Tasas de crecimiento de las funciones</title>
+<para id="fs-id1165042660333">Supongamos que las funciones <m:math><m:mi>f</m:mi></m:math> y <m:math><m:mi>g</m:mi></m:math> ambas se acercan al infinito como <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Aunque los valores de ambas funciones se vuelven arbitrariamente grandes a medida que los valores de <m:math><m:mi>x</m:mi></m:math> se hacen lo suficientemente grandes, a veces una función crece más rápido que la otra. Por ejemplo, <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math> ambas se acercan al infinito como <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Sin embargo, como se muestra en la siguiente tabla, los valores de <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math> crecen mucho más rápido que los valores de <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+<table id="fs-id1165042700402" class="column-header" summary="This table has three rows and five columns. The first column is a header column, and it reads from top to bottom x, f(x) = x2, and g(x) = x3. To the right of the header, the first row reads 10, 100, 1000, and 10,000. The second row reads 100, 10,000, 1,000,000, and 100,000,000. The third row reads 1000, 1,000,000, 1,000,000,000, and 1,000,000,000,000.">
+<title>Comparación de las tasas de crecimiento de <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math></title>
+<tgroup cols="5">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<colspec colnum="5" colname="c5"/>
+<tbody>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mi>x</m:mi></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>1000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10.000</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10.000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>1.000.000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>100000000</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>1000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>1.000.000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>1000000000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>1.000.000.000.000</m:mn></m:mrow></m:math></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<para id="fs-id1165043219185">De hecho,</para>
+<equation id="fs-id1165043219189" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo><m:mspace width="0.2em"/><m:mtext>o, de forma equivalente,</m:mtext><m:mspace width="0.2em"/><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165042465546">En consecuencia, decimos que <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math> crece más rápidamente que <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por otro lado, para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> aunque los valores de <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> son siempre mayores que los valores de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> cada valor de <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es aproximadamente tres veces el valor correspondiente de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> como se muestra en la siguiente tabla. De hecho,</para>
+<equation id="fs-id1165042461121" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<table id="fs-id1165042461176" class="column-header" summary="This table has three rows and five columns. The first column is a header column, and it reads from top to bottom x, f(x) = x2, and g(x) = 3x2 + 4x + 1. To the right of the header, the first row reads 10, 100, 1000, and 10,000. The second row reads 100, 10,000, 1,000,000, and 100,000,000. The third row reads 341, 30,401, 3,004,001, and 300,040,001.">
+<title>Comparación de las tasas de crecimiento de <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math></title>
+<tgroup cols="5">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<colspec colnum="5" colname="c5"/>
+<tbody>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mi>x</m:mi></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>1000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10.000</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10.000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>1.000.000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>100000000</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>341</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>30,401</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>3004001</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>300040001</m:mn></m:mrow></m:math></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<para id="fs-id1165042659418">En este caso, decimos que <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> crecen a la misma tasa que <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1165042659463">En términos más generales, supongamos que <m:math><m:mi>f</m:mi></m:math> y <m:math><m:mi>g</m:mi></m:math> son dos funciones que se aproximan al infinito dado que <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Decimos <m:math><m:mi>g</m:mi></m:math> crece más rápidamente que <m:math><m:mi>f</m:mi></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:math> si</para>
+<equation id="fs-id1165042659507" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>;</m:mo><m:mspace width="0.2em"/><m:mtext>o, de forma equivalente,</m:mtext><m:mspace width="0.2em"/><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043422372">Por otro lado, si existe una constante <m:math><m:mrow><m:mi>M</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math> tal que</para>
+<equation id="fs-id1165043422384" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mi>M</m:mi><m:mo>,</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1165043422432">decimos que <m:math><m:mi>f</m:mi></m:math> y <m:math><m:mi>g</m:mi></m:math> crecen a la misma tasa que <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1165043422456">A continuación veremos cómo utilizar la regla de L'Hôpital para comparar las tasas de crecimiento de las funciones potencia, exponencial y logarítmica.</para>
+<example id="fs-id1165043422462">
+<exercise id="fs-id1165043422464">
+<problem id="fs-id1165043422466">
+<title>Comparación de las tasas de crecimiento de <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math></title>
+<para id="fs-id1165042325994">Para cada uno de los siguientes pares de funciones, utilice la regla de L'Hôpital para evaluar <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<list id="fs-id1165042326044" list-type="enumerated" number-style="lower-alpha">
+<item>Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math></item>
+<item>Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></item>
+</list>
+</problem>
+<solution id="fs-id1165042326145">
+<list id="fs-id1165042326147" list-type="enumerated" number-style="lower-alpha"><item>Dado que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>∞</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> podemos utilizar la regla de L'Hôpital para evaluar <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Obtenemos<newline/>
+<equation id="fs-id1165042631803" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation><newline/> Dado que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>∞</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> podemos aplicar de nuevo la regla de L'Hôpital. Dado que<newline/>
+<equation id="fs-id1165042631923" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mn>2</m:mn><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math></equation><newline/> concluimos que<newline/>
+<equation id="fs-id1165042418106" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation><newline/> Por lo tanto, <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math> crece más rápidamente que <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:math> (Véase la <link target-id="CNX_Calc_Figure_04_08_003"/> y la <link target-id="fs-id1165042418200"/>)<newline/>
+<figure id="CNX_Calc_Figure_04_08_003">
+<media id="fs-id1165042418186" alt="Se grafican las funciones g(x) = ex y f(x) = x2. Es evidente que g(x) aumenta mucho más rápidamente que f(x).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_08_005.jpg"/>
+</media>
+<caption>Una función exponencial crece más rápido que una función potencia.</caption>
+</figure>
+<table id="fs-id1165042418200" class="column-header" summary="This table has three rows and five columns. The first column is a header column, and it reads from top to bottom x, x2, and ex. To the right of the header, the first row reads 5, 10, 15, and 20. The second row reads 25, 100, 225, and 400. The third row reads 148, 22,026, 3,269,017, and 485,165,195.">
+<title>Tasas de crecimiento de una función potencia y una función exponencial.</title>
+<tgroup cols="5">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<colspec colnum="5" colname="c5"/>
+<tbody>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mi>x</m:mi></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mn>5</m:mn></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>15</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>20</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>25</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>225</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>400</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>148</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>22026</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>3269017</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>485165195</m:mn></m:mrow></m:math></entry>
+</row>
+</tbody>
+</tgroup>
+</table></item>
+<item>Dado que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>∞</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> podemos utilizar la regla de L'Hôpital para evaluar <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Obtenemos<newline/>
+<equation id="fs-id1165042471196" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation><newline/> Por lo tanto, <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> crece más rápidamente que <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> a medida que <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:math> (véase la <link target-id="CNX_Calc_Figure_04_08_004"/> y la <link target-id="fs-id1165042471354"/>)<newline/>
+<figure id="CNX_Calc_Figure_04_08_004">
+<media id="fs-id1165042471337" alt="Se grafican las funciones g(x) = x2 y f(x) = ln(x). Es evidente que g(x) aumenta mucho más rápidamente que f(x).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_08_006.jpg"/>
+</media>
+<caption>Una función potencia crece más rápido que una función logarítmica.</caption>
+</figure>
+<table id="fs-id1165042471354" class="column-header" summary="This table has three rows and five columns. The first column is a header column, and it reads from top to bottom x, ln(x), and x2. To the right of the header, the first row reads 10, 100, 1000, and 10,000. The second row reads 2.303, 4.605, 6.908, and 9.210. The third row reads 100, 10,000, 1,000,000, and 100,000,000.">
+<title>Tasas de crecimiento de una función potencia y de una función logarítmica</title>
+<tgroup cols="5">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<colspec colnum="5" colname="c5"/>
+<tbody>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mi>x</m:mi></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>1000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10.000</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>2,303</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>4,605</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>6,908</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>9,210</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10.000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>1.000.000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>100000000</m:mn></m:mrow></m:math></entry>
+</row>
+</tbody>
+</tgroup>
+</table></item>
+</list></solution>
+</exercise>
+</example>
+<note id="fs-id1165042463715" class="checkpoint">
+<exercise id="fs-id1165042463719">
+<problem id="fs-id1165042463721">
+<para id="fs-id1165042463723">Compare las tasas de crecimiento de <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mn>100</m:mn></m:mrow></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mn>2</m:mn><m:mi>x</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042463747">
+<para id="fs-id1165042463749">La función <m:math><m:mrow><m:msup><m:mn>2</m:mn><m:mi>x</m:mi></m:msup></m:mrow></m:math> crece más rápido que <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mn>100</m:mn></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1165042463772" type="hint">
+<title>Pista</title>
+<para id="fs-id1165042463780">Aplique la regla de L'Hôpital a <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mrow><m:mn>100</m:mn></m:mrow></m:msup><m:mtext>/</m:mtext><m:msup><m:mn>2</m:mn><m:mi>x</m:mi></m:msup></m:mrow></m:math></para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1165042463803">Utilizando las mismas ideas que en el <link target-id="fs-id1165043422462"/>a. no es difícil demostrar que <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math> crece más rápidamente que <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mi>p</m:mi></m:msup></m:mrow></m:math> para cualquier <m:math><m:mrow><m:mi>p</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> En la <link target-id="CNX_Calc_Figure_04_08_005"/> y la <link target-id="fs-id1165043327297"/>, comparamos <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math> con la <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_04_08_005">
+<media id="fs-id1165042463890" alt="Esta imagen tiene dos figuras marcadas como a y b. En la figura a, se grafican las funciones y = ex y y = x3. Es evidente que ex aumenta más rápidamente que x3. En la figura b, se grafican las funciones y = ex y y = x4. Es obvio que ex aumenta mucho más rápido que x4, pero el punto en el que esto ocurre está más a la derecha que en el caso de x3.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_08_001.jpg"/>
+</media>
+<caption>La función exponencial <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math> crece más rápido que <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mi>p</m:mi></m:msup></m:mrow></m:math> para cualquier <m:math><m:mrow><m:mi>p</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> (a) Una comparación de <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math> con la <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math> (b) Una comparación de <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math> con la <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+<table id="fs-id1165043327297" class="column-header" summary="This table has four rows and five columns. The first column is a header column, and it reads from top to bottom x, x3, x4, and ex. To the right of the header, the first row reads 5, 10, 15, and 20. The second row reads 125, 1000, 3375, and 8000. The third row reads 625, 10,000, 50,625, and 160,000. The fourth row reads 148, 22,026, 3,269,017, and 485,165,195.">
+<title>Una función exponencial crece más rápido que cualquier función potencia</title>
+<tgroup cols="5">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<colspec colnum="5" colname="c5"/>
+<tbody>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mi>x</m:mi></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mn>5</m:mn></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>15</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>20</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>125</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>1000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>3375</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>8000</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>625</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10.000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>50,625</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>160,000</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>148</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>22026</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>3269017</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>485165195</m:mn></m:mrow></m:math></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<para id="fs-id1165042542902">Del mismo modo, no es difícil demostrar que <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mi>p</m:mi></m:msup></m:mrow></m:math> crece más rápidamente que <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> para cualquier <m:math><m:mrow><m:mi>p</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> En la <link target-id="CNX_Calc_Figure_04_08_006"/> y la <link target-id="fs-id1165042460279"/>, comparamos <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> con la <m:math><m:mrow><m:mroot><m:mi>x</m:mi><m:mn>3</m:mn></m:mroot></m:mrow></m:math> y <m:math><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_04_08_006">
+<media id="fs-id1165042542968" alt="Esta figura muestra y = la raíz cuadrada de x, y = la raíz cúbica de x, e y = ln(x). Es evidente que y = ln(x) crece más lentamente que cualquiera de estas funciones.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_08_007.jpg"/>
+</media>
+<caption>La función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> crece más lentamente que <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mi>p</m:mi></m:msup></m:mrow></m:math> para cualquier <m:math><m:mrow><m:mi>p</m:mi><m:mo>></m:mo><m:mn>0</m:mn></m:mrow></m:math> cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+<table id="fs-id1165042460279" class="column-header" summary="This table has four rows and five columns. The first column is a header column, and it reads from top to bottom x, ln(x), the cube root of x, and the square root of x. To the right of the header, the first row reads 10, 100, 1000, and 10,000. The second row reads 2.303, 4.605, 6.908, and 9.210. The third row reads 2.154, 4.642, 10, and 21.544. The fourth row reads 3.162, 10, 31.623, and 100.">
+<title>Una función logarítmica crece a un ritmo más lento que cualquier función raíz</title>
+<tgroup cols="5">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<colspec colnum="4" colname="c4"/>
+<colspec colnum="5" colname="c5"/>
+<tbody>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mi>x</m:mi></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>1000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10.000</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>2,303</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>4,605</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>6,908</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>9,210</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:mroot><m:mi>x</m:mi><m:mn>3</m:mn></m:mroot></m:mrow></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>2.154</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>4.642</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>21.544</m:mn></m:mrow></m:math></entry>
+</row>
+<row valign="top">
+<entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:math></emphasis></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>3.162</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>31,623</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section id="fs-id1165042658525" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1165042658532" list-type="bulleted" bullet-style="bullet">
+<item>La regla de L'Hôpital puede utilizarse para evaluar el límite de un cociente cuando aparece la forma indeterminada <m:math><m:mrow><m:mfrac><m:mn>0</m:mn><m:mn>0</m:mn></m:mfrac></m:mrow></m:math> o <m:math><m:mrow><m:mi>∞</m:mi><m:mtext>/</m:mtext><m:mi>∞</m:mi></m:mrow></m:math>.</item>
+<item>La regla de L'Hôpital también se puede aplicar a otras formas indeterminadas si se pueden reescribir en términos de un límite que implique un cociente que tenga la forma indeterminada <m:math><m:mrow><m:mfrac><m:mn>0</m:mn><m:mn>0</m:mn></m:mfrac></m:mrow></m:math> o <m:math><m:mrow><m:mi>∞</m:mi><m:mtext>/</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>La función exponencial <m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math> crece más rápido que cualquier función potencia <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mi>p</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>p</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>La función logarítmica <m:math><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> crece más lentamente que cualquier función potencia <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mi>p</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>p</m:mi><m:mo>></m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
+</list>
+</section>
+<section id="fs-id1165042658654" class="section-exercises">
+<para id="fs-id1165043217918">En los siguientes ejercicios, evalúe el límite.</para>
+<exercise id="fs-id1165043217921">
+<problem id="fs-id1165043217924">
+<para id="fs-id1165043217926">Evalúe el límite <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow><m:mi>x</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043217966">
+<problem id="fs-id1165043217969">
+<para id="fs-id1165043217971">Evalúe el límite <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mi>k</m:mi></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043218007">
+<para id="fs-id1165043218009">Los términos <m:math><m:mi>∞</m:mi></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043218017">
+<problem id="fs-id1165043218019">
+<para id="fs-id1165043218021">Evalúe el límite <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mi>k</m:mi></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043218066">
+<problem id="fs-id1165043218068">
+<para id="fs-id1165043218070">Evalúe el límite <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:msup><m:mi>a</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>a</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math>.</para></problem>
+<solution id="fs-id1165043218115">
+<para id="fs-id1165043218117">Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>2</m:mn><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043218132">
+<problem id="fs-id1165043218134">
+<para id="fs-id1165043218136">Evalúe el límite <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>- −</m:mo><m:msup><m:mi>a</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>a</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math>.</para></problem>
+</exercise>
+<exercise id="fs-id1165042469654">
+<problem id="fs-id1165042469656">
+<para id="fs-id1165042469659">Evalúe el límite <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mi>n</m:mi></m:msup><m:mo>-</m:mo><m:msup><m:mi>a</m:mi><m:mi>n</m:mi></m:msup></m:mrow></m:mfrac><m:mo>,</m:mo><m:mspace width="1em"/><m:mi>a</m:mi><m:mo>≠</m:mo><m:mn>0</m:mn></m:mrow></m:math>.</para></problem>
+<solution id="fs-id1165042469704">
+<para id="fs-id1165042469706">Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mrow><m:mi>n</m:mi><m:msup><m:mi>a</m:mi><m:mrow><m:mi>n</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:msup></m:mrow></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1165042469729">En los siguientes ejercicios, determine si puede aplicar directamente la regla de L'Hôpital. Explique por qué sí o por qué no. A continuación, indique si hay alguna forma de modificar el límite para poder aplicar la regla de L'Hôpital.</para>
+<exercise id="fs-id1165042469737">
+<problem id="fs-id1165042469739">
+<para id="fs-id1165042469741">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042469817">
+<problem id="fs-id1165042469820">
+<para id="fs-id1165042469822">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042711554">
+<para id="fs-id1165042711556">No se puede aplicar directamente; hay que utilizar logaritmos</para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042711562">
+<problem id="fs-id1165042711564">
+<para id="fs-id1165042711566">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mrow><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042711603">
+<problem id="fs-id1165042711605">
+<para id="fs-id1165042711607">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042711641">
+<para id="fs-id1165042711643">No se puede aplicar directamente; reescriba como <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042711670">
+<problem id="fs-id1165042711672">
+<para id="fs-id1165042711674">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<para id="fs-id1165042711711">En los siguientes ejercicios, evalúe los límites con la regla de L'Hôpital o con los métodos previamente aprendidos.</para>
+<exercise id="fs-id1165042711715">
+<problem id="fs-id1165042711717">
+<para id="fs-id1165042711719">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>9</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>3</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042711758">
+<para id="fs-id1165042711760">Los términos <m:math><m:mn>6</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042711767">
+<problem id="fs-id1165042711769">
+<para id="fs-id1165042711771">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>9</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042499499">
+<problem id="fs-id1165042499502">
+<para id="fs-id1165042499504">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>-2</m:mn></m:mrow></m:msup><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042499550">
+<para id="fs-id1165042499552">Los términos <m:math><m:mrow><m:mn>-2</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042499561">
+<problem id="fs-id1165042499563">
+<para id="fs-id1165042499565">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math></para></problem>
+</exercise>
+<exercise id="fs-id1165042499616">
+<problem id="fs-id1165042499618">
+<para id="fs-id1165042499620">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>π</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mi>π</m:mi></m:mrow><m:mrow><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042499653">
+<para id="fs-id1165042499655">Los términos <m:math><m:mrow><m:mn>-1</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042499664">
+<problem id="fs-id1165042499666">
+<para id="fs-id1165042499668">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042711252">
+<problem id="fs-id1165042711254">
+<para id="fs-id1165042711256">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>n</m:mi></m:msup><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042711300">
+<para id="fs-id1165042711303">Los términos <m:math><m:mi>n</m:mi></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042711310">
+<problem id="fs-id1165042711312">
+<para id="fs-id1165042711314">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>n</m:mi></m:msup><m:mo>–</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>n</m:mi><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042711396">
+<problem id="fs-id1165042711398">
+<para id="fs-id1165042711401">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>-</m:mo><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042711439">
+<para id="fs-id1165042711441">Los términos <m:math><m:mrow><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042711455">
+<problem id="fs-id1165042711457">
+<para id="fs-id1165042711459">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi></m:mrow></m:msqrt><m:mo>–</m:mo><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:msqrt></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042602902">
+<problem id="fs-id1165042602904">
+<para id="fs-id1165042602906">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>–</m:mo><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042602948">
+<para id="fs-id1165042602950">Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042602961">
+<problem id="fs-id1165042602964">
+<para id="fs-id1165042602966">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042603005">
+<problem id="fs-id1165042603007">
+<para id="fs-id1165042603009">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042603042">
+<para id="fs-id1165042603044">Los términos <m:math><m:mn>1</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042603052">
+<problem id="fs-id1165042603054">
+<para id="fs-id1165042603056">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042603107">
+<problem id="fs-id1165042603109">
+<para id="fs-id1165042603111">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>–</m:mo><m:mroot><m:mi>x</m:mi><m:mn>3</m:mn></m:mroot></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042617538">
+<para id="fs-id1165042617540">Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>6</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042617552">
+<problem id="fs-id1165042617554">
+<para id="fs-id1165042617556">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042617597">
+<problem id="fs-id1165042617599">
+<para id="fs-id1165042617601">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1165042617636">
+<para id="fs-id1165042617638">Los términos <m:math><m:mn>1</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042617646">
+<problem id="fs-id1165042617648">
+<para id="fs-id1165042617650">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>sin</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>x</m:mi></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042617696">
+<problem id="fs-id1165042617698">
+<para id="fs-id1165042617700">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1165042617738">
+<para id="fs-id1165042617740">Los términos <m:math><m:mn>0</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042617748">
+<problem id="fs-id1165042617750">
+<para id="fs-id1165042617752">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042707732">
+<problem id="fs-id1165042707734">
+<para id="fs-id1165042707736">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042707768">
+<para id="fs-id1165042707770">Los términos <m:math><m:mn>0</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042707778">
+<problem id="fs-id1165042707780">
+<para id="fs-id1165042707782">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mn>3</m:mn><m:mi>x</m:mi></m:msup><m:mo>-</m:mo><m:msup><m:mn>2</m:mn><m:mi>x</m:mi></m:msup></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042707843">
+<problem id="fs-id1165042707845">
+<para id="fs-id1165042707847">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042707890">
+<para id="fs-id1165042707893">Los términos <m:math><m:mrow><m:mn>-1</m:mn></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042707901">
+<problem id="fs-id1165042707904">
+<para id="fs-id1165042707906">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>4</m:mn></m:mrow></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mtext>tan</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mtext>cot</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042707959">
+<problem id="fs-id1165042707961">
+<para id="fs-id1165042707963">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mi>x</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042525329">
+<para id="fs-id1165042525331">Los términos <m:math><m:mi>∞</m:mi></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042525338">
+<problem id="fs-id1165042525340">
+<para id="fs-id1165042525342">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042525384">
+<problem id="fs-id1165042525386">
+<para id="fs-id1165042525388">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:msup><m:mi>x</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:math></para></problem>
+<solution id="fs-id1165042525418">
+<para id="fs-id1165042525420">Los términos <m:math><m:mn>0</m:mn></m:math></para></solution>
+</exercise>
+<exercise id="fs-id1165042525428">
+<problem id="fs-id1165042525430">
+<para id="fs-id1165042525432">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>x</m:mi></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042525481">
+<problem id="fs-id1165042525483">
+<para id="fs-id1165042525485">Los términos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>x</m:mi></m:msup></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042525524">
+<para id="fs-id1165042525526">Los términos <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>e</m:mi></m:mfrac></m:mrow></m:math></para>
+</solution>
+</exercise>
+<para id="fs-id1165042525538">En los siguientes ejercicios, utilice una calculadora para graficar la función y estimar el valor del límite, luego use la regla de L'Hôpital para encontrar el límite directamente.</para>
+<exercise id="fs-id1165042525544">
+<problem id="fs-id1165042525546">
+<para id="fs-id1165042525548"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043382933">
+<problem id="fs-id1165043382935">
+<para id="fs-id1165043382937"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mi>x</m:mi><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1165043382977">
+<para id="fs-id1165043382979">Los términos <m:math><m:mn>0</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043382987">
+<problem id="fs-id1165043382989">
+<para id="fs-id1165043382991"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>π</m:mi><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165043383052">
+<problem id="fs-id1165043383054">
+<para id="fs-id1165043383056"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:msup><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165043383111">
+<para id="fs-id1165043383113">Los términos <m:math><m:mn>1</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165043383121">
+<problem id="fs-id1165043383123">
+<para id="fs-id1165043383125"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042710174">
+<problem id="fs-id1165042710176">
+<para id="fs-id1165042710178"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>π</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042710218">
+<para id="fs-id1165042710220">Los términos <m:math><m:mn>0</m:mn></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042710228">
+<problem id="fs-id1165042710230">
+<para id="fs-id1165042710232"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>csc</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi><m:mo>–</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042710284">
+<problem id="fs-id1165042710286">
+<para id="fs-id1165042710288"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mtext>tan</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mi>x</m:mi></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+</problem>
+<solution id="fs-id1165042710330">
+<para id="fs-id1165042710332">Los términos <m:math><m:mrow><m:mtext>tan</m:mtext><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</solution>
+</exercise>
+<exercise id="fs-id1165042710348">
+<problem id="fs-id1165042710350">
+<para id="fs-id1165042710352"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow><m:mrow><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:mfrac></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1165042710404">
+<problem id="fs-id1165042710406">
+<para id="fs-id1165042710408"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>-</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1165042539143">
+<para id="fs-id1165042539145">Los términos <m:math><m:mn>2</m:mn></m:math></para>
+</solution>
+</exercise>
+</section>
+  </content>
+<glossary>
+<definition id="fs-id1165042539157">
+<term>formas indeterminadas</term>
+<meaning id="fs-id1165042539162">al evaluar un límite, las formas <m:math><m:mrow><m:mfrac><m:mn>0</m:mn><m:mn>0</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>∞</m:mi><m:mtext>/</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mn>0</m:mn><m:mo>·</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>∞</m:mi><m:mo>- −</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:msup><m:mn>0</m:mn><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:msup><m:mi>∞</m:mi><m:mn>0</m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:msup><m:mn>1</m:mn><m:mi>∞</m:mi></m:msup></m:mrow></m:math> se consideran indeterminadas porque se requiere un análisis adicional para determinar si el límite existe y, en caso afirmativo, cuál es su valor</meaning>
+</definition>
+<definition id="fs-id1165042539243">
+<term>La regla de L'Hôpital</term>
+<meaning id="fs-id1165042539249">si <m:math><m:mi>f</m:mi></m:math> y <m:math><m:mi>g</m:mi></m:math> son funciones diferenciables sobre un intervalo <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> excepto posiblemente en <m:math><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> o <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> son infinitos, entonces <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:msup><m:mi>g</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> asumiendo que el límite de la derecha existe o es <m:math><m:mi>∞</m:mi></m:math> o <m:math><m:mrow><m:mtext>- −</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></meaning>
+</definition>
+</glossary>
+</document>

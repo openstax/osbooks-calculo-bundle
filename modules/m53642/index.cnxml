@@ -1,0 +1,843 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+<title>Determinar los volúmenes mediante el corte</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53642</md:content-id>
+  <md:title>Determinar los volúmenes mediante el corte</md:title>
+  <md:abstract><list id="list-00001">
+<item>Determinar el volumen de un sólido integrando una sección transversal (método de las rebanadas).</item>
+<item>Hallar el volumen de un sólido de revolución utilizando el método de los discos.</item>
+<item>Halle el volumen de un sólido de revolución con una cavidad utilizando el método de la arandela.</item>
+</list></md:abstract>
+  <md:uuid>053bfd25-c130-4dcb-9b51-41790a4db886</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id1167793367139">En la sección anterior, utilizamos las integrales definidas para hallar el área entre dos curvas. En esta sección, utilizaremos las integrales definidas para hallar los volúmenes de los sólidos tridimensionales. Consideraremos tres enfoques -rebanadas, discos y arandelas- para hallar estos volúmenes en función de las características del sólido.</para>
+<section id="fs-id1167793925197">
+<title>El volumen y el método de las rebanadas</title>
+<para id="fs-id1167794058130">Así como el área es la medida numérica de una región bidimensional, el volumen es la medida numérica de un sólido tridimensional. La mayoría de nosotros ha calculado los volúmenes de los sólidos utilizando fórmulas geométricas básicas. El volumen de un sólido rectangular, por ejemplo, puede calcularse multiplicando la longitud, la anchura y la altura <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mi>l</m:mi><m:mi>w</m:mi><m:mi>h</m:mi><m:mo>.</m:mo></m:mrow></m:math> Las fórmulas del volumen de una esfera <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>4</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> un cono <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y una pirámide <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>A</m:mi><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> también se ha introducido. Aunque algunas de estas fórmulas se derivaron utilizando únicamente la geometría, todas ellas pueden obtenerse utilizando la integración.</para>
+<para id="fs-id1167794118853">También podemos calcular el volumen de un cilindro. Aunque la mayoría de nosotros piensa que un cilindro tiene una base circular, como una lata de sopa o una barra de metal, en matemáticas la palabra <emphasis effect="italics">cilindro</emphasis> tiene un significado más general. Para hablar de los cilindros en ese contexto más general, antes tenemos que definir algunos términos.</para>
+<para id="fs-id1167793931500">Definimos la <term id="term-00001">sección transversal</term> de un sólido como la intersección de un plano con el sólido. Se define un <emphasis effect="italics">cilindro</emphasis> como cualquier sólido que se genera trasladando una región plana a lo largo de una línea perpendicular a la región, denominada <emphasis effect="italics">eje</emphasis> del cilindro. Así, todas las secciones transversales perpendiculares al eje de un cilindro son idénticas. El sólido mostrado en la <link target-id="CNX_Calc_Figure_06_02_001"/> es un ejemplo de cilindro con base no circular. Entonces, para calcular el volumen de un cilindro basta con multiplicar el área de la sección transversal por la altura del cilindro: <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mi>A</m:mi><m:mo>·</m:mo><m:mi>h</m:mi><m:mo>.</m:mo></m:mrow></m:math> En el caso de un cilindro circular recto (como una lata de sopa), esto se convierte en <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mi>h</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_06_02_001">
+<media id="fs-id1167794026473" alt="Este gráfico tiene dos figuras. La primera figura es la mitad de un cilindro, en la parte plana. El cilindro tiene una línea que pasa por el centro marcada como &quot;x&quot;. Al cortar verticalmente el cilindro, hay un plano perpendicular a la recta. La segunda figura es una sección transversal bidimensional del cilindro que interseca el plano. Es un semicírculo.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_001.jpg"/>
+</media>
+<caption>Cada sección transversal de un cilindro concreto es idéntica a las demás.</caption>
+</figure>
+<para id="fs-id1167793374741">Si un sólido no tiene una sección transversal constante (y no es uno de los otros sólidos básicos), puede que no tengamos una fórmula para su volumen. En ese caso, podemos utilizar una integral definida para calcular el volumen de ese sólido. Para ello, rebanamos el sólido, estimamos el volumen de cada rebanada y luego sumamos esos volúmenes estimados. Las rebanadas deben ser todas paralelas entre sí, y cuando las juntamos todas, deberíamos obtener el sólido completo. Consideremos, por ejemplo, el sólido <emphasis effect="italics">S</emphasis> que se muestra en la <link target-id="CNX_Calc_Figure_06_02_002"/>, que se extiende a lo largo del <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_06_02_002">
+<media id="fs-id1167793971464" alt="Esta figura es un gráfico de un sólido tridimensional. Tiene una arista a lo largo del eje x. El eje x forma parte del sistema de coordenadas bidimensional con el eje y marcado. La arista del sólido a lo largo del eje x comienza en un punto marcado como &quot;a&quot; y se detiene en un punto marcado como &quot;b&quot;.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_002.jpg"/>
+</media>
+<caption>Sólido con una sección transversal variable.</caption>
+</figure>
+<para id="fs-id1167794051655">Queremos dividir <m:math><m:mi>S</m:mi></m:math> en rodajas perpendiculares al <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math> Como veremos más adelante en el capítulo, puede haber ocasiones en las que queramos cortar el sólido en alguna otra dirección, por ejemplo, en cortes perpendiculares al eje <emphasis effect="italics">y</emphasis>. La elección de cómo cortar el sólido es muy importante. Si nos equivocamos, los cálculos pueden ser bastante complicados. Más adelante en este capítulo, examinaremos algunas de estas situaciones en detalle y veremos cómo elegir la dirección para cortar el sólido. Sin embargo, a efectos de esta sección, utilizamos cortes perpendiculares al <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></para>
+<para id="fs-id1167794142153">Ya que el área de la sección transversal no es constante, suponemos que <m:math><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> representa el área de la sección transversal en el punto <m:math><m:mi>x</m:mi><m:mo>.</m:mo></m:math> Ahora supongamos que <m:math><m:mrow><m:mi>P</m:mi><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mtext>…</m:mtext><m:mo>,</m:mo><m:msub><m:mi>X</m:mi><m:mi>n</m:mi></m:msub></m:mrow><m:mo>}</m:mo></m:mrow></m:mrow></m:math> es una partición regular de <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y para <m:math><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mtext>,…</m:mtext><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> supongamos que <m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> representan la porción de <m:math><m:mi>S</m:mi></m:math> que se extiende desde <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mtext>para</m:mtext><m:mspace width="0.2em"/><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math> La siguiente figura muestra el sólido cortado con <m:math><m:mrow><m:mi>n</m:mi><m:mo>n =</m:mo><m:mn>3</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_06_02_003">
+<media id="fs-id1167793773798" alt="Esta figura es un gráfico de un sólido tridimensional. Tiene una arista a lo largo del eje x. El eje x forma parte del sistema de coordenadas bidimensional con el eje y marcado. La arista del sólido a lo largo del eje x comienza en un punto marcado como &quot;a=xsub0&quot;. El sólido se divide en sólidos más pequeños con cortes en xsub1, xsub2, y se detiene en un punto marcado como &quot;b=xsub3&quot;. Estos sólidos más pequeños se marcan como Ssub1, Ssub2 y Ssub3. También están sombreados.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_003.jpg"/>
+</media>
+<caption>El sólido <m:math><m:mi>S</m:mi></m:math> se dividió en tres cortes perpendiculares al <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+<para id="fs-id1167793928471">Por último, para <m:math><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mtext>,…</m:mtext><m:mi>n</m:mi><m:mo>,</m:mo></m:mrow></m:math> supongamos que <m:math><m:mrow><m:msubsup><m:mi>x</m:mi><m:mi>i</m:mi><m:mo>*</m:mo></m:msubsup></m:mrow></m:math> es un punto arbitrario en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>i</m:mi><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mi>i</m:mi></m:msub></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Entonces el volumen de la rebanada <m:math><m:mrow><m:msub><m:mi>S</m:mi><m:mi>i</m:mi></m:msub></m:mrow></m:math> se puede estimar mediante <m:math><m:mrow><m:mi>V</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>S</m:mi><m:mi>i</m:mi></m:msub></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msubsup><m:mi>x</m:mi><m:mi>i</m:mi><m:mo>*</m:mo></m:msubsup></m:mrow><m:mo>)</m:mo></m:mrow><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Sumando estas aproximaciones, vemos que el volumen de todo el sólido <m:math><m:mi>S</m:mi></m:math> puede aproximarse por</para>
+<equation id="fs-id1167793562402" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mstyle displaystyle="true"><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msubsup><m:mi>x</m:mi><m:mi>i</m:mi><m:mo>*</m:mo></m:msubsup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mstyle><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1167793288503">A estas alturas, podemos reconocer esto como una suma de Riemann, y nuestro siguiente paso es tomar el límite como <m:math><m:mrow><m:mi>n</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math> Entonces tenemos</para>
+<equation id="fs-id1167794334680" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mrow><m:mo>(</m:mo><m:mi>S</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>n</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:mstyle displaystyle="true"><m:munderover><m:mo>∑</m:mo><m:mrow><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>n</m:mi></m:munderover><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msubsup><m:mi>x</m:mi><m:mi>i</m:mi><m:mo>*</m:mo></m:msubsup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mstyle><m:mtext>Δ</m:mtext><m:mi>x</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:munderover><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:munderover><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1167793638650">La técnica que acabamos de describir se llama <term id="term-00002">método de las rebanadas</term>. Para aplicarlo, utilizamos la siguiente estrategia.</para>
+<note id="fs-id1167794210849" class="problem-solving">
+<title>Estrategia para la resolución de problemas: Búsqueda de volúmenes por el método de las rebanadas</title>
+<list id="fs-id1167793274159" list-type="enumerated" number-style="arabic">
+<item>Examine el sólido y determine la forma de una sección transversal del mismo. A menudo es útil hacer un dibujo si no lo tiene.</item>
+<item>Determine una fórmula para el área de la sección transversal.</item>
+<item>Integre la fórmula del área sobre el intervalo apropiado para obtener el volumen.</item>
+</list>
+</note>
+<para id="fs-id1167793263412">Recordemos que en esta sección suponemos que los cortes son perpendiculares al <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math> Por lo tanto, la fórmula del área está en términos de <emphasis effect="italics">x</emphasis> y los límites de integración se encuentran en el <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math> Sin embargo, la estrategia de resolución de problemas mostrada aquí es válida independientemente de cómo decidamos cortar el sólido.</para>
+<example id="fs-id1167793579586">
+<exercise id="fs-id1167793510162">
+<problem id="fs-id1167793261629">
+<title>Derivación de la fórmula del volumen de una pirámide</title>
+<para id="fs-id1167794216281">Sabemos por la geometría que la fórmula del volumen de una pirámide es <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>A</m:mi><m:mi>h</m:mi><m:mo>.</m:mo></m:mrow></m:math> Si la pirámide tiene una base cuadrada, esto se convierte en <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>a</m:mi><m:mn>2</m:mn></m:msup><m:mi>h</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>a</m:mi></m:math> indica la longitud de un lado de la base. Utilicemos el método de las rebanadas para derivar esta fórmula.</para>
+</problem>
+<solution id="fs-id1167793370770">
+<para id="fs-id1167793928284">Queremos aplicar ese método a una pirámide de base cuadrada. Para establecer la integral, considere la pirámide mostrada en la <link target-id="CNX_Calc_Figure_06_02_004"/>, orientada a lo largo del <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></para>
+<figure id="CNX_Calc_Figure_06_02_004">
+<media id="fs-id1167793960064" alt="Esta figura tiene dos gráficos. El primero, marcado como &quot;a&quot;, es una pirámide de lado. El eje x pasa por el centro de la pirámide. El punto de la cima de la pirámide está en el origen del sistema de coordenadas x y. La base de la pirámide está sombreada y marcada como &quot;a&quot;. En el interior de la pirámide hay un rectángulo sombreado marcado como &quot;s&quot;. La distancia del eje y a la base de la pirámide se denomina &quot;h&quot;. La distancia del rectángulo interior de la pirámide al eje y se denomina &quot;x&quot;. El segundo gráfico es una sección transversal de la pirámide con los ejes x e y marcados. La sección transversal es un triángulo con un lado marcado como &quot;a&quot;, perpendicular al eje x. La distancia de a desde el eje y es h. Hay otra recta perpendicular al eje x dentro del triángulo. Está marcada como &quot;s&quot;. Tiene x unidades desde el eje y.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_004.jpg"/>
+</media>
+<caption>(a) Una pirámide de base cuadrada está orientada a lo largo del eje <emphasis effect="italics">x</emphasis>. (b) Hay una vista bidimensional de la pirámide desde un lado.</caption>
+</figure>
+<para id="fs-id1167794071301">Primero queremos determinar la forma de una sección transversal de la pirámide. Sabemos que la base es un cuadrado, por lo que las secciones transversales también son cuadradas (paso 1). Ahora queremos determinar una fórmula para el área de uno de estos cuadrados de la sección transversal. Al observar la <link target-id="CNX_Calc_Figure_06_02_004"/>(b), y usando una proporción, ya que son triángulos similares, tenemos</para>
+<equation id="fs-id1167794077150" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mfrac><m:mi>s</m:mi><m:mi>a</m:mi></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mi>x</m:mi><m:mi>h</m:mi></m:mfrac><m:mspace width="0.2em"/><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mi>s</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>a</m:mi><m:mi>x</m:mi></m:mrow><m:mi>h</m:mi></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1167794142328">Por lo tanto, el área de uno de los cuadrados del corte transversal es</para>
+<equation id="fs-id1167794040742" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>s</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>a</m:mi><m:mi>x</m:mi></m:mrow><m:mi>h</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>paso</m:mtext><m:mspace width="0.2em"/><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1167793871619">Entonces encontramos el volumen de la pirámide integrando desde <m:math><m:mrow><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>para</m:mtext><m:mspace width="0.2em"/><m:mi>h</m:mi></m:mrow></m:math> (paso <m:math><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo><m:mtext>:</m:mtext></m:math></para>
+<equation id="fs-id1167793444900" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>V</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:munderover><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mi>h</m:mi></m:munderover><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:munderover><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mi>h</m:mi></m:munderover><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>a</m:mi><m:mi>x</m:mi></m:mrow><m:mi>h</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>a</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>h</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mstyle displaystyle="true"><m:mrow><m:munderover><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mi>h</m:mi></m:munderover><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:msubsup><m:mrow><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>a</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>h</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mspace width="0.2em"/><m:mo>|</m:mo></m:mrow><m:mn>0</m:mn><m:mi>h</m:mi></m:msubsup><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mi>a</m:mi><m:mn>2</m:mn></m:msup><m:mi>h</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1167794063528">Esta es la fórmula que buscábamos.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1167793398724" class="checkpoint">
+<exercise id="fs-id1167793299677">
+<problem id="fs-id1167793628276">
+<para id="fs-id1167794160372">Utilice el método de las rebanadas para obtener la fórmula <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>3</m:mn></m:mfrac><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mi>h</m:mi></m:mrow></m:math> para el volumen de un cono circular.</para>
+</problem>
+<commentary id="fs-id1167794094176" type="hint">
+<title>Pista</title>
+<para id="fs-id1167794098203">Utilice triángulos similares, como en la <link target-id="fs-id1167793579586"/>.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1167793271244">
+<title>Sólidos de revolución</title>
+<para id="fs-id1167793263466">Si una región en un plano se hace girar alrededor de una línea en ese plano, el sólido resultante se llama <term id="term-00003">sólido de revolución</term>, como se muestra en la siguiente figura.</para>
+<figure id="CNX_Calc_Figure_06_02_005">
+<media id="fs-id1167793944459" alt="Esta figura tiene tres gráficos. El primer gráfico, marcado como &quot;a&quot;, es una región en el plano x y. La región se crea por una curva sobre el eje x y el eje x. El segundo gráfico, marcado como &quot;b&quot; es la misma región que en &quot;a&quot;, pero muestra la región que empieza a girar alrededor del eje x. El tercer gráfico, marcado como &quot;c&quot;, es el sólido que se forma al girar la región de &quot;a&quot; completamente alrededor del eje x, formando un sólido.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_005.jpg"/>
+</media>
+<caption>(a) Esta es la región que gira alrededor del eje <emphasis effect="italics">x</emphasis>. (b) A medida que la región comienza a girar alrededor del eje, forma un sólido de revolución. (c) Este es el sólido que resulta cuando se completa la revolución.</caption>
+</figure>
+<para id="fs-id1167793847672">Los sólidos de revolución son comunes en aplicaciones mecánicas, como las piezas de máquinas producidas por un torno. Dedicaremos el resto de esta sección a estudiar este tipo de sólidos. El siguiente ejemplo utiliza el método de las rebanadas para calcular el volumen de un sólido de revolución.</para>
+<note id="fs-id1167794036722" class="media-2">
+<para id="fs-id1167793442787">Utilice una <link url="http://www.openstax.org/l/20_IntCalc2">calculadora de integrales</link> en línea para saber más.</para>
+</note>
+<example id="fs-id1167794046315">
+<exercise id="fs-id1167794167925">
+<problem id="fs-id1167793952591">
+<title>Uso del método de las rebanadas para hallar el volumen de un sólido de revolución</title>
+<para id="fs-id1167794326196">Utilice el método de las rebanadas para hallar el volumen del sólido de revolución delimitado por las gráficas de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>5</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>,</m:mo></m:mrow></m:math> y con rotación alrededor del <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167794023297">
+<para id="fs-id1167793998058">Utilizando la estrategia de resolución de problemas, primero dibujamos el gráfico de la función cuadrática sobre el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> como se muestra en la siguiente figura.</para>
+<figure id="CNX_Calc_Figure_06_02_006">
+<media id="fs-id1167793394772" alt="Esta es un gráfico de la parábola f(x)=x^2-4x+5. La parábola es la parte superior de una región sombreada sobre el eje x. La región está limitada a la izquierda por una línea en x=1 y a la derecha por una línea en x=4.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_006.jpg"/>
+</media>
+<caption>Una región utilizada para producir un sólido de revolución.</caption>
+</figure>
+<para id="fs-id1167794169307">A continuación, gire la región alrededor del eje <emphasis effect="italics">x</emphasis>, como se muestra en la siguiente figura.</para>
+<figure id="CNX_Calc_Figure_06_02_007">
+<media id="fs-id1167793926090" alt="Esta tiene dos gráficas de la parábola f(x)=x^2-4x+5. La parábola es la parte superior de una región sombreada sobre el eje x. La región está limitada a la izquierda por una línea en x=1 y a la derecha por una línea en x=4. El primer gráfico tiene un sólido sombreado debajo de la parábola, que se ha formado al girar la parábola alrededor del eje x. El segundo gráfico es el mismo que el primero, con el sólido girado para mostrar el sólido.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_007.jpg"/>
+</media>
+<caption>Dos vistas, (a) y (b), del sólido de revolución producido al girar la región en la <link target-id="CNX_Calc_Figure_06_02_006"/> alrededor del <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></caption>
+</figure>
+<para id="fs-id1167793567021">Como el sólido se formó al girar la región alrededor del eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-eje,</m:mtext></m:mrow></m:math> las secciones transversales son círculos (paso 1). El área de la sección transversal, entonces, es el área de un círculo, y el radio del círculo viene dado por <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Utilice la fórmula del área del círculo:</para>
+<equation id="fs-id1167793938405" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mspace width="0.2em"/><m:mtext>(paso 2)</m:mtext><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1167794068988">El volumen, entonces, es (paso 3)</para>
+<equation id="fs-id1167793618979" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>V</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:munderover><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:munderover><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>- −</m:mo><m:mn>8</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>26</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>- −</m:mo><m:mn>40</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>25</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:msubsup><m:mrow><m:mrow><m:mi>π</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>5</m:mn></m:msup></m:mrow><m:mn>5</m:mn></m:mfrac><m:mo>-</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>26</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>-</m:mo><m:mn>20</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>25</m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>|</m:mo></m:mrow><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>78</m:mn></m:mrow><m:mn>5</m:mn></m:mfrac><m:mi>π</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1167793524919">El volumen es <m:math><m:mrow><m:mn>78</m:mn><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1167794066617" class="checkpoint">
+<exercise id="fs-id1167794028814">
+<problem id="fs-id1167793998044">
+<para id="fs-id1167793887857">Utilice el método de las rebanadas para hallar el volumen del sólido de revolución formado al girar la región comprendida entre el gráfico de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:math> y el eje x <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> alrededor del eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math> Vea la siguiente figura.</para>
+<media id="fs-id1167794070894" alt="Esta figura tiene dos gráficos. El primero es la curva f(x)=1/x. Es una curva decreciente, por encima del eje x en el primer cuadrante. El gráfico tiene una región sombreada bajo la curva entre x=1 y x=2. La segundo gráfico es la curva f(x)=1/x en el primer cuadrante. Además, debajo de este gráfico, hay un sólido entre x=1 y x=2 que se ha formado girando la región del primer gráfico alrededor del eje x.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_008.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1167793375546">
+<para id="fs-id1167793261323">Los términos <m:math><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow></m:math></para>
+</solution>
+<commentary id="fs-id1167794168021" type="hint">
+<title>Pista</title>
+<para id="fs-id1167794064666">Utilice la estrategia de resolución de problemas presentada anteriormente y siga el <link target-id="fs-id1167794046315"/> para ayudarse con el paso 2.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1167793984257">
+<title>El método del disco</title>
+<para id="fs-id1167793777573">Cuando utilizamos el método de las rebanadas con sólidos de revolución, se suele denominar <term id="term-00004">método de los discos</term> porque los cortes utilizados para sobre aproximar el volumen de esos sólidos son discos. Para ver esto, considere el sólido de revolución generado al girar la región entre el gráfico de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> y la intersección en <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>-1</m:mn><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> alrededor del eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math> El gráfico de la función y un disco representativo se muestran en <link target-id="CNX_Calc_Figure_06_02_009"/>(a) y (b). La región de revolución y el sólido resultante se muestran en la <link target-id="CNX_Calc_Figure_06_02_009"/>(c) y (d).</para>
+<figure id="CNX_Calc_Figure_06_02_009">
+<media id="fs-id1167793957381" alt="Esta figura tiene cuatro gráficos. El primer gráfico, marcado como &quot;a&quot;, es una parábola f(x)=(x-1)^2+1. La curva está por encima del eje x y corta el eje y en y=2. Debajo de la curva en el primer cuadrante hay un rectángulo vertical que comienza en el eje x y se detiene en la curva. El segundo gráfico, marcado como &quot;b&quot;, es la misma parábola del primer gráfico. El rectángulo bajo la parábola del primer gráfico se ha girado alrededor del eje x formando un disco sólido. El tercer gráfico, marcado como &quot;c&quot;, es la misma parábola que en el primer gráfico. Hay una región sombreada delimitada arriba por la parábola, a la izquierda por la recta x=-1, a la derecha por la recta x=3, y abajo por el eje x. El cuarto gráfico marcado como &quot;d&quot; es la misma parábola que en el primer gráfico. La región del tercer gráfico ha girado alrededor del eje x para formar un sólido.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_009.jpg"/>
+</media>
+<caption>(a) Un rectángulo delgado para aproximar el área bajo una curva. (b) Un disco representativo formado al girar el rectángulo alrededor del <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math> (c) La región bajo la curva gira en torno del <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mo>,</m:mo></m:mrow></m:math> dando como resultado (d) el sólido de revolución.</caption>
+</figure>
+<para id="fs-id1167793551150">Ya utilizamos el desarrollo formal de la suma de Riemann de la fórmula del volumen al desarrollar el método de las rebanadas. Sabemos que</para>
+<equation id="fs-id1167793443010" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1167794333239">La única diferencia con el método de los discos es que conocemos de antemano la fórmula del área de la sección transversal, que es el área de un círculo. Esto da la siguiente regla.</para>
+<note id="fs-id1167793370844">
+<title>Regla: El método del disco</title>
+<para id="fs-id1167793895393">Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es continua y no negativa. Defina <m:math><m:mi>R</m:mi></m:math> como la región delimitada arriba por el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> abajo por el <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-eje,</m:mtext></m:mrow></m:math> a la izquierda por la línea <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> y a la derecha por la línea <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math> Entonces, el volumen del sólido de revolución que se forma al girar <m:math><m:mi>R</m:mi></m:math> alrededor del eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> viene dada por</para>
+<equation id="fs-id1167794099899">Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></equation>
+</note>
+<para id="fs-id1167793497293">El volumen del sólido que hemos estudiado (<link target-id="CNX_Calc_Figure_06_02_009"/>) viene dado por</para>
+<equation id="fs-id1167794040142" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>V</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mrow><m:mn>-1</m:mn></m:mrow><m:mn>3</m:mn></m:msubsup><m:mrow><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mi>π</m:mi><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mrow><m:mn>-1</m:mn></m:mrow><m:mn>3</m:mn></m:msubsup><m:mrow><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>4</m:mn></m:msup><m:mo>+</m:mo><m:mn>2</m:mn><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mi>π</m:mi><m:msubsup><m:mrow><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>5</m:mn></m:mfrac><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>5</m:mn></m:msup><m:mo>+</m:mo><m:mfrac><m:mn>2</m:mn><m:mn>3</m:mn></m:mfrac><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mi>x</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mspace width="0.2em"/><m:mo>|</m:mo></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow><m:mn>3</m:mn></m:msubsup><m:mo>=</m:mo><m:mi>π</m:mi><m:mrow><m:mo>[</m:mo><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>32</m:mn></m:mrow><m:mn>5</m:mn></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>16</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mo>- −</m:mo><m:mfrac><m:mrow><m:mn>32</m:mn></m:mrow><m:mn>5</m:mn></m:mfrac><m:mo>- −</m:mo><m:mfrac><m:mrow><m:mn>16</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>412</m:mn><m:mi>π</m:mi></m:mrow><m:mrow><m:mn>15</m:mn></m:mrow></m:mfrac><m:mspace width="0.2em"/><m:msup><m:mtext>al cuadrado</m:mtext><m:mn>3</m:mn></m:msup><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1167794329525">Veamos algunos ejemplos.</para>
+<example id="fs-id1167793956465">
+<exercise id="fs-id1167793618941">
+<problem id="fs-id1167793233820">
+<title>Uso del método de los discos para encontrar el volumen de un sólido de revolución 1</title>
+<para id="fs-id1167794042715">Utilice el método del disco para calcular el volumen del sólido de revolución generado que se forma al girar la región entre el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:math> y el eje x <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> alrededor del eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167794160280">
+<para id="fs-id1167793419916">Los gráficos de la función y del sólido de revolución se muestran en la siguiente figura.</para>
+<figure id="CNX_Calc_Figure_06_02_010">
+<media id="fs-id1167793930116" alt="Esta figura tiene dos gráficos. El primer gráfico está marcado como &quot;a&quot;, y es la curva f(x) = raíz cuadrada(x). Es una curva creciente sobre el eje x. La curva está en el primer cuadrante. Debajo de la curva hay una región delimitada por x=1 y x=4. El fondo de la región es el eje x. El segundo gráfico marcado como &quot;b&quot; es la misma curva que el primer gráfico. La región sólida del primer gráfico ha girado alrededor del eje x para formar una región sólida.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_010.jpg"/>
+</media>
+<caption>(a) La función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> b) El sólido de revolución obtenido al girar la región bajo el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> alrededor del eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mo>.</m:mo></m:mrow></m:math></caption>
+</figure>
+<para id="fs-id1167793389815">Tenemos</para>
+<equation id="fs-id1167793287538" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>V</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mi>π</m:mi><m:mrow><m:msup><m:mrow><m:mo>[</m:mo><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow><m:mo>]</m:mo></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mi>x</m:mi><m:mspace width="0.2em"/><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:msubsup><m:mrow><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>|</m:mo></m:mrow><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>15</m:mn><m:mi>π</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1167794047779">El volumen es <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>15</m:mn><m:mi>π</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:math> unidades<sup>3</sup>.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1167794037149" class="checkpoint">
+<exercise id="fs-id1167793730425">
+<problem id="fs-id1167793805447">
+<para id="fs-id1167793882975">Utilice el método del disco para calcular el volumen del sólido de revolución generado que se forma al girar la región entre el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:msqrt></m:mrow></m:math> y el eje x <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mn>4</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> alrededor del eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167793586365">
+<para id="fs-id1167794039169">Los términos <m:math><m:mrow><m:mn>8</m:mn><m:mi>π</m:mi></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+<commentary id="fs-id1167793499037" type="hint">
+<title>Pista</title>
+<para id="fs-id1167793940131">Utilice el procedimiento del <link target-id="fs-id1167793956465"/>.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1167793951744">Hasta ahora, todos nuestros ejemplos se referían a regiones que giraban en torno al eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-eje,</m:mtext></m:mrow></m:math> pero podemos generar un sólido de revolución haciendo girar una región plana alrededor de cualquier recta horizontal o vertical. En el siguiente ejemplo, observamos un sólido de revolución que se ha generado girando una región alrededor del eje <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math> La mecánica del método de los discos es casi la misma que cuando el eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> es el eje de revolución, pero expresamos la función en términos de <m:math><m:mi>y</m:mi></m:math> y también integramos con respecto a <emphasis effect="italics">y</emphasis>. Esto se resume en la siguiente regla.</para>
+<note id="fs-id1167793571437">
+<title>Regla: Método de los discos para sólidos de revolución alrededor del eje <emphasis effect="italics">y</emphasis></title>
+<para id="fs-id1167794006397">Supongamos que <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es continua y no negativa. Defina <m:math><m:mi>Q</m:mi></m:math> como la región delimitada a la derecha por el gráfico de <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> a la izquierda por el <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-eje,</m:mtext></m:mrow></m:math> abajo por la línea <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> y arriba por la línea <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>d</m:mi><m:mo>.</m:mo></m:mrow></m:math> Entonces, el volumen del sólido de revolución que se forma al girar <m:math><m:mi>Q</m:mi></m:math> alrededor del eje <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> viene dada por</para>
+<equation id="fs-id1167793499149">Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>c</m:mi><m:mi>d</m:mi></m:msubsup><m:mrow><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></equation>
+</note>
+<para id="fs-id1167793377534">El siguiente ejemplo muestra cómo funciona esta regla en la práctica.</para>
+<example id="fs-id1167793271607">
+<exercise id="fs-id1167793271609">
+<problem id="fs-id1167793455265">
+<title>Uso del método de los discos para encontrar el volumen de un sólido de revolución 2</title>
+<para id="fs-id1167793417059">Supongamos que <m:math><m:mi>R</m:mi></m:math> es la región delimitada por el gráfico de <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:mi>y</m:mi></m:mrow></m:msqrt></m:mrow></m:math> y la intersección en <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> sobre el <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Utilice el método de los discos para encontrar el volumen del sólido de revolución generado por la rotación de <m:math><m:mi>R</m:mi></m:math> alrededor del eje <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167793544375">
+<para id="fs-id1167793368748">La <link target-id="CNX_Calc_Figure_06_02_011"/> muestra la función y un disco representativo que puede utilizarse para estimar el volumen. Observe que como estamos girando la función alrededor del eje <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-eje,</m:mtext></m:mrow></m:math> los discos son horizontales en lugar de verticales.</para>
+<figure id="CNX_Calc_Figure_06_02_011">
+<media id="fs-id1167793477103" alt="Esta figura tiene dos gráficos. El primer gráfico marcado como &quot;a&quot; es la curva g(y) = raíz cuadrada(4-y). Es una curva decreciente que comienza en el eje y en y=4. Entre la curva y el eje y hay un rectángulo horizontal. El rectángulo comienza en el eje y y se detiene en la curva. El segundo gráfico marcado como &quot;b&quot; es la misma curva que el primer gráfico. El rectángulo del primer gráfico ha girado alrededor del eje y para formar un disco horizontal.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_011.jpg"/>
+</media>
+<caption>(a) Se muestra un rectángulo delgado entre la curva de la función <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:mi>y</m:mi></m:mrow></m:msqrt></m:mrow></m:math> y la intersección en <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math> (b) El rectángulo forma un disco representativo después de la revolución alrededor del eje <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></caption>
+</figure>
+<para id="fs-id1167794142277">La región que debe girar y el sólido completo de revolución se representan en la siguiente figura.</para>
+<figure id="CNX_Calc_Figure_06_02_012">
+<media id="fs-id1167794038391" alt="Esta figura tiene dos gráficos. El primer gráfico marcado como &quot;a&quot; es la curva g(y) = raíz cuadrada(4-y). Es una curva decreciente que comienza en el eje y en y=4. La región formada por el eje x, el eje y y la curva está sombreada. Esta región se halla en el primer cuadrante. El segundo gráfico marcado como &quot;b&quot; es la misma curva que el primer gráfico. La región del primer gráfico ha girado alrededor del eje y para formar un sólido.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_012.jpg"/>
+</media>
+<caption>(a) La región a la izquierda de la función <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:mi>y</m:mi></m:mrow></m:msqrt></m:mrow></m:math> sobre el <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> b) El sólido de revolución que se forma al girar la región alrededor del eje <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></caption>
+</figure>
+<para id="fs-id1167794331230">Para encontrar el volumen, integramos con respecto a <m:math><m:mrow><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math> Obtenemos</para>
+<equation id="fs-id1167793498482" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>V</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>c</m:mi><m:mi>d</m:mi></m:msubsup><m:mi>π</m:mi></m:mrow></m:mstyle><m:msup><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>y</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>4</m:mn></m:msubsup><m:mi>π</m:mi></m:mrow></m:mstyle><m:msup><m:mrow><m:mo>[</m:mo><m:mrow><m:msqrt><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:mi>y</m:mi></m:mrow></m:msqrt></m:mrow><m:mo>]</m:mo></m:mrow><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:mi>y</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>y</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:msubsup><m:mrow><m:mrow><m:mi>π</m:mi><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>4</m:mn><m:mi>y</m:mi><m:mo>-</m:mo><m:mfrac><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mspace width="0.2em"/><m:mo>|</m:mo></m:mrow><m:mn>0</m:mn><m:mn>4</m:mn></m:msubsup><m:mo>=</m:mo><m:mn>8</m:mn><m:mi>π</m:mi><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1167793259617">El volumen es <m:math><m:mrow><m:mn>8</m:mn><m:mi>π</m:mi></m:mrow></m:math> unidades<sup>3</sup>.</para>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1167793455063" class="checkpoint">
+<exercise id="fs-id1167793455066">
+<problem id="fs-id1167793628240">
+<para id="fs-id1167793628242">Utilice el método del disco para calcular el volumen del sólido de revolución generado que se forma al girar la región entre el gráfico de <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>y</m:mi></m:mrow></m:math> y la intersección en <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> alrededor del eje <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167793514426">
+<para id="fs-id1167793960078">Los términos <m:math><m:mrow><m:mn>21</m:mn><m:mi>π</m:mi></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+<commentary id="fs-id1167794147685" type="hint">
+<title>Pista</title>
+<para id="fs-id1167793521391">Utilice el procedimiento del <link target-id="fs-id1167793271607"/>.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1167794172336">
+<title>El método de arandelas</title>
+<para id="fs-id1167793478980">Algunos sólidos de revolución tienen cavidades en el centro; no son sólidos hasta el eje de revolución. A veces, esto es sólo el resultado de la forma de la región de revolución con respecto al eje de revolución. En otros casos, las cavidades surgen cuando la región de revolución se define como la región entre los gráficos de dos funciones. Una tercera forma de que esto ocurra es cuando se selecciona un eje de revolución distinto al eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> o <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math>.</para>
+<para id="fs-id1167793831962">Cuando el sólido de revolución tiene una cavidad en el centro, las rodajas utilizadas para aproximar el volumen no son discos, sino arandelas (discos con agujeros en el centro). Por ejemplo, consideremos la región delimitada arriba por el gráfico de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:math> y abajo por el gráfico de la función <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Cuando esta región gira en torno al eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-eje,</m:mtext></m:mrow></m:math> el resultado es un sólido con una cavidad en el centro, y las rodajas son arandelas. El gráfico de la función y una arandela representativa se muestran en la <link target-id="CNX_Calc_Figure_06_02_013"/>(a) y (b). La región de revolución y el sólido resultante se muestran en la <link target-id="CNX_Calc_Figure_06_02_013"/>(c) y (d).</para>
+<figure id="CNX_Calc_Figure_06_02_013">
+<media id="fs-id1167794160244" alt="Esta figura tiene cuatro gráficos. El primer gráfico está marcado como &quot;a&quot; y tiene las dos funciones f(x)=raíz cuadrada(x) y g(x)=1 graficadas en el primer cuadrante. f(x) es una curva creciente que comienza en el origen y g(x) es una recta horizontal en y=1. Las curvas se intersecan en el par ordenado (1,1). Entre las curvas hay un rectángulo sombreado con la parte inferior en g(x) y la superior en f(x). El segundo gráfico marcado como &quot;b&quot; son las mismas dos curvas que el primer gráfico. El rectángulo sombreado entre las curvas del primer gráfico ha girado alrededor del eje x para formar un disco abierto o una arandela. El tercer gráfico marcado como &quot;a&quot; tiene las mismas dos curvas que el primer gráfico. Hay una región sombreada entre las dos curvas, entre el punto de intersección y una recta en x=4. El cuarto gráfico son las mismas dos curvas que en el primer gráfico con la región del tercer gráfico girada alrededor del eje x, lo que forma una región sólida con un centro hueco. El centro hueco se representa en el gráfico con líneas horizontales discontinuas en y=1 e y=-1.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_013.jpg"/>
+</media>
+<caption>(a) Un rectángulo delgado en la región entre dos curvas. (b) Un disco representativo que se forma al girar el rectángulo alrededor del eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mo>.</m:mo></m:mrow></m:math> (c) La región entre las curvas sobre el intervalo dado. (d) El sólido de revolución resultante.</caption>
+</figure>
+<para id="fs-id1167794003626">El área de la sección transversal, entonces, es el área del círculo exterior menos el área del círculo interior. En este caso,</para>
+<equation id="fs-id1167791543230" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mi>π</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1167793630184">Entonces el volumen del sólido es</para>
+<equation id="fs-id1167794100454" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>V</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>A</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mi>π</m:mi></m:mrow></m:mstyle><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:msubsup><m:mrow><m:mrow><m:mi>π</m:mi><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mn>2</m:mn></m:mfrac><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mspace width="0.2em"/><m:mo>|</m:mo></m:mrow><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mo>=</m:mo><m:mfrac><m:mn>9</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>π</m:mi><m:mspace width="0.2em"/><m:msup><m:mtext>al cuadrado</m:mtext><m:mn>3</m:mn></m:msup><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<para id="fs-id1167793465550">Generalizando este proceso se obtiene el <term id="term-00005">método de las arandelas</term>.</para>
+<note id="fs-id1167793397841">
+<title>Regla: El método de arandelas</title>
+<para id="fs-id1167794334065">Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> son funciones continuas y no negativas tales que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Supongamos que <m:math><m:mi>R</m:mi></m:math> denotan la región delimitada por el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> abajo por el gráfico de <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> a la izquierda por la línea <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>,</m:mo></m:mrow></m:math> y a la derecha por la línea <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math> Entonces, el volumen del sólido de revolución que se forma al girar <m:math><m:mi>R</m:mi></m:math> alrededor del eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> viene dada por</para>
+<equation id="fs-id1167793503097">Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>π</m:mi><m:mrow><m:mo>[</m:mo><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+</note>
+<example id="fs-id1167794209450">
+<exercise id="fs-id1167794209452">
+<problem id="fs-id1167793425003">
+<title>Utilizar el método de las arandelas</title>
+<para id="fs-id1167793604352">Calcule el volumen de un sólido de revolución que se forma al girar la región delimitada arriba por el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> y abajo por el gráfico de <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> alrededor del eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167794178294">
+<para id="fs-id1167794211097">Los gráficos de las funciones y el sólido de revolución se muestran en la siguiente figura.</para>
+<figure id="CNX_Calc_Figure_06_02_014">
+<media id="fs-id1167793394251" alt="Esta figura tiene dos gráficos. El primer gráfico está marcado como &quot;a&quot; y tiene dos curvas f(x)=x y g(x)=1/x. Se grafican sólo en el primer cuadrante. f(x) es una recta diagonal que comienza en el origen y g(x) es una curva decreciente con el eje y como asíntota vertical y el eje x como asíntota horizontal. Los gráficos se intersecan en (1,1). Hay una región sombreada entre los gráficos, limitada a la derecha por una línea en x=4. El segundo gráfico muestra las mismas dos curvas. Hay un sólido formado por la rotación de la región sombreada del primer gráfico alrededor del eje x.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_014.jpg"/>
+</media>
+<caption>(a) La región entre los gráficos de las funciones <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> (b) Al girar la región alrededor del eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> se genera un sólido de revolución con una cavidad en el centro.</caption>
+</figure>
+<para id="fs-id1167793420906">Tenemos</para>
+<equation id="fs-id1167794213421" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>V</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>π</m:mi><m:mrow><m:mo>[</m:mo><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mi>π</m:mi><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mo>]</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mspace width="0.2em"/><m:mtext/><m:mspace width="0.2em"/><m:mo>=</m:mo><m:msubsup><m:mrow><m:mrow><m:mi>π</m:mi><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mspace width="0.2em"/><m:mo>|</m:mo></m:mrow><m:mn>1</m:mn><m:mn>4</m:mn></m:msubsup><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>81</m:mn><m:mi>π</m:mi></m:mrow><m:mn>4</m:mn></m:mfrac><m:mspace width="0.2em"/><m:msup><m:mtext>al cuadrado</m:mtext><m:mn>3</m:mn></m:msup><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1167794324562" class="checkpoint">
+<exercise id="fs-id1167794324566">
+<problem id="fs-id1167793887575">
+<para id="fs-id1167793887577">Halle el volumen de un sólido de revolución que se forma al girar la región delimitada por los gráficos de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:math> y <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> alrededor del eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167794030042">
+<para id="fs-id1167794030044">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>10</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+<commentary id="fs-id1167794117667" type="hint">
+<title>Pista</title>
+<para id="fs-id1167793961237">Grafique las funciones para determinar qué gráfico forma el límite superior y qué gráfico forma el límite inferior, y luego utilice el procedimiento del <link target-id="fs-id1167794209450"/>.</para>
+</commentary>
+</exercise>
+</note>
+<para id="fs-id1167793940198">Al igual que con el método de los discos, también podemos aplicar el método de las arandelas a los sólidos de revolución que resultan de girar una región alrededor del eje <emphasis effect="italics">y</emphasis>. En este caso, se aplica la siguiente regla.</para>
+<note id="fs-id1167793565052">
+<title>Regla: El método de las arandelas para sólidos de revolución alrededor del eje <emphasis effect="italics">y</emphasis></title>
+<para id="fs-id1167793628604">Supongamos que <m:math><m:mrow><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> son funciones continuas y no negativas tales que <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> por <m:math><m:mrow><m:mi>y</m:mi><m:mo>∈</m:mo><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Supongamos que <m:math><m:mi>Q</m:mi></m:math> denota la región limitada a la derecha por el gráfico de <m:math><m:mrow><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> a la izquierda por el gráfico de <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> abajo por la línea <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>,</m:mo></m:mrow></m:math> y arriba por la línea <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>d</m:mi><m:mo>.</m:mo></m:mrow></m:math> Entonces, el volumen del sólido de revolución que se forma al girar <m:math><m:mi>Q</m:mi></m:math> alrededor del eje <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> viene dada por</para>
+<equation id="fs-id1167793953572" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>c</m:mi><m:mi>d</m:mi></m:msubsup><m:mrow><m:mi>π</m:mi><m:mrow><m:mo>[</m:mo><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>y</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+</note>
+<para id="fs-id1167794067848">En lugar de ver un ejemplo del método de las arandelas con el eje <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> como eje de revolución, consideramos ahora un ejemplo en el que el eje de revolución es una línea distinta de uno de los dos ejes de coordenadas. Se aplica el mismo método general, pero es posible que tenga que visualizar cómo describir el área de la sección transversal del volumen.</para>
+<example id="fs-id1167793912719">
+<exercise id="fs-id1167793912721">
+<problem id="fs-id1167793912724">
+<title>El método de las arandelas con un eje de revolución diferente</title>
+<para id="fs-id1167793944927">Halle el volumen del sólido de revolución fque se forma al girar la región delimitada arriba por <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:math> y abajo por el eje <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> alrededor de la línea <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>-2</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167794218802">
+<para id="fs-id1167794218804">El gráfico de la región y el sólido de revolución se muestran en la siguiente figura.</para>
+<figure id="CNX_Calc_Figure_06_02_015">
+<media id="fs-id1167793478845" alt="Esta figura tiene dos gráficos. El primer gráfico está marcado como &quot;a&quot; y tiene dos curvas f(x)=4-x y -2. Hay una región sombreada que forma un triángulo delimitado por la recta decreciente f(x), el eje y y el eje x. El segundo gráfico muestra las mismas dos curvas. Hay un sólido formado por la rotación de la región sombreada del primer gráfico alrededor de la recta y=-2. Dentro del sólido representado por las rectas y=-2 e y=-4 hay un cilindro hueco.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_015.jpg"/>
+</media>
+<caption>(a) La región entre el gráfico de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:math> y el eje x <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>4</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> (b) Al girar la región alrededor de la recta <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>-2</m:mn></m:mrow></m:math> se obtiene un sólido de revolución con un agujero cilíndrico en su centro.</caption>
+</figure>
+<para id="fs-id1167793501976">No podemos aplicar la fórmula del volumen a este problema directamente porque el eje de revolución no es uno de los ejes de coordenadas. Sin embargo, aún sabemos que el área de la sección transversal es el área del círculo exterior menos el área del círculo interior. Si observamos el gráfico de la función, vemos que el radio del círculo exterior viene dado por <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> que se simplifica a</para>
+<equation id="fs-id1167793619980" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1167794200068">El radio del círculo interior es <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, tenemos</para>
+<equation id="fs-id1167794296437" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mi>V</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mi>π</m:mi><m:mrow><m:mo>[</m:mo><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>6</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mi>π</m:mi><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>0</m:mn><m:mn>4</m:mn></m:msubsup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>12</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>32</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mspace width="0.2em"/><m:mtext/><m:mspace width="0.2em"/><m:mo>=</m:mo><m:msubsup><m:mrow><m:mrow><m:mi>π</m:mi><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mn>3</m:mn></m:mfrac><m:mo>-</m:mo><m:mn>6</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>32</m:mn><m:mi>x</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mspace width="0.2em"/><m:mo>|</m:mo></m:mrow><m:mn>0</m:mn><m:mn>4</m:mn></m:msubsup><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>160</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mspace width="0.2em"/><m:msup><m:mtext>al cuadrado</m:mtext><m:mn>3</m:mn></m:msup><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+</solution>
+</exercise>
+</example>
+<note id="fs-id1167793571148" class="checkpoint">
+<exercise id="fs-id1167793571152">
+<problem id="fs-id1167794043433">
+<para id="fs-id1167794043435">Calcule el volumen de un sólido de revolución que se forma al girar la región delimitada arriba por el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:math> y abajo por el plano <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> alrededor de la línea <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>-1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167793638822">
+<para id="fs-id1167793638825">Los términos <m:math><m:mrow><m:mn>60</m:mn><m:mi>π</m:mi></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+<commentary id="fs-id1167793546901" type="hint">
+<title>Pista</title>
+<para id="fs-id1167794096187">Utilice el procedimiento del <link target-id="fs-id1167793912719"/>.</para>
+</commentary>
+</exercise>
+</note>
+</section>
+<section id="fs-id1167793912199" class="key-concepts">
+<title>Conceptos clave</title>
+<list id="fs-id1167794073010" list-type="bulleted" bullet-style="bullet">
+<item>Las integrales definidas pueden utilizarse para hallar los volúmenes de los sólidos. Utilizando el método de las rebanadas, podemos encontrar un volumen integrando el área de la sección transversal.</item>
+<item>En los sólidos de revolución, los cortes de volumen suelen ser discos y las secciones transversales son círculos. El método de los discos consiste en aplicar el método de las rebanadas en el caso particular de que las secciones transversales sean círculos, y en utilizar la fórmula del área de un círculo.</item>
+<item>Si un sólido de revolución tiene una cavidad en el centro, los cortes de volumen son arandelas. Con el método de las arandelas, el área del círculo interior se resta del área del círculo exterior antes de integrarlo.</item>
+</list>
+</section>
+<section id="fs-id1167794054987" class="key-equations">
+<title>Ecuaciones clave</title>
+<table id="eip-505" summary="." class="unnumbered unstyled">
+<tgroup cols="2"><tbody>
+  <row>
+    <entry><emphasis effect="bold">Método de los discos a lo largo del eje <emphasis effect="italics">x</emphasis></emphasis></entry>
+    <entry>Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></entry>
+  </row>
+  <row>
+    <entry><emphasis effect="bold">Método de los discos a lo largo del eje <emphasis effect="italics">y</emphasis></emphasis></entry>
+    <entry>Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>c</m:mi><m:mi>d</m:mi></m:msubsup><m:mrow><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></entry>
+  </row>
+  <row>
+    <entry><emphasis effect="bold">Método de las arandelas</emphasis></entry>
+    <entry>Los términos <m:math><m:mrow><m:mi>V</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mi>a</m:mi><m:mi>b</m:mi></m:msubsup><m:mrow><m:mi>π</m:mi><m:mrow><m:mo>[</m:mo><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:mrow></m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:math></entry>
+  </row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section id="fs-id1167793419253" class="section-exercises">
+<exercise id="fs-id1167793419257">
+<problem id="fs-id1167793414244">
+<para id="fs-id1167793414246">Deduzca la fórmula del volumen de una esfera utilizando el método de las rebanadas.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1167793502850">
+<problem id="fs-id1167793502852">
+<para id="fs-id1167793502854">Utilice el método de las rebanadas para obtener la fórmula del volumen de un cono.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1167794060263">
+<problem id="fs-id1167793617555">
+<para id="fs-id1167793617557">Utilice el método de las rebanadas para obtener la fórmula del volumen de un tetraedro de lado <m:math><m:mi>a</m:mi><m:mo>.</m:mo></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167794038093">
+<problem id="fs-id1167794038095">
+<para id="fs-id1167794038098">Utilice el método de los discos para obtener la fórmula del volumen de un cilindro trapezoidal.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1167793960955">
+<problem id="fs-id1167793220997">
+<para id="fs-id1167793220999">Explique cuándo utilizaría el método de los discos en vez del método de las arandelas. ¿Cuándo son intercambiables?</para>
+</problem>
+</exercise>
+<para id="fs-id1167793925814">En los siguientes ejercicios, dibuje una rebanada típica y halle el volumen utilizando el método de las rebanadas para el volumen dado.</para>
+<exercise id="fs-id1167793950924">
+<problem id="fs-id1167793950926">
+<para id="fs-id1167793950928">Pirámide con altura de 6 unidades y base cuadrada de lado de 2 unidades, como la que se muestra aquí.</para>
+<media id="fs-id1167793959723" alt="Esta figura es una pirámide con un ancho de base de 2 unidades y una altura de 6 unidades.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_201.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1167793879236">
+<para id="fs-id1167793879238">8 unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793905862">
+<problem id="fs-id1167793475378">
+<para id="fs-id1167793475380">Una pirámide con altura de 4 unidades y base rectangular con longitud de 2 unidades y anchura de 3 unidades, como se muestra aquí.</para>
+<media id="fs-id1167794223728" alt="Esta figura es una pirámide con un ancho de base de 2, un largo de 3 y una altura de 4 unidades.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_202.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1167793948074">
+<problem id="fs-id1167793948076">
+<para id="fs-id1167793566174">Tetraedro con un lado de la base de 4 unidades, como se ve aquí.</para>
+<media id="fs-id1167793566177" alt="Esta figura es un triángulo equilátero con una longitud de lado de 4 unidades.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_203.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1167794058936">
+<para id="fs-id1167794026478">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>32</m:mn></m:mrow><m:mrow><m:mn>3</m:mn><m:msqrt><m:mn>2</m:mn></m:msqrt></m:mrow></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793443015">
+<problem id="fs-id1167793443017">
+<para id="fs-id1167793443019">Pirámide con altura de 5 unidades, y una base triangular isósceles con longitudes de 6 y 8 unidades, como se ve aquí.</para>
+<media id="fs-id1167793299486" alt="Esta figura es una pirámide con base triangular. La vista es de la base. Los lados del triángulo miden 6, 8 y 8 unidades. La altura de la pirámide es de 5 unidades.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_204.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1167793261382">
+<problem id="fs-id1167794042908">
+<para id="fs-id1167794042911">Un cono de radio <m:math><m:mi>r</m:mi></m:math> y altura <m:math><m:mi>h</m:mi></m:math> tiene un cono de radio más pequeño <m:math><m:mrow><m:mrow><m:mi>r</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:math> y altura <m:math><m:mrow><m:mrow><m:mi>h</m:mi><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:mrow></m:math> retirado de la parte superior, como se ve aquí. El sólido resultante se denomina <emphasis effect="italics">tronco</emphasis>.</para>
+<media id="fs-id1167794210307" alt="Esta figura es un gráfico tridimensional de un cono invertido. El cono está dentro de un prisma rectangular que representa el sistema de coordenadas xyz. El radio de la parte inferior del cono es &quot;r&quot; y el radio de la parte superior del cono está marcado como &quot;r/2&quot;.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_205.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1167794332343">
+<para id="fs-id1167793932196">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>7</m:mn></m:mrow><m:mrow><m:mn>24</m:mn></m:mrow></m:mfrac><m:mi>π</m:mi><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mi>h</m:mi></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<para id="fs-id1167793263010">En los siguientes ejercicios, dibuje un contorno del sólido y halle el volumen utilizando el método de las rebanadas.</para>
+<exercise id="fs-id1167794126254">
+<problem id="fs-id1167794126256">
+<para id="fs-id1167794126258">La base es un círculo de radio <m:math><m:mrow><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Los cortes perpendiculares a la base son cuadrados.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1167793926080">
+<problem id="fs-id1167793392977">
+<para id="fs-id1167793392979">La base es un triángulo con vértices <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Los cortes perpendiculares al eje <emphasis effect="italics">x</emphasis>son semicírculos.</para>
+</problem>
+<solution id="fs-id1167793933218"><para id="fs-id1167793929065"><newline/>
+<media id="fs-id1167793929068" alt="Esta figura muestra el eje x y el eje y con una línea que comienza en el eje x en (1,0) y termina en el eje y en (0,1). Perpendicular al plano xy hay 4 semicírculos sombreados cuyos diámetros comienzan en el eje x y terminan en la recta, disminuyendo de tamaño a partir del origen.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_208.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mfrac><m:mi>π</m:mi><m:mrow><m:mn>24</m:mn></m:mrow></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793594317">
+<problem id="fs-id1167793594320">
+<para id="fs-id1167793594322">La base es la región bajo la parábola <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> en el primer cuadrante. Slices perpendicular to the <emphasis effect="italics">xy</emphasis>-plane and parallel to the y-axis are squares.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1167794171464">
+<problem id="fs-id1167794171466">
+<para id="fs-id1167793605549">La base es la región bajo la parábola <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> y por encima del plano <m:math><m:mrow><m:mi>x</m:mi><m:mtext>-axis</m:mtext><m:mtext>.</m:mtext></m:mrow></m:math> Las rebanadas perpendiculares al eje <m:math><m:mrow><m:mi>y</m:mi><m:mtext>-axis</m:mtext></m:mrow></m:math> son cuadradas.</para>
+</problem>
+<solution id="fs-id1167794122173"><para id="fs-id1167794122174"><newline/>
+<media id="fs-id1167794122178" alt="Esta figura muestra los ejes x y y en perspectiva tridimensional. En el gráfico de arriba el eje x es una parábola, que tiene su vértice en y=1 y las intersecciones en x en (-1,0) y (1,0). Hay 3 regiones cuadradas sombreadas perpendiculares al plano x y, que tocan la parábola por ambos lados, disminuyendo de tamaño a partir del origen.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_210.jpg"/>
+</media><newline/> <m:math><m:mn>2</m:mn></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167794054121">
+<problem id="fs-id1167793433507">
+<para id="fs-id1167793433509">La base es la región delimitada por <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> y <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>9</m:mn><m:mo>.</m:mo></m:mrow></m:math> Las rodajas perpendiculares al eje <emphasis effect="italics">x</emphasis>son triángulos isósceles rectos. La intersección de uno de estos cortes con la base es el cateto del triángulo.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1167793950255">
+<problem id="fs-id1167793395451">
+<para id="fs-id1167793395453">La base es el área entre <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> como <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math> Los cortes perpendiculares al eje <emphasis effect="italics">x</emphasis>son semicírculos.</para>
+</problem>
+<solution id="fs-id1167794330329"><para id="fs-id1167794330330"><newline/>
+<media id="fs-id1167793444466" alt="Esta figura es un gráfico con los ejes x y y en diagonal para mostrar la perspectiva tridimensional. En el primer cuadrante del gráfico están las curvas y=x, una recta, y y=x^2, una parábola. Se intersecan en el origen y en (1,1). Hay varias regiones sombreadas de forma semicircular que son perpendiculares al plano x y, y van desde la parábola a la recta y perpendiculares a la misma.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_251.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mfrac><m:mi>π</m:mi><m:mrow><m:mn>240</m:mn></m:mrow></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<para id="fs-id1167793369200">Para los siguientes ejercicios, dibuje la región delimitada por las curvas. A continuación, utilice el método de los discos para encontrar el volumen cuando la región gira alrededor del eje <emphasis effect="italics">x</emphasis>.</para>
+<exercise id="fs-id1167793272076">
+<problem id="fs-id1167794207186">
+<para id="fs-id1167794207189">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>8</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167794122074">
+<problem id="fs-id1167794122076">
+<para id="fs-id1167793285233">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167793566160"><para id="fs-id1167793566161"><newline/>
+<media id="fs-id1167793566164" alt="Esta figura es un gráfico en el primer cuadrante. Es una región sombreada delimitada arriba por la curva y=2x^2, abajo por el eje x y a la derecha por la línea vertical x=4.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_213.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mfrac><m:mrow><m:mn>4096</m:mn><m:mi>π</m:mi></m:mrow><m:mn>5</m:mn></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793473728">
+<problem id="fs-id1167793473730">
+<para id="fs-id1167793915799">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167794069008">
+<problem id="fs-id1167794069011">
+<para id="fs-id1167794069013">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167794327643"><para id="fs-id1167794327644"><newline/>
+<media id="fs-id1167794327648" alt="Esta figura es un gráfico en el primer cuadrante. Es una región sombreada delimitada por encima por la recta y=1, por debajo por la curva y=x^4, y a la izquierda por el eje y.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_215.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mfrac><m:mrow><m:mn>8</m:mn><m:mi>π</m:mi></m:mrow><m:mn>9</m:mn></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793462562">
+<problem id="fs-id1167793462564">
+<para id="fs-id1167793454988">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167793705379">
+<problem id="fs-id1167793705381">
+<para id="fs-id1167793589599">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167793269329"><para id="fs-id1167793269330"><newline/>
+<media id="fs-id1167793378453" alt="Esta figura es una región sombreada delimitada arriba por la curva y=cos(x), abajo a la izquierda por el eje y y abajo a la derecha por y=sin(x). La región sombreada está en el primer cuadrante.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_217.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793570167">
+<problem id="fs-id1167794034073">
+<para id="fs-id1167794034075">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167794060772">
+<problem id="fs-id1167794060774">
+<para id="fs-id1167793777613">Los términos <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mn>9</m:mn><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>9</m:mn><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167793928426"><para id="fs-id1167793928428"><newline/>
+<media id="fs-id1167793928431" alt="Esta figura es un gráfico en el primer cuadrante. Es una región sombreada delimitada arriba por la recta x + y=9, abajo por el eje x, a la izquierda por el eje y, y a la izquierda por la curva x^2-y^2=9.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_219.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mn>207</m:mn><m:mi>π</m:mi></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<para id="fs-id1167794291678">Para los siguientes ejercicios, dibuje la región delimitada por las curvas. A continuación, halle el volumen cuando la región gira alrededor del eje <emphasis effect="italics">y</emphasis>.</para>
+<exercise id="fs-id1167793638851">
+<problem id="fs-id1167793638853">
+<para id="fs-id1167793939815">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>-</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167794329497">
+<problem id="fs-id1167794329499">
+<para id="fs-id1167794329501">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167793626587"><para id="fs-id1167793626588"><newline/>
+<media id="fs-id1167794246443" alt="Esta figura es un gráfico en el primer cuadrante. Es una región sombreada delimitada arriba por la curva y=2x^3, abajo por el eje x y a la derecha por la recta x=1.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_221.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mfrac><m:mrow><m:mn>4</m:mn><m:mi>π</m:mi></m:mrow><m:mn>5</m:mn></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793374980">
+<problem id="fs-id1167793374982">
+<para id="fs-id1167793374984">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167793959415">
+<problem id="fs-id1167793936684">
+<para id="fs-id1167793936687">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167793541207"><para id="fs-id1167793541208"><newline/>
+<media id="fs-id1167793862572" alt="Esta figura es un gráfico en el primer cuadrante. Es un cuarto de círculo con centro en el origen y radio de 2. Su interior está sombreado.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_223.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mfrac><m:mrow><m:mn>16</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793930102">
+<problem id="fs-id1167793956316">
+<para id="fs-id1167793956318">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msqrt><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msqrt></m:mrow></m:mfrac><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167793372594">
+<problem id="fs-id1167793372596">
+<para id="fs-id1167793372598">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mtext>sec</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>y</m:mi><m:mo>)</m:mo></m:mrow><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167794324574"><para id="fs-id1167794324575"><newline/>
+<media id="fs-id1167794324578" alt="Esta figura es un gráfico en el primer cuadrante. Es una región sombreada delimitada arriba por la recta y=pi/4, a la derecha por la curva x=sec(y), abajo por el eje x y a la izquierda por el eje y.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_225.jpg"/>
+</media><newline/> <m:math><m:mi>π</m:mi></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793951593">
+<problem id="fs-id1167793951595">
+<para id="fs-id1167793951597">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167793567013">
+<problem id="fs-id1167793567015">
+<para id="fs-id1167793567017">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>-</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167793455014"><para id="fs-id1167793455016"><newline/>
+<media id="fs-id1167793276959" alt="Esta figura es un gráfico en el primer cuadrante. Es un triángulo sombreado delimitado arriba por la recta y=4-x, abajo por la recta y=x, y a la izquierda por el eje y.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_227.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mfrac><m:mrow><m:mn>16</m:mn><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<para id="fs-id1167793450640">Para los siguientes ejercicios, dibuje la región delimitada por las curvas. A continuación, halle el volumen cuando la región gira alrededor del eje <emphasis effect="italics">x</emphasis>.</para>
+<exercise id="fs-id1167793263861">
+<problem id="fs-id1167793958990">
+<para id="fs-id1167793958992">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>6</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167793499099">
+<problem id="fs-id1167793499102">
+<para id="fs-id1167793499104">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167793316071"><para id="fs-id1167793316072"><newline/>
+<media id="fs-id1167793473582" alt="Esta figura es un gráfico sobre el eje x. Es una región sombreada delimitada arriba por la recta y=x+2, y abajo por la parábola y=x^2.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_229.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mfrac><m:mrow><m:mn>72</m:mn><m:mi>π</m:mi></m:mrow><m:mn>5</m:mn></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167794199357">
+<problem id="fs-id1167793789593">
+<para id="fs-id1167793789595">Los términos <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>y</m:mi><m:mn>3</m:mn></m:msup><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167793959012">
+<problem id="fs-id1167793959014">
+<para id="fs-id1167793959016">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167793288620"><para id="fs-id1167793446635"><newline/>
+<media id="fs-id1167793446638" alt="Esta figura es una región sombreada delimitada arriba por la curva y=4-x^2 y abajo por la recta y=2-x.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_231.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mfrac><m:mrow><m:mn>108</m:mn><m:mi>π</m:mi></m:mrow><m:mn>5</m:mn></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167794020881">
+<problem id="fs-id1167794020884">
+<para id="fs-id1167794020886"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>–</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1.2927</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167793636189">
+<problem id="fs-id1167793636191">
+<para id="fs-id1167793929701">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mspace width="0.2em"/><m:mtext>por la</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167793373440"><para id="fs-id1167793637336"><newline/>
+<media id="fs-id1167793637339" alt="Esta figura es un gráfico en el primer cuadrante. Es una región sombreada, delimitada arriba por la curva y=raíz cuadrada(x), abajo por la curva y=x^2.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_233.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mrow><m:mn>10</m:mn></m:mrow></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793931992">
+<problem id="fs-id1167793931994">
+<para id="fs-id1167793931996">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mtext>,</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mspace width="0.2em"/><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>π</m:mi></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167793829846">
+<problem id="fs-id1167794140564">
+<para id="fs-id1167794140566">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167793414075"><para id="fs-id1167793414076"><newline/>
+<media id="fs-id1167793414079" alt="Esta figura es una región sombreada, delimitada arriba por la curva y=raíz cuadrada(4-x^2) y, abajo por la curva y=raíz cuadrada(1+x^2).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_235.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mn>2</m:mn><m:msqrt><m:mn>6</m:mn></m:msqrt><m:mi>π</m:mi></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<para id="fs-id1167793880591">Para los siguientes ejercicios, dibuje la región delimitada por las curvas. A continuación, utilice el método de las arandelas para hallar el volumen cuando la región gira alrededor del eje <emphasis effect="italics">y</emphasis>.</para>
+<exercise id="fs-id1167793950113">
+<problem id="fs-id1167793950115">
+<para id="fs-id1167793950117">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167794122093">
+<problem id="fs-id1167794122095">
+<para id="fs-id1167793420754">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167794140629"><para id="fs-id1167794140630"><newline/>
+<media id="fs-id1167794140634" alt="Esta figura es un gráfico en el primer cuadrante. Es una región sombreada delimitada arriba por la recta y=x+2, abajo por la recta y=2x-1, y a la izquierda por el eje y.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_237.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mn>9</m:mn><m:mi>π</m:mi></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793254879">
+<problem id="fs-id1167793355000">
+<para id="fs-id1167793355002">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mroot><m:mi>x</m:mi><m:mn>3</m:mn></m:mroot><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167793355014">
+<problem id="fs-id1167793355017">
+<para id="fs-id1167793355019">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>2</m:mn><m:mi>y</m:mi></m:mrow></m:msup><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+</problem>
+<solution id="fs-id1167794094539"><para id="fs-id1167794094540"><newline/>
+<media id="fs-id1167794094543" alt="Esta figura es un gráfico en el primer cuadrante. Es una región sombreada limitada arriba por la curva y=ln(2), abajo por el eje x, a la izquierda por la curva x=y^2, y a la derecha por la curva x=e^(2y).">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_240.jpg"/>
+</media><newline/> <m:math><m:mrow><m:mfrac><m:mi>π</m:mi><m:mrow><m:mn>20</m:mn></m:mrow></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>75</m:mn><m:mo>- −</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:msup><m:mrow><m:mtext>ln</m:mtext></m:mrow><m:mn>5</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mn>2</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793503062">
+<problem id="fs-id1167793503064">
+<para id="fs-id1167793503066">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>9</m:mn><m:mo>- −</m:mo><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:mi>y</m:mi></m:mrow></m:msup><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+</problem>
+</exercise>
+<exercise id="fs-id1167794329293" class="material-set-2">
+<problem id="fs-id1167794329295">
+<para id="fs-id1167794329297">Los envases de yogur pueden tener forma de tronco. Gire la recta <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>m</m:mi></m:mfrac><m:mi>x</m:mi></m:mrow></m:math> alrededor del eje <emphasis effect="italics">y</emphasis> para hallar el volumen entre <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>b</m:mi><m:mo>.</m:mo></m:mrow></m:math></para>
+<media id="fs-id1167794222557" alt="Esta figura tiene dos partes. La primera parte es un cono sólido. La base del cono es más ancha que la parte superior. Se muestra en una caja tridimensional. Debajo del cono hay una imagen de un envase de yogur con la misma forma que la figura.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_242.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1167794329486">
+<para id="fs-id1167794329489">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>m</m:mi><m:mn>2</m:mn></m:msup><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>b</m:mi><m:mn>3</m:mn></m:msup><m:mo>- −</m:mo><m:msup><m:mi>a</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793360856" class="material-set-2">
+<problem id="fs-id1167793360858">
+<para id="fs-id1167793420574">Rote la elipse <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mtext>/</m:mtext><m:msup><m:mi>a</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mtext>/</m:mtext><m:msup><m:mi>b</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> alrededor del eje <emphasis effect="italics">x</emphasis> para aproximar el volumen de un balón de fútbol, como se ve aquí.</para>
+<media id="fs-id1167793559095" alt="Esta figura tiene un óvalo que es aproximadamente igual a la imagen de un balón de fútbol.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_243.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1167793956506" class="material-set-2">
+<problem id="fs-id1167793956508">
+<para id="fs-id1167793956510">Rote la elipse <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mtext>/</m:mtext><m:msup><m:mi>a</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mtext>/</m:mtext><m:msup><m:mi>b</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math> alrededor del eje <emphasis effect="italics">y</emphasis>para aproximar el volumen de un balón de fútbol.</para>
+</problem>
+<solution id="fs-id1167793521341">
+<para id="fs-id1167793521343">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>4</m:mn><m:msup><m:mi>a</m:mi><m:mn>2</m:mn></m:msup><m:mi>b</m:mi><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793514600" class="material-set-2">
+<problem id="fs-id1167793514602">
+<para id="fs-id1167793514605">Una mejor aproximación al volumen de un balón de fútbol viene dada por el sólido que se obtiene al girar <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi></m:mrow></m:math> alrededor del eje <emphasis effect="italics">x</emphasis>de <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> hasta <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:mo>.</m:mo></m:mrow></m:math> ¿Cuál es el volumen de esta aproximación del balón de fútbol, como se ve aquí?</para>
+<media id="fs-id1167793414102" alt="Esta figura tiene una forma ovalada tridimensional. Está dentro de una caja paralela al eje x en el borde frontal inferior de la caja. El eje y es vertical al sólido.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_244.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1167793479896" class="material-set-2">
+<problem id="fs-id1167793479898">
+<para id="fs-id1167793479900">¿Cuál es el volumen del pastel en forma de anillo que se obtiene al girar <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>sen</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi></m:mrow></m:math> en torno al eje <emphasis effect="italics">y</emphasis>de <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math> hasta <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>π</m:mi><m:mo>con dígito d?</m:mo></m:mrow></m:math></para>
+<media id="fs-id1167793604246" alt="Esta figura es un gráfico de un sólido tridimensional. Es redondo y se hace más grande hacia el fondo. Tiene un agujero en el centro que se va reduciendo progresivamente hacia el fondo. Junto al gráfico hay una imagen de un pastel en forma de anillo, que se asemeja al sólido.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_245.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1167794095270">
+<para id="fs-id1167794095272">Los términos <m:math><m:mrow><m:mn>2</m:mn><m:msup><m:mi>π</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<para id="fs-id1167793948177">En los siguientes ejercicios, halle el volumen del sólido descrito.</para>
+<exercise id="fs-id1167793948180">
+<problem id="fs-id1167793948182">
+<para id="fs-id1167793948184">La base es la región entre <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi></m:mrow></m:math> como <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math> Los cortes perpendiculares al eje <emphasis effect="italics">x</emphasis>son semicírculos.</para>
+</problem>
+</exercise>
+<exercise id="fs-id1167794075571">
+<problem id="fs-id1167794075573">
+<para id="fs-id1167793570606">La base es la región delimitada por la elipse genérica <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mtext>/</m:mtext><m:msup><m:mi>a</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>y</m:mi><m:mn>2</m:mn></m:msup><m:mtext>/</m:mtext><m:msup><m:mi>b</m:mi><m:mn>2</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Los cortes perpendiculares al eje <emphasis effect="italics">x</emphasis>son semicírculos.</para>
+</problem>
+<solution id="fs-id1167793705256">
+<para id="fs-id1167793705258">Los términos <m:math><m:mrow><m:mfrac><m:mrow><m:mn>2</m:mn><m:mi>a</m:mi><m:msup><m:mi>b</m:mi><m:mn>2</m:mn></m:msup><m:mi>π</m:mi></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793624757">
+<problem id="fs-id1167793624759">
+<para id="fs-id1167793624761">Perfore un agujero de radio <m:math><m:mi>a</m:mi></m:math> por el eje de un cono recto y a través de la base de radio <m:math><m:mi>b</m:mi><m:mo>,</m:mo></m:math> como se ve aquí.</para>
+<media id="fs-id1167793630330" alt="Esta figura es un cono invertido. Tiene el radio de la parte superior marcado como &quot;b&quot;, el centro en &quot;a&quot;, y la altura como &quot;b&quot;.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_246.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1167794163652">
+<problem id="fs-id1167794163654">
+<para id="fs-id1167794163656">Halle el volumen común a dos esferas de radio <m:math><m:mi>r</m:mi></m:math> con centros que tienen <m:math><m:mrow><m:mn>2</m:mn><m:mi>h</m:mi></m:mrow></m:math> de separación, como se muestra aquí.</para>
+<media id="fs-id1167793544869" alt="Esta figura tiene dos círculos que se intersecan. Ambos círculos tienen radio &quot;r&quot;. Hay un segmento de línea desde un centro hasta el otro. En el centro de la intersección de los círculos está el punto &quot;h&quot;, que está en el segmento de la línea.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_247.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1167793544880">
+<para id="fs-id1167793544882">Los términos <m:math><m:mrow><m:mfrac><m:mi>π</m:mi><m:mrow><m:mn>12</m:mn></m:mrow></m:mfrac><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>r</m:mi><m:mo>+</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>6</m:mn><m:mi>r</m:mi><m:mo>- −</m:mo><m:mi>h</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+<exercise id="fs-id1167793489568">
+<problem id="fs-id1167793489570">
+<para id="fs-id1167793564070">Halle el volumen de un casquete esférico de altura <m:math><m:mi>h</m:mi></m:math> y radio <m:math><m:mi>r</m:mi></m:math> donde <m:math><m:mrow><m:mi>h</m:mi><m:mo>&lt;</m:mo><m:mi>r</m:mi><m:mo>,</m:mo></m:mrow></m:math> como se ve aquí.</para>
+<media id="fs-id1167793366598" alt="Esta figura una porción de una esfera. Este casquete esférico tiene un radio &quot;r&quot; y una altura &quot;h&quot;.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_248.jpg"/>
+</media>
+</problem>
+</exercise>
+<exercise id="fs-id1167793278422">
+<problem id="fs-id1167793278425">
+<para id="fs-id1167793383275">Halle el volumen de una esfera de radio <m:math><m:mi>R</m:mi></m:math> con un casquete de altura <m:math><m:mi>h</m:mi></m:math> retirado de la parte superior, como se ve aquí.</para>
+<media id="fs-id1167793383288" alt="Esta figura es una esfera a la que se le ha quitado la parte superior. El radio de la esfera es &quot;R&quot;. La distancia desde el centro hasta el lugar donde se retira la parte superior es &quot;R-h&quot;.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_06_02_249.jpg"/>
+</media>
+</problem>
+<solution id="fs-id1167793638067">
+<para id="fs-id1167793638069">Los términos <m:math><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>h</m:mi><m:mo>+</m:mo><m:mi>R</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>h</m:mi><m:mo>- −</m:mo><m:mn>2</m:mn><m:mi>R</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:math> unidades<sup>3</sup></para>
+</solution>
+</exercise>
+</section>
+   </content>
+<glossary>
+<definition id="fs-id1167794199239">
+<term>sección transversal</term>
+<meaning id="fs-id1167794199244">la intersección de un plano y un objeto sólido</meaning>
+</definition>
+<definition id="fs-id1167794199249">
+<term>método de los discos</term>
+<meaning id="fs-id1167794199254">caso especial del método de las rebanadas utilizado con sólidos de revolución cuando los cortes son discos</meaning>
+</definition>
+<definition id="fs-id1167794199259">
+<term>método de las rebanadas</term>
+<meaning id="fs-id1167793368718">método de cálculo del volumen de un sólido que consiste en cortarlo en rebanadas, calcular el volumen de cada una y luego sumar los volúmenes para obtener un estimado del volumen total; a medida que el número de rebanadas llega al infinito, esta estimación se convierte en una integral que da el valor exacto del volumen</meaning>
+</definition>
+<definition id="fs-id1167793368725">
+<term>sólido de revolución</term>
+<meaning id="fs-id1167793368731">sólido generado al girar una región en un plano alrededor de una recta en ese plano</meaning>
+</definition>
+<definition id="fs-id1167793368735">
+<term>método de las arandelas</term>
+<meaning id="fs-id1167793423441">caso especial del método de las rebanadas que se utiliza con sólidos de revolución cuando los cortes son arandelas</meaning>
+</definition>
+</glossary>
+</document>

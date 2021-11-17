@@ -1,0 +1,20 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" class="introduction">
+<title>Introducción</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53494</md:content-id>
+  <md:title>Introducción</md:title>
+  <md:abstract/>
+  <md:uuid>b56f3f62-f26d-4a04-a9fd-dd9bb6e23fda</md:uuid>
+</metadata>
+
+<content>
+<figure id="CNX_Calc_Figure_03_00_001" class="splash">
+<media id="fs-id1169738055591" alt="Foto de un deportivo Hennessey Venom GT circulando a toda velocidad por una carretera sinuosa.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_00_001.jpg"/>
+</media>
+<caption>El Hennessey Venom GT puede pasar de 0 a 200 mph en 14,51 segundos. (crédito: modificación del trabajo de Codex41, Flickr)</caption>
+</figure>
+<para id="fs-id1169737736796">El Hennessey Venom GT es uno de los automóviles más rápidos del mundo. En 2014, alcanzó una velocidad récord de 270,49 mph. Puede pasar de 0 a 200 mph en 14,51 segundos. Las técnicas de este capítulo pueden utilizarse para calcular la aceleración que el Venom alcanza en esta hazaña (véase la <link target-id="fs-id1169739204154" document="m53495"/>.)</para>
+<para id="fs-id1169738017022">El cálculo de la velocidad y sus cambios son aplicaciones importantes del cálculo, pero en realidad van mucho más allá. El cálculo es importante en todas las ramas de las matemáticas, la ciencia y la ingeniería, y es fundamental para el análisis en los negocios y también en la salud. En este capítulo, exploraremos una de las principales herramientas del cálculo, la derivada, y mostraremos las formas prácticas de calcular derivadas. También aplicaremos estas reglas a una serie de funciones en este capítulo para luego explorar las aplicaciones de estas técnicas.</para>
+  </content>
+</document>

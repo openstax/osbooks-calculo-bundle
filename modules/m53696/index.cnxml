@@ -1,0 +1,22 @@
+﻿<document xmlns="http://cnx.rice.edu/cnxml" class="introduction">
+
+<title>Introducción</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m53696</md:content-id>
+  <md:title>Introducción</md:title>
+  <md:abstract/>
+  <md:uuid>2b303c75-ae29-46fc-87c1-60627869475a</md:uuid>
+</metadata>
+
+<content>
+<figure id="CNX_BMath_Figure_08_00_001" class="splash">
+<media id="fs-id1170571454128" alt="Esta es una fotografía de un ciervo.">
+<image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_08_00_001.jpg"/>
+</media>
+<caption>El ciervo de cola blanca<emphasis effect="italics">(Odocoileus virginianus</emphasis>) del este de Estados Unidos. Las ecuaciones diferenciales pueden utilizarse para estudiar las poblaciones de animales. (Crédito: modificación del trabajo de Rachel Kramer, Flickr)</caption>
+</figure>
+<para id="fs-id1170571322723">Muchos fenómenos del mundo real pueden modelarse matemáticamente mediante ecuaciones diferenciales. El crecimiento de la población, el decaimiento radiactivo, los modelos de depredador-presa y los sistemas masa resorte son cuatro ejemplos de estos fenómenos. En este capítulo estudiamos algunas de estas aplicaciones.</para>
+<para id="fs-id1170573394470">Supongamos que queremos estudiar una población de ciervos a lo largo del tiempo y determinar el número total de animales en una zona determinada. En primer lugar, podemos observar la población durante un periodo de tiempo, estimar el número total de ciervos y, a continuación, utilizar varias suposiciones para derivar un modelo matemático para diferentes escenarios. Algunos factores que se suelen tener en cuenta son el impacto ambiental, los valores umbrales de la población y los depredadores. En este capítulo veremos cómo se pueden utilizar las ecuaciones diferenciales para predecir poblaciones a lo largo del tiempo (vea <link document="m53710" target-id="fs-id1170572203846"/>).</para>
+<para id="fs-id1170573591036">Otro objetivo de este capítulo es desarrollar técnicas de solución para diferentes tipos de ecuaciones diferenciales. A medida que las ecuaciones se complican, las técnicas de solución también se complican, y de hecho se podría dedicar un curso entero al estudio de estas ecuaciones. En este capítulo estudiamos varios tipos de ecuaciones diferenciales y sus correspondientes métodos de solución.</para>
+ </content>
+</document>
