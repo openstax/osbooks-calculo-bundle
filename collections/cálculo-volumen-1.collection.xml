@@ -5,93 +5,93 @@
     <md:language>es</md:language>
     <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</md:license>
     <md:uuid>8635f0be-e734-4cd1-a10e-8063e5b863b6</md:uuid>
-<md:slug>cálculo-volumen-1</md:slug>
-</metadata>
-<col:content>
-  <col:module document="m60027"/>
-  <col:subcollection>
-    <md:title>Functions and Graphs</md:title>
-    <col:content>
-      <col:module document="m53472"/>
-      <col:module document="m53477"/>
-      <col:module document="m53478"/>
-      <col:module document="m53479"/>
-      <col:module document="m53480"/>
-      <col:module document="m53481"/>
-    </col:content>
-  </col:subcollection>
-  <col:subcollection>
-    <md:title>Limits</md:title>
-    <col:content>
-      <col:module document="m53483"/>
-      <col:module document="m53485"/>
-      <col:module document="m53491"/>
-      <col:module document="m53492"/>
-      <col:module document="m53489"/>
-      <col:module document="m53493"/>
-    </col:content>
-  </col:subcollection>
-  <col:subcollection>
-    <md:title>Derivatives</md:title>
-    <col:content>
-      <col:module document="m53494"/>
-      <col:module document="m53495"/>
-      <col:module document="m53573"/>
-      <col:module document="m53575"/>
-      <col:module document="m53576"/>
-      <col:module document="m53578"/>
-      <col:module document="m53581"/>
-      <col:module document="m53584"/>
-      <col:module document="m53585"/>
-      <col:module document="m53586"/>
-    </col:content>
-  </col:subcollection>
-  <col:subcollection>
-    <md:title>Applications of Derivatives</md:title>
-    <col:content>
-      <col:module document="m53602"/>
-      <col:module document="m53604"/>
-      <col:module document="m53605"/>
-      <col:module document="m53611"/>
-      <col:module document="m53612"/>
-      <col:module document="m53613"/>
-      <col:module document="m53596"/>
-      <col:module document="m53614"/>
-      <col:module document="m53619"/>
-      <col:module document="m53620"/>
-      <col:module document="m53621"/>
-    </col:content>
-  </col:subcollection>
-  <col:subcollection>
-    <md:title>Integration</md:title>
-    <col:content>
-      <col:module document="m53623"/>
-      <col:module document="m53624"/>
-      <col:module document="m53631"/>
-      <col:module document="m53632"/>
-      <col:module document="m53633"/>
-      <col:module document="m53634"/>
-      <col:module document="m53635"/>
-      <col:module document="m53636"/>
-    </col:content>
-  </col:subcollection>
-  <col:subcollection>
-    <md:title>Applications of Integration</md:title>
-    <col:content>
-      <col:module document="m53638"/>
-      <col:module document="m53640"/>
-      <col:module document="m53642"/>
-      <col:module document="m53643"/>
-      <col:module document="m53644"/>
-      <col:module document="m53648"/>
-      <col:module document="m53649"/>
-      <col:module document="m53650"/>
-      <col:module document="m53651"/>
-      <col:module document="m53653"/>
-    </col:content>
-  </col:subcollection>
-  <col:module document="m54049"/>
-  <col:module document="m54050"/>
-  <col:module document="m54053"/>
-</col:content>
+    <md:slug>cálculo-volumen-1</md:slug>
+  </metadata>
+  <content>
+    <module document="m60027"/>
+    <subcollection>
+      <md:title>Funciones y gráficos</md:title>
+      <content>
+        <module document="m53472"/>
+        <module document="m53477"/>
+        <module document="m53478"/>
+        <module document="m53479"/>
+        <module document="m53480"/>
+        <module document="m53481"/>
+      </content>
+    </subcollection>
+    <subcollection>
+      <md:title>Límites</md:title>
+      <content>
+        <module document="m53483"/>
+        <module document="m53485"/>
+        <module document="m53491"/>
+        <module document="m53492"/>
+        <module document="m53489"/>
+        <module document="m53493"/>
+      </content>
+    </subcollection>
+    <subcollection>
+      <md:title>Derivadas</md:title>
+      <content>
+        <module document="m53494"/>
+        <module document="m53495"/>
+        <module document="m53573"/>
+        <module document="m53575"/>
+        <module document="m53576"/>
+        <module document="m53578"/>
+        <module document="m53581"/>
+        <module document="m53584"/>
+        <module document="m53585"/>
+        <module document="m53586"/>
+      </content>
+    </subcollection>
+    <subcollection>
+      <md:title>Aplicaciones de las derivadas</md:title>
+      <content>
+        <module document="m53602"/>
+        <module document="m53604"/>
+        <module document="m53605"/>
+        <module document="m53611"/>
+        <module document="m53612"/>
+        <module document="m53613"/>
+        <module document="m53596"/>
+        <module document="m53614"/>
+        <module document="m53619"/>
+        <module document="m53620"/>
+        <module document="m53621"/>
+      </content>
+    </subcollection>
+    <subcollection>
+      <md:title>Integración</md:title>
+      <content>
+        <module document="m53623"/>
+        <module document="m53624"/>
+        <module document="m53631"/>
+        <module document="m53632"/>
+        <module document="m53633"/>
+        <module document="m53634"/>
+        <module document="m53635"/>
+        <module document="m53636"/>
+      </content>
+    </subcollection>
+    <subcollection>
+      <md:title>Aplicaciones de la integración</md:title>
+      <content>
+        <module document="m53638"/>
+        <module document="m53640"/>
+        <module document="m53642"/>
+        <module document="m53643"/>
+        <module document="m53644"/>
+        <module document="m53648"/>
+        <module document="m53649"/>
+        <module document="m53650"/>
+        <module document="m53651"/>
+        <module document="m53653"/>
+      </content>
+    </subcollection>
+    <module document="m54049"/>
+    <module document="m54050"/>
+    <module document="m54053"/>
+  </content>
 </col:collection>
