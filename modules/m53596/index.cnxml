@@ -187,7 +187,7 @@
 <entry valign="top" align="left"><emphasis effect="bold"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow></m:math></emphasis></entry>
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>1000</m:mn></m:mrow></m:math></entry>
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>8000</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>125,000</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>125.000</m:mn></m:mrow></m:math></entry>
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>1.000.000</m:mn></m:mrow></m:math></entry>
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>1000000000</m:mn></m:mrow></m:math></entry>
 </row>
@@ -459,7 +459,7 @@
 <item>La mayor potencia de <m:math><m:mi>x</m:mi></m:math> en el denominador es <m:math><m:mrow><m:mi>x</m:mi><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, al dividir el numerador y el denominador por <m:math><m:mi>x</m:mi></m:math> y aplicando las leyes algebraicas de los límites, vemos que<newline/>
 <equation id="fs-id1165043281584" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mtext>±</m:mtext><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>5</m:mn></m:mrow></m:mfrac></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mtext>±</m:mtext><m:mi>∞</m:mi></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>3</m:mn><m:mo>-</m:mo><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow><m:mrow><m:mn>2</m:mn><m:mo>+</m:mo><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mtext>±</m:mtext><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:mo>-</m:mo><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mtext>±</m:mtext><m:mi>∞</m:mi></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>+</m:mo><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mtext>±</m:mtext><m:mi>∞</m:mi></m:mrow></m:munder><m:mn>3</m:mn><m:mo>- −</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mtext>±</m:mtext><m:mi>∞</m:mi></m:mrow></m:munder><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mtext>±</m:mtext><m:mi>∞</m:mi></m:mrow></m:munder><m:mn>2</m:mn><m:mo>+</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mtext>±</m:mtext><m:mi>∞</m:mi></m:mrow></m:munder><m:mn>5</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mfrac></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mo>-</m:mo><m:mn>0</m:mn></m:mrow><m:mrow><m:mn>2</m:mn><m:mo>+</m:mo><m:mn>0</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation><newline/> Dado que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mtext>±</m:mtext><m:mi>∞</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> sabemos que <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> es una asíntota horizontal para esta función como se muestra en el siguiente gráfico<newline/>
 <figure id="CNX_Calc_Figure_04_06_014">
-<media id="fs-id1165042707159" alt="The function f(x) = (3x - 1)/(2x + 5) is plotted as is its horizontal asymptote at y = 3/2.">
+<media id="fs-id1165042707159" alt="La función f(x) = (3x - 1)/(2x + 5) se representa gráficamente, así como su asíntota horizontal en y = 3/2.">
 <image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_06_007.jpg"/>
 </media>
 <caption>El gráfico de esta función racional se aproxima a una asíntota horizontal cuando <m:math><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mtext>±</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></caption>
@@ -589,11 +589,11 @@
 </row>
 <row valign="top">
 <entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math></emphasis></entry>
-<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>0.00674</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>0,00674</m:mn></m:mrow></m:math></entry>
 <entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>0,135</m:mn></m:mrow></m:math></entry>
 <entry valign="middle" align="center">Los términos <m:math><m:mn>1</m:mn></m:math></entry>
-<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>7.389</m:mn></m:mrow></m:math></entry>
-<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>148.413</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>7,389</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>148,413</m:mn></m:mrow></m:math></entry>
 </row>
 </tbody>
 </tgroup>

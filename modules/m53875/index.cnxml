@@ -739,7 +739,7 @@
 <para id="fs-id1163723566966"><emphasis effect="bold">[T]</emphasis> <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
 </problem>
 <solution id="fs-id1163723566996">
-<para id="fs-id1163723566998">Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msqrt><m:mrow><m:mn>10</m:mn></m:mrow></m:msqrt><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>0.3218</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+<para id="fs-id1163723566998">Los términos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msqrt><m:mrow><m:mn>10</m:mn></m:mrow></m:msqrt><m:mo>,</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>4</m:mn></m:mfrac><m:mo>,</m:mo><m:mn>0,3218</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1163724050198">
@@ -926,20 +926,20 @@
 </exercise>
 <exercise id="fs-id1163724138535">
 <problem id="fs-id1163724138537">
-<para id="fs-id1163724138539">San Francisco se encuentra a <m:math><m:mrow><m:mn>37.78</m:mn><m:mtext>°</m:mtext><m:mtext>N</m:mtext></m:mrow></m:math> y <m:math><m:mrow><m:mn>122.42</m:mn><m:mtext>°</m:mtext><m:mtext>O</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Supongamos que el radio de la Tierra es <m:math><m:mrow><m:mn>4.000</m:mn></m:mrow></m:math> mi. Exprese la ubicación de San Francisco en coordenadas esféricas.</para>
+<para id="fs-id1163724138539">San Francisco se encuentra a <m:math><m:mrow><m:mn>37,78</m:mn><m:mtext>°</m:mtext><m:mtext>N</m:mtext></m:mrow></m:math> y <m:math><m:mrow><m:mn>122,42</m:mn><m:mtext>°</m:mtext><m:mtext>O</m:mtext><m:mo>.</m:mo></m:mrow></m:math> Supongamos que el radio de la Tierra es <m:math><m:mrow><m:mn>4.000</m:mn></m:mrow></m:math> mi. Exprese la ubicación de San Francisco en coordenadas esféricas.</para>
 </problem>
 </exercise>
 <exercise id="fs-id1163724138611">
 <problem id="fs-id1163724138613">
-<para id="fs-id1163724138615">Halle la latitud y la longitud de Río de Janeiro si sus coordenadas esféricas son <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4.000</m:mn><m:mo>,</m:mo><m:mtext>- −</m:mtext><m:mn>43,17</m:mn><m:mtext>°</m:mtext><m:mo>,</m:mo><m:mn>102.91</m:mn><m:mtext>°</m:mtext></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1163724138615">Halle la latitud y la longitud de Río de Janeiro si sus coordenadas esféricas son <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4.000</m:mn><m:mo>,</m:mo><m:mtext>- −</m:mtext><m:mn>43,17</m:mn><m:mtext>°</m:mtext><m:mo>,</m:mo><m:mn>102,91</m:mn><m:mtext>°</m:mtext></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1163724138651">
-<para id="fs-id1163724138653">Los términos <m:math><m:mrow><m:mn>43,17</m:mn><m:mtext>°</m:mtext><m:mtext>W</m:mtext><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mn>22.91</m:mn><m:mtext>°</m:mtext><m:mtext>S</m:mtext></m:mrow></m:math></para>
+<para id="fs-id1163724138653">Los términos <m:math><m:mrow><m:mn>43,17</m:mn><m:mtext>°</m:mtext><m:mtext>W</m:mtext><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mn>22,91</m:mn><m:mtext>°</m:mtext><m:mtext>S</m:mtext></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1163724138680">
 <problem id="fs-id1163724138682">
-<para id="fs-id1163724138684">Halle la latitud y la longitud de Berlín si sus coordenadas esféricas son <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4.000</m:mn><m:mo>,</m:mo><m:mn>13.38</m:mn><m:mtext>°</m:mtext><m:mo>,</m:mo><m:mn>37.48</m:mn><m:mtext>°</m:mtext></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1163724138684">Halle la latitud y la longitud de Berlín si sus coordenadas esféricas son <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>4.000</m:mn><m:mo>,</m:mo><m:mn>13,38</m:mn><m:mtext>°</m:mtext><m:mo>,</m:mo><m:mn>37,48</m:mn><m:mtext>°</m:mtext></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
 </problem>
 </exercise>
 <exercise id="fs-id1163723341675">
@@ -1178,7 +1178,7 @@
 <para id="fs-id1163724042207">Alguien le presta un gato para neumáticos y ahora es capaz de aplicar una fuerza de 200 N a unos <m:math><m:mrow><m:mn>80</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> ¿El par resultante va a ser mayor o menor? ¿Cuál es el nuevo par resultante en el centro del tornillo? Supongamos que esta fuerza no es suficiente para aflojar el tornillo.</para>
 </problem>
 <solution id="fs-id1163724042225">
-<para id="fs-id1163724042228">Más, <m:math><m:mrow><m:mn>59.09</m:mn></m:mrow></m:math> J</para>
+<para id="fs-id1163724042228">Más, <m:math><m:mrow><m:mn>59,09</m:mn></m:mrow></m:math> J</para>
 </solution>
 </exercise>
 </section>

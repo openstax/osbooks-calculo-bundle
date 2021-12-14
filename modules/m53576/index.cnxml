@@ -232,7 +232,7 @@ Los términos <m:math>
 <para id="fs-id1169739351550">En primer lugar, halle la función de ingresos marginales: <m:math><m:mrow><m:mi>M</m:mi><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>R</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>-0,06</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>9</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
 <para id="fs-id1169739305060">A continuación, utilice <m:math><m:mrow><m:msup><m:mi>R</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>100</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para aproximar a <m:math><m:mrow><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>101</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>100</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> los ingresos obtenidos por la venta de la ración número 101. Dado que <m:math><m:mrow><m:msup><m:mi>R</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>100</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> los ingresos obtenidos por la venta de la ración número 101 son de aproximadamente 3 dólares.</para>
 <para id="fs-id1169736611332">Los ingresos reales obtenidos por la venta de la ración número 101 son</para>
-<equation id="fs-id1169737285423" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>101</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>100</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>602.97</m:mn><m:mo>- −</m:mo><m:mn>600</m:mn><m:mo>=</m:mo><m:mn>2,97</m:mn><m:mo>,</m:mo><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mn>$2,97</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<equation id="fs-id1169737285423" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>101</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>R</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>100</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>602,97</m:mn><m:mo>- −</m:mo><m:mn>600</m:mn><m:mo>=</m:mo><m:mn>2,97</m:mn><m:mo>,</m:mo><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mn>$2,97</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
 <para id="fs-id1169739298517">El ingreso marginal es una estimación razonablemente buena en este caso y tiene la ventaja de ser fácil de calcular.</para>
 </solution>
 </exercise>
@@ -443,7 +443,7 @@ Los términos <m:math>
 </list>
 </problem>
 <solution id="fs-id1169736611359">
-<para id="fs-id1169736611361">a. <m:math><m:mrow><m:msup><m:mi>N</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3000</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>-4</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>400</m:mn></m:mrow><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>100</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> b. <m:math><m:mrow><m:mn>120</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>−14,4</m:mn><m:mo>,</m:mo><m:mn>-9,6</m:mn></m:mrow></m:math> c. La población de bacterias aumenta desde el tiempo de 0 hasta las 10 horas; posteriormente, la población de bacterias disminuye. d. <m:math><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>-6</m:mn><m:mo>,</m:mo><m:mn>0.384</m:mn><m:mo>,</m:mo><m:mn>0,432</m:mn><m:mo>.</m:mo></m:mrow></m:math> La tasa de aumento de las bacterias decrece durante las primeras 10 horas. Después, la población de bacterias va disminuyendo a un ritmo decreciente.</para>
+<para id="fs-id1169736611361">a. <m:math><m:mrow><m:msup><m:mi>N</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3000</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mn>-4</m:mn><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>400</m:mn></m:mrow><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>t</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>100</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> b. <m:math><m:mrow><m:mn>120</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>−14,4</m:mn><m:mo>,</m:mo><m:mn>-9,6</m:mn></m:mrow></m:math> c. La población de bacterias aumenta desde el tiempo de 0 hasta las 10 horas; posteriormente, la población de bacterias disminuye. d. <m:math><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>-6</m:mn><m:mo>,</m:mo><m:mn>0,384</m:mn><m:mo>,</m:mo><m:mn>0,432</m:mn><m:mo>.</m:mo></m:mrow></m:math> La tasa de aumento de las bacterias decrece durante las primeras 10 horas. Después, la población de bacterias va disminuyendo a un ritmo decreciente.</para>
 </solution>
 </exercise>
 <exercise id="fs-id1169736610051">
@@ -470,19 +470,19 @@ Los términos <m:math>
 <tbody>
 <row valign="top">
 <entry valign="top" align="left">1</entry>
-<entry valign="top" align="left">0.8795</entry>
+<entry valign="top" align="left">0,8795</entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">11</entry>
-<entry valign="top" align="left">1.040</entry>
+<entry valign="top" align="left">1,040</entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">21</entry>
-<entry valign="top" align="left">1.264</entry>
+<entry valign="top" align="left">1,264</entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">31</entry>
-<entry valign="top" align="left">1.516</entry>
+<entry valign="top" align="left">1,516</entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">41</entry>
@@ -490,23 +490,23 @@ Los términos <m:math>
 </row>
 <row valign="top">
 <entry valign="top" align="left">51</entry>
-<entry valign="top" align="left">2.000</entry>
+<entry valign="top" align="left">2,000</entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">61</entry>
-<entry valign="top" align="left">2.634</entry>
+<entry valign="top" align="left">2,634</entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">71</entry>
-<entry valign="top" align="left">3.272</entry>
+<entry valign="top" align="left">3,272</entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">81</entry>
-<entry valign="top" align="left">3.911</entry>
+<entry valign="top" align="left">3,911</entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">91</entry>
-<entry valign="top" align="left">4.422</entry>
+<entry valign="top" align="left">4,422</entry>
 </row>
 </tbody>
 </tgroup>
@@ -522,7 +522,7 @@ Los términos <m:math>
 </list>
 </problem>
 <solution id="fs-id1169739270196">
-<para id="fs-id1169739270198">a. <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0,03983</m:mn><m:mo>+</m:mo><m:mn>0.4280</m:mn></m:mrow></m:math> b. <m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0,03983</m:mn><m:mo>.</m:mo></m:mrow></m:math> La población está aumentando. c. <m:math><m:mrow><m:mi>P</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> El ritmo de aumento de la población es constante.</para>
+<para id="fs-id1169739270198">a. <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0,03983</m:mn><m:mo>+</m:mo><m:mn>0,4280</m:mn></m:mrow></m:math> b. <m:math><m:mrow><m:msup><m:mi>P</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0,03983</m:mn><m:mo>.</m:mo></m:mrow></m:math> La población está aumentando. c. <m:math><m:mrow><m:mi>P</m:mi><m:mtext>″</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>.</m:mo></m:mrow></m:math> El ritmo de aumento de la población es constante.</para>
 </solution>
 </exercise>
 <exercise id="fs-id1169739343732">

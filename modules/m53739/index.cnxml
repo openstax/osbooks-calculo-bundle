@@ -863,7 +863,7 @@
 <para id="fs-id1169737365976"><emphasis effect="bold">[T]</emphasis> Una moneda justa es aquella que tiene probabilidad <m:math><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mn>2</m:mn></m:mrow></m:math> de salir cara cuando se lanza.</para>
 <list id="fs-id1169737365993" list-type="enumerated" number-style="lower-alpha">
 <item>¿Cuál es la probabilidad de que una moneda justa salga cruz? <m:math><m:mi>n</m:mi></m:math> veces seguidas?</item>
-<item>Find the probability that a coin comes up heads for the first time on the last of an even number of coin flips.</item>
+<item>Calcule la probabilidad de que una moneda salga cara por primera vez en el último lanzamiento de un número par de lanzamientos.</item>
 </list>
 </problem>
 <solution id="fs-id1169737366013">

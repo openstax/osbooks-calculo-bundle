@@ -17,7 +17,7 @@
 <para id="fs-id1170571596362">Comencemos esta última sección del capítulo con las tres fórmulas. Junto con estas fórmulas, utilizamos la sustitución para evaluar las integrales. Demostramos la fórmula de la integral inversa de seno.</para>
 <note id="fs-id1170571609338">
 <title>Regla: Fórmulas de integración que dan lugar a funciones trigonométricas inversas</title>
-<para id="fs-id1170571528516">The following integration formulas yield inverse trigonometric functions. Supongamos que <m:math><m:mi>a</m:mi><m:mo>></m:mo><m:mn>0</m:mn></m:math>:</para>
+<para id="fs-id1170571528516">Las siguientes fórmulas de integración generan funciones trigonométricas inversas. Supongamos que <m:math><m:mi>a</m:mi><m:mo>></m:mo><m:mn>0</m:mn></m:math>:</para>
 <list id="fs-id1170572178178" list-type="enumerated" number-style="arabic">
 <item><newline/><equation id="fs-id1170572554001">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow><m:mrow><m:msqrt><m:mrow><m:msup><m:mi>a</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:msup><m:mi>u</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mfrac><m:mi>u</m:mi><m:mrow><m:mo>|</m:mo><m:mi>a</m:mi><m:mo>|</m:mo></m:mrow></m:mfrac><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></equation></item>
 <item><newline/><equation id="fs-id1170572607870">Los términos <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:mo stretchy="true">∫</m:mo><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>u</m:mi></m:mrow><m:mrow><m:msup><m:mi>a</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>u</m:mi><m:mn>2</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:mrow></m:mstyle><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>a</m:mi></m:mfrac><m:mspace width="0.05em"/><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>-1</m:mn></m:mrow></m:msup><m:mfrac><m:mi>u</m:mi><m:mi>a</m:mi></m:mfrac><m:mo>+</m:mo><m:mi>C</m:mi></m:mrow></m:math></equation></item>
@@ -527,7 +527,7 @@
 <para id="fs-id1170571613776">47. <emphasis effect="bold">T]</emphasis> Aproxime los puntos en los que los gráficos de <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:math> y <m:math><m:msup><m:mrow><m:mi>g</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mo>(</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:msup></m:math> se intersecan a cuatro decimales y calcule el área entre sus gráficos a tres decimales.</para>
 </problem>
 <solution id="fs-id1170571661766">
-<para id="fs-id1170571661768">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>≈</m:mo><m:mo>±</m:mo><m:mn>1.7321</m:mn><m:mo>.</m:mo></m:mrow></m:math> La estimación del punto extremo izquierdo con <m:math><m:mrow><m:mi>N</m:mi><m:mo>=</m:mo><m:mn>100</m:mn></m:mrow></m:math> es 4,781 y estos decimales persisten en <m:math><m:mrow><m:mi>N</m:mi><m:mo>=</m:mo><m:mn>500</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170571661768">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>≈</m:mo><m:mo>±</m:mo><m:mn>1,7321</m:mn><m:mo>.</m:mo></m:mrow></m:math> La estimación del punto extremo izquierdo con <m:math><m:mrow><m:mi>N</m:mi><m:mo>=</m:mo><m:mn>100</m:mn></m:mrow></m:math> es 4,781 y estos decimales persisten en <m:math><m:mrow><m:mi>N</m:mi><m:mo>=</m:mo><m:mn>500</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1170571661806">
@@ -589,7 +589,7 @@
 <para id="fs-id1170572434941">Los términos <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mtext>sen</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math> en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>π</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1170572434980">
-<para id="fs-id1170572434982">Los términos <m:math><m:mrow><m:msub><m:mi>L</m:mi><m:mn>4</m:mn></m:msub><m:mo>=</m:mo><m:mn>5,364</m:mn><m:mo>,</m:mo><m:msub><m:mi>R</m:mi><m:mn>4</m:mn></m:msub><m:mo>=</m:mo><m:mn>5,364</m:mn><m:mo>,</m:mo></m:mrow></m:math> respuesta exacta: 5.870</para>
+<para id="fs-id1170572434982">Los términos <m:math><m:mrow><m:msub><m:mi>L</m:mi><m:mn>4</m:mn></m:msub><m:mo>=</m:mo><m:mn>5,364</m:mn><m:mo>,</m:mo><m:msub><m:mi>R</m:mi><m:mn>4</m:mn></m:msub><m:mo>=</m:mo><m:mn>5,364</m:mn><m:mo>,</m:mo></m:mrow></m:math> respuesta exacta: 5,870</para>
 </solution>
 </exercise>
 <exercise id="fs-id1170572412264">

@@ -182,15 +182,15 @@
 </row>
 <row>
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>2,999</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>5.999</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>5,999</m:mn></m:mrow></m:math></entry>
 </row>
 <row>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>3.001</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>6.001</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>3,001</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>6,001</m:mn></m:mrow></m:math></entry>
 </row>
 <row>
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>3,01</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>6.01</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>6,01</m:mn></m:mrow></m:math></entry>
 </row>
 <row>
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>3,1</m:mn></m:mrow></m:math></entry>
@@ -360,10 +360,10 @@
 </media>
 <caption>(crédito: modificación del trabajo de Codex41, Flickr)</caption>
 </figure>
-<para id="fs-id1169739204172">Alcanzando una velocidad máxima de <m:math><m:mrow><m:mn>270.49</m:mn></m:mrow></m:math> mph, el Hennessey Venom GT es uno de los autos más rápidos del mundo. En las pruebas pasó de <m:math><m:mn>0</m:mn></m:math> al <m:math><m:mrow><m:mn>60</m:mn></m:mrow></m:math> mph en <m:math><m:mrow><m:mn>3,05</m:mn></m:mrow></m:math> segundos, desde <m:math><m:mrow><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>para</m:mtext><m:mspace width="0.2em"/><m:mn>100</m:mn></m:mrow></m:math> mph en <m:math><m:mrow><m:mn>5,88</m:mn></m:mrow></m:math> segundos, desde <m:math><m:mrow><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>para</m:mtext><m:mspace width="0.2em"/><m:mn>200</m:mn></m:mrow></m:math> mph en <m:math><m:mrow><m:mn>14,51</m:mn></m:mrow></m:math> segundos, y de <m:math><m:mrow><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>para</m:mtext><m:mspace width="0.2em"/><m:mn>229,9</m:mn></m:mrow></m:math> mph en <m:math><m:mrow><m:mn>19,96</m:mn></m:mrow></m:math> segundos. Utilice estos datos para sacar una conclusión sobre la tasa de cambio de la velocidad (es decir, su <term class="no-emphasis" id="term-00009">aceleración</term>) a medida que se acerca <m:math><m:mrow><m:mn>229,9</m:mn></m:mrow></m:math> mph. ¿La velocidad de aceleración del coche parece aumentar, disminuir o ser constante?</para>
+<para id="fs-id1169739204172">Alcanzando una velocidad máxima de <m:math><m:mrow><m:mn>270,49</m:mn></m:mrow></m:math> mph, el Hennessey Venom GT es uno de los autos más rápidos del mundo. En las pruebas pasó de <m:math><m:mn>0</m:mn></m:math> al <m:math><m:mrow><m:mn>60</m:mn></m:mrow></m:math> mph en <m:math><m:mrow><m:mn>3,05</m:mn></m:mrow></m:math> segundos, desde <m:math><m:mrow><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>para</m:mtext><m:mspace width="0.2em"/><m:mn>100</m:mn></m:mrow></m:math> mph en <m:math><m:mrow><m:mn>5,88</m:mn></m:mrow></m:math> segundos, desde <m:math><m:mrow><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>para</m:mtext><m:mspace width="0.2em"/><m:mn>200</m:mn></m:mrow></m:math> mph en <m:math><m:mrow><m:mn>14,51</m:mn></m:mrow></m:math> segundos, y de <m:math><m:mrow><m:mn>0</m:mn><m:mspace width="0.2em"/><m:mtext>para</m:mtext><m:mspace width="0.2em"/><m:mn>229,9</m:mn></m:mrow></m:math> mph en <m:math><m:mrow><m:mn>19,96</m:mn></m:mrow></m:math> segundos. Utilice estos datos para sacar una conclusión sobre la tasa de cambio de la velocidad (es decir, su <term class="no-emphasis" id="term-00009">aceleración</term>) a medida que se acerca <m:math><m:mrow><m:mn>229,9</m:mn></m:mrow></m:math> mph. ¿La velocidad de aceleración del coche parece aumentar, disminuir o ser constante?</para>
 </problem>
 <solution id="fs-id1169739298971">
-<para id="fs-id1169739298973">Primero observe que <m:math><m:mrow><m:mn>60</m:mn></m:mrow></m:math> mph = <m:math><m:mrow><m:mn>88</m:mn></m:mrow></m:math> pies/s, <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> mph <m:math><m:mrow><m:mo>≈</m:mo><m:mn>146.67</m:mn></m:mrow></m:math> pies/s, <m:math><m:mrow><m:mn>200</m:mn></m:mrow></m:math> mph <m:math><m:mrow><m:mo>≈</m:mo><m:mn>293,33</m:mn></m:mrow></m:math> ft/s, y <m:math><m:mrow><m:mn>229,9</m:mn></m:mrow></m:math> mph <m:math><m:mrow><m:mo>≈</m:mo><m:mn>337,19</m:mn></m:mrow></m:math> ft/s. Podemos resumir la información en una tabla.</para>
+<para id="fs-id1169739298973">Primero observe que <m:math><m:mrow><m:mn>60</m:mn></m:mrow></m:math> mph = <m:math><m:mrow><m:mn>88</m:mn></m:mrow></m:math> pies/s, <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> mph <m:math><m:mrow><m:mo>≈</m:mo><m:mn>146,67</m:mn></m:mrow></m:math> pies/s, <m:math><m:mrow><m:mn>200</m:mn></m:mrow></m:math> mph <m:math><m:mrow><m:mo>≈</m:mo><m:mn>293,33</m:mn></m:mrow></m:math> ft/s, y <m:math><m:mrow><m:mn>229,9</m:mn></m:mrow></m:math> mph <m:math><m:mrow><m:mo>≈</m:mo><m:mn>337,19</m:mn></m:mrow></m:math> ft/s. Podemos resumir la información en una tabla.</para>
 <table id="fs-id1169739188462" summary="This table has six rows and two columns. The first row is a header row and it labels each column. The first column header is x and the second column is v(t). Under the first column are the values 0, 3.05, 5.88, 14.51, and 19.96. Under the second column are the values 0, 88, 147.67, 293.33, and 337.19.">
 <title>Los términos <m:math><m:mrow><m:mi>v</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> a diferentes valores de <emphasis effect="italics">t</emphasis></title>
 <tgroup cols="2">
@@ -386,7 +386,7 @@
 </row>
 <row>
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>5,88</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>147.67</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>147,67</m:mn></m:mrow></m:math></entry>
 </row>
 <row>
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>14,51</m:mn></m:mrow></m:math></entry>
@@ -418,7 +418,7 @@
 </row>
 <row>
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>3,05</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>14.74</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>14,74</m:mn></m:mrow></m:math></entry>
 </row>
 <row>
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>5,88</m:mn></m:mrow></m:math></entry>
@@ -426,7 +426,7 @@
 </row>
 <row>
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>14,51</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>8.05</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>8,05</m:mn></m:mrow></m:math></entry>
 </row>
 </tbody>
 </tgroup>
@@ -776,7 +776,7 @@
 <entry valign="top" align="left">(x)</entry>
 </row>
 <row>
-<entry valign="top" align="left">1.00001</entry>
+<entry valign="top" align="left">1,00001</entry>
 <entry valign="top" align="left">(v)</entry>
 <entry valign="top" align="left">0,99999</entry>
 <entry valign="top" align="left">(xi)</entry>
@@ -784,7 +784,7 @@
 <row>
 <entry valign="top" align="left">1,000001</entry>
 <entry valign="top" align="left">(vi)</entry>
-<entry valign="top" align="left">0.999999</entry>
+<entry valign="top" align="left">0,999999</entry>
 <entry valign="top" align="left">(xii)</entry>
 </row>
 </tbody>
@@ -792,7 +792,7 @@
 </table>
 </problem>
 <solution id="fs-id1169739269413">
-<para id="fs-id1169739269416">a. <m:math><m:mrow><m:mtext>(i)</m:mtext><m:mspace width="0.2em"/><m:mn>5.100000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(ii)</m:mtext><m:mspace width="0.2em"/><m:mn>5.010000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(iii)</m:mtext><m:mspace width="0.2em"/><m:mn>5.001000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(iv)</m:mtext><m:mspace width="0.2em"/><m:mn>5.000100</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(v)</m:mtext><m:mspace width="0.2em"/><m:mn>5.000010</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(vi)</m:mtext><m:mspace width="0.2em"/><m:mn>5.000001</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(vii)</m:mtext><m:mspace width="0.2em"/><m:mn>4.900000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(viii)</m:mtext><m:mspace width="0.2em"/><m:mn>4.990000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(ix)</m:mtext><m:mspace width="0.2em"/><m:mn>4.999000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(x)</m:mtext><m:mspace width="0.2em"/><m:mn>4.999900</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(xi)</m:mtext><m:mspace width="0.2em"/><m:mn>4.999990</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(x)</m:mtext><m:mspace width="0.2em"/><m:mn>4.999999</m:mn></m:mrow></m:math> b. <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math> c. <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
+<para id="fs-id1169739269416">a. <m:math><m:mrow><m:mtext>(i)</m:mtext><m:mspace width="0.2em"/><m:mn>5,100000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(ii)</m:mtext><m:mspace width="0.2em"/><m:mn>5,010000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(iii)</m:mtext><m:mspace width="0.2em"/><m:mn>5,001000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(iv)</m:mtext><m:mspace width="0.2em"/><m:mn>5,000100</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(v)</m:mtext><m:mspace width="0.2em"/><m:mn>5,000010</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(vi)</m:mtext><m:mspace width="0.2em"/><m:mn>5,000001</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(vii)</m:mtext><m:mspace width="0.2em"/><m:mn>4,900000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(viii)</m:mtext><m:mspace width="0.2em"/><m:mn>4,990000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(ix)</m:mtext><m:mspace width="0.2em"/><m:mn>4,999000</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(x)</m:mtext><m:mspace width="0.2em"/><m:mn>4,999900</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(xi)</m:mtext><m:mspace width="0.2em"/><m:mn>4,999990</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(x)</m:mtext><m:mspace width="0.2em"/><m:mn>4,999999</m:mn></m:mrow></m:math> b. <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math> c. <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1169739273794">
@@ -897,7 +897,7 @@
 </table>
 </problem>
 <solution id="fs-id1169739305300">
-<para id="fs-id1169739305302">a. <m:math><m:mrow><m:mtext>(i)</m:mtext><m:mspace width="0.2em"/><m:mn>4.8771</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(ii)</m:mtext><m:mspace width="0.2em"/><m:mn>4.9875</m:mn><m:mspace width="0.2em"/><m:mtext>(iii)</m:mtext><m:mspace width="0.2em"/><m:mn>4.9988</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(iv)</m:mtext><m:mspace width="0.2em"/><m:mn>4,9999</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(v)</m:mtext><m:mspace width="0.2em"/><m:mn>4,9999</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(vi)</m:mtext><m:mspace width="0.2em"/><m:mn>4,9999</m:mn></m:mrow></m:math> b. <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math> c. <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>10</m:mn></m:mrow></m:math></para>
+<para id="fs-id1169739305302">a. <m:math><m:mrow><m:mtext>(i)</m:mtext><m:mspace width="0.2em"/><m:mn>4,8771</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(ii)</m:mtext><m:mspace width="0.2em"/><m:mn>4,9875</m:mn><m:mspace width="0.2em"/><m:mtext>(iii)</m:mtext><m:mspace width="0.2em"/><m:mn>4,9988</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(iv)</m:mtext><m:mspace width="0.2em"/><m:mn>4,9999</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(v)</m:mtext><m:mspace width="0.2em"/><m:mn>4,9999</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mtext>(vi)</m:mtext><m:mspace width="0.2em"/><m:mn>4,9999</m:mn></m:mrow></m:math> b. <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>tan</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math> c. <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>10</m:mn></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1169736618156">
@@ -967,7 +967,7 @@
 <para id="fs-id1169736617665">Los términos <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1169736617694">
-<para id="fs-id1169736617696">a. <m:math><m:mrow><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>h</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>6</m:mn><m:mi>h</m:mi><m:mo>+</m:mo><m:mn>12</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:mtext>(i)</m:mtext><m:mspace width="0.2em"/><m:mn>25.22</m:mn></m:mrow></m:math> m/s, <m:math><m:mrow><m:mtext>(ii)</m:mtext><m:mspace width="0.2em"/><m:mn>24.12</m:mn></m:mrow></m:math> m/s, <m:math><m:mrow><m:mtext>(iii)</m:mtext><m:mspace width="0.2em"/><m:mn>24,01</m:mn></m:mrow></m:math> m/s, <m:math><m:mrow><m:mtext>(iv)</m:mtext><m:mspace width="0.2em"/><m:mn>24</m:mn></m:mrow></m:math> m/s; c <m:math><m:mrow><m:mn>24</m:mn></m:mrow></m:math> m/s</para>
+<para id="fs-id1169736617696">a. <m:math><m:mrow><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:msup><m:mi>h</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>6</m:mn><m:mi>h</m:mi><m:mo>+</m:mo><m:mn>12</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:mtext>(i)</m:mtext><m:mspace width="0.2em"/><m:mn>25,22</m:mn></m:mrow></m:math> m/s, <m:math><m:mrow><m:mtext>(ii)</m:mtext><m:mspace width="0.2em"/><m:mn>24,12</m:mn></m:mrow></m:math> m/s, <m:math><m:mrow><m:mtext>(iii)</m:mtext><m:mspace width="0.2em"/><m:mn>24,01</m:mn></m:mrow></m:math> m/s, <m:math><m:mrow><m:mtext>(iv)</m:mtext><m:mspace width="0.2em"/><m:mn>24</m:mn></m:mrow></m:math> m/s; c <m:math><m:mrow><m:mn>24</m:mn></m:mrow></m:math> m/s</para>
 </solution>
 </exercise>
 <exercise id="fs-id1169739252858">
@@ -1035,7 +1035,7 @@
 </list>
 </problem>
 <solution id="fs-id1169739340474">
-<para id="fs-id1169739340476">a. <m:math><m:mrow><m:mtext>(i)</m:mtext><m:mspace width="0.2em"/><m:mn>61.7244</m:mn></m:mrow></m:math> pies/s, <m:math><m:mrow><m:mtext>(ii)</m:mtext><m:mspace width="0.2em"/><m:mn>61.0725</m:mn></m:mrow></m:math> pies/s <m:math><m:mrow><m:mtext>(iii)</m:mtext><m:mspace width="0.2em"/><m:mn>61.0072</m:mn></m:mrow></m:math> pies/s <m:math><m:mrow><m:mtext>(iv)</m:mtext><m:mspace width="0.2em"/><m:mn>61.0007</m:mn></m:mrow></m:math> ft/s b. A <m:math><m:mn>4</m:mn></m:math> segundos el auto de carreras se desplaza a una tasa/velocidad de <m:math><m:mrow><m:mn>61</m:mn></m:mrow></m:math> ft/s.</para>
+<para id="fs-id1169739340476">a. <m:math><m:mrow><m:mtext>(i)</m:mtext><m:mspace width="0.2em"/><m:mn>61,7244</m:mn></m:mrow></m:math> pies/s, <m:math><m:mrow><m:mtext>(ii)</m:mtext><m:mspace width="0.2em"/><m:mn>61,0725</m:mn></m:mrow></m:math> pies/s <m:math><m:mrow><m:mtext>(iii)</m:mtext><m:mspace width="0.2em"/><m:mn>61,0072</m:mn></m:mrow></m:math> pies/s <m:math><m:mrow><m:mtext>(iv)</m:mtext><m:mspace width="0.2em"/><m:mn>61,0007</m:mn></m:mrow></m:math> ft/s b. A <m:math><m:mn>4</m:mn></m:math> segundos el auto de carreras se desplaza a una tasa/velocidad de <m:math><m:mrow><m:mn>61</m:mn></m:mrow></m:math> ft/s.</para>
 </solution>
 </exercise>
 <exercise id="fs-id1169739325674">
@@ -1071,7 +1071,7 @@
 </exercise>
 <exercise id="fs-id1169739333962">
 <problem id="fs-id1169739333964">
-<para id="fs-id1169739333967"><emphasis effect="bold">[T]</emphasis> El costo total <m:math><m:mrow><m:mi>C</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> en cientos de dólares, para producir <m:math><m:mi>x</m:mi></m:math> tarros de mayonesa viene dado por <m:math><m:mrow><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.000003</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>300</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1169739333967"><emphasis effect="bold">[T]</emphasis> El costo total <m:math><m:mrow><m:mi>C</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>,</m:mo></m:mrow></m:math> en cientos de dólares, para producir <m:math><m:mi>x</m:mi></m:math> tarros de mayonesa viene dado por <m:math><m:mrow><m:mi>C</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0,000003</m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>300</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
 <list id="fs-id1169738894944" list-type="enumerated" number-style="lower-alpha">
 <item>Calcule el costo promedio por tarro en los siguientes intervalos: <list id="fs-id1169738894953" list-type="enumerated" number-style="lower-roman">
 <item>[100, 100,1]</item>
@@ -1095,7 +1095,7 @@
 <para id="fs-id1169739351705">a.<newline/>
 <media id="fs-id1169739351713" alt="La función comienza en el tercer cuadrante, pasa por el eje x en x = -3, aumenta hasta un máximo alrededor de y = 20, disminuye y pasa por el eje x en x = 1, sigue disminuyendo hasta un mínimo alrededor de y = -13, y luego aumenta por el eje x en x = 4, tras lo cual sigue aumentando.">
 <image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_204.jpg"/>
-</media><newline/> b. <m:math><m:mrow><m:mi>a</m:mi><m:mo>≈</m:mo><m:mo>- −</m:mo><m:mn>1,361</m:mn><m:mo>,</m:mo><m:mn>2.694</m:mn></m:mrow></m:math></para>
+</media><newline/> b. <m:math><m:mrow><m:mi>a</m:mi><m:mo>≈</m:mo><m:mo>- −</m:mo><m:mn>1,361</m:mn><m:mo>,</m:mo><m:mn>2,694</m:mn></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1169739351743">
@@ -1141,7 +1141,7 @@
 <para id="fs-id1169736610337">a.<newline/>
 <media id="fs-id1169736610341" alt="La función comienza en el segundo cuadrante y disminuye suavemente, toca el origen y luego aumenta suavemente.">
 <image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_03_01_207.jpg"/>
-</media><newline/> b. <m:math><m:mrow><m:mn>-0,028</m:mn><m:mo>,</m:mo><m:mn>-0,16</m:mn><m:mo>,</m:mo><m:mn>0,16</m:mn><m:mo>,</m:mo><m:mn>0.028</m:mn></m:mrow></m:math></para>
+</media><newline/> b. <m:math><m:mrow><m:mn>-0,028</m:mn><m:mo>,</m:mo><m:mn>-0,16</m:mn><m:mo>,</m:mo><m:mn>0,16</m:mn><m:mo>,</m:mo><m:mn>0,028</m:mn></m:mrow></m:math></para>
 </solution>
 </exercise>
 </section>

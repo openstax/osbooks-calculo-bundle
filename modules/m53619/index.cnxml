@@ -420,7 +420,7 @@
 <row valign="top">
 <entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math></emphasis></entry>
 <entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>341</m:mn></m:mrow></m:math></entry>
-<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>30,401</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>30.401</m:mn></m:mrow></m:math></entry>
 <entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>3004001</m:mn></m:mrow></m:math></entry>
 <entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>300040001</m:mn></m:mrow></m:math></entry>
 </row>
@@ -580,8 +580,8 @@
 <entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup></m:mrow></m:math></emphasis></entry>
 <entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>625</m:mn></m:mrow></m:math></entry>
 <entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10.000</m:mn></m:mrow></m:math></entry>
-<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>50,625</m:mn></m:mrow></m:math></entry>
-<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>160,000</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>50.625</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>160.000</m:mn></m:mrow></m:math></entry>
 </row>
 <row valign="top">
 <entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math></emphasis></entry>
@@ -625,14 +625,14 @@
 </row>
 <row valign="top">
 <entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:mroot><m:mi>x</m:mi><m:mn>3</m:mn></m:mroot></m:mrow></m:math></emphasis></entry>
-<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>2.154</m:mn></m:mrow></m:math></entry>
-<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>4.642</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>2,154</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>4,642</m:mn></m:mrow></m:math></entry>
 <entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math></entry>
-<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>21.544</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>21,544</m:mn></m:mrow></m:math></entry>
 </row>
 <row valign="top">
 <entry valign="middle" align="center"><emphasis effect="bold"><m:math><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt></m:mrow></m:math></emphasis></entry>
-<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>3.162</m:mn></m:mrow></m:math></entry>
+<entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>3,162</m:mn></m:mrow></m:math></entry>
 <entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math></entry>
 <entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>31,623</m:mn></m:mrow></m:math></entry>
 <entry valign="middle" align="center">Los términos <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math></entry>

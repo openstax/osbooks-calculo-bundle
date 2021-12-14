@@ -236,7 +236,7 @@
 <para id="fs-id1170571099767">Utilice la sustitución para evaluar <m:math><m:mrow><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="true">∫</m:mo><m:mn>0</m:mn><m:mn>1</m:mn></m:msubsup><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mtext>cos</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle><m:mo>.</m:mo></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1170571051097">
-<para id="fs-id1170573438316">Los términos <m:math><m:mrow><m:mfrac><m:mn>2</m:mn><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:mo>≈</m:mo><m:mn>0.2122</m:mn></m:mrow></m:math></para>
+<para id="fs-id1170573438316">Los términos <m:math><m:mrow><m:mfrac><m:mn>2</m:mn><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow></m:mfrac><m:mo>≈</m:mo><m:mn>0,2122</m:mn></m:mrow></m:math></para>
 </solution>
 <commentary id="fs-id1170571580958" type="hint">
 <title>Pista</title>

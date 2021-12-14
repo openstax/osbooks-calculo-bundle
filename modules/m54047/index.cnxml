@@ -404,7 +404,7 @@
 <table id="eip-565" summary="." class="unnumbered unstyled">
 <tgroup cols="2"><tbody>
   <row>
-    <entry><emphasis effect="bold">Complementary equation</emphasis></entry>
+    <entry><emphasis effect="bold">Ecuación complementaria</emphasis></entry>
     <entry>Los términos <m:math><m:mrow><m:msub><m:mi>a</m:mi><m:mn>2</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>y</m:mi><m:mtext>″</m:mtext><m:mo>+</m:mo><m:msub><m:mi>a</m:mi><m:mn>1</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup><m:mo>+</m:mo><m:msub><m:mi>a</m:mi><m:mn>0</m:mn></m:msub><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry>
   </row>
   <row>

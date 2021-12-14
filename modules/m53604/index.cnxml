@@ -451,7 +451,7 @@
 <para id="fs-id1165043092328">Los términos <m:math><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> m/s</para>
 </solution>
 </exercise>
-<para id="fs-id1165043092341">En los siguientes problemas, considere una piscina con forma de la mitad inferior de una esfera, que se está llenando a una tasa de 25 ft<sup>3</sup>/min. El radio de la piscina es de 10 pies. The formula for the volume of a partial hemisphere is <m:math><m:mi>V</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>πh</m:mi><m:mn>6</m:mn></m:mfrac><m:mo>(</m:mo><m:mn>3</m:mn><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>h</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:math> donde <m:math><m:mi>h</m:mi></m:math> is the height of the water and <m:math><m:mi>r</m:mi></m:math> is the radius of the water.</para>
+<para id="fs-id1165043092341">En los siguientes problemas, considere una piscina con forma de la mitad inferior de una esfera, que se está llenando a una tasa de 25 ft<sup>3</sup>/min. El radio de la piscina es de 10 pies. La fórmula del volumen de una semiesfera parcial es <m:math><m:mi>V</m:mi><m:mo>=</m:mo><m:mfrac><m:mi>πh</m:mi><m:mn>6</m:mn></m:mfrac><m:mo>(</m:mo><m:mn>3</m:mn><m:msup><m:mi>r</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>h</m:mi><m:mn>2</m:mn></m:msup><m:mo>)</m:mo></m:math> donde <m:math><m:mi>h</m:mi></m:math> es la altura del agua y<m:math><m:mi>r</m:mi></m:math> es el radio del agua.</para>
 <exercise id="fs-id1165043092348">
 <problem id="fs-id1165043092351">
 <para id="fs-id1165043092353">Calcule la tasa a la que cambia la profundidad del agua cuando esta tiene una profundidad de 5 pies.</para>

@@ -725,7 +725,7 @@
 </exercise>
 <exercise id="fs-id1163723981566">
 <problem id="fs-id1163724159067">
-<para id="fs-id1163724159069"><emphasis effect="bold">[T]</emphasis> Un juego de imanes sonoros (o "huevos de cascabel") incluye dos imanes brillantes, pulidos y con forma de esferoide muy conocidos para el entretenimiento de los niños. Cada imán tiene <m:math><m:mrow><m:mn>1.625</m:mn></m:mrow></m:math> pulgadas de largo y <m:math><m:mrow><m:mn>0,5</m:mn></m:mrow></m:math> pulgadas de ancho en el centro. Al lanzarlos al aire, crean un sonido de zumbido al atraerse unos a otros.</para>
+<para id="fs-id1163724159069"><emphasis effect="bold">[T]</emphasis> Un juego de imanes sonoros (o "huevos de cascabel") incluye dos imanes brillantes, pulidos y con forma de esferoide muy conocidos para el entretenimiento de los niños. Cada imán tiene <m:math><m:mrow><m:mn>1,625</m:mn></m:mrow></m:math> pulgadas de largo y <m:math><m:mrow><m:mn>0,5</m:mn></m:mrow></m:math> pulgadas de ancho en el centro. Al lanzarlos al aire, crean un sonido de zumbido al atraerse unos a otros.</para>
 <list id="fs-id1163724159090" list-type="enumerated" number-style="lower-alpha">
 <item>Escriba la ecuación del esferoide prolato centrado en el origen que describe la forma de uno de los imanes.</item>
 <item>Escriba las ecuaciones de los esferoides prolatos que modelan la forma de los imanes sonoros. Utilice un CAS para crear las gráficas.</item>

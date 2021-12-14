@@ -567,21 +567,21 @@
 </row>
 <row valign="top">
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">10.22</entry>
-<entry valign="top" align="left">10.21</entry>
-<entry valign="top" align="left">9.85</entry>
+<entry valign="top" align="left">10,22</entry>
+<entry valign="top" align="left">10,21</entry>
+<entry valign="top" align="left">9,85</entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">6.73</entry>
+<entry valign="top" align="left">6,73</entry>
 <entry valign="top" align="left">9,75</entry>
 <entry valign="top" align="left">9,63</entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">5.62</entry>
-<entry valign="top" align="left">7.83</entry>
-<entry valign="top" align="left">8.21</entry>
+<entry valign="top" align="left">5,62</entry>
+<entry valign="top" align="left">7,83</entry>
+<entry valign="top" align="left">8,21</entry>
 </row>
 </tbody>
 </tgroup>
@@ -593,7 +593,7 @@
 <para id="fs-id1167793300254">La profundidad de una piscina infantil de 4 ft por 4 ft, medida a intervalos de 1 ft, se indica en la siguiente tabla.</para>
 <list id="fs-id1167793300260" list-type="enumerated" number-style="lower-alpha">
 <item>Estime el volumen de agua de la piscina mediante una suma de Riemann con <m:math><m:mrow><m:mi>m</m:mi><m:mo>=</m:mo><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Seleccione los puntos de muestra utilizando la regla del punto medio en <m:math><m:mrow><m:mi>R</m:mi><m:mo>=</m:mo><m:mo stretchy="false">[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo stretchy="false">]</m:mo><m:mspace width="0.2em"/><m:mo>×</m:mo><m:mspace width="0.2em"/><m:mo stretchy="false">[</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo stretchy="false">]</m:mo><m:mo>.</m:mo></m:mrow></m:math></item>
-<item>Approximate the average depth of the swimming pool.<newline/>
+<item>Aproxime la profundidad media de la piscina.<newline/>
 <table id="fs-id1167793279352" class="unnumbered" summary="This table consists of six columns and six rows. The values along the top row are values of y; specifically, they are 0, 1, 2, 3, and 4. The values down the first column are values of x and they are 0, 1, 2, 3, and 4. Down the second column the values are 1, 1, 1, 1, and 1. Down the third column the values are 1.5, 1.5, 1.5, 1, and 1. Down the fourth column the values are 2, 2, 1.5, 1.5, and 1. Down the fifth column the values are 2.5, 2.5, 2.5, 2, and 1.5. Down the sixth column the values are 3, 3, 3, 2.5, and 2.">
 <label/>
 <tgroup cols="6">
@@ -670,7 +670,7 @@
 <para id="fs-id1167793829201">En la siguiente tabla se da la profundidad de un agujero de 3 ft por 3 ft en el suelo, medido a intervalos de 1 ft.</para>
 <list id="fs-id1167793829205" list-type="enumerated" number-style="lower-alpha">
 <item>Estime el volumen del agujero mediante una suma de Riemann con <m:math><m:mrow><m:mi>m</m:mi><m:mo>=</m:mo><m:mi>n</m:mi><m:mo>n =</m:mo><m:mn>3</m:mn></m:mrow></m:math> y que los puntos de la muestra sean las esquinas superiores izquierdas de los subcuadrados de <emphasis effect="italics">R</emphasis>.</item>
-<item>Approximate the average depth of the hole.<newline/>
+<item>Aproxime la profundidad media del agujero.<newline/>
 <table id="fs-id1167794147220" class="unnumbered" summary="This table consists of five columns and five rows. The values along the top row are values of y; specifically, they are 0, 1, 2, 3. The values down the first column are values of x and they are 0, 1, 2, 3. Down the second column the values are 6, 6.5, 6.5, and 6. Down the third column the values are 6.5, 7, 6.7, and 6.5. Down the fourth column the values are 6.4, 7.5, 6.5, and 5. Down the fifth column the values are 6, 6.5, 6, and 5.6.">
 <label/>
 <tgroup cols="5">
@@ -1095,7 +1095,7 @@
 </media>
 </problem>
 <solution id="fs-id1167793590353">
-<para id="fs-id1167793590355">Los términos <m:math><m:mrow><m:mn>56.5</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> F; aquí <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msubsup><m:mi>x</m:mi><m:mn>1</m:mn><m:mo>*</m:mo></m:msubsup><m:mo>,</m:mo><m:msubsup><m:mi>y</m:mi><m:mn>1</m:mn><m:mo>*</m:mo></m:msubsup><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>71</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msubsup><m:mi>x</m:mi><m:mn>2</m:mn><m:mo>*</m:mo></m:msubsup><m:mo>,</m:mo><m:msubsup><m:mi>y</m:mi><m:mn>1</m:mn><m:mo>*</m:mo></m:msubsup><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>72</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msubsup><m:mi>x</m:mi><m:mn>2</m:mn><m:mo>*</m:mo></m:msubsup><m:mo>,</m:mo><m:msubsup><m:mi>y</m:mi><m:mn>1</m:mn><m:mo>*</m:mo></m:msubsup><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>40</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msubsup><m:mi>x</m:mi><m:mn>2</m:mn><m:mo>*</m:mo></m:msubsup><m:mo>,</m:mo><m:msubsup><m:mi>y</m:mi><m:mn>2</m:mn><m:mo>*</m:mo></m:msubsup><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>43</m:mn><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:msubsup><m:mi>x</m:mi><m:mi>i</m:mi><m:mo>*</m:mo></m:msubsup></m:mrow></m:math> y <m:math><m:mrow><m:msubsup><m:mi>y</m:mi><m:mi>j</m:mi><m:mo>*</m:mo></m:msubsup></m:mrow></m:math> son los puntos medios de los subintervalos de las particiones de <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo stretchy="false">]</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo stretchy="false">]</m:mo><m:mo>,</m:mo></m:mrow></m:math> respectivamente.</para>
+<para id="fs-id1167793590355">Los términos <m:math><m:mrow><m:mn>56,5</m:mn><m:mtext>°</m:mtext></m:mrow></m:math> F; aquí <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msubsup><m:mi>x</m:mi><m:mn>1</m:mn><m:mo>*</m:mo></m:msubsup><m:mo>,</m:mo><m:msubsup><m:mi>y</m:mi><m:mn>1</m:mn><m:mo>*</m:mo></m:msubsup><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>71</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msubsup><m:mi>x</m:mi><m:mn>2</m:mn><m:mo>*</m:mo></m:msubsup><m:mo>,</m:mo><m:msubsup><m:mi>y</m:mi><m:mn>1</m:mn><m:mo>*</m:mo></m:msubsup><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>72</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msubsup><m:mi>x</m:mi><m:mn>2</m:mn><m:mo>*</m:mo></m:msubsup><m:mo>,</m:mo><m:msubsup><m:mi>y</m:mi><m:mn>1</m:mn><m:mo>*</m:mo></m:msubsup><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>40</m:mn><m:mo>,</m:mo></m:mrow></m:math> <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:msubsup><m:mi>x</m:mi><m:mn>2</m:mn><m:mo>*</m:mo></m:msubsup><m:mo>,</m:mo><m:msubsup><m:mi>y</m:mi><m:mn>2</m:mn><m:mo>*</m:mo></m:msubsup><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>43</m:mn><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mrow><m:msubsup><m:mi>x</m:mi><m:mi>i</m:mi><m:mo>*</m:mo></m:msubsup></m:mrow></m:math> y <m:math><m:mrow><m:msubsup><m:mi>y</m:mi><m:mi>j</m:mi><m:mo>*</m:mo></m:msubsup></m:mrow></m:math> son los puntos medios de los subintervalos de las particiones de <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo stretchy="false">]</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mo stretchy="false">[</m:mo><m:mi>c</m:mi><m:mo>,</m:mo><m:mi>d</m:mi><m:mo stretchy="false">]</m:mo><m:mo>,</m:mo></m:mrow></m:math> respectivamente.</para>
 </solution>
 </exercise>
 </section>

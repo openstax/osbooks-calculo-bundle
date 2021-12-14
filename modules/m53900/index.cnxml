@@ -15,7 +15,7 @@
 </metadata>
 
 <content>
-<para id="fs-id1167793936547">Cuando se describe el movimiento de un avión en vuelo, es importante comunicar dos datos: la dirección en la que viaja el avión y la velocidad del mismo. Cuando se mide una fuerza, como el empuje de los motores del avión, es importante describir no solo la intensidad de esa fuerza, sino también la dirección en la que se aplica. Some quantities, such as velocity or force, are defined in terms of both size (also called <emphasis effect="italics">magnitude</emphasis>) and direction. Una cantidad que tiene magnitud y dirección se llama <term id="term-00001">vector</term>. En este texto, denotamos los vectores con letras en negrita, como <emphasis effect="bold">v</emphasis>.</para>
+<para id="fs-id1167793936547">Cuando se describe el movimiento de un avión en vuelo, es importante comunicar dos datos: la dirección en la que viaja el avión y la velocidad del mismo. Cuando se mide una fuerza, como el empuje de los motores del avión, es importante describir no solo la intensidad de esa fuerza, sino también la dirección en la que se aplica. Algunas cantidades, como la velocidad o la fuerza, se definen tanto en términos de tamaño (también llamado <emphasis effect="italics">magnitud</emphasis>) como de dirección. Una cantidad que tiene magnitud y dirección se llama <term id="term-00001">vector</term>. En este texto, denotamos los vectores con letras en negrita, como <emphasis effect="bold">v</emphasis>.</para>
 <note id="fs-id1167793957113">
 <title>Definición</title>
 <para id="fs-id1167794227727">Un vector es una cantidad que tiene magnitud y dirección.</para>

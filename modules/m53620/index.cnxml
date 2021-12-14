@@ -50,7 +50,7 @@
 <para id="fs-id1165043352896">Para encontrar la siguiente aproximación, <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> utilizamos la <link target-id="fs-id1165043389758"/> con <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math> y el valor de <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> almacenado en la calculadora. Tenemos que</para>
 <equation id="fs-id1165042482873" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>f</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>≈</m:mo><m:mn>1,548611111</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
 <para id="fs-id1165043391703">Al continuar de esta manera, obtenemos los siguientes resultados:</para>
-<equation id="fs-id1165042705837" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,666666667</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,548611111</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1.532390162</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1.532088989</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,532088886</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>6</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,532088886</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
+<equation id="fs-id1165042705837" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,666666667</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,548611111</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,532390162</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,532088989</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,532088886</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>6</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,532088886</m:mn><m:mo>.</m:mo></m:mtd></m:mtr></m:mtable></m:math></equation>
 <para id="fs-id1165043093355">Observamos que obtuvimos el mismo valor para <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>6</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, cualquier aplicación posterior del método de Newton dará muy probablemente el mismo valor para <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
 <figure id="CNX_Calc_Figure_04_09_002">
 <media id="fs-id1165043153016" alt="Se dibuja la función f(x) = x3 - 3x + 1. Tiene raíces entre -2 y -1, 0 y 1, y 1 y 2.">
@@ -67,7 +67,7 @@
 <para id="fs-id1165043166841">Suponiendo que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow></m:math> utilizaremos el método de Newton para aproximar la raíz de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> calculando <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1165042374545">
-<para id="fs-id1165043345490">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>≈</m:mo><m:mn>0.33333333</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>≈</m:mo><m:mn>0.347222222</m:mn></m:mrow></m:math></para>
+<para id="fs-id1165043345490">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>≈</m:mo><m:mn>0,33333333</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>≈</m:mo><m:mn>0,347222222</m:mn></m:mrow></m:math></para>
 </solution>
 <commentary id="fs-id1165042329085" type="hint">
 <title>Pista</title>
@@ -88,7 +88,7 @@
 <para id="fs-id1165042321204">Por lo tanto,</para>
 <equation id="fs-id1165042705668" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr/><m:mtr/><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>+</m:mo><m:mfrac><m:mn>2</m:mn><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2</m:mn><m:mo>+</m:mo><m:mfrac><m:mn>2</m:mn><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1,5</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>+</m:mo><m:mfrac><m:mn>2</m:mn><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1,5</m:mn><m:mo>+</m:mo><m:mfrac><m:mn>2</m:mn><m:mrow><m:mn>1,5</m:mn></m:mrow></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mn>1,416666667.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
 <para id="fs-id1165043327685">Al continuar de esta manera, hallamos que</para>
-<equation id="fs-id1165043384502" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>1,5</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1.416666667</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1.414215686</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,414213562</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,414213562.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
+<equation id="fs-id1165043384502" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>1,5</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,416666667</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>3</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,414215686</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,414213562</m:mn></m:mtd></m:mtr><m:mtr><m:mtd columnalign="left"><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>≈</m:mo><m:mn>1,414213562.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
 <para id="fs-id1165043190853">Como obtuvimos el mismo valor para <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>5</m:mn></m:msub><m:mo>,</m:mo></m:mrow></m:math> es poco probable que el valor <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> cambie en cualquier aplicación posterior del método de Newton. Concluimos que <m:math><m:mrow><m:msqrt><m:mn>2</m:mn></m:msqrt><m:mo>≈</m:mo><m:mn>1,414213562</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
 <figure id="CNX_Calc_Figure_04_09_003">
 <media id="fs-id1165042331472" alt="Se dibuja la función y = x2 - 2. Desde x0 = 2 sale una línea discontinua y desde ahí se traza una línea tangente hacia abajo. Toca x1 = 1,5, que está cerca de x* = la raíz cuadrada de 2.">
@@ -156,7 +156,7 @@
 <para id="fs-id1165042550427">Para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>-</m:mo><m:mn>2</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>,</m:mo></m:mrow></m:math> supongamos que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>-1,5</m:mn></m:mrow></m:math> y hallar <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> y <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1165043174093">
-<para id="fs-id1165042608726">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>≈</m:mo><m:mo>- −</m:mo><m:mn>1.842105263</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>≈</m:mo><m:mo>- −</m:mo><m:mn>1.772826920</m:mn></m:mrow></m:math></para>
+<para id="fs-id1165042608726">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>≈</m:mo><m:mo>- −</m:mo><m:mn>1,842105263</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>≈</m:mo><m:mo>- −</m:mo><m:mn>1,772826920</m:mn></m:mrow></m:math></para>
 </solution>
 <commentary id="fs-id1165043107517" type="hint">
 <title>Pista</title>
@@ -223,14 +223,14 @@
 <media id="fs-id1165042552046" alt="En el primer cuadrante, f(x) = 3,55x(1 - x) se representa gráficamente al igual que y = x. Desde algún punto del eje x, se traza una línea hasta la recta y = x, momento en el que gira para ser horizontal y continúa hasta tocar el borde exterior de f(x), momento en el que vuelve a girar para ser vertical hasta llega a la recta y = x. Este proceso continúa varias veces y crea una interesante serie de cajas.">
 <image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_09_008.jpg"/>
 </media>
-<caption>Un diagrama de telaraña para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3,55</m:mn><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow>se presenta aquí</m:math>. La secuencia de valores da lugar a un <m:math><m:mn>8</m:mn></m:math>-ciclo.</caption>
+<caption>Un diagrama de telaraña para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3,55</m:mn><m:mi>x</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math>se presenta aquí. La secuencia de valores da lugar a un <m:math><m:mn>8</m:mn></m:math>-ciclo.</caption>
 </figure>
 <list id="fs-id1165043251229" list-type="enumerated" number-style="arabic">
 <item>Supongamos que <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>0,5</m:mn></m:mrow></m:math> y elegir <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0,2</m:mn><m:mo>.</m:mo></m:mrow></m:math> Calcule, a mano o con una computadora, los primeros <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math> valores en la secuencia. ¿Parece que la secuencia converge? Si es así, ¿a qué valor? ¿Resulta un ciclo? Si es así, ¿qué tipo de ciclo (por ejemplo, <m:math><m:mrow><m:mn>2</m:mn><m:mo>- −</m:mo><m:mtext>ciclo</m:mtext><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mn>4</m:mn><m:mo>- −</m:mo><m:mtext>ciclo</m:mtext><m:mo>.</m:mo><m:mo stretchy="false">)</m:mo><m:mo>con dígito d?</m:mo></m:mrow></m:math></item>
 <item>¿Qué sucede cuando <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>2</m:mn><m:mo>con dígito d?</m:mo></m:mrow></m:math></item>
 <item>Para <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>3,2</m:mn></m:mrow></m:math> y <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>3,5</m:mn><m:mo>,</m:mo></m:mrow></m:math> calcule los primeros <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> valores de la secuencia. Genere un diagrama de telaraña para cada proceso iterativo. (Existen varias aplicaciones gratuitas en línea que generan diagramas de telaraña para el mapa logístico). ¿Cuál es el comportamiento a largo plazo en cada uno de estos casos?</item>
 <item>Ahora supongamos que <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math> Calcule los primeros <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> valores de la secuencia y genere un diagrama de telaraña. ¿Cuál es el comportamiento a largo plazo en este caso?</item>
-<item>Repita el proceso para <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>,</m:mo></m:mrow></m:math> pero suponga que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0.201</m:mn><m:mo>.</m:mo></m:mrow></m:math> ¿Cómo se compara este comportamiento con el de <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0,2</m:mn><m:mo>con dígito d?</m:mo></m:mrow></m:math></item>
+<item>Repita el proceso para <m:math><m:mrow><m:mi>r</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>,</m:mo></m:mrow></m:math> pero suponga que <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0,201</m:mn><m:mo>.</m:mo></m:mrow></m:math> ¿Cómo se compara este comportamiento con el de <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>0</m:mn></m:msub><m:mo>=</m:mo><m:mn>0,2</m:mn><m:mo>con dígito d?</m:mo></m:mrow></m:math></item>
 </list>
 </note>
 </section>
@@ -324,7 +324,7 @@
 <para id="fs-id1165043312491">Los términos <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msqrt><m:mrow><m:msub><m:mi>x</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:msqrt></m:mrow></m:mfrac></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1165042364663">
-<para id="fs-id1165042318572">a. <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>1.291</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>0.8801</m:mn><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>0.7071</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>1.189</m:mn></m:mrow></m:math></para>
+<para id="fs-id1165042318572">a. <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>1,291</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>0,8801</m:mn><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:mn>0,7071</m:mn><m:mo>,</m:mo><m:msub><m:mi>x</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mn>1,189</m:mn></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1165043286618">
@@ -403,7 +403,7 @@
 <para id="fs-id1165042639367">Los términos <m:math><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>x</m:mi><m:mn>4</m:mn></m:msup><m:mo>=</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1165042376466">
-<para id="fs-id1165042376468">Los términos <m:math><m:mrow><m:mn>0.5188</m:mn><m:mspace width="0.2em"/><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mo>- −</m:mo><m:mn>1.2906</m:mn></m:mrow></m:math></para>
+<para id="fs-id1165042376468">Los términos <m:math><m:mrow><m:mn>0,5188</m:mn><m:mspace width="0.2em"/><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mo>- −</m:mo><m:mn>1,2906</m:mn></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1165043395050">
@@ -430,7 +430,7 @@
 <para id="fs-id1165043194449">Los términos <m:math><m:mrow><m:mtext>tan</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> sobre <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac><m:mo>,</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
 </problem>
 <solution id="fs-id1165043348635">
-<para id="fs-id1165043276353">Los términos <m:math><m:mrow><m:mn>4.493</m:mn></m:mrow></m:math></para>
+<para id="fs-id1165043276353">Los términos <m:math><m:mrow><m:mn>4,493</m:mn></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1165043276362">
@@ -443,7 +443,7 @@
 <para id="fs-id1165043174073">Los términos <m:math><m:mrow><m:mtext>ln</m:mtext><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1165043395326">
-<para id="fs-id1165043395328">Los términos <m:math><m:mrow><m:mn>0.159</m:mn><m:mo>,</m:mo><m:mn>3.146</m:mn></m:mrow></m:math></para>
+<para id="fs-id1165043395328">Los términos <m:math><m:mrow><m:mn>0,159</m:mn><m:mo>,</m:mo><m:mn>3,146</m:mn></m:mrow></m:math></para>
 </solution>
 </exercise>
 <para id="fs-id1165043391879">El método de Newton puede utilizarse para encontrar los máximos y los mínimos de las funciones, además de las raíces. En este caso aplique el método de Newton a la función derivada <m:math><m:mrow><m:msup><m:mi>f</m:mi><m:mo>′</m:mo></m:msup><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para encontrar sus raíces, en lugar de la función original. En los siguientes ejercicios, considere la formulación del método.</para>
@@ -497,7 +497,7 @@
 <para id="fs-id1165042364613">Máximo de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>–</m:mo><m:mroot><m:mi>x</m:mi><m:mn>3</m:mn></m:mroot></m:mrow><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1165043431657">
-<para id="fs-id1165043431659">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>5.619</m:mn></m:mrow></m:math></para>
+<para id="fs-id1165043431659">Los términos <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>5,619</m:mn></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1165043431672">
@@ -619,7 +619,7 @@
 <para id="fs-id1165042709795">Utilice el método de Newton para resolver la anomalía excéntrica <m:math><m:mi>E</m:mi></m:math> cuando la anomalía media <m:math><m:mrow><m:mi>M</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>3</m:mn><m:mi>π</m:mi></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow></m:math> y la excentricidad de la órbita <m:math><m:mrow><m:mi>ε</m:mi><m:mo>=</m:mo><m:mn>0,8</m:mn><m:mo>;</m:mo></m:mrow></m:math> redondee a tres decimales.</para>
 </problem>
 <solution id="fs-id1165042374773">
-<para id="fs-id1165042374775">Los términos <m:math><m:mrow><m:mi>E</m:mi><m:mo>=</m:mo><m:mn>4.071</m:mn></m:mrow></m:math></para>
+<para id="fs-id1165042374775">Los términos <m:math><m:mrow><m:mi>E</m:mi><m:mo>=</m:mo><m:mn>4,071</m:mn></m:mrow></m:math></para>
 </solution>
 </exercise>
 <para id="fs-id1165042332049">Los dos ejercicios siguientes consideran una inversión bancaria. La inversión inicial es de <m:math><m:mrow><m:mtext>$</m:mtext><m:mn>10.000</m:mn><m:mo>.</m:mo></m:mrow></m:math> Después de <m:math><m:mrow><m:mn>25</m:mn></m:mrow></m:math> años, la inversión se triplicó hasta <m:math><m:mrow><m:mtext>$</m:mtext><m:mn>30.000</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>

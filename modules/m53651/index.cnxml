@@ -108,7 +108,7 @@
 <para id="fs-id1167793814662">Hay <m:math><m:mrow><m:mn>80686</m:mn></m:mrow></m:math> bacterias en la población después de <m:math><m:mn>5</m:mn></m:math> horas.</para>
 <para id="fs-id1167793607551">Para saber cuándo la población alcanza <m:math><m:mrow><m:mn>100.000</m:mn></m:mrow></m:math> bacterias, resolvemos la ecuación</para>
 <equation id="fs-id1167793370770" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mn>100.000</m:mn></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>200</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>0,02</m:mn><m:mi>t</m:mi></m:mrow></m:msup></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mn>500</m:mn></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:msup><m:mi>e</m:mi><m:mrow><m:mn>0,02</m:mn><m:mi>t</m:mi></m:mrow></m:msup></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mn>500</m:mn></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>0,02</m:mn><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>t</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mn>500</m:mn></m:mrow><m:mrow><m:mn>0,02</m:mn></m:mrow></m:mfrac><m:mo>≈</m:mo><m:mn>310,73.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
-<para id="fs-id1167794186931">La población alcanza <m:math><m:mrow><m:mn>100.000</m:mn></m:mrow></m:math> bacterias después de <m:math><m:mrow><m:mn>310.73</m:mn></m:mrow></m:math> minutos.</para>
+<para id="fs-id1167794186931">La población alcanza <m:math><m:mrow><m:mn>100.000</m:mn></m:mrow></m:math> bacterias después de <m:math><m:mrow><m:mn>310,73</m:mn></m:mrow></m:math> minutos.</para>
 </solution>
 </exercise>
 </example>
@@ -118,7 +118,7 @@
 <para id="fs-id1167793374887">Consideremos una población de bacterias que crece según la función <m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>500</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>0,05</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>t</m:mi></m:math> se mide en minutos. ¿Cuántas bacterias hay en la población después de 4 horas? ¿Cuándo alcanza la población <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> millones de bacterias?</para>
 </problem>
 <solution id="fs-id1167793926298">
-<para id="fs-id1167793427517">Hay <m:math><m:mrow><m:mn>81377396</m:mn></m:mrow></m:math> bacterias en la población después de <m:math><m:mn>4</m:mn></m:math> horas. La población alcanza <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> millones de bacterias después de <m:math><m:mrow><m:mn>244.12</m:mn></m:mrow></m:math> minutos.</para>
+<para id="fs-id1167793427517">Hay <m:math><m:mrow><m:mn>81377396</m:mn></m:mrow></m:math> bacterias en la población después de <m:math><m:mn>4</m:mn></m:math> horas. La población alcanza <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> millones de bacterias después de <m:math><m:mrow><m:mn>244,12</m:mn></m:mrow></m:math> minutos.</para>
 </solution>
 <commentary id="fs-id1167793938093" type="hint">
 <title>Pista</title>
@@ -129,10 +129,10 @@
 <para id="fs-id1167793967055">Pasemos ahora a una aplicación financiera: el <term class="no-emphasis" id="term-00003">interés compuesto</term>. El interés que no se capitaliza se denomina <term class="no-emphasis" id="term-00004"><emphasis effect="italics">interés simple</emphasis></term>. El interés simple se paga una vez, al final del periodo especificado (normalmente <m:math><m:mn>1</m:mn></m:math> año). Así que, si ponemos <m:math><m:mrow><m:mtext>$</m:mtext><m:mn>1000</m:mn></m:mrow></m:math> en una cuenta de ahorro ganando el <m:math><m:mrow><m:mn>2</m:mn><m:mtext>%</m:mtext></m:mrow></m:math> de interés simple anual, entonces al final del año tendremos</para>
 <equation id="fs-id1167793294235" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mn>1000</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mn>0,02</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>$</m:mtext><m:mn>1.020</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
 <para id="fs-id1167793414250">El interés compuesto se paga varias veces al año, según el periodo de capitalización. Por lo tanto, si el banco compone los intereses cada <m:math><m:mn>6</m:mn></m:math> meses, acredita la mitad de los intereses del año en la cuenta después de <m:math><m:mn>6</m:mn></m:math> meses. En la segunda mitad del año, la cuenta devenga intereses no solo por el importe inicial de <m:math><m:mrow><m:mtext>$</m:mtext><m:mn>1000</m:mn><m:mo>,</m:mo></m:mrow></m:math> sino también sobre los intereses obtenidos durante el primer semestre. Matemáticamente hablando, al final del año, tendremos</para>
-<equation id="fs-id1167794188340" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mn>1000</m:mn><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>0,02</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mtext>$</m:mtext><m:mn>1020.10</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<equation id="fs-id1167794188340" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mn>1000</m:mn><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>0,02</m:mn></m:mrow><m:mn>2</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2</m:mn></m:msup><m:mo>=</m:mo><m:mtext>$</m:mtext><m:mn>1020,10</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
 <para id="fs-id1167794136411">Del mismo modo, si los intereses se capitalizan cada <m:math><m:mn>4</m:mn></m:math> meses, tendremos</para>
-<equation id="fs-id1167794337261" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mn>1000</m:mn><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>0,02</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup><m:mo>=</m:mo><m:mtext>$</m:mtext><m:mn>1020.13</m:mn><m:mo>,</m:mo></m:mrow></m:math></equation>
-<para id="fs-id1167794002738">y si el interés se capitaliza diariamente <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>365</m:mn></m:mrow></m:math> veces al año), tenemos <m:math><m:mrow><m:mtext>$</m:mtext><m:mn>1020.20</m:mn><m:mo>.</m:mo></m:mrow></m:math> Si ampliamos este concepto de manera que el interés se capitalice continuamente, después de <m:math><m:mi>t</m:mi></m:math> años tendremos</para>
+<equation id="fs-id1167794337261" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mn>1000</m:mn><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>0,02</m:mn></m:mrow><m:mn>3</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup><m:mo>=</m:mo><m:mtext>$</m:mtext><m:mn>1020,13</m:mn><m:mo>,</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1167794002738">y si el interés se capitaliza diariamente <m:math><m:mrow><m:mo stretchy="false">(</m:mo><m:mn>365</m:mn></m:mrow></m:math> veces al año), tenemos <m:math><m:mrow><m:mtext>$</m:mtext><m:mn>1020,20</m:mn><m:mo>.</m:mo></m:mrow></m:math> Si ampliamos este concepto de manera que el interés se capitalice continuamente, después de <m:math><m:mi>t</m:mi></m:math> años tendremos</para>
 <equation id="fs-id1167794059054" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mn>1000</m:mn><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>n</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mfrac><m:mrow><m:mn>0,02</m:mn></m:mrow><m:mi>n</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>n</m:mi><m:mi>t</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
 <para id="fs-id1167794172746">Ahora vamos a manipular esta expresión para tener una función de crecimiento exponencial. Recordemos que el número <m:math><m:mi>e</m:mi></m:math> puede expresarse como un límite:</para>
 <equation id="fs-id1167794075520" class="unnumbered"><label/>Los términos <m:math><m:mrow><m:mi>e</m:mi><m:mo>=</m:mo><m:munder><m:mrow><m:mtext>lim</m:mtext></m:mrow><m:mrow><m:mi>m</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi></m:mrow></m:munder><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>m</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>m</m:mi></m:msup><m:mo>.</m:mo></m:mrow></m:math></equation>
@@ -185,7 +185,7 @@
 <solution id="fs-id1167793367797">
 <para id="fs-id1167793367799">Sabemos que la población de peces tarda <m:math><m:mn>6</m:mn></m:math> meses para duplicar su número. Así, si <emphasis effect="italics">t</emphasis> representa el tiempo en meses, por la fórmula del tiempo de duplicación, tenemos <m:math><m:mrow><m:mn>6</m:mn><m:mo>=</m:mo><m:mrow><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mtext>/</m:mtext><m:mi>k</m:mi></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Entonces, <m:math><m:mrow><m:mi>k</m:mi><m:mo>=</m:mo><m:mrow><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mtext>/</m:mtext><m:mn>6</m:mn></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Así, la población viene dada por <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>500</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mrow><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mn>2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mtext>/</m:mtext><m:mn>6</m:mn></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>t</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math> Para saber cuándo la población alcanza <m:math><m:mrow><m:mn>10.000</m:mn></m:mrow></m:math> peces, debemos resolver la siguiente ecuación:</para>
 <equation id="fs-id1167793937195" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mn>10.000</m:mn></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>500</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mo stretchy="false">(</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>6</m:mn><m:mo stretchy="false">)</m:mo><m:mi>t</m:mi></m:mrow></m:msup></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mn>20</m:mn></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:msup><m:mi>e</m:mi><m:mrow><m:mo stretchy="false">(</m:mo><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>6</m:mn><m:mo stretchy="false">)</m:mo><m:mi>t</m:mi></m:mrow></m:msup></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mn>20</m:mn></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mn>2</m:mn></m:mrow><m:mn>6</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>t</m:mi></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>t</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mfrac><m:mrow><m:mn>6</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mn>20</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mn>2</m:mn></m:mrow></m:mfrac><m:mo>≈</m:mo><m:mn>25,93.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
-<para id="fs-id1167793495113">Los amigos del dueño tienen que esperar <m:math><m:mrow><m:mn>25.93</m:mn></m:mrow></m:math> meses (un poco más de <m:math><m:mn>2</m:mn></m:math> años) para pescar en el estanque.</para>
+<para id="fs-id1167793495113">Los amigos del dueño tienen que esperar <m:math><m:mrow><m:mn>25,93</m:mn></m:mrow></m:math> meses (un poco más de <m:math><m:mn>2</m:mn></m:math> años) para pescar en el estanque.</para>
 </solution>
 </exercise>
 </example>
@@ -195,7 +195,7 @@
 <para id="fs-id1167793926208">Supongamos que se necesita <m:math><m:mn>9</m:mn></m:math> meses para que la población de peces en el <link target-id="fs-id1167793294341"/> alcance <m:math><m:mrow><m:mn>1000</m:mn></m:mrow></m:math> peces. En estas circunstancias, ¿cuánto tiempo tienen que esperar los amigos del propietario?</para>
 </problem>
 <solution id="fs-id1167793375020">
-<para id="fs-id1167794067551">Los términos <m:math><m:mrow><m:mn>38.90</m:mn></m:mrow></m:math> meses</para>
+<para id="fs-id1167794067551">Los términos <m:math><m:mrow><m:mn>38,90</m:mn></m:mrow></m:math> meses</para>
 </solution>
 <commentary id="fs-id1167794067559" type="hint">
 <title>Pista</title>
@@ -291,7 +291,7 @@ Los términos <m:math><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>130</m:mn><m:msu
 <para id="fs-id1167793446651">Por lo tanto, en <m:math><m:mrow><m:mn>50</m:mn></m:mrow></m:math> años, <m:math><m:mrow><m:mn>99,40</m:mn></m:mrow></m:math> g de <m:math><m:mrow><m:mtext>carbono-</m:mtext><m:mn>14</m:mn></m:mrow></m:math> permanecerán.</para>
 <para id="fs-id1167793628300">Para determinar la edad del artefacto, debemos resolver</para>
 <equation id="fs-id1167793628303" class="unnumbered"><label/>Los términos <m:math><m:mtable><m:mtr><m:mtd columnalign="right"><m:mn>10</m:mn></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>100</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>5730</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>t</m:mi></m:mrow></m:msup></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mfrac><m:mn>1</m:mn><m:mrow><m:mn>10</m:mn></m:mrow></m:mfrac></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:msup><m:mi>e</m:mi><m:mrow><m:mtext>-</m:mtext><m:mrow><m:mo>(</m:mo><m:mrow><m:mtext>ln</m:mtext><m:mspace width="0.2em"/><m:mn>2</m:mn><m:mtext>/</m:mtext><m:mn>5730</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mi>t</m:mi></m:mrow></m:msup></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:mi>t</m:mi></m:mtd><m:mtd columnalign="left"><m:mo>≈</m:mo></m:mtd><m:mtd columnalign="left"><m:mn>19.035.</m:mn></m:mtd></m:mtr></m:mtable></m:math></equation>
-<para id="fs-id1167794296558">El artefacto tiene aproximadamente <m:math><m:mrow><m:mn>19,000</m:mn></m:mrow></m:math> años.</para>
+<para id="fs-id1167794296558">El artefacto tiene aproximadamente <m:math><m:mrow><m:mn>19.000</m:mn></m:mrow></m:math> años.</para>
 </solution>
 </exercise>
 </example>
@@ -301,7 +301,7 @@ Los términos <m:math><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>130</m:mn><m:msu
 <para id="fs-id1167793932269">Si tenemos <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> g de <m:math><m:mrow><m:mtext>carbono-</m:mtext><m:mn>14</m:mn><m:mo>,</m:mo></m:mrow></m:math> ¿cuánto queda después de <m:math><m:mi>t</m:mi></m:math> años? Si un artefacto que originalmente contenía <m:math><m:mrow><m:mn>100</m:mn></m:mrow></m:math> g de carbono contiene ahora <m:math><m:mrow><m:mn>20</m:mn><m:mi>g</m:mi></m:mrow></m:math> de carbono, ¿cuántos años tiene? Redondee la respuesta a la centena de años más cercana.</para>
 </problem>
 <solution id="fs-id1167793590436">
-<para id="fs-id1167793590438">Un total de <m:math><m:mrow><m:mn>94.13</m:mn></m:mrow></m:math> g de carbono. El artefacto tiene aproximadamente <m:math><m:mrow><m:mn>13,300</m:mn></m:mrow></m:math> años.</para>
+<para id="fs-id1167793590438">Un total de <m:math><m:mrow><m:mn>94,13</m:mn></m:mrow></m:math> g de carbono. El artefacto tiene aproximadamente <m:math><m:mrow><m:mn>13.300</m:mn></m:mrow></m:math> años.</para>
 </solution>
 <commentary id="fs-id1167793546905" type="hint">
 <title>Pista</title>
@@ -386,7 +386,7 @@ Los términos <m:math><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>130</m:mn><m:msu
 <para id="fs-id1167793557842">Las poblaciones de Nueva York y Los Ángeles crecen a <m:math><m:mrow><m:mn>1</m:mn><m:mtext>%</m:mtext></m:mrow></m:math> y <m:math><m:mrow><m:mn>1,4</m:mn><m:mtext>%</m:mtext></m:mrow></m:math> al año, respectivamente. A partir de <m:math><m:mn>8</m:mn></m:math> millones (Nueva York) y <m:math><m:mn>6</m:mn></m:math> millones (Los Ángeles), ¿cuándo se igualan las poblaciones?</para>
 </problem>
 <solution id="fs-id1167794172042">
-<para id="fs-id1167794172044">Los términos <m:math><m:mrow><m:mn>71.92</m:mn></m:mrow></m:math> años</para>
+<para id="fs-id1167794172044">Los términos <m:math><m:mrow><m:mn>71,92</m:mn></m:mrow></m:math> años</para>
 </solution>
 </exercise>
 <exercise id="fs-id1167794073084">
@@ -425,7 +425,7 @@ Los términos <m:math><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>130</m:mn><m:msu
 <para id="fs-id1167793538322">¿Qué tipo de interés continuo tiene el mismo rendimiento que un interés anual de <m:math><m:mrow><m:mn>9</m:mn><m:mtext>%</m:mtext><m:mo>con dígito d?</m:mo></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1167793538335">
-<para id="fs-id1167793538337">Los términos <m:math><m:mrow><m:mn>8.618</m:mn><m:mtext>%</m:mtext></m:mrow></m:math></para>
+<para id="fs-id1167793538337">Los términos <m:math><m:mrow><m:mn>8,618</m:mn><m:mtext>%</m:mtext></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1167793538348">
@@ -438,7 +438,7 @@ Los términos <m:math><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>130</m:mn><m:msu
 <para id="fs-id1167793553648">Usted está tratando de ahorrar <m:math><m:mrow><m:mtext>$</m:mtext><m:mn>50.000</m:mn></m:mrow></m:math> en <m:math><m:mrow><m:mn>20</m:mn></m:mrow></m:math> años para la matrícula universitaria de su hijo. Si se trata de un interés continuo al <m:math><m:mrow><m:mn>10</m:mn><m:mtext>%</m:mtext><m:mo>,</m:mo></m:mrow></m:math> ¿cuál es el monto de la inversión inicial?</para>
 </problem>
 <solution id="fs-id1167793543294">
-<para id="fs-id1167793543297">Los términos <m:math><m:mrow><m:mtext>$</m:mtext><m:mn>6766.76</m:mn></m:mrow></m:math></para>
+<para id="fs-id1167793543297">Los términos <m:math><m:mrow><m:mtext>$</m:mtext><m:mn>6766,76</m:mn></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1167793543307">
@@ -464,7 +464,7 @@ Los términos <m:math><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>130</m:mn><m:msu
 <para id="fs-id1167793931555">El combustible que consume un reactor nuclear contiene plutonio-239, que tiene una vida media de <m:math><m:mrow><m:mn>24.000</m:mn></m:mrow></m:math> años. Si los valores de <m:math><m:mn>1</m:mn></m:math> barril que contiene <m:math><m:mrow><m:mn>10</m:mn><m:mspace width="0.2em"/><m:mtext>kg</m:mtext></m:mrow></m:math> de plutonio-239 está sellado, ¿cuántos años deben pasar hasta que solo queden <m:math><m:mrow><m:mn>10</m:mn><m:mi>g</m:mi></m:mrow></m:math> de plutonio-239?</para>
 </problem>
 <solution id="fs-id1167793477075">
-<para id="fs-id1167793477077">Los términos <m:math><m:mrow><m:mn>239,179</m:mn></m:mrow></m:math> años</para>
+<para id="fs-id1167793477077">Los términos <m:math><m:mrow><m:mn>239.179</m:mn></m:mrow></m:math> años</para>
 </solution>
 </exercise>
 <para id="fs-id1167793477087">En la siguiente serie de ejercicios utilice la tabla correspondiente, que muestra la población mundial por décadas.</para>
@@ -482,19 +482,19 @@ Los términos <m:math><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>130</m:mn><m:msu
 <tbody>
 <row valign="top">
 <entry valign="top" align="left">Los términos <m:math><m:mn>0</m:mn></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>2,556</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>2.556</m:mn></m:mrow></m:math></entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>3,039</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>3.039</m:mn></m:mrow></m:math></entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>20</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>3,706</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>3.706</m:mn></m:mrow></m:math></entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>30</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>4,453</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>4.453</m:mn></m:mrow></m:math></entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>40</m:mn></m:mrow></m:math></entry>
@@ -502,11 +502,11 @@ Los términos <m:math><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>130</m:mn><m:msu
 </row>
 <row valign="top">
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>50</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>6,083</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>6.083</m:mn></m:mrow></m:math></entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>60</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>6,849</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>6.849</m:mn></m:mrow></m:math></entry>
 </row>
 </tbody>
 </tgroup>
@@ -553,19 +553,19 @@ Los términos <m:math><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>130</m:mn><m:msu
 <tbody>
 <row valign="top">
 <entry valign="top" align="left">Los términos <m:math><m:mn>0</m:mn></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>21.00</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>21,00</m:mn></m:mrow></m:math></entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>10</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>56.80</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>56,80</m:mn></m:mrow></m:math></entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>20</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>149.5</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>149,5</m:mn></m:mrow></m:math></entry>
 </row>
 <row valign="top">
 <entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>30</m:mn></m:mrow></m:math></entry>
-<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>234.0</m:mn></m:mrow></m:math></entry>
+<entry valign="top" align="left">Los términos <m:math><m:mrow><m:mn>234,0</m:mn></m:mrow></m:math></entry>
 </row>
 </tbody>
 </tgroup>
@@ -573,7 +573,7 @@ Los términos <m:math><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>130</m:mn><m:msu
 </table>
 <exercise id="fs-id1167793469794">
 <problem id="fs-id1167793469796">
-<para id="fs-id1167793469798"><emphasis effect="bold">[T]</emphasis> La curva exponencial mejor ajustada a los datos de la forma <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>a</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mi>b</m:mi><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:math> viene dada por <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>35.26</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>0,06407</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math> Utilice una calculadora gráfica para graficar los datos y la curva exponencial juntos.</para>
+<para id="fs-id1167793469798"><emphasis effect="bold">[T]</emphasis> La curva exponencial mejor ajustada a los datos de la forma <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>a</m:mi><m:msup><m:mi>e</m:mi><m:mrow><m:mi>b</m:mi><m:mi>t</m:mi></m:mrow></m:msup></m:mrow></m:math> viene dada por <m:math><m:mrow><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>35,26</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>0,06407</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math> Utilice una calculadora gráfica para graficar los datos y la curva exponencial juntos.</para>
 </problem>
 </exercise>
 <exercise id="fs-id1167794127471">
@@ -581,7 +581,7 @@ Los términos <m:math><m:mrow><m:mi>T</m:mi><m:mo>=</m:mo><m:mn>130</m:mn><m:msu
 <para id="fs-id1167794127475"><emphasis effect="bold">[T]</emphasis> Calcule y grafique la derivada <m:math><m:msup><m:mi>y</m:mi><m:mo>′</m:mo></m:msup></m:math> de su ecuación. ¿Dónde está aumentando? ¿Qué significa este aumento? ¿Hay algún valor en el que el aumento sea máximo?</para>
 </problem>
 <solution id="fs-id1167794127492">
-<para id="fs-id1167794127494">Los términos <m:math><m:mrow><m:mi>P</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2.259</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>0,06407</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math> La población siempre aumenta.</para>
+<para id="fs-id1167794127494">Los términos <m:math><m:mrow><m:mi>P</m:mi><m:mo>′</m:mo><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2,259</m:mn><m:msup><m:mi>e</m:mi><m:mrow><m:mn>0,06407</m:mn><m:mi>t</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math> La población siempre aumenta.</para>
 </solution>
 </exercise>
 <exercise id="fs-id1167794127528">

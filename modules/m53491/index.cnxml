@@ -196,22 +196,22 @@
 <entry align="left">0,24984394501</entry>
 </row>
 <row valign="top">
-<entry align="left">3.999</entry>
-<entry align="left">0.250015627</entry>
+<entry align="left">3,999</entry>
+<entry align="left">0,250015627</entry>
 <entry align="left">4,001</entry>
-<entry align="left">0.249984377</entry>
+<entry align="left">0,249984377</entry>
 </row>
 <row valign="top">
-<entry align="left">3.9999</entry>
-<entry align="left">0.250001563</entry>
+<entry align="left">3,9999</entry>
+<entry align="left">0,250001563</entry>
 <entry align="left">4,0001</entry>
-<entry align="left">0.249998438</entry>
+<entry align="left">0,249998438</entry>
 </row>
 <row valign="top">
-<entry align="left">3.99999</entry>
-<entry align="left">0.25000016</entry>
-<entry align="left">4.00001</entry>
-<entry align="left">0.24999984</entry>
+<entry align="left">3,99999</entry>
+<entry align="left">0,25000016</entry>
+<entry align="left">4,00001</entry>
+<entry align="left">0,24999984</entry>
 </row>
 </tbody>
 </tgroup>
@@ -483,31 +483,31 @@
 <entry align="left">2,9</entry>
 <entry morerows="4"/>
 <entry align="left">2,1</entry>
-<entry align="left">0.41</entry>
+<entry align="left">0,41</entry>
 </row>
 <row valign="top">
 <entry align="left">1,99</entry>
 <entry align="left">2,99</entry>
 <entry align="left">2,01</entry>
-<entry align="left">0.0401</entry>
+<entry align="left">0,0401</entry>
 </row>
 <row valign="top">
 <entry align="left">1,999</entry>
 <entry align="left">2,999</entry>
 <entry align="left">2,001</entry>
-<entry align="left">0.004001</entry>
+<entry align="left">0,004001</entry>
 </row>
 <row valign="top">
 <entry align="left">1,9999</entry>
-<entry align="left">2.9999</entry>
+<entry align="left">2,9999</entry>
 <entry align="left">2,0001</entry>
-<entry align="left">0.00040001</entry>
+<entry align="left">0,00040001</entry>
 </row>
 <row valign="top">
-<entry align="left">1.99999</entry>
-<entry align="left">2.99999</entry>
+<entry align="left">1,99999</entry>
+<entry align="left">2,99999</entry>
 <entry align="left">2,00001</entry>
-<entry align="left">0.0000400001</entry>
+<entry align="left">0,0000400001</entry>
 </row>
 </tbody>
 </tgroup>
@@ -834,18 +834,18 @@
 <tbody>
 <row valign="top">
 <entry align="left">0,99</entry>
-<entry align="left">0.1411</entry>
-<entry align="left">7.089</entry>
+<entry align="left">0,1411</entry>
+<entry align="left">7,089</entry>
 </row>
 <row valign="top">
 <entry align="left">0,999</entry>
-<entry align="left">0.0447</entry>
-<entry align="left">22.37</entry>
+<entry align="left">0,0447</entry>
+<entry align="left">22,37</entry>
 </row>
 <row valign="top">
 <entry align="left">0,9999</entry>
-<entry align="left">0.0141</entry>
-<entry align="left">70.71</entry>
+<entry align="left">0,0141</entry>
+<entry align="left">70,71</entry>
 </row>
 </tbody>
 </tgroup>
@@ -1412,7 +1412,7 @@
 </tgroup>
 </table></problem>
 <solution id="fs-id1170571610862">
-<para id="fs-id1170571610864">a. 0,13495277; b. 0,12594300; c. 0,12509381; d. 0,12500938; e. 0,11614402; f. 0,12406794; g. 0,12490631; h. 0,12499063 <m:math><m:mrow><m:mo>∴</m:mo><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mn>2</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0.1250</m:mn><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>8</m:mn></m:mfrac></m:mrow></m:math></para>
+<para id="fs-id1170571610864">a. 0,13495277; b. 0,12594300; c. 0,12509381; d. 0,12500938; e. 0,11614402; f. 0,12406794; g. 0,12490631; h. 0,12499063 <m:math><m:mrow><m:mo>∴</m:mo><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mn>2</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2</m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0,1250</m:mn><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>8</m:mn></m:mfrac></m:mrow></m:math></para>
 </solution>
 </exercise>
 <para id="fs-id1170571610923"><emphasis effect="bold">[T]</emphasis> En los siguientes ejercicios, establezca una tabla de valores y redondee a ocho dígitos significativos. Con base en la tabla de valores, haga una conjetura sobre cuál es el límite. A continuación, utilice una calculadora para representar gráficamente la función y determinar el límite. ¿Su conjetura fue correcta? Si no, ¿por qué falla el método de las tablas?</para>
@@ -1500,7 +1500,7 @@
 </table>
 </problem>
 <solution id="fs-id1170572243168">
-<para id="fs-id1170572243170">a. 10.00000; b. 100.00000; c. 1000.0000; d. 10,000.000; Guess: <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>α</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>α</m:mi></m:mfrac><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mi>α</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> resultado: DNE<newline/>
+<para id="fs-id1170572243170">a. 10,00000; b. 100,00000; c. 1000,0000; d. 10.000,000; estimación: <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím.</m:mtext></m:mrow><m:mrow><m:mi>α</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>α</m:mi></m:mfrac><m:mspace width="0.1em"/><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mi>α</m:mi></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> resultado: DNE<newline/>
 <media id="fs-id1170572243221" alt="Un gráfico de la función (1/alfa) * cos (pi / alfa), que oscila suavemente hasta el intervalo [-0,2, 0,2], donde oscila rápidamente, yendo al infinito y al infinito negativo a medida que se acerca al eje y.">
 <image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_02_214.jpg"/>
 </media></para>
@@ -1780,7 +1780,7 @@
 </list>
 </problem>
 <solution id="fs-id1170572478063">
-<para id="fs-id1170572478066">a. <m:math><m:mrow><m:msub><m:mi>ρ</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> b. <m:math><m:mrow><m:msub><m:mi>ρ</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> c. DNE a menos que <m:math><m:mrow><m:msub><m:mi>ρ</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>ρ</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Cuando se acerca a <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mtext>SF</m:mtext></m:mrow></m:msub></m:mrow></m:math> from the left, you are in the high-density area of the shock. When you approach from the right, you have not experienced the “shock” yet and are at a lower density.</para>
+<para id="fs-id1170572478066">a. <m:math><m:mrow><m:msub><m:mi>ρ</m:mi><m:mn>2</m:mn></m:msub></m:mrow></m:math> b. <m:math><m:mrow><m:msub><m:mi>ρ</m:mi><m:mn>1</m:mn></m:msub></m:mrow></m:math> c. DNE a menos que <m:math><m:mrow><m:msub><m:mi>ρ</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi>ρ</m:mi><m:mn>2</m:mn></m:msub><m:mo>.</m:mo></m:mrow></m:math> Cuando se acerca a <m:math><m:mrow><m:msub><m:mi>x</m:mi><m:mrow><m:mtext>SF</m:mtext></m:mrow></m:msub></m:mrow></m:math> desde la izquierda, se encuentra en la zona de alta densidad de la onda expansiva. Cuando se acerca por la derecha, aún no ha experimentado el "choque" y está en una densidad más baja.</para>
 </solution>
 </exercise>
 <exercise id="fs-id1170572478118">
@@ -1807,11 +1807,11 @@
 </row>
 <row valign="top">
 <entry align="left">1,99</entry>
-<entry align="left">6.42</entry>
+<entry align="left">6,42</entry>
 </row>
 <row valign="top">
 <entry align="left">2,01</entry>
-<entry align="left">6.58</entry>
+<entry align="left">6,58</entry>
 </row>
 <row valign="top">
 <entry align="left">2,05</entry>
