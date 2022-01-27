@@ -1,5 +1,5 @@
 <container xmlns="https://openstax.org/namespaces/book-container" version="1">
-   <book slug="cálculo-volumen-1" collection-id="col10002" href="../collections/cálculo-volumen-1.collection.xml" />
-   <book slug="cálculo-volumen-2" collection-id="col10016" href="../collections/cálculo-volumen-2.collection.xml" />
-   <book slug="cálculo-volumen-3" collection-id="col10030" href="../collections/cálculo-volumen-3.collection.xml" />
+   <book slug="cálculo-volumen-1" collection-id="col10002" style="calculus" href="../collections/cálculo-volumen-1.collection.xml" />
+   <book slug="cálculo-volumen-2" collection-id="col10016" style="calculus" href="../collections/cálculo-volumen-2.collection.xml" />
+   <book slug="cálculo-volumen-3" collection-id="col10030" style="calculus" href="../collections/cálculo-volumen-3.collection.xml" />
 </container>
