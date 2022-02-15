@@ -766,12 +766,12 @@
 <exercise id="fs-id1170572551494">
 <problem id="fs-id1170572551497">
 <para id="fs-id1170572551499"><emphasis effect="bold">[T]</emphasis> La temperatura promedio (en grados Celsius) de una ciudad del norte de Estados Unidos se puede modelar mediante la función</para>
-<para id="fs-id1170572551507"><m:math><m:mrow><m:mi>T</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>).</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>+</m:mo><m:mn>18</m:mn><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>- −</m:mo><m:mn>4,6</m:mn></m:mrow><m:mo>).</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>x</m:mi></m:math> es el tiempo en meses y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1,00</m:mn></m:mrow></m:math> corresponde al 1 de enero. Determine el/los día(s) (mes y día) en que la temperatura promedio es <m:math>.<m:mrow><m:mn>21</m:mn><m:mtext> °</m:mtext><m:mtext>C</m:mtext><m:mo>.</m:mo></m:mrow>Utilice la parte entera de su(s) respuesta(s) como el mes y calcule el día del mes a partir de la parte decimal.
-
+<para id="fs-id1170572551507"><m:math><m:mrow><m:mi>T</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>).</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>+</m:mo><m:mn>18</m:mn><m:mspace width="0.1em"/><m:mtext>sen</m:mtext><m:mrow><m:mo>[</m:mo><m:mrow><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>- −</m:mo><m:mn>4,6</m:mn></m:mrow><m:mo>).</m:mo></m:mrow></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> donde <m:math><m:mi>x</m:mi></m:math> es el tiempo en meses y <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1,00</m:mn></m:mrow></m:math> corresponde al 1 de enero. Determine el/los día(s) (mes y día) en que la temperatura promedio es <m:math><m:mrow><m:mn>21</m:mn><m:mtext> °</m:mtext><m:mtext>C</m:mtext><m:mo>.</m:mo></m:mrow></m:math>Utilice la parte entera de su(s) respuesta(s) como el mes y calcule el día del mes a partir de la parte decimal.</para>
+</problem>
 <solution id="fs-id1170572545092">
 <para id="fs-id1170572545094"><m:math><m:mrow><m:mi>x</m:mi><m:mo>≈</m:mo><m:mn>6,69</m:mn><m:mo>,</m:mo><m:mn>8,51</m:mn><m:mo>;</m:mo></m:mrow></m:math> así, la temperatura tiene lugar el 21 de junio y el 15 de agosto.</para>
 </solution>
-
+</exercise>
 <exercise id="fs-id1170572545115">
 <problem id="fs-id1170572545117">
 <para id="fs-id1170572545119"><emphasis effect="bold">[T]</emphasis> La profundidad (en pies) del agua en un muelle cambia con la subida y bajada de las mareas. Se modela mediante la función</para>
@@ -805,7 +805,8 @@
 <para id="fs-id1170572243837"><emphasis effect="bold">[T]</emphasis> Utilice una calculadora para evaluar <m:math><m:mrow><m:mtext>sen</m:mtext><m:mo stretchy="false">(</m:mo><m:msup><m:mrow><m:mtext>sen</m:mtext></m:mrow><m:mrow><m:mn>−1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mn>−2</m:mn><m:mo stretchy="false">).</m:mo><m:mo stretchy="false">).</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mtext>tan</m:mtext><m:mo stretchy="false">(</m:mo><m:msup><m:mrow><m:mtext>tan</m:mtext></m:mrow><m:mrow><m:mn>–1</m:mn></m:mrow></m:msup><m:mo stretchy="false">(</m:mo><m:mn>−2</m:mn><m:mo stretchy="false">).</m:mo><m:mo stretchy="false">).</m:mo><m:mo>.</m:mo></m:mrow></m:math> Explique los resultados de cada uno.</para>
 </problem>
 </exercise>
-
+</section>
+</content>
   
 <glossary>
 <definition id="fs-id1170572229168">
@@ -829,4 +830,4 @@
 <meaning id="fs-id1170572482689">subconjunto del dominio de una función <m:math><m:mi>f</m:mi></m:math></meaning>
 </definition>
 </glossary>
-</m:math></para></problem></exercise></section></content></document>
+</document>

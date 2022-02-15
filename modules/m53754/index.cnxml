@@ -693,7 +693,7 @@
 <equation id="fs-id1169738161782" class="unnumbered"><label/><m:math><m:mrow><m:munderover><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∑</m:mo></m:mstyle><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>∞</m:mi></m:munderover><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:mtext>y</m:mtext><m:mstyle displaystyle="true"><m:mrow><m:msubsup><m:mo stretchy="false">∫</m:mo><m:mn>1</m:mn><m:mi>∞</m:mi></m:msubsup><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>).</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mrow></m:mstyle></m:mrow></m:math></equation><newline/> ambas convergen o ambas divergen</meaning>
 </definition>
 <definition id="fs-id1169737433691">
-serie <term><emphasis effect="italics">p</emphasis></term>
+<term>serie <emphasis effect="italics">p</emphasis></term>
 <meaning id="fs-id1169737433701">una serie de la forma <m:math><m:mrow><m:munderover><m:mstyle mathsize="140%" displaystyle="true"><m:mo>∑</m:mo></m:mstyle><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>1</m:mn></m:mrow><m:mi>∞</m:mi></m:munderover><m:mn>1</m:mn><m:mtext>/</m:mtext><m:msup><m:mi>n</m:mi><m:mi>p</m:mi></m:msup></m:mrow></m:math></meaning>
 </definition>
 <definition id="fs-id1169737174578">
