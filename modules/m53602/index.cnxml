@@ -12,7 +12,7 @@
 <media id="fs-id1165043013968" alt="Foto de un cohete despegando.">
 <image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_00_003.jpg"/>
 </media>
-<caption>Cuando se lanza un cohete, ¿a qué velocidad debería cambiar el ángulo de una cámara de video para seguir observándolo? (Créditos: modificación de la obra de Steve Jurvetson, Wikimedia Commons).</caption>
+<caption>Cuando se lanza un cohete, ¿a qué velocidad debería cambiar el ángulo de una cámara de video para seguir observándolo? (créditos: modificación del trabajo de Steve Jurvetson, Wikimedia Commons).</caption>
 </figure>
 <para id="fs-id1165043057434">Se lanza un cohete desde tierra y las cámaras graban el evento. Una cámara de video está situada en el suelo a cierta distancia de la plataforma de lanzamiento. ¿A qué velocidad debe cambiar el ángulo de inclinación (el ángulo que forma la cámara con el suelo) para que esta pueda grabar el vuelo del cohete mientras este se dirige hacia arriba? (Vea la <link target-id="fs-id1165043116552" document="m53604"/>).</para>
 <para id="fs-id1165043065949">El lanzamiento de un cohete implica dos cantidades relacionadas que cambian con el tiempo. Ser capaces de resolver este tipo de problemas es solo una de las aplicaciones de las derivadas que se presentan en este capítulo. También veremos cómo se utilizan las derivadas para encontrar los valores máximos y mínimos de las funciones. Como resultado, podremos resolver problemas de optimización aplicados, como la maximización de los ingresos y la minimización del área superficial. Además, analizaremos cómo se utilizan las derivadas para evaluar límites complicados, para aproximar las raíces de las funciones y para proporcionar gráficos precisos de las funciones.</para>
