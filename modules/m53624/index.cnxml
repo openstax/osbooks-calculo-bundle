@@ -243,7 +243,7 @@
 <para id="fs-id1170572448369">Esbozar las aproximaciones del punto del extremo izquierdo y del punto del extremo derecho para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow></m:math> en <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>;</m:mo></m:mrow></m:math> utilice <m:math><m:mrow><m:mi>n</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math> Aproxime el área utilizando ambos métodos.</para>
 </problem>
 <solution id="fs-id1170572622437">
-<para id="fs-id1170572622439">La aproximación del extremo izquierdo es de 0,7595. La aproximación del punto final derecho es 0,6345. Consulte la siguiente <link target-id="fs-id1170572216462"/>.<newline/>
+<para id="fs-id1170572622439">La aproximación del extremo izquierdo es de 0,7595. La aproximación del punto final derecho es 0,6345.<newline/>
 <media id="fs-id1170572216462" alt="Dos gráficos contiguos que muestran la aproximación del punto del extremo izquierdo y la del punto del extremo derecho del área bajo la curva f(x) = 1/x de 1 a 2 con puntos finales espaciados uniformemente a 0,25 unidades. Las alturas de la aproximación del punto del extremo izquierdo uno están determinadas por los valores de la función en los puntos del extremo izquierdo, y la altura de la aproximación del punto derecho uno está determinada por los valores de la función en los puntos del extremo derecho.">
 <image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_05_01_012.jpg"/>
 </media>
