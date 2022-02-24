@@ -43,8 +43,8 @@
 <list id="fs-id1165043115403" list-type="enumerated" number-style="lower-alpha">
 <item><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:math></item>
 <item><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></item>
-<item><m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">).</m:mo><m:mo>=</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></item>
-<item><m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">).</m:mo><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mtext>cos</m:mtext><m:mspace width="0.1em"/><m:mi>x</m:mi></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>e</m:mi><m:mi>x</m:mi></m:msup></m:mrow></m:math></item>
 </list>
 </problem>
 <solution id="fs-id1165043061462">
@@ -310,7 +310,7 @@ Utilizando la regla de la potencia para las integrales, concluimos que<newline/>
 <media id="fs-id1165043248670" alt="Se muestran los gráficos de y = 2x3 + 6, y = 2x3 + 3, y = 2x3 y y = 2x3 - 3.">
 <image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_04_10_002.jpg"/>
 </media>
-<caption>Se muestran algunas de las curvas de solución de la ecuación diferencial <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>6</m:mn><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:math>. La función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2 </m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:math> satisface la ecuación diferencial y la condición inicial <m:math><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">).</m:mo><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math></caption>
+<caption>Se muestran algunas de las curvas de solución de la ecuación diferencial <m:math><m:mrow><m:mfrac><m:mrow><m:mi>d</m:mi><m:mi>y</m:mi></m:mrow><m:mrow><m:mi>d</m:mi><m:mi>x</m:mi></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>6</m:mn><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:math>. La función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>2 </m:mn><m:msup><m:mi>x</m:mi><m:mn>3</m:mn></m:msup><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow></m:math> satisface la ecuación diferencial y la condición inicial <m:math><m:mrow><m:mi>y</m:mi><m:mo stretchy="false">(</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math></caption>
 </figure>
 <example id="fs-id1165043327648">
 <exercise id="fs-id1165043327650">

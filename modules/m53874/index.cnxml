@@ -668,7 +668,7 @@
 <image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_12_06_228.jpg"/>
 </media>
 <list id="fs-id1163723475569" list-type="enumerated" number-style="lower-alpha">
-<item>Resuelva el sistema formado por las ecuaciones de las superficies para hallar la ecuación de la curva de intersección. (<emphasis effect="italics">Pista:</emphasis> Halle <m:math><m:mi>x</m:mi></m:math> como <m:math><m:mi>y</m:mi></m:math> en términos de <m:math><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo><m:mo stretchy="false">).</m:mo></m:mrow></m:math></item>
+<item>Resuelva el sistema formado por las ecuaciones de las superficies para hallar la ecuación de la curva de intersección. (<emphasis effect="italics">Pista:</emphasis> Halle <m:math><m:mi>x</m:mi></m:math> como <m:math><m:mi>y</m:mi></m:math> en términos de <m:math><m:mrow><m:mi>z</m:mi><m:mo>.</m:mo><m:mo stretchy="false">)</m:mo></m:mrow></m:math></item>
 <item>Utilice un sistema de álgebra computacional (CAS) para visualizar la curva de intersección en la esfera <m:math><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>y</m:mi><m:mn>2 </m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>z</m:mi><m:mn>2 </m:mn></m:msup><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math></item>
 </list>
 </problem>
