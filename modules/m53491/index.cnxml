@@ -18,7 +18,7 @@
 <content>
 <para id="fs-id1170572559700">El concepto de límite o proceso de límite, esencial para la comprensión del cálculo, existe desde hace miles de años. De hecho, los primeros matemáticos utilizaron un proceso de límite para obtener aproximaciones cada vez mejores de las áreas de los círculos. Sin embargo, la definición formal de límite, tal como la conocemos y entendemos hoy, no apareció sino hasta finales del siglo XIX. Por lo tanto, comenzamos nuestra búsqueda para entender los límites, como hicieron nuestros antepasados matemáticos, utilizando un enfoque intuitivo. Al final de este capítulo, dotados de una comprensión conceptual de los límites, examinaremos la definición formal de un límite.</para>
 <para id="fs-id1170572450938">Comenzaremos nuestra exploración de los límites echando un vistazo a los gráficos de las funciones</para>
-<equation id="fs-id1170572346957" class="unnumbered"><label/><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math></equation>
+<equation id="fs-id1170572346957" class="unnumbered"><label/><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>,</m:mo><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math></equation>
 <para id="fs-id1170572216951">que se muestran en la <link target-id="CNX_Calc_Figure_02_02_001"/>. En particular, vamos a centrarnos en el comportamiento de cada gráfico en y alrededor de <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2 </m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
 <figure id="CNX_Calc_Figure_02_02_001">
 <media id="fs-id1170572552071" alt="Tres gráficos de funciones. El primero es f(s) = (x^2 – 4) / (x–2), que es una línea con pendiente, intersección x (–2,0) y círculo abierto en (2,4). El segundo es g(x) = |x – 2 | / (x-2), que contiene dos líneas: x = 1 para x>2 y x = –1 para x &lt; 2. Hay círculos abiertos en ambos puntos extremos (2, 1) y (-2, 1). El tercero es h(x) = 1 / (x-2)^2, en la que la función se curva asintóticamente hacia y = 0 y x = 2 en los cuadrantes uno y dos.">
@@ -29,7 +29,7 @@
 <para id="fs-id1170572175064">Cada una de las tres funciones está indefinida en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2 </m:mn><m:mo>,</m:mo></m:mrow></m:math> pero si hacemos solo esta afirmación, damos una imagen muy incompleta de cómo se comporta cada función en las proximidades de <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2 </m:mn><m:mo>.</m:mo></m:mrow></m:math> Para expresar de forma más completa el comportamiento de cada gráfico en la vecindad de 2, necesitamos introducir el concepto de límite.</para>
 <section id="fs-id1170572280146">
 <title>Definición intuitiva de un límite</title>
-<para id="fs-id1170572449458">Veamos primero cómo la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mtext>/</m:mtext><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mrow></m:math> se comporta alrededor de <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2 </m:mn></m:mrow></m:math> en la <link target-id="CNX_Calc_Figure_02_02_001"/>. A medida que los valores de <emphasis effect="italics">x</emphasis> se acercan a 2 desde cualquier lado de 2, los valores de <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se acercan a 4. Matemáticamente, decimos que el límite de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> a medida que <emphasis effect="italics">x</emphasis> se acerca a 2 es 4. Simbólicamente, expresamos este límite como</para>
+<para id="fs-id1170572449458">Veamos primero cómo la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mrow><m:mo stretchy="false">(</m:mo><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mtext>/</m:mtext><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mrow></m:math> se comporta alrededor de <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2 </m:mn></m:mrow></m:math> en la <link target-id="CNX_Calc_Figure_02_02_001"/>. A medida que los valores de <emphasis effect="italics">x</emphasis> se acercan a 2 desde cualquier lado de 2, los valores de <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se acercan a 4. Matemáticamente, decimos que el límite de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> a medida que <emphasis effect="italics">x</emphasis> se acerca a 2 es 4. Simbólicamente, expresamos este límite como</para>
 <equation id="fs-id1170571655049" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
 <para id="fs-id1170572220702">A partir de esta brevísima mirada informal a un límite, empecemos a desarrollar una <term id="term-00001">definición intuitiva del límite</term>. Podemos pensar que el límite de una función en un número <emphasis effect="italics">a</emphasis> es el único número real <emphasis effect="italics">L</emphasis> al que se acercan los valores de la función a medida que los valores de <emphasis effect="italics">x</emphasis> se acercan a <emphasis effect="italics">a,</emphasis> siempre que dicho número real <emphasis effect="italics">L</emphasis> exista. Tenemos la siguiente definición que se expresa con más detalle:</para>
 <note id="fs-id1170572479385">
@@ -58,27 +58,27 @@
   </thead>
   <tbody>
   <row valign="top">
-  <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mn>0,1</m:mn></m:mrow></m:math></entry>
-  <entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mn>0,1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+  <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>−</m:mo><m:mn>0,1</m:mn></m:mrow></m:math></entry>
+  <entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>−</m:mo><m:mn>0,1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
 <entry morerows="4"/>
 <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0,1</m:mn></m:mrow></m:math></entry>
   <entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0,1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
   </row>
   <row valign="top">
-  <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mn>0,01</m:mn></m:mrow></m:math></entry>
-  <entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mn>0,01</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+  <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>−</m:mo><m:mn>0,01</m:mn></m:mrow></m:math></entry>
+  <entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>−</m:mo><m:mn>0,01</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
   <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0,01</m:mn></m:mrow></m:math></entry>
   <entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0,01</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
   </row>
   <row valign="top">
-  <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mn>0,001</m:mn></m:mrow></m:math></entry>
-  <entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mn>0,001</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+  <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>−</m:mo><m:mn>0,001</m:mn></m:mrow></m:math></entry>
+  <entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>−</m:mo><m:mn>0,001</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
   <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0,001</m:mn></m:mrow></m:math></entry>
   <entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0,001</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
   </row>
   <row valign="top">
-  <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mn>0,0001</m:mn></m:mrow></m:math></entry>
-  <entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mn>0,0001</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
+  <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>−</m:mo><m:mn>0,0001</m:mn></m:mrow></m:math></entry>
+  <entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>−</m:mo><m:mn>0,0001</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</entry>
   <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0,0001</m:mn></m:mrow></m:math></entry>
   <entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0,0001</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></entry>
   </row>
@@ -120,26 +120,26 @@
 </thead>
 <tbody>
 <row valign="top">
-<entry align="left">-0,1</entry>
+<entry align="left">−0,1</entry>
 <entry align="left">0,998334166468</entry>
 <entry morerows="3"/>
 <entry align="left">0,1</entry>
 <entry align="left">0,998334166468</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,01</entry>
+<entry align="left">−0,01</entry>
 <entry align="left">0,999983333417</entry>
 <entry align="left">0,01</entry>
 <entry align="left">0,999983333417</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,001</entry>
+<entry align="left">−0,001</entry>
 <entry align="left">0,999999833333</entry>
 <entry align="left">0,001</entry>
 <entry align="left">0,999999833333</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,0001</entry>
+<entry align="left">−0,0001</entry>
 <entry align="left">0,999999998333</entry>
 <entry align="left">0,0001</entry>
 <entry align="left">0,999999998333</entry>
@@ -160,12 +160,12 @@
 <exercise id="fs-id1170572224892">
 <problem id="fs-id1170572627386">
 <title>Evaluación de un límite mediante una tabla de valores funcionales 2</title>
-<para id="fs-id1170572550814">Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>4</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math> utilizando una tabla de valores funcionales.</para>
+<para id="fs-id1170572550814">Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>4</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math> utilizando una tabla de valores funcionales.</para>
 </problem>
 <solution id="fs-id1170572203578">
 <para id="fs-id1170572141980">Como antes, utilizamos una tabla (en este caso, la <link target-id="fs-id1170571595483"/>) para enumerar los valores de la función para los valores dados de <emphasis effect="italics">x</emphasis>.</para>
 <table id="fs-id1170571595483" summary="Se muestran dos tablas, cada una con seis filas y dos columnas. La primera tabla tiene los encabezados x y (sqrt(x) – 2 ) / (x–4) en la primera fila. Debajo de x en la primera columna están los valores 3,9; 3,99; 3,999; 3,9999; y 3,99999. En la segunda columna están los valores 0,251582341869; 0,25015644562; 0,250015627; 0,250001563; 0,25000016. La segunda tabla tiene los mismos encabezados en la primera fila. Debajo de x en la primera columna están los valores 4,1; 4,01; 4,001; 4,0001; y 4,00001. En la segunda columna están los valores 0,248456731317; 0,24984394501; 0,249984377; 0,249998438; y 0,24999984.">
-<title>Tabla de valores funcionales para <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>4</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math></title>
+<title>Tabla de valores funcionales para <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>4</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math></title>
 <tgroup cols="5">
 <colspec colnum="1" colname="c1"/>
 <colspec colnum="2" colname="c2"/>
@@ -175,10 +175,10 @@
 <thead>
 <row valign="top">
 <entry align="left"><emphasis effect="italics">x</emphasis></entry>
-<entry align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math></entry>
 <entry align="left"/>
 <entry align="left"><emphasis effect="italics">x</emphasis></entry>
-<entry align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math></entry>
 </row>
 </thead>
 <tbody>
@@ -216,12 +216,12 @@
 </tbody>
 </tgroup>
 </table>
-<para id="fs-id1170572455426">Después de revisar esta tabla, vemos que los valores funcionales inferiores a 4 parecen disminuir hacia 0,25 mientras que los valores funcionales superiores a 4 parecen aumentar hacia 0,25. Concluimos que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>4</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0,25</m:mn><m:mo>.</m:mo></m:mrow></m:math> Confirmamos esta estimación utilizando el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math> se muestra en la <link target-id="CNX_Calc_Figure_02_02_004"/>.</para>
+<para id="fs-id1170572455426">Después de revisar esta tabla, vemos que los valores funcionales inferiores a 4 parecen disminuir hacia 0,25 mientras que los valores funcionales superiores a 4 parecen aumentar hacia 0,25. Concluimos que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>4</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0,25</m:mn><m:mo>.</m:mo></m:mrow></m:math> Confirmamos esta estimación utilizando el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math> se muestra en la <link target-id="CNX_Calc_Figure_02_02_004"/>.</para>
 <figure id="CNX_Calc_Figure_02_02_004">
 <media id="fs-id1170571595381" alt="Gráfico de la función f(x) = (sqrt(x) – 2 ) / (x-4) sobre el intervalo [0,8]. Hay un círculo abierto en la función en x=4. La función se curva asintóticamente hacia el eje x y el eje y en el cuadrante uno.">
 <image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_02_004.jpg"/>
 </media>
-<caption>El gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math> confirma la estimación de la <link target-id="fs-id1170571595483"/>.</caption>
+<caption>El gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msqrt><m:mi>x</m:mi></m:msqrt><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math> confirma la estimación de la <link target-id="fs-id1170571595483"/>.</caption>
 </figure>
 </solution>
 </exercise>
@@ -311,26 +311,26 @@
 </thead>
 <tbody>
 <row valign="top">
-<entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mn>0,1</m:mn></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>−</m:mo><m:mn>0,1</m:mn></m:mrow></m:math></entry>
 <entry align="left"><emphasis effect="italics">c</emphasis></entry>
 <entry morerows="3"/>
 <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0,1</m:mn></m:mrow></m:math></entry>
 <entry align="left"><emphasis effect="italics">c</emphasis></entry>
 </row>
 <row valign="top">
-<entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mn>0,01</m:mn></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>−</m:mo><m:mn>0,01</m:mn></m:mrow></m:math></entry>
 <entry align="left"><emphasis effect="italics">c</emphasis></entry>
 <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0,01</m:mn></m:mrow></m:math></entry>
 <entry align="left"><emphasis effect="italics">c</emphasis></entry>
 </row>
 <row valign="top">
-<entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mn>0,001</m:mn></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>−</m:mo><m:mn>0,001</m:mn></m:mrow></m:math></entry>
 <entry align="left"><emphasis effect="italics">c</emphasis></entry>
 <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0,001</m:mn></m:mrow></m:math></entry>
 <entry align="left"><emphasis effect="italics">c</emphasis></entry>
 </row>
 <row valign="top">
-<entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>-</m:mo><m:mn>0,0001</m:mn></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>−</m:mo><m:mn>0,0001</m:mn></m:mrow></m:math></entry>
 <entry align="left"><emphasis effect="italics">c</emphasis></entry>
 <entry align="left"><m:math><m:mrow><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>0,0001</m:mn></m:mrow></m:math></entry>
 <entry align="left"><emphasis effect="italics">c</emphasis></entry>
@@ -368,7 +368,7 @@
 </thead>
 <tbody>
 <row valign="top">
-<entry align="left">-0,1</entry>
+<entry align="left">−0,1</entry>
 <entry align="left">0,544021110889</entry>
 <entry morerows="5"/>
 
@@ -376,19 +376,19 @@
 <entry align="left">−0,544021110889</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,01</entry>
+<entry align="left">−0,01</entry>
 <entry align="left">0,50636564111</entry>
 <entry align="left">0,01</entry>
 <entry align="left">−0,50636564111</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,001</entry>
+<entry align="left">−0,001</entry>
 <entry align="left">−0,8268795405312</entry>
 <entry align="left">0,001</entry>
 <entry align="left">0,826879540532</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,0001</entry>
+<entry align="left">−0,0001</entry>
 <entry align="left">0,305614388888</entry>
 <entry align="left">0,0001</entry>
 <entry align="left">−0,305614388888</entry>
@@ -424,10 +424,10 @@
 <note id="fs-id1170572455161" class="checkpoint">
 <exercise id="fs-id1170572455165">
 <problem id="fs-id1170572455167">
-<para id="fs-id1170572455169">Utilice una tabla de valores funcionales para evaluar <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> si es posible.</para>
+<para id="fs-id1170572455169">Utilice una tabla de valores funcionales para evaluar <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math> si es posible.</para>
 </problem>
 <solution id="fs-id1170572560591">
-<para id="fs-id1170572560593"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac></m:mrow></m:math> no existe.</para>
+<para id="fs-id1170572560593"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac></m:mrow></m:math> no existe.</para>
 </solution>
 <commentary id="fs-id1170573743335" type="hint">
 <title>Pista</title>
@@ -438,15 +438,15 @@
 </section>
 <section id="fs-id1170572334719">
 <title>Límites unilaterales</title>
-<para id="fs-id1170572334724">A veces, indicar que el límite de una función no existe en un punto no nos proporciona suficiente información sobre el comportamiento de la función en ese punto concreto. Para ver esto, volvamos a revisar la función <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mtext>/</m:mtext><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:mrow></m:math> introducido al principio de la sección (vea la <link target-id="CNX_Calc_Figure_02_02_001"/>(b)). Como elegimos valores de <emphasis effect="italics">x</emphasis> cercanos a 2, <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> no se aproxima a un único valor, por lo que el límite a medida que <emphasis effect="italics">x</emphasis> se aproxima a 2 no existe, es decir, <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> DNE. Sin embargo, esta afirmación por sí sola no nos da una imagen completa del comportamiento de la función en torno al valor <emphasis effect="italics">x</emphasis> de 2. Para proporcionar una descripción más precisa, introducimos la idea de un <term id="term-00002">límite unilateral</term>. Para todos los valores a la izquierda de 2 (o <emphasis effect="italics">el lado negativo de</emphasis> 2), <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, a medida que <emphasis effect="italics">x</emphasis> se acerca a 2 por la izquierda, <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se acerca a -1. Matemáticamente, decimos que el límite es -1 a medida que <emphasis effect="italics">x</emphasis> se acerca a 2 por la izquierda. Simbólicamente, expresamos esta idea como</para>
-<equation id="fs-id1170571655354" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−1</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170572334724">A veces, indicar que el límite de una función no existe en un punto no nos proporciona suficiente información sobre el comportamiento de la función en ese punto concreto. Para ver esto, volvamos a revisar la función <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mtext>/</m:mtext><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mrow></m:mrow></m:math> introducido al principio de la sección (vea la <link target-id="CNX_Calc_Figure_02_02_001"/>(b)). Como elegimos valores de <emphasis effect="italics">x</emphasis> cercanos a 2, <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> no se aproxima a un único valor, por lo que el límite a medida que <emphasis effect="italics">x</emphasis> se aproxima a 2 no existe, es decir, <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> DNE. Sin embargo, esta afirmación por sí sola no nos da una imagen completa del comportamiento de la función en torno al valor <emphasis effect="italics">x</emphasis> de 2. Para proporcionar una descripción más precisa, introducimos la idea de un <term id="term-00002">límite unilateral</term>. Para todos los valores a la izquierda de 2 (o <emphasis effect="italics">el lado negativo de</emphasis> 2), <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−1</m:mn><m:mo>.</m:mo></m:mrow></m:math> Por lo tanto, a medida que <emphasis effect="italics">x</emphasis> se acerca a 2 por la izquierda, <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se acerca a -1. Matemáticamente, decimos que el límite es -1 a medida que <emphasis effect="italics">x</emphasis> se acerca a 2 por la izquierda. Simbólicamente, expresamos esta idea como</para>
+<equation id="fs-id1170571655354" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−1</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
 <para id="fs-id1170571569214">Del mismo modo, a medida que <emphasis effect="italics">x</emphasis> se acerca a 2 por la derecha (o <emphasis effect="italics">desde el lado positivo</emphasis>), <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se acerca a 1. Simbólicamente, expresamos esta idea como</para>
 <equation id="fs-id1170571569241" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></equation>
 <para id="fs-id1170572307691">Ahora podemos presentar una definición informal de los límites unilaterales.</para>
 <note id="fs-id1170572307695">
 <title>Definición</title>
 <para id="fs-id1170572307699">Definamos dos tipos de <emphasis effect="bold">límites unilaterales</emphasis>.</para>
-<para id="fs-id1170572307707"><emphasis effect="italics">Límite por la izquierda:</emphasis> Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es una función definida en todos los valores de un intervalo abierto de la forma (<emphasis effect="italics">c</emphasis>, <emphasis effect="italics">a</emphasis>), y que <emphasis effect="italics">L</emphasis> es un número real. Si los valores de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se acercan al número real <emphasis effect="italics">L</emphasis> a medida que los valores de <emphasis effect="italics">x</emphasis> (donde <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mtext mathvariant="italic">a</m:mtext><m:mtext>).</m:mtext></m:mrow></m:math> se acercan al número <emphasis effect="italics">a</emphasis>, entonces decimos que <emphasis effect="italics">L</emphasis> es el límite de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> a medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis> por la izquierda. Simbólicamente, expresamos esta idea como</para><equation id="fs-id1170571531299"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<para id="fs-id1170572307707"><emphasis effect="italics">Límite por la izquierda:</emphasis> Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es una función definida en todos los valores de un intervalo abierto de la forma (<emphasis effect="italics">c</emphasis>, <emphasis effect="italics">a</emphasis>), y que <emphasis effect="italics">L</emphasis> es un número real. Si los valores de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se acercan al número real <emphasis effect="italics">L</emphasis> a medida que los valores de <emphasis effect="italics">x</emphasis> (donde <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mtext mathvariant="italic">a</m:mtext><m:mtext>).</m:mtext></m:mrow></m:math> se acercan al número <emphasis effect="italics">a</emphasis>, entonces decimos que <emphasis effect="italics">L</emphasis> es el límite de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> a medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis> por la izquierda. Simbólicamente, expresamos esta idea como</para><equation id="fs-id1170571531299"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
 <para id="fs-id1170571655616"><emphasis effect="italics">Límite por la derecha:</emphasis> Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> sea una función definida en todos los valores de un intervalo abierto de la forma <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>c</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> y que <emphasis effect="italics">L</emphasis> es un número real. Si los valores de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se acercan al número real L a medida que los valores de <emphasis effect="italics">x</emphasis> (donde <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mtext mathvariant="italic">a</m:mtext><m:mtext>).</m:mtext></m:mrow></m:math> se acercan al número <emphasis effect="italics">a</emphasis>, entonces decimos que <emphasis effect="italics">L</emphasis> es el límite de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> a medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis> por la derecha. Simbólicamente, expresamos esta idea como</para>
 <equation id="fs-id1170572453163"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
 </note>
@@ -454,15 +454,15 @@
 <exercise id="fs-id1170571614882">
 <problem id="fs-id1170571614884">
 <title>Evaluación de los límites unilaterales</title>
-<para id="fs-id1170571614889">Para que la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mtable columnalign="left"><m:mtr><m:mtd><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mtd><m:mtd columnalign="left"><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>2 </m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mtd><m:mtd columnalign="left"><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>2 </m:mn></m:mtd></m:mtr></m:mtable></m:mrow><m:mo>,</m:mo></m:mrow></m:math> evalúe cada uno de los siguientes límites.</para>
+<para id="fs-id1170571614889">Para que la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mtable columnalign="left"><m:mtr><m:mtd><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mtd><m:mtd columnalign="left"><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>2 </m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mtd><m:mtd columnalign="left"><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>2 </m:mn></m:mtd></m:mtr></m:mtable></m:mrow><m:mo>,</m:mo></m:mrow></m:math> evalúe cada uno de los siguientes límites.</para>
 <list id="fs-id1170571596873" list-type="enumerated" number-style="lower-alpha">
 <item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>–</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</item>
 <item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></item>
 </list>
 </problem>
 <solution id="fs-id1170572307128">
-<para id="fs-id1170572307130">Podemos volver a utilizar las tablas de valores funcionales en la <link target-id="fs-id1170572347185"/>. Nótese que para los valores de <emphasis effect="italics">x</emphasis> inferiores a 2, utilizamos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> y para valores de <emphasis effect="italics">x</emphasis> superiores a 2, utilizamos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
-<table id="fs-id1170572347185" summary="Dos tablas contiguas, ambas con dos columnas y seis filas. Los encabezados son los mismos, x y f(x) = x+1 en la primera fila. En la segunda tabla, los valores de la primera columna debajo de x son 1,9; 1,99; 1,999; 1,9999; y 1,99999. En la segunda columna, los valores debajo del encabezado son 2,9; 2,99; 2,999; 2,9999; y 2,99999. En la segunda columna, los valores de la primera columna debajo de x son 2,1; 2,01; 2,001; 2,0001; y 2,00001. En la segunda columna, los valores debajo del encabezado son 0,41; 0,0401; 0,004001; 0,00040001; y 0,0000400001."><title>Tabla de valores funcionales para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mtable columnalign="left"><m:mtr><m:mtd><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mspace width="0.2em"/><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>2 </m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>2 </m:mn></m:mtd></m:mtr></m:mtable></m:mrow></m:mrow></m:math></title><tgroup cols="5">
+<para id="fs-id1170572307130">Podemos volver a utilizar las tablas de valores funcionales en la <link target-id="fs-id1170572347185"/>. Nótese que para los valores de <emphasis effect="italics">x</emphasis> inferiores a 2, utilizamos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math> y para valores de <emphasis effect="italics">x</emphasis> superiores a 2, utilizamos <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<table id="fs-id1170572347185" summary="Dos tablas contiguas, ambas con dos columnas y seis filas. Los encabezados son los mismos, x y f(x) = x+1 en la primera fila. En la segunda tabla, los valores de la primera columna debajo de x son 1,9; 1,99; 1,999; 1,9999; y 1,99999. En la segunda columna, los valores debajo del encabezado son 2,9; 2,99; 2,999; 2,9999; y 2,99999. En la segunda columna, los valores de la primera columna debajo de x son 2,1; 2,01; 2,001; 2,0001; y 2,00001. En la segunda columna, los valores debajo del encabezado son 0,41; 0,0401; 0,004001; 0,00040001; y 0,0000400001."><title>Tabla de valores funcionales para <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mtable columnalign="left"><m:mtr><m:mtd><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mspace width="0.2em"/><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>2 </m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>2 </m:mn></m:mtd></m:mtr></m:mtable></m:mrow></m:mrow></m:math></title><tgroup cols="5">
 <colspec colnum="1" colname="c1"/>
 <colspec colnum="2" colname="c2"/>
 <colspec colnum="3" colname="c3"/>
@@ -474,7 +474,7 @@
 <entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn></m:mrow></m:math></entry>
 <entry/>
 <entry align="left"><emphasis effect="italics">x</emphasis></entry>
-<entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mn>-4</m:mn></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mn>−4</m:mn></m:mrow></m:math></entry>
 </row>
 </thead>
 <tbody>
@@ -516,7 +516,7 @@
 <media id="fs-id1170571655477" alt="Gráfico de la función a trozos dada. La primera parte es f(x) = x+1 si x &lt; 2. La segunda parte es x^2 - 4 si x >= 2. La primera parte es una línea con intersección x en (-1, 0) e intersección y en (0,1). Hay un círculo abierto en (2,3), donde estaría el punto extremo. La segunda parte es la mitad derecha de una parábola que se abre hacia arriba. El vértice en (2,0) es un círculo sólido.">
 <image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_02_010.jpg"/>
 </media>
-<caption>El gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mrow><m:mtable><m:mtr><m:mtd><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mspace width="0.2em"/><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>2 </m:mn></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>2 </m:mn></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:mrow></m:mrow></m:math> tiene una pausa en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2 </m:mn><m:mo>.</m:mo></m:mrow></m:math></caption>
+<caption>El gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo><m:mrow><m:mtable><m:mtr><m:mtd><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mspace width="0.2em"/><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>2 </m:mn></m:mrow></m:mtd></m:mtr><m:mtr><m:mtd><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn><m:mspace width="0.2em"/><m:mtext>si</m:mtext><m:mspace width="0.2em"/><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>2 </m:mn></m:mrow></m:mtd></m:mtr></m:mtable></m:mrow></m:mrow></m:mrow></m:math> tiene una pausa en <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2 </m:mn><m:mo>.</m:mo></m:mrow></m:math></caption>
 </figure>
 </solution>
 </exercise>
@@ -526,18 +526,18 @@
 <problem id="fs-id1170571612130">
 <para id="fs-id1170571612132">Utilice una tabla de valores funcionales para estimar los siguientes límites, si es posible.</para>
 <list id="fs-id1170571612135" list-type="enumerated" number-style="lower-alpha">
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac></m:mrow></m:math></item>
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac></m:mrow></m:math></item>
 </list>
 </problem>
 <solution id="fs-id1170572306436">
-<para id="fs-id1170572306438">a. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>-4</m:mn><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math></para>
+<para id="fs-id1170572306438">a. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>−4</m:mn><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>4</m:mn></m:mrow></m:math></para>
 </solution>
 <commentary id="fs-id1170573717701" type="hint">
 <title>Pista</title>
 <list id="fs-id1170572452145" list-type="enumerated" number-style="lower-alpha">
-<item>Utilice los valores de <emphasis effect="italics">x</emphasis>1,9, 1,99, 1,999, 1,9999, 1,9999 para estimar <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></item>
-<item>Utilice los valores de <emphasis effect="italics">x</emphasis> 2,1, 2,01, 2,001, 2,0001, 2,00001 para estimar <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math><newline/> (Estas tablas están disponibles en un problema del punto de control anterior).</item>
+<item>Utilice los valores de <emphasis effect="italics">x</emphasis>1,9, 1,99, 1,999, 1,9999, 1,9999 para estimar <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Utilice los valores de <emphasis effect="italics">x</emphasis> 2,1, 2,01, 2,001, 2,0001, 2,00001 para estimar <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mrow><m:mrow><m:mo>|</m:mo><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow><m:mo>|</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math><newline/> (Estas tablas están disponibles en un problema del punto de control anterior).</item>
 </list>
 </commentary>
 </exercise>
@@ -546,13 +546,13 @@
 <note id="fs-id1170571598073" class="theorem">
 <title>Relacionar los límites unilaterales y bilaterales</title>
 <para id="fs-id1170572560622">Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es una función definida en todos los valores de un intervalo abierto que contiene <emphasis effect="italics">a</emphasis>, con la posible excepción de la propia <emphasis effect="italics">a</emphasis> y que <emphasis effect="italics">L</emphasis> es un número real. Entonces,</para>
-<equation id="fs-id1165042842783" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo><m:mspace width="0.2em"/><m:mtext>si y solo si</m:mtext><m:mspace width="0.2em"/><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<equation id="fs-id1165042842783" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo><m:mspace width="0.2em"/><m:mtext>si y solo si</m:mtext><m:mspace width="0.2em"/><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mspace width="0.2em"/><m:mtext>y</m:mtext><m:mspace width="0.2em"/><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
 </note>
 </section>
 <section id="fs-id1170571611973">
 <title>Límites infinitos</title>
 <para id="fs-id1170571611978">Evaluar el límite de una función en un punto o evaluar el límite de una función por la derecha y por la izquierda en un punto nos ayuda a caracterizar el comportamiento de una función alrededor de un valor dado. Como veremos, también podemos describir el comportamiento de las funciones que no tienen límites finitos.</para>
-<para id="fs-id1170571611984">Ahora nos centramos en <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mrow><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>2 </m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:mrow></m:mrow></m:math> la tercera y última función introducida al principio de esta sección (vea la <link target-id="CNX_Calc_Figure_02_02_001"/>(c)). En su gráfico vemos que a medida que los valores de <emphasis effect="italics">x</emphasis> se acercan a 2, los valores de <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mrow><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>2 </m:mn></m:msup></m:mrow></m:mrow></m:mrow></m:math> se hacen cada vez más grandes y, de hecho, se vuelven infinitos. Matemáticamente, decimos que el límite de <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> a medida que <emphasis effect="italics">x</emphasis> se acerca a 2 es el infinito positivo. Simbólicamente, expresamos esta idea como</para>
+<para id="fs-id1170571611984">Ahora nos centramos en <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mrow><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>2 </m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:mrow></m:mrow></m:math> la tercera y última función introducida al principio de esta sección (vea la <link target-id="CNX_Calc_Figure_02_02_001"/>(c)). En su gráfico vemos que a medida que los valores de <emphasis effect="italics">x</emphasis> se acercan a 2, los valores de <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mrow><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn><m:mo stretchy="false">)</m:mo></m:mrow><m:mn>2 </m:mn></m:msup></m:mrow></m:mrow></m:mrow></m:math> se hacen cada vez más grandes y, de hecho, se vuelven infinitos. Matemáticamente, decimos que el límite de <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> a medida que <emphasis effect="italics">x</emphasis> se acerca a 2 es el infinito positivo. Simbólicamente, expresamos esta idea como</para>
 <equation id="fs-id1170571612232" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
 <para id="fs-id1170571612271">De forma más general, definimos los <term id="term-00003">límites infinitos</term> como sigue:</para>
 <note id="fs-id1170571612277">
@@ -561,33 +561,33 @@
 <para id="fs-id1170571612290"><emphasis effect="italics">Límites infinitos por la izquierda:</emphasis> Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> sea una función definida en todos los valores de un intervalo abierto de la forma <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>b</m:mi><m:mo>,</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
 <list id="fs-id1170571562562" list-type="enumerated" number-style="lower-roman">
 <item>Si los valores de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> aumentan sin límite a medida que los valores de <emphasis effect="italics">x</emphasis> (donde <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mtext mathvariant="italic">a</m:mtext><m:mtext>).</m:mtext></m:mrow></m:math> se acerca al número <emphasis effect="italics">a</emphasis>, entonces decimos que el límite a medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis> por la izquierda es el infinito positivo y escribimos<newline/>
-<equation id="fs-id1170571562619"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+<equation id="fs-id1170571562619"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
 <item>Si los valores de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> disminuyen sin límite a medida que los valores de <emphasis effect="italics">x</emphasis> (donde <m:math><m:mrow><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mtext mathvariant="italic">a</m:mtext><m:mtext>).</m:mtext></m:mrow></m:math> se acerca al número <emphasis effect="italics">a</emphasis>, entonces decimos que el límite a medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis> por la izquierda es el infinito negativo y escribimos<newline/>
-<equation id="fs-id1170572346714"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+<equation id="fs-id1170572346714"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
 </list>
 <para id="fs-id1170572346754"><emphasis effect="italics">Límites infinitos por la derecha</emphasis>: Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> sea una función definida en todos los valores de un intervalo abierto de la forma <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>c</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
 <list id="fs-id1170572346792" list-type="enumerated" number-style="lower-roman">
 <item>Si los valores de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> aumentan sin límite a medida que los valores de <emphasis effect="italics">x</emphasis> (donde <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mtext mathvariant="italic">a</m:mtext><m:mtext>).</m:mtext></m:mrow></m:math> se acerca al número <emphasis effect="italics">a</emphasis>, entonces decimos que el límite a medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis> por la derecha es el infinito positivo y escribimos<newline/>
 <equation id="fs-id1170572559800"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
 <item>Si los valores de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> disminuyen sin límite a medida que los valores de <emphasis effect="italics">x</emphasis> (donde <m:math><m:mrow><m:mi>x</m:mi><m:mo>></m:mo><m:mtext mathvariant="italic">a</m:mtext><m:mtext>).</m:mtext></m:mrow></m:math> se acerca al número <emphasis effect="italics">a</emphasis>, entonces decimos que el límite a medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis> por la derecha es el infinito negativo y escribimos<newline/>
-<equation id="fs-id1170572512575"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+<equation id="fs-id1170572512575"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
 </list>
 <para id="fs-id1170572512615"><emphasis effect="italics">Límite infinito bilateral:</emphasis> Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> se define para todos los <m:math><m:mrow><m:mi>x</m:mi><m:mo>≠</m:mo><m:mi>a</m:mi></m:mrow></m:math> en un intervalo abierto que contiene <emphasis effect="italics">a</emphasis>.</para>
 <list id="fs-id1170572512650" list-type="enumerated" number-style="lower-roman">
 <item>Si los valores de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> aumentan sin límite a medida que los valores de <emphasis effect="italics">x</emphasis> (donde <m:math><m:mrow><m:mi>x</m:mi><m:mo>≠</m:mo><m:mtext mathvariant="italic">a</m:mtext><m:mtext>).</m:mtext></m:mrow></m:math> se acerca al número <emphasis effect="italics">a</emphasis>, entonces decimos que el límite a medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis> es el infinito positivo y escribimos<newline/>
 <equation id="fs-id1170572337784"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
 <item>Si los valores de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> disminuyen sin límite a medida que los valores de <emphasis effect="italics">x</emphasis> (donde <m:math><m:mrow><m:mi>x</m:mi><m:mo>≠</m:mo><m:mtext mathvariant="italic">a</m:mtext><m:mtext>).</m:mtext></m:mrow></m:math> se acerca al número <emphasis effect="italics">a</emphasis>, entonces decimos que el límite a medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis> es el infinito negativo y escribimos<newline/>
-<equation id="fs-id1170572337871"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+<equation id="fs-id1170572337871"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
 </list>
 </note>
-<para id="fs-id1170572337910">Es importante entender que cuando escribimos afirmaciones como <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> o <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> estamos describiendo el comportamiento de la función, tal y como la acabamos de definir. No afirmamos que exista un límite. Para el límite de una función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> exista en <emphasis effect="italics">a</emphasis>, debe acercarse a un número real <emphasis effect="italics">L</emphasis> a medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis>. Dicho esto, si, por ejemplo, <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> siempre escribimos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> en vez de <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> (does not exist, DNE).</para>
+<para id="fs-id1170572337910">Es importante entender que cuando escribimos afirmaciones como <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> o <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> estamos describiendo el comportamiento de la función, tal y como la acabamos de definir. No afirmamos que exista un límite. Para el límite de una función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> exista en <emphasis effect="italics">a</emphasis>, debe acercarse a un número real <emphasis effect="italics">L</emphasis> a medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis>. Dicho esto, si, por ejemplo, <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo></m:mrow></m:math> siempre escribimos <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> en vez de <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> (does not exist, DNE).</para>
 <example id="fs-id1170571611150">
 <exercise id="fs-id1170571611153">
 <problem id="fs-id1170571611155">
 <title>Reconocer un límite infinito</title>
 <para id="fs-id1170571611160">Evalúe cada uno de los siguientes límites, si es posible. Utilice una tabla de valores funcionales y un gráfico <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mrow></m:math> para confirmar su conclusión.</para>
 <list id="fs-id1170571611187" list-type="enumerated" number-style="lower-alpha">
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></item>
 <item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></item>
 <item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac></m:mrow></m:math></item>
 </list>
@@ -611,38 +611,38 @@
 </thead>
 <tbody>
 <row valign="top">
-<entry align="left">-0,1</entry>
+<entry align="left">−0,1</entry>
 <entry align="left">−10</entry>
 <entry morerows="5"/>
 <entry align="left">0,1</entry>
 <entry align="left">10</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,01</entry>
-<entry align="left">-100</entry>
+<entry align="left">−0,01</entry>
+<entry align="left">−100</entry>
 <entry align="left">0,01</entry>
 <entry align="left">100</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,001</entry>
+<entry align="left">−0,001</entry>
 <entry align="left">–1.000</entry>
 <entry align="left">0,001</entry>
 <entry align="left">1.000</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,0001</entry>
+<entry align="left">−0,0001</entry>
 <entry align="left">–10.000</entry>
 <entry align="left">0,0001</entry>
 <entry align="left">10.000</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,00001</entry>
+<entry align="left">−0,00001</entry>
 <entry align="left">–100.000</entry>
 <entry align="left">0,00001</entry>
 <entry align="left">100.000</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,000001</entry>
+<entry align="left">−0,000001</entry>
 <entry align="left">–1.000.000</entry>
 <entry align="left">0,000001</entry>
 <entry align="left">1.000.000</entry>
@@ -651,10 +651,10 @@
 </tgroup>
 </table><list id="fs-id1170571573960" list-type="enumerated" number-style="lower-alpha">
 <item>Los valores de <m:math><m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mrow></m:math> disminuyen sin límite a medida que <emphasis effect="italics">x</emphasis> se acerca a 0 por la izquierda. Concluimos que<newline/>
-<equation id="fs-id1170572560361" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
+<equation id="fs-id1170572560361" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
 <item>Los valores de <m:math><m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mrow></m:math> aumentan sin límite a medida que <emphasis effect="italics">x</emphasis> se acerca a 0 por la derecha. Concluimos que<newline/>
 <equation id="fs-id1170572560419" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation></item>
-<item>Dado que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> tienen valores diferentes, concluimos que<newline/>
+<item>Dado que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> tienen valores diferentes, concluimos que<newline/>
 <equation id="fs-id1170571596216" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mi>x</m:mi></m:mfrac><m:mspace width="0.2em"/><m:mtext>No existe (DNE).</m:mtext></m:mrow></m:math></equation></item>
 </list>
 <para id="fs-id1170571596248">El gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mrow></m:math> en la <link target-id="CNX_Calc_Figure_02_02_012"/> confirma estas conclusiones.</para>
@@ -672,13 +672,13 @@
 <problem id="fs-id1170571596336">
 <para id="fs-id1170571596338">Evalúe cada uno de los siguientes límites, si es posible. Utilice una tabla de valores funcionales y un gráfico <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mrow></m:mrow></m:math> para confirmar su conclusión.</para>
 <list id="fs-id1170571612847" list-type="enumerated" number-style="lower-alpha">
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
 <item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
 <item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
 </list>
 </problem>
 <solution id="fs-id1170571612951">
-<para id="fs-id1170571612954">a. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>;</m:mo></m:mrow></m:math> c. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></para>
+<para id="fs-id1170571612954">a. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>;</m:mo></m:mrow></m:math> c. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></para>
 </solution>
 <commentary id="fs-id1170573440135" type="hint">
 <title>Pista</title>
@@ -699,13 +699,13 @@
 <equation id="fs-id1170571654230" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>n</m:mi></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation><para id="fs-id1170571654279">Si <emphasis effect="italics">n</emphasis> es un número entero positivo impar, entonces</para>
 <equation id="fs-id1170571654287" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>n</m:mi></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></equation>
 <para id="fs-id1170571654339">y</para>
-<equation id="fs-id1170571654342" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>n</m:mi></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
+<equation id="fs-id1170571654342" class="unnumbered"><label/><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mi>n</m:mi></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>.</m:mo></m:mrow></m:math></equation>
 </note>
 <para id="fs-id1170571603730">También debemos señalar que en los gráficos de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mrow><m:msup><m:mrow><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi><m:mo stretchy="false">)</m:mo></m:mrow><m:mi>n</m:mi></m:msup><m:mo>,</m:mo></m:mrow></m:mrow></m:mrow></m:math> los puntos del gráfico que tienen coordenadas <emphasis effect="italics">x</emphasis> muy cercanas a <emphasis effect="italics">a</emphasis> están muy cerca de la línea vertical <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> Es decir, a medida que <emphasis effect="italics">x</emphasis> se acerca a <emphasis effect="italics">a</emphasis>, los puntos del gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> están más cerca de la línea <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mo>.</m:mo></m:mrow></m:math> La línea <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> se denomina <term id="term-00004">asíntota vertical</term> del gráfico. Definimos formalmente una asíntota vertical como sigue:</para>
 <note id="fs-id1170571603845">
 <title>Definición</title>
 <para id="fs-id1170571656454">Supongamos que <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es una función. Si se cumple alguna de las siguientes condiciones, la línea <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi></m:mrow></m:math> es una <emphasis effect="bold">asíntota vertical</emphasis> de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
-<equation id="fs-id1165042770942" class="unnumbered"><label/><m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="right"><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mspace width="0.2em"/><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mtext>-∞</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mspace width="0.2em"/><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mtext>-∞</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mspace width="0.2em"/><m:mtext>o</m:mtext></m:mtd><m:mtd/></m:mtr><m:mtr><m:mtd columnalign="right"><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mspace width="0.2em"/><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mtext>-∞</m:mtext></m:mtd></m:mtr></m:mtable></m:mrow></m:math></equation>
+<equation id="fs-id1165042770942" class="unnumbered"><label/><m:math><m:mrow><m:mtable><m:mtr><m:mtd columnalign="right"><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mspace width="0.2em"/><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mtext>−∞</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd columnalign="right"><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mspace width="0.2em"/><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mtext>−∞</m:mtext></m:mtd></m:mtr><m:mtr><m:mtd/><m:mtd columnalign="left"><m:mspace width="0.2em"/><m:mtext>o</m:mtext></m:mtd><m:mtd/></m:mtr><m:mtr><m:mtd columnalign="right"><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mtd><m:mtd columnalign="left"><m:mo>=</m:mo></m:mtd><m:mtd columnalign="left"><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mspace width="0.2em"/><m:mtext>o</m:mtext><m:mspace width="0.2em"/><m:mtext>−∞</m:mtext></m:mtd></m:mtr></m:mtable></m:mrow></m:math></equation>
 </note>
 <example id="fs-id1170571656614">
 <exercise id="fs-id1170571656617">
@@ -713,7 +713,7 @@
 <title>Hallar una asíntota vertical</title>
 <para id="fs-id1170571656624">Evalúe cada uno de los siguientes límites utilizando <link target-id="fs-id1170571654206"/>. Identifique las asíntotas verticales de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>4</m:mn></m:msup></m:mrow></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
 <list id="fs-id1170572388087" list-type="enumerated" number-style="lower-alpha">
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−3</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−3</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
 <item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−3</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
 <item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>−3</m:mn></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
 </list>
@@ -721,7 +721,7 @@
 <solution id="fs-id1170572632996">
 <para id="fs-id1170572632998">Podemos utilizar directamente <link target-id="fs-id1170571654206"/>.</para>
 <list id="fs-id1170572633005" list-type="enumerated" number-style="lower-alpha">
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−3</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−3</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></item>
 <item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−3</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></item>
 <item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>−3</m:mn></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>4</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></item>
 </list>
@@ -732,15 +732,15 @@
 <note id="fs-id1170571652132" class="checkpoint">
 <exercise id="fs-id1170571652136">
 <problem id="fs-id1170571652138">
-<para id="fs-id1170571652140">Evalúe cada uno de los siguientes límites. Identifique las asíntotas verticales de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170571652140">Evalúe cada uno de los siguientes límites. Identifique las asíntotas verticales de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
 <list id="fs-id1170571652179" list-type="enumerated" number-style="lower-alpha">
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>–</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>–</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math></item>
 </list>
 </problem>
 <solution id="fs-id1170571545549">
-<para id="fs-id1170571545551">a. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>–</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>;</m:mo></m:mrow></m:math> c. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math> (does not exist, DNE). La línea <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2 </m:mn></m:mrow></m:math> es la asíntota vertical de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170571545551">a. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>–</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>;</m:mo></m:mrow></m:math> b. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>2 </m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>;</m:mo></m:mrow></m:math> c. <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mfrac><m:mn>1</m:mn><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:math> (does not exist, DNE). La línea <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2 </m:mn></m:mrow></m:math> es la asíntota vertical de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>3</m:mn></m:msup></m:mrow></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
 </solution>
 <commentary id="fs-id1170571035302" type="hint">
 <title>Pista</title>
@@ -755,10 +755,10 @@
 <title>Comportamiento de una función en diferentes puntos</title>
 <para id="fs-id1170572642393">Utilice el gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en la <link target-id="CNX_Calc_Figure_02_02_015"/> para determinar cada uno de los siguientes valores:</para>
 <list id="fs-id1170572642414" list-type="enumerated" number-style="lower-alpha">
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>-4</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>-4</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>-4</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>–4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</item>
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−2</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−2</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>−2</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</item>
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</item>
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>3</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>3</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−4</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−4</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>−4</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>–4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−2</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−2</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>−2</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>3</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>3</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math></item>
 </list>
 <figure id="CNX_Calc_Figure_02_02_015">
 <media id="fs-id1170571610220" alt="Gráfico de una función f(x) descrita por los límites y valores anteriores. Hay una curva suave para los valores inferiores a x=-2; en (-2, 3), hay un círculo abierto. Hay una curva suave entre (-2, 1] con un círculo cerrado en (1,6). Hay un círculo abierto en (1,3), y una curva suave que se extiende desde allí hasta el infinito negativo a lo largo de x=3. La función también se curva asintóticamente a lo largo de x=3 en el otro lado, estirándose también hasta el infinito negativo. A continuación, la función cambia de concavidad en el primer cuadrante alrededor de y=4,5 y continúa hacia arriba.">
@@ -770,10 +770,10 @@
 <solution id="fs-id1170571610255">
 <para id="fs-id1170571610257">Utilizando <link target-id="fs-id1170571654206"/> y el gráfico como referencia, llegamos a los siguientes valores:</para>
 <list id="fs-id1170571610264" list-type="enumerated" number-style="lower-alpha">
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>-4</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>-4</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>-4</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>–4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></item>
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−2</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−2</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>−2</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es indefinida</item>
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> DNE; <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math></item>
-<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>3</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>3</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es indefinida</item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−4</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−4</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>−4</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>–4</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−2</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>.</m:mo><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−2</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>−2</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>−2</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es indefinida</item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> DNE; <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>3</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>3</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>;</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>3</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>;</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>3</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es indefinida</item>
 </list>
 </solution>
 </exercise>
@@ -809,7 +809,7 @@
 </problem>
 <solution id="fs-id1170572624580">
 <para id="fs-id1170572624583">Nuestro punto de partida es la ecuación de Einstein para la masa de un objeto en movimiento,</para>
-<equation id="fs-id1170572624588" class="unnumbered"><label/><m:math><m:mrow><m:mi>m</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:msub><m:mi>m</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mrow><m:msup><m:mi>v</m:mi><m:mn>2 </m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>c</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:msqrt></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math></equation>
+<equation id="fs-id1170572624588" class="unnumbered"><label/><m:math><m:mrow><m:mi>m</m:mi><m:mo>=</m:mo><m:mfrac><m:mrow><m:msub><m:mi>m</m:mi><m:mn>0</m:mn></m:msub></m:mrow><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac><m:mrow><m:msup><m:mi>v</m:mi><m:mn>2 </m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>c</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:msqrt></m:mrow></m:mfrac><m:mo>,</m:mo></m:mrow></m:math></equation>
 <para id="fs-id1170572597831">donde <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:math> es la masa del objeto en reposo, <emphasis effect="italics">v</emphasis> es su velocidad y <emphasis effect="italics">c</emphasis> es la velocidad de la luz. Para ver cómo cambia la masa a altas velocidades, podemos graficar la relación de masas <m:math><m:mrow><m:mrow><m:mi>m</m:mi><m:mtext>/</m:mtext><m:mrow><m:msub><m:mi>m</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:mrow></m:mrow></m:math> en función de la relación de las velocidades, <m:math><m:mrow><m:mrow><m:mi>v</m:mi><m:mtext>/</m:mtext><m:mi>c</m:mi></m:mrow></m:mrow></m:math> (<link target-id="CNX_Calc_Figure_02_02_017"/>).</para>
 <figure id="CNX_Calc_Figure_02_02_017">
 <media id="fs-id1170572597896" alt="Gráfico que muestra la relación de masas en función de la relación de velocidades en la ecuación de Einstein para la masa de un objeto en movimiento. El eje x es la relación de velocidades, v/c. El eje y es la relación de masas, m/m0. La ecuación de la función es m = m0 / sqrt(1 – v2 / c2 ). El gráfico solo está en el cuadrante 1. Comienza en (0,1) y se curva suavemente hacia arriba hasta aproximadamente 0,8, donde aumenta de forma aparentemente exponencial; hay una asíntota vertical en v/c (o x) = 1.">
@@ -827,7 +827,7 @@
 <thead>
 <row valign="top">
 <entry align="left"><m:math><m:mrow><m:mfrac><m:mi>v</m:mi><m:mi>c</m:mi></m:mfrac></m:mrow></m:math></entry>
-<entry align="left"><m:math><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mrow><m:msup><m:mi>v</m:mi><m:mn>2 </m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>c</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:msqrt></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac><m:mrow><m:msup><m:mi>v</m:mi><m:mn>2 </m:mn></m:msup></m:mrow><m:mrow><m:msup><m:mi>c</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:mfrac></m:mrow></m:msqrt></m:mrow></m:math></entry>
 <entry align="left"><m:math><m:mrow><m:mfrac><m:mi>m</m:mi><m:mrow><m:msub><m:mi>m</m:mi><m:mn>0</m:mn></m:msub></m:mrow></m:mfrac></m:mrow></m:math></entry>
 </row>
 </thead>
@@ -878,19 +878,19 @@
   </row>
   <row>
     <entry><emphasis effect="bold">Límites unilaterales</emphasis></entry>
-    <entry><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mspace width="1em"/><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi></m:mrow></m:math></entry>
+    <entry><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mspace width="1em"/><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi></m:mrow></m:math></entry>
   </row>
   <row>
     <entry><emphasis effect="bold">Límites infinitos por la izquierda</emphasis></entry>
-    <entry><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mspace width="1em"/><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></entry>
+    <entry><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mspace width="1em"/><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></entry>
   </row>
   <row>
     <entry><emphasis effect="bold">Límites infinitos por la derecha</emphasis></entry>
-    <entry><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mspace width="1em"/><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></entry>
+    <entry><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mspace width="1em"/><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></entry>
   </row>
   <row>
     <entry><emphasis effect="bold">Límites infinitos bilaterales</emphasis></entry>
-    <entry><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>:</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math><newline/> <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>:</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></entry>
+    <entry><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi><m:mo>:</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>+</m:mtext><m:mi>∞</m:mi></m:mrow></m:math><newline/> <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>a</m:mi></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>:</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mi>a</m:mi><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></entry>
   </row>
 </tbody>
 </tgroup>
@@ -950,13 +950,13 @@
 <para id="fs-id1170571657434">¿Qué indican sus resultados en el ejercicio anterior sobre el límite bilateral <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>?</m:mo></m:mrow></m:math> Razone su respuesta.</para>
 </problem>
 <solution id="fs-id1170571657466">
-<para id="fs-id1170571657469"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> no existe porque <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−2</m:mn><m:mo>≠</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2 </m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170571657469"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> no existe porque <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−2</m:mn><m:mo>≠</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2 </m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
 </solution>
 </exercise>
 <para id="fs-id1170572482580">En los siguientes ejercicios, considere la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
 <exercise id="fs-id1170572482622">
 <problem id="fs-id1170572482624">
-<para id="fs-id1170572482626"><emphasis effect="bold">[T]</emphasis> Haga una tabla con los valores de <emphasis effect="italics">f</emphasis> para <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>-0,01</m:mn><m:mo>,</m:mo><m:mn>-0,001</m:mn><m:mo>,</m:mo><m:mn>-0,0001</m:mn><m:mo>,</m:mo><m:mn>-0,00001</m:mn></m:mrow></m:math> y para <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0,01</m:mn><m:mo>,</m:mo><m:mn>0,001</m:mn><m:mo>,</m:mo><m:mn>0,0001</m:mn><m:mo>,</m:mo><m:mn>0,00001</m:mn><m:mo>.</m:mo></m:mrow></m:math> Redondee sus soluciones a cinco decimales.</para>
+<para id="fs-id1170572482626"><emphasis effect="bold">[T]</emphasis> Haga una tabla con los valores de <emphasis effect="italics">f</emphasis> para <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>−0,01</m:mn><m:mo>,</m:mo><m:mn>−0,001</m:mn><m:mo>,</m:mo><m:mn>−0,0001</m:mn><m:mo>,</m:mo><m:mn>−0,00001</m:mn></m:mrow></m:math> y para <m:math><m:mrow><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0,01</m:mn><m:mo>,</m:mo><m:mn>0,001</m:mn><m:mo>,</m:mo><m:mn>0,0001</m:mn><m:mo>,</m:mo><m:mn>0,00001</m:mn><m:mo>.</m:mo></m:mrow></m:math> Redondee sus soluciones a cinco decimales.</para>
 <table id="fs-id1170572482685" class="unnumbered" summary="Esta tabla tiene cuatro columnas y cinco filas. La primera fila tiene los encabezados x, f(x), x y f(x). Los valores de la primera columna debajo del encabezado son –0,01; –0,001; –0,0001; y –0,00001. Los valores de la segunda columna debajo del encabezado son a, b, c y d. Los valores de la tercera columna debajo del encabezado son 0,01; 0,001; 0,0001; y 0,00001. Los valores de la cuarta columna debajo del encabezado son e, f, g y h."><tgroup cols="4"><colspec colnum="1" colname="c1"/>
 <colspec colnum="2" colname="c2"/>
 <colspec colnum="3" colname="c3"/>
@@ -972,7 +972,7 @@
 </thead>
 <tbody>
 <row valign="top">
-<entry align="left">-0,01</entry>
+<entry align="left">−0,01</entry>
 <entry align="left">a.</entry>
 <entry morerows="3"/>
 
@@ -980,19 +980,19 @@
 <entry align="left">e.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,001</entry>
+<entry align="left">−0,001</entry>
 <entry align="left">b.</entry>
 <entry align="left">0,001</entry>
 <entry align="left">f.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,0001</entry>
+<entry align="left">−0,0001</entry>
 <entry align="left">c.</entry>
 <entry align="left">0,0001</entry>
 <entry align="left">g.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,00001</entry>
+<entry align="left">−0,00001</entry>
 <entry align="left">d.</entry>
 <entry align="left">0,00001</entry>
 <entry align="left">h.</entry>
@@ -1036,26 +1036,26 @@
 </thead>
 <tbody>
 <row valign="top">
-<entry align="left">-0,1</entry>
+<entry align="left">−0,1</entry>
 <entry align="left">a.</entry>
 <entry morerows="3"/>
 <entry align="left">0,1</entry>
 <entry align="left">e.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,01</entry>
+<entry align="left">−0,01</entry>
 <entry align="left">b.</entry>
 <entry align="left">0,01</entry>
 <entry align="left">f.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,001</entry>
+<entry align="left">−0,001</entry>
 <entry align="left">c.</entry>
 <entry align="left">0,001</entry>
 <entry align="left">g.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,0001</entry>
+<entry align="left">−0,0001</entry>
 <entry align="left">d.</entry>
 <entry align="left">0,0001</entry>
 <entry align="left">h.</entry>
@@ -1086,7 +1086,7 @@
 </thead>
 <tbody>
 <row valign="top">
-<entry align="left">-0,1</entry>
+<entry align="left">−0,1</entry>
 <entry align="left">a.</entry>
 <entry morerows="3"/>
 
@@ -1094,19 +1094,19 @@
 <entry align="left">e.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,01</entry>
+<entry align="left">−0,01</entry>
 <entry align="left">b.</entry>
 <entry align="left">0,01</entry>
 <entry align="left">f.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,001</entry>
+<entry align="left">−0,001</entry>
 <entry align="left">c.</entry>
 <entry align="left">0,001</entry>
 <entry align="left">g.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,0001</entry>
+<entry align="left">−0,0001</entry>
 <entry align="left">d.</entry>
 <entry align="left">0,0001</entry>
 <entry align="left">h.</entry>
@@ -1128,7 +1128,7 @@
 <para id="fs-id1170572499906"><emphasis effect="bold">[T]</emphasis> En los siguientes ejercicios, establezca una tabla de valores para hallar el límite indicado. Redondee a ocho dígitos.</para>
 <exercise id="fs-id1170572499914">
 <problem id="fs-id1170572499917">
-<para id="fs-id1170572499919"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>6</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+<para id="fs-id1170572499919"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>6</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
 <table id="fs-id1170572499971" class="unnumbered" summary="Esta tabla tiene cuatro columnas y cinco filas. La primera fila tiene los encabezados x, (x^2 – 4) / (x^2 + x – 6), x y (x^2 – 4) / (x^2 + x – 6). Los valores de la primera columna debajo del encabezado son 1,9; 1,99; 1,999; y 1,9999. Los valores de la segunda columna debajo del encabezado son a, b, c y d. Los valores de la tercera columna debajo del encabezado son 2,1; 2,01; 2,001; y 2,0001. Los valores de la cuarta columna debajo del encabezado son e, f, g y h."><tgroup cols="4"><colspec colnum="1" colname="c1"/>
 <colspec colnum="2" colname="c2"/>
 <colspec colnum="3" colname="c3"/>
@@ -1136,10 +1136,10 @@
 <thead>
 <row valign="top">
 <entry align="left"><emphasis effect="italics">x</emphasis></entry>
-<entry align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>6</m:mn></m:mrow></m:mfrac></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>6</m:mn></m:mrow></m:mfrac></m:mrow></m:math></entry>
 <entry/>
 <entry align="left"><emphasis effect="italics">x</emphasis></entry>
-<entry align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>6</m:mn></m:mrow></m:mfrac></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>+</m:mo><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>6</m:mn></m:mrow></m:mfrac></m:mrow></m:math></entry>
 </row>
 </thead>
 <tbody>
@@ -1179,7 +1179,7 @@
 </exercise>
 <exercise id="fs-id1170572232003">
 <problem id="fs-id1170572232005">
-<para id="fs-id1170572232007"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>2 </m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+<para id="fs-id1170572232007"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>2 </m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
 <table id="fs-id1170572232040" class="unnumbered" summary="Esta tabla tiene cuatro columnas y cinco filas. La primera fila tiene los encabezados x, 1-2x, x y 1-2x. Los valores de la primera columna debajo del encabezado son 0,9; 0,99; 0,999; y 0,9999. Los valores de la segunda columna debajo del encabezado son a, b, c y d. Los valores de la tercera columna debajo del encabezado son 1,1; 1,01; 1,001; y 1,0001. Los valores de la cuarta columna debajo del encabezado son e, f, g y h."><tgroup cols="4"><colspec colnum="1" colname="c1"/>
 <colspec colnum="2" colname="c2"/>
 <colspec colnum="3" colname="c3"/>
@@ -1187,10 +1187,10 @@
 <thead>
 <row valign="top">
 <entry align="left"><emphasis effect="italics">x</emphasis></entry>
-<entry align="left"><m:math><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>2 </m:mn><m:mi>x</m:mi></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>2 </m:mn><m:mi>x</m:mi></m:mrow></m:math></entry>
 <entry/>
 <entry align="left"><emphasis effect="italics">x</emphasis></entry>
-<entry align="left"><m:math><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>2 </m:mn><m:mi>x</m:mi></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>2 </m:mn><m:mi>x</m:mi></m:mrow></m:math></entry>
 </row>
 </thead>
 <tbody>
@@ -1225,12 +1225,12 @@
 </tgroup>
 </table></problem>
 <solution id="fs-id1170571600018">
-<para id="fs-id1170571600021">a. –0,80000000; b. –0,98000000; c. –0,99800000; d. –0,99980000; e. –1,2000000; f. –1,0200000; g. –1,0020000; h. –1,0002000 <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mn>2 </m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>–1</m:mn></m:mrow></m:math></para>
+<para id="fs-id1170571600021">a. –0,80000000; b. –0,98000000; c. –0,99800000; d. –0,99980000; e. –1,2000000; f. –1,0200000; g. –1,0020000; h. –1,0002000 <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>1</m:mn></m:mrow></m:munder><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>2 </m:mn><m:mi>x</m:mi></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>–1</m:mn></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1170571600063">
 <problem id="fs-id1170571600066">
-<para id="fs-id1170571600068"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mn>5</m:mn><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:mfrac></m:mrow></m:math></para>
+<para id="fs-id1170571600068"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mn>5</m:mn><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:msup></m:mrow></m:mfrac></m:mrow></m:math></para>
 <table id="fs-id1170572511246" class="unnumbered" summary="Esta tabla tiene cuatro columnas y cinco filas. La primera fila tiene los encabezados x, 5 / (1 – e^ (1/x) ), x y 5 / (1 – e^ (1/x) ). Los valores de la primera columna debajo del encabezado son –0,1; –0,01; –0,001; y –0,0001. Los valores de la segunda columna debajo del encabezado son a, b, c y d. Los valores de la tercera columna debajo del encabezado son 0,1; 0,01; 0,001; y 0,0001. Los valores de la cuarta columna debajo del encabezado son e, f, g y h."><tgroup cols="4"><colspec colnum="1" colname="c1"/>
 <colspec colnum="2" colname="c2"/>
 <colspec colnum="3" colname="c3"/>
@@ -1238,15 +1238,15 @@
 <thead>
 <row valign="top">
 <entry align="left"><emphasis effect="italics">x</emphasis></entry>
-<entry align="left"><m:math><m:mrow><m:mfrac><m:mn>5</m:mn><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mrow></m:msup></m:mrow></m:mfrac></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mfrac><m:mn>5</m:mn><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mrow></m:msup></m:mrow></m:mfrac></m:mrow></m:math></entry>
 <entry/>
 <entry align="left"><emphasis effect="italics">x</emphasis></entry>
-<entry align="left"><m:math><m:mrow><m:mfrac><m:mn>5</m:mn><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mrow></m:msup></m:mrow></m:mfrac></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mfrac><m:mn>5</m:mn><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:msup><m:mi>e</m:mi><m:mrow><m:mrow><m:mn>1</m:mn><m:mtext>/</m:mtext><m:mi>x</m:mi></m:mrow></m:mrow></m:msup></m:mrow></m:mfrac></m:mrow></m:math></entry>
 </row>
 </thead>
 <tbody>
 <row valign="top">
-<entry align="left">-0,1</entry>
+<entry align="left">−0,1</entry>
 <entry align="left">a.</entry>
 <entry morerows="3"/>
 
@@ -1254,19 +1254,19 @@
 <entry align="left">e.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,01</entry>
+<entry align="left">−0,01</entry>
 <entry align="left">b.</entry>
 <entry align="left">0,01</entry>
 <entry align="left">f.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,001</entry>
+<entry align="left">−0,001</entry>
 <entry align="left">c.</entry>
 <entry align="left">0,001</entry>
 <entry align="left">g.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,0001</entry>
+<entry align="left">−0,0001</entry>
 <entry align="left">d.</entry>
 <entry align="left">0,0001</entry>
 <entry align="left">h.</entry>
@@ -1295,26 +1295,26 @@
 </thead>
 <tbody>
 <row valign="top">
-<entry align="left">-0,1</entry>
+<entry align="left">−0,1</entry>
 <entry align="left">a.</entry>
 <entry morerows="3"/>
 <entry align="left">0,1</entry>
 <entry align="left">e.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,01</entry>
+<entry align="left">−0,01</entry>
 <entry align="left">b.</entry>
 <entry align="left">0,01</entry>
 <entry align="left">f.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,001</entry>
+<entry align="left">−0,001</entry>
 <entry align="left">c.</entry>
 <entry align="left">0,001</entry>
 <entry align="left">g.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,0001</entry>
+<entry align="left">−0,0001</entry>
 <entry align="left">d.</entry>
 <entry align="left">0,0001</entry>
 <entry align="left">h.</entry>
@@ -1325,7 +1325,7 @@
 </tgroup>
 </table></problem>
 <solution id="fs-id1170572306110">
-<para id="fs-id1170572306112">a. -37,931934; b. -3377,9264; c. -333.777,93; d. -33.337.778; e. -29,032258; f. -3289,0365; g. -332.889,04; h. -33.328.889 <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>z</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:msup><m:mi>z</m:mi><m:mn>2 </m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>z</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></para>
+<para id="fs-id1170572306112">a. -37,931934; b. -3377,9264; c. -333.777,93; d. -33.337.778; e. -29,032258; f. -3289,0365; g. -332.889,04; h. -33.328.889 <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mi>z</m:mi><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:msup><m:mi>z</m:mi><m:mn>2 </m:mn></m:msup><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>z</m:mi><m:mo>+</m:mo><m:mn>3</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:mfrac><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1170571653910">
@@ -1365,7 +1365,7 @@
 </exercise>
 <exercise id="fs-id1170572174644">
 <problem id="fs-id1170572174646">
-<para id="fs-id1170572174648"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mn>2 </m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
+<para id="fs-id1170572174648"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac><m:mn>2 </m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math></para>
 <table id="fs-id1170572174696" class="unnumbered" summary="Esta tabla tiene cuatro columnas y cinco filas. La primera fila tiene los encabezados x, (1 – (2/x)) / (x^2 – 4 ), x y (1 – (2/x)) / (x^2 – 4). Los valores de la primera columna debajo del encabezado son 1,9; 1,99; 1,999; y 1,9999. Los valores de la segunda columna debajo del encabezado son a, b, c y d. Los valores de la tercera columna debajo del encabezado son 2,1; 2,01; 2,001; y 2,0001. Los valores de la cuarta columna debajo del encabezado son e, f, g y h."><tgroup cols="4"><colspec colnum="1" colname="c1"/>
 <colspec colnum="2" colname="c2"/>
 <colspec colnum="3" colname="c3"/>
@@ -1373,10 +1373,10 @@
 <thead>
 <row valign="top">
 <entry align="left"><emphasis effect="italics">x</emphasis></entry>
-<entry align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mn>2 </m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac><m:mn>2 </m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math></entry>
 <entry/>
 <entry align="left"><emphasis effect="italics">x</emphasis></entry>
-<entry align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mn>2 </m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math></entry>
+<entry align="left"><m:math><m:mrow><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac><m:mn>2 </m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac></m:mrow></m:math></entry>
 </row>
 </thead>
 <tbody>
@@ -1412,7 +1412,7 @@
 </tgroup>
 </table></problem>
 <solution id="fs-id1170571610862">
-<para id="fs-id1170571610864">a. 0,13495277; b. 0,12594300; c. 0,12509381; d. 0,12500938; e. 0,11614402; f. 0,12406794; g. 0,12490631; h. 0,12499063 <m:math><m:mrow><m:mo>∴</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:mfrac><m:mn>2 </m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>-</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0,1250</m:mn><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>8</m:mn></m:mfrac></m:mrow></m:math></para>
+<para id="fs-id1170571610864">a. 0,13495277; b. 0,12594300; c. 0,12509381; d. 0,12500938; e. 0,11614402; f. 0,12406794; g. 0,12490631; h. 0,12499063 <m:math><m:mrow><m:mo>∴</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mfrac><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac><m:mn>2 </m:mn><m:mi>x</m:mi></m:mfrac></m:mrow><m:mrow><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>4</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>0,1250</m:mn><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>8</m:mn></m:mfrac></m:mrow></m:math></para>
 </solution>
 </exercise>
 <para id="fs-id1170571610923"><emphasis effect="bold">[T]</emphasis> En los siguientes ejercicios, establezca una tabla de valores y redondee a ocho dígitos significativos. Con base en la tabla de valores, haga una conjetura sobre cuál es el límite. A continuación, utilice una calculadora para representar gráficamente la función y determinar el límite. ¿Su conjetura fue correcta? Si no, ¿por qué falla el método de las tablas?</para>
@@ -1434,7 +1434,7 @@
 </thead>
 <tbody>
 <row valign="top">
-<entry align="left">-0,1</entry>
+<entry align="left">−0,1</entry>
 <entry align="left">a.</entry>
 <entry morerows="3"/>
 
@@ -1442,19 +1442,19 @@
 <entry align="left">e.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,01</entry>
+<entry align="left">−0,01</entry>
 <entry align="left">b.</entry>
 <entry align="left">0,01</entry>
 <entry align="left">f.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,001</entry>
+<entry align="left">−0,001</entry>
 <entry align="left">c.</entry>
 <entry align="left">0,001</entry>
 <entry align="left">g.</entry>
 </row>
 <row valign="top">
-<entry align="left">-0,0001</entry>
+<entry align="left">−0,0001</entry>
 <entry align="left">d.</entry>
 <entry align="left">0,0001</entry>
 <entry align="left">h.</entry>
@@ -1533,7 +1533,7 @@
 <para id="fs-id1170572217507"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>6</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1170572548969">
-<para id="fs-id1170572548971">Falso; <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>6</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> DNE ya que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>6</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2 </m:mn></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>6</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170572548971">Falso; <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>6</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> DNE ya que <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>6</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2 </m:mn></m:mrow></m:math> y <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>6</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
 </solution>
 </exercise>
 <para id="fs-id1170572549072">En los siguientes ejercicios, utiliza el siguiente gráfico de la función <m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> para hallar los valores, si es posible. Estime cuando sea necesario.</para>
@@ -1542,7 +1542,7 @@
 </media>
 <exercise id="fs-id1170572549107">
 <problem id="fs-id1170572549109">
-<para id="fs-id1170572549112"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+<para id="fs-id1170572549112"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
 </problem>
 </exercise>
 <exercise id="fs-id1170572549151">
@@ -1577,7 +1577,7 @@
 </media>
 <exercise id="fs-id1170572540909">
 <problem id="fs-id1170572540911">
-<para id="fs-id1170572540913"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+<para id="fs-id1170572540913"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1170571563280">
 <para id="fs-id1170571563282">1</para>
@@ -1607,7 +1607,7 @@
 </media>
 <exercise id="fs-id1170571563448">
 <problem id="fs-id1170571563450">
-<para id="fs-id1170571563452"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−2</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+<para id="fs-id1170571563452"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−2</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1170572624061">
 <para id="fs-id1170572624064">0</para>
@@ -1650,7 +1650,7 @@
 </media>
 <exercise id="fs-id1170572380953">
 <problem id="fs-id1170572380956">
-<para id="fs-id1170572380958"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+<para id="fs-id1170572380958"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1170572380990">
 <para id="fs-id1170572380992">3</para>
@@ -1675,7 +1675,7 @@
 </media>
 <exercise id="fs-id1170572372618">
 <problem id="fs-id1170572372620">
-<para id="fs-id1170572372622"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
+<para id="fs-id1170572372622"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> grandes.</para>
 </problem>
 </exercise>
 <exercise id="fs-id1170572372662">
@@ -1697,7 +1697,7 @@
 </media>
 <exercise id="fs-id1170572372780">
 <problem id="fs-id1170572372782">
-<para id="fs-id1170572372784"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
+<para id="fs-id1170572372784"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>0</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1170572267932">
 <para id="fs-id1170572267934">−2</para>
@@ -1732,12 +1732,12 @@
 <para id="fs-id1170572268104">En los siguientes ejercicios, dibuje el gráfico de una función con las propiedades dadas.</para>
 <exercise id="fs-id1170572268108">
 <problem id="fs-id1170572268110">
-<para id="fs-id1170572268112"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>4</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>4</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>4</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> no está definido.</para>
+<para id="fs-id1170572268112"><m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>4</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>4</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>4</m:mn><m:mo>)</m:mo></m:mrow></m:mrow></m:math> no está definido.</para>
 </problem>
 </exercise>
 <exercise id="fs-id1170572219513">
 <problem id="fs-id1170572219516">
-<para id="fs-id1170572219518"><m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo> </m:mo><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−1</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo></m:math> <m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−1</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mo> </m:mo><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mtext>-</m:mtext><m:mi>∞</m:mi></m:math></para>
+<para id="fs-id1170572219518"><m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mo>−</m:mo><m:mi>∞</m:mi><m:mo> </m:mo><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−1</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo></m:math> <m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−1</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mo> </m:mo><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi></m:math></para>
 </problem>
 <solution id="fs-id1170572435003">
 <para id="fs-id1170572435005">Las respuestas pueden variar.<newline/>
@@ -1748,12 +1748,12 @@
 </exercise>
 <exercise id="fs-id1170572435026">
 <problem id="fs-id1170572435029">
-<para id="fs-id1170572435031"><m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>3</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo></m:math> <m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>3</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>−1</m:mn><m:mn>3</m:mn></m:mfrac></m:math></para>
+<para id="fs-id1170572435031"><m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>3</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo></m:math> <m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>3</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>−1</m:mn><m:mn>3</m:mn></m:mfrac></m:math></para>
 </problem>
 </exercise>
 <exercise id="fs-id1170572590126">
 <problem id="fs-id1170572590128">
-<para id="fs-id1170572590130"><m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>−2</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo></m:math> <m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:math></para>
+<para id="fs-id1170572590130"><m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mn>−2</m:mn></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo></m:math> <m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>2 </m:mn><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn></m:math></para>
 </problem>
 <solution id="fs-id1170572552617">
 <para id="fs-id1170572552619">Las respuestas pueden variar.<newline/>
@@ -1764,7 +1764,7 @@
 </exercise>
 <exercise id="fs-id1170572552638">
 <problem id="fs-id1170572552640">
-<para id="fs-id1170572552642"><m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mo>-</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−1</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−1</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo></m:math> <m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−1</m:mn><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>- −</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:math></para>
+<para id="fs-id1170572552642"><m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−1</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>−1</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo></m:math> <m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mn>0</m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>−1</m:mn><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>∞</m:mi><m:mo>,</m:mo><m:munder><m:mtext>lím</m:mtext><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msup><m:mn>1</m:mn><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>A</m:mi><m:mi>s</m:mi><m:mo> </m:mo><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mo> </m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo stretchy="false">→</m:mo><m:mn>0</m:mn></m:math></para>
 </problem>
 </exercise>
 <exercise id="fs-id1170572128792">
@@ -1775,7 +1775,7 @@
 </media>
 <list id="fs-id1170572128831" list-type="enumerated" number-style="lower-alpha">
 <item>Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>S</m:mi><m:mi>F</m:mi></m:mrow></m:msub><m:msup><m:mrow/><m:mo>+</m:mo></m:msup></m:mrow></m:munder><m:mi>ρ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
-<item>Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>S</m:mi><m:mi>F</m:mi></m:mrow></m:msub><m:msup><m:mrow/><m:mo>-</m:mo></m:msup></m:mrow></m:munder><m:mi>ρ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
+<item>Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>S</m:mi><m:mi>F</m:mi></m:mrow></m:msub><m:msup><m:mrow/><m:mo>−</m:mo></m:msup></m:mrow></m:munder><m:mi>ρ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></item>
 <item>Evalúe <m:math><m:mrow><m:munder><m:mrow><m:mtext>lím</m:mtext></m:mrow><m:mrow><m:mi>x</m:mi><m:mo stretchy="false">→</m:mo><m:msub><m:mi>x</m:mi><m:mrow><m:mi>S</m:mi><m:mi>F</m:mi></m:mrow></m:msub></m:mrow></m:munder><m:mi>ρ</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math> Explique el significado físico de sus respuestas.</item>
 </list>
 </problem>

@@ -20,14 +20,14 @@
 <para id="fs-id1170571068193">A medida que nos embarcamos en el estudio del cálculo, veremos cómo su desarrollo surgió a partir de soluciones comunes a problemas prácticos en áreas como la física de la ingeniería, como el problema del viaje espacial planteado en el inicio del capítulo. Dos problemas clave condujeron a la formulación inicial del cálculo: (1) el problema de la tangente, o cómo determinar la pendiente de una línea tangente a una curva en un punto; y (2) el problema del área, o cómo determinar el área bajo una curva.</para>
 <section id="fs-id1170573393290">
 <title>El problema de la tangente y el cálculo diferencial</title>
-<para id="fs-id1170573581969">La tasa de cambio es uno de los conceptos más importantes del cálculo. Comenzamos nuestra investigación de las tasas de cambio observando los gráficos de las tres líneas <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>–2</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2 </m:mn></m:mfrac><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2 </m:mn><m:mo>,</m:mo></m:mrow></m:math> se muestra en la <link target-id="CNX_Calc_Figure_02_01_001"/>.</para>
+<para id="fs-id1170573581969">La tasa de cambio es uno de los conceptos más importantes del cálculo. Comenzamos nuestra investigación de las tasas de cambio observando los gráficos de las tres líneas <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>–2</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2 </m:mn></m:mfrac><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>,</m:mo></m:mrow></m:math> y <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2 </m:mn><m:mo>,</m:mo></m:mrow></m:math> se muestra en la <link target-id="CNX_Calc_Figure_02_01_001"/>.</para>
 <figure id="CNX_Calc_Figure_02_01_001">
 <media id="fs-id1170570998445" alt="Se muestran tres gráficos de diferentes funciones lineales. El primero es f(x) = -2x - 3, con pendiente de -2 e intersección de -3. El segundo es g(x) = x / 2 + 1, con pendiente de 1/2 e intersección de 1. El tercero es h(x) = 2, con pendiente 0 e intersección 2. La tasa de cambio de cada uno es constante, como lo determina la pendiente.">
 <image mime-type="image/jpeg" src="../../media/CNX_Calc_Figure_02_01_001.jpg"/>
 </media>
 <caption>La tasa de cambio de una función lineal es constante en cada una de estos tres gráficos, con la constante determinada por la pendiente.</caption>
 </figure>
-<para id="fs-id1170573436660">A medida que nos movemos de izquierda a derecha a lo largo del gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>–2</m:mn><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> vemos que el gráfico disminuye a una tasa constante. Por cada 1 unidad que nos movemos hacia la derecha a lo largo del eje <emphasis effect="italics">x</emphasis>, la coordenada <emphasis effect="italics">y</emphasis> disminuye en 2 unidades. Esta <term class="no-emphasis" id="term-00001">tasa de cambio</term> está determinada por la pendiente (-2) de la línea. Del mismo modo, la pendiente de 1/2 en la función <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> nos dice que por cada cambio en <emphasis effect="italics">x</emphasis> de 1 unidad hay un cambio correspondiente en <emphasis effect="italics">y</emphasis> de 1/2 unidad. La función <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2 </m:mn></m:mrow></m:math> tiene una pendiente de cero, lo que indica que los valores de la función permanecen constantes. Vemos que la pendiente de cada función lineal indica la tasa de cambio de la función.</para>
+<para id="fs-id1170573436660">A medida que nos movemos de izquierda a derecha a lo largo del gráfico de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>–2</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>3</m:mn><m:mo>,</m:mo></m:mrow></m:math> vemos que el gráfico disminuye a una tasa constante. Por cada 1 unidad que nos movemos hacia la derecha a lo largo del eje <emphasis effect="italics">x</emphasis>, la coordenada <emphasis effect="italics">y</emphasis> disminuye en 2 unidades. Esta <term class="no-emphasis" id="term-00001">tasa de cambio</term> está determinada por la pendiente (-2) de la línea. Del mismo modo, la pendiente de 1/2 en la función <m:math><m:mrow><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> nos dice que por cada cambio en <emphasis effect="italics">x</emphasis> de 1 unidad hay un cambio correspondiente en <emphasis effect="italics">y</emphasis> de 1/2 unidad. La función <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2 </m:mn></m:mrow></m:math> tiene una pendiente de cero, lo que indica que los valores de la función permanecen constantes. Vemos que la pendiente de cada función lineal indica la tasa de cambio de la función.</para>
 <para id="fs-id1170573403364">Compare los gráficos de estas tres funciones con el gráfico de <m:math><m:mrow><m:mi>k</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:math> (<link target-id="CNX_Calc_Figure_02_01_002"/>). El gráfico de <m:math><m:mrow><m:mi>k</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:math> empieza por la izquierda disminuyendo rápidamente, luego empieza a disminuir más lentamente y a nivelarse finalmente empieza a aumentar; lentamente al principio, seguido por una tasa de aumento creciente a medida que se mueve hacia la derecha. A diferencia de una función lineal, ningún número representa la tasa de cambio de esta función. Preguntamos con toda naturalidad: ¿cómo se mide la tasa de cambio de una función no lineal?</para>
 <figure id="CNX_Calc_Figure_02_01_002">
 <media id="fs-id1170573429353" alt="Un gráfico de la parábola k(x) = x^2, que se abre y tiene su vértice en el origen.">
@@ -46,7 +46,7 @@
 <note id="fs-id1170573442415">
 <title>Definición</title>
 <para id="fs-id1170571120822">La <emphasis effect="bold">secante</emphasis> de la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> que pasa por los puntos <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>x</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es la línea que pasa por estos puntos. Su pendiente está dada por</para>
-<equation id="fs-id1170573290247"><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<equation id="fs-id1170573290247"><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
 </note>
 <para id="fs-id1170573384217">La exactitud de la aproximación de la tasa de cambio de la función con una línea secante depende de lo cerca que esté <emphasis effect="italics">x</emphasis> de <emphasis effect="italics">a</emphasis>. Como vemos en la <link target-id="CNX_Calc_Figure_02_01_004"/>, si <emphasis effect="italics">x</emphasis> está más cerca de <emphasis effect="italics">a</emphasis>, la pendiente de la línea secante es una mejor medida de la tasa de cambio de <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <emphasis effect="italics">a</emphasis>.</para>
 <figure id="CNX_Calc_Figure_02_01_004">
@@ -78,8 +78,8 @@
 <solution id="fs-id1170573405502">
 <para id="fs-id1170573397397">Utilice la fórmula de la pendiente de una línea secante a partir de la definición.</para>
 <list id="fs-id1170573397100" list-type="enumerated" number-style="lower-alpha">
-<item><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>4</m:mn><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mn>2 </m:mn><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></item>
-<item><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mfrac><m:mn>9</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>-</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>2 </m:mn></m:mfrac><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>5</m:mn><m:mn>2 </m:mn></m:mfrac><m:mo>=</m:mo><m:mn>2,5</m:mn></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mn>4</m:mn><m:mo>−</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mn>2 </m:mn><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>3</m:mn></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mfrac><m:mn>9</m:mn><m:mn>4</m:mn></m:mfrac><m:mo>−</m:mo><m:mn>1</m:mn></m:mrow><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>2 </m:mn></m:mfrac><m:mo>–</m:mo><m:mn>1</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mn>5</m:mn><m:mn>2 </m:mn></m:mfrac><m:mo>=</m:mo><m:mn>2,5</m:mn></m:mrow></m:math></item>
 </list>
 <para id="fs-id1170573421632">El punto de la parte b. está más cerca del punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> por lo que la pendiente de 2,5 está más cerca de la pendiente de la línea tangente. Una buena estimación de la pendiente de la tangente estaría en el rango de 2 a 2,5 (<link target-id="CNX_Calc_Figure_02_01_011"/>).</para>
 <figure id="CNX_Calc_Figure_02_01_011">
@@ -109,7 +109,7 @@
 <note id="fs-id1170573503064">
 <title>Definición</title>
 <para id="fs-id1170573360519">Supongamos que <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> es la posición de un objeto que se mueve a lo largo de un eje de coordenadas en el tiempo <emphasis effect="italics">t</emphasis>. La <emphasis effect="bold">velocidad media</emphasis> del objeto en un intervalo de tiempo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>t</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> donde <m:math><m:mrow><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>t</m:mi></m:mrow></m:math> (o <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>a</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> si <m:math><m:mrow><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:math> es</para>
-<equation id="fs-id1170573390058"><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
+<equation id="fs-id1170573390058"><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></equation>
 </note>
 <para id="fs-id1170573309855">A medida que <emphasis effect="italics">t</emphasis> se elige más cerca de <emphasis effect="italics">a</emphasis>, la velocidad media se acerca más a la velocidad instantánea. Observe que calcular la velocidad media de una función de posición en un intervalo de tiempo es esencialmente lo mismo que calcular la pendiente de una línea secante a una función. Además, para calcular la pendiente de una línea tangente en un punto <emphasis effect="italics">a</emphasis>, dejamos que los valores de <emphasis effect="italics">x</emphasis> se acerquen a <emphasis effect="italics">a</emphasis> en la pendiente de la línea secante. Del mismo modo, para calcular la velocidad instantánea en el tiempo <emphasis effect="italics">a</emphasis>, dejamos que los valores de <emphasis effect="italics">t</emphasis> se acerquen a <emphasis effect="italics">a</emphasis> en la velocidad media. Este proceso de dejar que <emphasis effect="italics">x</emphasis> o <emphasis effect="italics">t</emphasis> se acerquen a <emphasis effect="italics">a</emphasis> en una expresión se llama tomar un <term id="term-00007">límite</term>. Por lo tanto, podemos definir la <term id="term-00008">velocidad instantánea</term> de la siguiente manera.</para>
 <note id="fs-id1170573364091">
@@ -129,8 +129,8 @@
 </problem>
 <solution id="fs-id1170573406320">
 <para id="fs-id1170573428397">Sustituya los datos en la fórmula para la definición de la velocidad media.</para>
-<list id="fs-id1170573271242" list-type="enumerated" number-style="lower-alpha"><item><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0,5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0,49</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>0,5</m:mn><m:mo>-</m:mo><m:mn>0,49</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>-15,84</m:mn></m:mrow></m:math></item>
-<item><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0,51</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0,5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>0,51</m:mn><m:mo>-</m:mo><m:mn>0,5</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>-16,16</m:mn></m:mrow></m:math></item>
+<list id="fs-id1170573271242" list-type="enumerated" number-style="lower-alpha"><item><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0,5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0,49</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>0,5</m:mn><m:mo>−</m:mo><m:mn>0,49</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>−15,84</m:mn></m:mrow></m:math></item>
+<item><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0,51</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0,5</m:mn></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>0,51</m:mn><m:mo>−</m:mo><m:mn>0,5</m:mn></m:mrow></m:mfrac><m:mo>=</m:mo><m:mn>−16,16</m:mn></m:mrow></m:math></item>
 </list><para id="fs-id1170573577674">La velocidad instantánea está entre -15,84 y -16,16 ft/s. Una buena estimación podría ser -16 ft/s.</para>
 </solution>
 </exercise>
@@ -145,7 +145,7 @@
 </solution>
 <commentary id="fs-id1170573230978" type="hint">
 <title>Pista</title>
-<para id="fs-id1170573431685">Utilice la sustitución en <m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2,001</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2 </m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>2,001</m:mn><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170573431685">Utilice la sustitución en <m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2,001</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mn>2 </m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mn>2,001</m:mn><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow></m:mfrac><m:mo>.</m:mo></m:mrow></m:math></para>
 </commentary>
 </exercise>
 </note>
@@ -226,11 +226,11 @@
 <tgroup cols="2"><tbody>
   <row>
     <entry><emphasis effect="bold">Pendiente de una línea secante</emphasis></entry>
-    <entry><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></entry>
+    <entry><m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></entry>
   </row>
   <row>
     <entry><emphasis effect="bold">Velocidad media en el intervalo</emphasis> <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>t</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math></entry>
-    <entry><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></entry>
+    <entry><m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></entry>
   </row>
 </tbody>
 </tgroup>
@@ -505,25 +505,25 @@
 </thead>
 <tbody>
 <row valign="top">
-<entry align="left">-1,05</entry>
+<entry align="left">−1,05</entry>
 <entry align="left">a.</entry>
 <entry align="left">e.</entry>
 <entry align="left">i.</entry>
 </row>
 <row valign="top">
-<entry align="left">-1,01</entry>
+<entry align="left">−1,01</entry>
 <entry align="left">b.</entry>
 <entry align="left">f.</entry>
 <entry align="left">j.</entry>
 </row>
 <row valign="top">
-<entry align="left">-1,005</entry>
+<entry align="left">−1,005</entry>
 <entry align="left">c.</entry>
 <entry align="left">g.</entry>
 <entry align="left">k.</entry>
 </row>
 <row valign="top">
-<entry align="left">-1,001</entry>
+<entry align="left">−1,001</entry>
 <entry align="left">d.</entry>
 <entry align="left">h.</entry>
 <entry align="left">l.</entry>
@@ -546,10 +546,10 @@
 <para id="fs-id1170573406148">Utilice el valor del ejercicio anterior para hallar la ecuación de la línea tangente en el punto <emphasis effect="italics">P</emphasis>.</para>
 </problem>
 <solution id="fs-id1170571033603">
-<para id="fs-id1170571033605"><m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>-</m:mtext><m:mi>x</m:mi><m:mo>-</m:mo><m:mn>2 </m:mn></m:mrow></m:math></para>
+<para id="fs-id1170571033605"><m:math><m:mrow><m:mi>y</m:mi><m:mo>=</m:mo><m:mtext>−</m:mtext><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2 </m:mn></m:mrow></m:math></para>
 </solution>
 </exercise>
-<para id="fs-id1170573392558">En los siguientes ejercicios, la función de posición de una bola lanzada desde lo alto de un edificio de 200 metros de altura está dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>200</m:mn><m:mo>-</m:mo><m:mn>4,9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2 </m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> donde la posición <emphasis effect="italics">s</emphasis> se mide en metros y el tiempo <emphasis effect="italics">t</emphasis> se mide en segundos. Redondee su respuesta a ocho dígitos significativos.</para>
+<para id="fs-id1170573392558">En los siguientes ejercicios, la función de posición de una bola lanzada desde lo alto de un edificio de 200 metros de altura está dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>200</m:mn><m:mo>−</m:mo><m:mn>4,9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2 </m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> donde la posición <emphasis effect="italics">s</emphasis> se mide en metros y el tiempo <emphasis effect="italics">t</emphasis> se mide en segundos. Redondee su respuesta a ocho dígitos significativos.</para>
 <exercise id="fs-id1170573393541">
 <problem id="fs-id1170573393543">
 <para id="fs-id1170570997263"><emphasis effect="bold">[T]</emphasis> Calcule la velocidad media de la pelota en los intervalos de tiempo dados.</para>
@@ -566,10 +566,10 @@
 <para id="fs-id1170570997920">Utilice el ejercicio anterior para adivinar la velocidad instantánea de la pelota en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>5</m:mn></m:mrow></m:math> seg.</para>
 </problem>
 <solution id="fs-id1170573400112">
-<para id="fs-id1170571124871">-49 m/s (la velocidad de la pelota es de 49 m/s hacia abajo)</para>
+<para id="fs-id1170571124871">−49 m/s (la velocidad de la pelota es de 49 m/s hacia abajo)</para>
 </solution>
 </exercise>
-<para id="fs-id1170573396248">En los siguientes ejercicios, considere una piedra lanzada al aire desde el nivel del suelo con una velocidad inicial de 15 m/s. Su altura en metros en el tiempo <emphasis effect="italics">t</emphasis> segundos es <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>15</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>4,9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2 </m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170573396248">En los siguientes ejercicios, considere una piedra lanzada al aire desde el nivel del suelo con una velocidad inicial de 15 m/s. Su altura en metros en el tiempo <emphasis effect="italics">t</emphasis> segundos es <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>15</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>4,9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2 </m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
 <exercise id="fs-id1170573430332">
 <problem id="fs-id1170573430334">
 <para id="fs-id1170573430336"><emphasis effect="bold">[T]</emphasis> Calcule la velocidad media de la piedra en los intervalos de tiempo dados.</para>
@@ -589,7 +589,7 @@
 <para id="fs-id1170573427742">5,2 m/s</para>
 </solution>
 </exercise>
-<para id="fs-id1170573442443">En los siguientes ejercicios, considere un cohete lanzado al aire que luego regresa a la Tierra. La altura del cohete en metros está dada por <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>600</m:mn><m:mo>+</m:mo><m:mn>78,4</m:mn><m:mi>t</m:mi><m:mo>-</m:mo><m:mn>4,9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2 </m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> donde <emphasis effect="italics">t</emphasis> se mide en segundos.</para>
+<para id="fs-id1170573442443">En los siguientes ejercicios, considere un cohete lanzado al aire que luego regresa a la Tierra. La altura del cohete en metros está dada por <m:math><m:mrow><m:mi>h</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>600</m:mn><m:mo>+</m:mo><m:mn>78,4</m:mn><m:mi>t</m:mi><m:mo>−</m:mo><m:mn>4,9</m:mn><m:msup><m:mi>t</m:mi><m:mn>2 </m:mn></m:msup><m:mo>,</m:mo></m:mrow></m:math> donde <emphasis effect="italics">t</emphasis> se mide en segundos.</para>
 <exercise id="fs-id1170573425872">
 <problem id="fs-id1170571262060">
 <para id="fs-id1170571262062"><emphasis effect="bold">[T]</emphasis> Calcule la velocidad media del cohete en los intervalos de tiempo dados.</para>
@@ -606,7 +606,7 @@
 <para id="fs-id1170573593197">Utilice el ejercicio anterior para adivinar la velocidad instantánea del cohete en <m:math><m:mrow><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>9</m:mn></m:mrow></m:math> seg.</para>
 </problem>
 <solution id="fs-id1170570997253">
-<para id="fs-id1170570997255">-9,8 m/s</para>
+<para id="fs-id1170570997255">−9,8 m/s</para>
 </solution>
 </exercise>
 <para id="fs-id1170570997261">En los siguientes ejercicios, considere que un atleta corre los 40 metros planos. La posición del atleta está dada por <m:math><m:mrow><m:mi>d</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac><m:mrow><m:msup><m:mi>t</m:mi><m:mn>3</m:mn></m:msup></m:mrow><m:mn>6</m:mn></m:mfrac><m:mo>+</m:mo><m:mn>4</m:mn><m:mi>t</m:mi><m:mo>,</m:mo></m:mrow></m:math> donde <emphasis effect="italics">d</emphasis> es la posición en metros y <emphasis effect="italics">t</emphasis> es el tiempo transcurrido, medido en segundos.</para>
@@ -643,7 +643,7 @@
 <para id="fs-id1170573413784">Por debajo, 1 unidad<sup>2</sup>; por encima: 4 unidad<sup>2</sup>. El área exacta de los dos triángulos es <m:math><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>2 </m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mfrac><m:mn>1</m:mn><m:mn>2 </m:mn></m:mfrac><m:mrow><m:mo>(</m:mo><m:mn>2 </m:mn><m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo><m:mn>2 </m:mn><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2,5</m:mn><m:msup><m:mrow><m:mspace width="0.2em"/><m:mtext>unidades</m:mtext></m:mrow><m:mn>2 </m:mn></m:msup><m:mo>.</m:mo></m:mrow></m:math></para>
 </solution>
 </exercise>
-<para id="fs-id1170573255256">En los siguientes ejercicios, considere la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>-</m:mo><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> (<emphasis effect="italics">Pista</emphasis>: Se trata de la mitad superior de un círculo de radio 1 situado en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mtext>).</m:mtext></m:mrow></m:math></para>
+<para id="fs-id1170573255256">En los siguientes ejercicios, considere la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msqrt><m:mrow><m:mn>1</m:mn><m:mo>−</m:mo><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:msqrt><m:mo>.</m:mo></m:mrow></m:math> (<emphasis effect="italics">Pista</emphasis>: Se trata de la mitad superior de un círculo de radio 1 situado en <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>0</m:mn></m:mrow><m:mo>)</m:mo></m:mrow><m:mtext>).</m:mtext></m:mrow></m:math></para>
 <exercise id="fs-id1170571050086">
 <problem id="fs-id1170571050088">
 <para id="fs-id1170571050090">Dibuje el gráfico de <emphasis effect="italics">f</emphasis> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>−1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
@@ -657,7 +657,7 @@
 <para id="fs-id1170573397798">Por debajo, 0,96 unidad<sup>2</sup>; por encima, 1,92 unidad<sup>2</sup>. El área exacta del semicírculo de radio 1 es <m:math><m:mrow><m:mfrac><m:mrow><m:mi>π</m:mi><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mn>1</m:mn><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2 </m:mn></m:msup></m:mrow><m:mn>2 </m:mn></m:mfrac><m:mo>=</m:mo><m:mfrac><m:mi>π</m:mi><m:mn>2 </m:mn></m:mfrac></m:mrow></m:math> unidad<sup>2</sup>.</para>
 </solution>
 </exercise>
-<para id="fs-id1170573594037">En los siguientes ejercicios, considere la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>-</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
+<para id="fs-id1170573594037">En los siguientes ejercicios, considere la función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mtext>−</m:mtext><m:msup><m:mi>x</m:mi><m:mn>2 </m:mn></m:msup><m:mo>+</m:mo><m:mn>1</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
 <exercise id="fs-id1170573750527">
 <problem id="fs-id1170573413761">
 <para id="fs-id1170573413763">Dibuje el gráfico de <emphasis effect="italics">f</emphasis> en el intervalo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mn>−1</m:mn><m:mo>,</m:mo><m:mn>1</m:mn></m:mrow><m:mo>]</m:mo></m:mrow><m:mo>.</m:mo></m:mrow></m:math></para>
@@ -676,7 +676,7 @@
 <glossary>
 <definition id="fs-id1170573583169">
 <term>velocidad media</term>
-<meaning id="fs-id1170573583174">el cambio en la posición de un objeto dividido entre la duración de un periodo; la velocidad media de un objeto en un intervalo de tiempo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>a</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> (si <m:math><m:mrow><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi></m:mrow></m:math> o <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>t</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> si <m:math><m:mrow><m:mi>t</m:mi><m:mo>></m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:math>, con una posición dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> que es <m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>-</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></meaning>
+<meaning id="fs-id1170573583174">el cambio en la posición de un objeto dividido entre la duración de un periodo; la velocidad media de un objeto en un intervalo de tiempo <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>t</m:mi><m:mo>,</m:mo><m:mi>a</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> (si <m:math><m:mrow><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi></m:mrow></m:math> o <m:math><m:mrow><m:mrow><m:mo>[</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>t</m:mi></m:mrow><m:mo>]</m:mo></m:mrow></m:mrow></m:math> si <m:math><m:mrow><m:mi>t</m:mi><m:mo>></m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:math>, con una posición dada por <m:math><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>,</m:mo></m:mrow></m:math> que es <m:math><m:mrow><m:msub><m:mi>v</m:mi><m:mrow><m:mtext>ave</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>t</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>s</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>t</m:mi><m:mo>−</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></meaning>
 </definition>
 <definition id="fs-id1170571047938">
 <term>cálculo diferencial</term>
@@ -700,7 +700,7 @@
 </definition>
 <definition id="fs-id1170573753167">
 <term>secante</term>
-<meaning id="fs-id1170573753172">una línea secante a una función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <emphasis effect="italics">a</emphasis> es una línea que pasa por el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y otro punto de la función; la pendiente de la línea secante está dada por <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>-</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></meaning>
+<meaning id="fs-id1170573753172">una línea secante a una función <m:math><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow></m:mrow></m:math> en <emphasis effect="italics">a</emphasis> es una línea que pasa por el punto <m:math><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow></m:math> y otro punto de la función; la pendiente de la línea secante está dada por <m:math><m:mrow><m:msub><m:mi>m</m:mi><m:mrow><m:mtext>sec</m:mtext></m:mrow></m:msub><m:mo>=</m:mo><m:mfrac><m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>x</m:mi><m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo><m:mi>a</m:mi><m:mo>)</m:mo></m:mrow></m:mrow><m:mrow><m:mi>x</m:mi><m:mo>–</m:mo><m:mi>a</m:mi></m:mrow></m:mfrac></m:mrow></m:math></meaning>
 </definition>
 <definition id="fs-id1170573396339">
 <term>tangente</term>
