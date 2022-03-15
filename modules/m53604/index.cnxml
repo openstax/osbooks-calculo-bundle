@@ -390,7 +390,7 @@
 <para id="fs-id1165043114993">Un triángulo tiene dos lados constantes de longitud 3 pies y 5 pies. El ángulo entre estos dos lados aumenta a una tasa de 0,1 rad/s. Calcule la tasa a la que cambia el área del triángulo cuando el ángulo entre los dos lados es <m:math><m:mrow><m:mi>π</m:mi><m:mtext>/</m:mtext><m:mn>6</m:mn><m:mo>.</m:mo></m:mrow></m:math></para>
 </problem>
 <solution id="fs-id1165043115010">
-<para id="fs-id1165043115012">El área aumenta a una tasa de <m:math><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>8</m:mn></m:mfrac><m:mspace width="0.2em"/><m:msup><m:mtext>ft</m:mtext><m:mspace width="0.2em"/><m:mn>2 </m:mn></m:msup><m:mtext>/s.</m:mtext></m:mrow></m:math></para>
+<para id="fs-id1165043115012">El área aumenta a una tasa de <m:math><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>3</m:mn><m:msqrt><m:mn>3</m:mn></m:msqrt></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>8</m:mn></m:mfrac><m:mspace width="0.2em"/><m:msup><m:mtext>ft</m:mtext><m:mn>2</m:mn></m:msup><m:mtext>/s.</m:mtext></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1165043115045">
@@ -429,7 +429,7 @@
 <para id="fs-id1165043092203">Un cilindro tiene una fuga de agua, pero usted no puede determinar a qué tasa. El cilindro tiene una altura de 2 m y un radio de 2 m. Calcule la tasa de salida del agua del cilindro si la tasa de disminución de la altura es de 10 cm/min cuando la altura es de 1 m.</para>
 </problem>
 <solution id="fs-id1165043092210">
-<para id="fs-id1165043092212">El agua sale a una tasa de <m:math><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2 </m:mn><m:mi>π</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>5</m:mn></m:mfrac><m:mspace width="0.2em"/><m:msup><m:mtext>m</m:mtext><m:mspace width="0.2em"/><m:mn>3</m:mn></m:msup><m:mtext>/min.</m:mtext></m:mrow></m:math></para>
+<para id="fs-id1165043092212">El agua sale a una tasa de <m:math><m:mrow><m:mfrac><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mn>2 </m:mn><m:mi>π</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>5</m:mn></m:mfrac><m:mspace width="0.2em"/><m:msup><m:mtext>m</m:mtext><m:mn>3</m:mn></m:msup><m:mtext>/min.</m:mtext></m:mrow></m:math></para>
 </solution>
 </exercise>
 <exercise id="fs-id1165043092244">

@@ -543,7 +543,7 @@ Por la prueba de comparación de límites, dado que <m:math><m:mrow><m:munderove
 <para id="fs-id1169736728311"><m:math><m:mrow><m:msup><m:mrow><m:mrow><m:mo>(</m:mo><m:mrow><m:mi>a</m:mi><m:mo>−</m:mo><m:mi>b</m:mi></m:mrow><m:mo>)</m:mo></m:mrow></m:mrow><m:mn>2 </m:mn></m:msup><m:mo>=</m:mo><m:msup><m:mi>a</m:mi><m:mn>2 </m:mn></m:msup><m:mo>−</m:mo><m:mn>2 </m:mn><m:mi>a</m:mi><m:mi>b</m:mi><m:mo>+</m:mo><m:msup><m:mi>b</m:mi><m:mn>2 </m:mn></m:msup></m:mrow></m:math> o <m:math><m:mrow><m:msup><m:mi>a</m:mi><m:mn>2 </m:mn></m:msup><m:mo>+</m:mo><m:msup><m:mi>b</m:mi><m:mn>2 </m:mn></m:msup><m:mo>≥</m:mo><m:mn>2 </m:mn><m:mi>a</m:mi><m:mi>b</m:mi><m:mo>,</m:mo></m:mrow></m:math> por lo que la convergencia se deduce de la comparación de <m:math>
 <m:mrow><m:mn>2 </m:mn><m:msub><m:mi>a</m:mi><m:mi>n</m:mi></m:msub><m:msub><m:mi>b</m:mi><m:mi>n</m:mi></m:msub></m:mrow></m:math> con <m:math>
 
-<m:mrow><m:msup><m:mi>a</m:mi><m:mn>2 </m:mn></m:msup><m:msub><m:mi>n</m:mi></m:msub><m:mrow/><m:mo>+</m:mo><m:msup><m:mi>b</m:mi><m:mn>2 </m:mn></m:msup><m:msub><m:mi>n</m:mi></m:msub><m:mrow/><m:mo>.</m:mo></m:mrow>
+<m:mrow><m:msup><m:mi>a</m:mi><m:mn>2 </m:mn></m:msup><m:msub><m:mrow/><m:mi>n</m:mi></m:msub><m:mrow/><m:mo>+</m:mo><m:msup><m:mi>b</m:mi><m:mn>2 </m:mn></m:msup><m:msub><m:mrow/><m:mi>n</m:mi></m:msub><m:mrow/><m:mo>.</m:mo></m:mrow>
 
 </m:math> Como las sumas parciales de la izquierda están delimitadas por las de la derecha, la desigualdad se mantiene para la serie infinita.</para>
 </solution>
